@@ -1,0 +1,46 @@
+.pWrap {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+}
+
+.work {
+    display: flex;
+    width: 75vw;
+    height: 100%;
+    flex-direction: column;
+
+}
+
+.Psection {
+    height:100vh;
+    width:100%;
+}
+
+.row1 {
+    display: flex;
+    flex: 1 0 65%;
+    width: 75vw;
+    height: 65%;
+}
+.row2 {
+    display: flex;
+    flex: 1 0 25%;
+    width: 75vw;
+    background-color: #333;
+    height: 35%;
+}
+
+.row3 {
+    display: flex;
+    flex: 1 0 65%;
+    width: 75vw;
+    height: 65%;
+}
+.row4 {
+    display: flex;
+    flex: 1 0 25%;
+    width: 75vw;
+    background-color: #777;
+    height: 35%;
+}

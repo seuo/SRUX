@@ -1,3 +1,4 @@
+@import url("_portfolio.scss");
 * {
   margin: 0;
   text-decoration: none;
@@ -15,11 +16,6 @@ h1, h2, h3, h4, h5 {
 
 p {
   font-family: "Roboto", sans-serif;
-}
-
-.pWrap {
-  width: 100vw;
-  height: 100%;
 }
 
 @-webkit-keyframes fadeIn {
