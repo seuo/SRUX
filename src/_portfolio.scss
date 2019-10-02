@@ -121,7 +121,7 @@ blurb {
         flex: 0 0 35%;
         padding-left: 3em;
         padding-right: 4vw;
-        font-size: 1.3em;
+        font-size: .8vw;
         color: #191919;
         font-weight: 200;
         flex-direction: column;
@@ -164,9 +164,9 @@ itemheading {
             color: #cdcdcd;
         }
          h1 {
-            font-size: 4em;
+            font-size: 3vw;
             font-weight: 300;
-            margin-top: -0.95em;
+            margin-top: -0.93em;
             margin-left: -6vw;
         }
     }
@@ -205,7 +205,7 @@ itemheading {
             font-size: 2.5em;
             font-weight: 300;
             color: #111;
-            margin-top: -.95em;
+            margin-top: -.93em;
         }
     }
 }
@@ -280,7 +280,7 @@ text.skills {
     width: 25em;
     position: absolute;
     h1 {
-        font-size: 1.8em;
+        font-size: 1.4vw;
         font-weight: 100;
     }
 }
@@ -290,7 +290,7 @@ text.skills1 {
     position: absolute;
     width: 25em;
     h1 {
-        font-size: 1.8em;
+        font-size: 1.4vw;
         font-weight: 100;
     }
 }

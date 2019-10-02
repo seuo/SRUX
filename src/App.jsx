@@ -3,7 +3,6 @@ import { Router, Link, Redirect, Location,navigate  } from "@reach/router";
 import { TransitionGroup, CSSTransition } from "react-transition-group";
 
 
-
 import Srux from './Srux';
 import Portfolio from './Portfolio';
 

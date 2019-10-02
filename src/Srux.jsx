@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import { Router, Link, Redirect, Location,navigate } from "@reach/router";
+import { Router, Redirect,Link, Location,navigate } from "@reach/router";
 import { TransitionGroup, CSSTransition } from "react-transition-group";
 
 import logo from './assets/sr-logo.png';
@@ -11,7 +11,7 @@ constructor(props) {
     this.state = {
         home:'',
         nav:'',
-        heroblock:''
+        heroblock:'',
     }
 }
 
@@ -28,6 +28,15 @@ navPortfolio = (e) => {
     this.setState({heroblock:'base'})
     e.preventDefault(); //prevent transition
     window.setTimeout(() => { navigate("/portfolio")
+    }, 1500)
+}
+
+navExp = (e) => {
+    this.setState({nav:'away'})
+    this.setState({home:'away'})
+    this.setState({heroblock:'base'})
+    e.preventDefault(); //prevent transition
+    window.setTimeout(() => { navigate("/portfolio#experience")
     }, 1500)
 }
 
@@ -67,7 +76,10 @@ render (){
                                         <path d="M432.69,618.68h-5v15h-1.31v-15h-5v-1.11h11.35v1.11Z" transform="translate(1.17)"/>
                                     </g>
                                     <polygon points="727.61 292.11 33.61 802.11 32.17 803 43.99 803 730.7 298.52 730.7 289.83 727.61 292.11"/>
-                                    </g></g><g id ="cvContainer">
+                                    </g></g>
+                                    
+                                    <g id ="cvContainer" onClick={this.navExp}> 
+ 
                                     <g id="cv">
                                     <g>
                                         <image width="435" height="492" transform="translate(296.7)" href="http://www.samrob.nz/wp-content/uploads/2019/04/experience.png"/>
@@ -87,6 +99,7 @@ render (){
                                     </g>
                                     <polygon points="447.53 489.51 303.29 11.08 300.14 0.82 289.77 0.86 437.95 493.39 442.04 506.97 453.46 498.56 727.66 297.01 731.07 294.98 730.94 281.64 729.75 281.61 447.53 489.51"/>
                                     </g>
+
                                     </g><g id ="portfolioContainer" onClick={this.navPortfolio}>
                                         
                                         <g id="portfolio">

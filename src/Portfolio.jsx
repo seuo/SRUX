@@ -1,6 +1,8 @@
 import React, {Component} from 'react';
 import { Router, Link, Redirect, Location,navigate } from "@reach/router";
 import HorizontalScroll from 'react-scroll-horizontal';
+import normalizeWheel from 'normalize-wheel';
+
 
 import mjlogo from './assets/mitchells-joinery-logo.png';
 import tenslogo from './assets/10squares-logo.png';
@@ -11,6 +13,13 @@ import cclogo from './assets/cc-logo.jpg';
 import autlogo from './assets/aut.jpg';
 import gclogo from './assets/gc-logo.jpg';
 import logo from './assets/sr-logo.png';
+
+
+document.addEventListener('mousewheel', function (event) {
+    const normalized = normalizeWheel(event);
+ 
+    console.log(normalized.pixelX, normalized.pixelY);
+});
 
 class Portfolio extends Component {
     constructor(props) {
@@ -25,6 +34,7 @@ class Portfolio extends Component {
             heroblock:'slide-in-fade'
         }
     }
+
 
     componentDidMount = () => {
     }
@@ -89,8 +99,7 @@ class Portfolio extends Component {
                     // pageLock      = { bool }
                     reverseScroll={true}
                     // style         = { object }
-                    
-                    config        = {{ stiffness: 10, damping: 5 }}
+                    config        = {{ stiffness: 3, damping: 3 }}
                     className="work"
                     animValues    = { 1 }
                 >
@@ -581,6 +590,21 @@ class Portfolio extends Component {
                                 <text></text>
                                 <text className="skills1">
                                     <h1>Draft Work & Rendering</h1>
+                                </text>
+                            </itemheading>
+                        </row>
+                    </section>
+                    <section className={"pSection slide-up "+slide}>
+
+                        <row className="row1">
+                        <a tabindex="0" href="/portfolio#experience">Section One</a> 
+                        </row>
+                        <row className="row2">
+                        <itemheading>
+                                <block></block>
+                                <text></text>
+                                <text className="skills1">
+                                    <h1>Experience</h1>
                                 </text>
                             </itemheading>
                         </row>
