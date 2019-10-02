@@ -1,22 +1,52 @@
 import React, {Component} from 'react';
-import { Router, Link } from "@reach/router"
+import { Router, Link, Redirect, Location,navigate } from "@reach/router";
+import { TransitionGroup, CSSTransition } from "react-transition-group";
+
+import logo from './assets/sr-logo.png';
 
 class Srux extends Component {
 
+constructor(props) {
+    super(props);
+    this.state = {
+        home:'',
+        nav:''
+    }
+}
+
+
+componentDidMount = () => {
+    // let home = this.state;
+    window.setTimeout(() => { this.setState({home:'away'})
+          }, 4000)
+  }
+
+navPortfolio = (e) => {
+    this.setState({nav:'away'})
+    this.setState({home:'away'})
+    e.preventDefault(); //prevent transition
+    window.setTimeout(() => { navigate("/portfolio")
+    }, 1500)
+}
 
 render (){
 
+    let {home} = this.props;
+    let {nav} = this.state;
+    console.log(home)
+
     return (
-    
+        
+        
         <div className="headerSection">
         <div className="header">
             <div className="hero">
-                <div className="col c1"><div className="heroblock"><div className="heading fade-in one"><img src="assets/sr-logo.png" alt=""/><h1>Print &<br/>Digital<br/>Design</h1></div><div className="fade-in three"><p>
-                            Creative digital &amp;<br/>and experiences.<br/>My aim is to create <br/>functional, professional<br/>&amp; eye catching design.</p></div><div className="fade-in five"><h2>Sam Robertson</h2></div>
+                <div className="col c1"><div className="heroblock"><div className={"heading "+home+" one"}><img src={logo} alt=""/><h1>Print &<br/>Digital<br/>Design</h1></div><div className={home+" three"}><p>
+                            Creative digital &amp;<br/>and experiences.<br/>My aim is to create <br/>functional, professional<br/>&amp; eye catching design.</p></div><div className={home+" five"}><h2>Sam Robertson</h2></div>
                 </div>
                     </div>
                         <div className="col c2">
-                            <div className="ui">
+                            <div className={"ui " + nav}>
                                 <svg id="Layer_1" data-name="Layer 1" viewBox="0 0 731.4 803">
                                 <g>
                                     <g id ="contactContainer" >                                     
@@ -55,8 +85,8 @@ render (){
                                     </g>
                                     <polygon points="447.53 489.51 303.29 11.08 300.14 0.82 289.77 0.86 437.95 493.39 442.04 506.97 453.46 498.56 727.66 297.01 731.07 294.98 730.94 281.64 729.75 281.61 447.53 489.51"/>
                                     </g>
-                                    </g><g id ="portfolioContainer">
-                                        <Link to="portfolio">
+                                    </g><g id ="portfolioContainer" onClick={this.navPortfolio}>
+                                        
                                         <g id="portfolio">
                                         <g>
                                         <image width="429" height="669" transform="translate(11.56)" href="http://www.samrob.nz/wp-content/uploads/2019/04/portfolio.png"/>
@@ -77,7 +107,7 @@ render (){
                                         <polygon points="10.8 397.5 206.05 667.02 436.55 497.62 287.55 0 76.55 0 10.8 397.5"/>
                                         <polygon points="446.13 494.76 297.99 0 287.55 0 436.55 497.62 206.05 667.02 10.8 397.5 76.55 0 66.41 0 0.68 395.86 0 399.99 2.46 403.37 197.96 672.9 203.86 681.04 211.97 675.08 442.47 505.68 448.15 501.51 446.13 494.76"/>
                                         </g>
-                                    </g></Link>
+                                    </g>
                                 </g>
                             </g>
                         </svg>
