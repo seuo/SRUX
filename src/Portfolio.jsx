@@ -17,13 +17,17 @@ class Portfolio extends Component {
         super(props);
         this.state = {
             portfolio: 'slide-in',
-            home: 'away',
+            home: '',
             row:'slide-in-row',
-            slide:''
+            slide:'',
+            nav:'',
+            mainNav:'closeNav',
+            heroblock:'slide-in-fade'
         }
     }
 
-    componentDidMount = () => {}
+    componentDidMount = () => {
+    }
 
     navHome = (e) => {
         // let home = this.state;
@@ -31,12 +35,22 @@ class Portfolio extends Component {
         // this.setState({home:"active"})
         this.setState({slide:"slide-down"})
         this.setState({portfolio:"come"})
+        this.setState({heroblock:"slide-out"})
         this.setState({row:"slide-out-row"})
         e.preventDefault(); //prevent transition
-
+        this.setState({mainNav:'closeNav'})
         window.setTimeout(() => { navigate("/")
         }, 1500)
 
+    }
+
+    navPortfolio = (e) => {
+        this.setState({nav:'away'})
+        this.setState({home:'away'})
+        this.setState({mainNav:'closeNav'})
+        e.preventDefault(); //prevent transition
+        window.setTimeout(() => { navigate("/portfolio")
+        }, 1500)
     }
     
 
@@ -45,11 +59,32 @@ class Portfolio extends Component {
         let {portfolio} = this.state;
         let {row} = this.state;
         let {slide} = this.state;
-        console.log(home)
-        console.log(portfolio)
+        let {heroblock} = this.state;
+        let {mainNav} = this.state;
+
         return (
 
             <container className="pWrap">
+                             <div className="navMenu"></div>
+                             <div className={slide+" navlist"}>
+                                    <h2 onClick={this.navHome}>HOME NAV</h2>
+                                    <h2>PORTFOLIO</h2>
+                                    <h2>EXPERIENCE</h2>
+                                    <h2>CONTACT</h2>       
+                            </div>
+                            <div className={"pheaderSection "}>
+                            <div className="header">
+                                <div className={"hero " +heroblock}>
+                                    <div className="col c1"><div className="heroblock"><div className={"heading "+home+" one"}><img src={logo} alt=""/><h1>Print &<br/>Digital<br/>Design</h1></div><div className={home+" three"}><p>
+                                                Creative digital &amp;<br/>and experiences.<br/>My aim is to create <br/>functional, professional<br/>&amp; eye catching design.</p></div><div className={home+" five"}><h2>Sam Robertson</h2></div>
+                                    </div>
+                                        </div>
+                                            <div className="col c2">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                            
                 <HorizontalScroll
                     // pageLock      = { bool }
                     reverseScroll={true}
@@ -59,11 +94,11 @@ class Portfolio extends Component {
                     className="work"
                     animValues    = { 1 }
                 >
-                    <div className="headerSection">
-                        <div className="header">
-                            <div onClick={this.navHome} className={"hero " + portfolio}>
+                    <div className="headerSection pHeaderSection">
+                        <div className="header pHeader">
+                            <div className={"hero " +portfolio}>
                                 <div className="col c1">
-                                    <div className="heroblock">
+                                    <div onClick={this.navHome} className="heroblock">
                                         <div className="heading"><img src={logo} alt=""/>
                                             <h1>Print &<br/>Digital<br/>Design</h1>
                                         </div>
@@ -220,17 +255,10 @@ class Portfolio extends Component {
                     
                     <section className={"pSection "+ row}>
                         <row className="row1">
-                    
+ 
                         </row>
                         <row className="row2">
-                            <navlist>
-                                    <h2>Portfolio</h2>
-                                    <h2>Experience</h2>
-                                
-                                    <h2>Contact</h2>
-                                    
-                                
-                            </navlist>
+
                         </row>
                     </section>
                     <section className={"pSection slide-up "+slide}>
@@ -266,7 +294,7 @@ class Portfolio extends Component {
                             </itemheading>
                         </row>
                     </section>
-                    <section className="pSection slide-up">
+                    <section className={"pSection slide-up "+slide}>
                         <div className="webWork">
                             <div className="webImage tens"></div>
                         </div>
@@ -299,7 +327,7 @@ class Portfolio extends Component {
                             </itemheading>
                         </row>
                     </section>
-                    <section className="pSection slide-up">
+                    <section className={"pSection slide-up "+slide}>
                         <div className="webWork">
                             <div className="webImage gubba"></div>
                         </div>
@@ -333,7 +361,7 @@ class Portfolio extends Component {
                             </itemheading>
                         </row>
                     </section>
-                    <section className="pSection">
+                    <section className={"pSection slide-up "+slide}>
                         <div className="webWork">
                             <div className="webImage py"></div>
                         </div>
@@ -365,7 +393,7 @@ class Portfolio extends Component {
                             </itemheading>
                         </row>
                     </section>
-                    <section className="pSection">
+                    <section className={"pSection slide-up "+slide}>
                         <div className="webWork">
                             <div className="webImage heli"></div>
                         </div>
@@ -398,7 +426,7 @@ class Portfolio extends Component {
                             </itemheading>
                         </row>
                     </section>
-                    <section className="pSection">
+                    <section className={"pSection slide-up "+slide}>
                         <div className="webWork">
                             <div className="webImage mglogo"></div>
                         </div>
@@ -431,7 +459,7 @@ class Portfolio extends Component {
                             </itemheading>
                         </row>
                     </section>
-                    <section className="pSection">
+                    <section className={"pSection slide-up "+slide}>
                         <div className="webWork">
                             <div className="webImage cc"></div>
                         </div>
@@ -467,7 +495,7 @@ class Portfolio extends Component {
                             </itemheading>
                         </row>
                     </section>
-                    <section className="pSection">
+                    <section className={"pSection slide-up "+slide}>
                         <div className="webWork">
                             <div className="webImage autposter"></div>
                         </div>
@@ -498,7 +526,7 @@ class Portfolio extends Component {
                             </itemheading>
                         </row>
                     </section>
-                    <section className="pSection">
+                    <section className={"pSection slide-up "+slide}>
                         <div className="webWork">
                             <div className="webImage gcpackage"></div>
                         </div>
@@ -529,7 +557,7 @@ class Portfolio extends Component {
                             </itemheading>
                         </row>
                     </section>
-                    <section className="pSection">
+                    <section className={"pSection slide-up "+slide}>
                         <div className="webWork">
                             <div className="webImage renders"></div>
                         </div>

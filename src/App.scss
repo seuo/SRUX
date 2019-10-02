@@ -48,17 +48,31 @@ p {
 @keyframes away {
     from {
         opacity: 1;
-        transform:translate(0,0)
+        transform:translate(0,0);
     }
     to {
         opacity: 0;
-        transform:translate(0,0)
+        transform:translate(0,0);
+    }
+}
+
+@keyframes closeMainNav {
+    from {
+        opacity: 1;
+        transform:translate(0,0);
+        height: 100vh;
+        position: absolute;
+    }
+    to {
+        opacity: 0;
+        transform:translate(0,0);
+        height: 0;
+        position: initial;
     }
 }
 
 @keyframes come {
     from {
-        opacity: 1;
         width: 40vw;
         transform: translate(-5em, -15em) scale(.75);
         filter: blur(7px);
@@ -68,6 +82,23 @@ p {
         opacity: 1;
         width: 100vw;
         filter: blur(0px);
+    }
+}
+
+
+@keyframes base {
+    from {
+        width: 40vw;
+        transform: translate(-5em, -15em) scale(.75);
+        filter: blur(7px);
+        opacity:.5;
+    }
+    to {
+        opacity: 0;
+        width: 40vw;
+        transform: translate(-5em, -15em) scale(.75);
+        filter: blur(7px);
+        opacity:0;
     }
 }
 
@@ -78,11 +109,40 @@ p {
         filter: blur(0px);
     }
     to {
-        opacity: 1;
         width: 40vw;
         transform: translate(-5em, -15em) scale(.75);
         filter: blur(7px);
         opacity:.5;
+    }
+}
+
+@keyframes slideinFade {
+    from {
+        opacity: 1;
+        width: 100vw;
+        filter: blur(0px);
+    }
+    to {
+        width: 40vw;
+        transform: translate(-5em, -15em) scale(.75);
+        filter: blur(7px);
+        opacity:0;
+    }
+}
+
+
+@keyframes slideout {
+    from {
+        opacity: 1;
+        width: 40vw;
+        transform: translate(-5em, -15em) scale(.75);
+        filter: blur(40px);
+        opacity:.5;
+    }
+    to {
+        opacity: 1;
+        width: 100vw;
+        filter: blur(0px);
     }
 }
 
@@ -149,11 +209,39 @@ p {
 }
 
 
+.below {
+    width: 40vw;
+    transform: translate(-5em, -15em) scale(.75);
+    filter: blur(7px);
+    opacity:.5;
+}
+
 
 .away {
     opacity: 1;
     /* make things invisible upon start */
     animation: away ease-in 1;
+    animation-fill-mode: forwards;
+    animation-duration: 1.5s;
+}
+
+.closeNav {
+    opacity: 0;
+    /* make things invisible upon start */
+    animation: closeMainNav ease-in 1;
+    animation-fill-mode: forwards;
+    animation-duration: 1.5s;
+}
+
+.base {
+    opacity: 1;
+    width: 40vw;
+    transform: translate(-5em, -15em) scale(.75);
+    filter: blur(7px);
+    opacity:.5;
+    width: 40vw !important;
+
+    animation: base ease-in 1;
     animation-fill-mode: forwards;
     animation-duration: 1.5s;
 }
@@ -167,13 +255,31 @@ p {
 }
 
 .gone {
-    visibility: hidden;
+    visibility: hidden !important;
 }
 
-
+.none {
+    display:none !important;
+    height:0;
+    transition:scale(0);
+    width:0;
+    opacity:0;
+}
 
 .slide-in {
     animation: slidein ease-in 1;
+    animation-fill-mode: forwards;
+    animation-duration: 1.5s;
+}
+
+.slide-in-fade {
+    animation: slideinFade ease-in 1;
+    animation-fill-mode: forwards;
+    animation-duration: 1.5s;
+}
+
+.slide-out {
+    animation: slideout ease-in 1;
     animation-fill-mode: forwards;
     animation-duration: 1.5s;
 }
@@ -192,6 +298,14 @@ p {
     pointer-events: none;
 }
 
+
+.fade-out {
+    opacity: 0;
+    /* make things invisible upon start */
+    animation: fadeOut ease-in 1;
+    animation-fill-mode: forwards;
+    animation-duration: 1s;
+}
 
 .fade-in {
     opacity: 0;
@@ -428,6 +542,12 @@ g#contact-border {
 .headerSection {
     height: 100vh;
 }
+
+.pheaderSection {
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+}
 .s2 {
     background-color: rgb(248, 248, 248);
 }
@@ -457,6 +577,7 @@ g#contact-border {
             flex: 1 0 60%;
             margin-top: 5em;
             font-size: 1em;
+            cursor: pointer;
 
             .heading {
                 display: flex;
@@ -567,6 +688,17 @@ svg {
     height: 100vh;
 
 }
+
+
+// misc
+
+.pHeaderSection {
+    height:0;
+.pHeader {
+    height:0;
+}
+}
+
 
 @media only screen and (max-width: 100em) {
     .c1 {

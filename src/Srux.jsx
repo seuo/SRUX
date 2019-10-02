@@ -10,7 +10,8 @@ constructor(props) {
     super(props);
     this.state = {
         home:'',
-        nav:''
+        nav:'',
+        heroblock:''
     }
 }
 
@@ -24,6 +25,7 @@ componentDidMount = () => {
 navPortfolio = (e) => {
     this.setState({nav:'away'})
     this.setState({home:'away'})
+    this.setState({heroblock:'base'})
     e.preventDefault(); //prevent transition
     window.setTimeout(() => { navigate("/portfolio")
     }, 1500)

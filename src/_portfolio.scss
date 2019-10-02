@@ -48,23 +48,58 @@
     height: 35%;
 }
 
-
-navlist {
-    margin-left:16vw;
-    padding:1em;
-    position:absolute; left:0; top:0;
-    left:0;
+.navMenu {
+    margin-left:0vw;
+    padding-left:7vw;
+    width:93vw;
+    right:0;
+    display:flex;
+    justify-content: flex-end;
+    flex-direction: row;
+    position: absolute;
+    z-index: 9999;
+    background-color:#ffffff;
+    transition:.5s ease all; 
+}
+.navlist {
+    margin-left:0vw;
+    padding-left:7vw;
+    width:30vw;
+    right:0;
+    display:flex;
+    justify-content: flex-end;
+    flex-direction: row;
+    position: absolute;
+    z-index: 9999;
+    background-color:#ffffff;
+    transition:.5s ease all;
     h2 {
-        padding:.5em;
-        background-color:black;
-        color: white;
-        margin:.3em;
-        width:9em;
-        padding-left:2em;
-        font-weight: 300;
+        padding:.5em ;
+        background-color:#ffffff;
+        color: #333;
+        width:8em;
+        font-weight: 200;
+        font-size:1.3em;
+        cursor: pointer;
+        transition:ease all .5s;
+        border-radius: .1em;
+        text-align: center;
     }
+    h2:nth-child(1):hover {
+        background:#222;
 }
 
+    h2:nth-child(2):hover {
+        background:#9a3156
+}
+    h2:nth-child(3):hover {
+            background:#44678c;
+    }
+    h2:nth-child(4):hover {
+        background:#b38539;
+}
+
+}
 
 
 
@@ -270,3 +305,6 @@ text.skills1 {
 .tensC {
     color: #1f829c;
 }
+
+
+
