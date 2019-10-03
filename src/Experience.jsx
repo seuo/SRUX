@@ -300,7 +300,7 @@ class Experience extends Component {
                         <row className="eRow2">
                             <itemheading>
                                 <block>
-                                    <h1>samrob.nz@gmail.com</h1>
+                                    <h1 className="workHeading">samrob.nz@gmail.com</h1>
                                 </block>
                                 <text></text>
                                 <text className="skills1"></text>
@@ -322,7 +322,7 @@ class Experience extends Component {
                         <row className="row2">
                             <itemheading>
                                 <block>
-                                    <h1>022 699 2719</h1>
+                                    <h1 className="workHeading">022 699 2719</h1>
                                 </block>
                                 <text></text>
                                 <text className="skills">

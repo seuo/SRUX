@@ -497,6 +497,12 @@ text.skills1 h1 {
   bottom: 0;
 }
 
+.cBackground {
+  background-image: url("assets/snowboarding-backdrop.jpg");
+  background-size: cover;
+  background-position-y: 155%;
+}
+
 .eSection {
   height: 100vh;
   width: 40vw;
@@ -1386,7 +1392,6 @@ g#contact-border {
 }
 
 .hero {
-  background-color: white;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

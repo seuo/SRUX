@@ -63,7 +63,7 @@ class Contact extends Component {
 
         return (
 
-            <container className="pWrap">
+            <container className="pWrap cBackground">
                 <div className={"pHeaderSection "}>
                     <div className="header">
                         <div className={"hero " + heroblock}>
@@ -123,28 +123,49 @@ class Contact extends Component {
                         </div>
                     </div>
 
+
                     <section className={"pSection " + row}>
 
-                        <row className={"row1"}>
-                            <blurb>
-                                <block></block>
+                    <row className={"row1"}>
+                        <blurb>
+                            <block></block>
 
-                            </blurb>
-                        </row>
-                        <row className="row2">
-                            <itemheading>
-                                <block></block>
-
-                                <block>
-                                   
+                        </blurb>
+                    </row>
+                    <row className="row2">
+                        <itemheading>
+                        <block>
+                                  
                                 </block>
 
-                                <text>
-                                    <block></block>
-                                </text>
+                            <text>
+                                <block></block>
+                            </text>
 
-                            </itemheading>
-                        </row>
+                        </itemheading>
+                    </row>
+                    </section>
+                    <section className={"pSection " + row}>
+
+                    <row className={"row1"}>
+                        <blurb>
+                            <block></block>
+
+                        </blurb>
+                    </row>
+                    <row className="row2">
+                        <itemheading>
+                            <block>
+                                  
+                            </block>
+
+
+                            <text>
+                                <block></block>
+                            </text>
+
+                        </itemheading>
+                    </row>
                     </section>
                     <section  className={"pSection " + slide}>
 
@@ -160,7 +181,7 @@ class Contact extends Component {
                         <row className="eRow2">
                             <itemheading>
                                 <block>
-                                    <h1>samrob.nz@gmail.com</h1>
+                                    <h1 className="workHeading">samrob.nz@gmail.com</h1>
                                 </block>
                                 <text></text>
                                 <text className="skills1"></text>
@@ -182,7 +203,7 @@ class Contact extends Component {
                         <row className="row2">
                             <itemheading>
                                 <block>
-                                    <h1>022 699 2719</h1>
+                                    <h1 className="workHeading">022 699 2719</h1>
                                 </block>
                                 <text></text>
                                 <text className="skills">
