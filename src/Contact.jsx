@@ -63,7 +63,7 @@ class Contact extends Component {
 
         return (
 
-            <container className="pWrap cBackground">
+            <container className="pWrap">
                 <div className={"pHeaderSection "}>
                     <div className="header">
                         <div className={"hero " + heroblock}>
