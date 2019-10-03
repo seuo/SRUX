@@ -28,7 +28,6 @@ p {
 @import "_portfolio.scss";
 @import "_exp.scss";
 
-
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -50,24 +49,24 @@ p {
 @keyframes away {
     from {
         opacity: 1;
-        transform:translate(0,0);
+        transform: translate(0,0);
     }
     to {
         opacity: 0;
-        transform:translate(0,0);
+        transform: translate(0,0);
     }
 }
 
 @keyframes closeMainNav {
     from {
         opacity: 1;
-        transform:translate(0,0);
+        transform: translate(0,0);
         height: 100vh;
         position: absolute;
     }
     to {
         opacity: 0;
-        transform:translate(0,0);
+        transform: translate(0,0);
         height: 0;
         position: initial;
     }
@@ -78,7 +77,7 @@ p {
         width: 40vw;
         transform: translate(-5em, -15em) scale(.75);
         filter: blur(7px);
-        opacity:.5;
+        opacity: 0.5;
     }
     to {
         opacity: 1;
@@ -87,20 +86,21 @@ p {
     }
 }
 
-
 @keyframes base {
     from {
         width: 40vw;
         transform: translate(-5em, -15em) scale(.75);
         filter: blur(7px);
-        opacity:.5;
+        opacity: 0.5;
+        visibility: hidden;
     }
     to {
         opacity: 0;
         width: 40vw;
         transform: translate(-5em, -15em) scale(.75);
         filter: blur(7px);
-        opacity:0;
+        opacity: 0;
+        visibility: hidden;
     }
 }
 
@@ -114,7 +114,7 @@ p {
         width: 40vw;
         transform: translate(-5em, -15em) scale(.75);
         filter: blur(7px);
-        opacity:.5;
+        opacity: 0.5;
     }
 }
 
@@ -128,10 +128,9 @@ p {
         width: 40vw;
         transform: translate(-5em, -15em) scale(.75);
         filter: blur(7px);
-        opacity:0;
+        opacity: 0;
     }
 }
-
 
 @keyframes slideout {
     from {
@@ -139,7 +138,7 @@ p {
         width: 40vw;
         transform: translate(-5em, -15em) scale(.75);
         filter: blur(40px);
-        opacity:.5;
+        opacity: 0.5;
     }
     to {
         opacity: 1;
@@ -152,16 +151,16 @@ p {
     from {
         opacity: 1;
         filter: blur(50px);
-        width:100vw;
-        margin-top:100vh;
+        width: 100vw;
+        margin-top: 100vh;
         margin-left: -50vw;
     }
     to {
         opacity: 1;
         margin-left: -50vw;
-        width:50vw;
+        width: 50vw;
         filter: blur(0px);
-        margin-top:0vh;
+        margin-top: 0;
     }
 }
 
@@ -169,30 +168,29 @@ p {
     from {
         opacity: 1;
         margin-left: -50vw;
-        width:50vw;
+        width: 50vw;
         filter: blur(0px);
-        margin-top:0vh;
+        margin-top: 0;
     }
     to {
         opacity: 1;
         filter: blur(50px);
-        width:100vw;
-        margin-top:150vh;
+        width: 100vw;
+        margin-top: 150vh;
         margin-left: -100vw;
     }
 }
-
 
 @keyframes slideup {
     from {
         opacity: 1;
         filter: blur(50px);
-        margin-top:100vh;
+        margin-top: 100vh;
     }
     to {
         opacity: 1;
         filter: blur(0px);
-        margin-top:0vh;
+        margin-top: 0;
     }
 }
 
@@ -200,24 +198,22 @@ p {
     from {
         opacity: 1;
         filter: blur(0px);
-        margin-top:0vh;
+        margin-top: 0;
     }
     to {
         opacity: 1;
         filter: blur(50px);
-        margin-top:150vh;
+        margin-top: 150vh;
         margin-left: -50vw;
     }
 }
-
 
 .below {
     width: 40vw;
     transform: translate(-5em, -15em) scale(.75);
     filter: blur(7px);
-    opacity:.5;
+    opacity: 0.5;
 }
-
 
 .away {
     opacity: 1;
@@ -236,16 +232,26 @@ p {
 }
 
 .base {
-    opacity: 1;
+    opacity: 0;
     width: 40vw;
     transform: translate(-5em, -15em) scale(.75);
     filter: blur(7px);
-    opacity:.5;
+    opacity: 0.5;
     width: 40vw !important;
 
     animation: base ease-in 1;
     animation-fill-mode: forwards;
     animation-duration: 1.5s;
+}
+
+.base-hero {
+    visibility: hidden;
+    opacity: 0;
+    width: 40vw;
+    transform: translate(-5em, -15em) scale(.75);
+    filter: blur(7px);
+    opacity: 0.5;
+    width: 40vw !important;
 }
 
 .come {
@@ -261,11 +267,26 @@ p {
 }
 
 .none {
-    display:none !important;
-    height:0;
-    transition:scale(0);
-    width:0;
-    opacity:0;
+    display: none !important;
+    height: 0;
+    transition: scale(0);
+    width: 0;
+    opacity: 0;
+}
+
+.row-base {
+    opacity: 1;
+    margin-left: -50vw;
+    width: 50vw;
+    filter: blur(0px);
+    margin-top: 0;
+}
+
+.hero-base {
+    width: 40vw !important;
+    transform: translate(-5em, -15em) scale(.75);
+    filter: blur(7px);
+    opacity: 0.5;
 }
 
 .slide-in {
@@ -300,7 +321,6 @@ p {
     pointer-events: none;
 }
 
-
 .fade-out {
     opacity: 0;
     /* make things invisible upon start */
@@ -317,7 +337,6 @@ p {
     animation-duration: 2s;
 }
 
-
 .fade-in.one {
     animation-delay: 2s;
 }
@@ -333,9 +352,6 @@ p {
 .fade-in.five {
     animation-delay: 6s;
 }
-
-
-
 
 .ui {
 
@@ -691,16 +707,14 @@ svg {
 
 }
 
-
 // misc
 
 .pHeaderSection {
-    height:0;
-.pHeader {
-    height:0;
+    height: 0;
+    .pHeader {
+        height: 0;
+    }
 }
-}
-
 
 @media only screen and (max-width: 100em) {
     .c1 {
@@ -749,17 +763,61 @@ svg {
 
     g#contact {
         transition: 2s;
-        transform: translate(.5%, 40.9%) scale(0.6);
+        transform: translate(-21.5%, 19.9%) scale(0.7);
+        clip-path: polygon(0 0, 95.5% 0, 84.6% 100%, 0% 100%);
+    }
+
+    g#contacttext {
+        transform: translate(1em, 0);
+    }
+
+    #contact polygon:first-of-type {
+        transition: 0.2s ease-in;
+        transform: translate(0em, 0);
+    }
+
+    #contact:hover {
+        transform: scale(.8);
+        transform: translate(-21.5%, 19.9%) scale(0.7);
+        transition: 0.8s ease-in-out;
+        transform-origin: initial;
+        cursor: pointer;
+        filter: drop-shadow(0px 10px 5px black);
+        opacity: 0.85;
+    }
+
+    .contactinfo {
+        position: absolute;
+        margin-bottom: 0%;
+        font-family: roboto;
+        text-align: right;
+        font-size: 1em;
+        font-weight: 400;
+        padding-left: 0em;
+        width: 67%;
+
+        padding: .2em;
+        padding-right: 1em;
+
+        background-color: #ffffff;
+        pointer-events: none;
+        bottom: 0;
     }
 
     g#portfolio {
         transition: 2s;
-        transform: translate(97%, 24.8%) scale(1) rotate(42deg);
-
+        transform: translate(96.7%, 26%) scale(1) rotate(44deg);
+ 
     }
 
     g#portfolio {
         clip-path: initial;
+    }
+
+    polygon#portfolioBlock {
+        transform: translate(54%, 54.4%) scale(0.7) rotate(135.6deg) !important;
+
+        clip-path: polygon(0 0, 80% 0, 77% 100%, 0% 100%);
     }
 
     g#portfolio > g > polygon {
@@ -767,9 +825,19 @@ svg {
         transform: translate(55%, 55%) scale(.7) rotate(137.7deg);
     }
 
+    
+    #portfolio:hover {
+        transform: scale(1);
+        transition: 0.8s ease-in-out;
+        transform-origin: inherit;
+        cursor: pointer;
+        opacity: 0.85;
+        transform: translate(96.7%, 26%) scale(1) rotate(44deg) !important;
+    }
+
     g#portfolio g path {
         transition: 2s;
-        transform: translate(-30%, 43%) scale(0.7) rotate(-42deg);
+        transform: translate(-30%, 44%) scale(0.7) rotate(-44.5deg);
     }
 
     g#cv polygon:nth-child(2) {
@@ -791,6 +859,41 @@ svg {
 }
 
 @media only screen and (max-width: 60em) {
+
+    .navlist {
+        margin-left: 0;
+        padding-left: 7vw;
+        width: 100vw;
+        right: 0;
+        display: flex;
+        justify-content: flex-end;
+        flex-direction: row;
+        position: absolute;
+        z-index: 9999;
+        transition: 0.5s ease all;
+        padding-top: 0.5em;
+         h2 {
+            padding: 0.5em 1em;
+            color: #333;
+            width: 8em;
+            font-weight: 200;
+            font-size: .7em;
+            cursor: pointer;
+            transition: ease all 0.5s;
+            text-align: center;
+            border-bottom: #222;
+        }
+    }
+
+    .expHeading {
+        margin-left: -3em;
+        font-size: 2em;
+    }
+
+    .workHeading {
+        font-size: 2em;
+        margin-left: -3em;
+    }
 
     .header .hero .col .heroblock {
         margin-left: 0;
@@ -819,6 +922,34 @@ svg {
         height: 35%;
     }
 
+    .eRow1 {
+        display: flex;
+        flex: 1 0 65%;
+        width: 100vw;
+        height: 65%;
+        blurb {
+            text {
+                font-size:.5em;
+                color:#555;
+            }
+        }
+    }
+
+    .eRow2 {
+        display: flex;
+        flex: 1 0 15%;
+        width: 100vw;
+        background-color: #191919;
+        height: 35%;
+        itemheading {
+            z-index: 6666;
+            text {
+                font-size:.5em;
+            }
+        }
+    }
+
+
     blurb {
         block {
             display: flex;
@@ -827,7 +958,7 @@ svg {
 
         text {
             flex: 0 0 20%;
-            font-size: 0.4em;
+            font-size: 0.5em;
             width: 70vw;
             position: absolute;
             bottom: 1vw;
@@ -835,12 +966,20 @@ svg {
         }
     }
 
+    .eRow1 {
+        blurb {
+            text {
+                position: relative;
+            }
+        }
+    }
+
     .webWork {
         cursor: pointer;
         margin-left: 0;
-        min-width: 15em;
-        height: 65%;
-        margin-top: 0;
+        min-width: 18em;
+        height: 55%;
+        margin-top: 15%;
         position: absolute;
         overflow: hidden;
         padding: 1em;

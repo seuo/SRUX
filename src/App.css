@@ -93,7 +93,7 @@ p {
 }
 
 .navMenu {
-  margin-left: 0vw;
+  margin-left: 0;
   padding-left: 7vw;
   width: 93vw;
   right: 0;
@@ -110,12 +110,12 @@ p {
   position: absolute;
   z-index: 9999;
   background-color: #ffffff;
-  -webkit-transition: .5s ease all;
-  transition: .5s ease all;
+  -webkit-transition: 0.5s ease all;
+  transition: 0.5s ease all;
 }
 
 .navlist {
-  margin-left: 0vw;
+  margin-left: 0;
   padding-left: 7vw;
   width: 30vw;
   right: 0;
@@ -131,39 +131,38 @@ p {
           flex-direction: row;
   position: absolute;
   z-index: 9999;
-  background-color: #ffffff;
-  -webkit-transition: .5s ease all;
-  transition: .5s ease all;
+  -webkit-transition: 0.5s ease all;
+  transition: 0.5s ease all;
+  padding-top: 0.5em;
 }
 
 .navlist h2 {
-  padding: .5em;
-  background-color: #ffffff;
+  padding: 0.5em 1em;
   color: #333;
   width: 8em;
   font-weight: 200;
-  font-size: 1.3em;
+  font-size: 1.2em;
   cursor: pointer;
-  -webkit-transition: ease all .5s;
-  transition: ease all .5s;
-  border-radius: .1em;
+  -webkit-transition: ease all 0.5s;
+  transition: ease all 0.5s;
   text-align: center;
+  border-bottom: #222;
 }
 
 .navlist h2:nth-child(1):hover {
-  background: #222;
+  background-color: #f3f3f3;
 }
 
 .navlist h2:nth-child(2):hover {
-  background: #9a3156;
+  background-color: #f3f3f3;
 }
 
 .navlist h2:nth-child(3):hover {
-  background: #44678c;
+  background-color: #f3f3f3;
 }
 
 .navlist h2:nth-child(4):hover {
-  background: #b38539;
+  background-color: #f3f3f3;
 }
 
 blurb {
@@ -200,7 +199,7 @@ blurb text {
           flex: 0 0 35%;
   padding-left: 3em;
   padding-right: 4vw;
-  font-size: .8vw;
+  font-size: 0.8vw;
   color: #191919;
   font-weight: 200;
   -webkit-box-orient: vertical;
@@ -313,8 +312,8 @@ itemheading text imgblock {
   width: 8vw;
   margin-top: -7.5vw;
   padding: 1.2vw 2vw;
-  -webkit-box-shadow: 1em 0em 4em #3333331e;
-          box-shadow: 1em 0em 4em #3333331e;
+  -webkit-box-shadow: 1em 0 4em #3333331e;
+          box-shadow: 1em 0 4em #3333331e;
 }
 
 itemheading text imgblock img {
@@ -335,8 +334,8 @@ itemheading text h1 {
 
 .webWork {
   cursor: pointer;
-  -webkit-box-shadow: 1em 0em 4em #33333338;
-          box-shadow: 1em 0em 4em #33333338;
+  -webkit-box-shadow: 1em 0 4em #33333338;
+          box-shadow: 1em 0 4em #33333338;
   margin-left: 10vw;
   min-width: 15em;
   width: 25vw;
@@ -428,6 +427,86 @@ text.skills1 h1 {
 
 .tensC {
   color: #1f829c;
+}
+
+.eRow1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 65%;
+          flex: 1 0 65%;
+  width: 40vw;
+  height: 65%;
+}
+
+.eRow1 blurb text {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 70%;
+          flex: 0 0 70%;
+}
+
+.eRow1 blurb text p {
+  line-height: 1.4;
+}
+
+.eRow2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 25%;
+          flex: 1 0 25%;
+  width: 40vw;
+  background-color: #191919;
+  height: 35%;
+}
+
+.eRow2 itemheading {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.eRow2 itemheading text {
+  font-size: 0.8vw;
+  line-height: 1.4;
+  font-weight: 300;
+}
+
+.eRow2 blurb text {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 70%;
+          flex: 0 0 70%;
+}
+
+.expHeading {
+  margin-left: 1.4em;
+}
+
+.contactinfo {
+  position: absolute;
+  margin-bottom: 17%;
+  font-family: roboto;
+  text-align: center;
+  font-size: 1.25vw;
+  font-weight: 300;
+  padding-left: .3em;
+  width: 100%;
+  pointer-events: none;
+  bottom: 0;
+}
+
+.eSection {
+  height: 100vh;
+  width: 40vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 @-webkit-keyframes fadeIn {
@@ -533,7 +612,7 @@ text.skills1 h1 {
             transform: translate(-5em, -15em) scale(0.75);
     -webkit-filter: blur(7px);
             filter: blur(7px);
-    opacity: .5;
+    opacity: 0.5;
   }
   to {
     opacity: 1;
@@ -550,7 +629,7 @@ text.skills1 h1 {
             transform: translate(-5em, -15em) scale(0.75);
     -webkit-filter: blur(7px);
             filter: blur(7px);
-    opacity: .5;
+    opacity: 0.5;
   }
   to {
     opacity: 1;
@@ -567,7 +646,8 @@ text.skills1 h1 {
             transform: translate(-5em, -15em) scale(0.75);
     -webkit-filter: blur(7px);
             filter: blur(7px);
-    opacity: .5;
+    opacity: 0.5;
+    visibility: hidden;
   }
   to {
     opacity: 0;
@@ -577,6 +657,7 @@ text.skills1 h1 {
     -webkit-filter: blur(7px);
             filter: blur(7px);
     opacity: 0;
+    visibility: hidden;
   }
 }
 
@@ -587,7 +668,8 @@ text.skills1 h1 {
             transform: translate(-5em, -15em) scale(0.75);
     -webkit-filter: blur(7px);
             filter: blur(7px);
-    opacity: .5;
+    opacity: 0.5;
+    visibility: hidden;
   }
   to {
     opacity: 0;
@@ -597,6 +679,7 @@ text.skills1 h1 {
     -webkit-filter: blur(7px);
             filter: blur(7px);
     opacity: 0;
+    visibility: hidden;
   }
 }
 
@@ -613,7 +696,7 @@ text.skills1 h1 {
             transform: translate(-5em, -15em) scale(0.75);
     -webkit-filter: blur(7px);
             filter: blur(7px);
-    opacity: .5;
+    opacity: 0.5;
   }
 }
 
@@ -630,7 +713,7 @@ text.skills1 h1 {
             transform: translate(-5em, -15em) scale(0.75);
     -webkit-filter: blur(7px);
             filter: blur(7px);
-    opacity: .5;
+    opacity: 0.5;
   }
 }
 
@@ -676,7 +759,7 @@ text.skills1 h1 {
             transform: translate(-5em, -15em) scale(0.75);
     -webkit-filter: blur(40px);
             filter: blur(40px);
-    opacity: .5;
+    opacity: 0.5;
   }
   to {
     opacity: 1;
@@ -694,7 +777,7 @@ text.skills1 h1 {
             transform: translate(-5em, -15em) scale(0.75);
     -webkit-filter: blur(40px);
             filter: blur(40px);
-    opacity: .5;
+    opacity: 0.5;
   }
   to {
     opacity: 1;
@@ -719,7 +802,7 @@ text.skills1 h1 {
     width: 50vw;
     -webkit-filter: blur(0px);
             filter: blur(0px);
-    margin-top: 0vh;
+    margin-top: 0;
   }
 }
 
@@ -738,7 +821,7 @@ text.skills1 h1 {
     width: 50vw;
     -webkit-filter: blur(0px);
             filter: blur(0px);
-    margin-top: 0vh;
+    margin-top: 0;
   }
 }
 
@@ -749,7 +832,7 @@ text.skills1 h1 {
     width: 50vw;
     -webkit-filter: blur(0px);
             filter: blur(0px);
-    margin-top: 0vh;
+    margin-top: 0;
   }
   to {
     opacity: 1;
@@ -768,7 +851,7 @@ text.skills1 h1 {
     width: 50vw;
     -webkit-filter: blur(0px);
             filter: blur(0px);
-    margin-top: 0vh;
+    margin-top: 0;
   }
   to {
     opacity: 1;
@@ -791,7 +874,7 @@ text.skills1 h1 {
     opacity: 1;
     -webkit-filter: blur(0px);
             filter: blur(0px);
-    margin-top: 0vh;
+    margin-top: 0;
   }
 }
 
@@ -806,7 +889,7 @@ text.skills1 h1 {
     opacity: 1;
     -webkit-filter: blur(0px);
             filter: blur(0px);
-    margin-top: 0vh;
+    margin-top: 0;
   }
 }
 
@@ -815,7 +898,7 @@ text.skills1 h1 {
     opacity: 1;
     -webkit-filter: blur(0px);
             filter: blur(0px);
-    margin-top: 0vh;
+    margin-top: 0;
   }
   to {
     opacity: 1;
@@ -831,7 +914,7 @@ text.skills1 h1 {
     opacity: 1;
     -webkit-filter: blur(0px);
             filter: blur(0px);
-    margin-top: 0vh;
+    margin-top: 0;
   }
   to {
     opacity: 1;
@@ -848,7 +931,7 @@ text.skills1 h1 {
           transform: translate(-5em, -15em) scale(0.75);
   -webkit-filter: blur(7px);
           filter: blur(7px);
-  opacity: .5;
+  opacity: 0.5;
 }
 
 .away {
@@ -874,13 +957,13 @@ text.skills1 h1 {
 }
 
 .base {
-  opacity: 1;
+  opacity: 0;
   width: 40vw;
   -webkit-transform: translate(-5em, -15em) scale(0.75);
           transform: translate(-5em, -15em) scale(0.75);
   -webkit-filter: blur(7px);
           filter: blur(7px);
-  opacity: .5;
+  opacity: 0.5;
   width: 40vw !important;
   -webkit-animation: base ease-in 1;
           animation: base ease-in 1;
@@ -888,6 +971,18 @@ text.skills1 h1 {
           animation-fill-mode: forwards;
   -webkit-animation-duration: 1.5s;
           animation-duration: 1.5s;
+}
+
+.base-hero {
+  visibility: hidden;
+  opacity: 0;
+  width: 40vw;
+  -webkit-transform: translate(-5em, -15em) scale(0.75);
+          transform: translate(-5em, -15em) scale(0.75);
+  -webkit-filter: blur(7px);
+          filter: blur(7px);
+  opacity: 0.5;
+  width: 40vw !important;
 }
 
 .come {
@@ -912,6 +1007,24 @@ text.skills1 h1 {
   transition: scale(0);
   width: 0;
   opacity: 0;
+}
+
+.row-base {
+  opacity: 1;
+  margin-left: -50vw;
+  width: 50vw;
+  -webkit-filter: blur(0px);
+          filter: blur(0px);
+  margin-top: 0;
+}
+
+.hero-base {
+  width: 40vw !important;
+  -webkit-transform: translate(-5em, -15em) scale(0.75);
+          transform: translate(-5em, -15em) scale(0.75);
+  -webkit-filter: blur(7px);
+          filter: blur(7px);
+  opacity: 0.5;
 }
 
 .slide-in {
@@ -1490,18 +1603,65 @@ svg {
   g#contact {
     -webkit-transition: 2s;
     transition: 2s;
-    -webkit-transform: translate(0.5%, 40.9%) scale(0.6);
-            transform: translate(0.5%, 40.9%) scale(0.6);
+    -webkit-transform: translate(-21.5%, 19.9%) scale(0.7);
+            transform: translate(-21.5%, 19.9%) scale(0.7);
+    -webkit-clip-path: polygon(0 0, 95.5% 0, 84.6% 100%, 0% 100%);
+            clip-path: polygon(0 0, 95.5% 0, 84.6% 100%, 0% 100%);
+  }
+  g#contacttext {
+    -webkit-transform: translate(1em, 0);
+            transform: translate(1em, 0);
+  }
+  #contact polygon:first-of-type {
+    -webkit-transition: 0.2s ease-in;
+    transition: 0.2s ease-in;
+    -webkit-transform: translate(0em, 0);
+            transform: translate(0em, 0);
+  }
+  #contact:hover {
+    -webkit-transform: scale(0.8);
+            transform: scale(0.8);
+    -webkit-transform: translate(-21.5%, 19.9%) scale(0.7);
+            transform: translate(-21.5%, 19.9%) scale(0.7);
+    -webkit-transition: 0.8s ease-in-out;
+    transition: 0.8s ease-in-out;
+    -webkit-transform-origin: initial;
+            transform-origin: initial;
+    cursor: pointer;
+    -webkit-filter: drop-shadow(0px 10px 5px black);
+            filter: drop-shadow(0px 10px 5px black);
+    opacity: 0.85;
+  }
+  .contactinfo {
+    position: absolute;
+    margin-bottom: 0%;
+    font-family: roboto;
+    text-align: right;
+    font-size: 1em;
+    font-weight: 400;
+    padding-left: 0em;
+    width: 67%;
+    padding: .2em;
+    padding-right: 1em;
+    background-color: #ffffff;
+    pointer-events: none;
+    bottom: 0;
   }
   g#portfolio {
     -webkit-transition: 2s;
     transition: 2s;
-    -webkit-transform: translate(97%, 24.8%) scale(1) rotate(42deg);
-            transform: translate(97%, 24.8%) scale(1) rotate(42deg);
+    -webkit-transform: translate(96.7%, 26%) scale(1) rotate(44deg);
+            transform: translate(96.7%, 26%) scale(1) rotate(44deg);
   }
   g#portfolio {
     -webkit-clip-path: initial;
             clip-path: initial;
+  }
+  polygon#portfolioBlock {
+    -webkit-transform: translate(54%, 54.4%) scale(0.7) rotate(135.6deg) !important;
+            transform: translate(54%, 54.4%) scale(0.7) rotate(135.6deg) !important;
+    -webkit-clip-path: polygon(0 0, 80% 0, 77% 100%, 0% 100%);
+            clip-path: polygon(0 0, 80% 0, 77% 100%, 0% 100%);
   }
   g#portfolio > g > polygon {
     -webkit-transition: 2s;
@@ -1509,11 +1669,23 @@ svg {
     -webkit-transform: translate(55%, 55%) scale(0.7) rotate(137.7deg);
             transform: translate(55%, 55%) scale(0.7) rotate(137.7deg);
   }
+  #portfolio:hover {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-transition: 0.8s ease-in-out;
+    transition: 0.8s ease-in-out;
+    -webkit-transform-origin: inherit;
+            transform-origin: inherit;
+    cursor: pointer;
+    opacity: 0.85;
+    -webkit-transform: translate(96.7%, 26%) scale(1) rotate(44deg) !important;
+            transform: translate(96.7%, 26%) scale(1) rotate(44deg) !important;
+  }
   g#portfolio g path {
     -webkit-transition: 2s;
     transition: 2s;
-    -webkit-transform: translate(-30%, 43%) scale(0.7) rotate(-42deg);
-            transform: translate(-30%, 43%) scale(0.7) rotate(-42deg);
+    -webkit-transform: translate(-30%, 44%) scale(0.7) rotate(-44.5deg);
+            transform: translate(-30%, 44%) scale(0.7) rotate(-44.5deg);
   }
   g#cv polygon:nth-child(2) {
     -webkit-transition: 2s;
@@ -1535,6 +1707,47 @@ svg {
 }
 
 @media only screen and (max-width: 60em) {
+  .navlist {
+    margin-left: 0;
+    padding-left: 7vw;
+    width: 100vw;
+    right: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    position: absolute;
+    z-index: 9999;
+    -webkit-transition: 0.5s ease all;
+    transition: 0.5s ease all;
+    padding-top: 0.5em;
+  }
+  .navlist h2 {
+    padding: 0.5em 1em;
+    color: #333;
+    width: 8em;
+    font-weight: 200;
+    font-size: .7em;
+    cursor: pointer;
+    -webkit-transition: ease all 0.5s;
+    transition: ease all 0.5s;
+    text-align: center;
+    border-bottom: #222;
+  }
+  .expHeading {
+    margin-left: -3em;
+    font-size: 2em;
+  }
+  .workHeading {
+    font-size: 2em;
+    margin-left: -3em;
+  }
   .header .hero .col .heroblock {
     margin-left: 0;
     -webkit-box-pack: start;
@@ -1568,6 +1781,37 @@ svg {
     background-color: #191919;
     height: 35%;
   }
+  .eRow1 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-flex: 1;
+        -ms-flex: 1 0 65%;
+            flex: 1 0 65%;
+    width: 100vw;
+    height: 65%;
+  }
+  .eRow1 blurb text {
+    font-size: .5em;
+    color: #555;
+  }
+  .eRow2 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-flex: 1;
+        -ms-flex: 1 0 15%;
+            flex: 1 0 15%;
+    width: 100vw;
+    background-color: #191919;
+    height: 35%;
+  }
+  .eRow2 itemheading {
+    z-index: 6666;
+  }
+  .eRow2 itemheading text {
+    font-size: .5em;
+  }
   blurb block {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1580,18 +1824,21 @@ svg {
     -webkit-box-flex: 0;
         -ms-flex: 0 0 20%;
             flex: 0 0 20%;
-    font-size: 0.4em;
+    font-size: 0.5em;
     width: 70vw;
     position: absolute;
     bottom: 1vw;
     color: #dcdcdc;
   }
+  .eRow1 blurb text {
+    position: relative;
+  }
   .webWork {
     cursor: pointer;
     margin-left: 0;
-    min-width: 15em;
-    height: 65%;
-    margin-top: 0;
+    min-width: 18em;
+    height: 55%;
+    margin-top: 15%;
     position: absolute;
     overflow: hidden;
     padding: 1em;

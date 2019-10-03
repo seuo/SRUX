@@ -1,100 +1,223 @@
 import React, {Component} from 'react';
-import { Router, Redirect,Link, Location, navigate, Match } from "@reach/router";
+import {
+    Router,
+    Redirect,
+    Link,
+    Location,
+    navigate,
+    Match
+} from "@reach/router";
 
-import { TransitionGroup, CSSTransition } from "react-transition-group";
+import {TransitionGroup, CSSTransition} from "react-transition-group";
 
 import logo from './assets/sr-logo.png';
 import Portfolio from './Portfolio';
+import Experience from './Experience';
+import Contact from './Contact';
 
 class Srux extends Component {
 
-constructor(props) {
-    super(props);
-    this.state = {
-        headerS:'gone',
-        home:'',
-        nav:'',
-        heroblock:'slide-in-fade',
+    constructor(props) {
+        super(props);
+        this.state = {
+            headerS: 'gone',
+            home: '',
+            nav: '',
+            heroblock: 'slide-in-fade',
 
-        // Portfolio states
-        portfolio: 'slide-in',
-        row:'slide-in-row',
-        mainNav:'closeNav',
-        slide:'',
-        navMenu:'',
+            // Portfolio states
+            portfolio: 'slide-in',
+            row: 'slide-in-row',
+            mainNav: 'closeNav',
+            slide: 'slide-up',
+            navMenu: '',
 
-        // Experience states
-        experience:'',
+            // Experience states
+            experience: '',
 
-        // mainNav:'closeNav',
+            // Contact states
+            contact:'none',
+
+        }
     }
-}
 
+    componentDidMount = () => {
+        this.setState({headerS: ''})
 
-componentDidMount = () => {
-    this.setState({headerS:''})
+    }
 
-  }
+    navHome = (e) => {
+        e.preventDefault();
 
-
-navHome = (e) => { 
-    e.preventDefault();
-
-    this.setState({
-                home:"active",
-                portfolio:"come",
-                heroblock:"slide-out",
-                row:"slide-out-row",
-                slide:"slide-down",
-                nav:'',
-                navMenu:'fade-out'
-    })
-
-    window.setTimeout(() => { 
-        navigate("/")
         this.setState({
-            headerS:'',
-            slide:'',
-            row:'',
+            experience: 'exp',
+            home: "active",
+            portfolio: "base",
+            heroblock: "slide-out",
+            row: "slide-out-row",
+            slide: "slide-down",
+            nav: '',
+            navMenu: 'fade-out'
+
         })
-    }, 1500)
-}
 
-navPortfolio = (e) => {
-    e.preventDefault();
-
-    this.setState({
-                portfolio: 'slide-in',
-                navMenu:'fade-in',
-                nav:'away',
-                home:'',
-                heroblock:'base',
-                row:"slide-in-row",
-    })
-
-            window.setTimeout(() => { 
-                navigate("/portfolio")
-                this.setState({headerS:'none'})
-            }, 1500)
+        window.setTimeout(() => {
+            navigate("/")
+            this.setState({headerS: '', slide: '', row: ''})
+        }, 1500)
     }
 
-navExp = (e) => {
-    this.setState({experience:'exp'})
-    this.setState({nav:'away'})
-    this.setState({home:'away'})
-    this.setState({heroblock:'base'})
-    e.preventDefault();
-    window.setTimeout(() => { navigate("/portfolio#experience")
-    }, 1500)
-}
+    navPortfolio = (e) => {
+        e.preventDefault();
+
+        this.setState({
+            experience: '',
+            portfolio: 'slide-in',
+            navMenu: 'fade-in',
+            nav: 'away',
+            home: '',
+            heroblock: 'base',
+            row: "slide-in-row",
+            slide: 'slide-up'
+        })
+
+        window.setTimeout(() => {
+            navigate("/portfolio")
+            this.setState({headerS: 'none'})
+        }, 1500)
+    }
+
+    navContact = (e) => {
+        e.preventDefault();
+
+        this.setState({
+            experience: '',
+            portfolio: 'slide-in',
+            navMenu: 'fade-in',
+            nav: 'away',
+            home: '',
+            heroblock: 'base',
+            row: "slide-in-row",
+            slide: 'slide-up'
+        })
+
+        window.setTimeout(() => {
+            navigate("/contact")
+            this.setState({headerS: 'none'})
+        }, 1500)
+    }
+
+    navContactDirect = (e) => {
+
+        e.preventDefault();
+
+        this.setState({
+            experience: '',
+            portfolio: 'hero-base',
+            navMenu: 'fade-in',
+            nav: 'away',
+            home: '',
+            heroblock: 'base-hero',
+            row: "row-base",
+            slide: ''
+        })
+        
+        e.preventDefault();
+        navigate("/contact")
+    }
+
+    navPortfolioDirect = (e) => {
+        e.preventDefault();
+
+        this.setState({
+            experience: '',
+            portfolio: 'hero-base',
+            navMenu: 'fade-in',
+            nav: 'away',
+            home: '',
+            heroblock: 'base-hero',
+            row: "row-base",
+            slide: ''
+        })
+
+        window.setTimeout(() => {
+            navigate("/portfolio")
+            this.setState({headerS: 'none'})
+        }, 100)
+    }
+
+    navExp = (e) => {
+        this.setState({
+            experience: '',
+            portfolio: 'slide-in',
+            navMenu: 'fade-in',
+            nav: 'away',
+            home: '',
+            heroblock: 'base',
+            row: "slide-in-row",
+            slide: 'slide-up'
+        })
+        e.preventDefault();
+        window.setTimeout(() => {
+            navigate("/experience")
+            this.setState({headerS: 'none'})
+        }, 1500)
+    }
+
+    navExpDirect = (e) => {
+
+        
+        this.setState({
+            experience: '',
+            portfolio: 'hero-base',
+            navMenu: 'fade-in',
+            nav: 'away',
+            home: '',
+            heroblock: 'base-hero',
+            row: "row-base",
+            slide: ''
+        })
+        
+        e.preventDefault();
+        navigate("/experience")
+    }
+
+    handleHover = (e) => {
+        e.preventDefault();
+        console.log('over')
+        this.setState({
+            home: '',
+        })
+        e.preventDefault();
+        navigate("/experience")
+        // window.setTimeout(() => { navigate("/experience") }, 1500)
+    }
+
+
+    handleContactShow = (e) => {
+        e.preventDefault();
+        this.setState({
+            contact:'fade-in',
+        })
+    }
+
+    handleContactHide = (e) => {
+        e.preventDefault();
+        this.setState({
+            contact:'none',
+        })
+    }
+
 
 
 
 render (){
-    let {headerS,home,nav,navMenu} = this.state;
+    let {headerS,home,nav,navMenu,contact} = this.state;
     console.log(home)
 
-    
+    let handleHover = this.handleHover
+
+
     return (
         <>
                   
@@ -114,9 +237,10 @@ render (){
                         </div>
                             <div className="col c2">
                                 <div className={"ui " + nav}>
+                                    <div className={"contactinfo "+contact}><p>samrob.nz@gmail.com</p></div>
                                     <svg id="Layer_1" data-name="Layer 1" viewBox="0 0 731.4 803">
                                     <g>
-                                        <g id ="contactContainer" >                                     
+                                        <g id ="contactContainer" onMouseEnter={this.handleContactShow} onMouseLeave={this.handleContactHide} onClick={this.navContact}>                                     
                                         <g id="contact">
                                         <g>
                                             <image width="697" height="511" transform="translate(35.02 293.48)" href="http://www.samrob.nz/wp-content/uploads/2019/04/contact.png"/>
@@ -130,6 +254,7 @@ render (){
                                             <path d="M406.59,633.64h-1.37l-1.91-5.5h-6.07l-1.88,5.5H394l5.61-16.06H401ZM403,627.08l-1.82-5.19c-.35-1.12-.61-2-.84-3h-.07a27.68,27.68,0,0,1-.82,2.89l-1.84,5.28Z" transform="translate(1.17)"/>
                                             <path d="M420.22,633.11a10.26,10.26,0,0,1-4.19.76c-3.91,0-7.47-2.52-7.47-8.17,0-5,3.07-8.38,8-8.38a7.65,7.65,0,0,1,3.6.68l-.38,1.12a7.43,7.43,0,0,0-3.22-.7c-4,0-6.65,2.69-6.65,7.28,0,4.36,2.42,7.07,6.5,7.07a8.48,8.48,0,0,0,3.47-.72Z" transform="translate(1.17)"/>
                                             <path d="M432.69,618.68h-5v15h-1.31v-15h-5v-1.11h11.35v1.11Z" transform="translate(1.17)"/>
+                                            
                                         </g>
                                         <polygon points="727.61 292.11 33.61 802.11 32.17 803 43.99 803 730.7 298.52 730.7 289.83 727.61 292.11"/>
                                         </g></g>
@@ -188,20 +313,26 @@ render (){
             </div>
         </div>
                     ) : (
+                        <>
                         <div className={"navMenu "+navMenu}>
+                            
                         <div className="navlist">
                             <h2 onClick={this.navHome}>HOME NAV</h2>
-                            <h2>PORTFOLIO</h2>
-                            <h2>EXPERIENCE</h2>
-                            <h2>CONTACT</h2>       
+                            <h2 onClick={this.navPortfolioDirect}>PORTFOLIO</h2>
+                            <h2 onClick={this.navExpDirect}>EXPERIENCE</h2>
+                            <h2 onClick={this.navContactDirect}>CONTACT</h2>       
                         </div>
-                    </div>
+                        </div>
+                        <div className="bigHome"></div>
+                    </>
                         )
                     }
         </Match>
 
         <Router>
-           <Portfolio path="/portfolio" experience={this.state.experience} data={this.state}/>
+           <Portfolio path="/portfolio" data={this.state}/>
+           <Experience path="/experience" data={this.state}/>
+           <Contact path="/contact" data={this.state}/>
         </Router>
         </>
     )
