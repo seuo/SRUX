@@ -2,7 +2,6 @@ import React, {Component} from 'react';
 import { Router, Link, Redirect, Location,navigate  } from "@reach/router";
 import { TransitionGroup, CSSTransition } from "react-transition-group";
 
-
 import Srux from './Srux';
 import Portfolio from './Portfolio';
 
@@ -15,7 +14,8 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-        home:'fade-in'
+        home:'fade-in',
+        experience:'exp'
     }
 }
 
@@ -25,16 +25,15 @@ componentDidMount = () => {
   
   // .then(res => this.setState({categories:res.data}))
 }
+
   
   render() {
 
 
     return (
 
-    <Router>
-      <Srux path="/" home={this.state.home} />
-      <Portfolio path="/portfolio" />
-    </Router>
+      <Srux path="/" home={this.state.home} experience={this.state.experience}/>
+
     )
   }
 

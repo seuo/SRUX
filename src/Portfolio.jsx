@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import { Router, Link, Redirect, Location,navigate } from "@reach/router";
+import { Router, Link, Redirect, Location,navigate,Match } from "@reach/router";
 import HorizontalScroll from 'react-scroll-horizontal';
 import normalizeWheel from 'normalize-wheel';
 
@@ -25,64 +25,41 @@ class Portfolio extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            portfolio: 'slide-in',
-            home: '',
-            row:'slide-in-row',
+            portfolio: '',
+            row:'',
+            mainNav:'closeNav',
+            heroblock:'slide-in-fade',
+            experience:'',
+            home:'',
             slide:'',
             nav:'',
-            mainNav:'closeNav',
-            heroblock:'slide-in-fade'
+            
         }
     }
 
 
     componentDidMount = () => {
-    }
 
-    navHome = (e) => {
-        // let home = this.state;
-        // let inactive = 'away'
-        // this.setState({home:"active"})
-        this.setState({slide:"slide-down"})
-        this.setState({portfolio:"come"})
-        this.setState({heroblock:"slide-out"})
-        this.setState({row:"slide-out-row"})
-        e.preventDefault(); //prevent transition
-        this.setState({mainNav:'closeNav'})
-        window.setTimeout(() => { navigate("/")
-        }, 1500)
+        this.setState({headerS:'none'})
+
+        
+        let experience = this.props.experience;
+        this.setState({
+            experience:experience
+        })
+        console.log(experience)
 
     }
-
-    navPortfolio = (e) => {
-        this.setState({nav:'away'})
-        this.setState({home:'away'})
-        this.setState({mainNav:'closeNav'})
-        e.preventDefault(); //prevent transition
-        window.setTimeout(() => { navigate("/portfolio")
-        }, 1500)
-    }
-    
 
     render() {
-        let {home} = this.state;
-        let {portfolio} = this.state;
-        let {row} = this.state;
-        let {slide} = this.state;
-        let {heroblock} = this.state;
-        let {mainNav} = this.state;
+        let {home,portfolio,row,slide,heroblock,experience} = this.props.data;
+
 
         return (
-
-            <container className="pWrap">
-                             <div className="navMenu"></div>
-                             <div className={slide+" navlist"}>
-                                    <h2 onClick={this.navHome}>HOME NAV</h2>
-                                    <h2>PORTFOLIO</h2>
-                                    <h2>EXPERIENCE</h2>
-                                    <h2>CONTACT</h2>       
-                            </div>
-                            <div className={"pheaderSection "}>
+            
+                <container className="pWrap">
+     
+                <div className={"pheaderSection "}>
                             <div className="header">
                                 <div className={"hero " +heroblock}>
                                     <div className="col c1"><div className="heroblock"><div className={"heading "+home+" one"}><img src={logo} alt=""/><h1>Print &<br/>Digital<br/>Design</h1></div><div className={home+" three"}><p>
@@ -94,15 +71,16 @@ class Portfolio extends Component {
                                 </div>
                             </div>
                         </div>
-                            
-                <HorizontalScroll
-                    // pageLock      = { bool }
-                    reverseScroll={true}
-                    // style         = { object }
-                    config        = {{ stiffness: 3, damping: 3 }}
-                    className="work"
-                    animValues    = { 1 }
-                >
+
+                    <HorizontalScroll
+                        // pageLock      = { bool }
+                        reverseScroll={true}
+                        // style         = { object }
+                        config        = {{ stiffness: 3, damping: 3 }}
+                        className={"work "+experience}
+                        animValues    = { 1 }
+                    >
+
                     <div className="headerSection pHeaderSection">
                         <div className="header pHeader">
                             <div className={"hero " +portfolio}>
