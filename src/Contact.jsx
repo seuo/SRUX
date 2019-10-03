@@ -1,12 +1,4 @@
 import React, {Component} from 'react';
-import {
-    Router,
-    Link,
-    Redirect,
-    Location,
-    navigate,
-    Match
-} from "@reach/router";
 import HorizontalScroll from 'react-scroll-horizontal';
 import normalizeWheel from 'normalize-wheel';
 
@@ -207,7 +199,7 @@ class Contact extends Component {
                                 </block>
                                 <text></text>
                                 <text className="skills">
-                                    <h1></h1>
+                                  
                                 </text>
                             </itemheading>
                         </row>

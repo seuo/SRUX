@@ -1,14 +1,9 @@
 import React, {Component} from 'react';
 import {
     Router,
-    Redirect,
-    Link,
-    Location,
     navigate,
     Match
 } from "@reach/router";
-
-import {TransitionGroup, CSSTransition} from "react-transition-group";
 
 import logo from './assets/sr-logo.png';
 import Portfolio from './Portfolio';
@@ -182,16 +177,6 @@ class Srux extends Component {
         navigate("/experience")
     }
 
-    handleHover = (e) => {
-        e.preventDefault();
-        console.log('over')
-        this.setState({
-            home: '',
-        })
-        e.preventDefault();
-        navigate("/experience")
-        // window.setTimeout(() => { navigate("/experience") }, 1500)
-    }
 
 
     handleContactShow = (e) => {
@@ -215,7 +200,6 @@ render (){
     let {headerS,home,nav,navMenu,contact} = this.state;
     console.log(home)
 
-    let handleHover = this.handleHover
 
 
     return (

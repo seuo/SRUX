@@ -1022,6 +1022,7 @@ text.skills1 h1 {
   -webkit-filter: blur(0px);
           filter: blur(0px);
   margin-top: 0;
+  z-index: -1;
 }
 
 .hero-base {
@@ -1392,6 +1393,7 @@ g#contact-border {
 }
 
 .hero {
+  overflow: hidden;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1816,6 +1818,9 @@ svg {
   }
   .eRow2 itemheading text {
     font-size: .5em;
+  }
+  .eRow2 {
+    z-index: 99;
   }
   blurb block {
     display: -webkit-box;

@@ -1,12 +1,5 @@
 import React, {Component} from 'react';
-import {
-    Router,
-    Link,
-    Redirect,
-    Location,
-    navigate,
-    Match
-} from "@reach/router";
+import {navigate,} from "@reach/router";
 import HorizontalScroll from 'react-scroll-horizontal';
 import normalizeWheel from 'normalize-wheel';
 
@@ -55,13 +48,13 @@ class Portfolio extends Component {
         e.preventDefault();
         console.log('over')
         this.setState({
-            // experience:'exp', portfolio: 'slide-in', navMenu:'fade-in', nav:'away',
+
             home: '',
-            // heroblock:'base', row:"slide-in-row"
+
         })
         e.preventDefault();
         navigate("/experiences")
-        // window.setTimeout(() => { navigate("/experience") }, 1500)
+
     }
 
     render() {
@@ -107,9 +100,7 @@ class Portfolio extends Component {
                 </div>
 
                 <HorizontalScroll
-                    // pageLock      = { bool }
                     reverseScroll={true}
-                    // style         = { object }
                     config={{
                         stiffness: 3,
                         damping: 3

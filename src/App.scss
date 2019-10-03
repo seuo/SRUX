@@ -280,6 +280,7 @@ p {
     width: 50vw;
     filter: blur(0px);
     margin-top: 0;
+    z-index: -1;
 }
 
 .hero-base {
@@ -578,7 +579,7 @@ g#contact-border {
 }
 
 .hero {
-
+    overflow:hidden;
     display: flex;
     justify-content: space-between;
     height: 100vh;
@@ -947,6 +948,11 @@ svg {
                 font-size:.5em;
             }
         }
+    }
+
+    .eRow2  {
+
+        z-index: 99;
     }
 
 
