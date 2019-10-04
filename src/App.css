@@ -226,7 +226,7 @@ blurb text {
 }
 
 blurb text p {
-  font-size: 1.1em;
+  font-size: 1em;
   padding-bottom: 0.5em;
   font-weight: 300;
 }
@@ -1806,9 +1806,8 @@ svg {
     width: 100vw;
     height: 65%;
   }
-  .row1 blurb text p {
+  .row1 blurb text {
     font-size: .5em;
-    color: #dcdcdc;
   }
   .row2 {
     display: -webkit-box;

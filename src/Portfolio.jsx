@@ -156,10 +156,10 @@ class Portfolio extends Component {
                                     <text>
                                         <h1>Mitchell's Joinery</h1>
                                         <p>Market Research / Brand Design / Site Design</p>
-                                        The team over at Mitchell's Joinery required a new brand design along with a
+                                        <p>The team over at Mitchell's Joinery required a new brand design along with a
                                         website upgrade to a more modern and intuitive UX design. Mitchell's Joinery
                                         main focus was on the marine industry. The new logo and website required a more
-                                        premium design along with a more logical catagory / navigation hirechy.
+                                        premium design along with a more logical catagory / navigation hirechy.</p>
 
                                     </text>
                                 </blurb>
@@ -190,13 +190,13 @@ class Portfolio extends Component {
                                     <text>
                                         <h1>10 Squares Cabins</h1>
                                         <p>Brand Design / Site Design / Drafting & Rendering</p>
-                                        10 Squares Cabins is a new manufacturer of small cabins & sleep-outs that fit
+                                        <p>10 Squares Cabins is a new manufacturer of small cabins & sleep-outs that fit
                                         within the 10m² council requirements. They required a brand-id along with a
                                         website showcasing the quality and process that goes into building their kitset
                                         cabins. I worked closely with the 10 Squares team to create a clean &
                                         informative website. Using renders I was able to show the customer the build
                                         process from start to finish. I continued work for them doing drafting & render
-                                        work for customers who needed custom builds.
+                                        work for customers who needed custom builds.</p>
 
                                     </text>
                                 </blurb>
@@ -223,14 +223,14 @@ class Portfolio extends Component {
                                     <text>
                                         <h1>Gubba Sheds</h1>
                                         <p>Site Design</p>
-                                        Gubba required a site design for their garden shed range. They wanted their
+                                       <p>Gubba required a site design for their garden shed range. They wanted their
                                         website to easily display their full range & the amount of customisations
                                         possible. To do this I would develop a functional shed configurator which I
                                         integrated with an online ecommerce platform. This made it possible for
                                         customers to resize, change colour, add doors, windows & add a variety of other
                                         extras, it also gave them ability to add assembly service to their order. The
                                         shed configurator has been a great point of difference between Gubba Garden
-                                        Sheds & their competitors.
+                                        Sheds & their competitors.</p>
 
                                     </text>
                                 </blurb>
@@ -291,7 +291,7 @@ class Portfolio extends Component {
                                         <p>Website</p>
                                         <p>The team at heliboard nz needed a redesign of their website to look more
                                             modern & eye catching.</p>
-                                        <p>They wanted the website to be designed for results, they were getting the
+                                        <p>They also wanted the website to be designed for results, they were getting the
                                             traffic but not the conversion rate. I came up with a solution by designing more
                                             of a one page site with the most important features at the top that customers
                                             would be interested in. By creating an eye catching call to action & displaying
@@ -322,9 +322,9 @@ class Portfolio extends Component {
                                     <text>
                                         <h1>Mangawhai Village Market</h1>
                                         <p>Logo / Brand Design</p>
-                                        <p>The Mangawhai Village Market needed a brand for their ever growing markets I
-                                            discussed with them design concepts & we came up with the idea to include a
-                                            local bird, the Fairy Tern, which is a distinctive bird that locals will
+                                        <p>The Mangawhai Village Market needed a logo for their ever growing market. I
+                                            discussed with them some design concepts & we came up with the idea to include a
+                                            local bird, the Fairy Tern, which is a distinctive icon that locals will
                                             recognize.</p>
                                         <p>I really enjoyed working on this brand, something a bit different.</p>
 
@@ -453,8 +453,8 @@ class Portfolio extends Component {
                                     <text>
                                         <h1>13b Design</h1>
                                         <p>Renders & Floor Plans</p>
-                                        <p>These renders & floor plans were created for a for a draftsman so they could
-                                            show the client and give them a better idea and visual of what their finished
+                                        <p>These renders & floor plans were created for a draftsman so they could
+                                            show the client and give them a better idea & visual of what their finished
                                             home will look like.</p>
                                         <p>I worked with the client through the design process, providing different
                                             cladding, scructure, design options & made changes along the way to suit</p>
@@ -754,10 +754,10 @@ class Portfolio extends Component {
                                     <text>
                                         <h1>Mitchell's Joinery</h1>
                                         <p>Market Research / Brand Design / Site Design</p>
-                                        The team over at Mitchell's Joinery required a new brand design along with a
+                                        <p>The team over at Mitchell's Joinery required a new brand design along with a
                                         website upgrade to a more modern and intuitive UX design. Mitchell's Joinery
                                         main focus was on the marine industry. The new logo and website required a more
-                                        premium design along with a more logical catagory / navigation hirechy.
+                                        premium design along with a more logical catagory / navigation order.</p>
 
                                     </text>
                                 </blurb>
@@ -788,13 +788,13 @@ class Portfolio extends Component {
                                     <text>
                                         <h1>10 Squares Cabins</h1>
                                         <p>Brand Design / Site Design / Drafting & Rendering</p>
-                                        10 Squares Cabins is a new manufacturer of small cabins & sleep-outs that fit
+                                        <p>10 Squares Cabins is a new manufacturer of small cabins & sleep-outs that fit
                                         within the 10m² council requirements. They required a brand-id along with a
                                         website showcasing the quality and process that goes into building their kitset
                                         cabins. I worked closely with the 10 Squares team to create a clean &
                                         informative website. Using renders I was able to show the customer the build
                                         process from start to finish. I continued work for them doing drafting & render
-                                        work for customers who needed custom builds.
+                                        work for customers who needed custom builds.</p>
 
                                     </text>
                                 </blurb>
@@ -821,14 +821,14 @@ class Portfolio extends Component {
                                     <text>
                                         <h1>Gubba Sheds</h1>
                                         <p>Site Design</p>
-                                        Gubba required a site design for their garden shed range. They wanted their
+                                       <p>Gubba required a site design for their garden shed range. They wanted their
                                         website to easily display their full range & the amount of customisations
                                         possible. To do this I would develop a functional shed configurator which I
                                         integrated with an online ecommerce platform. This made it possible for
                                         customers to resize, change colour, add doors, windows & add a variety of other
                                         extras, it also gave them ability to add assembly service to their order. The
                                         shed configurator has been a great point of difference between Gubba Garden
-                                        Sheds & their competitors.
+                                        Sheds & their competitors.</p>
 
                                     </text>
                                 </blurb>
