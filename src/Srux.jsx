@@ -206,7 +206,7 @@ render (){
         <>
                   
 
-
+                  
      
         <Match path="/">
         {props =>
@@ -216,7 +216,7 @@ render (){
             <div className="header">
                 <div className="hero">
                     <div className="col c1"><div className="heroblock"><div className={"heading "+home+" one"}><img src={logo} alt=""/><h1>Print &<br/>Digital<br/>Design</h1></div><div className={home+" three"}><p>
-                                Creative digital &amp;<br/>and experiences.<br/>My aim is to create <br/>functional, professional<br/>&amp; eye catching design.</p></div><div className={home+" five"}><h2>Sam Robertson</h2></div>
+                                Creative digital &amp;<br/>brand experiences.<br/>My aim is to create <br/>functional, professional<br/>&amp; eye catching design.</p></div><div className={home+" five"}><h2>Sam Robertson</h2></div>
                     </div>
                         </div>
                             <div className="col c2">
@@ -224,7 +224,7 @@ render (){
                                     <div className={"contactinfo "+contact}><p>samrob.nz@gmail.com</p></div>
                                     <svg id="Layer_1" data-name="Layer 1" viewBox="0 0 731.4 803">
                                     <g>
-                                        <g id ="contactContainer" onMouseEnter={this.handleContactShow} onMouseLeave={this.handleContactHide} onClick={this.navContact}>                                     
+                                        <g id ="contactContainer"  onClick={this.navContact}>                                     
                                         <g id="contact">
                                         <g>
                                             <image width="697" height="511" transform="translate(35.02 293.48)" href="http://www.samrob.nz/wp-content/uploads/2019/04/contact.png"/>

@@ -86,7 +86,7 @@ class Portfolio extends Component {
                                     </div>
                                     <div className={home + " three"}>
                                         <p>
-                                            Creative digital &amp;<br/>and experiences.<br/>My aim is to create
+                                            Creative digital &amp;<br/>brand experiences.<br/>My aim is to create
                                             <br/>functional, professional<br/>&amp; eye catching design.</p>
                                     </div>
                                     <div className={home + " five"}>
@@ -116,7 +116,7 @@ class Portfolio extends Component {
                                         </div>
                                         <div>
                                             <p>
-                                                Creative digital &amp;<br/>and experiences.<br/>My aim is to create
+                                                Creative digital &amp;<br/>brand experiences.<br/>My aim is to create
                                                 <br/>functional, professional<br/>&amp; eye catching design.</p>
                                         </div>
                                         <div>

@@ -175,9 +175,9 @@ p {
     to {
         opacity: 1;
         filter: blur(50px);
-        width: 100vw;
+        width: 50vw;
         margin-top: 150vh;
-        margin-left: -100vw;
+        margin-left: 0vw;
     }
 }
 
@@ -204,7 +204,7 @@ p {
         opacity: 1;
         filter: blur(50px);
         margin-top: 150vh;
-        margin-left: -50vw;
+        margin-left: -5vw;
     }
 }
 
@@ -710,6 +710,16 @@ svg {
 
 // misc
 
+.createHeading {
+    margin-left: -6em;
+    width:20em;
+}
+
+.workHeading {
+
+    width:20em;
+}
+
 .pHeaderSection {
     height: 0;
     .pHeader {
@@ -894,6 +904,12 @@ svg {
     .workHeading {
         font-size: 2em;
         margin-left: -3em;
+        width:50em;
+    }
+
+    .createHeading {
+        font-size: 2em;
+        margin-left: -3em;
     }
 
     .header .hero .col .heroblock {
@@ -990,6 +1006,25 @@ svg {
         overflow: hidden;
         padding: 1em;
         width: 55vw;
+    }
+    itemheading block h1 {
+        font-size: 2em;
+        font-weight: 300;
+        margin-top: -0.93em;
+        margin-left: -6vw;
+    }
+    text.skills1 h1 {
+        font-size: .8em;
+        font-weight: 100;
+        margin-left: -8em;
+        display:none;
+    }
+
+    text.skills h1 {
+        font-size: .8em;
+        font-weight: 100;
+        margin-left: 7em;
+        display:none;
     }
 
     itemheading text imgblock {

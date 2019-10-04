@@ -66,7 +66,7 @@ class Experience extends Component {
                                     </div>
                                     <div className={home + " three"}>
                                         <p>
-                                            Creative digital &amp;<br/>and experiences.<br/>My aim is to create
+                                            Creative digital &amp;<br/>brand experiences.<br/>My aim is to create
                                             <br/>functional, professional<br/>&amp; eye catching design.</p>
                                     </div>
                                     <div className={home + " five"}>
@@ -98,7 +98,7 @@ class Experience extends Component {
                                         </div>
                                         <div>
                                             <p>
-                                                Creative digital &amp;<br/>and experiences.<br/>My aim is to create
+                                                Creative digital &amp;<br/>brand experiences.<br/>My aim is to create
                                                 <br/>functional, professional<br/>&amp; eye catching design.</p>
                                         </div>
                                         <div>
@@ -146,16 +146,16 @@ class Experience extends Component {
                                 <text>
                                     <h1>Yoobee Web & UX Development</h1>
                                     <p>Level 6 / 2019</p>
-                                    <p>This one year diploma has been a great refresher, gave me whole range of new
+                                    <p>This one year diploma has been a great refresher that gave me whole range of new
                                         skills.
                                     </p>
-                                    <p>The course was an intensive full time course covering design, markup,
+                                    <p>The course was an intensive full time course covering design, markup &
                                         styling, coding, cms development as well as agile group work. I also got a great
-                                        introduction to coding, learning Javascript, Jquery & React.
+                                        introduction to React as well as refreshing my Javascript & Jquery knowledge.
                                     </p>
-                                    <p>Using these all these skills I was able to develop a new tier of web sites &
+                                    <p>Using all these skills I am able to develop a more advanced range of web sites &
                                         applications.</p>
-                                    <p>UX & Web Design / Javascript, Jquery, React, CMS Development</p>
+                                    <p>The course was broken into 4 modules over the year.<br/>UX & Web Design / Javascript, Jquery / React / CMS Development</p>
 
                                 </text>
                             </blurb>
@@ -172,11 +172,13 @@ class Experience extends Component {
                                     <br/>Computer Assembly Procedures<br/>
                                     Technical Configuration.
                                 </text>
+                                
                                 <text>
                                     <h4>Web & UX Applications</h4>
                                     Visual Studio Code<br/>Sublime<br/>Sketch<br/>Adobe XD<br/>Github
                                 </text>
                                 <text className="skills"></text>
+                                
                             </itemheading>
                         </row>
                     </section>
@@ -209,6 +211,7 @@ class Experience extends Component {
                         </row>
                         <row className="eRow2">
                             <itemheading>
+                                
                                 <text>
                                     <h4>Print & Rendering Applications</h4>
                                     Adobe Photoshop<br/>Adobe Illustrator<br/>Adobe Indesign<br/>Adobe Animate<br/>Adobe Premiere<br/>Google Sketchup
@@ -238,7 +241,9 @@ class Experience extends Component {
                         </row>
                         <row className="eRow2">
                             <itemheading>
-                                <block></block>
+                            <block>
+                                    <h1 className="createHeading">Creative digital & brand experiences</h1>
+                                </block>
                                 <text></text>
                                 <text className="skills"></text>
                             </itemheading>
@@ -265,7 +270,9 @@ class Experience extends Component {
                         </row>
                         <row className="eRow2">
                             <itemheading>
-                                <block></block>
+                            <block>
+
+                                </block>
                                 <text></text>
                                 <text className="skills1"></text>
                             </itemheading>
@@ -292,36 +299,15 @@ class Experience extends Component {
                         <row className="eRow2">
                             <itemheading>
                                 <block>
-                                    <h1 className="workHeading">samrob.nz@gmail.com</h1>
+                                <h1 className="workHeading">
+                                    samrob.nz@gmail.com
+</h1>
                                 </block>
                                 <text></text>
                                 <text className="skills1"></text>
                             </itemheading>
                         </row>
 
-                    </section>
-                    <section className={"pSection " + slide}>
-
-                        <row className="row1">
-                            <blurb>
-                                <block></block>
-                                <text>
-                               
-
-                                </text>
-                            </blurb>
-                        </row>
-                        <row className="row2">
-                            <itemheading>
-                                <block>
-                                    <h1 className="workHeading">022 699 2719</h1>
-                                </block>
-                                <text></text>
-                                <text className="skills">
-                                    
-                                </text>
-                            </itemheading>
-                        </row>
                     </section>
 
                 </HorizontalScroll>

@@ -66,7 +66,7 @@ class Contact extends Component {
                                     </div>
                                     <div className={home + " three"}>
                                         <p>
-                                            Creative digital &amp;<br/>and experiences.<br/>My aim is to create
+                                            Creative digital &amp;<br/>brand experiences.<br/>My aim is to create
                                             <br/>functional, professional<br/>&amp; eye catching design.</p>
                                     </div>
                                     <div className={home + " five"}>
@@ -98,7 +98,7 @@ class Contact extends Component {
                                         </div>
                                         <div>
                                             <p>
-                                                Creative digital &amp;<br/>and experiences.<br/>My aim is to create
+                                                Creative digital &amp;<br/>brand experiences.<br/>My aim is to create
                                                 <br/>functional, professional<br/>&amp; eye catching design.</p>
                                         </div>
                                         <div>
@@ -162,12 +162,15 @@ class Contact extends Component {
                     <section  className={"pSection " + slide}>
 
                         <row className="eRow1">
-                            <blurb>
+                        <blurb>
 
-                                <text>
-                         
+                            <text>
+                                <h1>Sam Robertson</h1>
+                                <p></p>
+                                <p>I’m a frontend developer based in Auckland, New Zealand.</p><p>I have a passion for design & creating high quality, functional web solutions.</p>
+                                <p>Get in touch if you have a job / project you need help with!</p>
 
-                                </text>
+                            </text>
                             </blurb>
                         </row>
                         <row className="eRow2">
@@ -175,6 +178,7 @@ class Contact extends Component {
                                 <block>
                                     <h1 className="workHeading">samrob.nz@gmail.com</h1>
                                 </block>
+
                                 <text></text>
                                 <text className="skills1"></text>
                             </itemheading>
@@ -194,8 +198,8 @@ class Contact extends Component {
                         </row>
                         <row className="row2">
                             <itemheading>
-                                <block>
-                                    <h1 className="workHeading">022 699 2719</h1>
+                            <block>
+                                    <h1 className="workHeading">Creative digital & brand experiences</h1>
                                 </block>
                                 <text></text>
                                 <text className="skills">
