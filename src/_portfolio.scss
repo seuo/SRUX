@@ -61,10 +61,12 @@
     background-color: #ffffff;
     transition: 0.5s ease all;
 }
+
+
 .navlist {
     margin-left: 0;
     padding-left: 7vw;
-    width: 30vw;
+    width: 40em;
     right: 0;
     display: flex;
     justify-content: flex-end;
@@ -104,6 +106,19 @@
         // border-bottom:#b38539 thin solid;
     }
 
+}
+
+.navlist.P {
+    margin-right: 29em;
+    width: initial;
+    justify-content: flex-start;
+}
+.navlist {
+    .zB {
+        h2{
+        color:transparent !important;
+        }
+    }
 }
 
 blurb {

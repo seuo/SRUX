@@ -1,5 +1,6 @@
 {
   "projects": {
-    "default": "srux-design"
+    "default": "srux-design",
+    "srux-design": "srux-design"
   }
 }

@@ -8,8 +8,11 @@ import {
     isMobile
   } from "react-device-detect";
 
+  import {
+    navigate,
+} from "@reach/router";
+
 import logo from './assets/sr-logo.png';
-import { isFlowPredicate } from '@babel/types';
 
 document.addEventListener('mousewheel', function (event) {
     const normalized = normalizeWheel(event);
@@ -18,6 +21,7 @@ document.addEventListener('mousewheel', function (event) {
 });
 
 class Contact extends Component {
+    
     constructor(props) {
         super(props);
         this.state = {
@@ -28,18 +32,60 @@ class Contact extends Component {
             experience: '',
             home: '',
             slide: '',
-            nav: ''
+            nav: '',
         }
+
     }
+    
+    
 
     componentDidMount = () => {
+        
+        let data = this.props.data
+         
+         this.setState({
+         headerS:data.headerS,
+         portfolio:data.portfolio,
+         row:data.row,
+         mainNav:data.mainNav,
+         heroblock:data.heroblock,
+         experience:data.experience,
+         home:data.home,
+         slide:data.slide,
+         nav:data.nav,
+      })
+          
+      }
 
-        this.setState({headerS: 'none'})
 
-        let experience = this.props.experience;
-        this.setState({experience: experience})
-        console.log(experience)
+    //         
+    //         .then(res => {
+    //             this.setState({products: res.data})
+    //         })
+    // }
 
+   
+
+
+
+    navHome = (e) => {
+        e.preventDefault();
+
+        this.setState({
+            experience: 'exp',
+            home: "active",
+            portfolio: "base",
+            heroblock: "slide-out",
+            row: "slide-out-row",
+            slide: "slide-down",
+            nav: '',
+            navMenu: 'fade-out'
+        })
+
+        window.setTimeout(() => {
+            navigate("/")
+            this.setState({headerS: '', slide: '', row: '', navMenu: '',nav: '',})
+        }, 1500)
     }
 
 
@@ -51,24 +97,26 @@ class Contact extends Component {
             row,
             slide,
             heroblock,
-            experience
-        } = this.props.data;
-        let handleHover = this
-            .handleHover
-            console
-            .log(handleHover);
-
+            experience,
+            navMenu
+        } = this.state;
 
 
         return (
             <>
             <BrowserView>
             <container className="pWrap">
+            <div className={"navMenu P "+navMenu}>
+                            
+                            <div className="navlist P">
+                                <h2 onClick={this.navHome}>HOME NAV</h2>     
+                            </div>
+                            </div>
                 <div className={"pHeaderSection "}>
                     <div className="header">
                         <div className={"hero " + heroblock}>
                             <div className="col c1">
-                                <div className="heroblock">
+                                <div className="heroblock" onClick={this.navHome}>
                                     <div className={"heading " + home + " one"}><img src={logo} alt=""/>
                                         <h1>Print &<br/>Digital<br/>Design</h1>
                                     </div>

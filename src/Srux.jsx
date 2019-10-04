@@ -5,39 +5,54 @@ import {
     Match
 } from "@reach/router";
 
+import {
+    BrowserView,
+    MobileView,
+    isBrowser,
+    isMobile
+  } from "react-device-detect";
+
 import logo from './assets/sr-logo.png';
 import Portfolio from './Portfolio';
 import Experience from './Experience';
 import Contact from './Contact';
 
 class Srux extends Component {
+    
 
     constructor(props) {
         super(props);
         this.state = {
-            headerS: 'gone',
+            headerS: '',
             home: '',
             nav: '',
             heroblock: 'slide-in-fade',
-
-            // Portfolio states
             portfolio: 'slide-in',
             row: 'slide-in-row',
             mainNav: 'closeNav',
             slide: 'slide-up',
             navMenu: '',
-
-            // Experience states
             experience: '',
-
-            // Contact states
             contact:'none',
 
         }
+    
     }
 
     componentDidMount = () => {
-        this.setState({headerS: ''})
+            this.setState({
+            headerS: '',
+            home: 'active',
+            nav: '',
+            heroblock: 'slide-in-fade',
+            portfolio: 'slide-in',
+            row: 'slide-in-row',
+            mainNav: 'closeNav',
+            slide: 'slide-up',
+            navMenu: '',
+            experience: '',
+            contact:'none',
+        })
 
     }
 
@@ -52,15 +67,20 @@ class Srux extends Component {
             row: "slide-out-row",
             slide: "slide-down",
             nav: '',
-            navMenu: 'fade-out'
-
+            navMenu: 'fade-out',
+            headerS: 'none',
         })
 
         window.setTimeout(() => {
             navigate("/")
-            this.setState({headerS: '', slide: '', row: ''})
+            this.setState({
+                headerS: '', slide: '', row: '',
+                nav: '',})
         }, 1500)
     }
+
+
+    
 
     navPortfolio = (e) => {
         e.preventDefault();
@@ -77,8 +97,21 @@ class Srux extends Component {
         })
 
         window.setTimeout(() => {
+ 
+            this.setState({
+                headerS: '',
+                home: 'active',
+                nav: '',
+                heroblock: 'base',
+                portfolio: 'slide-in',
+                row: 'slide-in-row',
+                mainNav: 'closeNav',
+                slide: 'slide-up',
+                navMenu: '',
+                experience: '',
+                contact:'none',
+            })
             navigate("/portfolio")
-            this.setState({headerS: 'none'})
         }, 1500)
     }
 
@@ -97,8 +130,53 @@ class Srux extends Component {
         })
 
         window.setTimeout(() => {
+
+            this.setState({
+                headerS: '',
+                home: 'active',
+                nav: '',
+                heroblock: 'base',
+                portfolio: 'slide-in',
+                row: 'slide-in-row',
+                mainNav: 'closeNav',
+                slide: 'slide-up',
+                navMenu: '',
+                experience: '',
+                contact:'none',
+            })
             navigate("/contact")
-            this.setState({headerS: 'none'})
+        }, 1500)
+    }
+
+
+    navExp = (e) => {
+        this.setState({
+            experience: '',
+            portfolio: 'slide-in',
+            navMenu: 'fade-in',
+            nav: 'away',
+            home: '',
+            heroblock: 'base',
+            row: "slide-in-row",
+            slide: 'slide-up'
+        })
+        e.preventDefault();
+        window.setTimeout(() => {
+
+            this.setState({
+                headerS: '',
+                home: 'active',
+                nav: '',
+                heroblock: 'base',
+                portfolio: 'slide-in',
+                row: 'slide-in-row',
+                mainNav: 'closeNav',
+                slide: 'slide-up',
+                navMenu: '',
+                experience: '',
+                contact:'none',
+            })
+            navigate("/experience")
         }, 1500)
     }
 
@@ -109,8 +187,6 @@ class Srux extends Component {
         this.setState({
             experience: '',
             portfolio: 'hero-base',
-            navMenu: 'fade-in',
-            nav: 'away',
             home: '',
             heroblock: 'base-hero',
             row: "row-base",
@@ -127,8 +203,6 @@ class Srux extends Component {
         this.setState({
             experience: '',
             portfolio: 'hero-base',
-            navMenu: 'fade-in',
-            nav: 'away',
             home: '',
             heroblock: 'base-hero',
             row: "row-base",
@@ -137,27 +211,11 @@ class Srux extends Component {
 
         window.setTimeout(() => {
             navigate("/portfolio")
-            this.setState({headerS: 'none'})
+            this.setState({headerS: ''})
         }, 100)
     }
 
-    navExp = (e) => {
-        this.setState({
-            experience: '',
-            portfolio: 'slide-in',
-            navMenu: 'fade-in',
-            nav: 'away',
-            home: '',
-            heroblock: 'base',
-            row: "slide-in-row",
-            slide: 'slide-up'
-        })
-        e.preventDefault();
-        window.setTimeout(() => {
-            navigate("/experience")
-            this.setState({headerS: 'none'})
-        }, 1500)
-    }
+
 
     navExpDirect = (e) => {
 
@@ -165,8 +223,6 @@ class Srux extends Component {
         this.setState({
             experience: '',
             portfolio: 'hero-base',
-            navMenu: 'fade-in',
-            nav: 'away',
             home: '',
             heroblock: 'base-hero',
             row: "row-base",
@@ -298,16 +354,17 @@ render (){
         </div>
                     ) : (
                         <>
+                         {/* <MobileView> */}
                         <div className={"navMenu "+navMenu}>
                             
                         <div className="navlist">
-                            <h2 onClick={this.navHome}>HOME NAV</h2>
-                            <h2 onClick={this.navPortfolioDirect}>PORTFOLIO</h2>
-                            <h2 onClick={this.navExpDirect}>EXPERIENCE</h2>
-                            <h2 onClick={this.navContactDirect}>CONTACT</h2>       
+                            <h2 className="zB" onClick={this.navHome}>HOME NAV</h2>
+                            <h2 className="z999" onClick={this.navPortfolioDirect}>PORTFOLIO</h2>
+                            <h2 className="z999" onClick={this.navExpDirect}>EXPERIENCE</h2>
+                            <h2 className="z999" onClick={this.navContactDirect}>CONTACT</h2>       
                         </div>
                         </div>
-                        <div className="bigHome"></div>
+                        {/* </MobileView> */}
                     </>
                         )
                     }

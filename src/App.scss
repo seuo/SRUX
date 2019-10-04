@@ -942,6 +942,8 @@ svg {
         }
     }
 
+
+
     .navlist {
         margin-left: 0;
         padding-left: 7vw;
@@ -966,6 +968,21 @@ svg {
             border-bottom: #222;
         }
     }
+
+    .navlist.P {
+        display:none;
+        margin-right: 21em;
+        width: initial;
+        justify-content: flex-start;
+    }
+    .navlist {
+        .zB {
+            h2{
+            color:transparent !important;
+            }
+        }
+    }
+    
 
     .expHeading {
         margin-left: -3em;

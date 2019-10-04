@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {navigate,} from "@reach/router";
+import {navigate,Link} from "@reach/router";
 import HorizontalScroll from 'react-scroll-horizontal';
 import normalizeWheel from 'normalize-wheel';
 
@@ -32,38 +32,62 @@ class Portfolio extends Component {
         super(props);
         this.state = {
             portfolio: '',
-            row: '',
+            row: 'slide-in-row',
             mainNav: 'closeNav',
-            heroblock: 'slide-in-fade',
+            heroblock: '',
             experience: '',
             home: '',
-            slide: '',
+            slide: 'slide-up',
+            headerS: 'none',
             nav: ''
         }
+
+
     }
 
     componentDidMount = () => {
-
-        this.setState({headerS: 'none'})
-
-        let experience = this.props.experience;
-        this.setState({experience: experience})
-        console.log(experience)
-
+        
+      let data = this.props.data
+       
+       this.setState({
+       headerS:data.headerS,
+       portfolio:data.portfolio,
+       row:data.row,
+       mainNav:data.mainNav,
+       heroblock:data.heroblock,
+       experience:data.experience,
+       home:data.home,
+       slide:data.slide,
+       nav:data.nav,
+    })
+        
     }
 
-    handleHover = (e) => {
+    
+
+   
+ 
+
+    navHome = (e) => {
         e.preventDefault();
-        console.log('over')
+
         this.setState({
-
-            home: '',
-
+            experience: 'exp',
+            home: "active",
+            portfolio: "base",
+            heroblock: "slide-out",
+            row: "slide-out-row",
+            slide: "slide-down",
+            nav: '',
+            navMenu: 'fade-out'
         })
-        e.preventDefault();
-        navigate("/experiences")
 
+        window.setTimeout(() => {
+            navigate("/")
+            this.setState({headerS: '', slide: '', row: '',navMenu: '',nav: '',})
+        }, 1500)
     }
+    
 
     render() {
         let {
@@ -72,20 +96,22 @@ class Portfolio extends Component {
             row,
             slide,
             heroblock,
-            experience
-        } = this.props.data;
-        let handleHover = this
-            .handleHover
-            console
-            .log(handleHover);
-
+            experience,
+            navMenu
+        } = this.state;
+        
 
         return (
             <>
 
             <BrowserView>
              <container className="pWrap">
-
+             <div className={"navMenu P "+navMenu}>
+                            
+                            <div className="navlist P">
+                                <h2 onClick={this.navHome}>HOME NAV</h2>     
+                            </div>
+                            </div>
                     <div className={"pheaderSection "}>
                         <div className="header">
                             <div className={"hero " + heroblock}>
@@ -147,8 +173,8 @@ class Portfolio extends Component {
                             <row className="row2"></row>
                         </section>
                         <section className={"pSection " + slide}>
-                            <div className="webWork">
-                                <div className="webImage mj"></div>
+                            <div className="webWork"> 
+                                <a href="//mitchellsjoinery.co.nz/" target="_blank"><div className="webImage mj"></div></a>
                             </div>
                             <row className="row1">
                                 <blurb>
@@ -182,7 +208,7 @@ class Portfolio extends Component {
                         </section>
                         <section className={"pSection " + slide}>
                             <div className="webWork">
-                                <div className="webImage tens"></div>
+                            <a href="//10squares.co.nz" target="_blank"><div className="webImage tens"></div></a>
                             </div>
                             <row className="row1">
                                 <blurb>
@@ -215,7 +241,7 @@ class Portfolio extends Component {
                         </section>
                         <section className={"pSection " + slide}>
                             <div className="webWork">
-                                <div className="webImage gubba"></div>
+                            <a href="//gubbagardensheds.co.nz" target="_blank"><div className="webImage gubba"></div></a>
                             </div>
                             <row className="row1">
                                 <blurb>
@@ -287,7 +313,7 @@ class Portfolio extends Component {
                                 <blurb>
                                     <block></block>
                                     <text>
-                                        <h1>heliboard.nz</h1>
+                                        <h1>Heliboard</h1>
                                         <p>Website</p>
                                         <p>The team at heliboard nz needed a redesign of their website to look more
                                             modern & eye catching.</p>

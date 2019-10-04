@@ -133,7 +133,7 @@ p {
 .navlist {
   margin-left: 0;
   padding-left: 7vw;
-  width: 30vw;
+  width: 40em;
   right: 0;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -179,6 +179,18 @@ p {
 
 .navlist h2:nth-child(4):hover {
   background-color: #f3f3f3;
+}
+
+.navlist.P {
+  margin-right: 29em;
+  width: initial;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.navlist .zB h2 {
+  color: transparent !important;
 }
 
 blurb {
@@ -1967,6 +1979,17 @@ svg {
     transition: ease all 0.5s;
     text-align: center;
     border-bottom: #222;
+  }
+  .navlist.P {
+    display: none;
+    margin-right: 21em;
+    width: initial;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+  .navlist .zB h2 {
+    color: transparent !important;
   }
   .expHeading {
     margin-left: -3em;

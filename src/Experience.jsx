@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import HorizontalScroll from 'react-scroll-horizontal';
+import {navigate,} from "@reach/router";
 import normalizeWheel from 'normalize-wheel';
 import {
     BrowserView,
@@ -20,27 +21,54 @@ class Experience extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            portfolio: '',
-            row: '',
+            portfolio: 'slide-in',
+            row: 'slide-in-row',
             mainNav: 'closeNav',
             heroblock: 'slide-in-fade',
             experience: '',
             home: '',
-            slide: '',
+            slide: 'slide-up',
             nav: ''
         }
     }
 
     componentDidMount = () => {
+        
+        let data = this.props.data
+         
+         this.setState({
+         headerS:data.headerS,
+         portfolio:data.portfolio,
+         row:data.row,
+         mainNav:data.mainNav,
+         heroblock:data.heroblock,
+         experience:data.experience,
+         home:data.home,
+         slide:data.slide,
+         nav:data.nav,
+      })
+          
+      }
 
-        this.setState({headerS: 'none'})
+    navHome = (e) => {
+        e.preventDefault();
 
-        let experience = this.props.experience;
-        this.setState({experience: experience})
-        console.log(experience)
+        this.setState({
+            experience: 'exp',
+            home: "active",
+            portfolio: "base",
+            heroblock: "slide-out",
+            row: "slide-out-row",
+            slide: "slide-down",
+            nav: '',
+            navMenu: 'fade-out'
+        })
 
+        window.setTimeout(() => {
+            navigate("/")
+            this.setState({headerS: '', slide: '', row: '',navMenu: '',nav: '',})
+        }, 1500)
     }
-
 
 
     render() {
@@ -50,19 +78,22 @@ class Experience extends Component {
             row,
             slide,
             heroblock,
-            experience
-        } = this.props.data;
-        let handleHover = this
-            .handleHover
-            console
-            .log(handleHover);
-
+            experience,
+            navMenu
+        } = this.state;
+   
 
 
         return (
             <>
             <BrowserView>
             <container className="pWrap">
+            <div className={"navMenu P "+navMenu}>
+                            
+                            <div className="navlist P">
+                                <h2 onClick={this.navHome}>HOME NAV</h2>     
+                            </div>
+                            </div>
                 <div className={"pHeaderSection "}>
                     <div className="header">
                         <div className={"hero " + heroblock}>
@@ -99,7 +130,7 @@ class Experience extends Component {
                         <div className="header pHeader">
                             <div className={"hero " + portfolio}>
                                 <div className="col c1">
-                                    <div onClick={this.navHome} className="heroblock">
+                                    <div className="heroblock" onClick={this.navHome}>
                                         <div className="heading"><img src={logo} alt=""/>
                                             <h1>Print &<br/>Digital<br/>Design</h1>
                                         </div>
