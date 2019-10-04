@@ -8,14 +8,16 @@
     "normalize-wheel": "^1.0.1",
     "postcss": "^7.0.18",
     "react": "^16.9.0",
+    "react-device-detect": "^1.9.10",
     "react-dom": "^16.9.0",
     "react-draggable": "^4.0.3",
+    "react-horizontal-scroll-container": "^1.0.1",
     "react-motion": "^0.5.2",
     "react-redux": "^7.1.1",
     "react-scripts": "3.1.2",
-    "react-scroll": "^1.7.14",
     "react-scroll-horizontal": "^1.6.2",
     "react-transition-group": "^4.3.0",
+    "react-wheeler": "^1.0.1",
     "sass-fonts": "^3.0.2"
   },
   "scripts": {

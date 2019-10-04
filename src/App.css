@@ -5,7 +5,7 @@
 }
 
 html {
-  scroll-behavior: smooth;
+  scroll-behavior: smooth !important;
 }
 
 h1,
@@ -21,10 +21,26 @@ p {
   font-family: "Roboto", sans-serif;
 }
 
+.scroller {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  height: 100%;
+  position: absolute;
+  will-change: transform;
+  -webkit-overflow-scrolling: touch;
+}
+
+.scroller::-webkit-scrollbar {
+  display: none !important;
+}
+
 .pWrap {
+  overflow-y: hidden;
   width: 100vw;
   height: 100vh;
   position: absolute;
+  scroll-behavior: smooth;
 }
 
 .work {
@@ -1554,7 +1570,7 @@ svg {
   width: 20em;
 }
 
-.workHeading {
+.contactHeading {
   width: 20em;
 }
 
@@ -1763,7 +1779,6 @@ svg {
   .workHeading {
     font-size: 2em;
     margin-left: -3em;
-    width: 50em;
   }
   .createHeading {
     font-size: 2em;
@@ -1791,6 +1806,10 @@ svg {
     width: 100vw;
     height: 65%;
   }
+  .row1 blurb text p {
+    font-size: .5em;
+    color: #dcdcdc;
+  }
   .row2 {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1814,7 +1833,7 @@ svg {
   }
   .eRow1 blurb text {
     font-size: .5em;
-    color: #555;
+    color: #333;
   }
   .eRow2 {
     display: -webkit-box;

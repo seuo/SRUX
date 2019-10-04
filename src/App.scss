@@ -5,7 +5,7 @@
 }
 
 html {
-    scroll-behavior: smooth;
+    scroll-behavior: smooth !important;
 }
 
 $font-stack: 'Roboto', sans-serif;
@@ -24,6 +24,20 @@ h5 {
 p {
     font-family: $font-stack-alt;
 }
+
+.scroller {
+
+    display: inline-flex;
+    height: 100%;
+    position: absolute;
+    will-change: transform;
+    -webkit-overflow-scrolling: touch;
+    
+}
+
+.scroller::-webkit-scrollbar {
+    display: none !important;
+  }
 
 @import "_portfolio.scss";
 @import "_exp.scss";
@@ -654,6 +668,8 @@ g#contact-border {
     }
 }
 
+
+
 g#portfolio image {
     clip-path: polygon(64.4% 0%, 99.6% 74.4%, 47% 99.2%, 1% 58%, 16% 0);
     //transform: translate(-50%,0%);
@@ -715,7 +731,7 @@ svg {
     width:20em;
 }
 
-.workHeading {
+.contactHeading {
 
     width:20em;
 }
@@ -904,7 +920,6 @@ svg {
     .workHeading {
         font-size: 2em;
         margin-left: -3em;
-        width:50em;
     }
 
     .createHeading {
@@ -929,6 +944,14 @@ svg {
         flex: 1 0 65%;
         width: 100vw;
         height: 65%;
+        blurb {
+            text {
+                 p{
+                    font-size:.5em;
+                    color:#dcdcdc;
+                }
+            }
+        }
     }
 
     .row2 {
@@ -937,6 +960,7 @@ svg {
         width: 100vw;
         background-color: #191919;
         height: 35%;
+        
     }
 
     .eRow1 {
@@ -946,8 +970,10 @@ svg {
         height: 65%;
         blurb {
             text {
-                font-size:.5em;
-                color:#555;
+                   
+                    font-size:.5em;
+                    color:#333;
+                
             }
         }
     }
