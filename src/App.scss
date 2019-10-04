@@ -887,6 +887,61 @@ svg {
 
 @media only screen and (max-width: 60em) {
 
+    .myForm {
+        margin-left: -25em;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        transform: scale(2);
+        font-size: 2em;
+        padding: 1em;
+        background-color: #191919;
+        border-radius: .2em;
+        box-shadow: 1em 0 4em #3333331e;
+        formgrp {
+            display:flex;
+            width:100%;
+            justify-content: space-between;
+        input {
+            padding:.8em;
+            border-bottom:thin none;
+            width: 11em;
+            font-size:.85em;
+            margin-bottom:1em;
+            color:#cdcdcd;
+            background-color:#222;
+                }
+            }
+    
+            input:focus {
+                outline-offset: -2px;
+                outline: -webkit-focus-ring-color auto 0px;
+            }
+        .message {
+            height:10vh;
+            vertical-align: top;
+            font-family:roboto;
+            padding:.85em;
+            font-size:.9em;
+            background-color:#222;
+            color:#cdcdcd;
+
+        }
+            .message:focus {
+                outline-offset: -2px;
+                outline: -webkit-focus-ring-color auto 0px;
+            }
+        .submit {
+            font-size:1.1em;
+            padding:.3em;
+            padding-top:.4em;
+            margin-top:1em;
+            color:#888;
+            background-color:#222;
+    
+        }
+    }
+
     .navlist {
         margin-left: 0;
         padding-left: 7vw;

@@ -287,6 +287,7 @@ itemheading block h1 {
   font-weight: 300;
   margin-top: -0.93em;
   margin-left: -6vw;
+  color: #191919;
 }
 
 itemheading text {
@@ -422,7 +423,8 @@ text.skills {
 
 text.skills h1 {
   font-size: 1.4vw;
-  font-weight: 100;
+  font-weight: 300;
+  color: #191919;
 }
 
 text.skills1 {
@@ -433,7 +435,8 @@ text.skills1 {
 
 text.skills1 h1 {
   font-size: 1.4vw;
-  font-weight: 100;
+  font-weight: 300;
+  color: #191919;
 }
 
 .mgLogoBlock {
@@ -498,6 +501,137 @@ text.skills1 h1 {
 
 .expHeading {
   margin-left: 1.4em;
+}
+
+formpos {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+formpos block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 57%;
+          flex: 0 0 57%;
+}
+
+formpos text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 35%;
+          flex: 0 0 35%;
+  padding-left: 3em;
+  padding-right: 4vw;
+  font-size: 0.8vw;
+  color: #191919;
+  font-weight: 200;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-bottom: 4vw;
+}
+
+formpos text p {
+  font-size: 1em;
+  padding-bottom: 0.5em;
+  font-weight: 300;
+}
+
+formpos text h1 {
+  font-size: 1.75em;
+  font-weight: 300;
+  padding-bottom: 0.25em;
+}
+
+formpos text img {
+  width: 10em;
+  padding: 2em;
+}
+
+.myForm {
+  margin-left: -50em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+  padding: 1em;
+  background-color: #191919;
+  border-radius: .2em;
+  -webkit-box-shadow: 1em 0 4em #3333331e;
+          box-shadow: 1em 0 4em #3333331e;
+}
+
+.myForm h1 {
+  color: #adadad;
+}
+
+.myForm formgrp {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.myForm formgrp input {
+  padding: 1.2em;
+  border-bottom: thin black solid;
+  width: 19em;
+  font-size: .7em;
+  margin-bottom: 1em;
+  color: #cdcdcd;
+  background-color: #222;
+}
+
+.myForm input:focus {
+  outline-offset: -2px;
+  outline: -webkit-focus-ring-color auto 0px;
+}
+
+.myForm .message {
+  height: 10vh;
+  vertical-align: top;
+  font-family: roboto;
+  padding: 1.2em;
+  font-size: .7em;
+  background-color: #222;
+  color: #cdcdcd;
+}
+
+.myForm .message:focus {
+  outline-offset: -2px;
+  outline: -webkit-focus-ring-color auto 0px;
+}
+
+.myForm .submit {
+  font-size: 1.1em;
+  padding: .3em;
+  padding-top: .4em;
+  margin-top: 1em;
+  color: #888;
+  background-color: #222;
 }
 
 .contactinfo {
@@ -1739,6 +1873,68 @@ svg {
 }
 
 @media only screen and (max-width: 60em) {
+  .myForm {
+    margin-left: -25em;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 100%;
+    -webkit-transform: scale(2);
+            transform: scale(2);
+    font-size: 2em;
+    padding: 1em;
+    background-color: #191919;
+    border-radius: .2em;
+    -webkit-box-shadow: 1em 0 4em #3333331e;
+            box-shadow: 1em 0 4em #3333331e;
+  }
+  .myForm formgrp {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .myForm formgrp input {
+    padding: .8em;
+    border-bottom: thin none;
+    width: 11em;
+    font-size: .85em;
+    margin-bottom: 1em;
+    color: #cdcdcd;
+    background-color: #222;
+  }
+  .myForm input:focus {
+    outline-offset: -2px;
+    outline: -webkit-focus-ring-color auto 0px;
+  }
+  .myForm .message {
+    height: 10vh;
+    vertical-align: top;
+    font-family: roboto;
+    padding: .85em;
+    font-size: .9em;
+    background-color: #222;
+    color: #cdcdcd;
+  }
+  .myForm .message:focus {
+    outline-offset: -2px;
+    outline: -webkit-focus-ring-color auto 0px;
+  }
+  .myForm .submit {
+    font-size: 1.1em;
+    padding: .3em;
+    padding-top: .4em;
+    margin-top: 1em;
+    color: #888;
+    background-color: #222;
+  }
   .navlist {
     margin-left: 0;
     padding-left: 7vw;

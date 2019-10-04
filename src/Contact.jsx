@@ -9,6 +9,7 @@ import {
   } from "react-device-detect";
 
 import logo from './assets/sr-logo.png';
+import { isFlowPredicate } from '@babel/types';
 
 document.addEventListener('mousewheel', function (event) {
     const normalized = normalizeWheel(event);
@@ -195,13 +196,27 @@ class Contact extends Component {
                     <section className={"pSection " + slide}>
 
                         <row className="row1">
-                            <blurb>
+                            <formpos>
                                 <block></block>
                                 <text>
-                               
+                                <form className="myForm" action="https://formspree.io/srux.web@gmail.com" method="POST" >
+                                    <h1>Get in touch</h1>
+                                    <formgrp>
+                                        <input type="text" placeholder="Name" name="name" required/>
+                                        <input type="email" placeholder="Email" name="email" required/>
+                                    </formgrp>
+                                    <formgrp>
+                                        <input type="text" placeholder="Subject" name="subject" required/>
+                                        <input type="tel"  placeholder="Phone (optional)" name="name"/>
+                                    </formgrp>
+                                    
+                                    <textarea className="message" type="textarea" placeholder="Message" name="message" required/>
+                                   
+                                    <input className="submit" value="Send" type="submit"/>
+                                </form>
 
                                 </text>
-                            </blurb>
+                            </formpos>
                         </row>
                         <row className="row2">
                             <itemheading>
@@ -348,19 +363,31 @@ class Contact extends Component {
                     <section className={"pSection " + slide}>
 
                         <row className="row1">
-                            <blurb>
+                        <formpos>
                                 <block></block>
                                 <text>
-                               
+                                <form className="myForm" action="https://formspree.io/srux.web@gmail.com" method="POST" >
+                                    <h1>Get in touch</h1>
+                                    <formgrp>
+                                        <input type="text" placeholder="Name" name="name" required/>
+                                        <input type="email" placeholder="Email" name="email" required/>
+                                    </formgrp>
+                                    <formgrp>
+                                        <input type="text" placeholder="Subject" name="subject" required/>
+                                        <input type="tel"  placeholder="Phone (optional)" name="name"/>
+                                    </formgrp>
+                                    
+                                    <textarea className="message" type="textarea" placeholder="Message" name="message" required/>
+                                   
+                                    <input className="submit" value="Send" type="submit"/>
+                                </form>
 
                                 </text>
-                            </blurb>
+                            </formpos>
                         </row>
                         <row className="row2">
                             <itemheading>
-                            <block>
-                                    <h1 className="contactHeading">Creative digital & brand experiences</h1>
-                                </block>
+ 
                                 <text></text>
                                 <text className="skills">
                                   

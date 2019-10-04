@@ -660,13 +660,28 @@ class Portfolio extends Component {
                         <section className={"pSection " + slide}>
 
                             <row className="row1">
-                                <blurb>
-                                    <block></block>
-                                    <text>
+                            <formpos>
+                                <block></block>
+                                <text>
                                     
+                                <form className="myForm" action="https://formspree.io/srux.web@gmail.com" method="POST" >
+                                    <h1>Get in touch</h1>
+                                    <formgrp>
+                                        <input type="text" placeholder="Name" name="name" required/>
+                                        <input type="email" placeholder="Email" name="email" required/>
+                                    </formgrp>
+                                    <formgrp>
+                                        <input type="text" placeholder="Subject" name="subject" required/>
+                                        <input type="tel"  placeholder="Phone (optional)" name="name"/>
+                                    </formgrp>
+                                    
+                                    <textarea className="message" type="textarea" placeholder="Message" name="message" required/>
+                                   
+                                    <input className="submit" value="Send" type="submit"/>
+                                </form>
 
-                                    </text>
-                                </blurb>
+                                </text>
+                            </formpos>
                             </row>
                             <row className="row2">
                                 <itemheading>
@@ -1258,13 +1273,27 @@ class Portfolio extends Component {
                         <section className={"pSection " + slide}>
 
                             <row className="row1">
-                                <blurb>
-                                    <block></block>
-                                    <text>
+                            <formpos>
+                                <block></block>
+                                <text>
+                                <form className="myForm" action="https://formspree.io/srux.web@gmail.com" method="POST" >
+                                    <h1>Get in touch</h1>
+                                    <formgrp>
+                                        <input type="text" placeholder="Name" name="name" required/>
+                                        <input type="email" placeholder="Email" name="email" required/>
+                                    </formgrp>
+                                    <formgrp>
+                                        <input type="text" placeholder="Subject" name="subject" required/>
+                                        <input type="tel"  placeholder="Phone (optional)" name="name"/>
+                                    </formgrp>
                                     
+                                    <textarea className="message" type="textarea" placeholder="Message" name="message" required/>
+                                   
+                                    <input className="submit" value="Send" type="submit"/>
+                                </form>
 
-                                    </text>
-                                </blurb>
+                                </text>
+                            </formpos>
                             </row>
                             <row className="row2">
                                 <itemheading>

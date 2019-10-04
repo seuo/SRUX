@@ -45,6 +45,110 @@
 
 
 
+
+formpos {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex: 1;
+
+    block {
+        display: flex;
+        flex: 0 0 57%;
+    }
+
+    text {
+        display: flex;
+        flex: 0 0 35%;
+        padding-left: 3em;
+        padding-right: 4vw;
+        font-size: 0.8vw;
+        color: #191919;
+        font-weight: 200;
+        flex-direction: column;
+        margin-bottom: 4vw;
+
+        p {
+            font-size: 1em;
+            padding-bottom: 0.5em;
+            font-weight: 300;
+        }
+
+        h1 {
+            font-size: 1.75em;
+            font-weight: 300;
+            padding-bottom: 0.25em;
+        }
+
+        img {
+            width: 10em;
+            padding: 2em;
+        }
+    }
+}
+
+
+
+.myForm {
+    margin-left:-50em;
+    display:flex;
+    flex-direction:column;
+    width:100%;
+    padding:1em;
+    background-color:#191919;
+    border-radius:.2em;
+    box-shadow: 1em 0 4em #3333331e;
+   
+    h1 {
+        color:rgb(173, 173, 173);
+    }
+
+    formgrp {
+        display:flex;
+        width:100%;
+        justify-content: space-between;
+    input {
+        padding:1.2em;
+        border-bottom:thin black solid;
+        width: 19em;
+        font-size:.7em;
+        margin-bottom:1em;
+        color:#cdcdcd;
+        background-color:#222;
+            }
+        }
+
+        input:focus {
+            outline-offset: -2px;
+            outline: -webkit-focus-ring-color auto 0px;
+        }
+    .message {
+        height:10vh;
+        vertical-align: top;
+        font-family:roboto;
+        padding:1.2em;
+        font-size:.7em;
+        background-color:#222;
+        color:#cdcdcd;
+    }
+    .message:focus {
+        outline-offset: -2px;
+        outline: -webkit-focus-ring-color auto 0px;
+    }
+
+    .submit {
+        font-size:1.1em;
+        padding:.3em;
+        padding-top:.4em;
+        margin-top:1em;
+        color:#888;
+        background-color:#222;
+
+    }
+}
+
+
+
 .contactinfo {
     position: absolute;
     margin-bottom: 17%;
