@@ -34,7 +34,7 @@ class Srux extends Component {
             navMenu: '',
             experience: '',
             contact:'none',
-
+            blackbar:'',
         }
     
     }
@@ -52,6 +52,7 @@ class Srux extends Component {
             navMenu: '',
             experience: '',
             contact:'none',
+            blackbar:'',
         })
 
     }
@@ -69,6 +70,7 @@ class Srux extends Component {
             nav: '',
             navMenu: 'fade-out',
             headerS: 'none',
+            blackbar:'gone',
         })
 
         window.setTimeout(() => {
@@ -93,7 +95,8 @@ class Srux extends Component {
             home: '',
             heroblock: 'base',
             row: "slide-in-row",
-            slide: 'slide-up'
+            slide: 'slide-up',
+            blackbar:'twodelay',
         })
 
         window.setTimeout(() => {
@@ -126,7 +129,8 @@ class Srux extends Component {
             home: '',
             heroblock: 'base',
             row: "slide-in-row",
-            slide: 'slide-up'
+            slide: 'slide-up',
+            blackbar:'twodelay',
         })
 
         window.setTimeout(() => {
@@ -158,7 +162,8 @@ class Srux extends Component {
             home: '',
             heroblock: 'base',
             row: "slide-in-row",
-            slide: 'slide-up'
+            slide: 'slide-up',
+            blackbar:'twodelay',
         })
         e.preventDefault();
         window.setTimeout(() => {

@@ -46,6 +46,7 @@ class Experience extends Component {
          home:data.home,
          slide:data.slide,
          nav:data.nav,
+         blackbar:data.blackbar,
       })
           
       }
@@ -61,7 +62,8 @@ class Experience extends Component {
             row: "slide-out-row",
             slide: "slide-down",
             nav: '',
-            navMenu: 'fade-out'
+            navMenu: 'fade-out',
+            blackbar: 'gone',
         })
 
         window.setTimeout(() => {
@@ -79,7 +81,8 @@ class Experience extends Component {
             slide,
             heroblock,
             experience,
-            navMenu
+            navMenu,
+            blackbar
         } = this.state;
    
 
@@ -354,7 +357,7 @@ class Experience extends Component {
                         </row>
 
                     </section>
-
+                    <div className={"blackBar " +blackbar}></div>
                 </HorizontalScroll>
                 {/* <section className="pSection">
                         <row className="row1">

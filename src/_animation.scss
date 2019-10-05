@@ -178,6 +178,26 @@
     }
 }
 
+@keyframes delayedSlide {
+    from {
+        opacity: 0;
+        margin-left: 400vw;
+    }
+    to {
+        opacity: 1;
+        margin-left: 0vw;
+    }
+}
+
+
+.twodelay {
+    opacity: 1;
+    animation: delayedSlide ease-in 0s;
+    animation-fill-mode: forwards;
+    animation-duration: 3s;
+    animation-delay: 0s;
+}
+
 .below {
     width: 40vw;
     transform: translate(-5em, -15em) scale(.75);
@@ -258,6 +278,21 @@
     transform: translate(-5em, -15em) scale(.75);
     filter: blur(7px);
     opacity: 0.5;
+}
+
+
+
+
+.slide-up {
+    animation: slideup ease-in 1;
+    animation-fill-mode: forwards;
+    animation-duration: 2s;
+}
+
+.slide-down {
+    animation: slidedown ease-in 1;
+    animation-fill-mode: forwards;
+    animation-duration: 2s;
 }
 
 .slide-in {

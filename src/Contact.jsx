@@ -53,6 +53,7 @@ class Contact extends Component {
          home:data.home,
          slide:data.slide,
          nav:data.nav,
+         blackbar:data.blackbar,
       })
           
       }
@@ -79,7 +80,8 @@ class Contact extends Component {
             row: "slide-out-row",
             slide: "slide-down",
             nav: '',
-            navMenu: 'fade-out'
+            navMenu: 'fade-out',
+            blackbar: 'gone',
         })
 
         window.setTimeout(() => {
@@ -98,7 +100,8 @@ class Contact extends Component {
             slide,
             heroblock,
             experience,
-            navMenu
+            navMenu,
+            blackbar
         } = this.state;
 
 
@@ -261,7 +264,7 @@ class Contact extends Component {
                             </itemheading>
                         </row>
                     </section>
-
+                    <div className={"blackBar " +blackbar}></div>
                 </HorizontalScroll>
  
             </container>

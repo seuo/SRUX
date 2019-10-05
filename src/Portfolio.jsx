@@ -61,6 +61,7 @@ class Portfolio extends Component {
        home:data.home,
        slide:data.slide,
        nav:data.nav,
+       blackbar:data.blackbar,
     })
         
     }
@@ -81,7 +82,8 @@ class Portfolio extends Component {
             row: "slide-out-row",
             slide: "slide-down",
             nav: '',
-            navMenu: 'fade-out'
+            navMenu: 'fade-out',
+            blackbar: 'gone'
         })
 
         window.setTimeout(() => {
@@ -99,7 +101,8 @@ class Portfolio extends Component {
             slide,
             heroblock,
             experience,
-            navMenu
+            navMenu,
+            blackbar
         } = this.state;
         
 
@@ -108,6 +111,7 @@ class Portfolio extends Component {
 
             <BrowserView>
              <container className="pWrap">
+
              <div className={"navMenu P "+navMenu}>
                             
                             <div className="navlist P">
@@ -735,6 +739,7 @@ class Portfolio extends Component {
                             </row>
                         </section>
                     {/* </scroller> */}
+                    <div className={"blackBar " +blackbar}></div>
                     </HorizontalScroll>
 
                     </container>
@@ -1348,7 +1353,7 @@ class Portfolio extends Component {
                         </section>
                     </scroller>
                     
-
+                    
                     </container>
             </MobileView>
           

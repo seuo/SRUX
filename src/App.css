@@ -67,24 +67,6 @@ p {
           flex-direction: column;
 }
 
-.slide-up {
-  -webkit-animation: slideup ease-in 1;
-          animation: slideup ease-in 1;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
-  -webkit-animation-duration: 2s;
-          animation-duration: 2s;
-}
-
-.slide-down {
-  -webkit-animation: slidedown ease-in 1;
-          animation: slidedown ease-in 1;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
-  -webkit-animation-duration: 2s;
-          animation-duration: 2s;
-}
-
 .row1 {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -106,6 +88,15 @@ p {
   width: 70vw;
   background-color: #191919;
   height: 35%;
+}
+
+.blackBar {
+  width: 100%;
+  height: 30%;
+  background-color: #191919;
+  position: absolute;
+  z-index: -1;
+  bottom: 0;
 }
 
 .navMenu {
@@ -1093,6 +1084,40 @@ formpos text img {
   }
 }
 
+@-webkit-keyframes delayedSlide {
+  from {
+    opacity: 0;
+    margin-left: 400vw;
+  }
+  to {
+    opacity: 1;
+    margin-left: 0vw;
+  }
+}
+
+@keyframes delayedSlide {
+  from {
+    opacity: 0;
+    margin-left: 400vw;
+  }
+  to {
+    opacity: 1;
+    margin-left: 0vw;
+  }
+}
+
+.twodelay {
+  opacity: 1;
+  -webkit-animation: delayedSlide ease-in 0s;
+          animation: delayedSlide ease-in 0s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
+}
+
 .below {
   width: 40vw;
   -webkit-transform: translate(-5em, -15em) scale(0.75);
@@ -1194,6 +1219,24 @@ formpos text img {
   -webkit-filter: blur(7px);
           filter: blur(7px);
   opacity: 0.5;
+}
+
+.slide-up {
+  -webkit-animation: slideup ease-in 1;
+          animation: slideup ease-in 1;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+}
+
+.slide-down {
+  -webkit-animation: slidedown ease-in 1;
+          animation: slidedown ease-in 1;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
 }
 
 .slide-in {
@@ -2222,6 +2265,14 @@ svg {
   svg#Layer_1 {
     margin-right: -50vw;
     width: 198vw;
+  }
+  .blackBar {
+    width: 100%;
+    height: 25%;
+    background-color: #191919;
+    position: absolute;
+    z-index: -1;
+    bottom: 0;
   }
   .row1 {
     display: -webkit-box;
