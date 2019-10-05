@@ -183,30 +183,13 @@ class Contact extends Component {
                     <row className="row2">
                         <itemheading>
                         <block>
-                                  
-                                </block>
-
-                            <text>
-                                <block></block>
-                            </text>
-
-                        </itemheading>
-                    </row>
-                    </section>
-                    <section className={"pSection " + row}>
-
-                    <row className={"row1"}>
-                        <blurb>
-                            <block></block>
-
-                        </blurb>
-                    </row>
-                    <row className="row2">
-                        <itemheading>
-                            <block>
-                                  
+                                    <div class="scroll-downs">
+                                    <div class="mousey">
+                                        <div class="scrollerAnim"></div>
+                                    </div>
+                                    <div class="arrow arrow-first"></div>
+                                    </div>
                             </block>
-
 
                             <text>
                                 <block></block>

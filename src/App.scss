@@ -41,332 +41,9 @@ p {
 
 @import "_portfolio.scss";
 @import "_exp.scss";
+@import "_animation.scss";
 
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
 
-@keyframes fadeOut {
-    from {
-        opacity: 1;
-    }
-    to {
-        opacity: 0;
-    }
-}
-
-@keyframes away {
-    from {
-        opacity: 1;
-        transform: translate(0,0);
-    }
-    to {
-        opacity: 0;
-        transform: translate(0,0);
-    }
-}
-
-@keyframes closeMainNav {
-    from {
-        opacity: 1;
-        transform: translate(0,0);
-        height: 100vh;
-        position: absolute;
-    }
-    to {
-        opacity: 0;
-        transform: translate(0,0);
-        height: 0;
-        position: initial;
-    }
-}
-
-@keyframes come {
-    from {
-        width: 40vw;
-        transform: translate(-5em, -15em) scale(.75);
-        filter: blur(7px);
-        opacity: 0.5;
-    }
-    to {
-        opacity: 1;
-        width: 100vw;
-        filter: blur(0px);
-    }
-}
-
-@keyframes base {
-    from {
-        width: 40vw;
-        transform: translate(-5em, -15em) scale(.75);
-        filter: blur(7px);
-        opacity: 0.5;
-        visibility: hidden;
-    }
-    to {
-        opacity: 0;
-        width: 40vw;
-        transform: translate(-5em, -15em) scale(.75);
-        filter: blur(7px);
-        opacity: 0;
-        visibility: hidden;
-    }
-}
-
-@keyframes slidein {
-    from {
-        opacity: 1;
-        width: 100vw;
-        filter: blur(0px);
-    }
-    to {
-        width: 40vw;
-        transform: translate(-5em, -15em) scale(.75);
-        filter: blur(7px);
-        opacity: 0.5;
-    }
-}
-
-@keyframes slideinFade {
-    from {
-        opacity: 1;
-        width: 100vw;
-        filter: blur(0px);
-    }
-    to {
-        width: 40vw;
-        transform: translate(-5em, -15em) scale(.75);
-        filter: blur(7px);
-        opacity: 0;
-    }
-}
-
-@keyframes slideout {
-    from {
-        opacity: 1;
-        width: 40vw;
-        transform: translate(-5em, -15em) scale(.75);
-        filter: blur(40px);
-        opacity: 0.5;
-    }
-    to {
-        opacity: 1;
-        width: 100vw;
-        filter: blur(0px);
-    }
-}
-
-@keyframes slideinrow {
-    from {
-        opacity: 1;
-        filter: blur(50px);
-        width: 100vw;
-        margin-top: 100vh;
-        margin-left: -50vw;
-    }
-    to {
-        opacity: 1;
-        margin-left: -50vw;
-        width: 50vw;
-        filter: blur(0px);
-        margin-top: 0;
-    }
-}
-
-@keyframes slideoutrow {
-    from {
-        opacity: 1;
-        margin-left: -50vw;
-        width: 50vw;
-        filter: blur(0px);
-        margin-top: 0;
-    }
-    to {
-        opacity: 1;
-        filter: blur(50px);
-        width: 50vw;
-        margin-top: 150vh;
-        margin-left: 0vw;
-    }
-}
-
-@keyframes slideup {
-    from {
-        opacity: 1;
-        filter: blur(50px);
-        margin-top: 100vh;
-    }
-    to {
-        opacity: 1;
-        filter: blur(0px);
-        margin-top: 0;
-    }
-}
-
-@keyframes slidedown {
-    from {
-        opacity: 1;
-        filter: blur(0px);
-        margin-top: 0;
-    }
-    to {
-        opacity: 1;
-        filter: blur(50px);
-        margin-top: 150vh;
-        margin-left: -5vw;
-    }
-}
-
-.below {
-    width: 40vw;
-    transform: translate(-5em, -15em) scale(.75);
-    filter: blur(7px);
-    opacity: 0.5;
-}
-
-.away {
-    opacity: 1;
-    /* make things invisible upon start */
-    animation: away ease-in 1;
-    animation-fill-mode: forwards;
-    animation-duration: 1.5s;
-}
-
-.closeNav {
-    opacity: 0;
-    /* make things invisible upon start */
-    animation: closeMainNav ease-in 1;
-    animation-fill-mode: forwards;
-    animation-duration: 1.5s;
-}
-
-.base {
-    opacity: 0;
-    width: 40vw;
-    transform: translate(-5em, -15em) scale(.75);
-    filter: blur(7px);
-    opacity: 0.5;
-    width: 40vw !important;
-
-    animation: base ease-in 1;
-    animation-fill-mode: forwards;
-    animation-duration: 1.5s;
-}
-
-.base-hero {
-    visibility: hidden;
-    opacity: 0;
-    width: 40vw;
-    transform: translate(-5em, -15em) scale(.75);
-    filter: blur(7px);
-    opacity: 0.5;
-    width: 40vw !important;
-}
-
-.come {
-    opacity: 1;
-    /* make things invisible upon start */
-    animation: come ease-in 1;
-    animation-fill-mode: forwards;
-    animation-duration: 1.5s;
-}
-
-.gone {
-    visibility: hidden !important;
-}
-
-.none {
-    display: none !important;
-    height: 0;
-    transition: scale(0);
-    width: 0;
-    opacity: 0;
-}
-
-.row-base {
-    opacity: 1;
-    margin-left: -50vw;
-    width: 50vw;
-    filter: blur(0px);
-    margin-top: 0;
-    z-index: -1;
-}
-
-.hero-base {
-    width: 40vw !important;
-    transform: translate(-5em, -15em) scale(.75);
-    filter: blur(7px);
-    opacity: 0.5;
-}
-
-.slide-in {
-    animation: slidein ease-in 1;
-    animation-fill-mode: forwards;
-    animation-duration: 1.5s;
-}
-
-.slide-in-fade {
-    animation: slideinFade ease-in 1;
-    animation-fill-mode: forwards;
-    animation-duration: 1.5s;
-}
-
-.slide-out {
-    animation: slideout ease-in 1;
-    animation-fill-mode: forwards;
-    animation-duration: 1.5s;
-}
-
-.slide-in-row {
-    animation: slideinrow ease-in 1;
-    animation-fill-mode: forwards;
-    animation-duration: 2s;
-    pointer-events: none;
-}
-
-.slide-out-row {
-    animation: slideoutrow ease-in 1;
-    animation-fill-mode: forwards;
-    animation-duration: 2s;
-    pointer-events: none;
-}
-
-.fade-out {
-    opacity: 0;
-    /* make things invisible upon start */
-    animation: fadeOut ease-in 1;
-    animation-fill-mode: forwards;
-    animation-duration: 1s;
-}
-
-.fade-in {
-    opacity: 0;
-    /* make things invisible upon start */
-    animation: fadeIn ease-in 1;
-    animation-fill-mode: forwards;
-    animation-duration: 2s;
-}
-
-.fade-in.one {
-    animation-delay: 2s;
-}
-.fade-in.two {
-    animation-delay: 3s;
-}
-.fade-in.three {
-    animation-delay: 4s;
-}
-.fade-in.four {
-    animation-delay: 5s;
-}
-.fade-in.five {
-    animation-delay: 6s;
-}
 
 .ui {
 
@@ -743,24 +420,81 @@ svg {
     }
 }
 
-@media only screen and (max-width: 100em) {
+// @media only screen and (max-width: 100em) {
+
+
+// }
+
+@media only screen and (max-width: 87.5em) {
+
+    .hero .col {
+        display: flex;
+        flex: 0 0 20%;
+        justify-content: flex-end;
+    }
+
     .c1 {
         margin-left: 0;
-        font-size: 0.95vw;
+        font-size: 0.85vw;
         flex-direction: column;
         align-items: center;
     }
 
+    .header .hero .col .heroblock {
+        margin-left: 1em;
+        justify-content: flex-start;
+        font-size: 1.1em;
+        margin-top: 85%;
+    }
+
+    .header .hero .col .heroblock .heading {
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .header .hero .col .heroblock h1 {
+        margin-left: 0;
+    }
+
+    .header .hero .col .heroblock p {
+        margin-left: 0;
+    }
+
+    .header .hero .col .heroblock h2 {
+        margin-left: 0;
+    }
+
 }
 
-@media only screen and (max-width: 87.5em) {
+@media only screen and (max-width: 60em) {
+
+    .scroll-downs {
+        transform:scale(.8);
+        position: absolute;
+        bottom: 8vh;
+        left: 25vw;
+        margin: auto;
+        
+        width :34px;
+        height: 55px;
+      }
+
+    .hero .col {
+        display: flex;
+        flex: 1 0 20%;
+        justify-content: flex-end;
+    }
 
     .c2 {
         width: 50%;
     }
 
     .c1 {
-        font-size: 1.2vw;
+        margin-left: 0;
+        font-size: 0.95vw;
+        flex-direction: column;
+        align-items: center;
     }
 
     .header .hero .col .heroblock {
@@ -883,10 +617,6 @@ svg {
         overflow: visible;
     }
 
-}
-
-@media only screen and (max-width: 60em) {
-
     .myForm {
         margin-left: -25em;
         display: flex;
@@ -1007,8 +737,8 @@ svg {
     }
 
     svg#Layer_1 {
-        margin-right: -10.5em;
-        width: 197vw;
+        margin-right: -50vw;
+        width: 198vw;
     }
 
     .row1 {
@@ -1099,7 +829,7 @@ svg {
         margin-top: 15%;
         position: absolute;
         overflow: hidden;
-        padding: 1em;
+        padding: 1.25vw;
         width: 55vw;
     }
     itemheading block h1 {
@@ -1130,7 +860,7 @@ svg {
         height: 8vw;
         width: 8vw;
         z-index: 5;
-        padding: 1.2vw 2vw;
+        padding: 1vw 1.5vw;
         border: thin #222 solid;
         position: absolute;
 

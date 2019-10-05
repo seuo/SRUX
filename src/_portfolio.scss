@@ -121,6 +121,8 @@
     }
 }
 
+
+
 blurb {
     display: flex;
     flex-direction: row;
@@ -208,7 +210,7 @@ itemheading {
             height: 8vw;
             width: 8vw;
             margin-top: -7.5vw;
-            padding: 1.2vw 2vw;
+            padding: 1vw 1.5vw;
             box-shadow: 1em 0 4em #3333331e;
             img {
                 width: 8vw;
@@ -237,7 +239,7 @@ itemheading {
     margin-top: 10em;
     position: absolute;
     overflow: hidden;
-    padding: 2em;
+    padding: 1.25vw;
     background-color: white;
     border-image: url("assets/border.png") 500 fill / 8vw / 0.05em space;
 }
@@ -322,3 +324,10 @@ text.skills1 {
 .tensC {
     color: #1f829c;
 }
+
+
+// misc
+
+// .rSpace {
+//     width: 41vw;
+// }

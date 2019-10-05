@@ -163,7 +163,14 @@ class Experience extends Component {
                         </row>
                         <row className="row2">
                             <itemheading>
-                                <block></block>
+                            <block>
+                                    <div class="scroll-downs">
+                                    <div class="mousey">
+                                        <div class="scrollerAnim"></div>
+                                    </div>
+                                    <div class="arrow arrow-first"></div>
+                                    </div>
+                            </block>
 
                                 <block>
                                     <h1 className="expHeading">Experience</h1>

@@ -27,6 +27,8 @@ document.addEventListener('mousewheel', function (event) {
     console.log(normalized.pixelX, normalized.pixelY);
 });
 
+
+
 class Portfolio extends Component {
     constructor(props) {
         super(props);
@@ -170,7 +172,18 @@ class Portfolio extends Component {
 
                         <section className={"pSection " + row}>
                             <row className="row1"></row>
-                            <row className="row2"></row>
+                            <row className="row2">  
+
+                            <block>
+                                    <div class="scroll-downs">
+                                    <div class="mousey">
+                                        <div class="scrollerAnim"></div>
+                                    </div>
+                                    <div class="arrow arrow-first"></div>
+                                    </div>
+                            </block>
+                            
+                            </row>
                         </section>
                         <section className={"pSection " + slide}>
                             <div className="webWork"> 
