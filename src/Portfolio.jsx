@@ -2,13 +2,14 @@ import React, {Component} from 'react';
 import {navigate,Link} from "@reach/router";
 import HorizontalScroll from 'react-scroll-horizontal';
 import normalizeWheel from 'normalize-wheel';
+import HorizontalScroller from 'react-horizontal-scroll-container';
 
 
 import {
-    BrowserView,
-    MobileView,
     isBrowser,
-    isMobile
+    isMobile,
+    CustomView,
+    browserName
   } from "react-device-detect";
 
 import mjlogo from './assets/mitchells-joinery-logo.png';
@@ -91,7 +92,14 @@ class Portfolio extends Component {
             this.setState({headerS: '', slide: '', row: '',navMenu: '',nav: '',})
         }, 1500)
     }
-    
+
+    renderFirefox= () => {
+        if (isMobile) {
+            return <div> This content is unavailable on mobile</div>
+        }
+        return <div> ...content </div>
+    }
+
 
     render() {
         let {
@@ -109,7 +117,7 @@ class Portfolio extends Component {
         return (
             <>
 
-            <BrowserView>
+            <CustomView condition={browserName != "Firefox" && isBrowser}>
              <container className="pWrap">
 
              <div className={"navMenu P "+navMenu}>
@@ -140,6 +148,7 @@ class Portfolio extends Component {
                             </div>
                         </div>
                     </div>
+                   
 
                     <HorizontalScroll
                         reverseScroll={true}
@@ -147,6 +156,8 @@ class Portfolio extends Component {
                             stiffness: 3,
                             damping: 3
                         }} className={"work " + experience} animValues={1}>
+                    
+
                     {/* <scroller className="scroller"> */}
                         <div className="headerSection pHeaderSection">
                             <div className="header pHeader">
@@ -738,9 +749,9 @@ class Portfolio extends Component {
                     </HorizontalScroll>
 
                     </container>
-            </BrowserView>
+            </CustomView>
 
-            <MobileView>
+            <CustomView condition={browserName === "Firefox" || isMobile}>
                 <container className="pWrap">
 
                     <div className={"pheaderSection "}>
@@ -766,8 +777,9 @@ class Portfolio extends Component {
                         </div>
                     </div>
 
+                    <HorizontalScroller className="scroller" invert sensibility={200}>
 
-                    <scroller className="scroller">
+                   
                         <div className="headerSection pHeaderSection">
                             <div className="header pHeader">
                                 <div className={"hero " + portfolio}>
@@ -1341,11 +1353,11 @@ class Portfolio extends Component {
                                 </itemheading>
                             </row>
                         </section>
-                    </scroller>
-                    
+                
+                    </HorizontalScroller>
                     
                     </container>
-            </MobileView>
+            </CustomView>
           
         </>
            

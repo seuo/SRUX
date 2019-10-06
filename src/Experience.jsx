@@ -2,11 +2,13 @@ import React, {Component} from 'react';
 import HorizontalScroll from 'react-scroll-horizontal';
 import {navigate,} from "@reach/router";
 import normalizeWheel from 'normalize-wheel';
+import HorizontalScroller from 'react-horizontal-scroll-container';
+
 import {
-    BrowserView,
-    MobileView,
     isBrowser,
-    isMobile
+    isMobile,
+    CustomView,
+    browserName
   } from "react-device-detect";
 
 import logo from './assets/sr-logo.png';
@@ -89,7 +91,7 @@ class Experience extends Component {
 
         return (
             <>
-            <BrowserView>
+            <CustomView condition={browserName != "Firefox" && isBrowser}>
             <container className="pWrap">
             <div className={"navMenu P "+navMenu}>
                             
@@ -362,8 +364,8 @@ class Experience extends Component {
                     </section> */
                 }
             </container>
-            </BrowserView>
-            <MobileView>
+            </CustomView>
+            <CustomView condition={browserName === "Firefox" || isMobile}>
             <container className="pWrap">
                 <div className={"pHeaderSection "}>
                     <div className="header">
@@ -388,7 +390,7 @@ class Experience extends Component {
                     </div>
                 </div>
 
-                <scroller className="scroller">
+                 <HorizontalScroller className="scroller" invert sensibility={200}>
 
                     <div className="headerSection eHeaderSection">
                         <div className="header pHeader">
@@ -607,11 +609,11 @@ class Experience extends Component {
 
                     </section>
 
-                    </scroller>
+                    </HorizontalScroller>
                     
             </container>
 
-            </MobileView>
+            </CustomView>
             </>
 
         )

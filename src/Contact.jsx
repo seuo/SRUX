@@ -1,11 +1,13 @@
 import React, {Component} from 'react';
 import HorizontalScroll from 'react-scroll-horizontal';
 import normalizeWheel from 'normalize-wheel';
+import HorizontalScroller from 'react-horizontal-scroll-container';
+
 import {
-    BrowserView,
-    MobileView,
     isBrowser,
-    isMobile
+    isMobile,
+    CustomView,
+    browserName
   } from "react-device-detect";
 
   import {
@@ -107,7 +109,7 @@ class Contact extends Component {
 
         return (
             <>
-            <BrowserView>
+            <CustomView condition={browserName != "Firefox" && isBrowser}>
             <container className="pWrap">
             <div className={"navMenu P "+navMenu}>
                             
@@ -185,55 +187,23 @@ class Contact extends Component {
                     </row>
                     <row className="row2">
                         <itemheading>
-                        <block>
-                                    <div class="scroll-downs">
-                                    <div class="mousey">
-                                        <div class="scrollerAnim"></div>
-                                    </div>
-                                    <div class="arrow arrow-first"></div>
-                                    </div>
+                            <block>
+
+
                             </block>
 
-                            <text>
-                                <block></block>
-                            </text>
+                     
 
                         </itemheading>
                     </row>
                     </section>
-                    <section  className={"pSection " + slide}>
+                    <section  className={"pSection pSec " + slide}>
 
                         <row className="eRow1">
-                        <blurb>
-
-                            <text>
-                                <h1>Sam Robertson</h1>
-                                <p></p>
-                                <p>I’m a frontend developer based in Auckland, New Zealand.</p><p>I have a passion for design & creating high quality, functional web solutions.</p>
-                                <p>Get in touch if you have a job / project you need help with!</p>
-
-                            </text>
-                            </blurb>
-                        </row>
-                        <row className="eRow2">
-                            <itemheading>
-                                <block>
-                                    <h1 className="workHeading">samrob.nz@gmail.com</h1>
-                                </block>
-
-                                <text></text>
-                                <text className="skills1"></text>
-                            </itemheading>
-                        </row>
-
-                        </section>
-                    <section className={"pSection " + slide}>
-
-                        <row className="row1">
-                            <formpos>
+                        <formpos className="">
                                 <block></block>
-                                <text>
-                                <form className="myForm" action="https://formspree.io/srux.web@gmail.com" method="POST" >
+                               
+                                <form className="contactForm" action="https://formspree.io/srux.web@gmail.com" method="POST" >
                                     <h1>Get in touch</h1>
                                     <formgrp>
                                         <input type="text" placeholder="Name" name="name" required/>
@@ -249,28 +219,33 @@ class Contact extends Component {
                                     <input className="submit" value="Send" type="submit"/>
                                 </form>
 
-                                </text>
+                               
                             </formpos>
                         </row>
-                        <row className="row2">
+                        <row className="eRow2">
                             <itemheading>
-                            <block>
-                                    <h1 className="contactHeading">Creative digital & brand experiences</h1>
-                                </block>
+                                <block>
+                                    <h1 className="workHeading">Sam Robertson</h1>
+                                    <div className="aboutMe">
+                                    <p>I’m a frontend developer based in Auckland, New Zealand.</p><p>I have a passion for design & creating high quality, functional web solutions.</p>
+                                    <p>Get in touch if you have a job / project you need help with!</p>
+                                    </div>
+                                    </block>
+
+
                                 <text></text>
-                                <text className="skills">
-                                  
-                                </text>
+                                <text className="skills1"></text>
                             </itemheading>
                         </row>
-                    </section>
+
+                        </section>
                     <div className={"blackBar " +blackbar}></div>
                 </HorizontalScroll>
  
             </container>
-            </BrowserView>
+            </CustomView>
 
-                <MobileView>
+            <CustomView condition={browserName === "Firefox" || isMobile}>
                 <container className="pWrap">
                 <div className={"pHeaderSection "}>
                     <div className="header">
@@ -295,7 +270,7 @@ class Contact extends Component {
                     </div>
                 </div>
 
-                <scroller className="scroller">
+                <HorizontalScroller className="scroller" invert sensibility={200}>
 
                     <div className="headerSection eHeaderSection">
                         <div className="header pHeader">
@@ -430,11 +405,11 @@ class Contact extends Component {
                         </row>
                     </section>
 
-                    </scroller>
+                    </HorizontalScroller>
  
             </container>
                     
-                </MobileView>
+                </CustomView>
 </>
         )
     }
