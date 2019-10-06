@@ -1914,6 +1914,9 @@ svg {
 }
 
 @media only screen and (max-width: 87.5em) {
+  .webWork {
+    height: 55%;
+  }
   .hero .col {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -2356,13 +2359,14 @@ svg {
   .webWork {
     cursor: pointer;
     margin-left: 0;
-    min-width: 18em;
+    min-width: 12em;
     height: 55%;
     margin-top: 15%;
     position: absolute;
     overflow: hidden;
     padding: 1.25vw;
-    width: 55vw;
+    width: 45vw;
+    max-width: 18em;
   }
   itemheading block h1 {
     font-size: 2em;

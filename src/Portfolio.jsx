@@ -546,16 +546,16 @@ class Portfolio extends Component {
                                     <text>
                                         <h1>Yoobee Web & UX Development</h1>
                                         <p>Level 6 / 2019</p>
-                                        <p>This one year diploma has been a great refresher, gave me whole range of new
+                                        <p>This one year diploma has been a great refresher, gave a me whole range of new
                                             skills.
                                         </p>
                                         <p>The course was an intensive full time course covering design, markup,
                                             styling, coding, cms development as well as agile group work. I also got a great
                                             introduction to coding, learning Javascript, Jquery & React.
                                         </p>
-                                        <p>Using these all these skills I was able to develop a new tier of web sites &
-                                            applications.</p>
-                                        <p>UX & Web Design / Javascript, Jquery, React, CMS Development</p>
+                                        <p>Using all these skills I am able to develop a more advanced range of web sites &
+                                        applications.</p>
+                                    <p>The course was split into 4 modules over the year.<br/>UX & Web Design / Javascript, Jquery / React / CMS Development</p>
 
                                     </text>
                                 </blurb>
@@ -597,11 +597,6 @@ class Portfolio extends Component {
                                             specific products that needed dedicated ecommerce stores which helped drive
                                             revenue. Most notably their Gubba Garden Sheds Website which has improved on
                                             sales every year since and continues to improve.</p>
-                                        <p>When I wasn't working on design, I was learning new skills in other areas.
-                                            With the position being an In-house role I also took on a variety of extra work,
-                                            whether it was for the sales team, taking calls for customer service or being
-                                            their IT guy. There was a lot of variety at Gubba, I enjoyed helping out where
-                                            ever I could and enjoyed working with the Gubba team.</p>
                                         <p>Reference Manager - David Graves / Marketing Manager - Tim Graves<br/>Ph: 09 915 9250 / 021 771 119</p>
 
                                     </text>
@@ -1160,16 +1155,16 @@ class Portfolio extends Component {
                                     <text>
                                         <h1>Yoobee Web & UX Development</h1>
                                         <p>Level 6 / 2019</p>
-                                        <p>This one year diploma has been a great refresher, gave me whole range of new
+                                        <p>This one year diploma has been a great refresher, gave me a whole range of new
                                             skills.
                                         </p>
                                         <p>The course was an intensive full time course covering design, markup,
                                             styling, coding, cms development as well as agile group work. I also got a great
                                             introduction to coding, learning Javascript, Jquery & React.
                                         </p>
-                                        <p>Using these all these skills I was able to develop a new tier of web sites &
-                                            applications.</p>
-                                        <p>UX & Web Design / Javascript, Jquery, React, CMS Development</p>
+                                        <p>Using all these skills I am able to develop a more advanced range of web sites &
+                                        applications.</p>
+                                    <p>The course was split into 4 modules over the year.<br/>UX & Web Design / Javascript, Jquery / React / CMS Development</p>
 
                                     </text>
                                 </blurb>
@@ -1211,11 +1206,6 @@ class Portfolio extends Component {
                                             specific products that needed dedicated ecommerce stores which helped drive
                                             revenue. Most notably their Gubba Garden Sheds Website which has improved on
                                             sales every year since and continues to improve.</p>
-                                        <p>When I wasn't working on design, I was learning new skills in other areas.
-                                            With the position being an In-house role I also took on a variety of extra work,
-                                            whether it was for the sales team, taking calls for customer service or being
-                                            their IT guy. There was a lot of variety at Gubba, I enjoyed helping out where
-                                            ever I could and enjoyed working with the Gubba team.</p>
                                         <p>Reference Manager - David Graves / Marketing Manager - Tim Graves<br/>Ph: 09 915 9250 / 021 771 119</p>
 
                                     </text>
