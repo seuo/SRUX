@@ -180,6 +180,10 @@ p {
           justify-content: flex-start;
 }
 
+.navlist.P > h2 {
+  background-color: white;
+}
+
 .navlist .zB h2 {
   color: transparent !important;
 }
@@ -229,13 +233,13 @@ blurb text {
 }
 
 blurb text p {
-  font-size: 1em;
+  font-size: 1.15em;
   padding-bottom: 0.5em;
   font-weight: 300;
 }
 
 blurb text h1 {
-  font-size: 1.75em;
+  font-size: 2em;
   font-weight: 300;
   padding-bottom: 0.25em;
 }
@@ -354,8 +358,6 @@ itemheading text h1 {
 
 .webWork {
   cursor: pointer;
-  -webkit-box-shadow: 1em 0 4em #33333338;
-          box-shadow: 1em 0 4em #33333338;
   margin-left: 10vw;
   min-width: 15em;
   width: 25vw;
@@ -367,6 +369,8 @@ itemheading text h1 {
   background-color: white;
   -o-border-image: url("assets/border.png") 500 fill/8vw/0.05em space;
      border-image: url("assets/border.png") 500 fill/8vw/0.05em space;
+  -webkit-transition: ease all 1s;
+  transition: ease all 1s;
 }
 
 .webImage {
@@ -1075,7 +1079,7 @@ formpos text img {
 @-webkit-keyframes slideoutrow {
   from {
     opacity: 1;
-    margin-left: -59vw;
+    margin-left: -50vw;
     width: 50vw;
     -webkit-filter: blur(0px);
             filter: blur(0px);
@@ -1094,7 +1098,7 @@ formpos text img {
 @keyframes slideoutrow {
   from {
     opacity: 1;
-    margin-left: -59vw;
+    margin-left: -50vw;
     width: 50vw;
     -webkit-filter: blur(0px);
             filter: blur(0px);
@@ -2021,8 +2025,8 @@ svg {
             transform: scale(0.8);
   }
   .webWork {
-    height: 55%;
-    margin-top: 19vh;
+    height: 68%;
+    margin-top: 10vh;
   }
   .hero .col {
     display: -webkit-box;
@@ -2051,8 +2055,8 @@ svg {
     -webkit-box-pack: start;
         -ms-flex-pack: start;
             justify-content: flex-start;
-    font-size: 1.1em;
-    margin-top: 85%;
+    font-size: .9em;
+    margin-top: 50%;
   }
   .header .hero .col .heroblock .heading {
     display: -webkit-box;
@@ -2078,6 +2082,14 @@ svg {
 }
 
 @media only screen and (max-width: 60em) {
+  svg#Layer_1 {
+    margin-right: inherit;
+    width: inherit;
+    padding-left: 50vw;
+  }
+}
+
+@media only screen and (max-width: 30em) {
   .scroll-downs {
     -webkit-transform: scale(0.8);
             transform: scale(0.8);
@@ -2112,14 +2124,6 @@ svg {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-  }
-  .header .hero .col .heroblock {
-    margin-left: 1em;
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
-    font-size: 1.1em;
-    margin-top: 45%;
   }
   .header .hero .col .heroblock .heading {
     display: -webkit-box;
@@ -2369,8 +2373,8 @@ svg {
     -webkit-box-pack: start;
         -ms-flex-pack: start;
             justify-content: flex-start;
-    font-size: 1em;
-    margin-top: 100%;
+    font-size: 1.1em;
+    margin-top: 30vh;
   }
   svg#Layer_1 {
     margin-right: -50vw;
@@ -2546,6 +2550,442 @@ svg {
     -webkit-box-flex: 1;
         -ms-flex: 1 0 35%;
             flex: 1 0 35%;
+  }
+}
+
+@media screen and (orientation: portrait) and (min-device-width: 30em) and (max-device-width: 87.5em) {
+  .scroll-downs {
+    -webkit-transform: scale(0.8);
+            transform: scale(0.8);
+    position: absolute;
+    bottom: 8vh;
+    left: 25vw;
+    margin: auto;
+    width: 34px;
+    height: 55px;
+  }
+  .hero .col {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-flex: 1;
+        -ms-flex: 1 0 20%;
+            flex: 1 0 20%;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
+  .c2 {
+    width: 50%;
+  }
+  .c1 {
+    margin-left: 0;
+    font-size: 0.95vw;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .header .hero .col .heroblock .heading {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .header .hero .col .heroblock h1 {
+    margin-left: 0;
+  }
+  .header .hero .col .heroblock p {
+    margin-left: 0;
+  }
+  .header .hero .col .heroblock h2 {
+    margin-left: 0;
+  }
+  g#contact {
+    -webkit-transition: 2s;
+    transition: 2s;
+    -webkit-transform: translate(-21.5%, 19.9%) scale(0.7);
+            transform: translate(-21.5%, 19.9%) scale(0.7);
+    -webkit-clip-path: polygon(0 0, 95.5% 0, 84.6% 100%, 0% 100%);
+            clip-path: polygon(0 0, 95.5% 0, 84.6% 100%, 0% 100%);
+  }
+  g#contacttext {
+    -webkit-transform: translate(1em, 0);
+            transform: translate(1em, 0);
+  }
+  #contact polygon:first-of-type {
+    -webkit-transition: 0.2s ease-in;
+    transition: 0.2s ease-in;
+    -webkit-transform: translate(0em, 0);
+            transform: translate(0em, 0);
+  }
+  #contact:hover {
+    -webkit-transform: scale(0.8);
+            transform: scale(0.8);
+    -webkit-transform: translate(-21.5%, 19.9%) scale(0.7);
+            transform: translate(-21.5%, 19.9%) scale(0.7);
+    -webkit-transition: 0.8s ease-in-out;
+    transition: 0.8s ease-in-out;
+    -webkit-transform-origin: initial;
+            transform-origin: initial;
+    cursor: pointer;
+    -webkit-filter: drop-shadow(0px 10px 5px black);
+            filter: drop-shadow(0px 10px 5px black);
+    opacity: 0.85;
+  }
+  .contactinfo {
+    position: absolute;
+    margin-bottom: 0%;
+    font-family: roboto;
+    text-align: right;
+    font-size: 1em;
+    font-weight: 400;
+    padding-left: 0em;
+    width: 67%;
+    padding: .2em;
+    padding-right: 1em;
+    background-color: #ffffff;
+    pointer-events: none;
+    bottom: 0;
+  }
+  g#portfolio {
+    -webkit-transition: 2s;
+    transition: 2s;
+    -webkit-transform: translate(96.7%, 26%) scale(1) rotate(44deg);
+            transform: translate(96.7%, 26%) scale(1) rotate(44deg);
+  }
+  g#portfolio {
+    -webkit-clip-path: initial;
+            clip-path: initial;
+  }
+  polygon#portfolioBlock {
+    -webkit-transform: translate(54%, 54.4%) scale(0.7) rotate(135.6deg) !important;
+            transform: translate(54%, 54.4%) scale(0.7) rotate(135.6deg) !important;
+    -webkit-clip-path: polygon(0 0, 80% 0, 77% 100%, 0% 100%);
+            clip-path: polygon(0 0, 80% 0, 77% 100%, 0% 100%);
+  }
+  g#portfolio > g > polygon {
+    -webkit-transition: 2s;
+    transition: 2s;
+    -webkit-transform: translate(55%, 55%) scale(0.7) rotate(137.7deg);
+            transform: translate(55%, 55%) scale(0.7) rotate(137.7deg);
+  }
+  #portfolio:hover {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-transition: 0.8s ease-in-out;
+    transition: 0.8s ease-in-out;
+    -webkit-transform-origin: inherit;
+            transform-origin: inherit;
+    cursor: pointer;
+    opacity: 0.85;
+    -webkit-transform: translate(96.7%, 26%) scale(1) rotate(44deg) !important;
+            transform: translate(96.7%, 26%) scale(1) rotate(44deg) !important;
+  }
+  g#portfolio g path {
+    -webkit-transition: 2s;
+    transition: 2s;
+    -webkit-transform: translate(-30%, 44%) scale(0.7) rotate(-44.5deg);
+            transform: translate(-30%, 44%) scale(0.7) rotate(-44.5deg);
+  }
+  g#cv polygon:nth-child(2) {
+    -webkit-transition: 2s;
+    transition: 2s;
+    -webkit-transform: translate(22%, 26%) scale(0.67);
+            transform: translate(22%, 26%) scale(0.67);
+  }
+  g#cv g path {
+    -webkit-transition: 2s;
+    transition: 2s;
+    -webkit-transform: translate(22%, 26%) scale(0.67);
+            transform: translate(22%, 26%) scale(0.67);
+  }
+  .header .hero .col .ui svg {
+    height: 100vh;
+    margin-bottom: -.5em;
+    overflow: visible;
+  }
+  .myForm {
+    margin-left: -25em;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 100%;
+    -webkit-transform: scale(2);
+            transform: scale(2);
+    font-size: 2em;
+    padding: 1em;
+    background-color: #191919;
+    border-radius: .2em;
+    -webkit-box-shadow: 1em 0 4em #3333331e;
+            box-shadow: 1em 0 4em #3333331e;
+  }
+  .myForm formgrp {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .myForm formgrp input {
+    padding: .8em;
+    border-bottom: thin none;
+    width: 11em;
+    font-size: .85em;
+    margin-bottom: 1em;
+    color: #cdcdcd;
+    background-color: #222;
+  }
+  .myForm input:focus {
+    outline-offset: -2px;
+    outline: -webkit-focus-ring-color auto 0px;
+  }
+  .myForm .message {
+    height: 10vh;
+    vertical-align: top;
+    font-family: roboto;
+    padding: .85em;
+    font-size: .9em;
+    background-color: #222;
+    color: #cdcdcd;
+  }
+  .myForm .message:focus {
+    outline-offset: -2px;
+    outline: -webkit-focus-ring-color auto 0px;
+  }
+  .myForm .submit {
+    font-size: 1.1em;
+    padding: .3em;
+    padding-top: .4em;
+    margin-top: 1em;
+    color: #888;
+    background-color: #222;
+  }
+  .navlist {
+    margin-left: 0;
+    padding-left: 7vw;
+    width: 100vw;
+    right: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    position: absolute;
+    z-index: 9999;
+    -webkit-transition: 0.5s ease all;
+    transition: 0.5s ease all;
+    padding-top: 0.5em;
+  }
+  .navlist h2 {
+    padding: 0.5em 1em;
+    color: #333;
+    width: 8em;
+    font-weight: 200;
+    font-size: .7em;
+    cursor: pointer;
+    -webkit-transition: ease all 0.5s;
+    transition: ease all 0.5s;
+    text-align: center;
+    border-bottom: #222;
+  }
+  .navlist.P {
+    display: none;
+    margin-right: 21em;
+    width: initial;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+  .navlist .zB h2 {
+    color: transparent !important;
+  }
+  .expHeading {
+    margin-left: -3em;
+    font-size: 2em;
+  }
+  .workHeading {
+    font-size: 2em;
+    margin-left: -3em;
+  }
+  .createHeading {
+    font-size: 2em;
+    margin-left: -3em;
+  }
+  .header .hero .col .heroblock {
+    margin-left: 0;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    font-size: 1.1em;
+    margin-top: 30vh;
+  }
+  svg#Layer_1 {
+    margin-right: -50vw;
+    width: 198vw;
+  }
+  .blackBar {
+    width: 100%;
+    height: 25%;
+    background-color: #191919;
+    position: absolute;
+    z-index: -1;
+    bottom: 0;
+  }
+  .row1 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-flex: 1;
+        -ms-flex: 1 0 65%;
+            flex: 1 0 65%;
+    width: 100vw;
+    height: 65%;
+  }
+  .row1 blurb text {
+    font-size: .5em;
+  }
+  .row2 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-flex: 1;
+        -ms-flex: 1 0 15%;
+            flex: 1 0 15%;
+    width: 100vw;
+    background-color: #191919;
+    height: 35%;
+  }
+  .eRow1 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-flex: 1;
+        -ms-flex: 1 0 65%;
+            flex: 1 0 65%;
+    width: 100vw;
+    height: 65%;
+  }
+  .eRow1 blurb text {
+    font-size: .5em;
+    color: #333;
+  }
+  .eRow2 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-flex: 1;
+        -ms-flex: 1 0 15%;
+            flex: 1 0 15%;
+    width: 100vw;
+    background-color: #191919;
+    height: 35%;
+  }
+  .eRow2 itemheading {
+    z-index: 6666;
+  }
+  .eRow2 itemheading text {
+    font-size: .5em;
+  }
+  .eRow2 {
+    z-index: 99;
+  }
+  blurb block {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 50%;
+            flex: 0 0 50%;
+  }
+  blurb text {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 20%;
+            flex: 0 0 20%;
+    font-size: 0.5em;
+    width: 70vw;
+    position: absolute;
+    bottom: 1vw;
+    color: #dcdcdc;
+  }
+  .eRow1 blurb text {
+    position: relative;
+  }
+  .webWork {
+    cursor: pointer;
+    margin-left: 0;
+    min-width: 12em;
+    height: 55%;
+    margin-top: 15%;
+    position: absolute;
+    overflow: hidden;
+    padding: 1.25vw;
+    width: 45vw;
+    max-width: 18em;
+  }
+  itemheading block h1 {
+    font-size: 2em;
+    font-weight: 300;
+    margin-top: -0.93em;
+    margin-left: -6vw;
+  }
+  text.skills1 h1 {
+    font-size: .8em;
+    font-weight: 100;
+    margin-left: -8em;
+    display: none;
+  }
+  text.skills h1 {
+    font-size: .8em;
+    font-weight: 100;
+    margin-left: 7em;
+    display: none;
+  }
+  itemheading text imgblock {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    height: 8vw;
+    width: 8vw;
+    z-index: 5;
+    padding: 1vw 1.5vw;
+    border: thin #222 solid;
+    position: absolute;
+  }
+  itemheading text imgblock img {
+    margin-top: 1em;
+    width: 3.5em;
+    padding: 0.5em;
   }
 }
 /*# sourceMappingURL=App.css.map */

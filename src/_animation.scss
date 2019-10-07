@@ -137,7 +137,7 @@
 @keyframes slideoutrow {
     from {
         opacity: 1;
-        margin-left: -59vw;
+        margin-left: -50vw;
         width: 50vw;
         filter: blur(0px);
         margin-top: 0;
@@ -189,7 +189,6 @@
     }
 }
 
-
 .twodelay {
     opacity: 1;
     animation: delayedSlide ease-in 0s;
@@ -197,6 +196,7 @@
     animation-duration: 3s;
     animation-delay: 0s;
 }
+
 
 .below {
     width: 40vw;

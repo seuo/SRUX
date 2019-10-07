@@ -12,10 +12,12 @@ import {
     isMobile
   } from "react-device-detect";
 
+
 import logo from './assets/sr-logo.png';
 import Portfolio from './Portfolio';
 import Experience from './Experience';
 import Contact from './Contact';
+import PortfolioImg from './assets/portfolio.png';
 
 class Srux extends Component {
     
@@ -330,7 +332,7 @@ render (){
                                             
                                             <g id="portfolio">
                                             <g>
-                                            <image width="429" height="669" transform="translate(11.56)" href="http://www.samrob.nz/wp-content/uploads/2019/04/portfolio.png"/>
+                                            <image width="429" height="669" transform="translate(11.56)" href={PortfolioImg}/>
                                             </g>
                                             <polygon id="portfolioBlock" points="399.05 367 174.05 367 174.05 332 388.27 332 399.05 367"/>
                                             <g id="porttext">
