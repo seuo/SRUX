@@ -18,6 +18,8 @@ import Portfolio from './Portfolio';
 import Experience from './Experience';
 import Contact from './Contact';
 import PortfolioImg from './assets/portfolio.png';
+import expImg from './assets/experience.png';
+import contactImg from './assets/contact.png';
 
 class Srux extends Component {
     
@@ -290,7 +292,7 @@ render (){
                                         <g id ="contactContainer"  onClick={this.navContact}>                                     
                                         <g id="contact">
                                         <g>
-                                            <image width="697" height="511" transform="translate(35.02 293.48)" href="http://www.samrob.nz/wp-content/uploads/2019/04/contact.png"/>
+                                            <image width="697" height="511" transform="translate(35.02 293.48)" href={contactImg}/>
                                         </g>
                                         <polygon points="466.5 643 260.65 643 308.5 608 466.5 608 466.5 643"/>
                                         <g id="contacttext">
@@ -310,7 +312,7 @@ render (){
      
                                         <g id="cv">
                                         <g>
-                                            <image width="435" height="492" transform="translate(296.7)" href="http://www.samrob.nz/wp-content/uploads/2019/04/experience.png"/>
+                                            <image width="435" height="492" transform="translate(296.7)" href={expImg}/>
                                         </g>
                                         <polygon points="526.5 90 325.3 90 314.55 55 526.5 55 526.5 90"/>
                                         <g id="cvtext">
