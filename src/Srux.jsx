@@ -5,12 +5,7 @@ import {
     Match
 } from "@reach/router";
 
-import {
-    BrowserView,
-    MobileView,
-    isBrowser,
-    isMobile
-  } from "react-device-detect";
+
 
 
 import logo from './assets/sr-logo.png';
@@ -39,6 +34,7 @@ class Srux extends Component {
             experience: '',
             contact:'none',
             blackbar:'',
+            bcState:'',
         }
     
     }
@@ -75,6 +71,7 @@ class Srux extends Component {
             navMenu: 'fade-out',
             headerS: 'none',
             blackbar:'gone',
+            bcState:'',
         })
 
         window.setTimeout(() => {
@@ -193,17 +190,31 @@ class Srux extends Component {
 
         e.preventDefault();
 
+
+
         this.setState({
             experience: '',
             portfolio: 'hero-base',
             home: '',
             heroblock: 'base-hero',
             row: "row-base",
-            slide: ''
+            slide: '',
+            bcState:'bcActive',
         })
-        
-        e.preventDefault();
-        navigate("/contact")
+        window.setTimeout(() => {
+            navigate("/contact")
+            }, 1000)
+        window.setTimeout(() => {
+            this.setState({
+                bcState:'bcInactive',  
+            })
+        }, 1000)
+        window.setTimeout(() => {
+            this.setState({
+                bcState:'',  
+            })
+        }, 4500)
+
     }
 
     navPortfolioDirect = (e) => {
@@ -215,19 +226,30 @@ class Srux extends Component {
             home: '',
             heroblock: 'base-hero',
             row: "row-base",
-            slide: ''
+            slide: '',
+            bcState:'bcActive',
         })
 
         window.setTimeout(() => {
             navigate("/portfolio")
             this.setState({headerS: ''})
-        }, 100)
+        }, 1000)
+        window.setTimeout(() => {
+            this.setState({
+                bcState:'bcInactive',  
+            })
+        }, 1000)
+        window.setTimeout(() => {
+            this.setState({
+                bcState:'',  
+            })
+        }, 4500)
     }
 
 
 
     navExpDirect = (e) => {
-
+        e.preventDefault();
         
         this.setState({
             experience: '',
@@ -235,11 +257,24 @@ class Srux extends Component {
             home: '',
             heroblock: 'base-hero',
             row: "row-base",
-            slide: ''
+            slide: '',
+            bcState:'bcActive',
         })
         
-        e.preventDefault();
-        navigate("/experience")
+
+            window.setTimeout(() => {
+            navigate("/experience")
+        }, 1000)
+        window.setTimeout(() => {
+            this.setState({
+                bcState:'bcInactive',  
+            })
+        }, 1000)
+            window.setTimeout(() => {
+            this.setState({
+                bcState:'',  
+            })
+        }, 4500)
     }
 
 
@@ -262,7 +297,7 @@ class Srux extends Component {
 
 
 render (){
-    let {headerS,home,nav,navMenu,contact} = this.state;
+    let {headerS,home,nav,navMenu,contact,bcState} = this.state;
     console.log(home)
 
 
@@ -364,6 +399,7 @@ render (){
                     ) : (
                         <>
                          {/* <MobileView> */}
+                        <div className={"blackCover " +bcState}></div>
                         <div className={"navMenu "+navMenu}>
                             
                         <div className="navlist">

@@ -453,3 +453,33 @@ $ani-delay: 0s;
         opacity: 0;
     }
 }
+
+
+.blackCover {
+    position: absolute;
+    z-index: 99999;
+    visibility: hidden;
+    opacity:0;
+    pointer-events: none;
+    height: 100vh;
+    width: 100vw;
+}
+
+.bcActive {
+    background-color: #191919;
+    width: 100vw;
+    height: 100vh;
+    transition: 1s ease all;
+    display: block;
+    opacity:1;
+    visibility:inherit;
+}
+
+.bcInactive {
+    background-color: #191919;
+    height: 100vh;
+    width: 100vw;
+    transition: 3s ease all;
+    opacity:0;
+}
+

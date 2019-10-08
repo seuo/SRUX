@@ -6,6 +6,7 @@
     "@reach/router": "^1.2.1",
     "node-sass": "^4.12.0",
     "normalize-wheel": "^1.0.1",
+    "polythene-react-ripple": "^1.7.2",
     "postcss": "^7.0.18",
     "react": "^16.9.0",
     "react-device-detect": "^1.9.10",

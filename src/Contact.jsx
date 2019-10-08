@@ -3,6 +3,8 @@ import HorizontalScroll from 'react-scroll-horizontal';
 import normalizeWheel from 'normalize-wheel';
 import HorizontalScroller from 'react-horizontal-scroll-container';
 
+
+
 import {
     isBrowser,
     isMobile,
@@ -35,6 +37,7 @@ class Contact extends Component {
             home: '',
             slide: '',
             nav: '',
+            bcState:'',
         }
 
     }
@@ -56,6 +59,7 @@ class Contact extends Component {
          slide:data.slide,
          nav:data.nav,
          blackbar:data.blackbar,
+         bcState:data.bcState,
       })
           
       }
@@ -84,6 +88,7 @@ class Contact extends Component {
             nav: '',
             navMenu: 'fade-out',
             blackbar: 'gone',
+            bcState:'',
         })
 
         window.setTimeout(() => {
@@ -103,7 +108,7 @@ class Contact extends Component {
             heroblock,
             experience,
             navMenu,
-            blackbar
+            blackbar,
         } = this.state;
 
 

@@ -42,7 +42,7 @@ class Portfolio extends Component {
             home: '',
             slide: 'slide-up',
             headerS: 'none',
-            nav: ''
+            nav: '',
         }
 
 
@@ -84,7 +84,7 @@ class Portfolio extends Component {
             slide: "slide-down",
             nav: '',
             navMenu: 'fade-out',
-            blackbar: 'gone'
+            blackbar: 'gone',
         })
 
         window.setTimeout(() => {
@@ -110,7 +110,7 @@ class Portfolio extends Component {
             heroblock,
             experience,
             navMenu,
-            blackbar
+            blackbar,
         } = this.state;
         
 
