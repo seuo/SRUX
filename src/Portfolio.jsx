@@ -63,6 +63,8 @@ class Portfolio extends Component {
        slide:data.slide,
        nav:data.nav,
        blackbar:data.blackbar,
+       hAnim:data.hAnim,
+       tAnim:data.tAnim,
     })
         
     }
@@ -112,6 +114,11 @@ class Portfolio extends Component {
             navMenu,
             blackbar,
         } = this.state;
+
+        let {
+            hAnim,
+            tAnim
+        } = this.props.data;
         
 
         return (
@@ -190,7 +197,7 @@ class Portfolio extends Component {
                             <row className="row2">  
 
                             <block>
-                                    <div class="scroll-downs">
+                                    <div class={"scroll-downs "+tAnim}>
                                     <div class="mousey">
                                         <div class="scrollerAnim"></div>
                                     </div>
@@ -201,11 +208,11 @@ class Portfolio extends Component {
                             </row>
                         </section>
                         <section className={"pSection " + slide}>
-                            <div className="webWork"> 
+                            <div className={"webWork "+ tAnim}> 
                                 <a href="//mitchellsjoinery.co.nz/" target="_blank"><div className="webImage mj"></div></a>
                             </div>
                             <row className="row1">
-                                <blurb>
+                                <blurb className={"eText "+ tAnim}>
                                     <block></block>
                                     <text>
                                         <h1>Mitchell's Joinery</h1>
@@ -221,13 +228,13 @@ class Portfolio extends Component {
                             <row className="row2">
                                 <itemheading>
                                     <block>
-                                        <h1 className="workHeading">Web Work</h1>
+                                        <h1 className={"workHeading "+hAnim}>Web Work</h1>
                                     </block>
                                     <text className="skills">
-                                        <h1>Front-end Development</h1>
+                                        <h1 className={"skillHeading " +hAnim}>Front-end Development</h1>
                                     </text>
                                     <text>
-                                        <imgblock><img src={mjlogo}/></imgblock>
+                                        <imgblock className={tAnim}><img src={mjlogo}/></imgblock>
                                     </text>
 
 
@@ -235,11 +242,11 @@ class Portfolio extends Component {
                             </row>
                         </section>
                         <section className={"pSection " + slide}>
-                            <div className="webWork">
+                            <div className={"webWork "+ tAnim}>
                             <a href="//10squares.co.nz" target="_blank"><div className="webImage tens"></div></a>
                             </div>
                             <row className="row1">
-                                <blurb>
+                                <blurb className={"eText "+ tAnim}>
                                     <block></block>
                                     <text>
                                         <h1>10 Squares Cabins</h1>
@@ -259,20 +266,20 @@ class Portfolio extends Component {
                                 <itemheading>
                                     <block></block>
                                     <text>
-                                        <imgblock><img src={tenslogo}/></imgblock>
+                                        <imgblock className={tAnim}><img src={tenslogo}/></imgblock>
                                     </text>
                                     <text className="skills">
-                                        <h1>Wordpress / Magento CMS</h1>
+                                        <h1 className={"skillHeading " +hAnim}>Wordpress / Magento CMS</h1>
                                     </text>
                                 </itemheading>
                             </row>
                         </section>
                         <section className={"pSection " + slide}>
-                            <div className="webWork">
+                            <div className={"webWork "+ tAnim}>
                             <a href="//gubbagardensheds.co.nz" target="_blank"><div className="webImage gubba"></div></a>
                             </div>
                             <row className="row1">
-                                <blurb>
+                                <blurb className={"eText "+ tAnim}>
                                     <block></block>
                                     <text>
                                         <h1>Gubba Sheds</h1>
@@ -293,20 +300,20 @@ class Portfolio extends Component {
                                 <itemheading>
                                     <block></block>
                                     <text>
-                                        <imgblock><img src={gubbalogo}/></imgblock>
+                                        <imgblock className={tAnim}><img src={gubbalogo}/></imgblock>
                                     </text>
                                     <text className="skills">
-                                        <h1>HTML Markup / CSS / SCSS</h1>
+                                        <h1 className={"skillHeading " +hAnim}>HTML Markup / CSS / SCSS</h1>
                                     </text>
                                 </itemheading>
                             </row>
                         </section>
                         <section className={"pSection " + slide}>
-                            <div className="webWork">
+                            <div className={"webWork "+ tAnim}>
                                 <div className="webImage py"></div>
                             </div>
                             <row className="row1">
-                                <blurb>
+                                <blurb className={"eText "+ tAnim}>
                                     <block></block>
                                     <text>
                                         <h1>Playtionery</h1>
@@ -325,20 +332,20 @@ class Portfolio extends Component {
                                 <itemheading>
                                     <block></block>
                                     <text>
-                                        <imgblock><img src={pylogo}/></imgblock>
+                                        <imgblock className={tAnim}><img src={pylogo}/></imgblock>
                                     </text>
                                     <text className="skills">
-                                        <h1>Eccommerce Solutions</h1>
+                                        <h1 className={"skillHeading " +hAnim}>Eccommerce Solutions</h1>
                                     </text>
                                 </itemheading>
                             </row>
                         </section>
                         <section className={"pSection " + slide}>
-                            <div className="webWork">
+                            <div className={"webWork "+ tAnim}>
                                 <div className="webImage heli"></div>
                             </div>
                             <row className="row1">
-                                <blurb>
+                                <blurb className={"eText "+ tAnim}>
                                     <block></block>
                                     <text>
                                         <h1>Heliboard</h1>
@@ -360,18 +367,18 @@ class Portfolio extends Component {
                                 <itemheading>
                                     <block></block>
                                     <text className="skills1">
-                                        <h1>Javascript / Jquery / React</h1>
+                                        <h1 className={"skillHeading " +hAnim}>Javascript / Jquery / React</h1>
                                     </text>
 
                                 </itemheading>
                             </row>
                         </section>
                         <section className={"pSection " + slide}>
-                            <div className="webWork">
+                            <div className={"webWork "+ tAnim}>
                                 <div className="webImage mglogo"></div>
                             </div>
                             <row className="row1">
-                                <blurb>
+                                <blurb className={"eText "+ tAnim}>
                                     <block></block>
                                     <text>
                                         <h1>Mangawhai Village Market</h1>
@@ -388,23 +395,23 @@ class Portfolio extends Component {
                             <row className="row2">
                                 <itemheading>
                                     <block>
-                                        <h1>Print Work</h1>
+                                        <h1 className={"skillHeading " +hAnim}>Print Work</h1>
                                     </block>
                                     <text>
                                         <imgblock className="mgLogoBlock"><img src={mglogo}/></imgblock>
                                     </text>
                                     <text className="skills">
-                                        <h1>Adobe Creative Suite</h1>
+                                        <h1 className={"skillHeading " +hAnim}>Adobe Creative Suite</h1>
                                     </text>
                                 </itemheading>
                             </row>
                         </section>
                         <section className={"pSection " + slide}>
-                            <div className="webWork">
+                            <div className={"webWork "+ tAnim}>
                                 <div className="webImage cc"></div>
                             </div>
                             <row className="row1">
-                                <blurb>
+                                <blurb className={"eText "+ tAnim}>
                                     <block></block>
                                     <text>
                                         <h1>The Cabin Crew</h1>
@@ -429,18 +436,18 @@ class Portfolio extends Component {
                                         <imgblock className="mgLogoBlock"><img src={cclogo}/></imgblock>
                                     </text>
                                     <text className="skills">
-                                        <h1>Photoshop / Illustrator</h1>
+                                        <h1 className={"skillHeading " +hAnim}>Photoshop / Illustrator</h1>
                                     </text>
 
                                 </itemheading>
                             </row>
                         </section>
                         <section className={"pSection " + slide}>
-                            <div className="webWork">
+                            <div className={"webWork "+ tAnim}>
                                 <div className="webImage autposter"></div>
                             </div>
                             <row className="row1">
-                                <blurb>
+                                <blurb className={"eText "+ tAnim}>
                                     <block></block>
                                     <text>
                                         <h1>AUT Poster</h1>
@@ -461,17 +468,17 @@ class Portfolio extends Component {
                                         <imgblock className="mgLogoBlock"><img src={autlogo}/></imgblock>
                                     </text>
                                     <text className="skills">
-                                        <h1>Indesign / Sketch</h1>
+                                        <h1 className={"skillHeading " +hAnim}>Indesign / Sketch</h1>
                                     </text>
                                 </itemheading>
                             </row>
                         </section>
                         <section className={"pSection " + slide}>
-                            <div className="webWork">
+                            <div className={"webWork "+ tAnim}>
                                 <div className="webImage gcpackage"></div>
                             </div>
                             <row className="row1">
-                                <blurb>
+                                <blurb className={"eText "+ tAnim}>
                                     <block></block>
                                     <text>
                                         <h1>Good Coffee</h1>
@@ -492,17 +499,17 @@ class Portfolio extends Component {
                                         <imgblock className="mgLogoBlock"><img src={gclogo}/></imgblock>
                                     </text>
                                     <text className="skills">
-                                        <h1>Google Sketch Design</h1>
+                                        <h1 className={"skillHeading " +hAnim}>Google Sketch Design</h1>
                                     </text>
                                 </itemheading>
                             </row>
                         </section>
                         <section className={"pSection " + slide}>
-                            <div className="webWork">
+                            <div className={"webWork "+ tAnim}>
                                 <div className="webImage renders"></div>
                             </div>
                             <row className="row1">
-                                <blurb>
+                                <blurb className={"eText "+ tAnim}>
                                     <block></block>
                                     <text>
                                         <h1>13b Design</h1>
@@ -520,7 +527,7 @@ class Portfolio extends Component {
                                     <block></block>
                                     <text></text>
                                     <text className="skills1">
-                                        <h1>Draft Work & Rendering</h1>
+                                        <h1 className={"skillHeading " +hAnim}>Draft Work & Rendering</h1>
                                     </text>
                                 </itemheading>
                             </row>
@@ -529,7 +536,7 @@ class Portfolio extends Component {
                         <section className={"pSection " + slide}>
 
                             <row className={"eRow1"}>
-                                <blurb>
+                                <blurb className={"eText "+ tAnim}>
                                     <block></block>
 
                                 </blurb>
@@ -539,7 +546,7 @@ class Portfolio extends Component {
                                     <block></block>
 
                                     <block>
-                                        <h1>Experience</h1>
+                                        <h1 className={"skillHeading " +hAnim}>Experience</h1>
                                     </block>
 
                                     <text>
@@ -552,7 +559,7 @@ class Portfolio extends Component {
                         <section className={"pSection " + slide}>
 
                             <row className="eRow1">
-                                <blurb>
+                                <blurb className={"eText "+ tAnim}>
 
                                     <text>
                                         <h1>Yoobee Web & UX Development</h1>
@@ -572,7 +579,7 @@ class Portfolio extends Component {
                                 </blurb>
                             </row>
                             <row className="eRow2">
-                                <itemheading>
+                                <itemheading className={"hText "+ tAnim}>
                                     <text>
                                         <h4>Technical Knowledge</h4>
                                         HTML / CSS, SCSS<br/>React, Jquery & Javascript<br/>
@@ -594,7 +601,7 @@ class Portfolio extends Component {
                         <section className={"pSection " + slide}>
 
                             <row className="eRow1">
-                                <blurb>
+                                <blurb className={"eText "+ tAnim}>
 
                                     <text>
                                         <h1>Graphic & Web Designer</h1>
@@ -614,7 +621,7 @@ class Portfolio extends Component {
                                 </blurb>
                             </row>
                             <row className="eRow2">
-                                <itemheading>
+                                <itemheading className={"hText "+ tAnim}>
                                     <text>
                                         <h4>Print & Rendering Applications</h4>
                                         Adobe Photoshop<br/>Adobe Illustrator<br/>Adobe Indesign<br/>Adobe Animate<br/>Adobe Premiere<br/>Google Sketchup
@@ -627,7 +634,7 @@ class Portfolio extends Component {
                         <section className={"pSection " + slide}>
 
                             <row className="eRow1">
-                                <blurb>
+                                <blurb className={"eText "+ tAnim}>
 
                                     <text>
                                         <h1>AUT Diploma in Graphic Communication</h1>
@@ -654,7 +661,7 @@ class Portfolio extends Component {
                         <section className={"pSection " + slide}>
 
                             <row className="eRow1">
-                                <blurb>
+                                <blurb className={"eText "+ tAnim}>
 
                                     <text>
                                         <h1>Production Fabricator</h1>
@@ -681,7 +688,7 @@ class Portfolio extends Component {
                         <section className={"pSection " + slide}>
 
                             <row className="eRow1">
-                                <blurb>
+                                <blurb className={"eText "+ tAnim}>
 
                                     <text>
                                         <h1>Multimedia & Graphic Design Certificate</h1>
@@ -698,7 +705,7 @@ class Portfolio extends Component {
                             <row className="eRow2">
                                 <itemheading>
                                     <block>
-                                        <h1>samrob.nz@gmail.com</h1>
+                                        <h1 className={"skillHeading " +hAnim}>srux.web@gmail.com</h1>
                                     </block>
                                     <text></text>
                                     <text className="skills1"></text>
@@ -713,7 +720,7 @@ class Portfolio extends Component {
                                 <block></block>
                                 <text>
                                     
-                                <form className="myForm" action="https://formspree.io/srux.web@gmail.com" method="POST" >
+                                <form className={"myForm "+tAnim} action="https://formspree.io/srux.web@gmail.com" method="POST" >
                                     <h1>Get in touch</h1>
                                     <formgrp>
                                         <input type="text" placeholder="Name" name="name" required/>
@@ -811,11 +818,11 @@ class Portfolio extends Component {
                             <row className="row2"></row>
                         </section>
                         <section className={"pSection " + slide}>
-                            <div className="webWork">
+                            <div className={"webWork "+ tAnim}>
                                 <div className="webImage mj"></div>
                             </div>
                             <row className="row1">
-                                <blurb>
+                                <blurb className={"eText "+ tAnim}>
                                     <block></block>
                                     <text>
                                         <h1>Mitchell's Joinery</h1>
@@ -837,7 +844,7 @@ class Portfolio extends Component {
                                         <h1>Front-end Development</h1>
                                     </text>
                                     <text>
-                                        <imgblock><img src={mjlogo}/></imgblock>
+                                        <imgblock className={tAnim}><img src={mjlogo}/></imgblock>
                                     </text>
 
 
@@ -845,11 +852,11 @@ class Portfolio extends Component {
                             </row>
                         </section>
                         <section className={"pSection " + slide}>
-                            <div className="webWork">
+                            <div className={"webWork "+ tAnim}>
                                 <div className="webImage tens"></div>
                             </div>
                             <row className="row1">
-                                <blurb>
+                                <blurb className={"eText "+ tAnim}>
                                     <block></block>
                                     <text>
                                         <h1>10 Squares Cabins</h1>
@@ -869,7 +876,7 @@ class Portfolio extends Component {
                                 <itemheading>
                                     <block></block>
                                     <text>
-                                        <imgblock><img src={tenslogo}/></imgblock>
+                                        <imgblock className={tAnim}><img src={tenslogo}/></imgblock>
                                     </text>
                                     <text className="skills">
                                         <h1>Wordpress / Magento CMS</h1>
@@ -878,11 +885,11 @@ class Portfolio extends Component {
                             </row>
                         </section>
                         <section className={"pSection " + slide}>
-                            <div className="webWork">
+                            <div className={"webWork "+ tAnim}>
                                 <div className="webImage gubba"></div>
                             </div>
                             <row className="row1">
-                                <blurb>
+                                <blurb className={"eText "+ tAnim}>
                                     <block></block>
                                     <text>
                                         <h1>Gubba Sheds</h1>
@@ -903,7 +910,7 @@ class Portfolio extends Component {
                                 <itemheading>
                                     <block></block>
                                     <text>
-                                        <imgblock><img src={gubbalogo}/></imgblock>
+                                        <imgblock className={tAnim}><img src={gubbalogo}/></imgblock>
                                     </text>
                                     <text className="skills">
                                         <h1>HTML Markup / CSS / SCSS</h1>
@@ -912,11 +919,11 @@ class Portfolio extends Component {
                             </row>
                         </section>
                         <section className={"pSection " + slide}>
-                            <div className="webWork">
+                            <div className={"webWork "+ tAnim}>
                                 <div className="webImage py"></div>
                             </div>
                             <row className="row1">
-                                <blurb>
+                                <blurb className={"eText "+ tAnim}>
                                     <block></block>
                                     <text>
                                         <h1>Playtionery</h1>
@@ -935,7 +942,7 @@ class Portfolio extends Component {
                                 <itemheading>
                                     <block></block>
                                     <text>
-                                        <imgblock><img src={pylogo}/></imgblock>
+                                        <imgblock className={tAnim}><img src={pylogo}/></imgblock>
                                     </text>
                                     <text className="skills">
                                         <h1>Eccommerce Solutions</h1>
@@ -944,11 +951,11 @@ class Portfolio extends Component {
                             </row>
                         </section>
                         <section className={"pSection " + slide}>
-                            <div className="webWork">
+                            <div className={"webWork "+ tAnim}>
                                 <div className="webImage heli"></div>
                             </div>
                             <row className="row1">
-                                <blurb>
+                                <blurb className={"eText "+ tAnim}>
                                     <block></block>
                                     <text>
                                         <h1>heliboard.nz</h1>
@@ -977,11 +984,11 @@ class Portfolio extends Component {
                             </row>
                         </section>
                         <section className={"pSection " + slide}>
-                            <div className="webWork">
+                            <div className={"webWork "+ tAnim}>
                                 <div className="webImage mglogo"></div>
                             </div>
                             <row className="row1">
-                                <blurb>
+                                <blurb className={"eText "+ tAnim}>
                                     <block></block>
                                     <text>
                                         <h1>Mangawhai Village Market</h1>
@@ -1010,11 +1017,11 @@ class Portfolio extends Component {
                             </row>
                         </section>
                         <section className={"pSection " + slide}>
-                            <div className="webWork">
+                            <div className={"webWork "+ tAnim}>
                                 <div className="webImage cc"></div>
                             </div>
                             <row className="row1">
-                                <blurb>
+                                <blurb className={"eText "+ tAnim}>
                                     <block></block>
                                     <text>
                                         <h1>The Cabin Crew</h1>
@@ -1046,11 +1053,11 @@ class Portfolio extends Component {
                             </row>
                         </section>
                         <section className={"pSection " + slide}>
-                            <div className="webWork">
+                            <div className={"webWork "+ tAnim}>
                                 <div className="webImage autposter"></div>
                             </div>
                             <row className="row1">
-                                <blurb>
+                                <blurb className={"eText "+ tAnim}>
                                     <block></block>
                                     <text>
                                         <h1>AUT Poster</h1>
@@ -1077,11 +1084,11 @@ class Portfolio extends Component {
                             </row>
                         </section>
                         <section className={"pSection " + slide}>
-                            <div className="webWork">
+                            <div className={"webWork "+ tAnim}>
                                 <div className="webImage gcpackage"></div>
                             </div>
                             <row className="row1">
-                                <blurb>
+                                <blurb className={"eText "+ tAnim}>
                                     <block></block>
                                     <text>
                                         <h1>Good Coffee</h1>
@@ -1108,11 +1115,11 @@ class Portfolio extends Component {
                             </row>
                         </section>
                         <section className={"pSection " + slide}>
-                            <div className="webWork">
+                            <div className={"webWork "+ tAnim}>
                                 <div className="webImage renders"></div>
                             </div>
                             <row className="row1">
-                                <blurb>
+                                <blurb className={"eText "+ tAnim}>
                                     <block></block>
                                     <text>
                                         <h1>13b Design</h1>
@@ -1139,7 +1146,7 @@ class Portfolio extends Component {
                         <section className={"pSection " + slide}>
 
                             <row className={"eRow1"}>
-                                <blurb>
+                                <blurb className={"eText "+ tAnim}>
                                     <block></block>
 
                                 </blurb>
@@ -1162,7 +1169,7 @@ class Portfolio extends Component {
                         <section className={"pSection " + slide}>
 
                             <row className="eRow1">
-                                <blurb>
+                                <blurb className={"eText "+ tAnim}>
 
                                     <text>
                                         <h1>Yoobee Web & UX Development</h1>
@@ -1204,7 +1211,7 @@ class Portfolio extends Component {
                         <section className={"pSection " + slide}>
 
                             <row className="eRow1">
-                                <blurb>
+                                <blurb className={"eText "+ tAnim}>
 
                                     <text>
                                         <h1>Graphic & Web Designer</h1>
@@ -1237,7 +1244,7 @@ class Portfolio extends Component {
                         <section className={"pSection " + slide}>
 
                             <row className="eRow1">
-                                <blurb>
+                                <blurb className={"eText "+ tAnim}>
 
                                     <text>
                                         <h1>AUT Diploma in Graphic Communication</h1>
@@ -1264,7 +1271,7 @@ class Portfolio extends Component {
                         <section className={"pSection " + slide}>
 
                             <row className="eRow1">
-                                <blurb>
+                                <blurb className={"eText "+ tAnim}>
 
                                     <text>
                                         <h1>Production Fabricator</h1>
@@ -1291,7 +1298,7 @@ class Portfolio extends Component {
                         <section className={"pSection " + slide}>
 
                             <row className="eRow1">
-                                <blurb>
+                                <blurb className={"eText "+ tAnim}>
 
                                     <text>
                                         <h1>Multimedia & Graphic Design Certificate</h1>

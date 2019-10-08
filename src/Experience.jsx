@@ -49,6 +49,8 @@ class Experience extends Component {
          slide:data.slide,
          nav:data.nav,
          blackbar:data.blackbar,
+         hAnim:data.hAnim,
+         tAnim:data.tAnim,
       })
           
       }
@@ -84,10 +86,14 @@ class Experience extends Component {
             heroblock,
             experience,
             navMenu,
-            blackbar
+            blackbar,
         } = this.state;
    
 
+        let {
+            hAnim,
+            tAnim
+        } = this.props.data;
 
         return (
             <>
@@ -161,7 +167,7 @@ class Experience extends Component {
                     <section className={"pSection " + row}>
 
                         <row className={"row1"}>
-                            <blurb>
+                            <blurb className={"eText "+ tAnim}>
                                 <block></block>
 
                             </blurb>
@@ -169,7 +175,7 @@ class Experience extends Component {
                         <row className="row2">
                             <itemheading>
                             <block>
-                                    <div class="scroll-downs">
+                                    <div class={"scroll-downs "+tAnim}>
                                     <div class="mousey">
                                         <div class="scrollerAnim"></div>
                                     </div>
@@ -178,7 +184,7 @@ class Experience extends Component {
                             </block>
 
                                 <block>
-                                    <h1 className="expHeading">Experience</h1>
+                                    <h1 className={hAnim + " expHeading"}>Experience</h1>
                                 </block>
 
                                 <text>
@@ -191,7 +197,7 @@ class Experience extends Component {
                     <section className={"pSection " + slide}>
 
                         <row className="eRow1">
-                            <blurb>
+                            <blurb className={"eText "+ tAnim}>
 
                                 <text>
                                     <h1>Yoobee Web & UX Development</h1>
@@ -211,7 +217,7 @@ class Experience extends Component {
                             </blurb>
                         </row>
                         <row className="eRow2">
-                            <itemheading>
+                            <itemheading className={"hText "+ tAnim}>
                                 <text>
                                     <h4>Technical Knowledge</h4>
                                     HTML / CSS, SCSS<br/>React, Jquery & Javascript<br/>
@@ -235,7 +241,7 @@ class Experience extends Component {
                     <section  className={"pSection " + slide}>
 
                         <row className="eRow1">
-                            <blurb>
+                            <blurb className={"eText "+ tAnim}>
 
                                 <text>
                                     <h1>Graphic & Web Designer</h1>
@@ -255,7 +261,7 @@ class Experience extends Component {
                             </blurb>
                         </row>
                         <row className="eRow2">
-                            <itemheading>
+                            <itemheading className={"hText "+ tAnim}>
                                 
                                 <text>
                                     <h4>Print & Rendering Applications</h4>
@@ -269,7 +275,7 @@ class Experience extends Component {
                     <section  className={"pSection " + slide}>
 
                         <row className="eRow1">
-                            <blurb>
+                            <blurb className={"eText "+ tAnim}>
 
                                 <text>
                                     <h1>AUT Diploma in Graphic Communication</h1>
@@ -285,9 +291,9 @@ class Experience extends Component {
 
                         </row>
                         <row className="eRow2">
-                            <itemheading>
+                            <itemheading className={"hText "+ tAnim}>
                             <block>
-                                    <h1 className="createHeading">Creative digital & brand experiences</h1>
+                                    <h1 className={"createHeading "+hAnim}>Creative digital & brand experiences</h1>
                                 </block>
                                 <text></text>
                                 <text className="skills"></text>
@@ -298,7 +304,7 @@ class Experience extends Component {
                     <section  className={"pSection " + slide}>
 
                         <row className="eRow1">
-                            <blurb>
+                            <blurb className={"eText "+ tAnim}>
 
                                 <text>
                                     <h1>Production Fabricator</h1>
@@ -314,7 +320,7 @@ class Experience extends Component {
                             </blurb>
                         </row>
                         <row className="eRow2">
-                            <itemheading>
+                            <itemheading className={"hText "+ tAnim}>
                             <block>
 
                                 </block>
@@ -327,7 +333,7 @@ class Experience extends Component {
                     <section  className={"pSection " + slide}>
 
                         <row className="eRow1">
-                            <blurb>
+                            <blurb className={"eText "+ tAnim}>
 
                                 <text>
                                     <h1>Multimedia & Graphic Design Certificate</h1>
@@ -344,8 +350,8 @@ class Experience extends Component {
                         <row className="eRow2">
                             <itemheading>
                                 <block>
-                                <h1 className="workHeading">
-                                    samrob.nz@gmail.com
+                                <h1 className={"workHeading " +hAnim}>
+                                    srux.web@gmail.com
 </h1>
                                 </block>
                                 <text></text>
@@ -422,13 +428,13 @@ class Experience extends Component {
                     <section className={"pSection " + row}>
 
                         <row className={"row1"}>
-                            <blurb>
+                            <blurb className={"eText "+ tAnim}>
                                 <block></block>
 
                             </blurb>
                         </row>
                         <row className="row2">
-                            <itemheading>
+                            <itemheading className={"hText "+ tAnim}>
                                 <block></block>
 
                                 <block>
@@ -445,7 +451,7 @@ class Experience extends Component {
                     <section className={"pSection " + slide}>
 
                         <row className="eRow1">
-                            <blurb>
+                            <blurb className={"eText "+ tAnim}>
 
                                 <text>
                                     <h1>Yoobee Web & UX Development</h1>
@@ -465,7 +471,7 @@ class Experience extends Component {
                             </blurb>
                         </row>
                         <row className="eRow2">
-                            <itemheading>
+                            <itemheading className={"hText "+ tAnim}>
                                 <text>
                                     <h4>Technical Knowledge</h4>
                                     HTML / CSS, SCSS<br/>React, Jquery & Javascript<br/>
@@ -489,7 +495,7 @@ class Experience extends Component {
                     <section  className={"pSection " + slide}>
 
                         <row className="eRow1">
-                            <blurb>
+                            <blurb className={"eText "+ tAnim}>
 
                                 <text>
                                     <h1>Graphic & Web Designer</h1>
@@ -509,7 +515,7 @@ class Experience extends Component {
                             </blurb>
                         </row>
                         <row className="eRow2">
-                            <itemheading>
+                            <itemheading className={"hText "+ tAnim}>
                                 
                                 <text>
                                     <h4>Print & Rendering Applications</h4>
@@ -523,7 +529,7 @@ class Experience extends Component {
                     <section  className={"pSection " + slide}>
 
                         <row className="eRow1">
-                            <blurb>
+                            <blurb className={"eText "+ tAnim}>
 
                                 <text>
                                     <h1>AUT Diploma in Graphic Communication</h1>
@@ -539,7 +545,7 @@ class Experience extends Component {
 
                         </row>
                         <row className="eRow2">
-                            <itemheading>
+                            <itemheading className={"hText "+ tAnim}>
                             <block>
                                     <h1 className="createHeading">Creative digital & brand experiences</h1>
                                 </block>
@@ -552,7 +558,7 @@ class Experience extends Component {
                     <section  className={"pSection " + slide}>
 
                         <row className="eRow1">
-                            <blurb>
+                            <blurb className={"eText "+ tAnim}>
 
                                 <text>
                                     <h1>Production Fabricator</h1>
@@ -568,7 +574,7 @@ class Experience extends Component {
                             </blurb>
                         </row>
                         <row className="eRow2">
-                            <itemheading>
+                            <itemheading className={"hText "+ tAnim}>
                             <block>
 
                                 </block>
@@ -581,7 +587,7 @@ class Experience extends Component {
                     <section  className={"pSection " + slide}>
 
                         <row className="eRow1">
-                            <blurb>
+                            <blurb className={"eText "+ tAnim}>
 
                                 <text>
                                     <h1>Multimedia & Graphic Design Certificate</h1>
@@ -596,7 +602,7 @@ class Experience extends Component {
                             </blurb>
                         </row>
                         <row className="eRow2">
-                            <itemheading>
+                            <itemheading className={"hText "+ tAnim}>
                                 <block>
                                 <h1 className="workHeading">
                                     samrob.nz@gmail.com

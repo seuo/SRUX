@@ -60,6 +60,8 @@ class Contact extends Component {
          nav:data.nav,
          blackbar:data.blackbar,
          bcState:data.bcState,
+         hAnim:data.hAnim,
+         tAnim:data.tAnim,
       })
           
       }
@@ -110,6 +112,11 @@ class Contact extends Component {
             navMenu,
             blackbar,
         } = this.state;
+
+        let {
+            tAnim,
+            hAnim
+        } = this.props.data;
 
 
         return (
@@ -208,7 +215,7 @@ class Contact extends Component {
                         <formpos className="">
                                 <block></block>
                                
-                                <form className="contactForm" action="https://formspree.io/srux.web@gmail.com" method="POST" >
+                                <form className={"contactForm "+ tAnim} action="https://formspree.io/srux.web@gmail.com" method="POST" >
                                     <h1>Get in touch</h1>
                                     <formgrp>
                                         <input type="text" placeholder="Name" name="name" required/>
@@ -230,8 +237,8 @@ class Contact extends Component {
                         <row className="eRow2">
                             <itemheading>
                                 <block>
-                                    <h1 className="workHeading">Sam Robertson</h1>
-                                    <div className="aboutMe">
+                                    <h1 className={"workHeading " +hAnim}>Sam Robertson</h1>
+                                    <div className={"aboutMe "+tAnim}>
                                     <p>I’m a frontend developer based in Auckland, New Zealand.</p><p>I have a passion for design & creating high quality, functional web solutions.</p>
                                     <p>Get in touch if you have a job / project you need help with!</p>
                                     </div>

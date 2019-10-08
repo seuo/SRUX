@@ -375,6 +375,7 @@
     margin: auto;
     width :34px;
     height: 55px;
+    transition:1s ease all;
   }
   .mousey {
     width: .2em;
@@ -481,5 +482,41 @@ $ani-delay: 0s;
     width: 100vw;
     transition: 3s ease all;
     opacity:0;
+}
+
+
+.workHeading {
+    transition:1s ease all;
+}
+
+.expHeading {
+    transition:1s ease all;
+}
+
+.skillHeading {
+    transition:1s ease all;
+}
+
+form {
+    transition:1s ease all;
+}
+
+.webWork {
+
+    transition:1s ease all;
+}
+
+blurb {
+    transition:1s ease all;
+}
+
+.hSlide {
+    transform:translate(0,1em);
+    transition:1s ease all;
+}
+
+.tFade {
+    opacity:0;
+    transition:1s ease all;
 }
 

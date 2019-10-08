@@ -35,6 +35,8 @@ class Srux extends Component {
             contact:'none',
             blackbar:'',
             bcState:'',
+            hAnim:'',
+            tAnim:'',
         }
     
     }
@@ -53,6 +55,9 @@ class Srux extends Component {
             experience: '',
             contact:'none',
             blackbar:'',
+            hAnim:'',
+            tAnim:'',
+
         })
 
     }
@@ -199,16 +204,19 @@ class Srux extends Component {
             heroblock: 'base-hero',
             row: "row-base",
             slide: '',
-            bcState:'bcActive',
+            tAnim:'tFade',
+            hAnim:'hSlide',
+            blackbar:'twodelay',
         })
         window.setTimeout(() => {
             navigate("/contact")
             }, 1000)
         window.setTimeout(() => {
             this.setState({
-                bcState:'bcInactive',  
+                tAnim:'',
+                hAnim:'',
             })
-        }, 1000)
+        }, 2000)
     }
 
     navPortfolioDirect = (e) => {
@@ -221,7 +229,9 @@ class Srux extends Component {
             heroblock: 'base-hero',
             row: "row-base",
             slide: '',
-            bcState:'bcActive',
+            tAnim:'tFade',
+            hAnim:'hSlide',
+            blackbar:'twodelay',
         })
 
         window.setTimeout(() => {
@@ -230,9 +240,10 @@ class Srux extends Component {
         }, 1000)
         window.setTimeout(() => {
             this.setState({
-                bcState:'bcInactive',  
+                tAnim:'',
+                hAnim:'',
             })
-        }, 1000)
+        }, 2000)
     }
 
 
@@ -247,7 +258,9 @@ class Srux extends Component {
             heroblock: 'base-hero',
             row: "row-base",
             slide: '',
-            bcState:'bcActive',
+            tAnim:'tFade',
+            hAnim:'hSlide',
+            blackbar:'twodelay',
         })
         
 
@@ -256,9 +269,10 @@ class Srux extends Component {
         }, 1000)
         window.setTimeout(() => {
             this.setState({
-                bcState:'bcInactive',  
+                tAnim:'',
+                hAnim:'',
             })
-        }, 1000)
+        }, 2000)
     }
 
 

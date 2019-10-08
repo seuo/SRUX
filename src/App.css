@@ -463,6 +463,8 @@ text.skills1 h1 {
   margin-top: 1em;
   font-size: 1.1em;
   font-weight: 300;
+  background-color: #191919;
+  z-index: 99;
 }
 
 .pSec {
@@ -1466,6 +1468,8 @@ formpos text img {
   margin: auto;
   width: 34px;
   height: 55px;
+  -webkit-transition: 1s ease all;
+  transition: 1s ease all;
 }
 
 .mousey {
@@ -1597,6 +1601,49 @@ formpos text img {
   -webkit-transition: 3s ease all;
   transition: 3s ease all;
   opacity: 0;
+}
+
+.workHeading {
+  -webkit-transition: 1s ease all;
+  transition: 1s ease all;
+}
+
+.expHeading {
+  -webkit-transition: 1s ease all;
+  transition: 1s ease all;
+}
+
+.skillHeading {
+  -webkit-transition: 1s ease all;
+  transition: 1s ease all;
+}
+
+form {
+  -webkit-transition: 1s ease all;
+  transition: 1s ease all;
+}
+
+.webWork {
+  -webkit-transition: 1s ease all;
+  transition: 1s ease all;
+}
+
+blurb {
+  -webkit-transition: 1s ease all;
+  transition: 1s ease all;
+}
+
+.hSlide {
+  -webkit-transform: translate(0, 1em);
+          transform: translate(0, 1em);
+  -webkit-transition: 1s ease all;
+  transition: 1s ease all;
+}
+
+.tFade {
+  opacity: 0;
+  -webkit-transition: 1s ease all;
+  transition: 1s ease all;
 }
 
 .ui #portfolio {
