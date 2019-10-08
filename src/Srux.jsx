@@ -209,12 +209,6 @@ class Srux extends Component {
                 bcState:'bcInactive',  
             })
         }, 1000)
-        window.setTimeout(() => {
-            this.setState({
-                bcState:'',  
-            })
-        }, 4500)
-
     }
 
     navPortfolioDirect = (e) => {
@@ -239,11 +233,6 @@ class Srux extends Component {
                 bcState:'bcInactive',  
             })
         }, 1000)
-        window.setTimeout(() => {
-            this.setState({
-                bcState:'',  
-            })
-        }, 4500)
     }
 
 
@@ -270,11 +259,6 @@ class Srux extends Component {
                 bcState:'bcInactive',  
             })
         }, 1000)
-            window.setTimeout(() => {
-            this.setState({
-                bcState:'',  
-            })
-        }, 4500)
     }
 
 
