@@ -195,8 +195,6 @@ class Srux extends Component {
 
         e.preventDefault();
 
-
-
         this.setState({
             experience: '',
             portfolio: 'hero-base',
@@ -206,17 +204,17 @@ class Srux extends Component {
             slide: '',
             tAnim:'tFade',
             hAnim:'hSlide',
-            blackbar:'twodelay',
+            blackbar:'',
         })
         window.setTimeout(() => {
             navigate("/contact")
-            }, 1000)
+            }, 700)
         window.setTimeout(() => {
             this.setState({
                 tAnim:'',
                 hAnim:'',
             })
-        }, 2000)
+        }, 1400)
     }
 
     navPortfolioDirect = (e) => {
@@ -231,19 +229,19 @@ class Srux extends Component {
             slide: '',
             tAnim:'tFade',
             hAnim:'hSlide',
-            blackbar:'twodelay',
+            blackbar:'',
         })
 
         window.setTimeout(() => {
             navigate("/portfolio")
             this.setState({headerS: ''})
-        }, 1000)
+        }, 700)
         window.setTimeout(() => {
             this.setState({
                 tAnim:'',
                 hAnim:'',
             })
-        }, 2000)
+        }, 1400)
     }
 
 
@@ -260,19 +258,19 @@ class Srux extends Component {
             slide: '',
             tAnim:'tFade',
             hAnim:'hSlide',
-            blackbar:'twodelay',
+            blackbar:'',
         })
         
 
             window.setTimeout(() => {
             navigate("/experience")
-        }, 1000)
+        }, 700)
         window.setTimeout(() => {
             this.setState({
                 tAnim:'',
                 hAnim:'',
             })
-        }, 2000)
+        }, 1400)
     }
 
 

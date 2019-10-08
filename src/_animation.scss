@@ -456,67 +456,38 @@ $ani-delay: 0s;
 }
 
 
-.blackCover {
-    position: absolute;
-    z-index: 99999;
-    visibility: hidden;
-    opacity:0;
-    pointer-events: none;
-    height: 100vh;
-    width: 100vw;
-}
-
-.bcActive {
-    background-color: #191919;
-    width: 100vw;
-    height: 100vh;
-    transition: 1s ease all;
-    display: block;
-    opacity:1;
-    visibility:inherit;
-}
-
-.bcInactive {
-    background-color: #191919;
-    height: 100vh;
-    width: 100vw;
-    transition: 3s ease all;
-    opacity:0;
-}
-
-
 .workHeading {
-    transition:1s ease all;
+    transition:.7s ease all;
 }
 
 .expHeading {
-    transition:1s ease all;
+    transition:.7s ease all;
 }
 
 .skillHeading {
-    transition:1s ease all;
+    transition:.7s ease all;
 }
 
 form {
-    transition:1s ease all;
+    transition:.7s ease all;
 }
 
 .webWork {
 
-    transition:1s ease all;
+    transition:.7s ease all;
 }
 
 blurb {
-    transition:1s ease all;
+    transition:.7s ease all;
 }
 
 .hSlide {
     transform:translate(0,1em);
-    transition:1s ease all;
+    transition:.7s ease all;
 }
 
 .tFade {
     opacity:0;
-    transition:1s ease all;
+    transition:.7s ease all;
 }
 

@@ -1573,77 +1573,47 @@ formpos text img {
   }
 }
 
-.blackCover {
-  position: absolute;
-  z-index: 99999;
-  visibility: hidden;
-  opacity: 0;
-  pointer-events: none;
-  height: 100vh;
-  width: 100vw;
-}
-
-.bcActive {
-  background-color: #191919;
-  width: 100vw;
-  height: 100vh;
-  -webkit-transition: 1s ease all;
-  transition: 1s ease all;
-  display: block;
-  opacity: 1;
-  visibility: inherit;
-}
-
-.bcInactive {
-  background-color: #191919;
-  height: 100vh;
-  width: 100vw;
-  -webkit-transition: 3s ease all;
-  transition: 3s ease all;
-  opacity: 0;
-}
-
 .workHeading {
-  -webkit-transition: 1s ease all;
-  transition: 1s ease all;
+  -webkit-transition: .7s ease all;
+  transition: .7s ease all;
 }
 
 .expHeading {
-  -webkit-transition: 1s ease all;
-  transition: 1s ease all;
+  -webkit-transition: .7s ease all;
+  transition: .7s ease all;
 }
 
 .skillHeading {
-  -webkit-transition: 1s ease all;
-  transition: 1s ease all;
+  -webkit-transition: .7s ease all;
+  transition: .7s ease all;
 }
 
 form {
-  -webkit-transition: 1s ease all;
-  transition: 1s ease all;
+  -webkit-transition: .7s ease all;
+  transition: .7s ease all;
 }
 
 .webWork {
-  -webkit-transition: 1s ease all;
-  transition: 1s ease all;
+  -webkit-transition: .7s ease all;
+  transition: .7s ease all;
 }
 
 blurb {
-  -webkit-transition: 1s ease all;
-  transition: 1s ease all;
+  -webkit-transition: .7s ease all;
+  transition: .7s ease all;
 }
 
 .hSlide {
   -webkit-transform: translate(0, 1em);
           transform: translate(0, 1em);
-  -webkit-transition: 1s ease all;
-  transition: 1s ease all;
+  -webkit-transition: .7s ease all;
+  transition: .7s ease all;
 }
 
 .tFade {
   opacity: 0;
-  -webkit-transition: 1s ease all;
-  transition: 1s ease all;
+  -webkit-transition: .7s ease all;
+  transition: .7s ease all;
 }
 
 .ui #portfolio {
