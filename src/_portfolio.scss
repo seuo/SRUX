@@ -90,20 +90,23 @@
     h2:nth-child(1):hover {
         background-color: #f3f3f3;
         // border-bottom:#9a3156 thin solid;
-
+        transition: ease all 0.5s;
     }
 
     h2:nth-child(2):hover {
         background-color: #f3f3f3;
         // border-bottom:#9a3156 thin solid;
+        transition: ease all 0.5s;
     }
     h2:nth-child(3):hover {
         background-color: #f3f3f3;
         // border-bottom:#44678c thin solid;
+        transition: ease all 0.5s;
     }
     h2:nth-child(4):hover {
         background-color: #f3f3f3;
         // border-bottom:#b38539 thin solid;
+        transition: ease all 0.5s;
     }
 
 }
@@ -112,8 +115,10 @@
     margin-right: 29em;
     width: initial;
     justify-content: flex-start;
+    transition: ease all 0.5s;
     > h2 {
         background-color:white;
+        transition: ease all 0.5s;
     }
 }
 
@@ -190,8 +195,8 @@ itemheading {
         }
         h1 {
             font-size: 3vw;
-            font-weight: 300;
-            margin-top: -0.93em;
+            font-weight: 700;
+            margin-top: -0.90em;
             margin-left: -6vw;
             color: #191919;
         }
@@ -241,14 +246,30 @@ itemheading {
     // box-shadow: 0em 0 4em #33333338;
     margin-left: 10vw;
     min-width: 15em;
-    width: 25vw;
-    height: 65%;
-    margin-top: 10em;
+    width: 26vw;
+    height: 34%;
+    margin-top: 9em;
     position: absolute;
     overflow: hidden;
     padding: 1.25vw;
     background-color: white;
-    border-image: url("assets/border.png") 500 fill / 8vw / 0.05em space;
+    border-image: url("assets/border.png") 500 fill / 4vw / 0.05em space;
+    transition:ease all 1s;
+}
+
+.printWork {
+    cursor: pointer;
+    // box-shadow: 0em 0 4em #33333338;
+    margin-left: 10vw;
+    min-width: 15em;
+    width: 26vw;
+    height: 65%;
+    margin-top: 9em;
+    position: absolute;
+    overflow: hidden;
+    padding: 1.25vw;
+    background-color: white;
+    border-image: url("assets/border.png") 500 fill / 4vw / 0.05em space;
     transition:ease all 1s;
 }
 
@@ -313,8 +334,8 @@ text.skills {
     width: 25em;
     position: absolute;
     h1 {
-        font-size: 1.4vw;
-        font-weight: 300;
+        font-size: 1.6vw;
+        font-weight: 500;
         color: #191919;
     }
 }
@@ -324,8 +345,8 @@ text.skills1 {
     position: absolute;
     width: 25em;
     h1 {
-        font-size: 1.4vw;
-        font-weight: 300;
+        font-size: 1.6vw;
+        font-weight: 500;
         color: #191919;
     }
 }

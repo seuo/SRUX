@@ -374,7 +374,7 @@ class Portfolio extends Component {
                             </row>
                         </section>
                         <section className={"pSection " + slide}>
-                            <div className={"webWork "+ tAnim}>
+                            <div className={"printWork "+ tAnim}>
                                 <div className="webImage mglogo"></div>
                             </div>
                             <row className="row1">
@@ -407,7 +407,7 @@ class Portfolio extends Component {
                             </row>
                         </section>
                         <section className={"pSection " + slide}>
-                            <div className={"webWork "+ tAnim}>
+                            <div className={"printWork "+ tAnim}>
                                 <div className="webImage cc"></div>
                             </div>
                             <row className="row1">
@@ -443,7 +443,7 @@ class Portfolio extends Component {
                             </row>
                         </section>
                         <section className={"pSection " + slide}>
-                            <div className={"webWork "+ tAnim}>
+                            <div className={"printWork "+ tAnim}>
                                 <div className="webImage autposter"></div>
                             </div>
                             <row className="row1">
@@ -474,7 +474,7 @@ class Portfolio extends Component {
                             </row>
                         </section>
                         <section className={"pSection " + slide}>
-                            <div className={"webWork "+ tAnim}>
+                            <div className={"printWork "+ tAnim}>
                                 <div className="webImage gcpackage"></div>
                             </div>
                             <row className="row1">
@@ -505,7 +505,7 @@ class Portfolio extends Component {
                             </row>
                         </section>
                         <section className={"pSection " + slide}>
-                            <div className={"webWork "+ tAnim}>
+                            <div className={"printWork "+ tAnim}>
                                 <div className="webImage renders"></div>
                             </div>
                             <row className="row1">

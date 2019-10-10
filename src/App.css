@@ -159,18 +159,26 @@ p {
 
 .navlist h2:nth-child(1):hover {
   background-color: #f3f3f3;
+  -webkit-transition: ease all 0.5s;
+  transition: ease all 0.5s;
 }
 
 .navlist h2:nth-child(2):hover {
   background-color: #f3f3f3;
+  -webkit-transition: ease all 0.5s;
+  transition: ease all 0.5s;
 }
 
 .navlist h2:nth-child(3):hover {
   background-color: #f3f3f3;
+  -webkit-transition: ease all 0.5s;
+  transition: ease all 0.5s;
 }
 
 .navlist h2:nth-child(4):hover {
   background-color: #f3f3f3;
+  -webkit-transition: ease all 0.5s;
+  transition: ease all 0.5s;
 }
 
 .navlist.P {
@@ -179,10 +187,14 @@ p {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
+  -webkit-transition: ease all 0.5s;
+  transition: ease all 0.5s;
 }
 
 .navlist.P > h2 {
   background-color: white;
+  -webkit-transition: ease all 0.5s;
+  transition: ease all 0.5s;
 }
 
 .navlist .zB h2 {
@@ -292,8 +304,8 @@ itemheading block p {
 
 itemheading block h1 {
   font-size: 3vw;
-  font-weight: 300;
-  margin-top: -0.93em;
+  font-weight: 700;
+  margin-top: -0.90em;
   margin-left: -6vw;
   color: #191919;
 }
@@ -361,15 +373,32 @@ itemheading text h1 {
   cursor: pointer;
   margin-left: 10vw;
   min-width: 15em;
-  width: 25vw;
-  height: 65%;
-  margin-top: 10em;
+  width: 26vw;
+  height: 34%;
+  margin-top: 9em;
   position: absolute;
   overflow: hidden;
   padding: 1.25vw;
   background-color: white;
-  -o-border-image: url("assets/border.png") 500 fill/8vw/0.05em space;
-     border-image: url("assets/border.png") 500 fill/8vw/0.05em space;
+  -o-border-image: url("assets/border.png") 500 fill/4vw/0.05em space;
+     border-image: url("assets/border.png") 500 fill/4vw/0.05em space;
+  -webkit-transition: ease all 1s;
+  transition: ease all 1s;
+}
+
+.printWork {
+  cursor: pointer;
+  margin-left: 10vw;
+  min-width: 15em;
+  width: 26vw;
+  height: 65%;
+  margin-top: 9em;
+  position: absolute;
+  overflow: hidden;
+  padding: 1.25vw;
+  background-color: white;
+  -o-border-image: url("assets/border.png") 500 fill/4vw/0.05em space;
+     border-image: url("assets/border.png") 500 fill/4vw/0.05em space;
   -webkit-transition: ease all 1s;
   transition: ease all 1s;
 }
@@ -430,8 +459,8 @@ text.skills {
 }
 
 text.skills h1 {
-  font-size: 1.4vw;
-  font-weight: 300;
+  font-size: 1.6vw;
+  font-weight: 500;
   color: #191919;
 }
 
@@ -442,8 +471,8 @@ text.skills1 {
 }
 
 text.skills1 h1 {
-  font-size: 1.4vw;
-  font-weight: 300;
+  font-size: 1.6vw;
+  font-weight: 500;
   color: #191919;
 }
 
