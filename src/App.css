@@ -75,7 +75,7 @@ p {
   -webkit-box-flex: 1;
       -ms-flex: 1 0 65%;
           flex: 1 0 65%;
-  width: 70vw;
+  width: 55vw;
   height: 65%;
 }
 
@@ -86,7 +86,7 @@ p {
   -webkit-box-flex: 1;
       -ms-flex: 1 0 25%;
           flex: 1 0 25%;
-  width: 70vw;
+  width: 55vw;
   background-color: #191919;
   height: 35%;
 }
@@ -306,7 +306,7 @@ itemheading block h1 {
   font-size: 3vw;
   font-weight: 700;
   margin-top: -0.90em;
-  margin-left: -6vw;
+  margin-left: -10vw;
   color: #191919;
 }
 
@@ -317,9 +317,6 @@ itemheading text {
   -webkit-box-flex: 0;
       -ms-flex: 0 0 30%;
           flex: 0 0 30%;
-  padding-left: 3em;
-  padding-right: 10em;
-  font-size: 1.3em;
   color: #cdcdcd;
   font-weight: 200;
   -webkit-box-orient: vertical;
@@ -347,10 +344,12 @@ itemheading text imgblock {
      border-image: url("assets/border.png") 200 fill/3.95em/0em space;
   height: 8vw;
   width: 8vw;
-  margin-top: -7.5vw;
+  margin-top: -12vw;
+  margin-left: 3.5vw;
   padding: 1vw 1.5vw;
   -webkit-box-shadow: 1em 0 4em #3333331e;
           box-shadow: 1em 0 4em #3333331e;
+  z-index: 99;
 }
 
 itemheading text imgblock img {
@@ -371,12 +370,10 @@ itemheading text h1 {
 
 .webWork {
   cursor: pointer;
-  margin-left: 10vw;
+  margin-left: 6vw;
   min-width: 15em;
-  width: 26vw;
-  height: 34%;
-  margin-top: 9em;
-  position: absolute;
+  width: 34vw;
+  height: 23vw;
   overflow: hidden;
   padding: 1.25vw;
   background-color: white;
@@ -386,14 +383,21 @@ itemheading text h1 {
   transition: ease all 1s;
 }
 
+.webWork h1 {
+  position: absolute;
+  margin-top: -1.3em;
+  font-size: 3.4em;
+  border-bottom: thin solid #cdcdcd;
+  color: #27b6c3;
+  line-height: .7em;
+}
+
 .printWork {
   cursor: pointer;
-  margin-left: 10vw;
+  margin-left: 6vw;
   min-width: 15em;
-  width: 26vw;
-  height: 65%;
-  margin-top: 9em;
-  position: absolute;
+  width: 34vw;
+  height: 23vw;
   overflow: hidden;
   padding: 1.25vw;
   background-color: white;
@@ -401,6 +405,15 @@ itemheading text h1 {
      border-image: url("assets/border.png") 500 fill/4vw/0.05em space;
   -webkit-transition: ease all 1s;
   transition: ease all 1s;
+}
+
+.printWork h1 {
+  position: absolute;
+  margin-top: -1.3em;
+  font-size: 3.4em;
+  border-bottom: thin solid #cdcdcd;
+  color: #27b6c3;
+  line-height: .7em;
 }
 
 .webImage {
@@ -453,27 +466,41 @@ itemheading text h1 {
 }
 
 text.skills {
-  margin-left: 56.5vw;
-  width: 25em;
+  margin-left: 8vw;
+  width: 34vw;
   position: absolute;
 }
 
 text.skills h1 {
-  font-size: 1.6vw;
-  font-weight: 500;
+  font-size: 1.8vw;
+  font-weight: 700;
   color: #191919;
+  margin-bottom: .4em;
+}
+
+text.skills p {
+  padding-top: .5em;
+  line-height: 1.4em;
+  font-weight: 300;
+  color: #bbbbbb;
+  font-size: .9vmax;
 }
 
 text.skills1 {
-  margin-left: 40vw;
+  margin-left: 10vw;
   position: absolute;
-  width: 25em;
+  width: 34vw;
 }
 
 text.skills1 h1 {
-  font-size: 1.6vw;
-  font-weight: 500;
+  font-size: 1.8vw;
+  font-weight: 700;
   color: #191919;
+  margin-bottom: .5em;
+}
+
+text.skills1 p {
+  padding-top: .2em;
 }
 
 .mgLogoBlock {
@@ -1078,12 +1105,12 @@ formpos text img {
             filter: blur(50px);
     width: 100vw;
     margin-top: 100vh;
-    margin-left: -50vw;
+    margin-left: 0vw;
   }
   to {
     opacity: 1;
     margin-left: -55vw;
-    width: 50vw;
+    width: 55vw;
     -webkit-filter: blur(0px);
             filter: blur(0px);
     margin-top: 0;
@@ -1097,12 +1124,12 @@ formpos text img {
             filter: blur(50px);
     width: 100vw;
     margin-top: 100vh;
-    margin-left: -50vw;
+    margin-left: 0vw;
   }
   to {
     opacity: 1;
     margin-left: -55vw;
-    width: 50vw;
+    width: 55vw;
     -webkit-filter: blur(0px);
             filter: blur(0px);
     margin-top: 0;
@@ -1112,8 +1139,8 @@ formpos text img {
 @-webkit-keyframes slideoutrow {
   from {
     opacity: 1;
-    margin-left: -50vw;
-    width: 50vw;
+    margin-left: -55vw;
+    width: 55vw;
     -webkit-filter: blur(0px);
             filter: blur(0px);
     margin-top: 0;
@@ -1122,7 +1149,7 @@ formpos text img {
     opacity: 1;
     -webkit-filter: blur(50px);
             filter: blur(50px);
-    width: 50vw;
+    width: 55vw;
     margin-top: 150vh;
     margin-left: 0vw;
   }
@@ -1131,8 +1158,8 @@ formpos text img {
 @keyframes slideoutrow {
   from {
     opacity: 1;
-    margin-left: -50vw;
-    width: 50vw;
+    margin-left: -55vw;
+    width: 55vw;
     -webkit-filter: blur(0px);
             filter: blur(0px);
     margin-top: 0;
@@ -1141,7 +1168,7 @@ formpos text img {
     opacity: 1;
     -webkit-filter: blur(50px);
             filter: blur(50px);
-    width: 50vw;
+    width: 55vw;
     margin-top: 150vh;
     margin-left: 0vw;
   }
@@ -2103,8 +2130,8 @@ svg {
             transform: scale(0.8);
   }
   .webWork {
-    height: 68%;
-    margin-top: 10vh;
+    height: 21vw;
+    margin-top: 5em;
   }
   .hero .col {
     display: -webkit-box;
@@ -2549,12 +2576,12 @@ svg {
     cursor: pointer;
     margin-left: 0;
     min-width: 12em;
-    height: 55%;
+    width: 31vw;
+    height: 21vw;
     margin-top: 15%;
     position: absolute;
     overflow: hidden;
     padding: 1.25vw;
-    width: 45vw;
     max-width: 18em;
   }
   itemheading block h1 {
@@ -2606,14 +2633,14 @@ svg {
 @media screen and (orientation: landscape) and (min-device-width: 25em) and (max-device-width: 60em) {
   .webWork {
     cursor: pointer;
-    margin-left: 30vw;
+    margin-left: 5vw;
     min-width: 5em;
-    height: 55%;
+    width: 31vw;
     margin-top: 8%;
     position: absolute;
     overflow: hidden;
     padding: 1.25vw;
-    width: 22vw;
+    height: 21vw;
     max-width: 18em;
   }
   blurb text {

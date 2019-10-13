@@ -28,13 +28,13 @@
 .row1 {
     display: flex;
     flex: 1 0 65%;
-    width: 70vw;
+    width: 55vw;
     height: 65%;
 }
 .row2 {
     display: flex;
     flex: 1 0 25%;
-    width: 70vw;
+    width: 55vw;
     background-color: rgb(25, 25, 25);
     height: 35%;
 }
@@ -197,7 +197,7 @@ itemheading {
             font-size: 3vw;
             font-weight: 700;
             margin-top: -0.90em;
-            margin-left: -6vw;
+            margin-left: -10vw;
             color: #191919;
         }
     }
@@ -205,9 +205,8 @@ itemheading {
     text {
         display: flex;
         flex: 0 0 30%;
-        padding-left: 3em;
-        padding-right: 10em;
-        font-size: 1.3em;
+        // padding-left: 3em;
+        // padding-right: 10em;
         color: #cdcdcd;
         font-weight: 200;
         flex-direction: column;
@@ -221,9 +220,11 @@ itemheading {
             border-image: url("assets/border.png") 200 fill / 3.95em / 0.0em space;
             height: 8vw;
             width: 8vw;
-            margin-top: -7.5vw;
+            margin-top: -12vw;
+            margin-left: 3.5vw;
             padding: 1vw 1.5vw;
             box-shadow: 1em 0 4em #3333331e;
+            z-index:99;
             img {
                 width: 8vw;
                 background-color: white;
@@ -243,34 +244,50 @@ itemheading {
 
 .webWork {
     cursor: pointer;
-    // box-shadow: 0em 0 4em #33333338;
-    margin-left: 10vw;
+    margin-left: 6vw;
     min-width: 15em;
-    width: 26vw;
-    height: 34%;
-    margin-top: 9em;
-    position: absolute;
+    width: 34vw;
+    height: 23vw;
+    // margin-top: 9em;
+    // position: absolute;
     overflow: hidden;
     padding: 1.25vw;
     background-color: white;
     border-image: url("assets/border.png") 500 fill / 4vw / 0.05em space;
     transition:ease all 1s;
+
+    h1 {
+        position: absolute;
+        margin-top: -1.3em;
+        font-size: 3.4em;
+        border-bottom: thin solid #cdcdcd;
+        color: #27b6c3;
+        line-height: .7em;
+    }
 }
 
 .printWork {
     cursor: pointer;
-    // box-shadow: 0em 0 4em #33333338;
-    margin-left: 10vw;
+    margin-left: 6vw;
     min-width: 15em;
-    width: 26vw;
-    height: 65%;
-    margin-top: 9em;
-    position: absolute;
+    width: 34vw;
+    height: 23vw;
+    // margin-top: 9em;
+    // position: absolute;
     overflow: hidden;
     padding: 1.25vw;
     background-color: white;
     border-image: url("assets/border.png") 500 fill / 4vw / 0.05em space;
     transition:ease all 1s;
+
+    h1 {
+        position: absolute;
+        margin-top: -1.3em;
+        font-size: 3.4em;
+        border-bottom: thin solid #cdcdcd;
+        color: #27b6c3;
+        line-height: .7em;
+    }
 }
 
 // .webWork:hover {
@@ -330,24 +347,37 @@ itemheading {
 }
 
 text.skills {
-    margin-left: 56.5vw;
-    width: 25em;
+    margin-left: 8vw;
+    width: 34vw;
     position: absolute;
     h1 {
-        font-size: 1.6vw;
-        font-weight: 500;
+        font-size: 1.8vw;
+        font-weight: 700;
         color: #191919;
+        margin-bottom: .4em;
+    }
+    p {
+        padding-top:.5em;
+        line-height: 1.4em;
+        font-weight: 300;
+        color:#bbbbbb;
+        font-size: .9vmax;
+
     }
 }
 
 text.skills1 {
-    margin-left: 40vw;
+    margin-left: 10vw;
     position: absolute;
-    width: 25em;
+    width: 34vw;
     h1 {
-        font-size: 1.6vw;
-        font-weight: 500;
+        font-size: 1.8vw;
+        font-weight: 700;
         color: #191919;
+        margin-bottom: .5em;
+    }
+    p {
+        padding-top:.2em;
     }
 }
 

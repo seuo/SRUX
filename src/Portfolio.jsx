@@ -204,34 +204,39 @@ class Portfolio extends Component {
                                     <div class="arrow arrow-first"></div>
                                     </div>
                             </block>
-                            
+                            <itemheading>
+                                    <block>
+                                    </block>
+                                    <text className="skills">
+                                        {/* <h1 className={"skillHeading " +hAnim}></h1> */}
+                               
+                                    </text>
+
+
+
+                                </itemheading>
                             </row>
                         </section>
                         <section className={"pSection " + slide}>
-                            <div className={"webWork "+ tAnim}> 
-                                <a href="//mitchellsjoinery.co.nz/" target="_blank"><div className="webImage mj"></div></a>
-                            </div>
                             <row className="row1">
                                 <blurb className={"eText "+ tAnim}>
-                                    <block></block>
-                                    <text>
-                                        <h1>Mitchell's Joinery</h1>
-                                        <p>Market Research / Brand Design / Site Design</p>
-                                        <p>The team over at Mitchell's Joinery required a new brand design along with a
-                                        website upgrade to a more modern and intuitive UX design. Mitchell's Joinery
-                                        main focus was on the marine industry. The new logo and website required a more
-                                        premium design along with a more logical catagory / navigation hirechy.</p>
-
-                                    </text>
+                                <div className={"webWork "+ tAnim}> 
+                                    <a href="//mitchellsjoinery.co.nz/" target="_blank"><div className="webImage mj"></div></a>
+                                </div>
                                 </blurb>
                             </row>
                             <row className="row2">
                                 <itemheading>
                                     <block>
-                                        <h1 className={"workHeading "+hAnim}>Web Work</h1>
+                                    <h1 className={"workHeading "+hAnim}>Web Work</h1>
                                     </block>
                                     <text className="skills">
-                                        <h1 className={"skillHeading " +hAnim}>Front-end Development</h1>
+                                        <h1 className={"skillHeading " +hAnim}>Mitchell's Joinery</h1>
+                                        <p>Market Research / Logo Design / Website Design</p>
+                                        <p>The team over at Mitchell's Joinery required a new brand design along with a
+                                        website upgrade to a more modern and intuitive UX design. Mitchell's Joinery
+                                        main focus was on the marine industry. The new logo and website required a more
+                                        premium design along with a more logical catagory / navigation hirechy.</p>
                                     </text>
                                     <text>
                                         <imgblock className={tAnim}><img src={mjlogo}/></imgblock>
@@ -242,24 +247,11 @@ class Portfolio extends Component {
                             </row>
                         </section>
                         <section className={"pSection " + slide}>
-                            <div className={"webWork "+ tAnim}>
-                            <a href="//10squares.co.nz" target="_blank"><div className="webImage tens"></div></a>
-                            </div>
                             <row className="row1">
                                 <blurb className={"eText "+ tAnim}>
-                                    <block></block>
-                                    <text>
-                                        <h1>10 Squares Cabins</h1>
-                                        <p>Brand Design / Site Design / Drafting & Rendering</p>
-                                        <p>10 Squares Cabins is a new manufacturer of small cabins & sleep-outs that fit
-                                        within the 10m² council requirements. They required a brand-id along with a
-                                        website showcasing the quality and process that goes into building their kitset
-                                        cabins. I worked closely with the 10 Squares team to create a clean &
-                                        informative website. Using renders I was able to show the customer the build
-                                        process from start to finish. I continued work for them doing drafting & render
-                                        work for customers who needed custom builds.</p>
-
-                                    </text>
+                                    <div className={"webWork "+ tAnim}>
+                                    <a href="//10squares.co.nz" target="_blank"><div className="webImage tens"></div></a>
+                                    </div>
                                 </blurb>
                             </row>
                             <row className="row2">
@@ -269,31 +261,25 @@ class Portfolio extends Component {
                                         <imgblock className={tAnim}><img src={tenslogo}/></imgblock>
                                     </text>
                                     <text className="skills">
-                                        <h1 className={"skillHeading " +hAnim}>Wordpress / Magento CMS</h1>
+                                        <h1 className={"skillHeading " +hAnim}>10 Squares Cabins</h1>
+                                        <p>Logo Design / Website Design / Drafting & Rendering</p>
+                                        <p>10 Squares Cabins is a new manufacturer of small cabins & sleep-outs that fit
+                                        within the 10m² council requirements. They required a brand-id along with a
+                                        website showcasing the quality and process that goes into building their kitset
+                                        cabins. I worked closely with the 10 Squares team to create a clean &
+                                        informative website. Using renders I was able to show the customer the build
+                                        process from start to finish. I continued work for them doing drafting & render
+                                        work for customers who needed custom builds.</p>
                                     </text>
                                 </itemheading>
                             </row>
                         </section>
                         <section className={"pSection " + slide}>
-                            <div className={"webWork "+ tAnim}>
-                            <a href="//gubbagardensheds.co.nz" target="_blank"><div className="webImage gubba"></div></a>
-                            </div>
                             <row className="row1">
                                 <blurb className={"eText "+ tAnim}>
-                                    <block></block>
-                                    <text>
-                                        <h1>Gubba Sheds</h1>
-                                        <p>Site Design</p>
-                                       <p>Gubba required a site design for their garden shed range. They wanted their
-                                        website to easily display their full range & the amount of customisations
-                                        possible. To do this I would develop a functional shed configurator which I
-                                        integrated with an online ecommerce platform. This made it possible for
-                                        customers to resize, change colour, add doors, windows & add a variety of other
-                                        extras, it also gave them ability to add assembly service to their order. The
-                                        shed configurator has been a great point of difference between Gubba Garden
-                                        Sheds & their competitors.</p>
-
-                                    </text>
+                                <div className={"webWork "+ tAnim}>
+                                <a href="//gubbagardensheds.co.nz" target="_blank"><div className="webImage gubba"></div></a>
+                                </div>
                                 </blurb>
                             </row>
                             <row className="row2">
@@ -303,29 +289,27 @@ class Portfolio extends Component {
                                         <imgblock className={tAnim}><img src={gubbalogo}/></imgblock>
                                     </text>
                                     <text className="skills">
-                                        <h1 className={"skillHeading " +hAnim}>HTML Markup / CSS / SCSS</h1>
+                                        <h1 className={"skillHeading " +hAnim}>Gubba Sheds</h1>
+                                        <p>Website Design</p>
+                                       <p>Gubba required a site design for their garden shed range. They wanted their
+                                        website to easily display their full range & the amount of customisations
+                                        possible. To do this I would develop a functional shed configurator which I
+                                        integrated with an online ecommerce platform. This made it possible for
+                                        customers to resize, change colour, add doors, windows & add a variety of other
+                                        extras, it also gave them ability to add assembly service to their order. The
+                                        shed configurator has been a great point of difference between Gubba Garden
+                                        Sheds & their competitors.</p>
                                     </text>
                                 </itemheading>
                             </row>
                         </section>
                         <section className={"pSection " + slide}>
-                            <div className={"webWork "+ tAnim}>
-                                <div className="webImage py"></div>
-                            </div>
+
                             <row className="row1">
                                 <blurb className={"eText "+ tAnim}>
-                                    <block></block>
-                                    <text>
-                                        <h1>Playtionery</h1>
-                                        <p>Logo / Website</p>
-                                        <p>The client wanted an e-commerce website that was fun and playful which would
-                                            portray their stationery well.</p>
-                                        <p>I designed the navigation to be as simple as possible making it child’s play
-                                            to use and navigate. Making the buttons directly link through to the product
-                                            category pages without any dropdowns made it really easy to use.
-                                        </p>
-
-                                    </text>
+                                    <div className={"webWork "+ tAnim}>
+                                        <div className="webImage py"></div>
+                                    </div>
                                 </blurb>
                             </row>
                             <row className="row2">
@@ -335,21 +319,32 @@ class Portfolio extends Component {
                                         <imgblock className={tAnim}><img src={pylogo}/></imgblock>
                                     </text>
                                     <text className="skills">
-                                        <h1 className={"skillHeading " +hAnim}>Eccommerce Solutions</h1>
+                                        <h1 className={"skillHeading " +hAnim}>Playtionery</h1>
+                                        <p>Logo Design / Site Design</p>
+                                        <p>The client wanted an e-commerce website that was fun and playful which would
+                                            portray their stationery well.</p>
+                                        <p>I designed the navigation to be as simple as possible making it child’s play
+                                            to use and navigate. Making the buttons directly link through to the product
+                                            category pages without any dropdowns made it really easy to use.
+                                        </p>
                                     </text>
                                 </itemheading>
                             </row>
                         </section>
                         <section className={"pSection " + slide}>
-                            <div className={"webWork "+ tAnim}>
-                                <div className="webImage heli"></div>
-                            </div>
                             <row className="row1">
                                 <blurb className={"eText "+ tAnim}>
+                                    <div className={"webWork "+ tAnim}>
+                                        <div className="webImage heli"></div>
+                                    </div>
+                                </blurb>
+                            </row>
+                            <row className="row2">
+                                <itemheading>
                                     <block></block>
-                                    <text>
-                                        <h1>Heliboard</h1>
-                                        <p>Website</p>
+                                    <text className="skills">
+                                        <h1 className={"skillHeading " +hAnim}>Heliboard</h1>
+                                        <p>Website Design</p>
                                         <p>The team at heliboard nz needed a redesign of their website to look more
                                             modern & eye catching.</p>
                                         <p>They also wanted the website to be designed for results, they were getting the
@@ -359,37 +354,18 @@ class Portfolio extends Component {
                                             the instructors directly below, heliboard.nz has had a large improvement in
                                             conversions from the booking system.
                                         </p>
-
-                                    </text>
-                                </blurb>
-                            </row>
-                            <row className="row2">
-                                <itemheading>
-                                    <block></block>
-                                    <text className="skills1">
-                                        <h1 className={"skillHeading " +hAnim}>Javascript / Jquery / React</h1>
                                     </text>
 
                                 </itemheading>
                             </row>
                         </section>
                         <section className={"pSection " + slide}>
-                            <div className={"printWork "+ tAnim}>
-                                <div className="webImage mglogo"></div>
-                            </div>
+
                             <row className="row1">
                                 <blurb className={"eText "+ tAnim}>
-                                    <block></block>
-                                    <text>
-                                        <h1>Mangawhai Village Market</h1>
-                                        <p>Logo / Brand Design</p>
-                                        <p>The Mangawhai Village Market needed a logo for their ever growing market. I
-                                            discussed with them some design concepts & we came up with the idea to include a
-                                            local bird, the Fairy Tern, which is a distinctive icon that locals will
-                                            recognize.</p>
-                                        <p>I really enjoyed working on this brand, something a bit different.</p>
-
-                                    </text>
+                                <div className={"printWork "+ tAnim}>
+                                    <div className="webImage mglogo"></div>
+                                </div>
                                 </blurb>
                             </row>
                             <row className="row2">
@@ -398,23 +374,38 @@ class Portfolio extends Component {
                                         <h1 className={"skillHeading " +hAnim}>Print Work</h1>
                                     </block>
                                     <text>
-                                        <imgblock className="mgLogoBlock"><img src={mglogo}/></imgblock>
+                                        <imgblock><img src={mglogo}/></imgblock>
                                     </text>
                                     <text className="skills">
-                                        <h1 className={"skillHeading " +hAnim}>Adobe Creative Suite</h1>
+                                        <h1 className={"skillHeading " +hAnim}>Mangawhai Village Market</h1>
+                                        <p>Logo / Brand Design</p>
+                                        <p>The Mangawhai Village Market needed a logo for their ever growing market. I
+                                            discussed with them some design concepts & we came up with the idea to include a
+                                            local bird, the Fairy Tern, which is a distinctive icon that locals will
+                                            recognize.</p>
+                                        <p>I really enjoyed working on this brand, something a bit different.</p>
                                     </text>
                                 </itemheading>
                             </row>
                         </section>
                         <section className={"pSection " + slide}>
-                            <div className={"printWork "+ tAnim}>
-                                <div className="webImage cc"></div>
-                            </div>
                             <row className="row1">
-                                <blurb className={"eText "+ tAnim}>
+                                <blurb className={"eText "+ tAnim}>                           
+                                    <div className={"printWork "+ tAnim}>
+                                        <div className="webImage cc">
+
+                                        </div>
+                                    </div>
+                                </blurb>
+                            </row>
+                            <row className="row2">
+                                <itemheading>
                                     <block></block>
                                     <text>
-                                        <h1>The Cabin Crew</h1>
+                                        <imgblock><img src={cclogo}/></imgblock>
+                                    </text>
+                                    <text className="skills">
+                                        <h1 className={"skillHeading " +hAnim}>The Cabin Crew</h1>
                                         <p>Logo / Brand Design</p>
                                         <p>The Cabin Crew team required a logo for their newly formed building company.
                                             The owner wanted a brand that meant something to him, but also had a
@@ -423,111 +414,86 @@ class Portfolio extends Component {
                                         <p>I used red & black colours to show his Maori heritage and a wave design to
                                             reflect one of his passions in life, surfing. I enjoyed working with him to come
                                             up with a design we were both happy with.
-
                                         </p>
-
-                                    </text>
-                                </blurb>
-                            </row>
-                            <row className="row2">
-                                <itemheading>
-                                    <block></block>
-                                    <text>
-                                        <imgblock className="mgLogoBlock"><img src={cclogo}/></imgblock>
-                                    </text>
-                                    <text className="skills">
-                                        <h1 className={"skillHeading " +hAnim}>Photoshop / Illustrator</h1>
                                     </text>
 
                                 </itemheading>
                             </row>
                         </section>
                         <section className={"pSection " + slide}>
-                            <div className={"printWork "+ tAnim}>
-                                <div className="webImage autposter"></div>
-                            </div>
+
                             <row className="row1">
                                 <blurb className={"eText "+ tAnim}>
+                                    <div className={"printWork "+ tAnim}>
+                                        <div className="webImage autposter"></div>
+                                    </div>
+                                </blurb>
+                            </row>
+                            <row className="row2">
+                                <itemheading>
                                     <block></block>
                                     <text>
-                                        <h1>AUT Poster</h1>
+                                        <imgblock><img src={autlogo}/></imgblock>
+                                    </text>
+                                    <text className="skills">
+                                        <h1 className={"skillHeading " +hAnim}>AUT Poster</h1>
                                         <p>Poster</p>
                                         <p>For this assignment I was required to create a poster advertising Auckland
                                             University of Technology’s Diploma in Graphic Communication.</p>
                                         <p>I wanted to design something that really caught the eye, was simple & not too
                                             obvious. I feel I achieved this by only using two colours & having the finer
                                             details large enough to read but small enough to take a second look.</p>
-
                                     </text>
+                                </itemheading>
+                            </row>
+                        </section>
+                        <section className={"pSection " + slide}>
+
+                            <row className="row1">
+                                <blurb className={"eText "+ tAnim}>
+                                    <div className={"printWork "+ tAnim}>
+                                        <div className="webImage gcpackage"></div>
+                                    </div>
                                 </blurb>
                             </row>
                             <row className="row2">
                                 <itemheading>
                                     <block></block>
                                     <text>
-                                        <imgblock className="mgLogoBlock"><img src={autlogo}/></imgblock>
+                                        <imgblock><img src={gclogo}/></imgblock>
                                     </text>
                                     <text className="skills">
-                                        <h1 className={"skillHeading " +hAnim}>Indesign / Sketch</h1>
-                                    </text>
-                                </itemheading>
-                            </row>
-                        </section>
-                        <section className={"pSection " + slide}>
-                            <div className={"printWork "+ tAnim}>
-                                <div className="webImage gcpackage"></div>
-                            </div>
-                            <row className="row1">
-                                <blurb className={"eText "+ tAnim}>
-                                    <block></block>
-                                    <text>
-                                        <h1>Good Coffee</h1>
+                                        <h1 className={"skillHeading " +hAnim}>Good Coffee</h1>
                                         <p>Coffee Packaging Brand</p>
                                         <p>The brief for this assignment was to produce a brand and packaging design for
                                             a New Zealand roasting company called GOOD Coffee.</p>
                                         <p>They wanted their brand to appeal to the average New Zealander and the design
                                             to reflect a medium price point. The subtle green koru patterns at the base of
                                             the pack work with the rest of the design to portray a New Zealand feel.</p>
-
-                                    </text>
-                                </blurb>
-                            </row>
-                            <row className="row2">
-                                <itemheading>
-                                    <block></block>
-                                    <text>
-                                        <imgblock className="mgLogoBlock"><img src={gclogo}/></imgblock>
-                                    </text>
-                                    <text className="skills">
-                                        <h1 className={"skillHeading " +hAnim}>Google Sketch Design</h1>
                                     </text>
                                 </itemheading>
                             </row>
                         </section>
                         <section className={"pSection " + slide}>
-                            <div className={"printWork "+ tAnim}>
-                                <div className="webImage renders"></div>
-                            </div>
                             <row className="row1">
                                 <blurb className={"eText "+ tAnim}>
-                                    <block></block>
-                                    <text>
-                                        <h1>13b Design</h1>
-                                        <p>Renders & Floor Plans</p>
-                                        <p>These renders & floor plans were created for a draftsman so they could
-                                            show the client and give them a better idea & visual of what their finished
-                                            home will look like.</p>
-                                        <p>I worked with the client through the design process, providing different
-                                            cladding, scructure, design options & made changes along the way to suit</p>
-                                    </text>
+                                    <div className={"printWork "+ tAnim}>
+                                        <div className="webImage renders"></div>
+                                    </div>
                                 </blurb>
                             </row>
                             <row className="row2">
                                 <itemheading>
                                     <block></block>
                                     <text></text>
-                                    <text className="skills1">
-                                        <h1 className={"skillHeading " +hAnim}>Draft Work & Rendering</h1>
+                                    <text className="skills">
+                                        <h1 className={"skillHeading " +hAnim}>13a Design</h1>
+                                        <p>Renders & Floor Plans</p>
+                                        <p>These renders & floor plans were created for a draftsman so they could
+                                            show the client and give them a better idea & visual of what their finished
+                                            home will look like.</p>
+                                        <p>I worked with the client through the design process, providing different
+                                            cladding, scructure, design options & made changes along the way to suit</p>
                                     </text>
                                 </itemheading>
                             </row>

@@ -14,8 +14,8 @@
 
 
     .webWork {
-        height: 68%;
-        margin-top: 10vh;
+        height: 21vw;
+        margin-top: 5em;
     
         .webImage {
             
@@ -434,12 +434,12 @@
         cursor: pointer;
         margin-left: 0;
         min-width: 12em;
-        height: 55%;
+        width: 31vw;
+        height: 21vw;
         margin-top: 15%;
         position: absolute;
         overflow: hidden;
         padding: 1.25vw;
-        width: 45vw;
         max-width: 18em;
 
         .webImage {
@@ -495,14 +495,15 @@ and (min-device-width: 25em)
 and (max-device-width: 60em) {
         .webWork {
         cursor: pointer;
-        margin-left: 30vw;
+        margin-left: 5vw;
         min-width: 5em;
-        height: 55%;
+        width: 31vw;
+
         margin-top: 8%;
         position: absolute;
         overflow: hidden;
         padding: 1.25vw;
-        width: 22vw;
+        height: 21vw;
         max-width: 18em;
     }
 
