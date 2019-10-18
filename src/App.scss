@@ -263,10 +263,12 @@ g#contact-border {
 }
 
 .c1 {
+    transform:translate(0,0);
     margin-left: 7vw;
     font-size: 0.85vw;
     flex-direction: column;
     align-items: center;
+    transition:ease all 1s;
 }
 
 .hero {
@@ -279,7 +281,7 @@ g#contact-border {
         display: flex;
         flex: 1 0 20%;
         justify-content: flex-end;
-
+        transition: ease all 1s;
         .heroblock {
             justify-content: center;
             display: flex;
@@ -296,6 +298,10 @@ g#contact-border {
                 img {
                     height: 13.6em;
                 }
+                svg {
+                    height: 14em;
+                    width: 11.8em;
+               }
             }
 
             h1 {

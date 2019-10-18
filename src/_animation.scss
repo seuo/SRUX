@@ -119,18 +119,17 @@
 
 @keyframes slideinrow {
     from {
-        opacity: 1;
-        filter: blur(50px);
+        opacity: 0;
+        filter: blur(20px);
         width: 100vw;
-        margin-top: 100vh;
-        margin-left: 0vw;
+        margin-left: -47vw;
     }
     to {
         opacity: 1;
-        margin-left: -55vw;
+        margin-left: -53vw;
         width: 55vw;
         filter: blur(0px);
-        margin-top: 0;
+
     }
 }
 
@@ -210,7 +209,7 @@
     /* make things invisible upon start */
     animation: away ease-in 1;
     animation-fill-mode: forwards;
-    animation-duration: 1.5s;
+    animation-duration: .7s;
 }
 
 .closeNav {
@@ -218,7 +217,7 @@
     /* make things invisible upon start */
     animation: closeMainNav ease-in 1;
     animation-fill-mode: forwards;
-    animation-duration: 1.5s;
+    animation-duration: .7s;
 }
 
 .base {
@@ -231,7 +230,7 @@
 
     animation: base ease-in 1;
     animation-fill-mode: forwards;
-    animation-duration: 1.5s;
+    animation-duration: .7s;
 }
 
 .base-hero {
@@ -249,7 +248,7 @@
     /* make things invisible upon start */
     animation: come ease-in 1;
     animation-fill-mode: forwards;
-    animation-duration: 1.5s;
+    animation-duration: .7s;
 }
 
 .gone {
@@ -280,50 +279,146 @@
     opacity: 0.5;
 }
 
+.headerTransHome {
+    transition:ease all 1s;
+    h1 {
+        font-size: 5em;
+        line-height: 1em;
+        font-weight: 900;
+        margin-left: 0.2em;
+        margin-top: 0.12em;
+        margin-bottom: 0.1em;
+        color: #424242;
+        width: 4.8em;
+    }
+
+    h2 {
+        font-size: 2.063em;
+        padding: 0.1em 0.3em 0.1em 0.4em;
+        background-color: #000000;
+        font-weight: 300;
+        font-style: normal;
+        color: white;
+        width: 7em;
+        margin-top: 0.25em;
+        margin-left: 6.25em;
+    }
+
+    p {
+        font-weight: 100;
+        font-size: 2.375em;
+        color: rgba(0,0,0,0.57);
+        width: 10em;
+        margin-left: 5.4em;
+
+    }
+    
+
+    .heading {
+        transition:ease all 1s;
+        h1 {
+            color:  #424242!important;
+            transition:ease all 1s;
+        }
+
+        svg {
+            transition:ease all 1s;
+            fill:black;
+            height: 13.9em !important;
+            width: 11.8em;
+       }
+
+    }
+
+}
 
 
+.headerTransWork {
+    transition:ease all 1s;
+
+    p {
+        color: #8c2442 !important;
+        transition:ease all 1s;
+    }
+    h2 {
+        color: #8c2442 !important;
+        background-color:black !important;
+        transition:ease all 1s;
+    }
+    
+
+    .heading {
+        transition:ease all 1s;
+        h1 {
+            color:  #8c2442 !important;
+            transition:ease all 1s;
+        }
+
+        svg {
+            transition:ease all 1s;
+            fill:#8c2442;
+            height: 13.9em !important;
+            width: 11.8em;
+       }
+
+    }
+
+}
+
+
+.colBlack {
+    transition: ease all 1s;
+    background-color: black;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 100%);
+}
+
+.colWhite {
+    transition: ease all 1s;
+    background-color: rgb(255, 255, 255);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 100%);
+}
 
 .slide-up {
     animation: slideup ease-in 1;
     animation-fill-mode: forwards;
-    animation-duration: 2s;
+    animation-duration: .7s;
 }
 
 .slide-down {
     animation: slidedown ease-in 1;
     animation-fill-mode: forwards;
-    animation-duration: 2s;
+    animation-duration: .7s;
 }
 
 .slide-in {
     animation: slidein ease-in 1;
     animation-fill-mode: forwards;
-    animation-duration: 1.5s;
+    animation-duration: .7s;
 }
 
 .slide-in-fade {
     animation: slideinFade ease-in 1;
     animation-fill-mode: forwards;
-    animation-duration: 1.5s;
+    animation-duration: .7s;
 }
 
 .slide-out {
     animation: slideout ease-in 1;
     animation-fill-mode: forwards;
-    animation-duration: 1.5s;
+    animation-duration: .7s;
 }
 
 .slide-in-row {
     animation: slideinrow ease-in 1;
     animation-fill-mode: forwards;
-    animation-duration: 2s;
+    animation-duration: .7s;
     pointer-events: none;
 }
 
 .slide-out-row {
     animation: slideoutrow ease-in 1;
     animation-fill-mode: forwards;
-    animation-duration: 2s;
+    animation-duration: .7s;
     pointer-events: none;
 }
 
@@ -340,11 +435,11 @@
     /* make things invisible upon start */
     animation: fadeIn ease-in 1;
     animation-fill-mode: forwards;
-    animation-duration: 2s;
+    animation-duration: 1s;
 }
 
 .fade-in.one {
-    animation-delay: 2s;
+    animation-delay: 1s;
 }
 .fade-in.two {
     animation-delay: 3s;
@@ -392,13 +487,13 @@
     border-radius: 25%;
     background-color: #fff;
     animation-name: scroll;
-    animation-duration: 2.2s;
+    animation-duration: .7s;
     animation-timing-function: cubic-bezier(.15,.41,.69,.94);
     animation-iteration-count: infinite;
   }
 
 
-$ani-speed: 2.2s;
+$ani-speed: .7s;
 $ani-delay: 0s;
 
 
