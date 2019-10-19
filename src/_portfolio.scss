@@ -1,10 +1,19 @@
 
 .pWrap {
-    overflow-y: hidden;
+    overflow:hidden;
     width: 100vw;
     height: 100vh;
     position: absolute;
     scroll-behavior: smooth;
+}
+
+.vScroller {
+    transition: 1.5s all cubic-bezier(0.23, 1, 0.32, 1);
+
+    .pSection {
+        transform:rotate(20deg);
+        transform-origin: top left;
+    }
 }
 
 .work {
@@ -20,24 +29,22 @@
     width: 100%;
     display: flex;
     flex-direction: column;
+    align-items: flex-end;
 }
 
 
-.colBlack {
-    transition: ease all 1s;
-    background-color: black;
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 100%);
-}
+
 
 .row1 {
     display: flex;
     flex: 1 0 99%;
-    width: 55vw;
+    width: 52vw;
     height: 65%;
 }
 .row2 {
-    width: 55vw;
+    width: 52vw;
     background-color: rgb(25, 25, 25);
+    height: 0;
 }
 
 .blackBar {
@@ -221,8 +228,8 @@ itemheading {
             border-image: url("assets/border.png") 200 fill / 3.95em / 0.0em space;
             height: 8vw;
             width: 8vw;
-            margin-top: -19vw;
-            margin-left: 3.5vw;
+            margin-top: -21vw;
+            margin-left: 4.5vw;
             padding: 1vw 1.5vw;
             box-shadow: 1em 0 4em #3333331e;
             z-index:99;
@@ -247,12 +254,12 @@ itemheading {
     cursor: pointer;
     margin-left: 6vw;
     min-width: 15em;
-    width: 34vw;
-    height: 23vw;
+    width: 35vw;
+    height: 24vw;
     margin-top: 2vw;
     overflow: hidden;
-    padding: 1.25vw;
-    background-color: white;
+    padding: .7vw;
+    background-color: #111;
     border-image: url("assets/border.png") 500 fill / 4vw / 0.05em space;
     transition:ease all 1s;
 
@@ -270,13 +277,13 @@ itemheading {
     cursor: pointer;
     margin-left: 6vw;
     min-width: 15em;
-    width: 34vw;
-    height: 23vw;
-    // margin-top: 9em;
+    width: 35vw;
+    height: 24vw;
+    margin-top:2vw;
     // position: absolute;
     overflow: hidden;
-    padding: 1.25vw;
-    background-color: white;
+    padding: .7vw;
+    background-color: #111;
     border-image: url("assets/border.png") 500 fill / 4vw / 0.05em space;
     transition:ease all 1s;
 

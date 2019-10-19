@@ -280,6 +280,7 @@
 }
 
 .headerTransHome {
+    
     transition:ease all 1s;
     h1 {
         font-size: 5em;
@@ -335,7 +336,6 @@
 
 .headerTransWork {
     transition:ease all 1s;
-
     p {
         color: #8c2442 !important;
         transition:ease all 1s;
@@ -368,14 +368,16 @@
 
 .colBlack {
     transition: ease all 1s;
-    background-color: black;
+    background-color: #111;
     clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 100%);
+    z-index: -1;
 }
 
 .colWhite {
     transition: ease all 1s;
-    background-color: rgb(255, 255, 255);
+    background-color: rgba(255, 255, 255, 0);
     clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 100%);
+    z-index: -1;
 }
 
 .slide-up {
@@ -427,7 +429,7 @@
     /* make things invisible upon start */
     animation: fadeOut ease-in 1;
     animation-fill-mode: forwards;
-    animation-duration: 1s;
+    animation-duration: .5s;
 }
 
 .fade-in {
@@ -435,7 +437,7 @@
     /* make things invisible upon start */
     animation: fadeIn ease-in 1;
     animation-fill-mode: forwards;
-    animation-duration: 1s;
+    animation-duration: .7s;
 }
 
 .fade-in.one {

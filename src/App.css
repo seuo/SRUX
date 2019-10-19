@@ -1,3 +1,4 @@
+@import url(//db.onlinewebfonts.com/c/480e3d39ed40d6543721946a2d36ccff?family=RZ);
 * {
   margin: 0;
   text-decoration: none;
@@ -36,11 +37,23 @@ p {
 }
 
 .pWrap {
-  overflow-y: hidden;
+  overflow: hidden;
   width: 100vw;
   height: 100vh;
   position: absolute;
   scroll-behavior: smooth;
+}
+
+.vScroller {
+  -webkit-transition: 1.5s all cubic-bezier(0.23, 1, 0.32, 1);
+  transition: 1.5s all cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.vScroller .pSection {
+  -webkit-transform: rotate(20deg);
+          transform: rotate(20deg);
+  -webkit-transform-origin: top left;
+          transform-origin: top left;
 }
 
 .work {
@@ -66,14 +79,9 @@ p {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-}
-
-.colBlack {
-  -webkit-transition: ease all 1s;
-  transition: ease all 1s;
-  background-color: black;
-  -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 100%);
-          clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 100%);
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
 }
 
 .row1 {
@@ -83,13 +91,14 @@ p {
   -webkit-box-flex: 1;
       -ms-flex: 1 0 99%;
           flex: 1 0 99%;
-  width: 55vw;
+  width: 52vw;
   height: 65%;
 }
 
 .row2 {
-  width: 55vw;
+  width: 52vw;
   background-color: #191919;
+  height: 0;
 }
 
 .blackBar {
@@ -345,8 +354,8 @@ itemheading text imgblock {
      border-image: url("assets/border.png") 200 fill/3.95em/0em space;
   height: 8vw;
   width: 8vw;
-  margin-top: -19vw;
-  margin-left: 3.5vw;
+  margin-top: -21vw;
+  margin-left: 4.5vw;
   padding: 1vw 1.5vw;
   -webkit-box-shadow: 1em 0 4em #3333331e;
           box-shadow: 1em 0 4em #3333331e;
@@ -373,12 +382,12 @@ itemheading text h1 {
   cursor: pointer;
   margin-left: 6vw;
   min-width: 15em;
-  width: 34vw;
-  height: 23vw;
+  width: 35vw;
+  height: 24vw;
   margin-top: 2vw;
   overflow: hidden;
-  padding: 1.25vw;
-  background-color: white;
+  padding: .7vw;
+  background-color: #111;
   -o-border-image: url("assets/border.png") 500 fill/4vw/0.05em space;
      border-image: url("assets/border.png") 500 fill/4vw/0.05em space;
   -webkit-transition: ease all 1s;
@@ -398,11 +407,12 @@ itemheading text h1 {
   cursor: pointer;
   margin-left: 6vw;
   min-width: 15em;
-  width: 34vw;
-  height: 23vw;
+  width: 35vw;
+  height: 24vw;
+  margin-top: 2vw;
   overflow: hidden;
-  padding: 1.25vw;
-  background-color: white;
+  padding: .7vw;
+  background-color: #111;
   -o-border-image: url("assets/border.png") 500 fill/4vw/0.05em space;
      border-image: url("assets/border.png") 500 fill/4vw/0.05em space;
   -webkit-transition: ease all 1s;
@@ -1466,17 +1476,19 @@ formpos text img {
 .colBlack {
   -webkit-transition: ease all 1s;
   transition: ease all 1s;
-  background-color: black;
+  background-color: #111;
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 100%);
           clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 100%);
+  z-index: -1;
 }
 
 .colWhite {
   -webkit-transition: ease all 1s;
   transition: ease all 1s;
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0);
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 100%);
           clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 100%);
+  z-index: -1;
 }
 
 .slide-up {
@@ -1551,8 +1563,8 @@ formpos text img {
           animation: fadeOut ease-in 1;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
-  -webkit-animation-duration: 1s;
-          animation-duration: 1s;
+  -webkit-animation-duration: .5s;
+          animation-duration: .5s;
 }
 
 .fade-in {
@@ -1562,8 +1574,8 @@ formpos text img {
           animation: fadeIn ease-in 1;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
-  -webkit-animation-duration: 1s;
-          animation-duration: 1s;
+  -webkit-animation-duration: .7s;
+          animation-duration: .7s;
 }
 
 .fade-in.one {

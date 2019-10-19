@@ -8,6 +8,8 @@ html {
     scroll-behavior: smooth !important;
 }
 
+@import url(//db.onlinewebfonts.com/c/480e3d39ed40d6543721946a2d36ccff?family=RZ);
+
 $font-stack: 'Roboto', sans-serif;
 $font-stack-alt: 'Roboto', sans-serif;
 $primary-color: rgba(66, 66, 66, 1);
@@ -38,6 +40,8 @@ p {
 .scroller::-webkit-scrollbar {
     display: none !important;
   }
+
+
 
 @import "_portfolio.scss";
 @import "_exp.scss";
