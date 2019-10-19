@@ -259,6 +259,7 @@ blurb text p {
   font-size: 1.15em;
   padding-bottom: 0.5em;
   font-weight: 300;
+  margin-botton: 1em;
 }
 
 blurb text h1 {
@@ -1350,7 +1351,7 @@ formpos text img {
 }
 
 .gone {
-  visibility: hidden !important;
+  visibility: hidden;
 }
 
 .none {
@@ -1442,13 +1443,13 @@ formpos text img {
 }
 
 .headerTransWork p {
-  color: #8c2442 !important;
+  color: aliceblue !important;
   -webkit-transition: ease all 1s;
   transition: ease all 1s;
 }
 
 .headerTransWork h2 {
-  color: #8c2442 !important;
+  color: aliceblue !important;
   background-color: black !important;
   -webkit-transition: ease all 1s;
   transition: ease all 1s;
@@ -1460,7 +1461,7 @@ formpos text img {
 }
 
 .headerTransWork .heading h1 {
-  color: #8c2442 !important;
+  color: aliceblue !important;
   -webkit-transition: ease all 1s;
   transition: ease all 1s;
 }
@@ -1468,9 +1469,47 @@ formpos text img {
 .headerTransWork .heading svg {
   -webkit-transition: ease all 1s;
   transition: ease all 1s;
-  fill: #8c2442;
+  fill: aliceblue;
   height: 13.9em !important;
   width: 11.8em;
+}
+
+.animPath .leftPath {
+  -webkit-transition: ease all .5s;
+  transition: ease all .5s;
+  -webkit-transform-origin: top left;
+          transform-origin: top left;
+}
+
+.animPath .rightPath {
+  -webkit-transition: ease all .5s;
+  transition: ease all .5s;
+  -webkit-transform-origin: top right;
+          transform-origin: top right;
+}
+
+.stageZero .heading h1 {
+  overflow: hidden;
+}
+
+.stageZero .heading h1#text {
+  margin-top: 5em;
+}
+
+.stageZero .heroblock div p {
+  font-weight: 100;
+  font-size: 1.3em !important;
+  width: 18em !important;
+  margin-left: 10em !important;
+  margin-bottom: .5em;
+}
+
+.stageZero .heroblock div h2 {
+  font-size: 1.1em !important;
+  width: 6em !important;
+  margin-top: 0.5em !important;
+  margin-left: 10.25em !important;
+  padding: 0em 1em !important;
 }
 
 .stageOne {
@@ -1610,6 +1649,17 @@ formpos text img {
           animation-fill-mode: forwards;
   -webkit-animation-duration: .7s;
           animation-duration: .7s;
+}
+
+.fade-in-fast {
+  opacity: 0;
+  /* make things invisible upon start */
+  -webkit-animation: fadeIn ease-in 1;
+          animation: fadeIn ease-in 1;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-duration: .3s;
+          animation-duration: .3s;
 }
 
 .fade-in.one {

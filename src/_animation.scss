@@ -252,7 +252,7 @@
 }
 
 .gone {
-    visibility: hidden !important;
+    visibility: hidden;
 }
 
 .none {
@@ -337,11 +337,11 @@
 .headerTransWork {
     transition:ease all 1s;
     p {
-        color: #8c2442 !important;
+        color: rgb(192, 217, 240) !important;
         transition:ease all 1s;
     }
     h2 {
-        color: #8c2442 !important;
+        color: rgb(192, 217, 240); !important;
         background-color:black !important;
         transition:ease all 1s;
     }
@@ -350,17 +350,66 @@
     .heading {
         transition:ease all 1s;
         h1 {
-            color:  #8c2442 !important;
+            color: rgb(192, 217, 240); !important;
             transition:ease all 1s;
         }
 
         svg {
             transition:ease all 1s;
-            fill:#8c2442;
+            fill:rgb(192, 217, 240);
             height: 13.9em !important;
             width: 11.8em;
        }
 
+    }
+
+}
+.animPath {
+    .leftPath {
+        transition: ease all .5s;
+        transform-origin:top left;
+    }
+    .rightPath {
+        transition: ease all .5s;
+        transform-origin:top right;
+    }
+}
+
+.stageZero {
+    // path.leftPath {
+    //     transform: rotateY(0deg);
+    //     transition: ease all .5s;
+    // }
+    // path.rightPath {
+    //     transform: rotateY(0deg);
+    //     transition: ease all .5s;
+    // }
+    .heading {
+        h1 { 
+            overflow:hidden;
+        }
+        h1#text {
+            margin-top:5em;
+        }
+
+    }
+    .heroblock {
+        div {
+            p {
+                font-weight: 100;
+                font-size: 1.3em !important;
+                width: 18em !important;
+                margin-left: 10em !important;
+                margin-bottom:.5em;
+            }
+            h2 {
+                font-size: 1.1em !important;
+                width: 6em !important;
+                margin-top: 0.5em !important;
+                margin-left: 10.25em !important;
+                padding:0em 1em !important;
+            }
+        }
     }
 
 }
@@ -473,6 +522,14 @@
     animation: fadeIn ease-in 1;
     animation-fill-mode: forwards;
     animation-duration: .7s;
+}
+
+.fade-in-fast {
+    opacity: 0;
+    /* make things invisible upon start */
+    animation: fadeIn ease-in 1;
+    animation-fill-mode: forwards;
+    animation-duration: .3s;
 }
 
 .fade-in.one {
