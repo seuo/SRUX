@@ -1474,27 +1474,51 @@ formpos text img {
 }
 
 .stageOne {
-  background-image: url("assets/stageOne.jpg");
+  background-image: url("assets/mj-bg.jpg");
 }
 
 .stageTwo {
-  background-image: url("assets/stageTwo.jpg");
+  background-image: url("assets/tensq-bg.jpg");
+}
+
+.stageThree {
+  background-image: url("assets/gubba-bg.jpg");
+}
+
+.stageFour {
+  background-image: url("assets/playtionery-bg.jpg");
+}
+
+.stageFive {
+  background-image: url("assets/heli-bg.jpg");
+}
+
+.stageSix {
+  background-image: url("assets/mangawhai-bg.jpg");
+}
+
+.stageSeven {
+  background-image: url("assets/cc-bg.jpg");
+}
+
+.stageEight {
+  background-image: url("assets/aut-bg.jpg");
 }
 
 .colBlack {
-  -webkit-transition: ease all 1s;
-  transition: ease all 1s;
+  -webkit-transition: ease all .5s;
+  transition: ease all .5s;
+  background-color: black;
   background-size: cover;
-  opacity: .1;
-  background-color: #111;
+  opacity: .15;
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 100%);
           clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 100%);
   z-index: -1;
 }
 
 .colWhite {
-  -webkit-transition: ease all 1s;
-  transition: ease all 1s;
+  -webkit-transition: ease all .5s;
+  transition: ease all .5s;
   background-color: rgba(255, 255, 255, 0);
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 100%);
           clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 100%);

@@ -44,7 +44,7 @@ class MyWork extends Component {
             colTwoBgImg:'',
             currentIndex: 0,
             stageImage: [
-                'stageOne','stageTwo','stageThree','stageFour','stageFive','stageSix','stageSeven','stageEight','stageNine','stageTen'
+                'stageOne','stageTwo','stageThree','stageFour','stageFive','stageSix','stageSeven','stageEight'
             ]
         }
 
@@ -54,9 +54,33 @@ class MyWork extends Component {
     nextIndex = () => {
         const { stageImage, currentIndex } = this.state;
         if (currentIndex == stageImage.length - 1) {
-            return this.setState({ 
-                currentIndex: 0,
-            });
+
+                
+                this.setState({
+                    experience: '',
+                    portfolio: 'hero-base',
+                    home: '',
+                    heroblock: 'base-hero',
+                    row: "row-base",
+                    slide: '',
+                    tAnim:'tFade',
+                    hAnim:'hSlide',
+                    blackbar:'',
+        
+                })
+                
+        
+                    window.setTimeout(() => {
+                    navigate("/experience")
+                }, 700)
+                window.setTimeout(() => {
+                    this.setState({
+                        tAnim:'',
+                        hAnim:'',
+                    })
+                }, 1400)
+            
+        
         }
  
         return this.setState({
@@ -90,7 +114,8 @@ class MyWork extends Component {
                 }, 1500)
 
             return this.setState({
-                currentIndex: 0
+                currentIndex: 0,
+                stageImage: -1,
             });
         }
  
@@ -222,7 +247,7 @@ class MyWork extends Component {
                                     </div>
                                 </div>
                             </div>
-                            <div className={"col c2 " + colTwoBg+" "+stageImage[currentIndex]} >
+                            <div className={"col c2 "+stageImage[currentIndex]+" "+colTwoBg} >
                                 <div className="ui gone"></div>
                             </div>
                         </div>
@@ -405,7 +430,7 @@ class MyWork extends Component {
                         </itemheading>
                     </row>
                 </section>
-                <section className={"pSection"}>
+                {/* <section className={"pSection"}>
 
                     <row className="row1">
                         <blurb className={"eText " + tAnim}>
@@ -439,7 +464,7 @@ class MyWork extends Component {
                           
                         </itemheading>
                     </row>
-                </section>
+                </section> */}
                 </ReactScrollWheelHandler>
                 
                 <HorizontalScroll
