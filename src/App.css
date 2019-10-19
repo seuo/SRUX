@@ -387,7 +387,7 @@ itemheading text h1 {
   margin-top: 2vw;
   overflow: hidden;
   padding: .7vw;
-  background-color: #111;
+  background-color: #191919;
   -o-border-image: url("assets/border.png") 500 fill/4vw/0.05em space;
      border-image: url("assets/border.png") 500 fill/4vw/0.05em space;
   -webkit-transition: ease all 1s;
@@ -1473,9 +1473,19 @@ formpos text img {
   width: 11.8em;
 }
 
+.stageOne {
+  background-image: url("assets/stageOne.jpg");
+}
+
+.stageTwo {
+  background-image: url("assets/stageTwo.jpg");
+}
+
 .colBlack {
   -webkit-transition: ease all 1s;
   transition: ease all 1s;
+  background-size: cover;
+  opacity: .1;
   background-color: #111;
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 100%);
           clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 100%);

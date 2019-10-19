@@ -365,9 +365,19 @@
 
 }
 
+.stageOne {
+    background-image: url("assets/stageOne.jpg");
+}
+
+.stageTwo {
+    background-image: url("assets/stageTwo.jpg");
+}
 
 .colBlack {
     transition: ease all 1s;
+
+    background-size:cover;
+    opacity:.1;
     background-color: #111;
     clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 100%);
     z-index: -1;

@@ -18,6 +18,8 @@ import autlogo from './assets/aut.jpg';
 import gclogo from './assets/gc-logo.jpg';
 import logo from './assets/srux-logo.svg';
 
+
+
 document.addEventListener('mousewheel', function (event) {
     const normalized = normalizeWheel(event);
 
@@ -39,9 +41,10 @@ class MyWork extends Component {
             headerS: 'none',
             nav: '',
             colTwoBg: 'colBlack',
+            colTwoBgImg:'',
             currentIndex: 0,
-            stage: [
-                1,2,3,4,5,6,7,8,9,10,11
+            stageImage: [
+                'stageOne','stageTwo','stageThree','stageFour','stageFive','stageSix','stageSeven','stageEight','stageNine','stageTen'
             ]
         }
 
@@ -49,18 +52,21 @@ class MyWork extends Component {
 
 
     nextIndex = () => {
-        const { stage, currentIndex } = this.state;
-        if (currentIndex == stage.length - 1) {
-            return this.setState({ currentIndex: 0 });
+        const { stageImage, currentIndex } = this.state;
+        if (currentIndex == stageImage.length - 1) {
+            return this.setState({ 
+                currentIndex: 0,
+            });
         }
  
         return this.setState({
-            currentIndex: currentIndex + 100
+            currentIndex: currentIndex + 1,
+
         });
     };
 
     prevIndex = () => {
-        const { stage, currentIndex } = this.state;
+        const { stageImage, currentIndex } = this.state;
         if (currentIndex == 0) {
         
                 this.setState({
@@ -89,7 +95,7 @@ class MyWork extends Component {
         }
  
         return this.setState({
-            currentIndex: currentIndex - 100
+            currentIndex: currentIndex - 1
         });
     };
 
@@ -170,7 +176,9 @@ class MyWork extends Component {
 
         let {hAnim, tAnim} = this.props.data;
 
-        const {currentIndex } = this.state;
+        const {stageImage,currentIndex } = this.state;
+
+
 
 
         return (
@@ -214,7 +222,7 @@ class MyWork extends Component {
                                     </div>
                                 </div>
                             </div>
-                            <div className={"col c2 " + colTwoBg}>
+                            <div className={"col c2 " + colTwoBg+" "+stageImage[currentIndex]} >
                                 <div className="ui gone"></div>
                             </div>
                         </div>
@@ -229,7 +237,7 @@ class MyWork extends Component {
                     customStyle={{
                         // width: "100%",
                         // height: "100vh",
-                        transform:"rotate(-20deg) scale(1) translateY(-"+currentIndex+"vh)",
+                        transform:"rotate(-20deg) scale(1) translateY(-"+currentIndex+"00vh)",
                         transformOrigin:"top left",
                        
 
