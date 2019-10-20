@@ -43,11 +43,38 @@ class MyWork extends Component {
             colTwoBg: 'colBlack',
             colTwoBgImg:'',
             currentIndex: 0,
-            stageState:'fade-in-fast',
+            stageState:'stageF-in',
             stageImage: [
                 'stageOne','stageTwo','stageThree','stageFour','stageFive','stageSix','stageSeven','stageEight'
             ]
         }
+
+    }
+
+    componentDidMount = () => {
+
+        let data = this
+            .props
+            .data
+
+            this
+            .setState({
+                headerS: data.headerS,
+                portfolio: data.portfolio,
+                row: data.row,
+                mainNav: data.mainNav,
+                heroblock: data.heroblock,
+                experience: data.experience,
+                home: data.home,
+                slide: data.slide,
+                nav: data.nav,
+                hAnim: data.hAnim,
+                tAnim: data.tAnim,
+
+                stageState:'stageF-in',
+                colTwoBg: 'colBlack',
+                headerTransition: 'headerTransWork fade-in'
+            })
 
     }
     
@@ -140,32 +167,6 @@ class MyWork extends Component {
         }, 200)
 
     };
-
-    componentDidMount = () => {
-
-        let data = this
-            .props
-            .data
-
-            this
-            .setState({
-                headerS: data.headerS,
-                portfolio: data.portfolio,
-                row: data.row,
-                mainNav: data.mainNav,
-                heroblock: data.heroblock,
-                experience: data.experience,
-                home: data.home,
-                slide: data.slide,
-                nav: data.nav,
-                hAnim: data.hAnim,
-                tAnim: data.tAnim,
-
-                colTwoBg: 'colBlack',
-                headerTransition: 'headerTransWork fade-in'
-            })
-
-    }
 
     navHome = (e) => {
         e.preventDefault();

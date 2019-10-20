@@ -306,6 +306,7 @@
     }
 
     p {
+        
         font-weight: 100;
         font-size: 2.375em;
         color: rgba(0,0,0,0.57);
@@ -338,11 +339,11 @@
     margin-left: 0vw !important;
     transition:ease all 1s;
     p {
-        color: rgb(192, 217, 240) !important;
+        color: rgba(250, 250, 250, 1) !important;
         transition:ease all 1s;
     }
     h2 {
-        color: rgb(192, 217, 240) !important;
+        color: rgba(250, 250, 250, 1) !important;
         background-color:black !important;
         transition:ease all 1s;
     }
@@ -351,7 +352,7 @@
     .heading {
         transition:ease all 1s;
         h1 {
-            color: rgb(192, 217, 240) !important;
+            color: rgba(250, 250, 250, 1) !important;
             transition:ease all 1s;
         }
 

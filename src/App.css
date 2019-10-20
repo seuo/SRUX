@@ -1444,13 +1444,13 @@ formpos text img {
 }
 
 .headerTransWork p {
-  color: #c0d9f0 !important;
+  color: #fafafa !important;
   -webkit-transition: ease all 1s;
   transition: ease all 1s;
 }
 
 .headerTransWork h2 {
-  color: #c0d9f0 !important;
+  color: #fafafa !important;
   background-color: black !important;
   -webkit-transition: ease all 1s;
   transition: ease all 1s;
@@ -1462,7 +1462,7 @@ formpos text img {
 }
 
 .headerTransWork .heading h1 {
-  color: #c0d9f0 !important;
+  color: #fafafa !important;
   -webkit-transition: ease all 1s;
   transition: ease all 1s;
 }
@@ -2216,13 +2216,13 @@ blurb {
 }
 
 .headerTransWork p {
-  color: #c0d9f0 !important;
+  color: #fafafa !important;
   -webkit-transition: ease all 1s;
   transition: ease all 1s;
 }
 
 .headerTransWork h2 {
-  color: #c0d9f0 !important;
+  color: #fafafa !important;
   background-color: black !important;
   -webkit-transition: ease all 1s;
   transition: ease all 1s;
@@ -2234,7 +2234,7 @@ blurb {
 }
 
 .headerTransWork .heading h1 {
-  color: #c0d9f0 !important;
+  color: #fafafa !important;
   -webkit-transition: ease all 1s;
   transition: ease all 1s;
 }
@@ -2607,7 +2607,7 @@ blurb {
 
 .stageZero .heading {
   overflow: hidden;
-  border-bottom: 2px solid #c8dbec;
+  border-bottom: 2px solid #fafafa !important;
   margin-bottom: .7em !important;
 }
 
@@ -2637,9 +2637,18 @@ blurb {
   margin-top: 0.5em !important;
   margin-left: 6.9em !important;
   padding: .7em 1em !important;
+  -webkit-clip-path: polygon(0 0, 9em 0, 100% 100%, 0% 100%);
+          clip-path: polygon(0 0, 9em 0, 100% 100%, 0% 100%);
+}
+
+.stageOne .heading {
+  border-bottom: 2px solid #7bcee6 !important;
+  -webkit-transition: ease all 1.5s;
+  transition: ease all 1.5s;
 }
 
 .stageOne .heading h1::before {
+  color: #7bcee6 !important;
   content: "Mitchells Joinery";
 }
 
@@ -2655,7 +2664,14 @@ blurb {
   content: "Research\A Brand Design\A Site Design";
 }
 
+.stageTwo .heading {
+  border-bottom: 2px solid #df713e !important;
+  -webkit-transition: ease all 1.5s;
+  transition: ease all 1.5s;
+}
+
 .stageTwo .heading h1::before {
+  color: #df713e !important;
   content: "10 Squares Cabins";
 }
 
@@ -2671,7 +2687,14 @@ blurb {
   content: "Brand Design\A Site Design\A Rendering";
 }
 
+.stageThree .heading {
+  border-bottom: 2px solid #64a25d !important;
+  -webkit-transition: ease all 1.5s;
+  transition: ease all 1.5s;
+}
+
 .stageThree .heading h1::before {
+  color: #64a25d !important;
   content: "Gubba Sheds";
 }
 
@@ -2687,7 +2710,14 @@ blurb {
   content: "Site Design";
 }
 
+.stageFour .heading {
+  border-bottom: 2px solid #26a8e0 !important;
+  -webkit-transition: ease all 1.5s;
+  transition: ease all 1.5s;
+}
+
 .stageFour .heading h1::before {
+  color: #26a8e0 !important;
   content: "Playtionery";
 }
 
@@ -2703,7 +2733,14 @@ blurb {
   content: "Logo\A Website";
 }
 
+.stageFive .heading {
+  border-bottom: 2px solid #e1743f !important;
+  -webkit-transition: ease all 1.5s;
+  transition: ease all 1.5s;
+}
+
 .stageFive .heading h1::before {
+  color: #e1743f !important;
   content: "Heliboard";
 }
 
@@ -2719,7 +2756,14 @@ blurb {
   content: "Website";
 }
 
+.stageSix .heading {
+  border-bottom: 2px solid #e1c20f !important;
+  -webkit-transition: ease all 1.5s;
+  transition: ease all 1.5s;
+}
+
 .stageSix .heading h1::before {
+  color: #e1c20f !important;
   content: "Mangawhai Market";
 }
 
@@ -2735,7 +2779,14 @@ blurb {
   content: "Logo Design";
 }
 
+.stageSeven .heading {
+  border-bottom: 2px solid #a32128 !important;
+  -webkit-transition: ease all 1.5s;
+  transition: ease all 1.5s;
+}
+
 .stageSeven .heading h1::before {
+  color: #a32128 !important;
   content: "The Cabin Crew";
 }
 
@@ -2751,7 +2802,14 @@ blurb {
   content: "Logo Design";
 }
 
+.stageEight .heading {
+  border-bottom: 2px solid #bebc21  !important;
+  -webkit-transition: ease all 1.5s;
+  transition: ease all 1.5s;
+}
+
 .stageEight .heading h1::before {
+  color: #bebc21 !important;
   content: "AUT Poster";
 }
 
