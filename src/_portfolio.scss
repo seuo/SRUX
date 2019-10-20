@@ -68,7 +68,7 @@
     flex-direction: row;
     position: absolute;
     z-index: 9999;
-    background-color: #ffffff;
+
     transition: 0.5s ease all;
 }
 
@@ -77,7 +77,7 @@
     margin-left: 0;
     padding-left: 7vw;
     width: 40em;
-    right: 0;
+    left: 0;
     display: flex;
     justify-content: flex-end;
     flex-direction: row;
@@ -85,49 +85,51 @@
     z-index: 9999;
     transition: 0.5s ease all;
     padding-top: 0.5em;
+    transition: ease all 0.5s;
     h2 {
         padding: 0.5em 1em;
-
-        color: #333;
+        color: #949494;
         width: 8em;
-        font-weight: 200;
+        font-weight: 300;
         font-size: 1.2em;
         cursor: pointer;
         transition: ease all 0.5s;
         text-align: center;
         border-bottom: #222;
+        transition: ease all 0.5s;
     }
     h2:nth-child(1):hover {
-        background-color: #f3f3f3;
-        // border-bottom:#9a3156 thin solid;
+
+        border-bottom:#949494 thin solid;
         transition: ease all 0.5s;
     }
 
     h2:nth-child(2):hover {
-        background-color: #f3f3f3;
-        // border-bottom:#9a3156 thin solid;
+
+        border-bottom:#9a3156 thin solid;
         transition: ease all 0.5s;
     }
     h2:nth-child(3):hover {
-        background-color: #f3f3f3;
-        // border-bottom:#44678c thin solid;
+  
+        border-bottom:#44678c thin solid;
         transition: ease all 0.5s;
     }
     h2:nth-child(4):hover {
-        background-color: #f3f3f3;
-        // border-bottom:#b38539 thin solid;
+     
+        border-bottom:#b38539 thin solid;
         transition: ease all 0.5s;
     }
 
 }
 
 .navlist.P {
-    margin-right: 29em;
+    margin-left: 0em;
     width: initial;
     justify-content: flex-start;
     transition: ease all 0.5s;
+    width:10em;
     > h2 {
-        background-color:white;
+        background-color:#191919;
         transition: ease all 0.5s;
     }
 }
