@@ -24,6 +24,8 @@
     overflow: hidden;
 }
 
+
+
 .pSection {
     height: 100vh;
     width: 100%;
@@ -169,7 +171,6 @@ blurb {
             font-size: 1.15em;
             padding-bottom: 0.5em;
             font-weight: 300;
-            margin-botton:1em;
         }
 
         h1 {
@@ -229,7 +230,7 @@ itemheading {
             border-image: url("assets/border.png") 200 fill / 3.95em / 0.0em space;
             height: 8vw;
             width: 8vw;
-            margin-top: -21vw;
+            margin-top: -18vw;
             margin-left: 4.5vw;
             padding: 1vw 1.5vw;
             box-shadow: 1em 0 4em #3333331e;
@@ -253,10 +254,10 @@ itemheading {
 
 .webWork {
     cursor: pointer;
-    margin-left: 6vw;
+    margin-left: 0vw;
     min-width: 15em;
-    width: 35vw;
-    height: 24vw;
+    width: 40vw;
+    height: 27vw;
     margin-top: 2vw;
     overflow: hidden;
     padding: .7vw;
@@ -276,10 +277,10 @@ itemheading {
 
 .printWork {
     cursor: pointer;
-    margin-left: 6vw;
+    margin-left: 0vw;
     min-width: 15em;
-    width: 35vw;
-    height: 24vw;
+    width: 40vw;
+    height: 27vw;
     margin-top:2vw;
     // position: absolute;
     overflow: hidden;

@@ -1,0 +1,330 @@
+@keyframes stageContentAnimation {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.stageF-out {
+    h1 {
+        transform: translate(0, 5em);
+        transition:ease all .2s
+
+    }
+    opacity:0;
+    transition:ease all .2s
+}
+
+.stageF-in {
+    opacity:1;
+    transition:ease all .2s
+}
+
+
+
+
+.stageZero {
+    background-image: initial;
+    // path.leftPath {
+    //     transform: rotateY(0deg);
+    //     transition: ease all .5s;
+    // }
+    // path.rightPath {
+    //     transform: rotateY(0deg);
+    //     transition: ease all .5s;
+    // }
+    .heading {
+        overflow:hidden;
+        border-bottom:2px solid #c8dbec ;
+        margin-bottom:.7em !important;
+        h1 { 
+
+            overflow:hidden;
+            font-size:4em !important;
+            width: 9em !important;
+            margin-bottom:0em !important;
+        }
+        h1#text {
+            margin-top:5em;
+        }
+
+    }
+    .heroblock {
+        div {
+            p {
+                font-weight: 100;
+                font-size: 1.1em !important;
+                width: 26em !important;
+                margin-left: 7em !important;
+                margin-bottom:.5em;
+            }
+            h2 {
+                font-size: 1.1em !important;
+                width: 9em !important;
+                line-height: 1.4;
+                margin-top: 0.5em !important;
+                margin-left:6.9em !important;
+                padding:.7em 1em !important;
+            }
+        }
+    }
+}
+
+
+.stageOne {
+    
+        .heading  {
+            h1::before {
+                content: "Mitchells Joinery";
+            }
+        }
+        .description  {
+
+            p::before {
+                display: block;
+                white-space: pre-wrap;
+                content:"The team over at Mitchell's Joinery required a new brand design along with a website upgrade to a more modern and intuitive UX design. Mitchell's Joinery main focus was on the marine industry. \A \A The new logo and website required a more premium design along with a more logical catagory / navigation hirechy.";
+            }
+        
+        }
+        .workDone  {
+
+            h2::before {
+                display: block;
+                white-space: pre-wrap;
+                content:"Research\A Brand Design\A Site Design"
+        }
+    }
+}
+
+.stageTwo {
+
+    .heading  {
+
+        h1::before {
+            content: "10 Squares Cabins";
+        }
+    }
+
+    .description  {
+
+        p::before {
+            display: block;
+            white-space: pre-wrap;
+            content:"10 Squares Cabins is a new manufacturer of small cabins & sleep-outs that fit within the 10m² council requirements. They required a brand-id along with a website showcasing the quality and process that goes into building their kitset cabins. \A \A I worked closely with the 10 Squares team to create a clean & informative website. Using renders I was able to show the customer the build process from start to finish. I continued work for them doing drafting & render work for customers who needed custom builds.";
+        }
+    
+    }
+
+    .workDone  {
+
+        h2::before {
+            display: block;
+            white-space: pre-wrap;
+            content:"Brand Design\A Site Design\A Rendering"
+        }
+    }
+
+}
+
+.stageThree {
+    .heading  {
+
+        h1::before {
+            content: "Gubba Sheds";
+        }
+    }
+
+    .description  {
+
+        p::before {
+            display: block;
+            white-space: pre-wrap;
+            content:"Gubba required a site design for their garden shed range. They wanted their website to easily display their full range & the amount of customisations possible. To do this I would develop a functional shed configurator which I integrated with an online ecommerce platform. This made it possible for customers to resize, change colour, add doors, windows & add a variety of other extras, it also gave them ability to add assembly service to their order.\A \A The shed configurator has been a great point of difference between Gubba Garden Sheds & their competitors.";
+        }
+    
+    }
+
+    .workDone  {
+
+        h2::before {
+            display: block;
+            white-space: pre-wrap;
+            content:"Site Design"
+        }
+    }
+}
+
+.stageFour {
+    .heading  {
+
+        h1::before {
+            content: "Playtionery";
+        }
+    }
+
+    .description  {
+
+        p::before {
+            display: block;
+            white-space: pre-wrap;
+            content:"The client wanted an e-commerce website that was fun and playful which would portray their stationery well.\A \A I designed the navigation to be as simple as possible making it child’s play to use and navigate. Making the buttons directly link through to the product category pages without any dropdowns made it really easy to use.";
+        }
+    
+    }
+
+    .workDone  {
+
+        h2::before {
+            display: block;
+            white-space: pre-wrap;
+            content:"Logo\A Website"
+        }
+    }
+}
+
+
+.stageFive {
+    .heading  {
+
+        h1::before {
+            content: "Heliboard";
+        }
+    }
+
+    .description  {
+
+        p::before {
+            display: block;
+            white-space: pre-wrap;
+            content:"The team at heliboard nz needed a redesign of their website to look more modern & eye catching.\A \A They also wanted the website to be designed for results, they were getting the traffic but not the conversion rate. I came up with a solution by designing more of a one page site with the most important features at the top that customers would be interested in. By creating an eye catching call to action & displaying the instructors directly below, heliboard.nz has had a large improvement in conversions from the booking system.";
+        }
+    
+    }
+
+    .workDone  {
+
+        h2::before {
+            display: block;
+            white-space: pre-wrap;
+            content:"Website"
+        }
+    }
+}
+
+.stageSix {
+    .heading  {
+        h1::before {
+            content: "Mangawhai Market";
+        }
+    }
+
+    .description  {
+
+        p::before {
+            display: block;
+            white-space: pre-wrap;
+            content:"The Mangawhai Village Market needed a logo for their ever growing market. I discussed with them some design concepts & we came up with the idea to include a local bird, the Fairy Tern, which is a distinctive icon that locals will recognize.\A \A I really enjoyed working on this brand, something a bit different.";
+        }
+    
+    }
+
+    .workDone  {
+
+        h2::before {
+            display: block;
+            white-space: pre-wrap;
+            content:"Logo Design"
+        }
+    }
+}
+
+
+.stageSeven {
+    .heading  {
+        h1::before {
+            content: "The Cabin Crew";
+        }
+    }
+
+    .description  {
+
+        p::before {
+            display: block;
+            white-space: pre-wrap;
+            content:"The Cabin Crew team required a logo for their newly formed building company. The owner wanted a brand that meant something to him, but also had a contemporary and professional design to reflect the modern dwellings they were building.\A \A I used red & black colours to show his Maori heritage and a wave design to reflect one of his passions in life, surfing. I enjoyed working with him to come up with a design we were both happy with.";
+        }
+    
+    }
+
+    .workDone  {
+
+        h2::before {
+            display: block;
+            white-space: pre-wrap;
+            content:"Logo Design"
+        }
+    }
+}
+
+.stageEight {
+    .heading  {
+        h1::before {
+            content: "AUT Poster";
+        }
+    }
+
+    .description  {
+
+        p::before {
+            display: block;
+            white-space: pre-wrap;
+            content:"For this assignment I was required to create a poster advertising Auckland University of Technology’s Diploma in Graphic Communication. \A \A I wanted to design something that really caught the eye, was simple & not too obvious. I feel I achieved this by only using two colours & having the finer details large enough to read but small enough to take a second look.";
+        }
+    
+    }
+
+    .workDone  {
+
+        h2::before {
+            display: block;
+            white-space: pre-wrap;
+            content:"Poster"
+        }
+    }
+}
+
+
+.stageOne {
+    background-image: url("assets/mj-bg.jpg");
+}
+
+.stageTwo {
+    background-image: url("assets/tensq-bg.jpg");
+}
+
+.stageThree {
+    background-image: url("assets/gubba-bg.jpg");
+}
+
+.stageFour {
+    background-image: url("assets/playtionery-bg.jpg");
+}
+
+.stageFive {
+    background-image: url("assets/heli-bg.jpg");
+}
+
+.stageSix {
+    background-image: url("assets/mangawhai-bg.jpg");
+}
+
+.stageSeven {
+    background-image: url("assets/cc-bg.jpg");
+}
+
+.stageEight {
+    background-image: url("assets/aut-bg.jpg");
+}

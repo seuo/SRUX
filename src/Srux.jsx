@@ -4,7 +4,7 @@ import {
     navigate,
     Match
 } from "@reach/router";
-
+import ReactScrollWheelHandler from "react-scroll-wheel-handler";
 
 
 
@@ -64,6 +64,38 @@ class Srux extends Component {
 
     }
 
+
+    nextIndex = () => {
+ 
+        this.setState({
+            headerTransition:'headerTransWork fade-out',
+            navMenu: 'fade-in',
+            nav: 'away',
+            home: '',
+            heroblock: 'base',
+            blackbar:'fade-in',
+            colBlack:'colBlack',
+            logoPath:'animPath'
+        })
+
+        setTimeout(() => {
+ 
+            this.setState({
+                headerS: '',
+                home: 'fade-in-fast',
+                nav: '',
+                heroblock: 'base',
+                mainNav: 'closeNav',
+                navMenu: '',
+                blackbar:'gone',
+                headerTransition:'headerTransHome',
+                logoPath:''
+            })
+            navigate("/my-work")
+        }, 1000)
+
+    };
+
     navHome = (e) => {
         e.preventDefault();
 
@@ -83,7 +115,7 @@ class Srux extends Component {
             headerTransition:'',
         })
 
-        window.setTimeout(() => {
+        setTimeout(() => {
             navigate("/")
             this.setState({
  
@@ -107,7 +139,7 @@ class Srux extends Component {
             logoPath:'animPath'
         })
 
-        window.setTimeout(() => {
+        setTimeout(() => {
  
             this.setState({
                 headerS: '',
@@ -139,7 +171,7 @@ class Srux extends Component {
             blackbar:'twodelay',
         })
 
-        window.setTimeout(() => {
+        setTimeout(() => {
  
             this.setState({
                 headerS: '',
@@ -173,7 +205,7 @@ class Srux extends Component {
             blackbar:'twodelay',
         })
 
-        window.setTimeout(() => {
+        setTimeout(() => {
 
             this.setState({
                 headerS: '',
@@ -206,7 +238,7 @@ class Srux extends Component {
             blackbar:'twodelay',
         })
         e.preventDefault();
-        window.setTimeout(() => {
+        setTimeout(() => {
 
             this.setState({
                 headerS: '',
@@ -240,10 +272,10 @@ class Srux extends Component {
             hAnim:'hSlide',
             blackbar:'',
         })
-        window.setTimeout(() => {
+        setTimeout(() => {
             navigate("/contact")
             }, 700)
-        window.setTimeout(() => {
+        setTimeout(() => {
             this.setState({
                 tAnim:'',
                 hAnim:'',
@@ -266,11 +298,11 @@ class Srux extends Component {
             blackbar:'',
         })
 
-        window.setTimeout(() => {
+        setTimeout(() => {
             navigate("/portfolio")
             this.setState({headerS: ''})
         }, 700)
-        window.setTimeout(() => {
+        setTimeout(() => {
             this.setState({
                 tAnim:'',
                 hAnim:'',
@@ -297,10 +329,10 @@ class Srux extends Component {
         })
         
 
-            window.setTimeout(() => {
+            setTimeout(() => {
             navigate("/experience")
         }, 700)
-        window.setTimeout(() => {
+        setTimeout(() => {
             this.setState({
                 tAnim:'',
                 hAnim:'',
@@ -342,6 +374,16 @@ render (){
         <Match path="/">
         {props =>
             props.match ? (
+                <ReactScrollWheelHandler
+                upHandler={this.prevIndex}
+                downHandler={this.nextIndex}
+                customStyle={{
+                    // width: "100%",
+                    // height: "100vh",
+                    // transform:"rotate(-20deg) scale(1) translateY(-"+currentIndex+"00vh)",
+                    // transformOrigin:"top left",
+                }}
+                >
     
         <div className={"headerSection "+headerS}>
             <div className="header">
@@ -434,6 +476,7 @@ render (){
             </div>
             <div className={"blackBar " + blackbar}></div>
         </div>
+        </ReactScrollWheelHandler>
         
                     ) : (
                         <>

@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url(//db.onlinewebfonts.com/c/480e3d39ed40d6543721946a2d36ccff?family=RZ);
 * {
   margin: 0;
@@ -259,7 +260,6 @@ blurb text p {
   font-size: 1.15em;
   padding-bottom: 0.5em;
   font-weight: 300;
-  margin-botton: 1em;
 }
 
 blurb text h1 {
@@ -355,7 +355,7 @@ itemheading text imgblock {
      border-image: url("assets/border.png") 200 fill/3.95em/0em space;
   height: 8vw;
   width: 8vw;
-  margin-top: -21vw;
+  margin-top: -18vw;
   margin-left: 4.5vw;
   padding: 1vw 1.5vw;
   -webkit-box-shadow: 1em 0 4em #3333331e;
@@ -381,10 +381,10 @@ itemheading text h1 {
 
 .webWork {
   cursor: pointer;
-  margin-left: 6vw;
+  margin-left: 0vw;
   min-width: 15em;
-  width: 35vw;
-  height: 24vw;
+  width: 40vw;
+  height: 27vw;
   margin-top: 2vw;
   overflow: hidden;
   padding: .7vw;
@@ -406,10 +406,10 @@ itemheading text h1 {
 
 .printWork {
   cursor: pointer;
-  margin-left: 6vw;
+  margin-left: 0vw;
   min-width: 15em;
-  width: 35vw;
-  height: 24vw;
+  width: 40vw;
+  height: 27vw;
   margin-top: 2vw;
   overflow: hidden;
   padding: .7vw;
@@ -1438,18 +1438,19 @@ formpos text img {
 }
 
 .headerTransWork {
+  margin-left: 0vw !important;
   -webkit-transition: ease all 1s;
   transition: ease all 1s;
 }
 
 .headerTransWork p {
-  color: aliceblue !important;
+  color: #c0d9f0 !important;
   -webkit-transition: ease all 1s;
   transition: ease all 1s;
 }
 
 .headerTransWork h2 {
-  color: aliceblue !important;
+  color: #c0d9f0 !important;
   background-color: black !important;
   -webkit-transition: ease all 1s;
   transition: ease all 1s;
@@ -1461,7 +1462,7 @@ formpos text img {
 }
 
 .headerTransWork .heading h1 {
-  color: aliceblue !important;
+  color: #c0d9f0 !important;
   -webkit-transition: ease all 1s;
   transition: ease all 1s;
 }
@@ -1469,7 +1470,7 @@ formpos text img {
 .headerTransWork .heading svg {
   -webkit-transition: ease all 1s;
   transition: ease all 1s;
-  fill: aliceblue;
+  fill: #c0d9f0;
   height: 13.9em !important;
   width: 11.8em;
 }
@@ -1488,62 +1489,6 @@ formpos text img {
           transform-origin: top right;
 }
 
-.stageZero .heading h1 {
-  overflow: hidden;
-}
-
-.stageZero .heading h1#text {
-  margin-top: 5em;
-}
-
-.stageZero .heroblock div p {
-  font-weight: 100;
-  font-size: 1.3em !important;
-  width: 18em !important;
-  margin-left: 10em !important;
-  margin-bottom: .5em;
-}
-
-.stageZero .heroblock div h2 {
-  font-size: 1.1em !important;
-  width: 6em !important;
-  margin-top: 0.5em !important;
-  margin-left: 10.25em !important;
-  padding: 0em 1em !important;
-}
-
-.stageOne {
-  background-image: url("assets/mj-bg.jpg");
-}
-
-.stageTwo {
-  background-image: url("assets/tensq-bg.jpg");
-}
-
-.stageThree {
-  background-image: url("assets/gubba-bg.jpg");
-}
-
-.stageFour {
-  background-image: url("assets/playtionery-bg.jpg");
-}
-
-.stageFive {
-  background-image: url("assets/heli-bg.jpg");
-}
-
-.stageSix {
-  background-image: url("assets/mangawhai-bg.jpg");
-}
-
-.stageSeven {
-  background-image: url("assets/cc-bg.jpg");
-}
-
-.stageEight {
-  background-image: url("assets/aut-bg.jpg");
-}
-
 .colBlack {
   -webkit-transition: ease all .5s;
   transition: ease all .5s;
@@ -1553,6 +1498,9 @@ formpos text img {
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 100%);
           clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 100%);
   z-index: -1;
+  -webkit-box-flex: 1 !important;
+      -ms-flex: 1 0 25% !important;
+          flex: 1 0 25% !important;
 }
 
 .colWhite {
@@ -1872,6 +1820,983 @@ blurb {
   opacity: 0;
   -webkit-transition: .7s ease all;
   transition: .7s ease all;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes away {
+  from {
+    opacity: 1;
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
+  to {
+    opacity: 0;
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
+}
+
+@keyframes closeMainNav {
+  from {
+    opacity: 1;
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+    height: 100vh;
+    position: absolute;
+  }
+  to {
+    opacity: 0;
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+    height: 0;
+    position: initial;
+  }
+}
+
+@keyframes come {
+  from {
+    width: 40vw;
+    -webkit-transform: translate(-5em, -15em) scale(0.75);
+            transform: translate(-5em, -15em) scale(0.75);
+    -webkit-filter: blur(7px);
+            filter: blur(7px);
+    opacity: 0.5;
+  }
+  to {
+    opacity: 1;
+    width: 100vw;
+    -webkit-filter: blur(0px);
+            filter: blur(0px);
+  }
+}
+
+@keyframes base {
+  from {
+    width: 40vw;
+    -webkit-transform: translate(-5em, -15em) scale(0.75);
+            transform: translate(-5em, -15em) scale(0.75);
+    -webkit-filter: blur(7px);
+            filter: blur(7px);
+    opacity: 0.5;
+    visibility: hidden;
+  }
+  to {
+    opacity: 0;
+    width: 40vw;
+    -webkit-transform: translate(-5em, -15em) scale(0.75);
+            transform: translate(-5em, -15em) scale(0.75);
+    -webkit-filter: blur(7px);
+            filter: blur(7px);
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+@keyframes slidein {
+  from {
+    opacity: 1;
+    width: 100vw;
+    -webkit-filter: blur(0px);
+            filter: blur(0px);
+  }
+  to {
+    width: 40vw;
+    -webkit-transform: translate(-5em, -15em) scale(0.75);
+            transform: translate(-5em, -15em) scale(0.75);
+    -webkit-filter: blur(7px);
+            filter: blur(7px);
+    opacity: 0.5;
+  }
+}
+
+@keyframes slideinFade {
+  from {
+    opacity: 1;
+    width: 100vw;
+    -webkit-filter: blur(0px);
+            filter: blur(0px);
+  }
+  to {
+    width: 40vw;
+    -webkit-transform: translate(-5em, -15em) scale(0.75);
+            transform: translate(-5em, -15em) scale(0.75);
+    -webkit-filter: blur(7px);
+            filter: blur(7px);
+    opacity: 0;
+  }
+}
+
+@keyframes slideout {
+  from {
+    opacity: 1;
+    width: 40vw;
+    -webkit-transform: translate(-5em, -15em) scale(0.75);
+            transform: translate(-5em, -15em) scale(0.75);
+    -webkit-filter: blur(40px);
+            filter: blur(40px);
+    opacity: 0.5;
+  }
+  to {
+    opacity: 1;
+    width: 100vw;
+    -webkit-filter: blur(0px);
+            filter: blur(0px);
+  }
+}
+
+@keyframes slideinrow {
+  from {
+    opacity: 0;
+    -webkit-filter: blur(20px);
+            filter: blur(20px);
+    width: 100vw;
+    margin-left: -47vw;
+  }
+  to {
+    opacity: 1;
+    margin-left: -53vw;
+    width: 55vw;
+    -webkit-filter: blur(0px);
+            filter: blur(0px);
+  }
+}
+
+@keyframes slideoutrow {
+  from {
+    opacity: 1;
+    margin-left: -55vw;
+    width: 55vw;
+    -webkit-filter: blur(0px);
+            filter: blur(0px);
+    margin-top: 0;
+  }
+  to {
+    opacity: 1;
+    -webkit-filter: blur(50px);
+            filter: blur(50px);
+    width: 55vw;
+    margin-top: 150vh;
+    margin-left: 0vw;
+  }
+}
+
+@keyframes slideup {
+  from {
+    opacity: 1;
+    -webkit-filter: blur(50px);
+            filter: blur(50px);
+    margin-top: 100vh;
+  }
+  to {
+    opacity: 1;
+    -webkit-filter: blur(0px);
+            filter: blur(0px);
+    margin-top: 0;
+  }
+}
+
+@keyframes slidedown {
+  from {
+    opacity: 1;
+    -webkit-filter: blur(0px);
+            filter: blur(0px);
+    margin-top: 0;
+  }
+  to {
+    opacity: 1;
+    -webkit-filter: blur(50px);
+            filter: blur(50px);
+    margin-top: 150vh;
+    margin-left: -5vw;
+  }
+}
+
+@keyframes delayedSlide {
+  from {
+    opacity: 0;
+    margin-left: 400vw;
+  }
+  to {
+    opacity: 1;
+    margin-left: 0vw;
+  }
+}
+
+.twodelay {
+  opacity: 1;
+  -webkit-animation: delayedSlide ease-in 0s;
+          animation: delayedSlide ease-in 0s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
+}
+
+.below {
+  width: 40vw;
+  -webkit-transform: translate(-5em, -15em) scale(0.75);
+          transform: translate(-5em, -15em) scale(0.75);
+  -webkit-filter: blur(7px);
+          filter: blur(7px);
+  opacity: 0.5;
+}
+
+.away {
+  opacity: 1;
+  /* make things invisible upon start */
+  -webkit-animation: away ease-in 1;
+          animation: away ease-in 1;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-duration: .7s;
+          animation-duration: .7s;
+}
+
+.closeNav {
+  opacity: 0;
+  /* make things invisible upon start */
+  -webkit-animation: closeMainNav ease-in 1;
+          animation: closeMainNav ease-in 1;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-duration: .7s;
+          animation-duration: .7s;
+}
+
+.base {
+  opacity: 0;
+  width: 40vw;
+  -webkit-transform: translate(-5em, -15em) scale(0.75);
+          transform: translate(-5em, -15em) scale(0.75);
+  -webkit-filter: blur(7px);
+          filter: blur(7px);
+  opacity: 0.5;
+  width: 40vw !important;
+  -webkit-animation: base ease-in 1;
+          animation: base ease-in 1;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-duration: .7s;
+          animation-duration: .7s;
+}
+
+.base-hero {
+  visibility: hidden;
+  opacity: 0;
+  width: 40vw;
+  -webkit-transform: translate(-5em, -15em) scale(0.75);
+          transform: translate(-5em, -15em) scale(0.75);
+  -webkit-filter: blur(7px);
+          filter: blur(7px);
+  opacity: 0.5;
+  width: 40vw !important;
+}
+
+.come {
+  opacity: 1;
+  /* make things invisible upon start */
+  -webkit-animation: come ease-in 1;
+          animation: come ease-in 1;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-duration: .7s;
+          animation-duration: .7s;
+}
+
+.gone {
+  visibility: hidden;
+}
+
+.none {
+  display: none !important;
+  height: 0;
+  -webkit-transition: scale(0);
+  transition: scale(0);
+  width: 0;
+  opacity: 0;
+}
+
+.row-base {
+  opacity: 1;
+  margin-left: -50vw;
+  width: 50vw;
+  -webkit-filter: blur(0px);
+          filter: blur(0px);
+  margin-top: 0;
+  z-index: -1;
+}
+
+.hero-base {
+  width: 40vw !important;
+  -webkit-transform: translate(-5em, -15em) scale(0.75);
+          transform: translate(-5em, -15em) scale(0.75);
+  -webkit-filter: blur(7px);
+          filter: blur(7px);
+  opacity: 0.5;
+}
+
+.headerTransHome {
+  -webkit-transition: ease all 1s;
+  transition: ease all 1s;
+}
+
+.headerTransHome h1 {
+  font-size: 5em;
+  line-height: 1em;
+  font-weight: 900;
+  margin-left: 0.2em;
+  margin-top: 0.12em;
+  margin-bottom: 0.1em;
+  color: #424242;
+  width: 4.8em;
+}
+
+.headerTransHome h2 {
+  font-size: 2.063em;
+  padding: 0.1em 0.3em 0.1em 0.4em;
+  background-color: #000000;
+  font-weight: 300;
+  font-style: normal;
+  color: white;
+  width: 7em;
+  margin-top: 0.25em;
+  margin-left: 6.25em;
+}
+
+.headerTransHome p {
+  font-weight: 100;
+  font-size: 2.375em;
+  color: rgba(0, 0, 0, 0.57);
+  width: 10em;
+  margin-left: 5.4em;
+}
+
+.headerTransHome .heading {
+  -webkit-transition: ease all 1s;
+  transition: ease all 1s;
+}
+
+.headerTransHome .heading h1 {
+  color: #424242 !important;
+  -webkit-transition: ease all 1s;
+  transition: ease all 1s;
+}
+
+.headerTransHome .heading svg {
+  -webkit-transition: ease all 1s;
+  transition: ease all 1s;
+  fill: black;
+  height: 13.9em !important;
+  width: 11.8em;
+}
+
+.headerTransWork {
+  margin-left: 0vw !important;
+  -webkit-transition: ease all 1s;
+  transition: ease all 1s;
+}
+
+.headerTransWork p {
+  color: #c0d9f0 !important;
+  -webkit-transition: ease all 1s;
+  transition: ease all 1s;
+}
+
+.headerTransWork h2 {
+  color: #c0d9f0 !important;
+  background-color: black !important;
+  -webkit-transition: ease all 1s;
+  transition: ease all 1s;
+}
+
+.headerTransWork .heading {
+  -webkit-transition: ease all 1s;
+  transition: ease all 1s;
+}
+
+.headerTransWork .heading h1 {
+  color: #c0d9f0 !important;
+  -webkit-transition: ease all 1s;
+  transition: ease all 1s;
+}
+
+.headerTransWork .heading svg {
+  -webkit-transition: ease all 1s;
+  transition: ease all 1s;
+  fill: #c0d9f0;
+  height: 13.9em !important;
+  width: 11.8em;
+}
+
+.animPath .leftPath {
+  -webkit-transition: ease all .5s;
+  transition: ease all .5s;
+  -webkit-transform-origin: top left;
+          transform-origin: top left;
+}
+
+.animPath .rightPath {
+  -webkit-transition: ease all .5s;
+  transition: ease all .5s;
+  -webkit-transform-origin: top right;
+          transform-origin: top right;
+}
+
+.colBlack {
+  -webkit-transition: ease all .5s;
+  transition: ease all .5s;
+  background-color: black;
+  background-size: cover;
+  opacity: .15;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 100%);
+          clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 100%);
+  z-index: -1;
+  -webkit-box-flex: 1 !important;
+      -ms-flex: 1 0 25% !important;
+          flex: 1 0 25% !important;
+}
+
+.colWhite {
+  -webkit-transition: ease all .5s;
+  transition: ease all .5s;
+  background-color: rgba(255, 255, 255, 0);
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 100%);
+          clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 100%);
+  z-index: -1;
+}
+
+.slide-up {
+  -webkit-animation: slideup ease-in 1;
+          animation: slideup ease-in 1;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-duration: .7s;
+          animation-duration: .7s;
+}
+
+.slide-down {
+  -webkit-animation: slidedown ease-in 1;
+          animation: slidedown ease-in 1;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-duration: .7s;
+          animation-duration: .7s;
+}
+
+.slide-in {
+  -webkit-animation: slidein ease-in 1;
+          animation: slidein ease-in 1;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-duration: .7s;
+          animation-duration: .7s;
+}
+
+.slide-in-fade {
+  -webkit-animation: slideinFade ease-in 1;
+          animation: slideinFade ease-in 1;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-duration: .7s;
+          animation-duration: .7s;
+}
+
+.slide-out {
+  -webkit-animation: slideout ease-in 1;
+          animation: slideout ease-in 1;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-duration: .7s;
+          animation-duration: .7s;
+}
+
+.slide-in-row {
+  -webkit-animation: slideinrow ease-in 1;
+          animation: slideinrow ease-in 1;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-duration: .7s;
+          animation-duration: .7s;
+  pointer-events: none;
+}
+
+.slide-out-row {
+  -webkit-animation: slideoutrow ease-in 1;
+          animation: slideoutrow ease-in 1;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-duration: .7s;
+          animation-duration: .7s;
+  pointer-events: none;
+}
+
+.fade-out {
+  opacity: 0;
+  /* make things invisible upon start */
+  -webkit-animation: fadeOut ease-in 1;
+          animation: fadeOut ease-in 1;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-duration: .5s;
+          animation-duration: .5s;
+}
+
+.fade-in {
+  opacity: 0;
+  /* make things invisible upon start */
+  -webkit-animation: fadeIn ease-in 1;
+          animation: fadeIn ease-in 1;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-duration: .7s;
+          animation-duration: .7s;
+}
+
+.fade-in-fast {
+  opacity: 0;
+  /* make things invisible upon start */
+  -webkit-animation: fadeIn ease-in 1;
+          animation: fadeIn ease-in 1;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-duration: .3s;
+          animation-duration: .3s;
+}
+
+.fade-in.one {
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+}
+
+.fade-in.two {
+  -webkit-animation-delay: 3s;
+          animation-delay: 3s;
+}
+
+.fade-in.three {
+  -webkit-animation-delay: 4s;
+          animation-delay: 4s;
+}
+
+.fade-in.four {
+  -webkit-animation-delay: 5s;
+          animation-delay: 5s;
+}
+
+.fade-in.five {
+  -webkit-animation-delay: 6s;
+          animation-delay: 6s;
+}
+
+@keyframes scroll {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: translateY(15px);
+            transform: translateY(15px);
+    opacity: 0;
+  }
+}
+
+.scroll-downs {
+  position: absolute;
+  bottom: 14vh;
+  left: 27vw;
+  margin: auto;
+  width: 34px;
+  height: 55px;
+  -webkit-transition: 1s ease all;
+  transition: 1s ease all;
+}
+
+.mousey {
+  width: .2em;
+  padding: 10px 15px;
+  height: 2.2em;
+  border: 2px solid #fff;
+  border-radius: .9em;
+  opacity: 0.65;
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+}
+
+.scrollerAnim {
+  width: 3px;
+  height: 10px;
+  border-radius: 25%;
+  background-color: #fff;
+  -webkit-animation-name: scroll;
+          animation-name: scroll;
+  -webkit-animation-duration: .7s;
+          animation-duration: .7s;
+  -webkit-animation-timing-function: cubic-bezier(0.15, 0.41, 0.69, 0.94);
+          animation-timing-function: cubic-bezier(0.15, 0.41, 0.69, 0.94);
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+
+.arrow {
+  opacity: 0;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform-origin: 50% 50%;
+          transform-origin: 50% 50%;
+  -webkit-transform: translate3d(-50%, -50%, 0) rotate(-90deg) translate(-0.5em, 2.5em) scale(0.5);
+          transform: translate3d(-50%, -50%, 0) rotate(-90deg) translate(-0.5em, 2.5em) scale(0.5);
+}
+
+.arrow-first {
+  -webkit-animation: arrow-movement 0.7s ease-in-out infinite;
+          animation: arrow-movement 0.7s ease-in-out infinite;
+}
+
+.arrow-second {
+  -webkit-animation: arrow-movement 0.7s 0s ease-in-out infinite;
+          animation: arrow-movement 0.7s 0s ease-in-out infinite;
+}
+
+.arrow:before,
+.arrow:after {
+  background: #fff;
+  content: '';
+  display: block;
+  height: 3px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 30px;
+}
+
+.arrow:before {
+  -webkit-transform: rotate(45deg) translateX(-23%);
+          transform: rotate(45deg) translateX(-23%);
+  -webkit-transform-origin: top left;
+          transform-origin: top left;
+}
+
+.arrow:after {
+  -webkit-transform: rotate(-45deg) translateX(23%);
+          transform: rotate(-45deg) translateX(23%);
+  -webkit-transform-origin: top right;
+          transform-origin: top right;
+}
+
+@keyframes arrow-movement {
+  0% {
+    opacity: 0;
+    top: 50%;
+    left: 45%;
+  }
+  70% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.workHeading {
+  -webkit-transition: .7s ease all;
+  transition: .7s ease all;
+}
+
+.expHeading {
+  -webkit-transition: .7s ease all;
+  transition: .7s ease all;
+}
+
+.skillHeading {
+  -webkit-transition: .7s ease all;
+  transition: .7s ease all;
+}
+
+form {
+  -webkit-transition: .7s ease all;
+  transition: .7s ease all;
+}
+
+.webWork {
+  -webkit-transition: .7s ease all;
+  transition: .7s ease all;
+}
+
+blurb {
+  -webkit-transition: .7s ease all;
+  transition: .7s ease all;
+}
+
+.hSlide {
+  -webkit-transform: translate(0, 1em);
+          transform: translate(0, 1em);
+  -webkit-transition: .7s ease all;
+  transition: .7s ease all;
+}
+
+.tFade {
+  opacity: 0;
+  -webkit-transition: .7s ease all;
+  transition: .7s ease all;
+}
+
+@-webkit-keyframes stageContentAnimation {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes stageContentAnimation {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.stageF-out {
+  opacity: 0;
+  -webkit-transition: ease all .2s;
+  transition: ease all .2s;
+}
+
+.stageF-out h1 {
+  -webkit-transform: translate(0, 5em);
+          transform: translate(0, 5em);
+  -webkit-transition: ease all .2s;
+  transition: ease all .2s;
+}
+
+.stageF-in {
+  opacity: 1;
+  -webkit-transition: ease all .2s;
+  transition: ease all .2s;
+}
+
+.stageZero {
+  background-image: initial;
+}
+
+.stageZero .heading {
+  overflow: hidden;
+  border-bottom: 2px solid #c8dbec;
+  margin-bottom: .7em !important;
+}
+
+.stageZero .heading h1 {
+  overflow: hidden;
+  font-size: 4em !important;
+  width: 9em !important;
+  margin-bottom: 0em !important;
+}
+
+.stageZero .heading h1#text {
+  margin-top: 5em;
+}
+
+.stageZero .heroblock div p {
+  font-weight: 100;
+  font-size: 1.1em !important;
+  width: 26em !important;
+  margin-left: 7em !important;
+  margin-bottom: .5em;
+}
+
+.stageZero .heroblock div h2 {
+  font-size: 1.1em !important;
+  width: 9em !important;
+  line-height: 1.4;
+  margin-top: 0.5em !important;
+  margin-left: 6.9em !important;
+  padding: .7em 1em !important;
+}
+
+.stageOne .heading h1::before {
+  content: "Mitchells Joinery";
+}
+
+.stageOne .description p::before {
+  display: block;
+  white-space: pre-wrap;
+  content: "The team over at Mitchell's Joinery required a new brand design along with a website upgrade to a more modern and intuitive UX design. Mitchell's Joinery main focus was on the marine industry. \A \A The new logo and website required a more premium design along with a more logical catagory / navigation hirechy.";
+}
+
+.stageOne .workDone h2::before {
+  display: block;
+  white-space: pre-wrap;
+  content: "Research\A Brand Design\A Site Design";
+}
+
+.stageTwo .heading h1::before {
+  content: "10 Squares Cabins";
+}
+
+.stageTwo .description p::before {
+  display: block;
+  white-space: pre-wrap;
+  content: "10 Squares Cabins is a new manufacturer of small cabins & sleep-outs that fit within the 10m² council requirements. They required a brand-id along with a website showcasing the quality and process that goes into building their kitset cabins. \A \A I worked closely with the 10 Squares team to create a clean & informative website. Using renders I was able to show the customer the build process from start to finish. I continued work for them doing drafting & render work for customers who needed custom builds.";
+}
+
+.stageTwo .workDone h2::before {
+  display: block;
+  white-space: pre-wrap;
+  content: "Brand Design\A Site Design\A Rendering";
+}
+
+.stageThree .heading h1::before {
+  content: "Gubba Sheds";
+}
+
+.stageThree .description p::before {
+  display: block;
+  white-space: pre-wrap;
+  content: "Gubba required a site design for their garden shed range. They wanted their website to easily display their full range & the amount of customisations possible. To do this I would develop a functional shed configurator which I integrated with an online ecommerce platform. This made it possible for customers to resize, change colour, add doors, windows & add a variety of other extras, it also gave them ability to add assembly service to their order.\A \A The shed configurator has been a great point of difference between Gubba Garden Sheds & their competitors.";
+}
+
+.stageThree .workDone h2::before {
+  display: block;
+  white-space: pre-wrap;
+  content: "Site Design";
+}
+
+.stageFour .heading h1::before {
+  content: "Playtionery";
+}
+
+.stageFour .description p::before {
+  display: block;
+  white-space: pre-wrap;
+  content: "The client wanted an e-commerce website that was fun and playful which would portray their stationery well.\A \A I designed the navigation to be as simple as possible making it child’s play to use and navigate. Making the buttons directly link through to the product category pages without any dropdowns made it really easy to use.";
+}
+
+.stageFour .workDone h2::before {
+  display: block;
+  white-space: pre-wrap;
+  content: "Logo\A Website";
+}
+
+.stageFive .heading h1::before {
+  content: "Heliboard";
+}
+
+.stageFive .description p::before {
+  display: block;
+  white-space: pre-wrap;
+  content: "The team at heliboard nz needed a redesign of their website to look more modern & eye catching.\A \A They also wanted the website to be designed for results, they were getting the traffic but not the conversion rate. I came up with a solution by designing more of a one page site with the most important features at the top that customers would be interested in. By creating an eye catching call to action & displaying the instructors directly below, heliboard.nz has had a large improvement in conversions from the booking system.";
+}
+
+.stageFive .workDone h2::before {
+  display: block;
+  white-space: pre-wrap;
+  content: "Website";
+}
+
+.stageSix .heading h1::before {
+  content: "Mangawhai Market";
+}
+
+.stageSix .description p::before {
+  display: block;
+  white-space: pre-wrap;
+  content: "The Mangawhai Village Market needed a logo for their ever growing market. I discussed with them some design concepts & we came up with the idea to include a local bird, the Fairy Tern, which is a distinctive icon that locals will recognize.\A \A I really enjoyed working on this brand, something a bit different.";
+}
+
+.stageSix .workDone h2::before {
+  display: block;
+  white-space: pre-wrap;
+  content: "Logo Design";
+}
+
+.stageSeven .heading h1::before {
+  content: "The Cabin Crew";
+}
+
+.stageSeven .description p::before {
+  display: block;
+  white-space: pre-wrap;
+  content: "The Cabin Crew team required a logo for their newly formed building company. The owner wanted a brand that meant something to him, but also had a contemporary and professional design to reflect the modern dwellings they were building.\A \A I used red & black colours to show his Maori heritage and a wave design to reflect one of his passions in life, surfing. I enjoyed working with him to come up with a design we were both happy with.";
+}
+
+.stageSeven .workDone h2::before {
+  display: block;
+  white-space: pre-wrap;
+  content: "Logo Design";
+}
+
+.stageEight .heading h1::before {
+  content: "AUT Poster";
+}
+
+.stageEight .description p::before {
+  display: block;
+  white-space: pre-wrap;
+  content: "For this assignment I was required to create a poster advertising Auckland University of Technology’s Diploma in Graphic Communication. \A \A I wanted to design something that really caught the eye, was simple & not too obvious. I feel I achieved this by only using two colours & having the finer details large enough to read but small enough to take a second look.";
+}
+
+.stageEight .workDone h2::before {
+  display: block;
+  white-space: pre-wrap;
+  content: "Poster";
+}
+
+.stageOne {
+  background-image: url("assets/mj-bg.jpg");
+}
+
+.stageTwo {
+  background-image: url("assets/tensq-bg.jpg");
+}
+
+.stageThree {
+  background-image: url("assets/gubba-bg.jpg");
+}
+
+.stageFour {
+  background-image: url("assets/playtionery-bg.jpg");
+}
+
+.stageFive {
+  background-image: url("assets/heli-bg.jpg");
+}
+
+.stageSix {
+  background-image: url("assets/mangawhai-bg.jpg");
+}
+
+.stageSeven {
+  background-image: url("assets/cc-bg.jpg");
+}
+
+.stageEight {
+  background-image: url("assets/aut-bg.jpg");
 }
 
 .ui #portfolio {
@@ -2194,6 +3119,7 @@ g#contact-border {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  background-image: inherit;
 }
 
 .hero .col .heroblock .heading img {
@@ -2203,6 +3129,14 @@ g#contact-border {
 .hero .col .heroblock .heading svg {
   height: 14em;
   width: 11.8em;
+}
+
+.hero .col .heroblock .workDone {
+  background-image: initial;
+}
+
+.hero .col .heroblock .description {
+  background-image: initial;
 }
 
 .hero .col .heroblock h1 {

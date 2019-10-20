@@ -335,13 +335,14 @@
 
 
 .headerTransWork {
+    margin-left: 0vw !important;
     transition:ease all 1s;
     p {
         color: rgb(192, 217, 240) !important;
         transition:ease all 1s;
     }
     h2 {
-        color: rgb(192, 217, 240); !important;
+        color: rgb(192, 217, 240) !important;
         background-color:black !important;
         transition:ease all 1s;
     }
@@ -350,7 +351,7 @@
     .heading {
         transition:ease all 1s;
         h1 {
-            color: rgb(192, 217, 240); !important;
+            color: rgb(192, 217, 240) !important;
             transition:ease all 1s;
         }
 
@@ -375,77 +376,6 @@
     }
 }
 
-.stageZero {
-    // path.leftPath {
-    //     transform: rotateY(0deg);
-    //     transition: ease all .5s;
-    // }
-    // path.rightPath {
-    //     transform: rotateY(0deg);
-    //     transition: ease all .5s;
-    // }
-    .heading {
-        h1 { 
-            overflow:hidden;
-        }
-        h1#text {
-            margin-top:5em;
-        }
-
-    }
-    .heroblock {
-        div {
-            p {
-                font-weight: 100;
-                font-size: 1.3em !important;
-                width: 18em !important;
-                margin-left: 10em !important;
-                margin-bottom:.5em;
-            }
-            h2 {
-                font-size: 1.1em !important;
-                width: 6em !important;
-                margin-top: 0.5em !important;
-                margin-left: 10.25em !important;
-                padding:0em 1em !important;
-            }
-        }
-    }
-
-}
-
-.stageOne {
-    background-image: url("assets/mj-bg.jpg");
-}
-
-.stageTwo {
-    background-image: url("assets/tensq-bg.jpg");
-}
-
-.stageThree {
-    background-image: url("assets/gubba-bg.jpg");
-}
-
-.stageFour {
-    background-image: url("assets/playtionery-bg.jpg");
-}
-
-.stageFive {
-    background-image: url("assets/heli-bg.jpg");
-}
-
-.stageSix {
-    background-image: url("assets/mangawhai-bg.jpg");
-}
-
-.stageSeven {
-    background-image: url("assets/cc-bg.jpg");
-}
-
-.stageEight {
-    background-image: url("assets/aut-bg.jpg");
-}
-
 
 
 .colBlack {
@@ -455,6 +385,7 @@
     opacity:.15;
     clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 100%);
     z-index: -1;
+    flex:1 0 25% !important;
 }
 
 .colWhite {
