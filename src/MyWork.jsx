@@ -45,7 +45,7 @@ class MyWork extends Component {
             currentIndex: 0,
             stageState:'stageF-in',
             stageImage: [
-                'stageOne','stageTwo','stageThree','stageFour','stageFive','stageSix','stageSeven','stageEight'
+                'stageOne','stageTwo','stageThree','stageFour','stageFive','stageSix','stageSeven','stageEight','stageExp'
             ]
         }
 
@@ -84,7 +84,7 @@ class MyWork extends Component {
         const { stageImage, currentIndex } = this.state;
       
 
-        if (currentIndex == stageImage.length - 1) {    
+        if (currentIndex == 7) {    
                 this.setState({
                     experience: '',
                     portfolio: 'hero-base',
@@ -95,21 +95,17 @@ class MyWork extends Component {
                     tAnim:'tFade',
                     hAnim:'hSlide',
                     blackbar:'',
-        
                 })
-                
-        
-                setTimeout(() => {
-                    navigate("/experience")
-                }, 700)
                 setTimeout(() => {
                     this.setState({
                         tAnim:'',
                         hAnim:'',
                     })
                 }, 1400)
-            
-        
+                setTimeout(() => {
+                    navigate("/experience")
+                }, 700)
+
         }
  
         this.setState({
@@ -470,6 +466,22 @@ class MyWork extends Component {
                             <block></block>
                             <text>
                                 <imgblock><img src={autlogo}/></imgblock>
+                            </text>
+                       
+                        </itemheading>
+                    </row>
+                </section>
+                <section className={"pSection"}>
+
+                    <row className="row1">
+                        <blurb className={"eText " + tAnim}>
+                        </blurb>
+                    </row>
+                    <row className="row2">
+                        <itemheading>
+                            <block></block>
+                            <text>
+                               
                             </text>
                        
                         </itemheading>

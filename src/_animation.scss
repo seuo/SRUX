@@ -366,6 +366,42 @@
     }
 
 }
+
+.headerTransExp {
+    margin-left: -11vw !important;
+    transition:ease all 1s;
+    background-color: #191919;
+    flex: 1 0 50% !important;
+    clip-path: polygon(0 0, 74% 0, 100% 100%, 0% 100%);
+    p {
+        color: rgba(250, 250, 250, 1) !important;
+        transition:ease all 1s;
+    }
+    h2 {
+        color: rgba(250, 250, 250, 1) !important;
+        background-color:black !important;
+        transition:ease all 1s;
+    }
+    
+
+    .heading {
+        transition:ease all 1s;
+        h1 {
+            color: #45688c !important;
+            transition:ease all 1s;
+        }
+
+        svg {
+            transition:ease all 1s;
+            fill:rgb(192, 217, 240);
+            height: 13.9em !important;
+            width: 11.8em;
+       }
+
+    }
+
+}
+
 .animPath {
     .leftPath {
         transition: ease all .5s;

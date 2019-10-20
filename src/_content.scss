@@ -321,6 +321,35 @@
     }
 }
 
+.stageExp {
+    .heading  {
+        border-bottom:2px solid #45688c   !important;
+        transition:ease all 1.5s;
+        h1::before {
+            color: #45688c  !important;
+            content: "Skills & Experience";
+        }
+    }
+
+    .description  {
+        p::before {
+            line-height: .8;
+            display: block;
+            white-space: pre-wrap;
+        }
+    }
+
+    .workDone  {
+        
+        h2::before {
+            display: block;
+            white-space: pre-wrap;
+            content:"Poster"
+        }
+    }
+}
+
+
 
 .stageOne {
     background-image: url("assets/mj-bg.jpg");
