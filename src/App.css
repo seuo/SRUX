@@ -3019,6 +3019,7 @@ blurb {
 }
 
 .stageZero .heading {
+  height: 3em;
   overflow: hidden;
   border-bottom: 2px solid #fafafa !important;
   margin-bottom: .7em !important;
