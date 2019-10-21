@@ -50,6 +50,13 @@ p {
 @import "_content.scss";
 
 
+.strollTracker {
+    height: 100vh;
+    z-index: 999999;
+    width: 100vw;
+    pointer-events: none;
+    position: absolute;
+}
 
 .ui {
 

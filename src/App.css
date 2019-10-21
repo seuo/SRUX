@@ -45,14 +45,21 @@ p {
   scroll-behavior: smooth;
 }
 
+.above {
+  position: absolute;
+  top: 0;
+  z-index: 999;
+  background-color: white;
+}
+
 .vScroller {
   -webkit-transition: 1.5s all cubic-bezier(0.23, 1, 0.32, 1);
   transition: 1.5s all cubic-bezier(0.23, 1, 0.32, 1);
 }
 
 .vScroller .pSection {
-  -webkit-transform: rotate(20deg);
-          transform: rotate(20deg);
+  -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
   -webkit-transform-origin: top left;
           transform-origin: top left;
 }
@@ -556,6 +563,51 @@ text.skills1 p {
   width: 65vw;
 }
 
+.hScroller {
+  -webkit-transition: 1.5s all cubic-bezier(0.23, 1, 0.32, 1);
+  transition: 1.5s all cubic-bezier(0.23, 1, 0.32, 1);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.hScroller .eSection {
+  -webkit-transform-origin: top left;
+          transform-origin: top left;
+}
+
+.work {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 75vw;
+  height: 100%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  overflow: hidden;
+}
+
+.eSection {
+  height: 100vh;
+  width: 100vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
 .contactForm {
   margin-left: -55%;
   display: -webkit-box;
@@ -628,6 +680,155 @@ text.skills1 p {
   cursor: pointer;
 }
 
+@-webkit-keyframes expLineAnim {
+  from {
+    left: 0vw;
+  }
+  to {
+    left: 45vw;
+  }
+}
+
+@keyframes expLineAnim {
+  from {
+    left: 0vw;
+  }
+  to {
+    left: 45vw;
+  }
+}
+
+@-webkit-keyframes expColTrans {
+  from {
+    -webkit-transform: translateX(0vw);
+            transform: translateX(0vw);
+  }
+  to {
+    -webkit-transform: translateX(-12vw);
+            transform: translateX(-12vw);
+  }
+}
+
+@keyframes expColTrans {
+  from {
+    -webkit-transform: translateX(0vw);
+            transform: translateX(0vw);
+  }
+  to {
+    -webkit-transform: translateX(-12vw);
+            transform: translateX(-12vw);
+  }
+}
+
+@-webkit-keyframes expColTransHeader {
+  from {
+    -webkit-transform: translateX(0vw);
+            transform: translateX(0vw);
+  }
+  to {
+    -webkit-transform: translateX(12vw);
+            transform: translateX(12vw);
+  }
+}
+
+@keyframes expColTransHeader {
+  from {
+    -webkit-transform: translateX(0vw);
+            transform: translateX(0vw);
+  }
+  to {
+    -webkit-transform: translateX(12vw);
+            transform: translateX(12vw);
+  }
+}
+
+.exp-col-trans {
+  -webkit-animation: expColTrans cubic-bezier(0.455, 0.03, 0.515, 0.955) 1;
+          animation: expColTrans cubic-bezier(0.455, 0.03, 0.515, 0.955) 1;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-transition: ease all 4s;
+  transition: ease all 4s;
+}
+
+.exp-col-trans-header {
+  -webkit-animation: expColTransHeader cubic-bezier(0.455, 0.03, 0.515, 0.955) 1;
+          animation: expColTransHeader cubic-bezier(0.455, 0.03, 0.515, 0.955) 1;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-transition: ease all 4s;
+  transition: ease all 4s;
+}
+
+.heroblock.stageExp {
+  margin-left: -26vw !important;
+}
+
+.headerTransExp {
+  margin-left: 0vw !important;
+  -webkit-transition: ease all 1s;
+  transition: ease all 1s;
+  background-color: #191919;
+  -webkit-box-flex: 1 !important;
+      -ms-flex: 1 0 73% !important;
+          flex: 1 0 73% !important;
+  -webkit-clip-path: polygon(0 0, 64% 0, 100% 100%, 0% 100%);
+          clip-path: polygon(0 0, 64% 0, 100% 100%, 0% 100%);
+}
+
+.headerTransExp p {
+  color: #fafafa !important;
+  -webkit-transition: ease all 1s;
+  transition: ease all 1s;
+}
+
+.headerTransExp h2 {
+  color: #fafafa !important;
+  background-color: black !important;
+  -webkit-transition: ease all 1s;
+  transition: ease all 1s;
+}
+
+.headerTransExp .heading {
+  -webkit-transition: ease all 1s;
+  transition: ease all 1s;
+}
+
+.headerTransExp .heading h1 {
+  color: #45688c !important;
+  -webkit-transition: ease all 1s;
+  transition: ease all 1s;
+}
+
+.headerTransExp .heading svg {
+  -webkit-transition: ease all 1s;
+  transition: ease all 1s;
+  fill: #c0d9f0;
+  height: 13.9em !important;
+  width: 11.8em;
+}
+
+.expLine {
+  -webkit-animation: expLineAnim ease-in 1;
+          animation: expLineAnim ease-in 1;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-transition: ease all 4s;
+  transition: ease all 4s;
+  position: absolute;
+  border-bottom: 1px solid #1a1a1a;
+  height: 1px;
+  top: 54vh;
+  left: 0vw;
+  max-width: 586vw;
+}
+
 .eRow1 {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -635,14 +836,25 @@ text.skills1 p {
   -webkit-box-flex: 1;
       -ms-flex: 1 0 65%;
           flex: 1 0 65%;
-  width: 40vw;
+  width: 100vw;
   height: 65%;
 }
 
+.eRow1 blurb {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
 .eRow1 blurb text {
+  padding-left: 1em;
+  z-index: 1;
+  background-color: white;
   -webkit-box-flex: 0;
-      -ms-flex: 0 0 70%;
-          flex: 0 0 70%;
+      -ms-flex: 0 0 40%;
+          flex: 0 0 40%;
+  padding-right: 0;
+  margin-right: 10vw;
 }
 
 .eRow1 blurb text p {
@@ -653,12 +865,7 @@ text.skills1 p {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-flex: 1;
-      -ms-flex: 1 0 25%;
-          flex: 1 0 25%;
-  width: 40vw;
-  background-color: #191919;
-  height: 35%;
+  width: 100vw;
 }
 
 .eRow2 itemheading {
@@ -673,10 +880,65 @@ text.skills1 p {
   font-weight: 300;
 }
 
+.eRow2 blurb {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
 .eRow2 blurb text {
   -webkit-box-flex: 0;
-      -ms-flex: 0 0 70%;
-          flex: 0 0 70%;
+      -ms-flex: 0 0 50%;
+          flex: 0 0 50%;
+}
+
+.cTwoExp {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-right: 5vw;
+  margin-left: -5vw;
+  -webkit-box-flex: 1 !important;
+      -ms-flex: 1 0 35% !important;
+          flex: 1 0 35% !important;
+}
+
+.cTwoExp .eText {
+  -webkit-box-flex: 0 !important;
+      -ms-flex: 0 1 40% !important;
+          flex: 0 1 40% !important;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  margin-bottom: 10vh;
+}
+
+.cTwoExp .eText text {
+  margin-bottom: 1.5em;
+  margin-top: 1.5em;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 30%;
+          flex: 0 0 30%;
+  padding-left: .5em;
+  padding-right: .5em;
+}
+
+.cTwoExp .eText text h1 {
+  font-size: 1.5em;
+}
+
+.cTwoExp .eText text p {
+  font-size: 1em;
 }
 
 .expHeading {
@@ -694,9 +956,16 @@ formpos {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
+  background-color: #191919;
+  -webkit-clip-path: polygon(3% 0, 100% 0, 100% 100%, 25% 100%);
+          clip-path: polygon(3% 0, 100% 0, 100% 100%, 25% 100%);
+  overflow: hidden;
 }
 
 formpos block {
@@ -745,7 +1014,6 @@ formpos text img {
 }
 
 .myForm {
-  margin-left: -50em;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -757,12 +1025,12 @@ formpos text img {
   padding: 1em;
   background-color: #191919;
   border-radius: .2em;
-  -webkit-box-shadow: 1em 0 4em #3333331e;
-          box-shadow: 1em 0 4em #3333331e;
+  z-index: 1;
+  font-size: 1.2em;
 }
 
 .myForm h1 {
-  color: #adadad;
+  color: #dcdcdc;
 }
 
 .myForm formgrp {
@@ -778,11 +1046,11 @@ formpos text img {
 .myForm formgrp input {
   padding: 1.2em;
   border-bottom: thin black solid;
-  width: 19em;
+  width: 44%;
   font-size: .7em;
   margin-bottom: 1em;
-  color: #cdcdcd;
-  background-color: #222;
+  color: #dcdcdc;
+  background-color: #191919;
 }
 
 .myForm input:focus {
@@ -795,9 +1063,11 @@ formpos text img {
   vertical-align: top;
   font-family: roboto;
   padding: 1.2em;
+  margin-top: 1em;
   font-size: .7em;
-  background-color: #222;
-  color: #cdcdcd;
+  background-color: #191919;
+  color: #dcdcdc;
+  border-bottom: thin black solid;
 }
 
 .myForm .message:focus {
@@ -810,8 +1080,17 @@ formpos text img {
   padding: .3em;
   padding-top: .4em;
   margin-top: 1em;
-  color: #888;
-  background-color: #222;
+  color: #dcdcdc;
+  background-color: #111;
+  cursor: pointer;
+  -webkit-transition: ease all .7s;
+  transition: ease all .7s;
+  border-radius: .2em;
+}
+
+.myForm .submit:hover {
+  color: #111;
+  background-color: #dcdcdc;
 }
 
 .contactinfo {
@@ -835,7 +1114,7 @@ formpos text img {
 
 .eSection {
   height: 100vh;
-  width: 40vw;
+  width: 100vw;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1487,50 +1766,6 @@ formpos text img {
   width: 11.8em;
 }
 
-.headerTransExp {
-  margin-left: -11vw !important;
-  -webkit-transition: ease all 1s;
-  transition: ease all 1s;
-  background-color: #191919;
-  -webkit-box-flex: 1 !important;
-      -ms-flex: 1 0 50% !important;
-          flex: 1 0 50% !important;
-  -webkit-clip-path: polygon(0 0, 74% 0, 100% 100%, 0% 100%);
-          clip-path: polygon(0 0, 74% 0, 100% 100%, 0% 100%);
-}
-
-.headerTransExp p {
-  color: #fafafa !important;
-  -webkit-transition: ease all 1s;
-  transition: ease all 1s;
-}
-
-.headerTransExp h2 {
-  color: #fafafa !important;
-  background-color: black !important;
-  -webkit-transition: ease all 1s;
-  transition: ease all 1s;
-}
-
-.headerTransExp .heading {
-  -webkit-transition: ease all 1s;
-  transition: ease all 1s;
-}
-
-.headerTransExp .heading h1 {
-  color: #45688c !important;
-  -webkit-transition: ease all 1s;
-  transition: ease all 1s;
-}
-
-.headerTransExp .heading svg {
-  -webkit-transition: ease all 1s;
-  transition: ease all 1s;
-  fill: #c0d9f0;
-  height: 13.9em !important;
-  width: 11.8em;
-}
-
 .animPath .leftPath {
   -webkit-transition: ease all .5s;
   transition: ease all .5s;
@@ -1568,24 +1803,6 @@ formpos text img {
   z-index: -1;
 }
 
-.slide-up {
-  -webkit-animation: slideup ease-in 1;
-          animation: slideup ease-in 1;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
-  -webkit-animation-duration: .7s;
-          animation-duration: .7s;
-}
-
-.slide-down {
-  -webkit-animation: slidedown ease-in 1;
-          animation: slidedown ease-in 1;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
-  -webkit-animation-duration: .7s;
-          animation-duration: .7s;
-}
-
 .slide-in {
   -webkit-animation: slidein ease-in 1;
           animation: slidein ease-in 1;
@@ -1604,35 +1821,6 @@ formpos text img {
           animation-duration: .7s;
 }
 
-.slide-out {
-  -webkit-animation: slideout ease-in 1;
-          animation: slideout ease-in 1;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
-  -webkit-animation-duration: .7s;
-          animation-duration: .7s;
-}
-
-.slide-in-row {
-  -webkit-animation: slideinrow ease-in 1;
-          animation: slideinrow ease-in 1;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
-  -webkit-animation-duration: .7s;
-          animation-duration: .7s;
-  pointer-events: none;
-}
-
-.slide-out-row {
-  -webkit-animation: slideoutrow ease-in 1;
-          animation: slideoutrow ease-in 1;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
-  -webkit-animation-duration: .7s;
-          animation-duration: .7s;
-  pointer-events: none;
-}
-
 .fade-out {
   opacity: 0;
   /* make things invisible upon start */
@@ -1642,6 +1830,17 @@ formpos text img {
           animation-fill-mode: forwards;
   -webkit-animation-duration: .5s;
           animation-duration: .5s;
+}
+
+.fade-out-fast {
+  opacity: 0;
+  /* make things invisible upon start */
+  -webkit-animation: fadeOut ease-in 1;
+          animation: fadeOut ease-in 1;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-duration: .2s;
+          animation-duration: .2s;
 }
 
 .fade-in {
@@ -1689,6 +1888,25 @@ formpos text img {
 .fade-in.five {
   -webkit-animation-delay: 6s;
           animation-delay: 6s;
+}
+
+.whiteTrans {
+  height: 100vh;
+  width: 100vw;
+  height: 0;
+  -webkit-transition: ease all 1s;
+  transition: ease all 1s;
+  z-index: 9999999;
+  background-color: #191919;
+  opacity: 1;
+}
+
+.whiteTransForm {
+  height: 100vh;
+  width: 100vw;
+  height: 100vh;
+  opacity: 1;
+  background-color: white;
 }
 
 @-webkit-keyframes scroll {
@@ -2303,50 +2521,6 @@ blurb {
   width: 11.8em;
 }
 
-.headerTransExp {
-  margin-left: -11vw !important;
-  -webkit-transition: ease all 1s;
-  transition: ease all 1s;
-  background-color: #191919;
-  -webkit-box-flex: 1 !important;
-      -ms-flex: 1 0 50% !important;
-          flex: 1 0 50% !important;
-  -webkit-clip-path: polygon(0 0, 74% 0, 100% 100%, 0% 100%);
-          clip-path: polygon(0 0, 74% 0, 100% 100%, 0% 100%);
-}
-
-.headerTransExp p {
-  color: #fafafa !important;
-  -webkit-transition: ease all 1s;
-  transition: ease all 1s;
-}
-
-.headerTransExp h2 {
-  color: #fafafa !important;
-  background-color: black !important;
-  -webkit-transition: ease all 1s;
-  transition: ease all 1s;
-}
-
-.headerTransExp .heading {
-  -webkit-transition: ease all 1s;
-  transition: ease all 1s;
-}
-
-.headerTransExp .heading h1 {
-  color: #45688c !important;
-  -webkit-transition: ease all 1s;
-  transition: ease all 1s;
-}
-
-.headerTransExp .heading svg {
-  -webkit-transition: ease all 1s;
-  transition: ease all 1s;
-  fill: #c0d9f0;
-  height: 13.9em !important;
-  width: 11.8em;
-}
-
 .animPath .leftPath {
   -webkit-transition: ease all .5s;
   transition: ease all .5s;
@@ -2384,24 +2558,6 @@ blurb {
   z-index: -1;
 }
 
-.slide-up {
-  -webkit-animation: slideup ease-in 1;
-          animation: slideup ease-in 1;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
-  -webkit-animation-duration: .7s;
-          animation-duration: .7s;
-}
-
-.slide-down {
-  -webkit-animation: slidedown ease-in 1;
-          animation: slidedown ease-in 1;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
-  -webkit-animation-duration: .7s;
-          animation-duration: .7s;
-}
-
 .slide-in {
   -webkit-animation: slidein ease-in 1;
           animation: slidein ease-in 1;
@@ -2420,35 +2576,6 @@ blurb {
           animation-duration: .7s;
 }
 
-.slide-out {
-  -webkit-animation: slideout ease-in 1;
-          animation: slideout ease-in 1;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
-  -webkit-animation-duration: .7s;
-          animation-duration: .7s;
-}
-
-.slide-in-row {
-  -webkit-animation: slideinrow ease-in 1;
-          animation: slideinrow ease-in 1;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
-  -webkit-animation-duration: .7s;
-          animation-duration: .7s;
-  pointer-events: none;
-}
-
-.slide-out-row {
-  -webkit-animation: slideoutrow ease-in 1;
-          animation: slideoutrow ease-in 1;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
-  -webkit-animation-duration: .7s;
-          animation-duration: .7s;
-  pointer-events: none;
-}
-
 .fade-out {
   opacity: 0;
   /* make things invisible upon start */
@@ -2458,6 +2585,17 @@ blurb {
           animation-fill-mode: forwards;
   -webkit-animation-duration: .5s;
           animation-duration: .5s;
+}
+
+.fade-out-fast {
+  opacity: 0;
+  /* make things invisible upon start */
+  -webkit-animation: fadeOut ease-in 1;
+          animation: fadeOut ease-in 1;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-duration: .2s;
+          animation-duration: .2s;
 }
 
 .fade-in {
@@ -2505,6 +2643,25 @@ blurb {
 .fade-in.five {
   -webkit-animation-delay: 6s;
           animation-delay: 6s;
+}
+
+.whiteTrans {
+  height: 100vh;
+  width: 100vw;
+  height: 0;
+  -webkit-transition: ease all 1s;
+  transition: ease all 1s;
+  z-index: 9999999;
+  background-color: #191919;
+  opacity: 1;
+}
+
+.whiteTransForm {
+  height: 100vh;
+  width: 100vw;
+  height: 100vh;
+  opacity: 1;
+  background-color: white;
 }
 
 @keyframes scroll {
@@ -2978,6 +3135,19 @@ blurb {
 
 .stageEight {
   background-image: url("assets/aut-bg.jpg");
+}
+
+.cWhite {
+  background-color: white;
+  z-index: 9999999999999;
+}
+
+.strollTracker {
+  height: 100vh;
+  z-index: 999999;
+  width: 100vw;
+  pointer-events: none;
+  position: absolute;
 }
 
 .ui #portfolio {

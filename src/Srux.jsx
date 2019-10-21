@@ -9,10 +9,7 @@ import ReactScrollWheelHandler from "react-scroll-wheel-handler";
 
 
 import logo from './assets/srux-logo.svg';
-import Portfolio from './Portfolio';
 import MyWork from './MyWork';
-import Experience from './Experience';
-import Contact from './Contact';
 import PortfolioImg from './assets/portfolio.png';
 import expImg from './assets/experience.png';
 import contactImg from './assets/contact.png';
@@ -23,49 +20,25 @@ class Srux extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            headerS: '',
-            home: '',
-            nav: '',
-            heroblock: 'slide-in-fade',
-            portfolio: 'slide-in',
-            row: 'slide-in-row',
-            mainNav: 'closeNav',
-            slide: 'slide-up',
-            navMenu: '',
-            experience: '',
             contact:'none',
-            blackbar:'none',
-            headerTransition:'',
-            colBlack: '',
-            logoPath:'',
+            currentIndex:0,
+            currentExp:0,
+            vScroller:'',
+            hScroller:'',
+            stageZero:'stageZero',
+            whiteTransForm:'',
         }
     
     }
 
     componentDidMount = () => {
             this.setState({
-            headerS: '',
-            home: 'active',
-            nav: '',
-            heroblock: 'slide-in-fade',
-            portfolio: 'slide-in',
-            row: 'slide-in-row',
-            mainNav: 'closeNav',
-            slide: 'slide-up',
-            navMenu: '',
-            experience: '',
-            contact:'none',
-            blackbar:'none',
-            headerTransition:'',
-            colBlack: '',
-            hAnim:'',
-            tAnim:'',
-        })
 
+        })
     }
 
 
-    nextIndex = () => {
+    nextPage = () => {
  
         this.setState({
             headerTransition:'headerTransWork fade-out',
@@ -74,21 +47,26 @@ class Srux extends Component {
             home: '',
             heroblock: 'base',
             blackbar:'fade-in',
-            colBlack:'colBlack',
-            logoPath:'animPath'
+
+            colTwoBgImg:'',
+            colTwoBg: 'colBlack',
+            colBlack: 'colBlack',
+            
+            currentIndex:0,
+            currentExp:0,
         })
 
         setTimeout(() => {
  
             this.setState({
                 headerS: '',
-                home: 'fade-in-fast',
+                home: '',
                 nav: '',
                 heroblock: 'base',
                 mainNav: 'closeNav',
                 navMenu: '',
-                blackbar:'gone',
-                headerTransition:'headerTransHome',
+                blackbar:'blackbar',
+                headerTransition:'headerTransHome fade-in',
                 logoPath:''
             })
             navigate("/my-work")
@@ -96,32 +74,47 @@ class Srux extends Component {
 
     };
 
-    navHome = (e) => {
-        e.preventDefault();
+    prevPage = (e) => {
+        this.setState ({
+            hScroller:'above',
 
+        })
+        
+        let navContact = this.navContactDirect
+        navContact(e);
+    };
+
+    navHome = () => {
         this.setState({
             experience: 'exp',
             home: "active",
+            stageZero:'none',
             portfolio: "base",
             heroblock: "slide-out",
             row: "slide-out-row",
             slide: "slide-down",
             nav: '',
             navMenu: 'fade-out',
-            headerS: 'none',
-            blackbar:'gone',
-            bcState:'',
-            colBlack: 'fade-out',
-            headerTransition:'',
+            blackbar: 'fade-out',
+            colTwoBg: 'fade-out',
+            expColTrans:'fade-out-fast',
+            headerTransition: 'headerTransHome',
+            currentIndex:0,
+            currentExp:0,
+            whiteTransForm:'whiteTransForm',
+            vScroller:'fade-out',
+
+
         })
 
         setTimeout(() => {
-            navigate("/")
             this.setState({
- 
-                headerS: '', slide: '', row: '',
-                nav: '',})
-        }, 1500)
+            stageZero:'stageZero',
+            whiteTransForm:'',
+            headerS:'fade-in',
+        })
+            navigate("/")
+        }, 1000)
     }
 
 
@@ -134,213 +127,107 @@ class Srux extends Component {
             nav: 'away',
             home: '',
             heroblock: 'base',
-            blackbar:'fade-in',
+            blackbar:'',
             colBlack:'colBlack',
-            logoPath:'animPath'
+            currentIndex:0,
+            currentExp:0,
+            hScroller:'',
+            vScroller:'',
+            
         })
 
         setTimeout(() => {
  
             this.setState({
                 headerS: '',
-                home: 'fade-in-fast',
+                home: 'fade-in',
+                nav: '',
+                heroblock: 'base',
+                mainNav: 'closeNav',
+                navMenu: '',                
+                headerTransition:'fade-in',
+                logoPath:''
+            })
+            navigate("/my-work")
+        }, 600)
+    }
+
+    navExpDirect = (e) => {
+
+        e.preventDefault();
+
+        this.setState({
+            headerTransition:'headerTransWork fade-out',
+            navMenu: 'fade-in',
+            nav: 'away',
+            heroblock: 'base',
+            blackbar:'fade-in',
+            colBlack:'colBlack',
+            logoPath:'animPath',
+            experience: '',
+            portfolio: 'hero-base',
+            home: '',
+            row: "row-base",
+            slide: '',
+            tAnim:'tFade',
+            hAnim:'hSlide',
+            blackbar:'',
+            currentIndex:7,
+            currentExp:0,
+            expColTrans:"exp-col-trans",
+            expColTransHeader:"exp-col-trans-header",
+            hScroller:'above',
+        })
+        setTimeout(() => {
+            this.setState({
                 nav: '',
                 heroblock: 'base',
                 mainNav: 'closeNav',
                 navMenu: '',
                 blackbar:'gone',
                 headerTransition:'headerTransHome',
-                logoPath:''
+                logoPath:'',
+ 
             })
             navigate("/my-work")
-        }, 1000)
+        }, 700);
+
     }
 
-    navPortfolio = (e) => {
-        e.preventDefault();
+    navContactDirect = () => {
 
         this.setState({
-            experience: '',
-            portfolio: 'slide-in',
+            headerTransition:'headerTransWork fade-out',
             navMenu: 'fade-in',
             nav: 'away',
-            home: '',
             heroblock: 'base',
-            row: "slide-in-row",
-            slide: 'slide-up',
-            blackbar:'twodelay',
-        })
-
-        setTimeout(() => {
- 
-            this.setState({
-                headerS: '',
-                home: 'active',
-                nav: '',
-                heroblock: 'base',
-                portfolio: 'slide-in',
-                row: 'slide-in-row',
-                mainNav: 'closeNav',
-                slide: 'slide-up',
-                navMenu: '',
-                experience: '',
-                contact:'none',
-            })
-            navigate("/portfolio")
-        }, 1500)
-    }
-
-    navContact = (e) => {
-        e.preventDefault();
-
-        this.setState({
-            experience: '',
-            portfolio: 'slide-in',
-            navMenu: 'fade-in',
-            nav: 'away',
-            home: '',
-            heroblock: 'base',
-            row: "slide-in-row",
-            slide: 'slide-up',
-            blackbar:'twodelay',
-        })
-
-        setTimeout(() => {
-
-            this.setState({
-                headerS: '',
-                home: 'active',
-                nav: '',
-                heroblock: 'base',
-                portfolio: 'slide-in',
-                row: 'slide-in-row',
-                mainNav: 'closeNav',
-                slide: 'slide-up',
-                navMenu: '',
-                experience: '',
-                contact:'none',
-            })
-            navigate("/contact")
-        }, 1500)
-    }
-
-
-    navExp = (e) => {
-        this.setState({
-            experience: '',
-            portfolio: 'slide-in',
-            navMenu: 'fade-in',
-            nav: 'away',
-            home: '',
-            heroblock: 'base',
-            row: "slide-in-row",
-            slide: 'slide-up',
-            blackbar:'twodelay',
-        })
-        e.preventDefault();
-        setTimeout(() => {
-
-            this.setState({
-                headerS: '',
-                home: 'active',
-                nav: '',
-                heroblock: 'base',
-                portfolio: 'slide-in',
-                row: 'slide-in-row',
-                mainNav: 'closeNav',
-                slide: 'slide-up',
-                navMenu: '',
-                experience: '',
-                contact:'none',
-            })
-            navigate("/experience")
-        }, 1500)
-    }
-
-    navContactDirect = (e) => {
-
-        e.preventDefault();
-
-        this.setState({
+            blackbar:'fade-in',
+            colBlack:'colBlack',
+            logoPath:'animPath',
             experience: '',
             portfolio: 'hero-base',
             home: '',
-            heroblock: 'base-hero',
             row: "row-base",
             slide: '',
             tAnim:'tFade',
             hAnim:'hSlide',
             blackbar:'',
+            currentIndex:7,
+            currentExp:6,
         })
         setTimeout(() => {
-            navigate("/contact")
-            }, 700)
-        setTimeout(() => {
             this.setState({
-                tAnim:'',
-                hAnim:'',
+                nav: '',
+                heroblock: 'base',
+                mainNav: 'closeNav',
+                navMenu: '',
+                blackbar:'gone',
+                headerTransition:'headerTransHome',
             })
-        }, 1400)
+            navigate("/my-work")
+        }, 600);
+
     }
-
-    navPortfolioDirect = (e) => {
-        e.preventDefault();
-
-        this.setState({
-            experience: '',
-            portfolio: 'hero-base',
-            home: '',
-            heroblock: 'base-hero',
-            row: "row-base",
-            slide: '',
-            tAnim:'tFade',
-            hAnim:'hSlide',
-            blackbar:'',
-        })
-
-        setTimeout(() => {
-            navigate("/portfolio")
-            this.setState({headerS: ''})
-        }, 700)
-        setTimeout(() => {
-            this.setState({
-                tAnim:'',
-                hAnim:'',
-            })
-        }, 1400)
-    }
-
-
-
-    navExpDirect = (e) => {
-        e.preventDefault();
-        
-        this.setState({
-            experience: '',
-            portfolio: 'hero-base',
-            home: '',
-            heroblock: 'base-hero',
-            row: "row-base",
-            slide: '',
-            tAnim:'tFade',
-            hAnim:'hSlide',
-            blackbar:'',
-
-        })
-        
-
-            setTimeout(() => {
-            navigate("/experience")
-        }, 700)
-        setTimeout(() => {
-            this.setState({
-                tAnim:'',
-                hAnim:'',
-            })
-        }, 1400)
-    }
-
-
 
     handleContactShow = (e) => {
         e.preventDefault();
@@ -360,7 +247,7 @@ class Srux extends Component {
 
 
 render (){
-    let {headerS,home,nav,navMenu,contact,bcState,blackbar,headerTransition,logoPath} = this.state;
+    let {headerS,home,nav,navMenu,contact,bcState,blackbar,whiteTransForm,headerTransition,logoPath} = this.state;
     console.log(home)
 
 
@@ -374,9 +261,10 @@ render (){
         <Match path="/">
         {props =>
             props.match ? (
+
                 <ReactScrollWheelHandler
-                upHandler={this.prevIndex}
-                downHandler={this.nextIndex}
+                upHandler={this.prevPage}
+                downHandler={this.nextPage}
                 customStyle={{
                     // width: "100%",
                     // height: "100vh",
@@ -384,7 +272,6 @@ render (){
                     // transformOrigin:"top left",
                 }}
                 >
-    
         <div className={"headerSection "+headerS}>
             <div className="header">
                 <div className="hero">
@@ -403,7 +290,7 @@ render (){
                                     <div className={"contactinfo "+contact}><p>samrob.nz@gmail.com</p></div>
                                     <svg id="Layer_1" data-name="Layer 1" viewBox="0 0 731.4 803">
                                     <g>
-                                        <g id ="contactContainer"  onClick={this.navContact}>                                     
+                                        <g id ="contactContainer"  onClick={this.navContactDirect}>                                     
                                         <g id="contact">
                                         <g>
                                             <image width="697" height="511" transform="translate(35.02 293.48)" href={contactImg}/>
@@ -422,7 +309,7 @@ render (){
                                         <polygon points="727.61 292.11 33.61 802.11 32.17 803 43.99 803 730.7 298.52 730.7 289.83 727.61 292.11"/>
                                         </g></g>
                                         
-                                        <g id ="cvContainer" onClick={this.navExp}> 
+                                        <g id ="cvContainer" onClick={this.navExpDirect}> 
      
                                         <g id="cv">
                                         <g>
@@ -474,34 +361,30 @@ render (){
                     </div>
                 </div>
             </div>
-            <div className={"blackBar " + blackbar}></div>
         </div>
         </ReactScrollWheelHandler>
         
                     ) : (
                         <>
                          {/* <MobileView> */}
-                        <div className={"blackCover " +bcState}></div>
+                        <div className={"whiteTrans "+whiteTransForm}></div>
                         <div className={"navMenu "+navMenu}>
                             
                         <div className="navlist">
                             <h2 className="zB" onClick={this.navHome}>HOME NAV</h2>
-                            <h2 className="z999" onClick={this.navPortfolioDirect}>PORTFOLIO</h2>
+                            <h2 className="z999" onClick={this.navMyWork}>PORTFOLIO</h2>
                             <h2 className="z999" onClick={this.navExpDirect}>EXPERIENCE</h2>
                             <h2 className="z999" onClick={this.navContactDirect}>CONTACT</h2>       
                         </div>
                         </div>
                         {/* </MobileView> */}
-                    </>
+                        </>
                         )
                     }
         </Match>
 
         <Router>
            <MyWork path="/my-work" data={this.state}/>
-           <Portfolio path="/portfolio" data={this.state}/>
-           <Experience path="/experience" data={this.state}/>
-           <Contact path="/contact" data={this.state}/>
         </Router>
         </>
     )

@@ -16,6 +16,34 @@
     }
 }
 
+.hScroller {
+    transition: 1.5s all cubic-bezier(0.23, 1, 0.32, 1);
+    display:flex;
+    flex-direction: row;
+
+    .eSection {
+        transform-origin: top left;
+    }
+}
+
+.work {
+    display: flex;
+    width: 75vw;
+    height: 100%;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+
+
+.eSection {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
 .contactForm {
     margin-left:-55%;
     display:flex;
@@ -75,15 +103,120 @@
     }
 }
 
+@keyframes expLineAnim {
+    from {
+        left: 0vw;
+    }
+    to {
+        left: 45vw;
+    }
+}
+
+
+@keyframes expColTrans {
+    from {
+        transform:translateX(0vw)    
+    }
+    to {
+        transform:translateX(-12vw)    
+    }
+}
+
+@keyframes expColTransHeader {
+    from {
+        transform:translateX(0vw)    
+    }
+    to {
+        transform:translateX(12vw)
+    }
+}
+
+.exp-col-trans {
+    animation: expColTrans cubic-bezier(0.455, 0.03, 0.515, 0.955) 1;
+    animation-fill-mode: forwards;
+    animation-duration: 1s;
+    transition:ease all 4s;
+}
+
+.exp-col-trans-header {
+    animation: expColTransHeader cubic-bezier(0.455, 0.03, 0.515, 0.955) 1;
+    animation-fill-mode: forwards;
+    animation-duration: 1s;
+    transition:ease all 4s;
+}
+
+
+
+.heroblock.stageExp {
+    margin-left:-26vw !important;
+}
+
+.headerTransExp {
+
+    margin-left:0vw !important;
+    transition:ease all 1s;
+    background-color: #191919;
+    flex: 1 0 73% !important;
+    clip-path: polygon(0 0, 64% 0, 100% 100%, 0% 100%);
+    p {
+        color: rgba(250, 250, 250, 1) !important;
+        transition:ease all 1s;
+    }
+    h2 {
+        color: rgba(250, 250, 250, 1) !important;
+        background-color:black !important;
+        transition:ease all 1s;
+    }
+
+
+.heading {
+    transition:ease all 1s;
+    h1 {
+        color: #45688c !important;
+        transition:ease all 1s;
+    }
+
+    svg {
+        transition:ease all 1s;
+        fill:rgb(192, 217, 240);
+        height: 13.9em !important;
+        width: 11.8em;
+   }
+
+}
+
+}
+
+.expLine {
+    animation: expLineAnim ease-in 1;
+    animation-fill-mode: forwards;
+    animation-duration: 1s;
+    transition:ease all 4s;
+    position: absolute;
+    border-bottom: 1px solid #1a1a1a;
+    height: 1px;
+    top: 54vh;
+    left: 0vw;
+    max-width: 586vw;
+}
+
 .eRow1 {
     display: flex;
     flex: 1 0 65%;
-    width: 40vw;
+
+    width: 100vw;
     height: 65%;
 
     blurb {
+        justify-content: center;
+
         text {
-            flex: 0 0 70%;
+            padding-left: 1em;
+            z-index: 1;
+            background-color: white;
+            flex: 0 0 40%;
+            padding-right: 0;
+            margin-right: 10vw;
             p {
                 line-height: 1.4;
             }
@@ -92,10 +225,11 @@
 }
 .eRow2 {
     display: flex;
-    flex: 1 0 25%;
-    width: 40vw;
-    background-color: rgb(25, 25, 25);
-    height: 35%;
+    // flex: 1 0 25%;
+
+    width: 100vw;
+    // background-color: rgb(25, 25, 25);
+    // height: 35%;
     itemheading {
         align-items: center;
         text {
@@ -106,8 +240,37 @@
 
     }
     blurb {
+        justify-content: center;
         text {
-            flex: 0 0 70%;
+            flex: 0 0 50%;
+        }
+    }
+}
+
+.cTwoExp {
+    display: flex;
+    justify-content: center;
+    margin-right:5vw;
+    margin-left:-5vw;
+    flex: 1 0 35% !important;
+    .eText {
+        flex: 0 1 40% !important;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: flex-start;
+        margin-bottom:10vh;
+        text {
+            margin-bottom: 1.5em;
+            margin-top: 1.5em;
+            flex: 0 0 30%;
+            padding-left: .5em;
+            padding-right: .5em;
+            h1 {
+                font-size:1.5em;
+            }
+            p {
+                font-size:1em;
+            }
         }
     }
 }
@@ -120,12 +283,16 @@
 
 
 
+
 formpos {
     display: flex;
     flex-direction: row;
     align-items: center;
+    justify-content: center;
     flex: 1;
-
+    background-color:#191919;
+    clip-path: polygon(3% 0, 100% 0, 100% 100%, 25% 100%);
+    overflow: hidden;
     block {
         display: flex;
         flex: 0 0 57%;
@@ -164,17 +331,17 @@ formpos {
 
 
 .myForm {
-    margin-left:-50em;
     display:flex;
     flex-direction:column;
     width:100%;
     padding:1em;
     background-color:#191919;
     border-radius:.2em;
-    box-shadow: 1em 0 4em #3333331e;
-   
+    // box-shadow: 1em 0 4em #33333344;
+    z-index:1;
+    font-size: 1.2em;
     h1 {
-        color:rgb(173, 173, 173);
+        color:#dcdcdc;
     }
 
     formgrp {
@@ -184,11 +351,11 @@ formpos {
     input {
         padding:1.2em;
         border-bottom:thin black solid;
-        width: 19em;
+        width: 44%;
         font-size:.7em;
         margin-bottom:1em;
-        color:#cdcdcd;
-        background-color:#222;
+        color:#dcdcdc;
+        background-color:#191919;
             }
         }
 
@@ -201,9 +368,11 @@ formpos {
         vertical-align: top;
         font-family:roboto;
         padding:1.2em;
+        margin-top:1em;
         font-size:.7em;
-        background-color:#222;
-        color:#cdcdcd;
+        background-color:#191919;
+        color:#dcdcdc;
+        border-bottom:thin black solid;
     }
     .message:focus {
         outline-offset: -2px;
@@ -215,8 +384,16 @@ formpos {
         padding:.3em;
         padding-top:.4em;
         margin-top:1em;
-        color:#888;
-        background-color:#222;
+        color:#dcdcdc;
+        background-color:#111;
+        cursor: pointer;
+        transition:ease all .7s;
+        border-radius: .2em;
+
+    }
+    .submit:hover {
+        color:#111;
+        background-color:#dcdcdc;
 
     }
 }
@@ -248,7 +425,7 @@ formpos {
 
 .eSection {
     height: 100vh;
-    width: 40vw;
+    width: 100vw;
     display: flex;
     flex-direction: column;
 }
