@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
 import ReactScrollWheelHandler from "react-scroll-wheel-handler";
 
-
 import logo from './assets/srux-logo.svg';
 // import MyWork from './MyWork';
 import PortfolioImg from './assets/portfolio.png';
@@ -16,250 +15,230 @@ import cclogo from './assets/cc-logo.jpg';
 import autlogo from './assets/aut.jpg';
 import gclogo from './assets/gc-logo.jpg';
 
-
 class Srux extends Component {
-    
 
     constructor(props) {
         super(props);
         this.state = {
-            contact:'none',
+            contact: 'none',
 
-            currentPage:0,
-            currentIndex:0,
-            currentExp:0,
+            currentPage: 0,
+            currentIndex: 0,
+            currentExp: 0,
 
             stageNum: [
-                'stageOne','stageTwo','stageThree','stageFour','stageFive','stageSix','stageSeven','stageEight',
+                'stageOne',
+                'stageTwo',
+                'stageThree',
+                'stageFour',
+                'stageFive',
+                'stageSix',
+                'stageSeven',
+                'stageEight'
             ],
             stageExpNum: [
-                'ExpStageOne','ExpStageTwo','ExpStageThree','ExpStageFour','ExpStageFive','ExpStageSix',
+                'ExpStageOne',
+                'ExpStageTwo',
+                'ExpStageThree',
+                'ExpStageFour',
+                'ExpStageFive',
+                'ExpStageSix'
             ],
 
-            vScroller:'',
-            hScroller:'',
+            vScroller: '',
+            hScroller: '',
 
-            stageZero:'stageZero',
+            stageZero: 'stageZero',
 
             headerS: 'none',
 
             colTwoBg: 'colBlack',
-            colTwoBgImg:'',
+            colTwoBgImg: '',
 
-            homeHeader:'homeHeader',
+            homeHeader: 'homeHeader',
             headerTransitionHome: 'headerTransHome',
             headerTransition: 'headerTransWork'
         }
-    
+
     }
 
     componentDidMount = () => {
-            this.setState({
-
-        })
+        this.setState({})
     }
 
-
     nextPage = () => {
- 
+
         this.setState({
-            currentIndex:0,
-            currentExp:0,
-            homeHeader:'homeHeader slide-out',
-            stageZero:'stageZero',
-            hScroller:'',
-            vScroller:'',
+            currentIndex: 0,
+            currentExp: 0,
+            homeHeader: 'homeHeader slide-out',
+            stageZero: 'stageZero',
+            hScroller: '',
+            vScroller: ''
         })
 
     };
 
     prevPage = (e) => {
 
-        this.setState ({
-            currentIndex:7,
-            currentExp:6,
-        })
+        this.setState({currentIndex: 7, currentExp: 6})
         setTimeout(() => {
-            this.setState({
-                hScroller:'above',
-                homeHeader:'homeHeader slide-right',
-            })
+            this.setState({hScroller: 'above', homeHeader: 'homeHeader slide-right'})
         }, 700)
     };
 
     nextIndex = () => {
-        const { stageNum, currentIndex } = this.state;
-      
+        const {stageNum, currentIndex} = this.state;
 
-        if (currentIndex == 7) {    
+        if (currentIndex == 7) {
 
-                setTimeout(() => {
-                    this.setState({
-                        
-                        tAnim:'tFade',
-                        hAnim:'hSlide',
-                        stageState:'stageF-out',
-                        expColTrans:"exp-col-trans",
-                        expColTransHeader:"exp-col-trans-header",
-                        currentExp:0,
-                        headerTransition: 'headerTransWork fade-out',
-                        vScroller:'',
-                        hScroller:'above',
-                    })
-                }, 200)
-                    this.setState({
-                        stageState:'stageF-in',
-                    })
-                    setTimeout(() => {
-                        this.setState({
-                            stageState:'stageF-in',
-                        })
-                    }, 200)
+            setTimeout(() => {
+                this.setState({
+
+                    tAnim: 'tFade',
+                    hAnim: 'hSlide',
+                    stageState: 'stageF-out',
+                    expColTrans: "exp-col-trans",
+                    expColTransHeader: "exp-col-trans-header",
+                    currentExp: 0,
+                    headerTransition: 'headerTransWork fade-out',
+                    vScroller: '',
+                    hScroller: 'above'
+                })
+            }, 200)
+            this.setState({stageState: 'stageF-in'})
+            setTimeout(() => {
+                this.setState({stageState: 'stageF-in'})
+            }, 200)
         }
- 
-        this.setState({
-            stageState:'stageF-out',
-        });
+
+        this.setState({stageState: 'stageF-out'});
         setTimeout(() => {
             this.setState({
-                stageState:'stageF-in',
-                currentIndex: currentIndex + 1,
+                stageState: 'stageF-in',
+                currentIndex: currentIndex + 1
             })
         }, 200)
 
     };
 
     prevIndex = () => {
-        const { stageNum, currentIndex } = this.state;
+        const {stageNum, currentIndex} = this.state;
         if (currentIndex == 0) {
-        
-                this.setState({
-                    homeHeader:'homeHeader slide-back-down',
-                    currentIndex: 0,
-                    currentExp:0,
-                    headerTransitionHome: 'headerTransHome fade-in',
-                    stageZero:'stageZero fade-out-fast',
-                    stageState:'stageF-in',
-                    hScroller:'',
-                    vScroller:'',
-                })
+
+            this.setState({
+                homeHeader: 'homeHeader slide-back-down',
+                currentIndex: 0,
+                currentExp: 0,
+                headerTransitionHome: 'headerTransHome fade-in',
+                stageZero: 'stageZero fade-out-fast',
+                stageState: 'stageF-in',
+                hScroller: '',
+                vScroller: ''
+            })
 
             setTimeout(() => {
-                this.setState({
-                    stageZero:'stageZero',
-            })
-        }, 600)
+                this.setState({stageZero: 'stageZero'})
+            }, 600)
 
         }
- 
-        this.setState({
-            stageState:'stageF-out',
-        });
-        
+
+        this.setState({stageState: 'stageF-out'});
+
         setTimeout(() => {
             this.setState({
-                stageState:'stageF-in',
+                stageState: 'stageF-in',
                 currentIndex: currentIndex - 1
-        })
+            })
         }, 200)
 
     };
 
     nextExp = () => {
-        const { stageExpNum, currentExp } = this.state;
-      
+        const {stageExpNum, currentExp} = this.state;
 
-        if (currentExp == 6) {    
-                this.setState({
-                    homeHeader:'homeHeader slide-back-left',
-                    headerTransitionHome: 'headerTransHome fade-in',
-                    headerTransition: 'headerTransWork fade-in',
-                    currentIndex:0,
-                    currentExp:0,
-                    vScroller:'',
-                    hScroller:'above',
-                })
+        if (currentExp == 6) {
+            this.setState({
+                homeHeader: 'homeHeader slide-back-left',
+                headerTransitionHome: 'headerTransHome fade-in',
+                headerTransition: 'headerTransWork fade-in',
+                currentIndex: 0,
+                currentExp: 0,
+                vScroller: '',
+                hScroller: 'above'
+            })
 
         }
- 
+
         this.setState({
-            stageState:'stageF-in',
-            currentExp: currentExp + 1,
+            stageState: 'stageF-in',
+            currentExp: currentExp + 1
         });
 
     };
 
     prevExp = () => {
-        const { stageExpNum, currentExp } = this.state;
+        const {stageExpNum, currentExp} = this.state;
         if (currentExp == 0) {
 
-                this.setState({
+            this.setState({
 
-                    expColTrans:"",
-                    expColTransHeader:"",
-                    stageZero:'stageZero',
+                expColTrans: "",
+                expColTransHeader: "",
+                stageZero: 'stageZero',
 
-                    headerTransition: 'headerTransWork fade-in',
+                headerTransition: 'headerTransWork fade-in',
 
-                    currentIndex:7,
-                    currentExp: 0,
-                    stageExpNum: -1,
-                    hScroller:'',
-                })
+                currentIndex: 7,
+                currentExp: 0,
+                stageExpNum: -1,
+                hScroller: ''
+            })
 
-                setTimeout(() => {
-                    this.setState({
-                        expColTrans:"",
-                        expColTransHeader:"",
-                })
+            setTimeout(() => {
+                this.setState({expColTrans: "", expColTransHeader: ""})
             }, 600)
         }
- 
+
         this.setState({
             // stageState:'stageF-out',
             currentExp: currentExp - 1,
-            expColTrans:"exp-col-trans",
-            expColTransHeader:"exp-col-trans-header",
+            expColTrans: "exp-col-trans",
+            expColTransHeader: "exp-col-trans-header"
         });
-       
 
     };
-
-
 
     navHome = () => {
-        const { stageNum, currentIndex } = this.state;
+        const {stageNum, currentIndex} = this.state;
 
-                this.setState({
-                    homeHeader:'homeHeader slide-back-left',
-                    currentIndex: 0,
-                    currentExp:0,
-                    headerTransition: 'headerTransHome fade-in',
-                    stageZero:'stageZero fade-out-fast',
-                    stageState:'stageF-in',
-                })
+        this.setState({
+            homeHeader: 'homeHeader slide-back-left',
+            currentIndex: 0,
+            currentExp: 0,
+            headerTransition: 'headerTransHome fade-in',
+            stageZero: 'stageZero fade-out-fast',
+            stageState: 'stageF-in'
+        })
 
-            setTimeout(() => {
-                this.setState({
-                    stageZero:'stageZero',
-            })
+        setTimeout(() => {
+            this.setState({stageZero: 'stageZero'})
         }, 600)
     };
-
 
     navMyWork = (e) => {
         e.preventDefault();
 
         this.setState({
-            homeHeader:'homeHeader slide-out',
-            headerTransition:'headerTransWork fade-in',
+            homeHeader: 'homeHeader slide-out',
+            headerTransition: 'headerTransWork fade-in',
             heroblock: 'base',
-            colBlack:'colBlack',
-            currentIndex:0,
-            currentExp:0,
-            hScroller:'',
-            vScroller:'',
-            stageZero:'stageZero',
+            colBlack: 'colBlack',
+            currentIndex: 0,
+            currentExp: 0,
+            hScroller: '',
+            vScroller: '',
+            stageZero: 'stageZero'
         })
     }
 
@@ -268,16 +247,16 @@ class Srux extends Component {
         e.preventDefault();
 
         this.setState({
-            homeHeader:'homeHeader slide-right',
-            headerTransition:'headerTransWork fade-out',
-            tAnim:'tFade',
-            hAnim:'hSlide',
-            blackbar:'',
-            currentIndex:7,
-            currentExp:0,
-            expColTrans:"exp-col-trans",
-            expColTransHeader:"exp-col-trans-header",
-            hScroller:'above',
+            homeHeader: 'homeHeader slide-right',
+            headerTransition: 'headerTransWork fade-out',
+            tAnim: 'tFade',
+            hAnim: 'hSlide',
+            blackbar: '',
+            currentIndex: 7,
+            currentExp: 0,
+            expColTrans: "exp-col-trans",
+            expColTransHeader: "exp-col-trans-header",
+            hScroller: 'above'
         })
 
     }
@@ -285,36 +264,30 @@ class Srux extends Component {
     navContactDirect = () => {
 
         this.setState({
-            
-            headerTransition:'headerTransWork fade-out',
-            tAnim:'tFade',
-            hAnim:'hSlide',
-            blackbar:'',
-            currentIndex:7,
-            currentExp:6,
-            expColTrans:"exp-col-trans",
-            expColTransHeader:"exp-col-trans-header",
-            hScroller:'above',
+
+            headerTransition: 'headerTransWork fade-out',
+            tAnim: 'tFade',
+            hAnim: 'hSlide',
+            blackbar: '',
+            currentIndex: 7,
+            currentExp: 6,
+            expColTrans: "exp-col-trans",
+            expColTransHeader: "exp-col-trans-header",
+            hScroller: 'above'
         })
         setTimeout(() => {
-            this.setState({
-                
-        })
-    }, 600)
+            this.setState({})
+        }, 600)
     }
 
     handleContactShow = (e) => {
         e.preventDefault();
-        this.setState({
-            contact:'fade-in',
-        })
+        this.setState({contact: 'fade-in'})
     }
 
     handleContactHide = (e) => {
         e.preventDefault();
-        this.setState({
-            contact:'none',
-        })
+        this.setState({contact: 'none'})
     }
 
 
