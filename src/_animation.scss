@@ -102,20 +102,77 @@
     }
 }
 
-@keyframes slideout {
+@keyframes slideright {
     from {
-        opacity: 1;
-        width: 40vw;
-        transform: translate(-5em, -15em) scale(.75);
-        filter: blur(40px);
-        opacity: 0.5;
+        transform: translate(0, 0);
+        opacity:1;
     }
     to {
-        opacity: 1;
-        width: 100vw;
-        filter: blur(0px);
+        transform: translate(110vw, 0);
+        opacity:1;
     }
 }
+
+
+
+@keyframes slideBackLeft {
+    from {
+        transform: translate(110vw, 0);
+        opacity:1;
+
+    }
+    to {
+        transform: translate(0vw, 0);
+        opacity:1;
+
+    }
+}
+
+@keyframes slideleft {
+    from {
+        transform: translate(0, 0);
+        opacity:1;
+    }
+    to {
+        transform: translate(-110vw, 0);
+        opacity:1;
+    }
+}
+
+@keyframes slideBackRight {
+    from {
+        transform: translate(-110vw, 0);
+        opacity:1;
+    }
+    to {
+        transform: translate(0vw, 0);
+        opacity:1;
+    }
+}
+
+
+@keyframes slideout {
+    from {
+        transform: translate(0, 0);
+        opacity:1;
+    }
+    to {
+        transform: translate(0, -110vh);
+        opacity:1;
+    }
+}
+
+@keyframes slidedown {
+    from {
+        transform: translate(0, -110vh);
+        opacity:1;
+    }
+    to {
+        transform: translate(0, 0vh);
+        opacity:1;
+    }
+}
+
 
 @keyframes slideinrow {
     from {
@@ -133,60 +190,7 @@
     }
 }
 
-@keyframes slideoutrow {
-    from {
-        opacity: 1;
-        margin-left: -55vw;
-        width: 55vw;
-        filter: blur(0px);
-        margin-top: 0;
-    }
-    to {
-        opacity: 1;
-        filter: blur(50px);
-        width: 55vw;
-        margin-top: 150vh;
-        margin-left: 0vw;
-    }
-}
 
-@keyframes slideup {
-    from {
-        opacity: 1;
-        filter: blur(50px);
-        margin-top: 100vh;
-    }
-    to {
-        opacity: 1;
-        filter: blur(0px);
-        margin-top: 0;
-    }
-}
-
-@keyframes slidedown {
-    from {
-        opacity: 1;
-        filter: blur(0px);
-        margin-top: 0;
-    }
-    to {
-        opacity: 1;
-        filter: blur(50px);
-        margin-top: 150vh;
-        margin-left: -5vw;
-    }
-}
-
-@keyframes delayedSlide {
-    from {
-        opacity: 0;
-        margin-left: 400vw;
-    }
-    to {
-        opacity: 1;
-        margin-left: 0vw;
-    }
-}
 
 .twodelay {
     opacity: 1;
@@ -406,6 +410,50 @@
     animation-duration: .7s;
 }
 
+.slide-out {
+    animation: slideout ease-in 1;
+    animation-fill-mode: forwards;
+    animation-duration: .7s;
+}
+
+.slide-right {
+    animation: slideright ease-in 1;
+    animation-fill-mode: forwards;
+    animation-duration: .7s;
+}
+
+
+.slide-back-left {
+    animation: slideBackLeft ease-in 1;
+    animation-fill-mode: forwards;
+    animation-duration: 1s;
+}
+
+.slide-up {
+    animation: slideup ease-in 1;
+    animation-fill-mode: forwards;
+    animation-duration: .7s;
+}
+
+.slide-back-down {
+    animation: slidedown ease-in 1;
+    animation-fill-mode: forwards;
+    animation-duration: .7s;
+}
+
+.slide-left {
+    animation: slideleft ease-in 1;
+    animation-fill-mode: forwards;
+    animation-duration: .7s;
+}
+
+.slide-back-right {
+    animation: slideBackRight ease-in 1;
+    animation-fill-mode: forwards;
+    animation-duration: .7s;
+}
+
+
 .slide-in-fade {
     animation: slideinFade ease-in 1;
     animation-fill-mode: forwards;
@@ -482,9 +530,18 @@
     height:100vh;
     opacity: 1;
     background-color:white;
-
-
 }
+
+.homeHeader {
+    height:100vh;
+    width:100vw;
+    position:absolute;
+    background-color:white;
+    z-index:999999;
+    transition:ease all .7s;
+}
+
+
 
 // mouse scroll
 

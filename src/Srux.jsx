@@ -1,18 +1,21 @@
 import React, {Component} from 'react';
-import {
-    Router,
-    navigate,
-    Match
-} from "@reach/router";
 import ReactScrollWheelHandler from "react-scroll-wheel-handler";
 
 
-
 import logo from './assets/srux-logo.svg';
-import MyWork from './MyWork';
+// import MyWork from './MyWork';
 import PortfolioImg from './assets/portfolio.png';
 import expImg from './assets/experience.png';
 import contactImg from './assets/contact.png';
+import mjlogo from './assets/mitchells-joinery-logo.png';
+import tenslogo from './assets/10squares-logo.png';
+import gubbalogo from './assets/gubba-logo.png';
+import pylogo from './assets/playtionery-logo.jpg';
+import mglogo from './assets/mg-logo.jpg';
+import cclogo from './assets/cc-logo.jpg';
+import autlogo from './assets/aut.jpg';
+import gclogo from './assets/gc-logo.jpg';
+
 
 class Srux extends Component {
     
@@ -21,12 +24,31 @@ class Srux extends Component {
         super(props);
         this.state = {
             contact:'none',
+
+            currentPage:0,
             currentIndex:0,
             currentExp:0,
+
+            stageNum: [
+                'stageOne','stageTwo','stageThree','stageFour','stageFive','stageSix','stageSeven','stageEight',
+            ],
+            stageExpNum: [
+                'ExpStageOne','ExpStageTwo','ExpStageThree','ExpStageFour','ExpStageFive','ExpStageSix',
+            ],
+
             vScroller:'',
             hScroller:'',
+
             stageZero:'stageZero',
-            whiteTransForm:'',
+
+            headerS: 'none',
+
+            colTwoBg: 'colBlack',
+            colTwoBgImg:'',
+
+            homeHeader:'homeHeader',
+            headerTransitionHome: 'headerTransHome',
+            headerTransition: 'headerTransWork'
         }
     
     }
@@ -41,115 +63,204 @@ class Srux extends Component {
     nextPage = () => {
  
         this.setState({
-            headerTransition:'headerTransWork fade-out',
-            navMenu: 'fade-in',
-            nav: 'away',
-            home: '',
-            heroblock: 'base',
-            blackbar:'fade-in',
-
-            colTwoBgImg:'',
-            colTwoBg: 'colBlack',
-            colBlack: 'colBlack',
-            
             currentIndex:0,
             currentExp:0,
+            homeHeader:'homeHeader slide-out',
+            stageZero:'stageZero',
+            hScroller:'',
+            vScroller:'',
         })
-
-        setTimeout(() => {
- 
-            this.setState({
-                headerS: '',
-                home: '',
-                nav: '',
-                heroblock: 'base',
-                mainNav: 'closeNav',
-                navMenu: '',
-                blackbar:'blackbar',
-                headerTransition:'headerTransHome fade-in',
-                logoPath:''
-            })
-            navigate("/my-work")
-        }, 1000)
 
     };
 
     prevPage = (e) => {
+
         this.setState ({
-            hScroller:'above',
-
+            currentIndex:7,
+            currentExp:6,
         })
-        
-        let navContact = this.navContactDirect
-        navContact(e);
-    };
-
-    navHome = () => {
-        this.setState({
-            experience: 'exp',
-            home: "active",
-            stageZero:'none',
-            portfolio: "base",
-            heroblock: "slide-out",
-            row: "slide-out-row",
-            slide: "slide-down",
-            nav: '',
-            navMenu: 'fade-out',
-            blackbar: 'fade-out',
-            colTwoBg: 'fade-out',
-            expColTrans:'fade-out-fast',
-            headerTransition: 'headerTransHome',
-            currentIndex:0,
-            currentExp:0,
-            whiteTransForm:'whiteTransForm',
-            vScroller:'fade-out',
-
-
-        })
-
         setTimeout(() => {
             this.setState({
-            stageZero:'stageZero',
-            whiteTransForm:'',
-            headerS:'fade-in',
+                hScroller:'above',
+                homeHeader:'homeHeader slide-right',
+            })
+        }, 700)
+    };
+
+    nextIndex = () => {
+        const { stageNum, currentIndex } = this.state;
+      
+
+        if (currentIndex == 7) {    
+
+                setTimeout(() => {
+                    this.setState({
+                        
+                        tAnim:'tFade',
+                        hAnim:'hSlide',
+                        stageState:'stageF-out',
+                        expColTrans:"exp-col-trans",
+                        expColTransHeader:"exp-col-trans-header",
+                        currentExp:0,
+                        headerTransition: 'headerTransWork fade-out',
+                        vScroller:'',
+                        hScroller:'above',
+                    })
+                }, 200)
+                    this.setState({
+                        stageState:'stageF-in',
+                    })
+                    setTimeout(() => {
+                        this.setState({
+                            stageState:'stageF-in',
+                        })
+                    }, 200)
+        }
+ 
+        this.setState({
+            stageState:'stageF-out',
+        });
+        setTimeout(() => {
+            this.setState({
+                stageState:'stageF-in',
+                currentIndex: currentIndex + 1,
+            })
+        }, 200)
+
+    };
+
+    prevIndex = () => {
+        const { stageNum, currentIndex } = this.state;
+        if (currentIndex == 0) {
+        
+                this.setState({
+                    homeHeader:'homeHeader slide-back-down',
+                    currentIndex: 0,
+                    currentExp:0,
+                    headerTransitionHome: 'headerTransHome fade-in',
+                    stageZero:'stageZero fade-out-fast',
+                    stageState:'stageF-in',
+                    hScroller:'',
+                    vScroller:'',
+                })
+
+            setTimeout(() => {
+                this.setState({
+                    stageZero:'stageZero',
+            })
+        }, 600)
+
+        }
+ 
+        this.setState({
+            stageState:'stageF-out',
+        });
+        
+        setTimeout(() => {
+            this.setState({
+                stageState:'stageF-in',
+                currentIndex: currentIndex - 1
         })
-            navigate("/")
-        }, 1000)
-    }
+        }, 200)
+
+    };
+
+    nextExp = () => {
+        const { stageExpNum, currentExp } = this.state;
+      
+
+        if (currentExp == 6) {    
+                this.setState({
+                    homeHeader:'homeHeader slide-back-left',
+                    headerTransitionHome: 'headerTransHome fade-in',
+                    headerTransition: 'headerTransWork fade-in',
+                    currentIndex:0,
+                    currentExp:0,
+                    vScroller:'',
+                    hScroller:'above',
+                })
+
+        }
+ 
+        this.setState({
+            stageState:'stageF-in',
+            currentExp: currentExp + 1,
+        });
+
+    };
+
+    prevExp = () => {
+        const { stageExpNum, currentExp } = this.state;
+        if (currentExp == 0) {
+
+                this.setState({
+
+                    expColTrans:"",
+                    expColTransHeader:"",
+                    stageZero:'stageZero',
+
+                    headerTransition: 'headerTransWork fade-in',
+
+                    currentIndex:7,
+                    currentExp: 0,
+                    stageExpNum: -1,
+                    hScroller:'',
+                })
+
+                setTimeout(() => {
+                    this.setState({
+                        expColTrans:"",
+                        expColTransHeader:"",
+                })
+            }, 600)
+        }
+ 
+        this.setState({
+            // stageState:'stageF-out',
+            currentExp: currentExp - 1,
+            expColTrans:"exp-col-trans",
+            expColTransHeader:"exp-col-trans-header",
+        });
+       
+
+    };
+
+
+
+    navHome = () => {
+        const { stageNum, currentIndex } = this.state;
+
+                this.setState({
+                    homeHeader:'homeHeader slide-back-left',
+                    currentIndex: 0,
+                    currentExp:0,
+                    headerTransition: 'headerTransHome fade-in',
+                    stageZero:'stageZero fade-out-fast',
+                    stageState:'stageF-in',
+                })
+
+            setTimeout(() => {
+                this.setState({
+                    stageZero:'stageZero',
+            })
+        }, 600)
+    };
 
 
     navMyWork = (e) => {
         e.preventDefault();
 
         this.setState({
-            headerTransition:'headerTransWork fade-out',
-            navMenu: 'fade-in',
-            nav: 'away',
-            home: '',
+            homeHeader:'homeHeader slide-out',
+            headerTransition:'headerTransWork fade-in',
             heroblock: 'base',
-            blackbar:'',
             colBlack:'colBlack',
             currentIndex:0,
             currentExp:0,
             hScroller:'',
             vScroller:'',
-            
+            stageZero:'stageZero',
         })
-
-        setTimeout(() => {
- 
-            this.setState({
-                headerS: '',
-                home: 'fade-in',
-                nav: '',
-                heroblock: 'base',
-                mainNav: 'closeNav',
-                navMenu: '',                
-                headerTransition:'fade-in',
-                logoPath:''
-            })
-            navigate("/my-work")
-        }, 600)
     }
 
     navExpDirect = (e) => {
@@ -157,18 +268,8 @@ class Srux extends Component {
         e.preventDefault();
 
         this.setState({
+            homeHeader:'homeHeader slide-right',
             headerTransition:'headerTransWork fade-out',
-            navMenu: 'fade-in',
-            nav: 'away',
-            heroblock: 'base',
-            blackbar:'fade-in',
-            colBlack:'colBlack',
-            logoPath:'animPath',
-            experience: '',
-            portfolio: 'hero-base',
-            home: '',
-            row: "row-base",
-            slide: '',
             tAnim:'tFade',
             hAnim:'hSlide',
             blackbar:'',
@@ -178,55 +279,28 @@ class Srux extends Component {
             expColTransHeader:"exp-col-trans-header",
             hScroller:'above',
         })
-        setTimeout(() => {
-            this.setState({
-                nav: '',
-                heroblock: 'base',
-                mainNav: 'closeNav',
-                navMenu: '',
-                blackbar:'gone',
-                headerTransition:'headerTransHome',
-                logoPath:'',
- 
-            })
-            navigate("/my-work")
-        }, 700);
 
     }
 
     navContactDirect = () => {
 
         this.setState({
+            
             headerTransition:'headerTransWork fade-out',
-            navMenu: 'fade-in',
-            nav: 'away',
-            heroblock: 'base',
-            blackbar:'fade-in',
-            colBlack:'colBlack',
-            logoPath:'animPath',
-            experience: '',
-            portfolio: 'hero-base',
-            home: '',
-            row: "row-base",
-            slide: '',
             tAnim:'tFade',
             hAnim:'hSlide',
             blackbar:'',
             currentIndex:7,
             currentExp:6,
+            expColTrans:"exp-col-trans",
+            expColTransHeader:"exp-col-trans-header",
+            hScroller:'above',
         })
         setTimeout(() => {
             this.setState({
-                nav: '',
-                heroblock: 'base',
-                mainNav: 'closeNav',
-                navMenu: '',
-                blackbar:'gone',
-                headerTransition:'headerTransHome',
-            })
-            navigate("/my-work")
-        }, 600);
-
+                
+        })
+    }, 600)
     }
 
     handleContactShow = (e) => {
@@ -247,22 +321,35 @@ class Srux extends Component {
 
 
 render (){
-    let {headerS,home,nav,navMenu,contact,bcState,blackbar,whiteTransForm,headerTransition,logoPath} = this.state;
-    console.log(home)
+    let {headerS,home,nav,navMenu,contact,bcState,blackbar,whiteTransForm,headerTransition,logoPath,
+        headerTransitionHome,
+        homeHeader,
+        colTwoBg,
+        vScroller,
+        hScroller,
+        stageState,
+        expColTrans,
+        expColTransHeader,
+        stageZero,
+        stageNum,
+        currentIndex,
+        stageExpNum,
+        currentExp,
+        hAnim, 
+        tAnim
+    } = this.state;
+
+        let expLineStyle = {
+            width:+currentExp+"75vw"
+        }
+
+  
 
 
 
     return (
         <>
-                  
-
-                  
-     
-        <Match path="/">
-        {props =>
-            props.match ? (
-
-                <ReactScrollWheelHandler
+            <ReactScrollWheelHandler
                 upHandler={this.prevPage}
                 downHandler={this.nextPage}
                 customStyle={{
@@ -272,10 +359,10 @@ render (){
                     // transformOrigin:"top left",
                 }}
                 >
-        <div className={"headerSection "+headerS}>
-            <div className="header">
+        <div className={"HomeHeaderSection"}>
+            <div className={"header "+homeHeader}>
                 <div className="hero">
-                    <div className={"col c1 "+headerTransition}><div className="heroblock"><div className={"heading "+home+" one"}>
+                    <div className={"col c1 "+headerTransitionHome}><div className="heroblock"><div className={"heading "+home+" one"}>
                     <svg className={logoPath} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 254.37 289.36">
                         <path className="leftPath" d="M189.19,285.14H-.84V-4.22H48C45.26.25,41.92,4.34,40.05,9c-8.25,20.66-8.34,40.63,6.18,59A53.05,53.05,0,0,0,70.65,85.25a93,93,0,0,0,14.54,3.48c8.31,1.52,16.7,2.59,25,4.15,5.28,1,10.51,2.37,15.67,3.86,8,2.31,14.5,6.93,20.14,12.92a44.66,44.66,0,0,1,9.12,14.16c4.7,11.79,4.65,23.79,1,35.8a33.24,33.24,0,0,1-18.71,21.46c-4.38,2-8.91,3.72-13.86,3.88a28.75,28.75,0,0,0-4.41.56c-2.38.46-3,1.83-1.76,3.89,1,1.66,2.32,3.16,3.49,4.74,4.47,6,8.92,12.1,13.42,18.11,3.39,4.52,6.88,9,10.26,13.47,4.4,5.88,8.7,11.84,13.11,17.71s9.05,11.83,13.53,17.77Q180.24,273.15,189.19,285.14Z" transform="translate(0.84 4.22)"/>
                         <path className="rightPath" d="M253.52,285.14h-28.2l-66.86-88.82a56.69,56.69,0,0,0,15.07-9.92c7.83-7.46,12.32-16.61,14.92-26.9,2.76-10.95,2.28-21.89-.32-32.76A65.56,65.56,0,0,0,179,104.85a55.81,55.81,0,0,0-13.25-13.22A67.89,67.89,0,0,0,139.81,79.4c-8.4-1.83-17-2.66-25.53-4-6.53-1-13.16-1.11-19.57-3.35a56.55,56.55,0,0,1-16.95-9.49,26.6,26.6,0,0,1-8.74-13,51.17,51.17,0,0,1-1-28.26A34.4,34.4,0,0,1,76.56,6.23,48.8,48.8,0,0,1,81.38,2.1c4.47-3.57,9.29-6.32,15.27-6.32H253.52Z" transform="translate(0.84 4.22)"/>
@@ -364,9 +451,8 @@ render (){
         </div>
         </ReactScrollWheelHandler>
         
-                    ) : (
                         <>
-                         {/* <MobileView> */}
+
                         <div className={"whiteTrans "+whiteTransForm}></div>
                         <div className={"navMenu "+navMenu}>
                             
@@ -377,15 +463,546 @@ render (){
                             <h2 className="z999" onClick={this.navContactDirect}>CONTACT</h2>       
                         </div>
                         </div>
-                        {/* </MobileView> */}
-                        </>
-                        )
-                    }
-        </Match>
 
-        <Router>
+                        </>
+
+
+                    <container className="pWrap">
+
+                <div className={"navMenu P " + navMenu}>
+
+                </div>
+
+                <div className={"headerSection pHeaderSection "+stageZero+" "+stageNum[currentIndex]}>
+                    <div className="header pHeader">
+                        <div className="hero">
+                            <div className={"col c1 " +headerTransition}>
+                                <div onClick={this.navHome} className={"heroblock"}>
+                                    <div className={stageNum[currentIndex]+" heading "+stageState}>
+                                        <h1>
+                                            {/* content goes here from css */}
+                                        </h1>
+                                    </div>
+                                    <div className={stageNum[currentIndex]+" description "+stageState}>
+                                        <p>
+                                            {/* content goes here from css */}
+                                        </p>
+
+                                    </div>
+                                    <div className={stageNum[currentIndex]+" workDone "+stageState}>
+                                        <h2>
+                                            {/* content goes here from css */}
+                                        </h2>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className={"col c2 "+stageNum[currentIndex]+" "+colTwoBg} >
+                                <div className="ui gone"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+               <ReactScrollWheelHandler
+                    upHandler={this.prevIndex}
+                    downHandler={this.nextIndex}
+                    className={"vScroller "+vScroller}
+                    customStyle={{
+                        // width: "100%",
+                        // height: "100vh",
+                        transform:"rotate(0deg) scale(1) translateY(-"+currentIndex+"00vh)",
+                        transformOrigin:"top left",
+                    }}
+                >
+                <section className={"pSection fade-in"}>
+                    <row className="row1">
+                        <blurb className={"eText"}>
+                            <div className={"webWork "}>
+                                <a href="//mitchellsjoinery.co.nz/" target="_blank">
+                                    <div className="webImage mj"></div>
+                                </a>
+                            </div>
+                        </blurb>
+                    </row>
+                    <row className="row2">
+                        <itemheading>
+                            <block>
+                                {/* <h1 className={"workHeading " + hAnim}>Web Work</h1> */}
+                                {/* <div class={"scroll-downs "}>
+                                    <div class="mousey">
+                                        <div class="scrollerAnim"></div>
+                                    </div>
+                                    <div class="arrow arrow-first"></div>
+                                </div> */}
+                            </block>
+
+                            <text>
+                                <imgblock className={tAnim}><img src={mjlogo}/></imgblock>
+                            </text>
+
+                        </itemheading>
+                    </row>
+                </section>
+                <section className={"pSection"}>
+                    <row className="row1">
+                        <blurb className={"eText "}>
+                            <div className={"webWork "}>
+                                <a href="//10squares.co.nz" target="_blank">
+                                    <div className="webImage tens"></div>
+                                </a>
+                            </div>
+                        </blurb>
+                    </row>
+                    <row className="row2">
+                        <itemheading>
+                            <block></block>
+                            <text>
+                                <imgblock className={tAnim}><img src={tenslogo}/></imgblock>
+                            </text>
+                          
+                        </itemheading>
+                    </row>
+                </section>
+                <section className={"pSection"}>
+                    <row className="row1">
+                        <blurb className={"eText "}>
+                            <div className={"webWork "}>
+                                <a href="//gubbagardensheds.co.nz" target="_blank">
+                                    <div className="webImage gubba"></div>
+                                </a>
+                            </div>
+                        </blurb>
+                    </row>
+                    <row className="row2">
+                        <itemheading>
+                            <block></block>
+                            <text>
+                                <imgblock className={tAnim}><img src={gubbalogo}/></imgblock>
+                            </text>
+                        
+                        </itemheading>
+                    </row>
+                </section>
+                <section className={"pSection"}>
+
+                    <row className="row1">
+                        <blurb className={"eText "}>
+                            <div className={"webWork "}>
+                                <div className="webImage py"></div>
+                            </div>
+                        </blurb>
+                    </row>
+                    <row className="row2">
+                        <itemheading>
+                            <block></block>
+                            <text>
+                                <imgblock className={tAnim}><img src={pylogo}/></imgblock>
+                            </text>
+                        </itemheading>
+                    </row>
+                </section>
+                <section className={"pSection"}>
+                    <row className="row1">
+                        <blurb className={"eText "}>
+                            <div className={"webWork "}>
+                                <div className="webImage heli"></div>
+                            </div>
+                        </blurb>
+                    </row>
+                    <row className="row2">
+                        <itemheading>
+                            <block></block>
+                        
+
+                        </itemheading>
+                    </row>
+                </section>
+                <section className={"pSection"}>
+
+                    <row className="row1">
+                        <blurb className={"eText "}>
+                            <div className={"printWork "}>
+                                <div className="webImage mglogo"></div>
+                            </div>
+                        </blurb>
+                    </row>
+                    <row className="row2">
+                        <itemheading>
+                            <block>
+                                {/* <h1 className={"skillHeading " + hAnim}>Print Work</h1> */}
+                            </block>
+                            <text>
+                                <imgblock><img src={mglogo}/></imgblock>
+                            </text>
+                
+                        </itemheading>
+                    </row>
+                </section>
+                <section className={"pSection"}>
+                    <row className="row1">
+                        <blurb className={"eText "}>
+                            <div className={"printWork "}>
+                                <div className="webImage cc"></div>
+                            </div>
+                        </blurb>
+                    </row>
+                    <row className="row2">
+                        <itemheading>
+                            <block></block>
+                            <text>
+                                <imgblock><img src={cclogo}/></imgblock>
+                            </text>
+                        
+
+                        </itemheading>
+                    </row>
+                </section>
+                <section className={"pSection"}>
+
+                    <row className="row1">
+                        <blurb className={"eText "}>
+                            <div className={"printWork "}>
+                                <div className="webImage autposter"></div>
+                            </div>
+                        </blurb>
+                    </row>
+                    <row className="row2">
+                        <itemheading>
+                            <block></block>
+                            <text>
+                                <imgblock><img src={autlogo}/></imgblock>
+                            </text>
+                       
+                        </itemheading>
+                    </row>
+                </section>
+                <section className={"pSection"}>
+
+                    <row className="row1">
+                        <blurb className={"eText "}>
+                        </blurb>
+                    </row>
+                    <row className="row2">
+                        <itemheading>
+                            <block></block>
+                            <text>
+                               
+                            </text>
+                       
+                        </itemheading>
+                    </row>
+                </section>
+                {/* <section className={"pSection"}>
+
+                    <row className="row1">
+                        <blurb className={"eText "}>
+                            <div className={"printWork "}>
+                                <div className="webImage gcpackage"></div>
+                            </div>
+                        </blurb>
+                    </row>
+                    <row className="row2">
+                        <itemheading>
+                            <block></block>
+                            <text>
+                                <imgblock><img src={gclogo}/></imgblock>
+                            </text>
+                        
+                        </itemheading>
+                    </row>
+                </section>
+                <section className={"pSection"}>
+                    <row className="row1">
+                        <blurb className={"eText "}>
+                            <div className={"printWork "}>
+                                <div className="webImage renders"></div>
+                            </div>
+                        </blurb>
+                    </row>
+                    <row className="row2">
+                        <itemheading>
+                            <block></block>
+                            <text></text>
+                          
+                        </itemheading>
+                    </row>
+                </section> */}
+                </ReactScrollWheelHandler>
+                <ReactScrollWheelHandler
+                    upHandler={this.prevExp}
+                    downHandler={this.nextExp}
+                    className={"hScroller "+hScroller}
+                    customStyle={{
+                        // width: "100%",
+                        // height: "100vh",
+                        transform:"rotate(0deg) scale(1) translateX(-"+currentExp+"00vw)",
+                        transformOrigin:"top left",
+                       
+                    }}
+                >
+                    <div className={"headerSection pHeaderSection "+stageZero}>
+                                        <div className="header pHeader">
+                                            <div className="hero">
+                                                <div className={"col c1 "+expColTrans+" headerTransExp"}>
+                                                    <div onClick={this.navHome} className={expColTransHeader+" heroblock stageExp"}>
+                                                        <div className={"heading "+stageState}>
+                                                            <h1> 
+                                                                {/* content goes here from css */}
+                                                            </h1>
+                                                            
+                                                        </div>
+                                                        <div className={" description "+stageState}>
+                                                            <p>
+                                                                {/* content goes here from css */}
+                                                            </p>
+                                                            
+
+                                                        </div>
+                                                        <div className={" workDone "+stageState}>
+                                               
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div className={"col c2 cTwoExp"}>
+                                                <div className="expLine" style={expLineStyle}></div>
+                                                <blurb className={"eText exp-col-trans"}>
+
+                                                    <text>
+                                                        <h1>Technical Knowledge</h1>
+                                                        <p>HTML / CSS, SCSS</p>
+                                                        <p>React, Jquery & Javascript</p>
+                                                        <p>WordPress CMS & Magento CMS</p>
+                                                        <p>3D Modeling & Rendering</p>
+                                                        <p>Windows & MAC OS Operator</p>
+                                                        <p>Computer Assembly Procedures</p>
+                                                        
+                                                    </text>
+                                                  
+                                                    <text>
+                                                        <h1>Web & UX Tools</h1>
+                                                        <p>Visual Studio Code</p>
+                                                        <p>Sublime</p>
+                                                        <p>Sketch</p>
+                                                        <p>Adobe XD</p>
+                                                        <p>Github</p>
+                                                        
+                                                    </text>
+                                                    </blurb>
+                                                    <blurb className="eText exp-col-trans">
+                                                    <text>
+                                                        <h1>Print & Design Tools</h1>
+                                                        <p>Adobe Photoshop</p>
+                                                        <p>Adobe Illustrator</p>
+                                                        <p>Adobe Indesign</p>
+                                                        <p>Adobe Animate</p>
+                                                        <p>Adobe Premiere</p>
+                                                        
+                                                    </text>
+                                                    </blurb>
+
+                                                    <div className="ui">
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+   
+                <section className={"eSection"}>
+
+                    <row className="eRow1">
+                        <blurb className={"eText "}>
+
+                            <text>
+                                <h1>Yoobee Web & UX Development</h1>
+                                <p>Level 6 / 2019</p>
+                                <p>This one year diploma has been a great refresher, gave a me whole range of
+                                    new skills.
+                                </p>
+                                <p>The course was an intensive full time course covering design, markup,
+                                    styling, coding, cms development as well as agile group work. I also got a great
+                                    introduction to coding, learning Javascript, Jquery & React.
+                                </p>
+                                <p>Using all these skills I am able to develop a more advanced range of web
+                                    sites & applications.</p>
+                                <p>The course was split into 4 modules over the year.<br/>UX & Web Design / Javascript, Jquery / React / CMS Development</p>
+
+                            </text>
+                        </blurb>
+                    </row>
+                    <row className="eRow2">
+                        
+                    </row>
+                </section>
+                <section className={"eSection"}>
+
+                    <row className="eRow1">
+                        <blurb className={"eText "}>
+
+                            <text>
+                                <h1>Graphic & Web Designer</h1>
+                                <p>Gubba Products Ltd / 2006 - 2018</p>
+                                <p>My main role at Gubba Products Ltd involved designing content for print and
+                                    digital. I created advertising material for Gubba Products in magazines such as
+                                    New Zealand Gardener, Weekend Gardener, and Your Home & Garden. I was also
+                                    responsible for designing their yearly catalogue for their large home and garden
+                                    product range.</p>
+                                <p>I was later assigned the job of designing and building several web sites for
+                                    specific products that needed dedicated ecommerce stores which helped drive
+                                    revenue. Most notably their Gubba Garden Sheds Website which has improved on
+                                    sales every year since and continues to improve.</p>
+                                <p>Reference Manager - David Graves / Marketing Manager - Tim Graves<br/>Ph: 09 915 9250 / 021 771 119</p>
+
+                            </text>
+                        </blurb>
+                    </row>
+                    <row className="eRow2">
+                      
+                    </row>
+                </section>
+                <section className={"eSection"}>
+
+                    <row className="eRow1">
+                        <blurb className={"eText "}>
+
+                            <text>
+                                <h1>AUT Diploma in Graphic Communication</h1>
+                                <p>Level 5 / 2008 - 2010</p>
+                                <p>The Diploma in Graphic Communication at AUT was a 2 year full time course
+                                    which involved the use and application of the following skills: Print
+                                    production, pre-press, graphic design, web design, desktop publishing, digital
+                                    imaging, computer graphics, pre production, postproduction and operating a MAC.</p>
+                                <p>Reference: David Sinfield</p>
+
+                            </text>
+                        </blurb>
+
+                    </row>
+                    <row className="eRow2">
+                        <itemheading>
+                            <block></block>
+                            <text></text>
+                            <text className="skills"></text>
+                        </itemheading>
+                    </row>
+                </section>
+
+                <section className={"eSection"}>
+
+                    <row className="eRow1">
+                        <blurb className={"eText "}>
+
+                            <text>
+                                <h1>Production Fabricator</h1>
+                                <p>2003 - 2006</p>
+                                <p>I built electrical panels for boats and recreational vehicles. I had to learn
+                                    about AC and DC electrical components; how they function, and their purpose.</p>
+                                <p>
+                                    In my last year I was promoted to team leader for a team of 4 DC assemblers,
+                                    then I moved up to team 2 before leaving.</p>
+                                <p>Reference Manager - Elaine Hodgeson</p>
+
+                            </text>
+                        </blurb>
+                    </row>
+                    <row className="eRow2">
+                        <itemheading>
+                            <block></block>
+                            <text></text>
+                            <text className="skills1"></text>
+                        </itemheading>
+                    </row>
+
+                </section>
+                <section className={"eSection"}>
+
+                    <row className="eRow1">
+                        <blurb className={"eText "}>
+
+                            <text>
+                                <h1>Multimedia & Graphic Design Certificate</h1>
+                                <p>2002 - 2003</p>
+                                <p>This was a 6 month Multimedia and graphic design course which involved a
+                                    range of design applications.
+                                </p>
+                                <p>Adobe Photoshop, Adobe Premier, Adobe Dreamweaver, Adobe Flash., Adobe
+                                    Fireworks.</p>
+
+                            </text>
+                        </blurb>
+                    </row>
+                    <row className="eRow2">
+                        <itemheading>
+                            <block>
+                                <h1 className={"skillHeading " + hAnim}>srux.web@gmail.com</h1>
+                            </block>
+                            <text></text>
+                            <text className="skills1"></text>
+                        </itemheading>
+                    </row>
+
+                </section>
+                <section className={"eSection fade-in"}>
+
+                    <row className="eRow1">
+                        <formpos>
+                            
+                            <text>
+
+                                <form
+                                    className={"myForm fade-in one"}
+                                    action="https://formspree.io/srux.web@gmail.com"
+                                    method="POST">
+                                    <h1>Get in touch</h1>
+                                    <formgrp>
+                                        <input type="text" placeholder="Name" name="name" required="required"/>
+                                        <input type="email" placeholder="Email" name="email" required="required"/>
+                                    </formgrp>
+                                    <formgrp>
+                                        <input type="text" placeholder="Subject" name="subject" required="required"/>
+                                        <input type="tel" placeholder="Phone (optional)" name="name"/>
+                                    </formgrp>
+
+                                    <textarea
+                                        className="message"
+                                        type="textarea"
+                                        placeholder="Message"
+                                        name="message"
+                                        required="required"/>
+
+                                    <input className="submit" value="Send" type="submit"/>
+                                </form>
+
+                            </text>
+                        </formpos>
+                    </row>
+                    <row className="eRow2">
+                        <itemheading>
+                            <block></block>
+                            <text></text>
+                            <text className="skills">
+                                <h1></h1>
+                            </text>
+                        </itemheading>
+                    </row>
+                </section>
+                    <section className="eSection cWhite">
+                                      
+                    </section>
+                    
+                </ReactScrollWheelHandler>
+                
+
+                {/* </scroller> */}
+                <div className={"blackBar " + blackbar}></div>
+                
+
+            </container>
+
+        {/* <Router>
            <MyWork path="/my-work" data={this.state}/>
-        </Router>
+        </Router> */}
         </>
     )
     }
