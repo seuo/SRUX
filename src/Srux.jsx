@@ -177,7 +177,6 @@ class Srux extends Component {
             setTimeout(() => {
                 this.setState({
                     headerTransitionWork: 'headerTransWork fade-in three',
-                    homeHeader: 'homeHeader slide-right',
                     stageZero: 'stageZero',
                     hScroller: '',
                     vScroller: 'slide-back-left',
@@ -269,7 +268,7 @@ class Srux extends Component {
         e.preventDefault();
 
         this.setState({
-            homeHeader: 'homeHeader slide-left',
+            homeHeader: 'homeHeader slide-out',
             headerTransitionWork: 'headerTransWork fade-in',
             heroblock: 'base',
             colBlack: 'colBlack',
@@ -286,7 +285,7 @@ class Srux extends Component {
         e.preventDefault();
 
         this.setState({
-            homeHeader: 'homeHeader slide-left',
+            homeHeader: 'homeHeader slide-out',
  
             currentWorkIndex: 7,
             currentExpIndex: 0,
