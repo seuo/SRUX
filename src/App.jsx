@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 
 import Srux from './Srux';
 
-import './App.css';
+import './App.css'; 
 
 class App extends Component {
     constructor(props) {
@@ -25,7 +25,7 @@ class App extends Component {
 
         return (
 
-            <Srux path="/" home={this.state.home} experience={this.state.experience}/>
+            <Srux path="/" home={this.state.home}/>
 
         )
     }

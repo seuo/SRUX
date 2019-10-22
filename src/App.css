@@ -37,6 +37,328 @@ p {
   display: none !important;
 }
 
+@-webkit-keyframes stageContentAnimation {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes stageContentAnimation {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.stageF-out {
+  opacity: 0;
+  -webkit-transition: ease all .2s;
+  transition: ease all .2s;
+}
+
+.stageF-out h1 {
+  -webkit-transform: translate(0, 5em);
+          transform: translate(0, 5em);
+  -webkit-transition: ease all .2s;
+  transition: ease all .2s;
+}
+
+.stageF-in {
+  opacity: 1;
+  -webkit-transition: ease all .2s;
+  transition: ease all .2s;
+}
+
+.stageZero {
+  background-image: initial;
+}
+
+.stageZero .heading {
+  height: 3em;
+  overflow: hidden;
+  border-bottom: 2px solid #fafafa !important;
+  margin-bottom: .7em !important;
+}
+
+.stageZero .heading h1 {
+  overflow: hidden;
+  font-size: 4em !important;
+  width: 9em !important;
+  margin-bottom: 0em !important;
+}
+
+.stageZero .heading h1#text {
+  margin-top: 5em;
+}
+
+.stageZero .heroblock div p {
+  font-weight: 100;
+  font-size: 1.1em !important;
+  width: 26em !important;
+  margin-left: 7em !important;
+  margin-bottom: .5em;
+  color: #cdcdcd !important;
+}
+
+.stageZero .heroblock div h2 {
+  font-size: 1.1em !important;
+  width: 9em !important;
+  line-height: 1.4;
+  margin-top: 0.5em !important;
+  margin-left: 6.9em !important;
+  padding: .7em 1em !important;
+  -webkit-clip-path: polygon(0 0, 9em 0, 100% 100%, 0% 100%);
+          clip-path: polygon(0 0, 9em 0, 100% 100%, 0% 100%);
+}
+
+.stageOne {
+  background-image: url("assets/mj-bg.jpg");
+}
+
+.stageOne .heading {
+  border-bottom: 2px solid #7bcee6 !important;
+  -webkit-transition: ease all 1.5s;
+  transition: ease all 1.5s;
+}
+
+.stageOne .heading h1::before {
+  color: #7bcee6 !important;
+  content: "Mitchells Joinery";
+}
+
+.stageOne .description p::before {
+  display: block;
+  white-space: pre-wrap;
+  content: "The team over at Mitchell's Joinery required a new brand design along with a website upgrade to a more modern and intuitive UX design. Mitchell's Joinery main focus was on the marine industry. \A \A The new logo and website required a more premium design along with a more logical catagory / navigation hirechy.";
+}
+
+.stageOne .workDone h2::before {
+  display: block;
+  white-space: pre-wrap;
+  content: "Research\A Brand Design\A Site Design";
+}
+
+.stageTwo {
+  background-image: url("assets/tensq-bg.jpg");
+}
+
+.stageTwo .heading {
+  border-bottom: 2px solid #df713e !important;
+  -webkit-transition: ease all 1.5s;
+  transition: ease all 1.5s;
+}
+
+.stageTwo .heading h1::before {
+  color: #df713e !important;
+  content: "10 Squares Cabins";
+}
+
+.stageTwo .description p::before {
+  display: block;
+  white-space: pre-wrap;
+  content: "10 Squares Cabins is a new manufacturer of small cabins & sleep-outs that fit within the 10m² council requirements. They required a brand-id along with a website showcasing the quality and process that goes into building their kitset cabins. \A \A I worked closely with the 10 Squares team to create a clean & informative website. Using renders I was able to show the customer the build process from start to finish. I continued work for them doing drafting & render work for customers who needed custom builds.";
+}
+
+.stageTwo .workDone h2::before {
+  display: block;
+  white-space: pre-wrap;
+  content: "Brand Design\A Site Design\A Rendering";
+}
+
+.stageThree {
+  background-image: url("assets/gubba-bg.jpg");
+}
+
+.stageThree .heading {
+  border-bottom: 2px solid #64a25d !important;
+  -webkit-transition: ease all 1.5s;
+  transition: ease all 1.5s;
+}
+
+.stageThree .heading h1::before {
+  color: #64a25d !important;
+  content: "Gubba Sheds";
+}
+
+.stageThree .description p::before {
+  display: block;
+  white-space: pre-wrap;
+  content: "Gubba required a site design for their garden shed range. They wanted their website to easily display their full range & the amount of customisations possible. To do this I would develop a functional shed configurator which I integrated with an online ecommerce platform. This made it possible for customers to resize, change colour, add doors, windows & add a variety of other extras, it also gave them ability to add assembly service to their order.\A \A The shed configurator has been a great point of difference between Gubba Garden Sheds & their competitors.";
+}
+
+.stageThree .workDone h2::before {
+  display: block;
+  white-space: pre-wrap;
+  content: "Site Design";
+}
+
+.stageFour {
+  background-image: url("assets/playtionery-bg.jpg");
+}
+
+.stageFour .heading {
+  border-bottom: 2px solid #26a8e0 !important;
+  -webkit-transition: ease all 1.5s;
+  transition: ease all 1.5s;
+}
+
+.stageFour .heading h1::before {
+  color: #26a8e0 !important;
+  content: "Playtionery";
+}
+
+.stageFour .description p::before {
+  display: block;
+  white-space: pre-wrap;
+  content: "The client wanted an e-commerce website that was fun and playful which would portray their stationery well.\A \A I designed the navigation to be as simple as possible making it child’s play to use and navigate. Making the buttons directly link through to the product category pages without any dropdowns made it really easy to use.";
+}
+
+.stageFour .workDone h2::before {
+  display: block;
+  white-space: pre-wrap;
+  content: "Logo\A Website";
+}
+
+.stageFive {
+  background-image: url("assets/heli-bg.jpg");
+}
+
+.stageFive .heading {
+  border-bottom: 2px solid #e1743f !important;
+  -webkit-transition: ease all 1.5s;
+  transition: ease all 1.5s;
+}
+
+.stageFive .heading h1::before {
+  color: #e1743f !important;
+  content: "Heliboard";
+}
+
+.stageFive .description p::before {
+  display: block;
+  white-space: pre-wrap;
+  content: "The team at heliboard nz needed a redesign of their website to look more modern & eye catching.\A \A They also wanted the website to be designed for results, they were getting the traffic but not the conversion rate. I came up with a solution by designing more of a one page site with the most important features at the top that customers would be interested in. By creating an eye catching call to action & displaying the instructors directly below, heliboard.nz has had a large improvement in conversions from the booking system.";
+}
+
+.stageFive .workDone h2::before {
+  display: block;
+  white-space: pre-wrap;
+  content: "Website";
+}
+
+.stageSix {
+  background-image: url("assets/mangawhai-bg.jpg");
+}
+
+.stageSix .heading {
+  border-bottom: 2px solid #e1c20f !important;
+  -webkit-transition: ease all 1.5s;
+  transition: ease all 1.5s;
+}
+
+.stageSix .heading h1::before {
+  color: #e1c20f !important;
+  content: "Mangawhai Market";
+}
+
+.stageSix .description p::before {
+  display: block;
+  white-space: pre-wrap;
+  content: "The Mangawhai Village Market needed a logo for their ever growing market. I discussed with them some design concepts & we came up with the idea to include a local bird, the Fairy Tern, which is a distinctive icon that locals will recognize.\A \A I really enjoyed working on this brand, something a bit different.";
+}
+
+.stageSix .workDone h2::before {
+  display: block;
+  white-space: pre-wrap;
+  content: "Logo Design";
+}
+
+.stageSeven {
+  background-image: url("assets/cc-bg.jpg");
+}
+
+.stageSeven .heading {
+  border-bottom: 2px solid #a32128 !important;
+  -webkit-transition: ease all 1.5s;
+  transition: ease all 1.5s;
+}
+
+.stageSeven .heading h1::before {
+  color: #a32128 !important;
+  content: "The Cabin Crew";
+}
+
+.stageSeven .description p::before {
+  display: block;
+  white-space: pre-wrap;
+  content: "The Cabin Crew team required a logo for their newly formed building company. The owner wanted a brand that meant something to him, but also had a contemporary and professional design to reflect the modern dwellings they were building.\A \A I used red & black colours to show his Maori heritage and a wave design to reflect one of his passions in life, surfing. I enjoyed working with him to come up with a design we were both happy with.";
+}
+
+.stageSeven .workDone h2::before {
+  display: block;
+  white-space: pre-wrap;
+  content: "Logo Design";
+}
+
+.stageEight {
+  background-image: url("assets/aut-bg.jpg");
+}
+
+.stageEight .heading {
+  border-bottom: 2px solid #bebc21  !important;
+  -webkit-transition: ease all 1.5s;
+  transition: ease all 1.5s;
+}
+
+.stageEight .heading h1::before {
+  color: #bebc21 !important;
+  content: "AUT Poster";
+}
+
+.stageEight .description p::before {
+  display: block;
+  white-space: pre-wrap;
+  content: "For this assignment I was required to create a poster advertising Auckland University of Technology’s Diploma in Graphic Communication. \A \A I wanted to design something that really caught the eye, was simple & not too obvious. I feel I achieved this by only using two colours & having the finer details large enough to read but small enough to take a second look.";
+}
+
+.stageEight .workDone h2::before {
+  display: block;
+  white-space: pre-wrap;
+  content: "Poster";
+}
+
+.stageExp {
+  margin-bottom: 1.7em;
+}
+
+.stageExp .heading {
+  border-bottom: 2px solid #ffffff   !important;
+  -webkit-transition: ease all 1.5s;
+  transition: ease all 1.5s;
+}
+
+.stageExp .heading h1::before {
+  color: #ffffff  !important;
+  content: "Skills & Experience";
+}
+
+.stageExp .description p::before {
+  line-height: .8;
+  display: block;
+  white-space: pre-wrap;
+}
+
+.stageExp .workDone h2::before {
+  display: block;
+  white-space: pre-wrap;
+  content: "Poster";
+}
+
 .pWrap {
   overflow: hidden;
   width: 100vw;
@@ -50,6 +372,11 @@ p {
   height: 100vh;
   width: 100vw;
   overflow: hidden;
+}
+
+.homeHeader {
+  -webkit-transition: ease all .7s;
+  transition: ease all .7s;
 }
 
 .above {
@@ -76,6 +403,10 @@ p {
           transform: rotate(0deg);
   -webkit-transform-origin: top left;
           transform-origin: top left;
+}
+
+.pageScroller {
+  overflow: hidden;
 }
 
 .work {
@@ -163,8 +494,8 @@ p {
 
 .navlist {
   margin-left: 0;
-  padding-left: 7vw;
-  width: 40em;
+  padding-left: 4vw;
+  width: 30em;
   left: 0;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -186,11 +517,11 @@ p {
 }
 
 .navlist h2 {
-  padding: 0.5em 1em;
+  padding: 1em 1em 0em 1em;
   color: #949494;
-  width: 8em;
+  width: 6em;
   font-weight: 300;
-  font-size: 1.2em;
+  font-size: 1em;
   cursor: pointer;
   -webkit-transition: ease all 0.5s;
   transition: ease all 0.5s;
@@ -387,7 +718,7 @@ itemheading text imgblock {
      border-image: url("assets/border.png") 200 fill/3.95em/0em space;
   height: 8vw;
   width: 8vw;
-  margin-top: -18vw;
+  margin-top: -33vh;
   margin-left: 4.5vw;
   padding: 1vw 1.5vw;
   -webkit-box-shadow: 1em 0 4em #3333331e;
@@ -835,11 +1166,11 @@ text.skills1 p {
   -webkit-transition: ease all 4s;
   transition: ease all 4s;
   position: absolute;
-  border-bottom: 1px solid #1a1a1a;
+  border-bottom: 2px solid #1a1a1a;
   height: 1px;
   top: 54vh;
   left: 0vw;
-  max-width: 586vw;
+  max-width: 600vw;
 }
 
 .eRow1 {
@@ -972,12 +1303,14 @@ formpos {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  padding-right: 0vw;
+  padding-left: 10vw;
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
   background-color: #191919;
-  -webkit-clip-path: polygon(3% 0, 100% 0, 100% 100%, 25% 100%);
-          clip-path: polygon(3% 0, 100% 0, 100% 100%, 25% 100%);
+  -webkit-clip-path: polygon(1% 0, 100% 0, 100% 100%, 25% 100%);
+          clip-path: polygon(1% 0, 100% 0, 100% 100%, 25% 100%);
   overflow: hidden;
 }
 
@@ -1386,8 +1719,8 @@ formpos text img {
     opacity: 1;
   }
   to {
-    -webkit-transform: translate(110vw, 0);
-            transform: translate(110vw, 0);
+    -webkit-transform: translate(140vw, 0);
+            transform: translate(140vw, 0);
     opacity: 1;
   }
 }
@@ -1399,8 +1732,8 @@ formpos text img {
     opacity: 1;
   }
   to {
-    -webkit-transform: translate(110vw, 0);
-            transform: translate(110vw, 0);
+    -webkit-transform: translate(140vw, 0);
+            transform: translate(140vw, 0);
     opacity: 1;
   }
 }
@@ -1505,6 +1838,32 @@ formpos text img {
   to {
     -webkit-transform: translate(0, -110vh);
             transform: translate(0, -110vh);
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes slidebelow {
+  from {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+    opacity: 1;
+  }
+  to {
+    -webkit-transform: translate(0, 110vh);
+            transform: translate(0, 110vh);
+    opacity: 1;
+  }
+}
+
+@keyframes slidebelow {
+  from {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+    opacity: 1;
+  }
+  to {
+    -webkit-transform: translate(0, 110vh);
+            transform: translate(0, 110vh);
     opacity: 1;
   }
 }
@@ -1832,6 +2191,15 @@ formpos text img {
           animation-duration: .7s;
 }
 
+.slide-below {
+  -webkit-animation: slidebelow ease-in 1;
+          animation: slidebelow ease-in 1;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-duration: .7s;
+          animation-duration: .7s;
+}
+
 .slide-right {
   -webkit-animation: slideright ease-in 1;
           animation: slideright ease-in 1;
@@ -1965,20 +2333,47 @@ formpos text img {
 }
 
 .whiteTrans {
-  height: 100vh;
+  pointer-events: none;
+  position: absolute;
   width: 100vw;
-  height: 0;
+  height: 100vh;
   -webkit-transition: ease all 1s;
   transition: ease all 1s;
   z-index: 9999999;
-  background-color: #191919;
-  opacity: 1;
+  background-color: white;
+  opacity: 0;
 }
 
 .whiteTransForm {
+  -webkit-transition: ease all .07s;
+  transition: ease all .07s;
+  pointer-events: none;
+  position: absolute;
   height: 100vh;
   width: 100vw;
+  opacity: 1;
+  background-color: white;
+}
+
+.contactTrans {
+  pointer-events: none;
+  position: absolute;
+  width: 100vw;
   height: 100vh;
+  right: 0;
+  -webkit-transition: ease-out all .7s;
+  transition: ease-out all .7s;
+  z-index: 9999999;
+  background-color: white;
+  opacity: 0;
+}
+
+.contactTransForm {
+  pointer-events: none;
+  right: 0;
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
   opacity: 1;
   background-color: white;
 }
@@ -1991,6 +2386,18 @@ formpos text img {
   z-index: 999999;
   -webkit-transition: ease all .7s;
   transition: ease all .7s;
+  -webkit-clip-path: polygon(1% 0, 100% 0, 100% 100%, 20% 100%);
+          clip-path: polygon(1% 0, 100% 0, 100% 100%, 20% 100%);
+  padding-left: 55em;
+  right: 0;
+}
+
+.cWhite {
+  background-color: #1a1a1a;
+  z-index: 1;
+  height: 100vh;
+  width: 100vw;
+  margin-left: 0vw;
 }
 
 @-webkit-keyframes scroll {
@@ -2308,8 +2715,8 @@ blurb {
     opacity: 1;
   }
   to {
-    -webkit-transform: translate(110vw, 0);
-            transform: translate(110vw, 0);
+    -webkit-transform: translate(140vw, 0);
+            transform: translate(140vw, 0);
     opacity: 1;
   }
 }
@@ -2362,6 +2769,19 @@ blurb {
   to {
     -webkit-transform: translate(0, -110vh);
             transform: translate(0, -110vh);
+    opacity: 1;
+  }
+}
+
+@keyframes slidebelow {
+  from {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+    opacity: 1;
+  }
+  to {
+    -webkit-transform: translate(0, 110vh);
+            transform: translate(0, 110vh);
     opacity: 1;
   }
 }
@@ -2659,6 +3079,15 @@ blurb {
           animation-duration: .7s;
 }
 
+.slide-below {
+  -webkit-animation: slidebelow ease-in 1;
+          animation: slidebelow ease-in 1;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-duration: .7s;
+          animation-duration: .7s;
+}
+
 .slide-right {
   -webkit-animation: slideright ease-in 1;
           animation: slideright ease-in 1;
@@ -2792,20 +3221,47 @@ blurb {
 }
 
 .whiteTrans {
-  height: 100vh;
+  pointer-events: none;
+  position: absolute;
   width: 100vw;
-  height: 0;
+  height: 100vh;
   -webkit-transition: ease all 1s;
   transition: ease all 1s;
   z-index: 9999999;
-  background-color: #191919;
-  opacity: 1;
+  background-color: white;
+  opacity: 0;
 }
 
 .whiteTransForm {
+  -webkit-transition: ease all .07s;
+  transition: ease all .07s;
+  pointer-events: none;
+  position: absolute;
   height: 100vh;
   width: 100vw;
+  opacity: 1;
+  background-color: white;
+}
+
+.contactTrans {
+  pointer-events: none;
+  position: absolute;
+  width: 100vw;
   height: 100vh;
+  right: 0;
+  -webkit-transition: ease-out all .7s;
+  transition: ease-out all .7s;
+  z-index: 9999999;
+  background-color: white;
+  opacity: 0;
+}
+
+.contactTransForm {
+  pointer-events: none;
+  right: 0;
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
   opacity: 1;
   background-color: white;
 }
@@ -2818,6 +3274,18 @@ blurb {
   z-index: 999999;
   -webkit-transition: ease all .7s;
   transition: ease all .7s;
+  -webkit-clip-path: polygon(1% 0, 100% 0, 100% 100%, 20% 100%);
+          clip-path: polygon(1% 0, 100% 0, 100% 100%, 20% 100%);
+  padding-left: 55em;
+  right: 0;
+}
+
+.cWhite {
+  background-color: #1a1a1a;
+  z-index: 1;
+  height: 100vh;
+  width: 100vw;
+  margin-left: 0vw;
 }
 
 @keyframes scroll {
@@ -2975,331 +3443,6 @@ blurb {
   opacity: 0;
   -webkit-transition: .7s ease all;
   transition: .7s ease all;
-}
-
-@-webkit-keyframes stageContentAnimation {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-@keyframes stageContentAnimation {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-.stageF-out {
-  opacity: 0;
-  -webkit-transition: ease all .2s;
-  transition: ease all .2s;
-}
-
-.stageF-out h1 {
-  -webkit-transform: translate(0, 5em);
-          transform: translate(0, 5em);
-  -webkit-transition: ease all .2s;
-  transition: ease all .2s;
-}
-
-.stageF-in {
-  opacity: 1;
-  -webkit-transition: ease all .2s;
-  transition: ease all .2s;
-}
-
-.stageZero {
-  background-image: initial;
-}
-
-.stageZero .heading {
-  height: 3em;
-  overflow: hidden;
-  border-bottom: 2px solid #fafafa !important;
-  margin-bottom: .7em !important;
-}
-
-.stageZero .heading h1 {
-  overflow: hidden;
-  font-size: 4em !important;
-  width: 9em !important;
-  margin-bottom: 0em !important;
-}
-
-.stageZero .heading h1#text {
-  margin-top: 5em;
-}
-
-.stageZero .heroblock div p {
-  font-weight: 100;
-  font-size: 1.1em !important;
-  width: 26em !important;
-  margin-left: 7em !important;
-  margin-bottom: .5em;
-  color: #cdcdcd !important;
-}
-
-.stageZero .heroblock div h2 {
-  font-size: 1.1em !important;
-  width: 9em !important;
-  line-height: 1.4;
-  margin-top: 0.5em !important;
-  margin-left: 6.9em !important;
-  padding: .7em 1em !important;
-  -webkit-clip-path: polygon(0 0, 9em 0, 100% 100%, 0% 100%);
-          clip-path: polygon(0 0, 9em 0, 100% 100%, 0% 100%);
-}
-
-.stageOne .heading {
-  border-bottom: 2px solid #7bcee6 !important;
-  -webkit-transition: ease all 1.5s;
-  transition: ease all 1.5s;
-}
-
-.stageOne .heading h1::before {
-  color: #7bcee6 !important;
-  content: "Mitchells Joinery";
-}
-
-.stageOne .description p::before {
-  display: block;
-  white-space: pre-wrap;
-  content: "The team over at Mitchell's Joinery required a new brand design along with a website upgrade to a more modern and intuitive UX design. Mitchell's Joinery main focus was on the marine industry. \A \A The new logo and website required a more premium design along with a more logical catagory / navigation hirechy.";
-}
-
-.stageOne .workDone h2::before {
-  display: block;
-  white-space: pre-wrap;
-  content: "Research\A Brand Design\A Site Design";
-}
-
-.stageTwo .heading {
-  border-bottom: 2px solid #df713e !important;
-  -webkit-transition: ease all 1.5s;
-  transition: ease all 1.5s;
-}
-
-.stageTwo .heading h1::before {
-  color: #df713e !important;
-  content: "10 Squares Cabins";
-}
-
-.stageTwo .description p::before {
-  display: block;
-  white-space: pre-wrap;
-  content: "10 Squares Cabins is a new manufacturer of small cabins & sleep-outs that fit within the 10m² council requirements. They required a brand-id along with a website showcasing the quality and process that goes into building their kitset cabins. \A \A I worked closely with the 10 Squares team to create a clean & informative website. Using renders I was able to show the customer the build process from start to finish. I continued work for them doing drafting & render work for customers who needed custom builds.";
-}
-
-.stageTwo .workDone h2::before {
-  display: block;
-  white-space: pre-wrap;
-  content: "Brand Design\A Site Design\A Rendering";
-}
-
-.stageThree .heading {
-  border-bottom: 2px solid #64a25d !important;
-  -webkit-transition: ease all 1.5s;
-  transition: ease all 1.5s;
-}
-
-.stageThree .heading h1::before {
-  color: #64a25d !important;
-  content: "Gubba Sheds";
-}
-
-.stageThree .description p::before {
-  display: block;
-  white-space: pre-wrap;
-  content: "Gubba required a site design for their garden shed range. They wanted their website to easily display their full range & the amount of customisations possible. To do this I would develop a functional shed configurator which I integrated with an online ecommerce platform. This made it possible for customers to resize, change colour, add doors, windows & add a variety of other extras, it also gave them ability to add assembly service to their order.\A \A The shed configurator has been a great point of difference between Gubba Garden Sheds & their competitors.";
-}
-
-.stageThree .workDone h2::before {
-  display: block;
-  white-space: pre-wrap;
-  content: "Site Design";
-}
-
-.stageFour .heading {
-  border-bottom: 2px solid #26a8e0 !important;
-  -webkit-transition: ease all 1.5s;
-  transition: ease all 1.5s;
-}
-
-.stageFour .heading h1::before {
-  color: #26a8e0 !important;
-  content: "Playtionery";
-}
-
-.stageFour .description p::before {
-  display: block;
-  white-space: pre-wrap;
-  content: "The client wanted an e-commerce website that was fun and playful which would portray their stationery well.\A \A I designed the navigation to be as simple as possible making it child’s play to use and navigate. Making the buttons directly link through to the product category pages without any dropdowns made it really easy to use.";
-}
-
-.stageFour .workDone h2::before {
-  display: block;
-  white-space: pre-wrap;
-  content: "Logo\A Website";
-}
-
-.stageFive .heading {
-  border-bottom: 2px solid #e1743f !important;
-  -webkit-transition: ease all 1.5s;
-  transition: ease all 1.5s;
-}
-
-.stageFive .heading h1::before {
-  color: #e1743f !important;
-  content: "Heliboard";
-}
-
-.stageFive .description p::before {
-  display: block;
-  white-space: pre-wrap;
-  content: "The team at heliboard nz needed a redesign of their website to look more modern & eye catching.\A \A They also wanted the website to be designed for results, they were getting the traffic but not the conversion rate. I came up with a solution by designing more of a one page site with the most important features at the top that customers would be interested in. By creating an eye catching call to action & displaying the instructors directly below, heliboard.nz has had a large improvement in conversions from the booking system.";
-}
-
-.stageFive .workDone h2::before {
-  display: block;
-  white-space: pre-wrap;
-  content: "Website";
-}
-
-.stageSix .heading {
-  border-bottom: 2px solid #e1c20f !important;
-  -webkit-transition: ease all 1.5s;
-  transition: ease all 1.5s;
-}
-
-.stageSix .heading h1::before {
-  color: #e1c20f !important;
-  content: "Mangawhai Market";
-}
-
-.stageSix .description p::before {
-  display: block;
-  white-space: pre-wrap;
-  content: "The Mangawhai Village Market needed a logo for their ever growing market. I discussed with them some design concepts & we came up with the idea to include a local bird, the Fairy Tern, which is a distinctive icon that locals will recognize.\A \A I really enjoyed working on this brand, something a bit different.";
-}
-
-.stageSix .workDone h2::before {
-  display: block;
-  white-space: pre-wrap;
-  content: "Logo Design";
-}
-
-.stageSeven .heading {
-  border-bottom: 2px solid #a32128 !important;
-  -webkit-transition: ease all 1.5s;
-  transition: ease all 1.5s;
-}
-
-.stageSeven .heading h1::before {
-  color: #a32128 !important;
-  content: "The Cabin Crew";
-}
-
-.stageSeven .description p::before {
-  display: block;
-  white-space: pre-wrap;
-  content: "The Cabin Crew team required a logo for their newly formed building company. The owner wanted a brand that meant something to him, but also had a contemporary and professional design to reflect the modern dwellings they were building.\A \A I used red & black colours to show his Maori heritage and a wave design to reflect one of his passions in life, surfing. I enjoyed working with him to come up with a design we were both happy with.";
-}
-
-.stageSeven .workDone h2::before {
-  display: block;
-  white-space: pre-wrap;
-  content: "Logo Design";
-}
-
-.stageEight .heading {
-  border-bottom: 2px solid #bebc21  !important;
-  -webkit-transition: ease all 1.5s;
-  transition: ease all 1.5s;
-}
-
-.stageEight .heading h1::before {
-  color: #bebc21 !important;
-  content: "AUT Poster";
-}
-
-.stageEight .description p::before {
-  display: block;
-  white-space: pre-wrap;
-  content: "For this assignment I was required to create a poster advertising Auckland University of Technology’s Diploma in Graphic Communication. \A \A I wanted to design something that really caught the eye, was simple & not too obvious. I feel I achieved this by only using two colours & having the finer details large enough to read but small enough to take a second look.";
-}
-
-.stageEight .workDone h2::before {
-  display: block;
-  white-space: pre-wrap;
-  content: "Poster";
-}
-
-.stageExp .heading {
-  border-bottom: 2px solid #45688c   !important;
-  -webkit-transition: ease all 1.5s;
-  transition: ease all 1.5s;
-}
-
-.stageExp .heading h1::before {
-  color: #45688c  !important;
-  content: "Skills & Experience";
-}
-
-.stageExp .description p::before {
-  line-height: .8;
-  display: block;
-  white-space: pre-wrap;
-}
-
-.stageExp .workDone h2::before {
-  display: block;
-  white-space: pre-wrap;
-  content: "Poster";
-}
-
-.stageOne {
-  background-image: url("assets/mj-bg.jpg");
-}
-
-.stageTwo {
-  background-image: url("assets/tensq-bg.jpg");
-}
-
-.stageThree {
-  background-image: url("assets/gubba-bg.jpg");
-}
-
-.stageFour {
-  background-image: url("assets/playtionery-bg.jpg");
-}
-
-.stageFive {
-  background-image: url("assets/heli-bg.jpg");
-}
-
-.stageSix {
-  background-image: url("assets/mangawhai-bg.jpg");
-}
-
-.stageSeven {
-  background-image: url("assets/cc-bg.jpg");
-}
-
-.stageEight {
-  background-image: url("assets/aut-bg.jpg");
-}
-
-.cWhite {
-  background-color: #1a1a1a;
-  z-index: 9999999999999;
-  -webkit-clip-path: polygon(0 0, 25% 0, 50% 100%, 0 100%);
-          clip-path: polygon(0 0, 25% 0, 50% 100%, 0 100%);
 }
 
 .strollTracker {
@@ -3552,6 +3695,10 @@ g#contact-border {
   height: 100vh;
 }
 
+.WorkHeaderSection {
+  height: 100vh;
+}
+
 .pheaderSection {
   height: 100vh;
   width: 100vw;
@@ -3694,6 +3841,122 @@ g#contact-border {
   overflow: visible !important;
 }
 
+.WorkHero {
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 100vh;
+  width: 100vw;
+}
+
+.WorkHero .col {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 20%;
+          flex: 1 0 20%;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-transition: ease all 1s;
+  transition: ease all 1s;
+}
+
+.WorkHero .col .heroblock {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 60%;
+          flex: 1 0 60%;
+  margin-top: 5em;
+  font-size: 1em;
+  cursor: pointer;
+}
+
+.WorkHero .col .heroblock .heading {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-image: inherit;
+}
+
+.WorkHero .col .heroblock .heading img {
+  height: 13.6em;
+}
+
+.WorkHero .col .heroblock .heading svg {
+  height: 14em;
+  width: 11.8em;
+}
+
+.WorkHero .col .heroblock .workDone {
+  background-image: initial;
+}
+
+.WorkHero .col .heroblock .description {
+  background-image: initial;
+}
+
+.WorkHero .col .heroblock h1 {
+  font-size: 5em;
+  line-height: 1em;
+  font-weight: 900;
+  margin-left: 0.2em;
+  margin-top: 0.12em;
+  margin-bottom: 0.1em;
+  color: #424242;
+  width: 4.8em;
+}
+
+.WorkHero .col .heroblock h2 {
+  font-size: 2.063em;
+  padding: 0.1em 0.3em 0.1em 0.4em;
+  background-color: #000000;
+  font-weight: 300;
+  font-style: normal;
+  color: white;
+  width: 7em;
+  margin-top: 0.25em;
+  margin-left: 6.25em;
+}
+
+.WorkHero .col .heroblock p {
+  font-weight: 100;
+  font-size: 2.375em;
+  color: rgba(0, 0, 0, 0.57);
+  width: 10em;
+  margin-left: 5.4em;
+}
+
+.WorkHero .col .ui {
+  height: 100vh;
+  overflow: visible;
+  position: fixed;
+  z-index: 999;
+}
+
+.WorkHero .col .ui svg {
+  height: 100vh;
+  margin-bottom: -.5em;
+  overflow: visible !important;
+}
+
 g#portfolio image {
   -webkit-clip-path: polygon(64.4% 0%, 99.6% 74.4%, 47% 99.2%, 1% 58%, 16% 0);
           clip-path: polygon(64.4% 0%, 99.6% 74.4%, 47% 99.2%, 1% 58%, 16% 0);
@@ -3769,6 +4032,9 @@ svg {
 }
 
 @media only screen and (max-width: 87.5em) {
+  .stageExp .heading {
+    height: 3.8em;
+  }
   .contactForm {
     margin-left: -90%;
     display: -webkit-box;
@@ -3781,15 +4047,30 @@ svg {
     width: 50em;
     padding: 1em;
     background-color: #191919;
-    border-radius: .2em;
+    border-radius: 0.2em;
     -webkit-box-shadow: 1em 0 4em #3333331e;
             box-shadow: 1em 0 4em #3333331e;
     -webkit-transform: scale(0.8);
             transform: scale(0.8);
   }
-  .webWork {
-    height: 21vw;
+  .WorkHero .col .heroblock {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-flex: 1;
+        -ms-flex: 1 0 60%;
+            flex: 1 0 60%;
     margin-top: 5em;
+    font-size: 1.1vw;
+    margin-left: 5vw;
+    cursor: pointer;
   }
   .hero .col {
     display: -webkit-box;
@@ -3818,20 +4099,13 @@ svg {
     -webkit-box-pack: start;
         -ms-flex-pack: start;
             justify-content: flex-start;
-    font-size: .9em;
+    font-size: 0.9em;
     margin-top: 50%;
   }
   .header .hero .col .heroblock .heading {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
   }
   .header .hero .col .heroblock h1 {
     margin-left: 0;
@@ -3842,6 +4116,9 @@ svg {
   .header .hero .col .heroblock h2 {
     margin-left: 0;
   }
+  .itemheading text imgblock {
+    margin-top: -36vh;
+  }
 }
 
 @media only screen and (max-width: 60em) {
@@ -3850,9 +4127,95 @@ svg {
     width: inherit;
     padding-left: 50vw;
   }
+  .itemheading text imgblock {
+    margin-top: -36vh;
+  }
+  .cTwoExp {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-flex: 1;
+        -ms-flex: 1 0 20%;
+            flex: 1 0 20%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    margin-right: 0;
+    margin-left: 3vw;
+  }
+  .cTwoExp .eText {
+    -webkit-box-flex: 0 !important;
+        -ms-flex: 0 1 25% !important;
+            flex: 0 1 25% !important;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    margin-bottom: 12vh;
+  }
+  .cTwoExp .eText text {
+    color: #191919;
+  }
+  .eRow1 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-flex: 1;
+        -ms-flex: 1 0 99%;
+            flex: 1 0 99%;
+    width: 100vw;
+    height: 100%;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .eRow1 .eText text {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 73%;
+            flex: 0 0 73%;
+    font-size: 0.5em;
+    color: #333;
+    padding: 1.5em;
+    margin: 1em;
+  }
+  .eRow2 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-flex: 1;
+        -ms-flex: 1 0 0px;
+            flex: 1 0 0;
+    width: 100vw;
+    height: 0;
+  }
+  .eRow2 itemheading {
+    z-index: 6666;
+  }
+  .eRow2 itemheading text {
+    font-size: 0.5em;
+  }
+  .eRow2 {
+    z-index: 99;
+  }
+  .navlist {
+    font-size: .82em;
+  }
 }
 
 @media only screen and (max-width: 30em) {
+  .stageExp .heading {
+    height: 3.8em;
+  }
   .scroll-downs {
     -webkit-transform: scale(0.8);
             transform: scale(0.8);
@@ -3943,15 +4306,14 @@ svg {
   }
   .contactinfo {
     position: absolute;
-    margin-bottom: 0%;
+    margin-bottom: 0;
     font-family: roboto;
     text-align: right;
     font-size: 1em;
     font-weight: 400;
-    padding-left: 0em;
+    padding-left: 0;
     width: 67%;
-    padding: .2em;
-    padding-right: 1em;
+    padding: 0.2em 1em 0.2em 0.2em;
     background-color: #ffffff;
     pointer-events: none;
     bottom: 0;
@@ -4013,8 +4375,14 @@ svg {
     margin-bottom: -.5em;
     overflow: visible;
   }
+  .homeHeader {
+    padding-left: 0;
+    right: 0;
+    -webkit-clip-path: initial;
+            clip-path: initial;
+    overflow: hidden;
+  }
   .myForm {
-    margin-left: -25em;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -4028,9 +4396,9 @@ svg {
     font-size: 2em;
     padding: 1em;
     background-color: #191919;
-    border-radius: .2em;
-    -webkit-box-shadow: 1em 0 4em #3333331e;
-            box-shadow: 1em 0 4em #3333331e;
+    border-radius: 0.2em;
+    -webkit-box-shadow: 0 0 0 #3333331e;
+            box-shadow: 0 0 0 #3333331e;
   }
   .myForm formgrp {
     display: -webkit-box;
@@ -4042,50 +4410,49 @@ svg {
             justify-content: space-between;
   }
   .myForm formgrp input {
-    padding: .8em;
+    padding: 0.8em;
     border-bottom: thin none;
     width: 11em;
-    font-size: .85em;
+    font-size: 0.85em;
     margin-bottom: 1em;
     color: #cdcdcd;
     background-color: #222;
   }
   .myForm input:focus {
     outline-offset: -2px;
-    outline: -webkit-focus-ring-color auto 0px;
+    outline: -webkit-focus-ring-color auto 0;
   }
   .myForm .message {
     height: 10vh;
     vertical-align: top;
     font-family: roboto;
-    padding: .85em;
-    font-size: .9em;
+    padding: 0.85em;
+    font-size: 0.9em;
     background-color: #222;
     color: #cdcdcd;
   }
   .myForm .message:focus {
     outline-offset: -2px;
-    outline: -webkit-focus-ring-color auto 0px;
+    outline: -webkit-focus-ring-color auto 0;
   }
   .myForm .submit {
     font-size: 1.1em;
-    padding: .3em;
-    padding-top: .4em;
+    padding: 0.4em 0.3em 0.3em;
     margin-top: 1em;
     color: #888;
     background-color: #222;
   }
   .navlist {
     margin-left: 0;
-    padding-left: 7vw;
+    padding-left: 0;
     width: 100vw;
-    right: 0;
+    left: 0;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: end;
-        -ms-flex-pack: end;
-            justify-content: flex-end;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
@@ -4095,13 +4462,15 @@ svg {
     -webkit-transition: 0.5s ease all;
     transition: 0.5s ease all;
     padding-top: 0.5em;
+    background-color: #191919;
+    padding-bottom: 0.5em;
   }
   .navlist h2 {
     padding: 0.5em 1em;
-    color: #333;
+    color: #bdbdbd;
     width: 8em;
     font-weight: 200;
-    font-size: .7em;
+    font-size: 0.65em;
     cursor: pointer;
     -webkit-transition: ease all 0.5s;
     transition: ease all 0.5s;
@@ -4137,7 +4506,10 @@ svg {
         -ms-flex-pack: start;
             justify-content: flex-start;
     font-size: 1.1em;
-    margin-top: 30vh;
+    margin-top: 60vh;
+    -webkit-box-flex: 1;
+        -ms-flex: 1 0 65%;
+            flex: 1 0 65%;
   }
   svg#Layer_1 {
     margin-right: -50vw;
@@ -4151,60 +4523,152 @@ svg {
     z-index: -1;
     bottom: 0;
   }
+  .pSection {
+    height: 100vh;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+  }
   .row1 {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-flex: 1;
-        -ms-flex: 1 0 65%;
-            flex: 1 0 65%;
+        -ms-flex: 1 0 99%;
+            flex: 1 0 99%;
     width: 100vw;
-    height: 65%;
+    height: 50%;
   }
-  .row1 blurb text {
-    font-size: .5em;
+  .webWork {
+    cursor: pointer;
+    margin-left: 0;
+    min-width: 15em;
+    width: 100vw;
+    height: 70vw;
+    margin-top: 0;
+    overflow: hidden;
+    /* padding: .7vw; */
+    background-color: #191919;
+    -o-border-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABAAAAATiCAYAAAAkkZEKAAAe50lEQ…AgQAAAAACAAAEAAAAAAnZmjkcD8Nq993N0qnbX/gLgrZn5ARhaHXn2JriRAAAAAElFTkSuQmCC") 500 fill/4vw/0.05em space;
+       border-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABAAAAATiCAYAAAAkkZEKAAAe50lEQ…AgQAAAAACAAAEAAAAAAnZmjkcD8Nq993N0qnbX/gLgrZn5ARhaHXn2JriRAAAAAElFTkSuQmCC") 500 fill/4vw/0.05em space;
+    -webkit-transition: ease all 1s;
+    transition: ease all 1s;
   }
-  .row2 {
+  blurb {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1;
+            flex: 1 1;
+  }
+  .WorkHero .col {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-flex: 1;
-        -ms-flex: 1 0 15%;
-            flex: 1 0 15%;
-    width: 100vw;
-    background-color: #191919;
-    height: 35%;
+        -ms-flex: 1 0 85%;
+            flex: 1 0 85%;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    -webkit-transition: ease all 1s;
+    transition: ease all 1s;
+    font-size: 0.5em;
+  }
+  .WorkHero .col .heroblock {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-flex: 1;
+        -ms-flex: 1 0 60%;
+            flex: 1 0 60%;
+    margin-top: 20vh;
+    font-size: 1em;
+    cursor: pointer;
+    margin-left: 0;
+  }
+  .col.c2.colBlack {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-flex: 1;
+        -ms-flex: 1 0 95%;
+            flex: 1 0 95%;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    height: 100vh;
+    -webkit-transition: ease all 1s;
+    transition: ease all 1s;
+    width: 35vw;
+    right: 0;
+    opacity: 0.07;
+    z-index: 0;
+    -webkit-clip-path: initial;
+            clip-path: initial;
+    position: absolute;
+    font-size: 0.5em;
   }
   .eRow1 {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-flex: 1;
-        -ms-flex: 1 0 65%;
-            flex: 1 0 65%;
+        -ms-flex: 1 0 99%;
+            flex: 1 0 99%;
     width: 100vw;
-    height: 65%;
+    height: 100%;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
-  .eRow1 blurb text {
-    font-size: .5em;
+  .eRow1 .eText text {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 73%;
+            flex: 0 0 73%;
+    font-size: 0.5em;
     color: #333;
+    padding: 1.5em;
+    margin: 1em;
   }
   .eRow2 {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-flex: 1;
-        -ms-flex: 1 0 15%;
-            flex: 1 0 15%;
+        -ms-flex: 1 0 0px;
+            flex: 1 0 0;
     width: 100vw;
-    background-color: #191919;
-    height: 35%;
+    height: 0;
   }
   .eRow2 itemheading {
     z-index: 6666;
   }
   .eRow2 itemheading text {
-    font-size: .5em;
+    font-size: 0.5em;
   }
   .eRow2 {
     z-index: 99;
@@ -4223,24 +4687,87 @@ svg {
             flex: 0 0 20%;
     font-size: 0.5em;
     width: 70vw;
-    position: absolute;
     bottom: 1vw;
     color: #dcdcdc;
   }
+  .cTwoExp {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-flex: 1;
+        -ms-flex: 1 0 20%;
+            flex: 1 0 20%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    margin-right: 0;
+    margin-left: 3vw;
+  }
+  .cTwoExp .eText {
+    -webkit-box-flex: 0 !important;
+        -ms-flex: 0 1 25% !important;
+            flex: 0 1 25% !important;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    margin-bottom: 12vh;
+  }
+  .cTwoExp .eText text {
+    color: #191919;
+  }
+  formpos {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding-right: 0;
+    height: 100vh;
+    width: 100vw;
+    padding-left: 0;
+    -webkit-box-flex: 1;
+        -ms-flex: 1 0 100%;
+            flex: 1 0 100%;
+    background-color: #191919;
+    -webkit-clip-path: initial;
+            clip-path: initial;
+    /* overflow: hidden; */
+  }
+  .heroblock.stageExp {
+    margin-left: -12vw !important;
+  }
+  .headerTransExp {
+    margin-left: 0 !important;
+    -webkit-transition: ease all 1s;
+    transition: ease all 1s;
+    background-color: #191919;
+    -webkit-box-flex: 1 !important;
+        -ms-flex: 1 0 62% !important;
+            flex: 1 0 62% !important;
+    -webkit-clip-path: polygon(0 0, 64% 0, 100% 100%, 0% 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+  }
   .eRow1 blurb text {
     position: relative;
-  }
-  .webWork {
-    cursor: pointer;
-    margin-left: 0;
-    min-width: 12em;
-    width: 31vw;
-    height: 21vw;
-    margin-top: 15%;
-    position: absolute;
-    overflow: hidden;
-    padding: 1.25vw;
-    max-width: 18em;
   }
   itemheading block h1 {
     font-size: 2em;
@@ -4249,13 +4776,13 @@ svg {
     margin-left: -6vw;
   }
   text.skills1 h1 {
-    font-size: .8em;
+    font-size: 0.8em;
     font-weight: 100;
     margin-left: -8em;
     display: none;
   }
   text.skills h1 {
-    font-size: .8em;
+    font-size: 0.8em;
     font-weight: 100;
     margin-left: 7em;
     display: none;
@@ -4291,15 +4818,18 @@ svg {
 @media screen and (orientation: landscape) and (min-device-width: 25em) and (max-device-width: 60em) {
   .webWork {
     cursor: pointer;
-    margin-left: 5vw;
+    margin-left: 7vw;
     min-width: 5em;
-    width: 31vw;
-    margin-top: 8%;
+    width: 35vw;
     position: absolute;
     overflow: hidden;
     padding: 1.25vw;
-    height: 21vw;
+    height: 24vw;
     max-width: 18em;
+  }
+  itemheading text imgblock {
+    margin-top: -37vh;
+    margin-left: 6vw;
   }
   blurb text {
     margin-bottom: 2vw;
@@ -4313,6 +4843,106 @@ svg {
     -webkit-box-flex: 1;
         -ms-flex: 1 0 35%;
             flex: 1 0 35%;
+  }
+  .homeHeader {
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    background-color: white;
+    z-index: 999999;
+    -webkit-transition: ease all .7s;
+    transition: ease all .7s;
+    -webkit-clip-path: initial;
+            clip-path: initial;
+    padding-left: 0vw;
+    right: 0;
+  }
+  formpos {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    padding-right: 0;
+    height: 100vh;
+    width: 100vw;
+    padding-left: 10vw;
+    padding-top: 5vw;
+    -webkit-box-flex: 1;
+        -ms-flex: 1 0 100%;
+            flex: 1 0 100%;
+    background-color: #191919;
+    -webkit-clip-path: initial;
+            clip-path: initial;
+    /* overflow: hidden; */
+  }
+  .myForm {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 100%;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    font-size: 2em;
+    padding: 1em;
+    background-color: #191919;
+    border-radius: 0.2em;
+    -webkit-box-shadow: 0 0 0 #3333331e;
+            box-shadow: 0 0 0 #3333331e;
+  }
+  .myForm formgrp {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .myForm formgrp input {
+    padding: 0.8em;
+    border-bottom: thin none;
+    width: 11em;
+    font-size: 0.85em;
+    margin-bottom: 1em;
+    color: #cdcdcd;
+    background-color: #222;
+  }
+  .myForm input:focus {
+    outline-offset: -2px;
+    outline: -webkit-focus-ring-color auto 0;
+  }
+  .myForm .message {
+    height: 10vh;
+    vertical-align: top;
+    font-family: roboto;
+    padding: 0.85em;
+    font-size: 0.9em;
+    background-color: #222;
+    color: #cdcdcd;
+  }
+  .myForm .message:focus {
+    outline-offset: -2px;
+    outline: -webkit-focus-ring-color auto 0;
+  }
+  .myForm .submit {
+    font-size: 1.1em;
+    padding: 0.4em 0.3em 0.3em;
+    margin-top: 1em;
+    color: #888;
+    background-color: #222;
   }
 }
 
@@ -4407,15 +5037,14 @@ svg {
   }
   .contactinfo {
     position: absolute;
-    margin-bottom: 0%;
+    margin-bottom: 0;
     font-family: roboto;
     text-align: right;
     font-size: 1em;
     font-weight: 400;
-    padding-left: 0em;
+    padding-left: 0;
     width: 67%;
-    padding: .2em;
-    padding-right: 1em;
+    padding: 0.2em 1em 0.2em 0.2em;
     background-color: #ffffff;
     pointer-events: none;
     bottom: 0;
@@ -4477,8 +5106,14 @@ svg {
     margin-bottom: -.5em;
     overflow: visible;
   }
+  .homeHeader {
+    padding-left: 0;
+    right: 0;
+    -webkit-clip-path: initial;
+            clip-path: initial;
+    overflow: hidden;
+  }
   .myForm {
-    margin-left: -25em;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -4492,9 +5127,9 @@ svg {
     font-size: 2em;
     padding: 1em;
     background-color: #191919;
-    border-radius: .2em;
-    -webkit-box-shadow: 1em 0 4em #3333331e;
-            box-shadow: 1em 0 4em #3333331e;
+    border-radius: 0.2em;
+    -webkit-box-shadow: 0 0 0 #3333331e;
+            box-shadow: 0 0 0 #3333331e;
   }
   .myForm formgrp {
     display: -webkit-box;
@@ -4506,50 +5141,49 @@ svg {
             justify-content: space-between;
   }
   .myForm formgrp input {
-    padding: .8em;
+    padding: 0.8em;
     border-bottom: thin none;
     width: 11em;
-    font-size: .85em;
+    font-size: 0.85em;
     margin-bottom: 1em;
     color: #cdcdcd;
     background-color: #222;
   }
   .myForm input:focus {
     outline-offset: -2px;
-    outline: -webkit-focus-ring-color auto 0px;
+    outline: -webkit-focus-ring-color auto 0;
   }
   .myForm .message {
     height: 10vh;
     vertical-align: top;
     font-family: roboto;
-    padding: .85em;
-    font-size: .9em;
+    padding: 0.85em;
+    font-size: 0.9em;
     background-color: #222;
     color: #cdcdcd;
   }
   .myForm .message:focus {
     outline-offset: -2px;
-    outline: -webkit-focus-ring-color auto 0px;
+    outline: -webkit-focus-ring-color auto 0;
   }
   .myForm .submit {
     font-size: 1.1em;
-    padding: .3em;
-    padding-top: .4em;
+    padding: 0.4em 0.3em 0.3em;
     margin-top: 1em;
     color: #888;
     background-color: #222;
   }
   .navlist {
     margin-left: 0;
-    padding-left: 7vw;
+    padding-left: 0;
     width: 100vw;
-    right: 0;
+    left: 0;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: end;
-        -ms-flex-pack: end;
-            justify-content: flex-end;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
@@ -4559,13 +5193,15 @@ svg {
     -webkit-transition: 0.5s ease all;
     transition: 0.5s ease all;
     padding-top: 0.5em;
+    background-color: #191919;
+    padding-bottom: 0.5em;
   }
   .navlist h2 {
     padding: 0.5em 1em;
-    color: #333;
+    color: #bdbdbd;
     width: 8em;
     font-weight: 200;
-    font-size: .7em;
+    font-size: 0.65em;
     cursor: pointer;
     -webkit-transition: ease all 0.5s;
     transition: ease all 0.5s;
@@ -4601,7 +5237,10 @@ svg {
         -ms-flex-pack: start;
             justify-content: flex-start;
     font-size: 1.1em;
-    margin-top: 30vh;
+    margin-top: 60vh;
+    -webkit-box-flex: 1;
+        -ms-flex: 1 0 65%;
+            flex: 1 0 65%;
   }
   svg#Layer_1 {
     margin-right: -50vw;
@@ -4615,60 +5254,155 @@ svg {
     z-index: -1;
     bottom: 0;
   }
+  .pSection {
+    height: 100vh;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+  }
   .row1 {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-flex: 1;
-        -ms-flex: 1 0 65%;
-            flex: 1 0 65%;
+        -ms-flex: 1 0 99%;
+            flex: 1 0 99%;
     width: 100vw;
-    height: 65%;
+    height: 50%;
   }
-  .row1 blurb text {
-    font-size: .5em;
+  .webWork {
+    cursor: pointer;
+    margin-left: 0;
+    min-width: 15em;
+    width: 100vw;
+    height: 70vw;
+    margin-top: 0;
+    overflow: hidden;
+    /* padding: .7vw; */
+    background-color: #191919;
+    -o-border-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABAAAAATiCAYAAAAkkZEKAAAe50lEQ…AgQAAAAACAAAEAAAAAAnZmjkcD8Nq993N0qnbX/gLgrZn5ARhaHXn2JriRAAAAAElFTkSuQmCC") 500 fill/4vw/0.05em space;
+       border-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABAAAAATiCAYAAAAkkZEKAAAe50lEQ…AgQAAAAACAAAEAAAAAAnZmjkcD8Nq993N0qnbX/gLgrZn5ARhaHXn2JriRAAAAAElFTkSuQmCC") 500 fill/4vw/0.05em space;
+    -webkit-transition: ease all 1s;
+    transition: ease all 1s;
   }
-  .row2 {
+  blurb {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1;
+            flex: 1 1;
+  }
+  .stageExp .heading {
+    height: 3.8em;
+  }
+  .WorkHero .col {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-flex: 1;
-        -ms-flex: 1 0 15%;
-            flex: 1 0 15%;
-    width: 100vw;
-    background-color: #191919;
-    height: 35%;
+        -ms-flex: 1 0 85%;
+            flex: 1 0 85%;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    -webkit-transition: ease all 1s;
+    transition: ease all 1s;
+    font-size: 0.6em;
+  }
+  .WorkHero .col .heroblock {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-flex: 1;
+        -ms-flex: 1 0 60%;
+            flex: 1 0 60%;
+    margin-top: 13vh;
+    font-size: 1.5vw;
+    cursor: pointer;
+    margin-left: 0;
+  }
+  .col.c2.colBlack {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-flex: 1;
+        -ms-flex: 1 0 95%;
+            flex: 1 0 95%;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    height: 100vh;
+    -webkit-transition: ease all 1s;
+    transition: ease all 1s;
+    width: 35vw;
+    right: 0;
+    opacity: 0.07;
+    z-index: 0;
+    -webkit-clip-path: initial;
+            clip-path: initial;
+    position: absolute;
+    font-size: 0.5em;
   }
   .eRow1 {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-flex: 1;
-        -ms-flex: 1 0 65%;
-            flex: 1 0 65%;
+        -ms-flex: 1 0 99%;
+            flex: 1 0 99%;
     width: 100vw;
-    height: 65%;
+    height: 100%;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
-  .eRow1 blurb text {
-    font-size: .5em;
+  .eRow1 .eText text {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 73%;
+            flex: 0 0 73%;
+    font-size: 0.5em;
     color: #333;
+    padding: 1.5em;
+    margin: 1em;
   }
   .eRow2 {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-flex: 1;
-        -ms-flex: 1 0 15%;
-            flex: 1 0 15%;
+        -ms-flex: 1 0 0px;
+            flex: 1 0 0;
     width: 100vw;
-    background-color: #191919;
-    height: 35%;
+    height: 0;
   }
   .eRow2 itemheading {
     z-index: 6666;
   }
   .eRow2 itemheading text {
-    font-size: .5em;
+    font-size: 0.5em;
   }
   .eRow2 {
     z-index: 99;
@@ -4687,24 +5421,87 @@ svg {
             flex: 0 0 20%;
     font-size: 0.5em;
     width: 70vw;
-    position: absolute;
     bottom: 1vw;
     color: #dcdcdc;
   }
+  .cTwoExp {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-flex: 1;
+        -ms-flex: 1 0 20%;
+            flex: 1 0 20%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    margin-right: 0;
+    margin-left: 3vw;
+  }
+  .cTwoExp .eText {
+    -webkit-box-flex: 0 !important;
+        -ms-flex: 0 1 25% !important;
+            flex: 0 1 25% !important;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    margin-bottom: 12vh;
+  }
+  .cTwoExp .eText text {
+    color: #191919;
+  }
+  formpos {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding-right: 0;
+    height: 100vh;
+    width: 100vw;
+    padding-left: 0;
+    -webkit-box-flex: 1;
+        -ms-flex: 1 0 100%;
+            flex: 1 0 100%;
+    background-color: #191919;
+    -webkit-clip-path: initial;
+            clip-path: initial;
+    /* overflow: hidden; */
+  }
+  .heroblock.stageExp {
+    margin-left: -12vw !important;
+  }
+  .headerTransExp {
+    margin-left: 0 !important;
+    -webkit-transition: ease all 1s;
+    transition: ease all 1s;
+    background-color: #191919;
+    -webkit-box-flex: 1 !important;
+        -ms-flex: 1 0 62% !important;
+            flex: 1 0 62% !important;
+    -webkit-clip-path: polygon(0 0, 64% 0, 100% 100%, 0% 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+  }
   .eRow1 blurb text {
     position: relative;
-  }
-  .webWork {
-    cursor: pointer;
-    margin-left: 0;
-    min-width: 12em;
-    height: 55%;
-    margin-top: 15%;
-    position: absolute;
-    overflow: hidden;
-    padding: 1.25vw;
-    width: 45vw;
-    max-width: 18em;
   }
   itemheading block h1 {
     font-size: 2em;
@@ -4713,13 +5510,13 @@ svg {
     margin-left: -6vw;
   }
   text.skills1 h1 {
-    font-size: .8em;
+    font-size: 0.8em;
     font-weight: 100;
     margin-left: -8em;
     display: none;
   }
   text.skills h1 {
-    font-size: .8em;
+    font-size: 0.8em;
     font-weight: 100;
     margin-left: 7em;
     display: none;

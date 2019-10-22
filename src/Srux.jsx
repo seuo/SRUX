@@ -2,7 +2,6 @@ import React, {Component} from 'react';
 import ReactScrollWheelHandler from "react-scroll-wheel-handler";
 
 import logo from './assets/srux-logo.svg';
-// import MyWork from './MyWork';
 import PortfolioImg from './assets/portfolio.png';
 import expImg from './assets/experience.png';
 import contactImg from './assets/contact.png';
@@ -13,7 +12,7 @@ import pylogo from './assets/playtionery-logo.jpg';
 import mglogo from './assets/mg-logo.jpg';
 import cclogo from './assets/cc-logo.jpg';
 import autlogo from './assets/aut.jpg';
-import gclogo from './assets/gc-logo.jpg';
+import gclogo from './assets/gc-logo.jpg'; 
 
 class Srux extends Component {
 
@@ -23,8 +22,8 @@ class Srux extends Component {
             contact: 'none',
 
             currentPage: 0,
-            currentIndex: 0,
-            currentExp: 0,
+            currentWorkIndex: 0,
+            currentExpIndex: 0,
 
             stageNum: [
                 'stageOne',
@@ -56,8 +55,9 @@ class Srux extends Component {
             colTwoBgImg: '',
 
             homeHeader: 'homeHeader',
-            headerTransitionHome: 'headerTransHome',
-            headerTransition: 'headerTransWork'
+            headerTransitionWorkHome: 'headerTransHome',
+            headerTransitionWork: 'headerTransWork',
+            contactOut:'cWhite',
         }
 
     }
@@ -69,28 +69,30 @@ class Srux extends Component {
     nextPage = () => {
 
         this.setState({
-            currentIndex: 0,
-            currentExp: 0,
+            currentWorkIndex: 0,
+            currentExpIndex: 0,
             homeHeader: 'homeHeader slide-out',
+            headerTransitionWork: 'headerTransWork ',
             stageZero: 'stageZero',
             hScroller: '',
-            vScroller: ''
+            vScroller: '',
+
         })
 
     };
 
     prevPage = (e) => {
 
-        this.setState({currentIndex: 7, currentExp: 6})
+        this.setState({currentWorkIndex: 7, currentExpIndex: 6})
         setTimeout(() => {
             this.setState({hScroller: 'above', homeHeader: 'homeHeader slide-right'})
         }, 700)
     };
 
     nextIndex = () => {
-        const {stageNum, currentIndex} = this.state;
+        const {stageNum, currentWorkIndex} = this.state;
 
-        if (currentIndex == 7) {
+        if (currentWorkIndex == 7) {
 
             setTimeout(() => {
                 this.setState({
@@ -100,8 +102,8 @@ class Srux extends Component {
                     stageState: 'stageF-out',
                     expColTrans: "exp-col-trans",
                     expColTransHeader: "exp-col-trans-header",
-                    currentExp: 0,
-                    headerTransition: 'headerTransWork fade-out',
+                    currentExpIndex: 0,
+                    headerTransitionWork: 'headerTransWork fade-out',
                     vScroller: '',
                     hScroller: 'above'
                 })
@@ -116,30 +118,35 @@ class Srux extends Component {
         setTimeout(() => {
             this.setState({
                 stageState: 'stageF-in',
-                currentIndex: currentIndex + 1
+                currentExpIndex: 0,
+                currentWorkIndex: currentWorkIndex + 1
+                
             })
         }, 200)
 
     };
 
     prevIndex = () => {
-        const {stageNum, currentIndex} = this.state;
-        if (currentIndex == 0) {
+        const {stageNum, currentWorkIndex} = this.state;
+        if (currentWorkIndex == 0) {
 
             this.setState({
-                homeHeader: 'homeHeader slide-back-down',
-                currentIndex: 0,
-                currentExp: 0,
-                headerTransitionHome: 'headerTransHome fade-in',
-                stageZero: 'stageZero fade-out-fast',
-                stageState: 'stageF-in',
-                hScroller: '',
-                vScroller: ''
+                currentWorkIndex: 0, 
+                currentExpIndex: 6,
+                headerTransitionWork: 'headerTransWork fade-out-fast',
             })
-
             setTimeout(() => {
-                this.setState({stageZero: 'stageZero'})
+                this.setState({
+                    stageZero: 'stageZero',
+                    hScroller: '',
+                    vScroller: 'slide-right',
+            })
             }, 600)
+            setTimeout(() => {
+                this.setState({
+                    hScroller: 'above', 
+                })
+            }, 1200)
 
         }
 
@@ -148,38 +155,64 @@ class Srux extends Component {
         setTimeout(() => {
             this.setState({
                 stageState: 'stageF-in',
-                currentIndex: currentIndex - 1
+                currentWorkIndex: currentWorkIndex - 1
             })
         }, 200)
 
     };
 
     nextExp = () => {
-        const {stageExpNum, currentExp} = this.state;
+        const {stageExpNum, currentExpIndex} = this.state;
 
-        if (currentExp == 6) {
+        if (currentExpIndex == 6) {
+
             this.setState({
-                homeHeader: 'homeHeader slide-back-left',
-                headerTransitionHome: 'headerTransHome fade-in',
-                headerTransition: 'headerTransWork fade-in',
-                currentIndex: 0,
-                currentExp: 0,
-                vScroller: '',
-                hScroller: 'above'
+                currentWorkIndex: 0,
+                currentExpIndex: 0,
+                contactOut:'cWhite',
+                vScroller: 'slide-right',
+                headerTransitionWork: 'headerTransWork slide-right',
+                colTwoBg:'',
             })
+            setTimeout(() => {
+                this.setState({
+                    headerTransitionWork: 'headerTransWork fade-in three',
+                    homeHeader: 'homeHeader slide-right',
+                    stageZero: 'stageZero',
+                    hScroller: '',
+                    vScroller: 'slide-back-left',
+                    colTwoBg:'colBlack',
+                })
+            }, 300)
+            setTimeout(() => {
+                this.setState({
+                    contactOut:'cWhite fade-out',
+                    headerTransitionWork: 'headerTransWork ',
+                    vScroller: '',
+                })
+            }, 1500)
+            // this.setState({
+            //     homeHeader: 'homeHeader slide-back-left',
+            //     headerTransitionWorkHome: 'headerTransHome fade-in',
+            //     headerTransitionWork: 'headerTransWork fade-in',
+            //     currentWorkIndex: 0,
+            //     currentExpIndex: 0,
+            //     vScroller: '',
+            //     hScroller: 'above'
+            // })
 
         }
 
         this.setState({
             stageState: 'stageF-in',
-            currentExp: currentExp + 1
+            currentExpIndex: currentExpIndex + 1
         });
 
     };
 
     prevExp = () => {
-        const {stageExpNum, currentExp} = this.state;
-        if (currentExp == 0) {
+        const {stageExpNum, currentExpIndex} = this.state;
+        if (currentExpIndex == 0) {
 
             this.setState({
 
@@ -187,10 +220,10 @@ class Srux extends Component {
                 expColTransHeader: "",
                 stageZero: 'stageZero',
 
-                headerTransition: 'headerTransWork fade-in',
+                headerTransitionWork: 'headerTransWork fade-in',
 
-                currentIndex: 7,
-                currentExp: 0,
+                currentWorkIndex: 7,
+                currentExpIndex: 0,
                 stageExpNum: -1,
                 hScroller: ''
             })
@@ -202,7 +235,7 @@ class Srux extends Component {
 
         this.setState({
             // stageState:'stageF-out',
-            currentExp: currentExp - 1,
+            currentExpIndex: currentExpIndex - 1,
             expColTrans: "exp-col-trans",
             expColTransHeader: "exp-col-trans-header"
         });
@@ -210,32 +243,38 @@ class Srux extends Component {
     };
 
     navHome = () => {
-        const {stageNum, currentIndex} = this.state;
+        const {stageNum, currentWorkIndex} = this.state;
 
         this.setState({
-            homeHeader: 'homeHeader slide-back-left',
-            currentIndex: 0,
-            currentExp: 0,
-            headerTransition: 'headerTransHome fade-in',
-            stageZero: 'stageZero fade-out-fast',
-            stageState: 'stageF-in'
+            homeHeader: 'homeHeader fade-in',
+            headerTransitionHome: 'headerTransHome fade-in',
+            vScroller:'slide-below',
+            hScroller:'above slide-below',
+            stageZero: 'stageZero none',
+            stageState: 'stageF-in',
+            whiteTransForm:'whiteTransForm'
         })
 
         setTimeout(() => {
-            this.setState({stageZero: 'stageZero'})
-        }, 600)
+            this.setState({
+            whiteTransForm:'',
+            stageZero: 'stageZero',
+            vScroller:'',
+            hScroller:'',
+        })
+        }, 700)
     };
 
     navMyWork = (e) => {
         e.preventDefault();
 
         this.setState({
-            homeHeader: 'homeHeader slide-out',
-            headerTransition: 'headerTransWork fade-in',
+            homeHeader: 'homeHeader slide-left',
+            headerTransitionWork: 'headerTransWork fade-in',
             heroblock: 'base',
             colBlack: 'colBlack',
-            currentIndex: 0,
-            currentExp: 0,
+            currentWorkIndex: 0,
+            currentExpIndex: 0,
             hScroller: '',
             vScroller: '',
             stageZero: 'stageZero'
@@ -247,37 +286,60 @@ class Srux extends Component {
         e.preventDefault();
 
         this.setState({
-            homeHeader: 'homeHeader slide-right',
-            headerTransition: 'headerTransWork fade-out',
-            tAnim: 'tFade',
-            hAnim: 'hSlide',
-            blackbar: '',
-            currentIndex: 7,
-            currentExp: 0,
+            homeHeader: 'homeHeader slide-left',
+ 
+            currentWorkIndex: 7,
+            currentExpIndex: 0,
+        
             expColTrans: "exp-col-trans",
             expColTransHeader: "exp-col-trans-header",
-            hScroller: 'above'
+
+            headerTransitionWork: 'headerTransWork fade-out',
+
+            stageZero:'stageZero',
+            vScroller:'slide-left',
+            hScroller:'above',
         })
+        setTimeout(() => {
+            this.setState({
+                headerTransitionWork: 'headerTransWork',
+                vScroller:'',
+            })
+        }, 1000)
 
     }
 
-    navContactDirect = () => {
-
+    navContactDirect = (e) => {
+        e.preventDefault();
         this.setState({
 
-            headerTransition: 'headerTransWork fade-out',
+
             tAnim: 'tFade',
             hAnim: 'hSlide',
             blackbar: '',
-            currentIndex: 7,
-            currentExp: 6,
+            currentWorkIndex: 7,
+            currentExpIndex: 6,
             expColTrans: "exp-col-trans",
             expColTransHeader: "exp-col-trans-header",
-            hScroller: 'above'
+
+            
+            headerTransitionWork: 'headerTransWork fade-out',
+
+            stageZero:'stageZero fade-out-fast',
+            blackTransForm:'contactTransForm',
+            vScroller:'fade-out-fast',
+            hScroller:'above',
+            eTextAnim:'none',
         })
         setTimeout(() => {
-            this.setState({})
-        }, 600)
+            this.setState({
+                stageZero:'stageZero',
+                headerTransitionWork: 'headerTransWork',
+                vScroller:'',
+                eTextAnim:'',
+                blackTransForm:'',
+            })
+        }, 1000)
     }
 
     handleContactShow = (e) => {
@@ -294,8 +356,15 @@ class Srux extends Component {
 
 
 render (){
-    let {headerS,home,nav,navMenu,contact,bcState,blackbar,whiteTransForm,headerTransition,logoPath,
-        headerTransitionHome,
+    let {home,
+        nav,
+        navMenu,
+        contact,
+        blackbar,
+        whiteTransForm,
+        headerTransitionWork,
+        logoPath,
+        headerTransitionWorkHome,
         homeHeader,
         colTwoBg,
         vScroller,
@@ -305,15 +374,17 @@ render (){
         expColTransHeader,
         stageZero,
         stageNum,
-        currentIndex,
-        stageExpNum,
-        currentExp,
+        currentWorkIndex,
+        blackTransForm,
+        currentExpIndex,
         hAnim, 
-        tAnim
+        tAnim,
+        eTextAnim,
+        contactOut
     } = this.state;
 
         let expLineStyle = {
-            width:+currentExp+"75vw"
+            width:+currentExpIndex+"75vw"
         }
 
   
@@ -323,26 +394,38 @@ render (){
     return (
         <>
             <ReactScrollWheelHandler
+                timeout={1000}
                 upHandler={this.prevPage}
                 downHandler={this.nextPage}
+                className={"pageScroller"}
                 customStyle={{
+
                     // width: "100%",
                     // height: "100vh",
-                    // transform:"rotate(-20deg) scale(1) translateY(-"+currentIndex+"00vh)",
+                    // transform:"rotate(-20deg) scale(1) translateY(-"+currentWorkIndex+"00vh)",
                     // transformOrigin:"top left",
                 }}
                 >
         <div className={"HomeHeaderSection"}>
+            
             <div className={"header "+homeHeader}>
                 <div className="hero">
-                    <div className={"col c1 "+headerTransitionHome}><div className="heroblock"><div className={"heading "+home+" one"}>
+                    <div className={"col c1 "+headerTransitionWorkHome}><div className="heroblock"><div className={"heading "+home+" one"}>
                     <svg className={logoPath} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 254.37 289.36">
                         <path className="leftPath" d="M189.19,285.14H-.84V-4.22H48C45.26.25,41.92,4.34,40.05,9c-8.25,20.66-8.34,40.63,6.18,59A53.05,53.05,0,0,0,70.65,85.25a93,93,0,0,0,14.54,3.48c8.31,1.52,16.7,2.59,25,4.15,5.28,1,10.51,2.37,15.67,3.86,8,2.31,14.5,6.93,20.14,12.92a44.66,44.66,0,0,1,9.12,14.16c4.7,11.79,4.65,23.79,1,35.8a33.24,33.24,0,0,1-18.71,21.46c-4.38,2-8.91,3.72-13.86,3.88a28.75,28.75,0,0,0-4.41.56c-2.38.46-3,1.83-1.76,3.89,1,1.66,2.32,3.16,3.49,4.74,4.47,6,8.92,12.1,13.42,18.11,3.39,4.52,6.88,9,10.26,13.47,4.4,5.88,8.7,11.84,13.11,17.71s9.05,11.83,13.53,17.77Q180.24,273.15,189.19,285.14Z" transform="translate(0.84 4.22)"/>
                         <path className="rightPath" d="M253.52,285.14h-28.2l-66.86-88.82a56.69,56.69,0,0,0,15.07-9.92c7.83-7.46,12.32-16.61,14.92-26.9,2.76-10.95,2.28-21.89-.32-32.76A65.56,65.56,0,0,0,179,104.85a55.81,55.81,0,0,0-13.25-13.22A67.89,67.89,0,0,0,139.81,79.4c-8.4-1.83-17-2.66-25.53-4-6.53-1-13.16-1.11-19.57-3.35a56.55,56.55,0,0,1-16.95-9.49,26.6,26.6,0,0,1-8.74-13,51.17,51.17,0,0,1-1-28.26A34.4,34.4,0,0,1,76.56,6.23,48.8,48.8,0,0,1,81.38,2.1c4.47-3.57,9.29-6.32,15.27-6.32H253.52Z" transform="translate(0.84 4.22)"/>
                     </svg>
 
-                    <h1>Print &<br/>Digital<br/>Design</h1></div><div className={home+" three"}><p>
-                                Creative digital &amp;<br/>brand experiences.<br/>My aim is to create <br/>functional, professional<br/>&amp; eye catching design.</p></div><div className={home+" five"}><h2>Sam Robertson</h2></div>
+                   <h1>Print &<br/>Digital<br/>Design</h1>
+                        </div>
+                        <div className={home+" three"}>
+                        <p>
+                            Creative digital &amp;<br/>brand experiences.<br/>My aim is to create
+                            <br/>functional, professional<br/>&amp; eye catching design.</p>
+                        </div>
+                        <div className={home+" five"}>
+                        <h2>Sam Robertson</h2>
+                        </div>
                     </div>
                         </div>
                             <div className="col c2">
@@ -350,7 +433,7 @@ render (){
                                     <div className={"contactinfo "+contact}><p>samrob.nz@gmail.com</p></div>
                                     <svg id="Layer_1" data-name="Layer 1" viewBox="0 0 731.4 803">
                                     <g>
-                                        <g id ="contactContainer"  onClick={this.navContactDirect}>                                     
+                                        <g id ="contactContainer"  onClick={this.prevPage}>                                     
                                         <g id="contact">
                                         <g>
                                             <image width="697" height="511" transform="translate(35.02 293.48)" href={contactImg}/>
@@ -427,6 +510,7 @@ render (){
                         <>
 
                         <div className={"whiteTrans "+whiteTransForm}></div>
+                        <div className={"blackTrans "+blackTransForm}></div>
                         <div className={"navMenu "+navMenu}>
                             
                         <div className="navlist">
@@ -446,30 +530,30 @@ render (){
 
                 </div>
 
-                <div className={"headerSection pHeaderSection "+stageZero+" "+stageNum[currentIndex]}>
-                    <div className="header pHeader">
-                        <div className="hero">
-                            <div className={"col c1 " +headerTransition}>
-                                <div onClick={this.navHome} className={"heroblock"}>
-                                    <div className={stageNum[currentIndex]+" heading "+stageState}>
+                <div className={"WorkHeaderSection pHeaderSection "+stageZero+" "+stageNum[currentWorkIndex]}>
+                    <div className="WorkHeader pHeader">
+                        <div className="WorkHero">
+                            <div className={"col c1 " +headerTransitionWork}>
+                                <div className={"heroblock"}>
+                                    <div className={stageNum[currentWorkIndex]+" heading "+stageState}>
                                         <h1>
                                             {/* content goes here from css */}
                                         </h1>
                                     </div>
-                                    <div className={stageNum[currentIndex]+" description "+stageState}>
+                                    <div className={stageNum[currentWorkIndex]+" description "+stageState}>
                                         <p>
                                             {/* content goes here from css */}
                                         </p>
 
                                     </div>
-                                    <div className={stageNum[currentIndex]+" workDone "+stageState}>
+                                    <div className={stageNum[currentWorkIndex]+" workDone "+stageState}>
                                         <h2>
                                             {/* content goes here from css */}
                                         </h2>
                                     </div>
                                 </div>
                             </div>
-                            <div className={"col c2 "+stageNum[currentIndex]+" "+colTwoBg} >
+                            <div className={"col c2 "+stageNum[currentWorkIndex]+" "+colTwoBg} >
                                 <div className="ui gone"></div>
                             </div>
                         </div>
@@ -477,13 +561,14 @@ render (){
                 </div>
                 
                <ReactScrollWheelHandler
+                    timeout={1000}
                     upHandler={this.prevIndex}
                     downHandler={this.nextIndex}
                     className={"vScroller "+vScroller}
                     customStyle={{
                         // width: "100%",
                         // height: "100vh",
-                        transform:"rotate(0deg) scale(1) translateY(-"+currentIndex+"00vh)",
+                        transform:"rotate(0deg) scale(1) translateY(-"+currentWorkIndex+"00vh)",
                         transformOrigin:"top left",
                     }}
                 >
@@ -518,7 +603,7 @@ render (){
                 </section>
                 <section className={"pSection"}>
                     <row className="row1">
-                        <blurb className={"eText "}>
+                        <blurb className={"eText "+eTextAnim}>
                             <div className={"webWork "}>
                                 <a href="//10squares.co.nz" target="_blank">
                                     <div className="webImage tens"></div>
@@ -538,7 +623,7 @@ render (){
                 </section>
                 <section className={"pSection"}>
                     <row className="row1">
-                        <blurb className={"eText "}>
+                        <blurb className={"eText "+eTextAnim}>
                             <div className={"webWork "}>
                                 <a href="//gubbagardensheds.co.nz" target="_blank">
                                     <div className="webImage gubba"></div>
@@ -559,7 +644,7 @@ render (){
                 <section className={"pSection"}>
 
                     <row className="row1">
-                        <blurb className={"eText "}>
+                        <blurb className={"eText "+eTextAnim}>
                             <div className={"webWork "}>
                                 <div className="webImage py"></div>
                             </div>
@@ -576,7 +661,7 @@ render (){
                 </section>
                 <section className={"pSection"}>
                     <row className="row1">
-                        <blurb className={"eText "}>
+                        <blurb className={"eText "+eTextAnim}>
                             <div className={"webWork "}>
                                 <div className="webImage heli"></div>
                             </div>
@@ -593,8 +678,8 @@ render (){
                 <section className={"pSection"}>
 
                     <row className="row1">
-                        <blurb className={"eText "}>
-                            <div className={"printWork "}>
+                        <blurb className={"eText "+eTextAnim}>
+                            <div className={"webWork"}>
                                 <div className="webImage mglogo"></div>
                             </div>
                         </blurb>
@@ -613,8 +698,8 @@ render (){
                 </section>
                 <section className={"pSection"}>
                     <row className="row1">
-                        <blurb className={"eText "}>
-                            <div className={"printWork "}>
+                        <blurb className={"eText "+eTextAnim}>
+                            <div className={"webWork"}>
                                 <div className="webImage cc"></div>
                             </div>
                         </blurb>
@@ -633,8 +718,8 @@ render (){
                 <section className={"pSection"}>
 
                     <row className="row1">
-                        <blurb className={"eText "}>
-                            <div className={"printWork "}>
+                        <blurb className={"eText "+eTextAnim}>
+                            <div className={"webWork"}>
                                 <div className="webImage autposter"></div>
                             </div>
                         </blurb>
@@ -652,7 +737,7 @@ render (){
                 <section className={"pSection"}>
 
                     <row className="row1">
-                        <blurb className={"eText "}>
+                        <blurb className={"eText "+eTextAnim}>
                         </blurb>
                     </row>
                     <row className="row2">
@@ -668,8 +753,8 @@ render (){
                 {/* <section className={"pSection"}>
 
                     <row className="row1">
-                        <blurb className={"eText "}>
-                            <div className={"printWork "}>
+                        <blurb className={"eText "+eTextAnim}>
+                            <div className={"webWork"}>
                                 <div className="webImage gcpackage"></div>
                             </div>
                         </blurb>
@@ -686,8 +771,8 @@ render (){
                 </section>
                 <section className={"pSection"}>
                     <row className="row1">
-                        <blurb className={"eText "}>
-                            <div className={"printWork "}>
+                        <blurb className={"eText "+eTextAnim}>
+                            <div className={"webWork"}>
                                 <div className="webImage renders"></div>
                             </div>
                         </blurb>
@@ -702,13 +787,14 @@ render (){
                 </section> */}
                 </ReactScrollWheelHandler>
                 <ReactScrollWheelHandler
+                    timeout={1000}
                     upHandler={this.prevExp}
                     downHandler={this.nextExp}
                     className={"hScroller "+hScroller}
                     customStyle={{
                         // width: "100%",
                         // height: "100vh",
-                        transform:"rotate(0deg) scale(1) translateX(-"+currentExp+"00vw)",
+                        transform:"rotate(0deg) scale(1) translateX(-"+currentExpIndex+"00vw)",
                         transformOrigin:"top left",
                        
                     }}
@@ -785,7 +871,7 @@ render (){
                 <section className={"eSection"}>
 
                     <row className="eRow1">
-                        <blurb className={"eText "}>
+                        <blurb className={"eText "+eTextAnim}>
 
                             <text>
                                 <h1>Yoobee Web & UX Development</h1>
@@ -811,7 +897,7 @@ render (){
                 <section className={"eSection"}>
 
                     <row className="eRow1">
-                        <blurb className={"eText "}>
+                        <blurb className={"eText "+eTextAnim}>
 
                             <text>
                                 <h1>Graphic & Web Designer</h1>
@@ -837,7 +923,7 @@ render (){
                 <section className={"eSection"}>
 
                     <row className="eRow1">
-                        <blurb className={"eText "}>
+                        <blurb className={"eText "+eTextAnim}>
 
                             <text>
                                 <h1>AUT Diploma in Graphic Communication</h1>
@@ -864,7 +950,7 @@ render (){
                 <section className={"eSection"}>
 
                     <row className="eRow1">
-                        <blurb className={"eText "}>
+                        <blurb className={"eText "+eTextAnim}>
 
                             <text>
                                 <h1>Production Fabricator</h1>
@@ -891,7 +977,7 @@ render (){
                 <section className={"eSection"}>
 
                     <row className="eRow1">
-                        <blurb className={"eText "}>
+                        <blurb className={"eText "+eTextAnim}>
 
                             <text>
                                 <h1>Multimedia & Graphic Design Certificate</h1>
@@ -908,7 +994,7 @@ render (){
                     <row className="eRow2">
                         <itemheading>
                             <block>
-                                <h1 className={"skillHeading " + hAnim}>srux.web@gmail.com</h1>
+                                <h1 className={"skillHeading " + hAnim}></h1>
                             </block>
                             <text></text>
                             <text className="skills1"></text>
@@ -960,7 +1046,7 @@ render (){
                         </itemheading>
                     </row>
                 </section>
-                    <section className="eSection cWhite">
+                    <section className={"eSection "+contactOut}>
                                       
                     </section>
                     

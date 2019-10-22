@@ -193,11 +193,11 @@
     animation-duration: 1s;
     transition:ease all 4s;
     position: absolute;
-    border-bottom: 1px solid #1a1a1a;
+    border-bottom: 2px solid #1a1a1a;
     height: 1px;
     top: 54vh;
     left: 0vw;
-    max-width: 586vw;
+    max-width: 600vw;
 }
 
 .eRow1 {
@@ -289,9 +289,11 @@ formpos {
     flex-direction: row;
     align-items: center;
     justify-content: center;
+    padding-right: 0vw;
+    padding-left: 10vw;
     flex: 1;
     background-color:#191919;
-    clip-path: polygon(3% 0, 100% 0, 100% 100%, 25% 100%);
+    clip-path: polygon(1% 0, 100% 0, 100% 100%, 25% 100%);
     overflow: hidden;
     block {
         display: flex;

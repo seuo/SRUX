@@ -79,7 +79,7 @@
 
 
 .stageOne {
-    
+    background-image: url("assets/mj-bg.jpg");
         .heading  {
             border-bottom:2px solid #7bcee6 !important;
             transition:ease all 1.5s;
@@ -108,7 +108,7 @@
 }
 
 .stageTwo {
-
+    background-image: url("assets/tensq-bg.jpg");
     .heading  {
         border-bottom:2px solid rgb(223, 113, 62) !important;
         transition:ease all 1.5s;
@@ -140,6 +140,7 @@
 }
 
 .stageThree {
+    background-image: url("assets/gubba-bg.jpg");
     .heading  {
         border-bottom:2px solid #64a25d !important;
         transition:ease all 1.5s;
@@ -170,7 +171,7 @@
 }
 
 .stageFour {
-
+    background-image: url("assets/playtionery-bg.jpg");
     .heading  {
         border-bottom:2px solid #26a8e0 !important;
         transition:ease all 1.5s;
@@ -202,6 +203,7 @@
 
 
 .stageFive {
+    background-image: url("assets/heli-bg.jpg");
     .heading  {
         border-bottom:2px solid #e1743f !important;
         transition:ease all 1.5s;
@@ -232,6 +234,7 @@
 }
 
 .stageSix {
+    background-image: url("assets/mangawhai-bg.jpg");
     .heading  {
         border-bottom:2px solid #e1c20f !important;
         transition:ease all 1.5s;
@@ -263,6 +266,7 @@
 
 
 .stageSeven {
+    background-image: url("assets/cc-bg.jpg");
     .heading  {
         border-bottom:2px solid #a32128 !important;
         transition:ease all 1.5s;
@@ -293,6 +297,7 @@
 }
 
 .stageEight {
+    background-image: url("assets/aut-bg.jpg");
     .heading  {
         border-bottom:2px solid #bebc21  !important;
         transition:ease all 1.5s;
@@ -323,11 +328,12 @@
 }
 
 .stageExp {
+    margin-bottom:1.7em;
     .heading  {
-        border-bottom:2px solid #45688c   !important;
+        border-bottom:2px solid #ffffff   !important;
         transition:ease all 1.5s;
         h1::before {
-            color: #45688c  !important;
+            color: #ffffff  !important;
             content: "Skills & Experience";
         }
     }
@@ -351,43 +357,3 @@
 }
 
 
-
-.stageOne {
-    background-image: url("assets/mj-bg.jpg");
-}
-
-.stageTwo {
-    background-image: url("assets/tensq-bg.jpg");
-}
-
-.stageThree {
-    background-image: url("assets/gubba-bg.jpg");
-}
-
-.stageFour {
-    background-image: url("assets/playtionery-bg.jpg");
-}
-
-.stageFive {
-    background-image: url("assets/heli-bg.jpg");
-}
-
-.stageSix {
-    background-image: url("assets/mangawhai-bg.jpg");
-}
-
-.stageSeven {
-    background-image: url("assets/cc-bg.jpg");
-}
-
-.stageEight {
-    background-image: url("assets/aut-bg.jpg");
-}
-
-
-.cWhite {
-    background-color:#1a1a1a;
-    z-index:9999999999999;
-    clip-path: polygon(0 0, 25% 0, 50% 100%, 0 100%);
-    
-}
