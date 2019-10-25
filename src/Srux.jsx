@@ -1,12 +1,26 @@
 import React, {Component} from 'react';
 import ReactScrollWheelHandler from "react-scroll-wheel-handler";
+import Tilt from 'react-tilt';
+import { Scrollbars } from 'react-custom-scrollbars';
+
+
+
 
 import logo from './assets/srux-logo.svg';
 import PortfolioImg from './assets/portfolio.png';
 import expImg from './assets/experience.png';
 import contactImg from './assets/contact.png';
+
 import mjlogo from './assets/mitchells-joinery-logo.png';
+import mjlogolines from './assets/mitchells-joinery-logo-lines.png';
+import mjlogobw from './assets/mitchells-joinery-logo-bw.png';
+
+import tenslogolines from './assets/10squares-logo-lines.png';
+import tenslogobw from './assets/10squares-logo-bw.png';
 import tenslogo from './assets/10squares-logo.png';
+
+
+
 import gubbalogo from './assets/gubba-logo.png';
 import pylogo from './assets/playtionery-logo.jpg';
 import mglogo from './assets/mg-logo.jpg';
@@ -45,6 +59,7 @@ class Srux extends Component {
             ],
 
             vScroller: '',
+            vScrollerLock:false,
             hScroller: '',
 
             stageZero: 'stageZero',
@@ -58,6 +73,8 @@ class Srux extends Component {
             headerTransitionWorkHome: 'headerTransHome',
             headerTransitionWork: 'headerTransWork',
             contactOut:'cWhite',
+
+            mobTrans:'',
         }
 
     }
@@ -354,8 +371,43 @@ class Srux extends Component {
 
 
 
+    handleVerticalLock = (e) => {
+        e.preventDefault();
+        this.setState({
+            vScrollerLock: true,
+            mobTrans:'moveLeft',
+        })
+    }
+
+    handleVerticalActive = (e) => {
+        e.preventDefault();
+        this.setState({
+            vScrollerLock: false,
+            mobTrans:'',
+        })
+    }
+
+    handleMobVerticalLock = (e) => {
+        e.preventDefault();
+        this.setState({
+            vScrollerLock: true,
+            
+        })
+    }
+
+    handleMobVerticalActive = (e) => {
+        e.preventDefault();
+        this.setState({
+            vScrollerLock: false,
+        })
+    }
+
+
+
+
 render (){
-    let {home,
+    let {
+        home,
         nav,
         navMenu,
         contact,
@@ -379,7 +431,9 @@ render (){
         hAnim, 
         tAnim,
         eTextAnim,
-        contactOut
+        contactOut,
+        vScrollerLock,
+        mobTrans
     } = this.state;
 
         let expLineStyle = {
@@ -552,7 +606,7 @@ render (){
                                     </div>
                                 </div>
                             </div>
-                            <div className={"col c2 "+stageNum[currentWorkIndex]+" "+colTwoBg} >
+                            <div className={"col c2 "+colTwoBg}>
                                 <div className="ui gone"></div>
                             </div>
                         </div>
@@ -564,6 +618,7 @@ render (){
                     upHandler={this.prevIndex}
                     downHandler={this.nextIndex}
                     className={"vScroller "+vScroller}
+                    pauseListeners={vScrollerLock}
                     customStyle={{
                         // width: "100%",
                         // height: "100vh",
@@ -571,19 +626,66 @@ render (){
                         transformOrigin:"top left",
                     }}
                 >
-                <section className={"pSection fade-in"}>
+                            <section className={"pSection fade-in"}>
                     <row className="row1">
-                        <blurb className={"eText"}>
-                            <div className={"webWork "}>
-                                <a href="//mitchellsjoinery.co.nz/" target="_blank">
-                                    <div className="webImage mj"></div>
-                                </a>
-                            </div>
-                        </blurb>
+                        <div className="item1">
+                            <Tilt
+                                className="webWorkTilt"
+                                options={{
+                                                perspective:2000,
+                                                max:25,
+                                                reverse:true,
+                                                scale: 1.25,
+                                                axis:'x',
+                                                speed:4000,
+                                                easing:"cubic-bezier(.03,.98,.52,.99)",
+                                            }}>
+                                <div
+                                    className={"webWork "}
+                                    onMouseEnter={this.handleVerticalLock}
+                                    onMouseLeave={this.handleVerticalActive}>
+                                    <Scrollbars
+                                        className="webWorkInner"
+                                        autoHideTimeout={1000}
+                                        autoHideDuration={200}>
+                                        <a href="//mitchellsjoinery.co.nz/" target="_blank">
+                                            <div className="webImage mj"></div>
+                                        </a>
+                                    </Scrollbars>
+                                </div>
+
+                            </Tilt>
+                            <Tilt
+                                className="webWorkMobileTilt"
+                                options={{
+                                                perspective:2000,
+                                                max:25,
+
+                                                scale: 1.25,
+                                                axis:'x',
+                                                speed:4000,
+                                                easing:"cubic-bezier(.03,.98,.52,.99)",
+                                            }}>
+
+                                <div
+                                    className={"webWorkMobile Tilt-inner "+mobTrans}
+                                    onMouseEnter={this.handleMobVerticalLock}
+                                    onMouseLeave={this.handleMobVerticalActive}>
+                                    <Scrollbars
+                                        className="webWorkInner"
+                                        autoHideTimeout={1000}
+                                        autoHideDuration={200}>
+                                        <a href="//mitchellsjoinery.co.nz/" target="_blank">
+                                            <div className="webImage mj-m"></div>
+                                        </a>
+                                    </Scrollbars>
+                                </div>
+                            </Tilt>
+                        </div>
                     </row>
                     <row className="row2">
-                        <itemheading>
-                            <block>
+                        
+                         
                                 {/* <h1 className={"workHeading " + hAnim}>Web Work</h1> */}
                                 {/* <div class={"scroll-downs "}>
                                     <div class="mousey">
@@ -591,33 +693,85 @@ render (){
                                     </div>
                                     <div class="arrow arrow-first"></div>
                                 </div> */}
-                            </block>
+                         
 
-                            <text>
-                                <imgblock className={tAnim}><img src={mjlogo}/></imgblock>
-                            </text>
+                            
+                                <div className={"brand "+tAnim}>
+                                    <img src={mjlogolines}/>
+                                    <img src={mjlogobw}/>
+                                    <img src={mjlogo}/>
+                                    </div>
+                             
+                            
 
-                        </itemheading>
+                       
                     </row>
                 </section>
                 <section className={"pSection"}>
-                    <row className="row1">
-                        <blurb className={"eText "+eTextAnim}>
-                            <div className={"webWork "}>
-                                <a href="//10squares.co.nz" target="_blank">
-                                    <div className="webImage tens"></div>
-                                </a>
-                            </div>
-                        </blurb>
+                <row className="row1">
+                        <div className="item1">
+                            <Tilt
+                                className="webWorkTilt"
+                                options={{
+                                                perspective:2000,
+                                                max:25,
+                                                reverse:true,
+                                                scale: 1.25,
+                                                axis:'x',
+                                                speed:4000,
+                                                easing:"cubic-bezier(.03,.98,.52,.99)",
+                                            }}>
+                                <div
+                                    className={"webWork "}
+                                    onMouseEnter={this.handleVerticalLock}
+                                    onMouseLeave={this.handleVerticalActive}>
+                                    <Scrollbars
+                                        className="webWorkInner"
+                                        autoHideTimeout={1000}
+                                        autoHideDuration={200}>
+                                        <a href="//10squares.co.nz" target="_blank">
+                                            <div className="webImage tens"></div>
+                                        </a>
+                                    </Scrollbars>
+                                </div>
+
+                            </Tilt>
+                            <Tilt
+                                className="webWorkMobileTilt"
+                                options={{
+                                                perspective:2000,
+                                                max:25,
+
+                                                scale: 1.25,
+                                                axis:'x',
+                                                speed:4000,
+                                                easing:"cubic-bezier(.03,.98,.52,.99)",
+                                            }}>
+
+                                <div
+                                    className={"webWorkMobile Tilt-inner "+mobTrans}
+                                    onMouseEnter={this.handleMobVerticalLock}
+                                    onMouseLeave={this.handleMobVerticalActive}>
+                                    <Scrollbars
+                                        className="webWorkInner"
+                                        autoHideTimeout={1000}
+                                        autoHideDuration={200}>
+                                        <a href="//mitchellsjoinery.co.nz/" target="_blank">
+                                            <div className="webImage tens-m"></div>
+                                        </a>
+                                    </Scrollbars>
+                                </div>
+                            </Tilt>
+                        </div>
                     </row>
                     <row className="row2">
-                        <itemheading>
-                            <block></block>
-                            <text>
-                                <imgblock className={tAnim}><img src={tenslogo}/></imgblock>
-                            </text>
-                          
-                        </itemheading>
+                    <div className={"brand "+tAnim}>
+
+                                    <img src={tenslogolines}/>
+                                    <img src={tenslogobw}/>
+                                    <img src={tenslogo}/>
+ 
+                                    </div>
                     </row>
                 </section>
                 <section className={"pSection"}>

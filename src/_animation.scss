@@ -399,13 +399,19 @@
 
 
 .colBlack {
-    transition: ease all .5s;
-    background-color: black;
-    background-size:cover;
-    opacity:.15;
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 100%);
-    z-index: -1;
-    flex:1 0 25% !important;
+    background-image: url("assets/groovepaper.png");
+    flex:1 0 38% !important;
+    // transition: ease all .5s;
+    // background-color: black;
+    // background-size:cover;
+    // opacity:.15;
+    // // clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 100%);
+    // z-index: -1;
+    // flex:1 0 25% !important;
+}
+
+.white-bg {
+    background-color:white;
 }
 
 .colWhite {
@@ -729,3 +735,16 @@ blurb {
     transition:.7s ease all;
 }
 
+
+
+.scroll-lock {
+    pointer-events:none;
+}
+
+.Tilt {
+    cursor: pointer;
+}
+.moveLeft {
+    transform: translate(-15vw,0) scale(.9);
+
+}

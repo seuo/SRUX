@@ -143,6 +143,11 @@ p {
   content: "Research\A Brand Design\A Site Design";
 }
 
+.item1 {
+  -webkit-transform: scale(0.75);
+          transform: scale(0.75);
+}
+
 .stageTwo {
   background-image: url("assets/tensq-bg.jpg");
 }
@@ -442,15 +447,48 @@ p {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-flex: 1;
-      -ms-flex: 1 0 99%;
-          flex: 1 0 99%;
-  width: 52vw;
-  height: 65%;
+      -ms-flex: 1 0 50%;
+          flex: 1 0 50%;
+  width: 50vw;
 }
 
 .row2 {
-  width: 52vw;
-  height: 0;
+  width: 50vw;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 30%;
+          flex: 1 0 30%;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 7em;
+  padding: 0em 3em 0em 3em;
+}
+
+.row2 .brand {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  font-size: .5vw;
+}
+
+.row2 .brand .logoLines {
+  padding: 3em;
+  background-color: #191919;
+  -o-border-image: inherit;
+     border-image: inherit;
+  border-radius: .3em;
+}
+
+.row2 .brand img {
+  width: 12em;
+  -o-border-image: url("assets/border.png") 500 fill/7em/0em space;
+     border-image: url("assets/border.png") 500 fill/7em/0em space;
+  padding: 3em;
 }
 
 .blackBar {
@@ -699,38 +737,6 @@ itemheading text {
           flex-direction: column;
 }
 
-itemheading text imgblock {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  background-color: white;
-  -o-border-image: url("assets/border.png") 200 fill/3.95em/0em space;
-     border-image: url("assets/border.png") 200 fill/3.95em/0em space;
-  height: 8vw;
-  width: 8vw;
-  margin-top: -33vh;
-  margin-left: 4.5vw;
-  padding: 1vw 1.5vw;
-  -webkit-box-shadow: 1em 0 4em #3333331e;
-          box-shadow: 1em 0 4em #3333331e;
-  z-index: 99;
-}
-
-itemheading text imgblock img {
-  width: 8vw;
-  background-color: white;
-}
-
 itemheading text p {
   padding: 1em 0.2em 0.2em;
 }
@@ -742,23 +748,92 @@ itemheading text h1 {
   margin-top: -.93em;
 }
 
+.webWorkTilt {
+  width: 40vw;
+  height: 27vw;
+  z-index: 9999;
+}
+
+.webWorkMobileTilt {
+  position: absolute;
+}
+
+.webWork:hover {
+  -webkit-box-shadow: 1em 0.3em 2em 0.4em rgba(0, 0, 0, 0.15);
+          box-shadow: 1em 0.3em 2em 0.4em rgba(0, 0, 0, 0.15);
+}
+
+.webWorkMobile:hover {
+  -webkit-box-shadow: 1.4em 0.6em 4em 0.6em rgba(0, 0, 0, 0.15);
+          box-shadow: 1.4em 0.6em 4em 0.6em rgba(0, 0, 0, 0.15);
+}
+
 .webWork {
+  -webkit-box-shadow: 0.5em 0.3em 1em 0.2em rgba(0, 0, 0, 0.25);
+          box-shadow: 0.5em 0.3em 1em 0.2em rgba(0, 0, 0, 0.25);
+  font-size: .7vw;
   cursor: pointer;
   margin-left: 0vw;
   min-width: 15em;
-  width: 40vw;
-  height: 27vw;
-  margin-top: 2vw;
-  overflow: hidden;
-  padding: .7vw;
+  width: 45vw;
+  height: 30vw;
+  margin-top: 0vw;
+  padding: 1.9em;
   background-color: #191919;
-  -o-border-image: url("assets/border.png") 500 fill/4vw/0.05em space;
-     border-image: url("assets/border.png") 500 fill/4vw/0.05em space;
+  border-radius: 2em;
   -webkit-transition: ease all 1s;
   transition: ease all 1s;
 }
 
+.webWork .webWorkInner {
+  overflow: hidden;
+  overflow-y: scroll;
+  width: 45vw;
+  height: 30vw;
+  border-radius: .3em;
+}
+
 .webWork h1 {
+  position: absolute;
+  margin-top: -1.3em;
+  font-size: 3.4em;
+  border-bottom: thin solid #cdcdcd;
+  color: #27b6c3;
+  line-height: .7em;
+}
+
+.webWorkMobile {
+  -webkit-box-shadow: 0.7em 0.6em 2em 0.4em rgba(0, 0, 0, 0.25);
+          box-shadow: 0.7em 0.6em 2em 0.4em rgba(0, 0, 0, 0.25);
+  font-size: .6vw;
+  cursor: pointer;
+  margin-left: 0vw;
+  min-width: 10em;
+  width: 18em;
+  height: 32em;
+  padding: 4.24em  1em 5em 1em;
+  margin-top: -17vw;
+  right: -11em;
+  position: absolute;
+  background-image: url("assets/mobile.png");
+  background-size: cover;
+  border-radius: 3em;
+  -webkit-transition: ease all 1s;
+  transition: ease all 1s;
+}
+
+.webWorkMobile .webWorkInner {
+  border-bottom: 2px solid black;
+  overflow: hidden;
+  overflow-y: scroll;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.webWorkMobile h1 {
   position: absolute;
   margin-top: -1.3em;
   font-size: 3.4em;
@@ -792,6 +867,12 @@ itemheading text h1 {
   line-height: .7em;
 }
 
+.item1 {
+  -webkit-transform: scale(0.7);
+          transform: scale(0.7);
+  cursor: pointer;
+}
+
 .webImage {
   height: 100%;
   width: 100%;
@@ -803,10 +884,22 @@ itemheading text h1 {
 
 .mj {
   background-image: url("assets/mj-site.jpg");
+  height: 105em;
+}
+
+.mj-m {
+  background-image: url("assets/mj-m-site.jpg");
+  height: 170em;
 }
 
 .tens {
   background-image: url("assets/10squares-site.jpg");
+  height: 350em;
+}
+
+.tens-m {
+  background-image: url("assets/10squares-site-mobile.jpg");
+  height: 235em;
 }
 
 .gubba {
@@ -2151,17 +2244,14 @@ formpos text img {
 }
 
 .colBlack {
-  -webkit-transition: ease all .5s;
-  transition: ease all .5s;
-  background-color: black;
-  background-size: cover;
-  opacity: .15;
-  -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 100%);
-          clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 100%);
-  z-index: -1;
+  background-image: url("assets/groovepaper.png");
   -webkit-box-flex: 1 !important;
-      -ms-flex: 1 0 25% !important;
-          flex: 1 0 25% !important;
+      -ms-flex: 1 0 38% !important;
+          flex: 1 0 38% !important;
+}
+
+.white-bg {
+  background-color: white;
 }
 
 .colWhite {
@@ -2585,6 +2675,19 @@ blurb {
   opacity: 0;
   -webkit-transition: .7s ease all;
   transition: .7s ease all;
+}
+
+.scroll-lock {
+  pointer-events: none;
+}
+
+.Tilt {
+  cursor: pointer;
+}
+
+.moveLeft {
+  -webkit-transform: translate(-15vw, 0) scale(0.9);
+          transform: translate(-15vw, 0) scale(0.9);
 }
 
 @keyframes fadeIn {
@@ -3039,17 +3142,14 @@ blurb {
 }
 
 .colBlack {
-  -webkit-transition: ease all .5s;
-  transition: ease all .5s;
-  background-color: black;
-  background-size: cover;
-  opacity: .15;
-  -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 100%);
-          clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 100%);
-  z-index: -1;
+  background-image: url("assets/groovepaper.png");
   -webkit-box-flex: 1 !important;
-      -ms-flex: 1 0 25% !important;
-          flex: 1 0 25% !important;
+      -ms-flex: 1 0 38% !important;
+          flex: 1 0 38% !important;
+}
+
+.white-bg {
+  background-color: white;
 }
 
 .colWhite {
@@ -3443,6 +3543,19 @@ blurb {
   opacity: 0;
   -webkit-transition: .7s ease all;
   transition: .7s ease all;
+}
+
+.scroll-lock {
+  pointer-events: none;
+}
+
+.Tilt {
+  cursor: pointer;
+}
+
+.moveLeft {
+  -webkit-transform: translate(-15vw, 0) scale(0.9);
+          transform: translate(-15vw, 0) scale(0.9);
 }
 
 .strollTracker {
@@ -3858,8 +3971,8 @@ g#contact-border {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-flex: 1;
-      -ms-flex: 1 0 20%;
-          flex: 1 0 20%;
+      -ms-flex: 1 0 30%;
+          flex: 1 0 30%;
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
