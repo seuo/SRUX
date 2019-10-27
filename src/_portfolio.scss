@@ -395,9 +395,6 @@ itemheading {
     margin-top:2vw;
     // position: absolute;
     overflow: hidden;
-    padding: .7vw;
-    background-color: #111;
-    border-image: url("assets/border.png") 500 fill / 4vw / 0.05em space;
     transition:ease all 1s;
 
     h1 {
@@ -457,6 +454,26 @@ itemheading {
     height: 235em;
 }
 
+.inapp-m {
+
+}
+
+.inapp-mobile {
+    width:100%;
+    height:100%;
+    font-size: 0.8em;
+}
+
+.tablet {
+    width: 22vw;
+    height: 30vw;
+}
+
+.wrap.container {
+
+    font-size: 0.8em;
+
+}
 
 .gubba {
     background-image: url("assets/gubba-site.jpg");

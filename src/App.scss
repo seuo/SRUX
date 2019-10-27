@@ -395,7 +395,8 @@ g#contact-border {
             justify-content: center;
             display: flex;
             flex-direction: column;
-            flex: 1 0 60%;
+            flex: 0 0 75%;
+            justify-content: flex-start;
             margin-top: 5em;
             font-size: 1em;
             cursor: pointer;

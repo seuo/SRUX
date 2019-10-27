@@ -107,10 +107,7 @@
     }
 }
 
-.item1 {
-    transform:scale(.75);
-    
-}
+
 
 .stageTwo {
     background-image: url("assets/tensq-bg.jpg");
@@ -145,13 +142,13 @@
 }
 
 .stageThree {
-    background-image: url("assets/gubba-bg.jpg");
+    // background-image: url("assets/gubba-bg.jpg");
     .heading  {
-        border-bottom:2px solid #64a25d !important;
+        border-bottom:2px solid #a68b3c !important;
         transition:ease all 1.5s;
         h1::before {
-            color: #64a25d !important;
-            content: "Gubba Sheds";
+            color: #a68b3c !important;
+            content: "In Web App";
         }
     }
 
@@ -160,7 +157,7 @@
         p::before {
             display: block;
             white-space: pre-wrap;
-            content:"Gubba required a site design for their garden shed range. They wanted their website to easily display their full range & the amount of customisations possible. To do this I would develop a functional shed configurator which I integrated with an online ecommerce platform. This made it possible for customers to resize, change colour, add doors, windows & add a variety of other extras, it also gave them ability to add assembly service to their order.\A \A The shed configurator has been a great point of difference between Gubba Garden Sheds & their competitors.";
+            content:"I designed & developed this web application for my module 3 summative assignment at Yoobee design school.\A \A I had 3 weeks to design & develop a working web app in React along with a fully functional API & Server.\A \A The projects development stages required researching, designing, & user testing of the prototype. UML diagrams for both App & Server structure were required before starting the coding process. \A \A The App has a full CRUD process from a user being able to register, login, sell, purchase, review, edit details & delete their products."
         }
     
     }
@@ -170,7 +167,7 @@
         h2::before {
             display: block;
             white-space: pre-wrap;
-            content:"Site Design"
+            content:"Design\A Server Setup \A App Development"
         }
     }
 }

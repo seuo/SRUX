@@ -143,11 +143,6 @@ p {
   content: "Research\A Brand Design\A Site Design";
 }
 
-.item1 {
-  -webkit-transform: scale(0.75);
-          transform: scale(0.75);
-}
-
 .stageTwo {
   background-image: url("assets/tensq-bg.jpg");
 }
@@ -175,31 +170,27 @@ p {
   content: "Brand Design\A Site Design\A Rendering";
 }
 
-.stageThree {
-  background-image: url("assets/gubba-bg.jpg");
-}
-
 .stageThree .heading {
-  border-bottom: 2px solid #64a25d !important;
+  border-bottom: 2px solid #a68b3c !important;
   -webkit-transition: ease all 1.5s;
   transition: ease all 1.5s;
 }
 
 .stageThree .heading h1::before {
-  color: #64a25d !important;
-  content: "Gubba Sheds";
+  color: #a68b3c !important;
+  content: "In Web App";
 }
 
 .stageThree .description p::before {
   display: block;
   white-space: pre-wrap;
-  content: "Gubba required a site design for their garden shed range. They wanted their website to easily display their full range & the amount of customisations possible. To do this I would develop a functional shed configurator which I integrated with an online ecommerce platform. This made it possible for customers to resize, change colour, add doors, windows & add a variety of other extras, it also gave them ability to add assembly service to their order.\A \A The shed configurator has been a great point of difference between Gubba Garden Sheds & their competitors.";
+  content: "I designed & developed this web application for my module 3 summative assignment at Yoobee design school.\A \A I had 3 weeks to design & develop a working web app in React along with a fully functional API & Server.\A \A The projects development stages required researching, designing, & user testing of the prototype. UML diagrams for both App & Server structure were required before starting the coding process. \A \A The App has a full CRUD process from a user being able to register, login, sell, purchase, review, edit details & delete their products.";
 }
 
 .stageThree .workDone h2::before {
   display: block;
   white-space: pre-wrap;
-  content: "Site Design";
+  content: "Design\A Server Setup \A App Development";
 }
 
 .stageFour {
@@ -850,10 +841,6 @@ itemheading text h1 {
   height: 27vw;
   margin-top: 2vw;
   overflow: hidden;
-  padding: .7vw;
-  background-color: #111;
-  -o-border-image: url("assets/border.png") 500 fill/4vw/0.05em space;
-     border-image: url("assets/border.png") 500 fill/4vw/0.05em space;
   -webkit-transition: ease all 1s;
   transition: ease all 1s;
 }
@@ -900,6 +887,21 @@ itemheading text h1 {
 .tens-m {
   background-image: url("assets/10squares-site-mobile.jpg");
   height: 235em;
+}
+
+.inapp-mobile {
+  width: 100%;
+  height: 100%;
+  font-size: 0.8em;
+}
+
+.tablet {
+  width: 22vw;
+  height: 30vw;
+}
+
+.wrap.container {
+  font-size: 0.8em;
 }
 
 .gubba {
@@ -3991,9 +3993,12 @@ g#contact-border {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-flex: 1;
-      -ms-flex: 1 0 60%;
-          flex: 1 0 60%;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 75%;
+          flex: 0 0 75%;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   margin-top: 5em;
   font-size: 1em;
   cursor: pointer;
