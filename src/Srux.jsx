@@ -24,7 +24,15 @@ import tenslogo from './assets/10squares-logo.png';
 
 import gubbalogo from './assets/gubba-logo.png';
 import pylogo from './assets/playtionery-logo.jpg';
-import mglogo from './assets/mg-logo.jpg';
+
+
+import mglogo1 from './assets/mangawhai-logo-1.png';
+import mglogo2 from './assets/mangawhai-logo-1-w.png';
+import mglogo3 from './assets/mangawhai-logo-2-w.png';
+
+import mglogo4 from './assets/mangawhai-logo-2.png';
+
+
 import cclogo from './assets/cc-logo.jpg';
 import autlogo from './assets/aut.jpg';
 import gclogo from './assets/gc-logo.jpg'; 
@@ -47,8 +55,8 @@ class Srux extends Component {
                 'stageFour',
                 'stageFive',
                 'stageSix',
-                'stageSeven',
-                'stageEight'
+                // 'stageSeven',
+                // 'stageEight'
             ],
             stageExpNum: [
                 'ExpStageOne',
@@ -64,6 +72,7 @@ class Srux extends Component {
             hScroller: '',
 
             stageZero: 'stageZero',
+            pState: 'fade-in',
 
             headerS: 'none',
 
@@ -94,6 +103,7 @@ class Srux extends Component {
             stageZero: 'stageZero',
             hScroller: '',
             vScroller: '',
+            pState:'slide-back-up',
 
         })
 
@@ -101,16 +111,16 @@ class Srux extends Component {
 
     prevPage = (e) => {
 
-        this.setState({currentWorkIndex: 7, currentExpIndex: 6})
-        setTimeout(() => {
-            this.setState({hScroller: 'above', homeHeader: 'homeHeader slide-right'})
-        }, 700)
+        // this.setState({currentWorkIndex: 7, currentExpIndex: 6})
+        // setTimeout(() => {
+        //     this.setState({hScroller: 'above', homeHeader: 'homeHeader slide-right'})
+        // }, 700)
     };
 
     nextIndex = () => {
         const {stageNum, currentWorkIndex} = this.state;
 
-        if (currentWorkIndex == 7) {
+        if (currentWorkIndex == 5) {
 
             setTimeout(() => {
                 this.setState({
@@ -149,22 +159,16 @@ class Srux extends Component {
         if (currentWorkIndex == 0) {
 
             this.setState({
-                currentWorkIndex: 0, 
-                currentExpIndex: 6,
-                headerTransitionWork: 'headerTransWork fade-out-fast',
+                homeHeader: ' homeHeader slide-back-down',
+                stageState: 'stageZero',
+                pState:'slide-down',
+                stageZero: 'stageZero fade-out',
             })
             setTimeout(() => {
                 this.setState({
-                    stageZero: 'stageZero',
-                    hScroller: '',
-                    vScroller: 'slide-right',
-            })
-            }, 600)
-            setTimeout(() => {
-                this.setState({
-                    hScroller: 'above', 
+                    pState:'fade-in',
                 })
-            }, 1200)
+            }, 600)
 
         }
 
@@ -239,7 +243,7 @@ class Srux extends Component {
 
                 headerTransitionWork: 'headerTransWork fade-in',
 
-                currentWorkIndex: 7,
+                currentWorkIndex: 5,
                 currentExpIndex: 0,
                 stageExpNum: -1,
                 hScroller: ''
@@ -438,6 +442,7 @@ render (){
         expColTransHeader,
         stageZero,
         stageNum,
+        pState,
         currentWorkIndex,
         blackTransForm,
         currentExpIndex,
@@ -639,7 +644,7 @@ render (){
                         transformOrigin:"top left",
                     }}
                 >
-                            <section className={"pSection fade-in"}>
+                            <section className={"pSection "+pState}>
                     <row className="row1">
                         <div className="item1">
                             <Tilt
@@ -709,7 +714,7 @@ render (){
                          
 
                             
-                                <div className={"brand "+tAnim}>
+                                <div className={"brand "}>
                                     <img src={mjlogolines}/>
                                     <img src={mjlogobw}/>
                                     <img src={mjlogo}/>
@@ -778,11 +783,13 @@ render (){
                         </div>
                     </row>
                     <row className="row2">
-                    <div className={"brand "+tAnim}>
-
-                                    <img src={tenslogolines}/>
-                                    <img src={tenslogobw}/>
-                                    <img src={tenslogo}/>
+                    <div className={"brand "}>
+                    <div className="logoContainer">
+                                    <img src={tenslogolines}/></div>
+                                    <div className="logoContainer">
+                                    <img src={tenslogobw}/></div>
+                                    <div className="logoContainer">
+                                    <img src={tenslogo}/></div>
  
                                     </div>
                     </row>
@@ -809,8 +816,8 @@ render (){
                                         className="webWorkInner"
                                         autoHideTimeout={1000}
                                         autoHideDuration={200}>
-                                            <a href="https://inapp-84064.firebaseapp.com/" target="_blank">
-                                                <div className="webImage inapp-m"><Iframe url="https://inapp-84064.firebaseapp.com/"
+                                            <a href="https://in-shop7.firebaseapp.com/" target="_blank">
+                                                <div className="webImage inapp-m"><Iframe url="https://in-shop7.firebaseapp.com/"
                                                   
                                                             id="inapp-mobile"
                                                             className="inapp-mobile"
@@ -855,16 +862,9 @@ render (){
                         </div>
                     </row>
                     <row className="row2">
-                        <itemheading>
-                            <block></block>
-                            <text>
-                                <imgblock className={tAnim}><img src={gubbalogo}/></imgblock>
-                            </text>
-                        
-                        </itemheading>
                     </row>
                 </section>
-                <section className={"pSection"}>
+                {/* <section className={"pSection"}>
 
                     <row className="row1">
                         <blurb className={"eText "+eTextAnim}>
@@ -881,8 +881,8 @@ render (){
                             </text>
                         </itemheading>
                     </row>
-                </section>
-                <section className={"pSection"}>
+                </section> */}
+                {/* <section className={"pSection"}>
                     <row className="row1">
                         <blurb className={"eText "+eTextAnim}>
                             <div className={"webWork "}>
@@ -897,64 +897,64 @@ render (){
 
                         </itemheading>
                     </row>
+                </section> */}
+                <section className={"pSection"}>
+
+                    <row className="row1">
+                        <blurb className={"eText "+eTextAnim}>
+                            <div className={"printWork"}>
+                                <div className="printImage mglogo"></div>
+                            </div>
+                        </blurb>
+                    </row>
+                    <row className="row2">
+                    <div className={"brand "}>
+                                    <div className="logoContainer">
+                                        <img src={mglogo2}/>
+                                    </div>
+                                    <div className="logoContainer">
+                                    <img src={mglogo3}/>
+                                    </div>
+                                    <div className="logoContainer">
+                                    <img src={mglogo4}/>
+                                    </div>
+ 
+                                 </div>
+                    </row>
+                </section>
+                <section className={"pSection"}>
+                    <row className="row1">
+                        <blurb className={"eText "+eTextAnim}>
+                            <div className={"printWork"}>
+                                <div className="printImage cc"></div>
+                            </div>
+                        </blurb>
+                    </row>
+                    <row className="row2">
+                    <div className={"brand "}>
+
+                    <div className="logoContainer">
+                                    <img src={cclogo}/>
+                                    </div>
+                                </div>
+                    </row>
                 </section>
                 <section className={"pSection"}>
 
                     <row className="row1">
                         <blurb className={"eText "+eTextAnim}>
-                            <div className={"webWork"}>
-                                <div className="webImage mglogo"></div>
+                            <div className={"printWork"}>
+                                <div className="printImage autposter"></div>
                             </div>
                         </blurb>
                     </row>
                     <row className="row2">
-                        <itemheading>
-                            <block>
-                                {/* <h1 className={"skillHeading " + hAnim}>Print Work</h1> */}
-                            </block>
-                            <text>
-                                <imgblock><img src={mglogo}/></imgblock>
-                            </text>
-                
-                        </itemheading>
-                    </row>
-                </section>
-                <section className={"pSection"}>
-                    <row className="row1">
-                        <blurb className={"eText "+eTextAnim}>
-                            <div className={"webWork"}>
-                                <div className="webImage cc"></div>
-                            </div>
-                        </blurb>
-                    </row>
-                    <row className="row2">
-                        <itemheading>
-                            <block></block>
-                            <text>
-                                <imgblock><img src={cclogo}/></imgblock>
-                            </text>
-                        
-
-                        </itemheading>
-                    </row>
-                </section>
-                <section className={"pSection"}>
-
-                    <row className="row1">
-                        <blurb className={"eText "+eTextAnim}>
-                            <div className={"webWork"}>
-                                <div className="webImage autposter"></div>
-                            </div>
-                        </blurb>
-                    </row>
-                    <row className="row2">
-                        <itemheading>
-                            <block></block>
-                            <text>
-                                <imgblock><img src={autlogo}/></imgblock>
-                            </text>
-                       
-                        </itemheading>
+                    
+                                <div className={"brand "}>
+                    <div className="logoContainer">
+                                    <img src={autlogo}/>
+                                    </div>
+                                    </div>
                     </row>
                 </section>
                 <section className={"pSection"}>
@@ -991,7 +991,7 @@ render (){
                     <div className={"headerSection pHeaderSection "+stageZero}>
                                         <div className="header pHeader">
                                             <div className="hero">
-                                                <div className={"col c1 "+expColTrans+" headerTransExp"}>
+                                                <div className={"col c1 exp-col-trans headerTransExp"}>
                                                     <div onClick={this.navHome} className={expColTransHeader+" heroblock stageExp"}>
                                                         <div className={"heading "+stageState}>
                                                             <h1> 

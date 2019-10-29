@@ -148,7 +148,7 @@
         transition:ease all 1.5s;
         h1::before {
             color: #a68b3c !important;
-            content: "In Web App";
+            content: "Shop Web App";
         }
     }
 
@@ -157,7 +157,7 @@
         p::before {
             display: block;
             white-space: pre-wrap;
-            content:"I designed & developed this web application for my module 3 summative assignment at Yoobee design school.\A \A I had 3 weeks to design & develop a working web app in React along with a fully functional API & Server.\A \A The projects development stages required researching, designing, & user testing of the prototype. UML diagrams for both App & Server structure were required before starting the coding process. \A \A The App has a full CRUD process from a user being able to register, login, sell, purchase, review, edit details & delete their products."
+            content:"I designed & developed this web application for my module 3 summative assignment at Yoobee Design School.\A \A We had 3 weeks to design & develop a working web app in React along with a fully functional API & Server.\A The projects development stages required researching, designing, & user testing of the prototype.\A UML diagrams for both App & Server structure were also required before starting the coding process. \A \A The App has a full CRUD process from a user being able to register, login, sell, purchase, review, edit details & delete their products."
         }
     
     }
@@ -173,69 +173,6 @@
 }
 
 .stageFour {
-    background-image: url("assets/playtionery-bg.jpg");
-    .heading  {
-        border-bottom:2px solid #26a8e0 !important;
-        transition:ease all 1.5s;
-        h1::before {
-            color: #26a8e0 !important;
-            content: "Playtionery";
-        }
-    }
-
-    .description  {
-
-        p::before {
-            display: block;
-            white-space: pre-wrap;
-            content:"The client wanted an e-commerce website that was fun and playful which would portray their stationery well.\A \A I designed the navigation to be as simple as possible making it child’s play to use and navigate. Making the buttons directly link through to the product category pages without any dropdowns made it really easy to use.";
-        }
-    
-    }
-
-    .workDone  {
-
-        h2::before {
-            display: block;
-            white-space: pre-wrap;
-            content:"Logo\A Website"
-        }
-    }
-}
-
-
-.stageFive {
-    background-image: url("assets/heli-bg.jpg");
-    .heading  {
-        border-bottom:2px solid #e1743f !important;
-        transition:ease all 1.5s;
-        h1::before {
-            color: #e1743f !important;
-            content: "Heliboard";
-        }
-    }
-
-    .description  {
-
-        p::before {
-            display: block;
-            white-space: pre-wrap;
-            content:"The team at heliboard nz needed a redesign of their website to look more modern & eye catching.\A \A They also wanted the website to be designed for results, they were getting the traffic but not the conversion rate. I came up with a solution by designing more of a one page site with the most important features at the top that customers would be interested in. By creating an eye catching call to action & displaying the instructors directly below, heliboard.nz has had a large improvement in conversions from the booking system.";
-        }
-    
-    }
-
-    .workDone  {
-
-        h2::before {
-            display: block;
-            white-space: pre-wrap;
-            content:"Website"
-        }
-    }
-}
-
-.stageSix {
     background-image: url("assets/mangawhai-bg.jpg");
     .heading  {
         border-bottom:2px solid #e1c20f !important;
@@ -264,10 +201,39 @@
             content:"Logo Design"
         }
     }
+
+    // background-image: url("assets/playtionery-bg.jpg");
+    // .heading  {
+    //     border-bottom:2px solid #26a8e0 !important;
+    //     transition:ease all 1.5s;
+    //     h1::before {
+    //         color: #26a8e0 !important;
+    //         content: "Playtionery";
+    //     }
+    // }
+
+    // .description  {
+
+    //     p::before {
+    //         display: block;
+    //         white-space: pre-wrap;
+    //         content:"The client wanted an e-commerce website that was fun and playful which would portray their stationery well.\A \A I designed the navigation to be as simple as possible making it child’s play to use and navigate. Making the buttons directly link through to the product category pages without any dropdowns made it really easy to use.";
+    //     }
+    
+    // }
+
+    // .workDone  {
+
+    //     h2::before {
+    //         display: block;
+    //         white-space: pre-wrap;
+    //         content:"Logo\A Website"
+    //     }
+    // }
 }
 
 
-.stageSeven {
+.stageFive {
     background-image: url("assets/cc-bg.jpg");
     .heading  {
         border-bottom:2px solid #a32128 !important;
@@ -296,9 +262,37 @@
             content:"Logo Design"
         }
     }
+    // background-image: url("assets/heli-bg.jpg");
+    // .heading  {
+    //     border-bottom:2px solid #e1743f !important;
+    //     transition:ease all 1.5s;
+    //     h1::before {
+    //         color: #e1743f !important;
+    //         content: "Heliboard";
+    //     }
+    // }
+
+    // .description  {
+
+    //     p::before {
+    //         display: block;
+    //         white-space: pre-wrap;
+    //         content:"The team at heliboard nz needed a redesign of their website to look more modern & eye catching.\A \A They also wanted the website to be designed for results, they were getting the traffic but not the conversion rate. I came up with a solution by designing more of a one page site with the most important features at the top that customers would be interested in. By creating an eye catching call to action & displaying the instructors directly below, heliboard.nz has had a large improvement in conversions from the booking system.";
+    //     }
+    
+    // }
+
+    // .workDone  {
+
+    //     h2::before {
+    //         display: block;
+    //         white-space: pre-wrap;
+    //         content:"Website"
+    //     }
+    // }
 }
 
-.stageEight {
+.stageSix {
     background-image: url("assets/aut-bg.jpg");
     .heading  {
         border-bottom:2px solid #bebc21  !important;
@@ -327,6 +321,15 @@
             content:"Poster"
         }
     }
+}
+
+
+.stageSeven {
+ 
+}
+
+.stageEight {
+    
 }
 
 .stageExp {

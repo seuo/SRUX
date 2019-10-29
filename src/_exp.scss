@@ -148,7 +148,10 @@
 
 
 .heroblock.stageExp {
-    margin-left:-26vw !important;
+    width:100%;
+    h1 {
+        padding-left:7vw;
+    }
 }
 
 .headerTransExp {
@@ -156,8 +159,8 @@
     margin-left:0vw !important;
     transition:ease all 1s;
     background-color: #191919;
-    flex: 1 0 73% !important;
-    clip-path: polygon(0 0, 64% 0, 100% 100%, 0% 100%);
+    flex: 1 0 51% !important;
+    // clip-path: polygon(0 0, 64% 0, 100% 100%, 0% 100%);
     p {
         color: rgba(250, 250, 250, 1) !important;
         transition:ease all 1s;

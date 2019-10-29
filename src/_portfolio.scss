@@ -90,12 +90,22 @@
             border-radius: .3em;
         }
 
+        .logoContainer {
+            width: 12vw;
+            height: 12vw;
 
-        img {
-            width:12em;
-            border-image: url("assets/border.png") 500 fill / 7em / 0em space;
-            padding:3em;
+            img {
+                width: 70%;
+               
+                object-fit: cover; /*magic*/
+                border-image: url("assets/border.png") 500 fill / 7em / 0em space;
+                padding:3em;
+                display: block;
+                // width: auto;
+                // height: auto;
+            }
         }
+
     }
 }
 
@@ -390,12 +400,11 @@ itemheading {
     cursor: pointer;
     margin-left: 0vw;
     min-width: 15em;
-    width: 40vw;
+    width: 44vw;
     height: 27vw;
-    margin-top:2vw;
-    // position: absolute;
+    margin-top: 2vw;
     overflow: hidden;
-    transition:ease all 1s;
+    transition: ease all 1s;
 
     h1 {
         position: absolute;
@@ -430,6 +439,16 @@ itemheading {
     background-size: cover;
     background-position: center top;
 }
+
+.printImage {
+
+    height: 100%;
+    width: 100%;
+    opacity: 1;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
 
 .mj {
     background-image: url("assets/mj-site.jpg");
@@ -488,7 +507,7 @@ itemheading {
 }
 
 .mglogo {
-    background-image: url("assets/mangawhai-fm.jpg");
+    background-image: url("assets/mangawhai-logo-1.png");
 }
 
 .cc {

@@ -175,7 +175,29 @@
 
 @keyframes slidedown {
     from {
+        transform: translate(0, 0vh);
+        opacity:1;
+    }
+    to {
+        transform: translate(0, 110vh);
+        opacity:1;
+    }
+}
+
+@keyframes slidebackdown {
+    from {
         transform: translate(0, -110vh);
+        opacity:1;
+    }
+    to {
+        transform: translate(0, 0vh);
+        opacity:1;
+    }
+}
+
+@keyframes slidebackup {
+    from {
+        transform: translate(0, 110vh);
         opacity:1;
     }
     to {
@@ -461,6 +483,18 @@
 }
 
 .slide-back-down {
+    animation: slidebackdown ease-in 1;
+    animation-fill-mode: forwards;
+    animation-duration: .7s;
+}
+
+.slide-back-up {
+    animation: slidebackup ease-in 1;
+    animation-fill-mode: forwards;
+    animation-duration: .7s;
+}
+
+.slide-down {
     animation: slidedown ease-in 1;
     animation-fill-mode: forwards;
     animation-duration: .7s;

@@ -178,13 +178,13 @@ p {
 
 .stageThree .heading h1::before {
   color: #a68b3c !important;
-  content: "In Web App";
+  content: "Shop Web App";
 }
 
 .stageThree .description p::before {
   display: block;
   white-space: pre-wrap;
-  content: "I designed & developed this web application for my module 3 summative assignment at Yoobee design school.\A \A I had 3 weeks to design & develop a working web app in React along with a fully functional API & Server.\A \A The projects development stages required researching, designing, & user testing of the prototype. UML diagrams for both App & Server structure were required before starting the coding process. \A \A The App has a full CRUD process from a user being able to register, login, sell, purchase, review, edit details & delete their products.";
+  content: "I designed & developed this web application for my module 3 summative assignment at Yoobee Design School.\A \A We had 3 weeks to design & develop a working web app in React along with a fully functional API & Server.\A The projects development stages required researching, designing, & user testing of the prototype.\A UML diagrams for both App & Server structure were also required before starting the coding process. \A \A The App has a full CRUD process from a user being able to register, login, sell, purchase, review, edit details & delete their products.";
 }
 
 .stageThree .workDone h2::before {
@@ -194,135 +194,81 @@ p {
 }
 
 .stageFour {
-  background-image: url("assets/playtionery-bg.jpg");
-}
-
-.stageFour .heading {
-  border-bottom: 2px solid #26a8e0 !important;
-  -webkit-transition: ease all 1.5s;
-  transition: ease all 1.5s;
-}
-
-.stageFour .heading h1::before {
-  color: #26a8e0 !important;
-  content: "Playtionery";
-}
-
-.stageFour .description p::before {
-  display: block;
-  white-space: pre-wrap;
-  content: "The client wanted an e-commerce website that was fun and playful which would portray their stationery well.\A \A I designed the navigation to be as simple as possible making it child’s play to use and navigate. Making the buttons directly link through to the product category pages without any dropdowns made it really easy to use.";
-}
-
-.stageFour .workDone h2::before {
-  display: block;
-  white-space: pre-wrap;
-  content: "Logo\A Website";
-}
-
-.stageFive {
-  background-image: url("assets/heli-bg.jpg");
-}
-
-.stageFive .heading {
-  border-bottom: 2px solid #e1743f !important;
-  -webkit-transition: ease all 1.5s;
-  transition: ease all 1.5s;
-}
-
-.stageFive .heading h1::before {
-  color: #e1743f !important;
-  content: "Heliboard";
-}
-
-.stageFive .description p::before {
-  display: block;
-  white-space: pre-wrap;
-  content: "The team at heliboard nz needed a redesign of their website to look more modern & eye catching.\A \A They also wanted the website to be designed for results, they were getting the traffic but not the conversion rate. I came up with a solution by designing more of a one page site with the most important features at the top that customers would be interested in. By creating an eye catching call to action & displaying the instructors directly below, heliboard.nz has had a large improvement in conversions from the booking system.";
-}
-
-.stageFive .workDone h2::before {
-  display: block;
-  white-space: pre-wrap;
-  content: "Website";
-}
-
-.stageSix {
   background-image: url("assets/mangawhai-bg.jpg");
 }
 
-.stageSix .heading {
+.stageFour .heading {
   border-bottom: 2px solid #e1c20f !important;
   -webkit-transition: ease all 1.5s;
   transition: ease all 1.5s;
 }
 
-.stageSix .heading h1::before {
+.stageFour .heading h1::before {
   color: #e1c20f !important;
   content: "Mangawhai Market";
 }
 
-.stageSix .description p::before {
+.stageFour .description p::before {
   display: block;
   white-space: pre-wrap;
   content: "The Mangawhai Village Market needed a logo for their ever growing market. I discussed with them some design concepts & we came up with the idea to include a local bird, the Fairy Tern, which is a distinctive icon that locals will recognize.\A \A I really enjoyed working on this brand, something a bit different.";
 }
 
-.stageSix .workDone h2::before {
+.stageFour .workDone h2::before {
   display: block;
   white-space: pre-wrap;
   content: "Logo Design";
 }
 
-.stageSeven {
+.stageFive {
   background-image: url("assets/cc-bg.jpg");
 }
 
-.stageSeven .heading {
+.stageFive .heading {
   border-bottom: 2px solid #a32128 !important;
   -webkit-transition: ease all 1.5s;
   transition: ease all 1.5s;
 }
 
-.stageSeven .heading h1::before {
+.stageFive .heading h1::before {
   color: #a32128 !important;
   content: "The Cabin Crew";
 }
 
-.stageSeven .description p::before {
+.stageFive .description p::before {
   display: block;
   white-space: pre-wrap;
   content: "The Cabin Crew team required a logo for their newly formed building company. The owner wanted a brand that meant something to him, but also had a contemporary and professional design to reflect the modern dwellings they were building.\A \A I used red & black colours to show his Maori heritage and a wave design to reflect one of his passions in life, surfing. I enjoyed working with him to come up with a design we were both happy with.";
 }
 
-.stageSeven .workDone h2::before {
+.stageFive .workDone h2::before {
   display: block;
   white-space: pre-wrap;
   content: "Logo Design";
 }
 
-.stageEight {
+.stageSix {
   background-image: url("assets/aut-bg.jpg");
 }
 
-.stageEight .heading {
+.stageSix .heading {
   border-bottom: 2px solid #bebc21  !important;
   -webkit-transition: ease all 1.5s;
   transition: ease all 1.5s;
 }
 
-.stageEight .heading h1::before {
+.stageSix .heading h1::before {
   color: #bebc21 !important;
   content: "AUT Poster";
 }
 
-.stageEight .description p::before {
+.stageSix .description p::before {
   display: block;
   white-space: pre-wrap;
   content: "For this assignment I was required to create a poster advertising Auckland University of Technology’s Diploma in Graphic Communication. \A \A I wanted to design something that really caught the eye, was simple & not too obvious. I feel I achieved this by only using two colours & having the finer details large enough to read but small enough to take a second look.";
 }
 
-.stageEight .workDone h2::before {
+.stageSix .workDone h2::before {
   display: block;
   white-space: pre-wrap;
   content: "Poster";
@@ -475,11 +421,20 @@ p {
   border-radius: .3em;
 }
 
-.row2 .brand img {
-  width: 12em;
+.row2 .brand .logoContainer {
+  width: 12vw;
+  height: 12vw;
+}
+
+.row2 .brand .logoContainer img {
+  width: 70%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  /*magic*/
   -o-border-image: url("assets/border.png") 500 fill/7em/0em space;
      border-image: url("assets/border.png") 500 fill/7em/0em space;
   padding: 3em;
+  display: block;
 }
 
 .blackBar {
@@ -837,7 +792,7 @@ itemheading text h1 {
   cursor: pointer;
   margin-left: 0vw;
   min-width: 15em;
-  width: 40vw;
+  width: 44vw;
   height: 27vw;
   margin-top: 2vw;
   overflow: hidden;
@@ -867,6 +822,14 @@ itemheading text h1 {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center top;
+}
+
+.printImage {
+  height: 100%;
+  width: 100%;
+  opacity: 1;
+  background-repeat: no-repeat;
+  background-position: center center;
 }
 
 .mj {
@@ -917,7 +880,7 @@ itemheading text h1 {
 }
 
 .mglogo {
-  background-image: url("assets/mangawhai-fm.jpg");
+  background-image: url("assets/mangawhai-logo-1.png");
 }
 
 .cc {
@@ -1204,7 +1167,11 @@ text.skills1 p {
 }
 
 .heroblock.stageExp {
-  margin-left: -26vw !important;
+  width: 100%;
+}
+
+.heroblock.stageExp h1 {
+  padding-left: 7vw;
 }
 
 .headerTransExp {
@@ -1213,10 +1180,8 @@ text.skills1 p {
   transition: ease all 1s;
   background-color: #191919;
   -webkit-box-flex: 1 !important;
-      -ms-flex: 1 0 73% !important;
-          flex: 1 0 73% !important;
-  -webkit-clip-path: polygon(0 0, 64% 0, 100% 100%, 0% 100%);
-          clip-path: polygon(0 0, 64% 0, 100% 100%, 0% 100%);
+      -ms-flex: 1 0 51% !important;
+          flex: 1 0 51% !important;
 }
 
 .headerTransExp p {
@@ -1965,6 +1930,32 @@ formpos text img {
 
 @-webkit-keyframes slidedown {
   from {
+    -webkit-transform: translate(0, 0vh);
+            transform: translate(0, 0vh);
+    opacity: 1;
+  }
+  to {
+    -webkit-transform: translate(0, 110vh);
+            transform: translate(0, 110vh);
+    opacity: 1;
+  }
+}
+
+@keyframes slidedown {
+  from {
+    -webkit-transform: translate(0, 0vh);
+            transform: translate(0, 0vh);
+    opacity: 1;
+  }
+  to {
+    -webkit-transform: translate(0, 110vh);
+            transform: translate(0, 110vh);
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes slidebackdown {
+  from {
     -webkit-transform: translate(0, -110vh);
             transform: translate(0, -110vh);
     opacity: 1;
@@ -1976,10 +1967,36 @@ formpos text img {
   }
 }
 
-@keyframes slidedown {
+@keyframes slidebackdown {
   from {
     -webkit-transform: translate(0, -110vh);
             transform: translate(0, -110vh);
+    opacity: 1;
+  }
+  to {
+    -webkit-transform: translate(0, 0vh);
+            transform: translate(0, 0vh);
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes slidebackup {
+  from {
+    -webkit-transform: translate(0, 110vh);
+            transform: translate(0, 110vh);
+    opacity: 1;
+  }
+  to {
+    -webkit-transform: translate(0, 0vh);
+            transform: translate(0, 0vh);
+    opacity: 1;
+  }
+}
+
+@keyframes slidebackup {
+  from {
+    -webkit-transform: translate(0, 110vh);
+            transform: translate(0, 110vh);
     opacity: 1;
   }
   to {
@@ -2320,6 +2337,24 @@ formpos text img {
 }
 
 .slide-back-down {
+  -webkit-animation: slidebackdown ease-in 1;
+          animation: slidebackdown ease-in 1;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-duration: .7s;
+          animation-duration: .7s;
+}
+
+.slide-back-up {
+  -webkit-animation: slidebackup ease-in 1;
+          animation: slidebackup ease-in 1;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-duration: .7s;
+          animation-duration: .7s;
+}
+
+.slide-down {
   -webkit-animation: slidedown ease-in 1;
           animation: slidedown ease-in 1;
   -webkit-animation-fill-mode: forwards;
@@ -2893,8 +2928,34 @@ blurb {
 
 @keyframes slidedown {
   from {
+    -webkit-transform: translate(0, 0vh);
+            transform: translate(0, 0vh);
+    opacity: 1;
+  }
+  to {
+    -webkit-transform: translate(0, 110vh);
+            transform: translate(0, 110vh);
+    opacity: 1;
+  }
+}
+
+@keyframes slidebackdown {
+  from {
     -webkit-transform: translate(0, -110vh);
             transform: translate(0, -110vh);
+    opacity: 1;
+  }
+  to {
+    -webkit-transform: translate(0, 0vh);
+            transform: translate(0, 0vh);
+    opacity: 1;
+  }
+}
+
+@keyframes slidebackup {
+  from {
+    -webkit-transform: translate(0, 110vh);
+            transform: translate(0, 110vh);
     opacity: 1;
   }
   to {
@@ -3218,6 +3279,24 @@ blurb {
 }
 
 .slide-back-down {
+  -webkit-animation: slidebackdown ease-in 1;
+          animation: slidebackdown ease-in 1;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-duration: .7s;
+          animation-duration: .7s;
+}
+
+.slide-back-up {
+  -webkit-animation: slidebackup ease-in 1;
+          animation: slidebackup ease-in 1;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-duration: .7s;
+          animation-duration: .7s;
+}
+
+.slide-down {
   -webkit-animation: slidedown ease-in 1;
           animation: slidedown ease-in 1;
   -webkit-animation-fill-mode: forwards;
