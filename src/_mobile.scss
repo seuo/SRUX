@@ -25,8 +25,16 @@
 
         margin-top: 5em;
         font-size: 1.1vw;
-        margin-left: 5vw;
+        margin-left: 0vw;
         cursor: pointer;
+        .description {
+            p {
+                font-size: 1.4em !important;
+                width: 90% !important;
+                margin-left: 0em !important;
+                padding-left: 1em;
+            }
+        }
     }
 
     .hero .col {
@@ -404,13 +412,11 @@
         margin-left: -3em;
     }
 
-    .header .hero .col .heroblock {
-        margin-left: 0;
-        justify-content: flex-start;
-        font-size: 1.1em;
-        margin-top: 60vh;
-        flex: 1 0 65%;
+    .colBlack {
+        display:none;
     }
+
+
 
     svg#Layer_1 {
         margin-right: -50vw;
@@ -426,33 +432,74 @@
         bottom: 0;
     }
 
-    .pSection {
+    .section {
         height: 100vh;
         width: 100%;
         display: flex;
         flex-direction: row;
         align-items: flex-end;
+        overflow-x:scroll;
     }
 
     .row1 {
         display: flex;
-        flex: 1 0 99%;
+        flex: 1 0 100%;
         width: 100vw;
-        height: 50%;
+        height: 40%;
+        justify-content: flex-start;
+        align-items: flex-start;
+        background-color: white;
     }
+
+    .row2 {
+        background-color: white;
+        width: 100vw;
+        flex: 1 0 100%;
+        justify-content: center;
+        height: 40%;
+        align-items: center;
+        margin-top: 2vw;
+        .brand {
+            display: flex;
+            justify-content: space-evenly;
+            font-size: .5vw;
+            height: 100%;
+            align-items: center;
+            .logoContainer {
+                width: 20vw;
+                height: 20vw;
+                display: flex;
+                justify-content: center;
+            }
+        }
+    }
+
 
     .webWork {
         cursor: pointer;
         margin-left: 0;
         min-width: 15em;
-        width: 100vw;
-        height: 70vw;
+        width: 92vw;
+        height: 60vw;
         margin-top: 0;
         overflow: hidden;
         /* padding: .7vw; */
         background-color: #191919;
         border-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABAAAAATiCAYAAAAkkZEKAAAe50lEQ…AgQAAAAACAAAEAAAAAAnZmjkcD8Nq993N0qnbX/gLgrZn5ARhaHXn2JriRAAAAAElFTkSuQmCC") 500 fill/4vw/0.05em space;
         transition: ease all 1s;
+    }
+
+    .item1 {
+        transform: scale(0.9);
+        cursor: pointer;
+        margin-right: 0;
+        margin-top: 1em;
+    }
+
+    .webWorkTilt {
+       width: 100%;
+       height: 100%;
+        z-index: 9999;
     }
 
     blurb {
@@ -475,14 +522,30 @@
         display: flex;
         flex-direction: column;
         flex: 1 0 60%;
-        margin-top: 20vh;
+        margin-top: 10vh;
+        padding: 0 2em;
         font-size: 1em;
         cursor: pointer;
         margin-left:0;
+        h2 {
+            margin-top: 0 !important;
+            margin-left: 1em !important;
+            font-size: 1.3em !important;
+            width: 9em !important;
+            line-height: 1.4;
+        }
+        .description {
+            font-size:1.1em;
+        }
+    }
+
+    .webWorkMobileTilt {
+        position: absolute;
+        display: none;
     }
 
     .col.c2.colBlack {
-        display: flex;
+        display: none;
         flex: 1 0 95%;
         justify-content: flex-end;
         height: 100vh;
@@ -667,15 +730,15 @@
 @media screen and (orientation:landscape) and (min-device-width: 25em) and (max-device-width: 60em) {
     .webWork {
         cursor: pointer;
-        margin-left: 7vw;
+        margin-left: 0vw;
         min-width: 5em;
-        width: 35vw;
-
+        width: 40vw;
         position: absolute;
         overflow: hidden;
         padding: 1.25vw;
-        height: 24vw;
-        max-width: 18em;
+        margin-top: 3em;
+        height: 26vw;
+
     }
 
     itemheading text imgblock {
@@ -1061,7 +1124,7 @@
         bottom: 0;
     }
 
-    .pSection {
+    .section {
         height: 100vh;
         width: 100%;
         display: flex;

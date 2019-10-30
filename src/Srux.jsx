@@ -33,7 +33,10 @@ import mglogo3 from './assets/mangawhai-logo-2-w.png';
 import mglogo4 from './assets/mangawhai-logo-2.png';
 
 
-import cclogo from './assets/cc-logo.jpg';
+import cclogo1 from './assets/cc-logo.png';
+import cclogo2 from './assets/cc-logo.jpg';
+import cclogo3 from './assets/cc-logo3.jpg';
+
 import autlogo from './assets/aut.jpg';
 import gclogo from './assets/gc-logo.jpg'; 
 
@@ -644,7 +647,7 @@ render (){
                         transformOrigin:"top left",
                     }}
                 >
-                            <section className={"pSection "+pState}>
+                            <section className={"section "+pState}>
                     <row className="row1">
                         <div className="item1">
                             <Tilt
@@ -715,17 +718,23 @@ render (){
 
                             
                                 <div className={"brand "}>
-                                    <img src={mjlogolines}/>
-                                    <img src={mjlogobw}/>
-                                    <img src={mjlogo}/>
+                                    <div className="logoContainer">
+                                        <img src={mjlogolines}/>
                                     </div>
+                                    <div className="logoContainer">
+                                        <img src={mjlogobw}/>  
+                                    </div>
+                                    <div className="logoContainer">
+                                        <img src={mjlogo}/>
+                                    </div>
+                                </div>
                              
                             
 
                        
                     </row>
                 </section>
-                <section className={"pSection"}>
+                <section className={"section"}>
                 <row className="row1">
                         <div className="item1">
                             <Tilt
@@ -794,7 +803,7 @@ render (){
                                     </div>
                     </row>
                 </section>
-                <section className={"pSection"}>
+                <section className={"section"}>
                     <row className="row1">
                         <div className="item1">
                             <Tilt
@@ -864,7 +873,7 @@ render (){
                     <row className="row2">
                     </row>
                 </section>
-                {/* <section className={"pSection"}>
+                {/* <section className={"section"}>
 
                     <row className="row1">
                         <blurb className={"eText "+eTextAnim}>
@@ -882,7 +891,7 @@ render (){
                         </itemheading>
                     </row>
                 </section> */}
-                {/* <section className={"pSection"}>
+                {/* <section className={"section"}>
                     <row className="row1">
                         <blurb className={"eText "+eTextAnim}>
                             <div className={"webWork "}>
@@ -898,14 +907,14 @@ render (){
                         </itemheading>
                     </row>
                 </section> */}
-                <section className={"pSection"}>
+                <section className={"section"}>
 
                     <row className="row1">
-                        <blurb className={"eText "+eTextAnim}>
+                       
                             <div className={"printWork"}>
                                 <div className="printImage mglogo"></div>
                             </div>
-                        </blurb>
+                        
                     </row>
                     <row className="row2">
                     <div className={"brand "}>
@@ -913,33 +922,39 @@ render (){
                                         <img src={mglogo2}/>
                                     </div>
                                     <div className="logoContainer">
-                                    <img src={mglogo3}/>
+                                        <img src={mglogo3}/>
                                     </div>
                                     <div className="logoContainer">
-                                    <img src={mglogo4}/>
+                                        <img src={mglogo4}/>
                                     </div>
  
                                  </div>
                     </row>
                 </section>
-                <section className={"pSection"}>
+                <section className={"section"}>
                     <row className="row1">
-                        <blurb className={"eText "+eTextAnim}>
+                        
                             <div className={"printWork"}>
                                 <div className="printImage cc"></div>
                             </div>
-                        </blurb>
+                        
                     </row>
                     <row className="row2">
                     <div className={"brand "}>
 
                     <div className="logoContainer">
-                                    <img src={cclogo}/>
-                                    </div>
+                                    <img src={cclogo1}/>
                                 </div>
+                                <div className="logoContainer">
+                                    <img src={cclogo2}/>
+                                </div>
+                                <div className="logoContainer">
+                                    <img src={cclogo3}/>
+                                </div>
+                            </div>
                     </row>
                 </section>
-                <section className={"pSection"}>
+                <section className={"section"}>
 
                     <row className="row1">
                         <blurb className={"eText "+eTextAnim}>
@@ -957,7 +972,7 @@ render (){
                                     </div>
                     </row>
                 </section>
-                <section className={"pSection"}>
+                <section className={"section"}>
 
                     <row className="row1">
                         <blurb className={"eText "+eTextAnim}>

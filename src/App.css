@@ -340,7 +340,7 @@ p {
   transition: 1.5s all cubic-bezier(0.23, 1, 0.32, 1);
 }
 
-.vScroller .pSection {
+.vScroller .section {
   -webkit-transform: rotate(0deg);
           transform: rotate(0deg);
   -webkit-transform-origin: top left;
@@ -364,7 +364,7 @@ p {
   overflow: hidden;
 }
 
-.pSection {
+.section {
   height: 100vh;
   width: 100%;
   display: -webkit-box;
@@ -386,30 +386,33 @@ p {
   -webkit-box-flex: 1;
       -ms-flex: 1 0 50%;
           flex: 1 0 50%;
-  width: 50vw;
+  width: 54vw;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .row2 {
-  width: 50vw;
+  width: 54vw;
   -webkit-box-flex: 1;
-      -ms-flex: 1 0 30%;
-          flex: 1 0 30%;
+      -ms-flex: 1 0 25%;
+          flex: 1 0 25%;
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-top: 7em;
-  padding: 0em 3em 0em 3em;
+  margin-top: 2vw;
 }
 
 .row2 .brand {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
   font-size: .5vw;
 }
 
@@ -422,12 +425,19 @@ p {
 }
 
 .row2 .brand .logoContainer {
-  width: 12vw;
-  height: 12vw;
+  width: 10vw;
+  height: 10vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .row2 .brand .logoContainer img {
-  width: 70%;
+  width: 100%;
+  height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
   /*magic*/
@@ -478,7 +488,7 @@ p {
 
 .navlist {
   margin-left: 0;
-  padding-left: 4vw;
+  padding-left: 7vw;
   width: 30em;
   left: 0;
   display: -webkit-box;
@@ -792,8 +802,7 @@ itemheading text h1 {
   cursor: pointer;
   margin-left: 0vw;
   min-width: 15em;
-  width: 44vw;
-  height: 27vw;
+  width: 40vw;
   margin-top: 2vw;
   overflow: hidden;
   -webkit-transition: ease all 1s;
@@ -813,6 +822,8 @@ itemheading text h1 {
   -webkit-transform: scale(0.7);
           transform: scale(0.7);
   cursor: pointer;
+  margin-right: 6vw;
+  margin-top: 2vw;
 }
 
 .webImage {
@@ -825,6 +836,7 @@ itemheading text h1 {
 }
 
 .printImage {
+  background-size: contain;
   height: 100%;
   width: 100%;
   opacity: 1;
@@ -884,7 +896,7 @@ itemheading text h1 {
 }
 
 .cc {
-  background-image: url("assets/cc-work.jpg");
+  background-image: url("assets/the-cabin-crew-bcards.jpg");
 }
 
 .autposter {
@@ -4266,8 +4278,14 @@ svg {
             flex: 1 0 60%;
     margin-top: 5em;
     font-size: 1.1vw;
-    margin-left: 5vw;
+    margin-left: 0vw;
     cursor: pointer;
+  }
+  .WorkHero .col .heroblock .description p {
+    font-size: 1.4em !important;
+    width: 90% !important;
+    margin-left: 0em !important;
+    padding-left: 1em;
   }
   .hero .col {
     display: -webkit-box;
@@ -4697,16 +4715,8 @@ svg {
     font-size: 2em;
     margin-left: -3em;
   }
-  .header .hero .col .heroblock {
-    margin-left: 0;
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
-    font-size: 1.1em;
-    margin-top: 60vh;
-    -webkit-box-flex: 1;
-        -ms-flex: 1 0 65%;
-            flex: 1 0 65%;
+  .colBlack {
+    display: none;
   }
   svg#Layer_1 {
     margin-right: -50vw;
@@ -4720,7 +4730,7 @@ svg {
     z-index: -1;
     bottom: 0;
   }
-  .pSection {
+  .section {
     height: 100vh;
     width: 100%;
     display: -webkit-box;
@@ -4733,23 +4743,69 @@ svg {
     -webkit-box-align: end;
         -ms-flex-align: end;
             align-items: flex-end;
+    overflow-x: scroll;
   }
   .row1 {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-flex: 1;
-        -ms-flex: 1 0 99%;
-            flex: 1 0 99%;
+        -ms-flex: 1 0 100%;
+            flex: 1 0 100%;
     width: 100vw;
-    height: 50%;
+    height: 40%;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    background-color: white;
+  }
+  .row2 {
+    background-color: white;
+    width: 100vw;
+    -webkit-box-flex: 1;
+        -ms-flex: 1 0 100%;
+            flex: 1 0 100%;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    height: 40%;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-top: 2vw;
+  }
+  .row2 .brand {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    font-size: .5vw;
+    height: 100%;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .row2 .brand .logoContainer {
+    width: 20vw;
+    height: 20vw;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
   .webWork {
     cursor: pointer;
     margin-left: 0;
     min-width: 15em;
-    width: 100vw;
-    height: 70vw;
+    width: 92vw;
+    height: 60vw;
     margin-top: 0;
     overflow: hidden;
     /* padding: .7vw; */
@@ -4758,6 +4814,18 @@ svg {
        border-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABAAAAATiCAYAAAAkkZEKAAAe50lEQ…AgQAAAAACAAAEAAAAAAnZmjkcD8Nq993N0qnbX/gLgrZn5ARhaHXn2JriRAAAAAElFTkSuQmCC") 500 fill/4vw/0.05em space;
     -webkit-transition: ease all 1s;
     transition: ease all 1s;
+  }
+  .item1 {
+    -webkit-transform: scale(0.9);
+            transform: scale(0.9);
+    cursor: pointer;
+    margin-right: 0;
+    margin-top: 1em;
+  }
+  .webWorkTilt {
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
   }
   blurb {
     display: -webkit-box;
@@ -4802,15 +4870,28 @@ svg {
     -webkit-box-flex: 1;
         -ms-flex: 1 0 60%;
             flex: 1 0 60%;
-    margin-top: 20vh;
+    margin-top: 10vh;
+    padding: 0 2em;
     font-size: 1em;
     cursor: pointer;
     margin-left: 0;
   }
+  .WorkHero .col .heroblock h2 {
+    margin-top: 0 !important;
+    margin-left: 1em !important;
+    font-size: 1.3em !important;
+    width: 9em !important;
+    line-height: 1.4;
+  }
+  .WorkHero .col .heroblock .description {
+    font-size: 1.1em;
+  }
+  .webWorkMobileTilt {
+    position: absolute;
+    display: none;
+  }
   .col.c2.colBlack {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
+    display: none;
     -webkit-box-flex: 1;
         -ms-flex: 1 0 95%;
             flex: 1 0 95%;
@@ -5015,14 +5096,14 @@ svg {
 @media screen and (orientation: landscape) and (min-device-width: 25em) and (max-device-width: 60em) {
   .webWork {
     cursor: pointer;
-    margin-left: 7vw;
+    margin-left: 0vw;
     min-width: 5em;
-    width: 35vw;
+    width: 40vw;
     position: absolute;
     overflow: hidden;
     padding: 1.25vw;
-    height: 24vw;
-    max-width: 18em;
+    margin-top: 3em;
+    height: 26vw;
   }
   itemheading text imgblock {
     margin-top: -37vh;
@@ -5451,7 +5532,7 @@ svg {
     z-index: -1;
     bottom: 0;
   }
-  .pSection {
+  .section {
     height: 100vh;
     width: 100%;
     display: -webkit-box;
