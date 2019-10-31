@@ -20,11 +20,8 @@ import tenslogolines from './assets/10squares-logo-lines.png';
 import tenslogobw from './assets/10squares-logo-bw.png';
 import tenslogo from './assets/10squares-logo.png';
 
-
-
 import gubbalogo from './assets/gubba-logo.png';
 import pylogo from './assets/playtionery-logo.jpg';
-
 
 import mglogo1 from './assets/mangawhai-logo-1.png';
 import mglogo2 from './assets/mangawhai-logo-1-w.png';
@@ -88,6 +85,7 @@ class Srux extends Component {
             contactOut:'cWhite',
 
             mobTrans:'',
+            navMob: '',
         }
 
     }
@@ -366,6 +364,15 @@ class Srux extends Component {
         }, 1000)
     }
 
+    navContact = (e) => {
+        e.preventDefault();
+        this.setState({currentWorkIndex: 7, currentExpIndex: 6})
+        setTimeout(() => {
+            this.setState({hScroller: 'above', homeHeader: 'homeHeader slide-right'})
+        }, 700)
+    }
+     
+
     handleContactShow = (e) => {
         e.preventDefault();
         this.setState({contact: 'fade-in'})
@@ -507,7 +514,7 @@ render (){
                                     <div className={"contactinfo "+contact}><p>samrob.nz@gmail.com</p></div>
                                     <svg id="Layer_1" data-name="Layer 1" viewBox="0 0 731.4 803">
                                     <g>
-                                        <g id ="contactContainer"  onClick={this.prevPage}>                                     
+                                        <g id ="contactContainer"  onClick={this.navContact}>                                     
                                         <g id="contact">
                                         <g>
                                             <image width="697" height="511" transform="translate(35.02 293.48)" href={contactImg}/>
@@ -586,13 +593,29 @@ render (){
                         <div className={"whiteTrans "+whiteTransForm}></div>
                         <div className={"blackTrans "+blackTransForm}></div>
                         <div className={"navMenu "+navMenu}>
+                        
+                        <div class="mobNavContainer">
+
+                            <input id="toggle" type="checkbox"/>
+
                             
-                        <div className="navlist">
-                            <h2 className="zB" onClick={this.navHome}>HOME NAV</h2>
-                            <h2 className="z999" onClick={this.navMyWork}>PORTFOLIO</h2>
-                            <h2 className="z999" onClick={this.navExpDirect}>EXPERIENCE</h2>
-                            <h2 className="z999" onClick={this.navContactDirect}>CONTACT</h2>       
+                            <label class="toggle-container" for="toggle">
+                            
+                            <span class="button button-toggle"></span>
+                            </label>
+
+                            
+                            <nav class="nav">
+                            <a class="nav-item" href="#" onClick={this.navHome}>HOME NAV</a>
+                            <a class="nav-item" href="#" onClick={this.navMyWork}>PORTFOLIO</a>
+                            <a class="nav-item" href="#" onClick={this.navExpDirect}>EXPERIENCE</a>
+                            <a class="nav-item" href="#" onClick={this.navContactDirect}>CONTACT</a>
+                            </nav>
+
+                            
+                        
                         </div>
+                            
                         </div>
 
                         </>
@@ -600,9 +623,6 @@ render (){
 
                     <container className="pWrap">
 
-                <div className={"navMenu P " + navMenu}>
-
-                </div>
 
                 <div className={"WorkHeaderSection pHeaderSection "+stageZero+" "+stageNum[currentWorkIndex]}>
                     <div className="WorkHeader pHeader">
@@ -873,24 +893,66 @@ render (){
                     <row className="row2">
                     </row>
                 </section>
-                {/* <section className={"section"}>
+                <section className={"section"}>
+                <row className="row1">
+                        <div className="item1">
+                            <Tilt
+                                className="webWorkTilt"
+                                options={{
+                                                perspective:2000,
+                                                max:25,
+                                                reverse:true,
+                                                scale: 1.25,
+                                                axis:'x',
+                                                speed:4000,
+                                                easing:"cubic-bezier(.03,.98,.52,.99)",
+                                            }}>
+                                <div
+                                    className={"webWork "}
+                                    onMouseEnter={this.handleVerticalLock}
+                                    onMouseLeave={this.handleVerticalActive}>
+                                    <Scrollbars
+                                        className="webWorkInner"
+                                        autoHideTimeout={1000}
+                                        autoHideDuration={200}>
+                                        <a href="//ambv.boatgrooming.co.nz/" target="_blank">
+                                            <div className="webImage ambv"></div>
+                                        </a>
+                                    </Scrollbars>
+                                </div>
 
-                    <row className="row1">
-                        <blurb className={"eText "+eTextAnim}>
-                            <div className={"webWork "}>
-                                <div className="webImage py"></div>
-                            </div>
-                        </blurb>
+                            </Tilt>
+                            <Tilt
+                                className="webWorkMobileTilt"
+                                options={{
+                                                perspective:2000,
+                                                max:25,
+
+                                                scale: 1.25,
+                                                axis:'x',
+                                                speed:4000,
+                                                easing:"cubic-bezier(.03,.98,.52,.99)",
+                                            }}>
+
+                                <div
+                                    className={"webWorkMobile Tilt-inner "+mobTrans}
+                                    onMouseEnter={this.handleMobVerticalLock}
+                                    onMouseLeave={this.handleMobVerticalActive}>
+                                    <Scrollbars
+                                        className="webWorkInner"
+                                        autoHideTimeout={1000}
+                                        autoHideDuration={200}>
+                                        <a href="//ambv.boatgrooming.co.nz/" target="_blank">
+                                            <div className="webImage ambv-m"></div>
+                                        </a>
+                                    </Scrollbars>
+                                </div>
+                            </Tilt>
+                        </div>
                     </row>
                     <row className="row2">
-                        <itemheading>
-                            <block></block>
-                            <text>
-                                <imgblock className={tAnim}><img src={pylogo}/></imgblock>
-                            </text>
-                        </itemheading>
                     </row>
-                </section> */}
+                </section>
                 {/* <section className={"section"}>
                     <row className="row1">
                         <blurb className={"eText "+eTextAnim}>
@@ -954,14 +1016,14 @@ render (){
                             </div>
                     </row>
                 </section>
-                <section className={"section"}>
+                {/* <section className={"section"}>
 
                     <row className="row1">
-                        <blurb className={"eText "+eTextAnim}>
+                       
                             <div className={"printWork"}>
                                 <div className="printImage autposter"></div>
                             </div>
-                        </blurb>
+                        
                     </row>
                     <row className="row2">
                     
@@ -971,12 +1033,11 @@ render (){
                                     </div>
                                     </div>
                     </row>
-                </section>
+                </section> */}
                 <section className={"section"}>
 
                     <row className="row1">
-                        <blurb className={"eText "+eTextAnim}>
-                        </blurb>
+
                     </row>
                     <row className="row2">
                         <itemheading>
@@ -1007,7 +1068,7 @@ render (){
                                         <div className="header pHeader">
                                             <div className="hero">
                                                 <div className={"col c1 exp-col-trans headerTransExp"}>
-                                                    <div onClick={this.navHome} className={expColTransHeader+" heroblock stageExp"}>
+                                                    <div onClick={this.navHome} className={"heroblock stageExp"}>
                                                         <div className={"heading "+stageState}>
                                                             <h1> 
                                                                 {/* content goes here from css */}
@@ -1112,8 +1173,8 @@ render (){
                                     responsible for designing their yearly catalogue for their large home and garden
                                     product range.</p>
                                 <p>I was later assigned the job of designing and building several web sites for
-                                    specific products that needed dedicated ecommerce stores which helped drive
-                                    revenue. Most notably their Gubba Garden Sheds Website which has improved on
+                                    specific products that needed dedicated ecommerce stores which would help drive
+                                    revenue. Most notably their Gubba Garden Sheds website which has improved on
                                     sales every year since and continues to improve.</p>
                                 <p>Reference Manager - David Graves / Marketing Manager - Tim Graves<br/>Ph: 09 915 9250 / 021 771 119</p>
 
@@ -1132,10 +1193,10 @@ render (){
                             <text>
                                 <h1>AUT Diploma in Graphic Communication</h1>
                                 <p>Level 5 / 2008 - 2010</p>
-                                <p>The Diploma in Graphic Communication at AUT was a 2 year full time course
+                                <p>The Diploma in Graphic Communication at AUT is a 2 year full time course
                                     which involved the use and application of the following skills: Print
                                     production, pre-press, graphic design, web design, desktop publishing, digital
-                                    imaging, computer graphics, pre production, postproduction and operating a MAC.</p>
+                                    imaging, computer graphics, pre production, post production and operating a MAC.</p>
                                 <p>Reference: David Sinfield</p>
 
                             </text>
@@ -1206,14 +1267,26 @@ render (){
                     </row>
 
                 </section>
-                <section className={"eSection fade-in"}>
+                <section className={"cSection fade-in"}>
 
-                    <row className="eRow1">
-                        <formpos>
-                            
+                    <row className="cRow1">
+                        
+                             <blurb className={"eText "+eTextAnim}>
+
                             <text>
+                                    <h1>Sam Robertson</h1>
+                                    <p></p>
+                                    <p>I’m a frontend developer based in Auckland, New Zealand.</p><p>I have a passion for design & creating high quality, functional web solutions.</p>
+                                    <p>Get in touch if you have a job / project you need help with!</p>
 
-                                <form
+                            </text>
+                            </blurb>
+                        
+                    </row>
+                    <row className="cRow2">
+                    <formpos className="formpos">
+                        <text>
+                    <form
                                     className={"myForm fade-in one"}
                                     action="https://formspree.io/srux.web@gmail.com"
                                     method="POST">
@@ -1236,18 +1309,9 @@ render (){
 
                                     <input className="submit" value="Send" type="submit"/>
                                 </form>
-
-                            </text>
+                                </text>
+                            
                         </formpos>
-                    </row>
-                    <row className="eRow2">
-                        <itemheading>
-                            <block></block>
-                            <text></text>
-                            <text className="skills">
-                                <h1></h1>
-                            </text>
-                        </itemheading>
                     </row>
                 </section>
                     <section className={"eSection "+contactOut}>

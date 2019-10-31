@@ -37,270 +37,6 @@ p {
   display: none !important;
 }
 
-@-webkit-keyframes stageContentAnimation {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-@keyframes stageContentAnimation {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-.stageF-out {
-  opacity: 0;
-  -webkit-transition: ease all .2s;
-  transition: ease all .2s;
-}
-
-.stageF-out h1 {
-  -webkit-transform: translate(0, 5em);
-          transform: translate(0, 5em);
-  -webkit-transition: ease all .2s;
-  transition: ease all .2s;
-}
-
-.stageF-in {
-  opacity: 1;
-  -webkit-transition: ease all .2s;
-  transition: ease all .2s;
-}
-
-.stageZero {
-  background-image: initial;
-}
-
-.stageZero .heading {
-  height: 3em;
-  overflow: hidden;
-  border-bottom: 2px solid #fafafa !important;
-  margin-bottom: .7em !important;
-}
-
-.stageZero .heading h1 {
-  overflow: hidden;
-  font-size: 4em !important;
-  width: 9em !important;
-  margin-bottom: 0em !important;
-}
-
-.stageZero .heading h1#text {
-  margin-top: 5em;
-}
-
-.stageZero .heroblock div p {
-  font-weight: 100;
-  font-size: 1.1em !important;
-  width: 26em !important;
-  margin-left: 7em !important;
-  margin-bottom: .5em;
-  color: #cdcdcd !important;
-}
-
-.stageZero .heroblock div h2 {
-  font-size: 1.1em !important;
-  width: 9em !important;
-  line-height: 1.4;
-  margin-top: 0.5em !important;
-  margin-left: 6.9em !important;
-  padding: .7em 1em !important;
-  -webkit-clip-path: polygon(0 0, 9em 0, 100% 100%, 0% 100%);
-          clip-path: polygon(0 0, 9em 0, 100% 100%, 0% 100%);
-}
-
-.stageOne {
-  background-image: url("assets/mj-bg.jpg");
-}
-
-.stageOne .heading {
-  border-bottom: 2px solid #7bcee6 !important;
-  -webkit-transition: ease all 1.5s;
-  transition: ease all 1.5s;
-}
-
-.stageOne .heading h1::before {
-  color: #7bcee6 !important;
-  content: "Mitchells Joinery";
-}
-
-.stageOne .description p::before {
-  display: block;
-  white-space: pre-wrap;
-  content: "The team over at Mitchell's Joinery required a new brand design along with a website upgrade to a more modern and intuitive UX design. Mitchell's Joinery main focus was on the marine industry. \A \A The new logo and website required a more premium design along with a more logical catagory / navigation hirechy.";
-}
-
-.stageOne .workDone h2::before {
-  display: block;
-  white-space: pre-wrap;
-  content: "Research\A Brand Design\A Site Design";
-}
-
-.stageTwo {
-  background-image: url("assets/tensq-bg.jpg");
-}
-
-.stageTwo .heading {
-  border-bottom: 2px solid #df713e !important;
-  -webkit-transition: ease all 1.5s;
-  transition: ease all 1.5s;
-}
-
-.stageTwo .heading h1::before {
-  color: #df713e !important;
-  content: "10 Squares Cabins";
-}
-
-.stageTwo .description p::before {
-  display: block;
-  white-space: pre-wrap;
-  content: "10 Squares Cabins is a new manufacturer of small cabins & sleep-outs that fit within the 10m² council requirements. They required a brand-id along with a website showcasing the quality and process that goes into building their kitset cabins. \A \A I worked closely with the 10 Squares team to create a clean & informative website. Using renders I was able to show the customer the build process from start to finish. I continued work for them doing drafting & render work for customers who needed custom builds.";
-}
-
-.stageTwo .workDone h2::before {
-  display: block;
-  white-space: pre-wrap;
-  content: "Brand Design\A Site Design\A Rendering";
-}
-
-.stageThree .heading {
-  border-bottom: 2px solid #a68b3c !important;
-  -webkit-transition: ease all 1.5s;
-  transition: ease all 1.5s;
-}
-
-.stageThree .heading h1::before {
-  color: #a68b3c !important;
-  content: "Shop Web App";
-}
-
-.stageThree .description p::before {
-  display: block;
-  white-space: pre-wrap;
-  content: "I designed & developed this web application for my module 3 summative assignment at Yoobee Design School.\A \A We had 3 weeks to design & develop a working web app in React along with a fully functional API & Server.\A The projects development stages required researching, designing, & user testing of the prototype.\A UML diagrams for both App & Server structure were also required before starting the coding process. \A \A The App has a full CRUD process from a user being able to register, login, sell, purchase, review, edit details & delete their products.";
-}
-
-.stageThree .workDone h2::before {
-  display: block;
-  white-space: pre-wrap;
-  content: "Design\A Server Setup \A App Development";
-}
-
-.stageFour {
-  background-image: url("assets/mangawhai-bg.jpg");
-}
-
-.stageFour .heading {
-  border-bottom: 2px solid #e1c20f !important;
-  -webkit-transition: ease all 1.5s;
-  transition: ease all 1.5s;
-}
-
-.stageFour .heading h1::before {
-  color: #e1c20f !important;
-  content: "Mangawhai Market";
-}
-
-.stageFour .description p::before {
-  display: block;
-  white-space: pre-wrap;
-  content: "The Mangawhai Village Market needed a logo for their ever growing market. I discussed with them some design concepts & we came up with the idea to include a local bird, the Fairy Tern, which is a distinctive icon that locals will recognize.\A \A I really enjoyed working on this brand, something a bit different.";
-}
-
-.stageFour .workDone h2::before {
-  display: block;
-  white-space: pre-wrap;
-  content: "Logo Design";
-}
-
-.stageFive {
-  background-image: url("assets/cc-bg.jpg");
-}
-
-.stageFive .heading {
-  border-bottom: 2px solid #a32128 !important;
-  -webkit-transition: ease all 1.5s;
-  transition: ease all 1.5s;
-}
-
-.stageFive .heading h1::before {
-  color: #a32128 !important;
-  content: "The Cabin Crew";
-}
-
-.stageFive .description p::before {
-  display: block;
-  white-space: pre-wrap;
-  content: "The Cabin Crew team required a logo for their newly formed building company. The owner wanted a brand that meant something to him, but also had a contemporary and professional design to reflect the modern dwellings they were building.\A \A I used red & black colours to show his Maori heritage and a wave design to reflect one of his passions in life, surfing. I enjoyed working with him to come up with a design we were both happy with.";
-}
-
-.stageFive .workDone h2::before {
-  display: block;
-  white-space: pre-wrap;
-  content: "Logo Design";
-}
-
-.stageSix {
-  background-image: url("assets/aut-bg.jpg");
-}
-
-.stageSix .heading {
-  border-bottom: 2px solid #bebc21  !important;
-  -webkit-transition: ease all 1.5s;
-  transition: ease all 1.5s;
-}
-
-.stageSix .heading h1::before {
-  color: #bebc21 !important;
-  content: "AUT Poster";
-}
-
-.stageSix .description p::before {
-  display: block;
-  white-space: pre-wrap;
-  content: "For this assignment I was required to create a poster advertising Auckland University of Technology’s Diploma in Graphic Communication. \A \A I wanted to design something that really caught the eye, was simple & not too obvious. I feel I achieved this by only using two colours & having the finer details large enough to read but small enough to take a second look.";
-}
-
-.stageSix .workDone h2::before {
-  display: block;
-  white-space: pre-wrap;
-  content: "Poster";
-}
-
-.stageExp {
-  margin-bottom: 1.7em;
-}
-
-.stageExp .heading {
-  border-bottom: 2px solid #ffffff   !important;
-  -webkit-transition: ease all 1.5s;
-  transition: ease all 1.5s;
-}
-
-.stageExp .heading h1::before {
-  color: #ffffff  !important;
-  content: "Skills & Experience";
-}
-
-.stageExp .description p::before {
-  line-height: .8;
-  display: block;
-  white-space: pre-wrap;
-}
-
-.stageExp .workDone h2::before {
-  display: block;
-  white-space: pre-wrap;
-  content: "Poster";
-}
-
 .pWrap {
   overflow: hidden;
   width: 100vw;
@@ -467,8 +203,7 @@ p {
 
 .navMenu {
   margin-left: 0;
-  padding-left: 7vw;
-  width: 93vw;
+  padding-left: 0;
   right: 0;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -484,89 +219,6 @@ p {
   z-index: 9999;
   -webkit-transition: 0.5s ease all;
   transition: 0.5s ease all;
-}
-
-.navlist {
-  margin-left: 0;
-  padding-left: 7vw;
-  width: 30em;
-  left: 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  position: absolute;
-  z-index: 9999;
-  -webkit-transition: 0.5s ease all;
-  transition: 0.5s ease all;
-  padding-top: 0.5em;
-  -webkit-transition: ease all 0.5s;
-  transition: ease all 0.5s;
-}
-
-.navlist h2 {
-  padding: 1em 1em 0em 1em;
-  color: #949494;
-  width: 6em;
-  font-weight: 300;
-  font-size: 1em;
-  cursor: pointer;
-  -webkit-transition: ease all 0.5s;
-  transition: ease all 0.5s;
-  text-align: center;
-  border-bottom: #222;
-  transition: ease all 0.5s;
-}
-
-.navlist h2:nth-child(1):hover {
-  border-bottom: #949494 thin solid;
-  -webkit-transition: ease all 0.5s;
-  transition: ease all 0.5s;
-}
-
-.navlist h2:nth-child(2):hover {
-  border-bottom: #9a3156 thin solid;
-  -webkit-transition: ease all 0.5s;
-  transition: ease all 0.5s;
-}
-
-.navlist h2:nth-child(3):hover {
-  border-bottom: #44678c thin solid;
-  -webkit-transition: ease all 0.5s;
-  transition: ease all 0.5s;
-}
-
-.navlist h2:nth-child(4):hover {
-  border-bottom: #b38539 thin solid;
-  -webkit-transition: ease all 0.5s;
-  transition: ease all 0.5s;
-}
-
-.navlist.P {
-  margin-left: 0em;
-  width: initial;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  -webkit-transition: ease all 0.5s;
-  transition: ease all 0.5s;
-  width: 10em;
-}
-
-.navlist.P > h2 {
-  background-color: #191919;
-  -webkit-transition: ease all 0.5s;
-  transition: ease all 0.5s;
-}
-
-.navlist .zB h2 {
-  color: transparent !important;
 }
 
 blurb {
@@ -803,6 +455,7 @@ itemheading text h1 {
   margin-left: 0vw;
   min-width: 15em;
   width: 40vw;
+  height: 100%;
   margin-top: 2vw;
   overflow: hidden;
   -webkit-transition: ease all 1s;
@@ -823,7 +476,7 @@ itemheading text h1 {
           transform: scale(0.7);
   cursor: pointer;
   margin-right: 6vw;
-  margin-top: 2vw;
+  margin-top: 1em;
 }
 
 .webImage {
@@ -842,73 +495,6 @@ itemheading text h1 {
   opacity: 1;
   background-repeat: no-repeat;
   background-position: center center;
-}
-
-.mj {
-  background-image: url("assets/mj-site.jpg");
-  height: 105em;
-}
-
-.mj-m {
-  background-image: url("assets/mj-m-site.jpg");
-  height: 170em;
-}
-
-.tens {
-  background-image: url("assets/10squares-site.jpg");
-  height: 350em;
-}
-
-.tens-m {
-  background-image: url("assets/10squares-site-mobile.jpg");
-  height: 235em;
-}
-
-.inapp-mobile {
-  width: 100%;
-  height: 100%;
-  font-size: 0.8em;
-}
-
-.tablet {
-  width: 22vw;
-  height: 30vw;
-}
-
-.wrap.container {
-  font-size: 0.8em;
-}
-
-.gubba {
-  background-image: url("assets/gubba-site.jpg");
-}
-
-.py {
-  background-image: url("assets/py-site.jpg");
-}
-
-.heli {
-  background-image: url("assets/helib-site.jpg");
-}
-
-.mglogo {
-  background-image: url("assets/mangawhai-logo-1.png");
-}
-
-.cc {
-  background-image: url("assets/the-cabin-crew-bcards.jpg");
-}
-
-.autposter {
-  background-image: url("assets/aut-poster.jpg");
-}
-
-.gcpackage {
-  background-image: url("assets/goodcoffee.jpg");
-}
-
-.renders {
-  background-image: url("assets/13renders.jpg");
 }
 
 text.skills {
@@ -956,6 +542,371 @@ text.skills1 p {
 
 .tensC {
   color: #1f829c;
+}
+
+@-webkit-keyframes stageContentAnimation {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes stageContentAnimation {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.stageF-out {
+  opacity: 0;
+  -webkit-transition: ease all .2s;
+  transition: ease all .2s;
+}
+
+.stageF-out h1 {
+  -webkit-transform: translate(0, 5em);
+          transform: translate(0, 5em);
+  -webkit-transition: ease all .2s;
+  transition: ease all .2s;
+}
+
+.stageF-in {
+  opacity: 1;
+  -webkit-transition: ease all .2s;
+  transition: ease all .2s;
+}
+
+.stageZero {
+  background-image: initial;
+}
+
+.stageZero .heading {
+  height: 3em;
+  overflow: hidden;
+  border-bottom: 2px solid #fafafa !important;
+  margin-bottom: .7em !important;
+}
+
+.stageZero .heading h1 {
+  overflow: hidden;
+  font-size: 4em !important;
+  width: 10em !important;
+  margin-bottom: 0em !important;
+}
+
+.stageZero .heading h1#text {
+  margin-top: 5em;
+}
+
+.stageZero .heroblock div p {
+  font-weight: 100;
+  font-size: 1.1em !important;
+  width: 26em !important;
+  margin-left: 7em !important;
+  margin-bottom: .5em;
+  color: #cdcdcd !important;
+}
+
+.stageZero .heroblock div h2 {
+  font-size: 1.1em !important;
+  width: 9em !important;
+  line-height: 1.4;
+  margin-top: 0.5em !important;
+  margin-left: 6.9em !important;
+  padding: .7em 1em !important;
+  -webkit-clip-path: polygon(0 0, 9em 0, 100% 100%, 0% 100%);
+          clip-path: polygon(0 0, 9em 0, 100% 100%, 0% 100%);
+}
+
+.stageOne {
+  background-image: url("assets/mj-bg.jpg");
+}
+
+.stageOne .heading {
+  border-bottom: 2px solid #7bcee6 !important;
+  -webkit-transition: ease all 1.5s;
+  transition: ease all 1.5s;
+}
+
+.stageOne .heading h1::before {
+  color: #7bcee6 !important;
+  content: "Mitchells Joinery";
+}
+
+.stageOne .description p::before {
+  display: block;
+  white-space: pre-wrap;
+  content: "The team over at Mitchell's Joinery required a new brand design along with a website upgrade to a more modern and intuitive UX design. Mitchell's Joinery main focus was on the marine industry. \A \A The new logo and website required a more premium design along with a more logical catagory / navigation hirechy.";
+}
+
+.stageOne .workDone h2::before {
+  display: block;
+  white-space: pre-wrap;
+  content: "Research\A Brand Design\A Site Design";
+}
+
+.stageTwo {
+  background-image: url("assets/tensq-bg.jpg");
+}
+
+.stageTwo .heading {
+  border-bottom: 2px solid #df713e !important;
+  -webkit-transition: ease all 1.5s;
+  transition: ease all 1.5s;
+}
+
+.stageTwo .heading h1::before {
+  color: #df713e !important;
+  content: "10 Squares Cabins";
+}
+
+.stageTwo .description p::before {
+  display: block;
+  white-space: pre-wrap;
+  content: "10 Squares Cabins is a new manufacturer of small cabins & sleep-outs that fit within the 10m² council requirements. They required a brand-id along with a website showcasing the quality and process that goes into building their kitset cabins. \A \A I worked closely with the 10 Squares team to create a clean & informative website. Using renders I was able to show the customer the build process from start to finish. I continued work for them doing drafting & render work for customers who needed custom builds.";
+}
+
+.stageTwo .workDone h2::before {
+  display: block;
+  white-space: pre-wrap;
+  content: "Brand Design\A Site Design\A Rendering";
+}
+
+.stageThree .heading {
+  border-bottom: 2px solid #a68b3c !important;
+  -webkit-transition: ease all 1.5s;
+  transition: ease all 1.5s;
+}
+
+.stageThree .heading h1::before {
+  color: #a68b3c !important;
+  content: "Shop Web App";
+}
+
+.stageThree .description p::before {
+  display: block;
+  white-space: pre-wrap;
+  content: "I designed & developed this web application for my module 3 summative assignment at Yoobee Design School.\A \A We had 3 weeks to design & develop a working web app in React along with a fully functional API & Server.\A The projects development stages required researching, designing, & user testing for the prototype.\A UML diagrams for both App & Server structure were also required before starting the coding process. \A \A The App has a full CRUD process from a user being able to register, login, sell, purchase, review, edit account details & edit or delete their products.\A \A Design & prototyping was completed in Sketch.\A App was coded in VS Code using the React library.";
+}
+
+.stageThree .workDone h2::before {
+  display: block;
+  white-space: pre-wrap;
+  content: "Design\A Server Setup \A App Development";
+}
+
+.stageFour {
+  background-image: url("assets/ambv-site.jpg");
+}
+
+.stageFour .heading {
+  border-bottom: 2px solid #b2b4b9 !important;
+  -webkit-transition: ease all 1.5s;
+  transition: ease all 1.5s;
+}
+
+.stageFour .heading h1::before {
+  color: #9f9fa1 !important;
+  content: "Auckland Boat Valet";
+}
+
+.stageFour .description p::before {
+  display: block;
+  white-space: pre-wrap;
+  content: "Auckland Marine Boat Valet contacted me about a full site redesign & upgrade. They wanted their site to be clean, simple & easy to navigate, With this in mind I was able to cut the number of pages down in half & categorise the services into their own section. \A \A I modified the wordpress CMS dashboard to suit their needs, making it easier for them going forward to add/edit content.\A \AInitial design & prototypes created in Adobe Xd, front end was done using Wordpress CMS.";
+}
+
+.stageFour .workDone h2::before {
+  display: block;
+  white-space: pre-wrap;
+  content: "Website";
+}
+
+.stageFive {
+  background-image: url("assets/mangawhai-bg.jpg");
+}
+
+.stageFive .heading {
+  border-bottom: 2px solid #e1c20f !important;
+  -webkit-transition: ease all 1.5s;
+  transition: ease all 1.5s;
+}
+
+.stageFive .heading h1::before {
+  color: #e1c20f !important;
+  content: "Mangawhai Market";
+}
+
+.stageFive .description p::before {
+  display: block;
+  white-space: pre-wrap;
+  content: "The Mangawhai Village Market needed a logo for their ever growing market. I discussed with them some design concepts & we came up with the idea to include a local bird, the Fairy Tern, which is a distinctive icon that locals will recognize.\A \A I really enjoyed working on this brand, something a bit different.";
+}
+
+.stageFive .workDone h2::before {
+  display: block;
+  white-space: pre-wrap;
+  content: "Logo Design";
+}
+
+.stageSix {
+  background-image: url("assets/cc-bg.jpg");
+}
+
+.stageSix .heading {
+  border-bottom: 2px solid #a32128 !important;
+  -webkit-transition: ease all 1.5s;
+  transition: ease all 1.5s;
+}
+
+.stageSix .heading h1::before {
+  color: #a32128 !important;
+  content: "The Cabin Crew";
+}
+
+.stageSix .description p::before {
+  display: block;
+  white-space: pre-wrap;
+  content: "The Cabin Crew team required a logo for their newly formed building company. The owner wanted a brand that meant something to him, but also had a contemporary and professional design to reflect the modern dwellings they were building.\A \A I used red & black colours to show his Maori heritage and a wave design to reflect one of his passions in life, surfing. I enjoyed working with him to come up with a design we were both happy with.";
+}
+
+.stageSix .workDone h2::before {
+  display: block;
+  white-space: pre-wrap;
+  content: "Logo Design";
+}
+
+.stageSeven {
+  background-image: url("assets/aut-bg.jpg");
+}
+
+.stageSeven .heading {
+  border-bottom: 2px solid #bebc21  !important;
+  -webkit-transition: ease all 1.5s;
+  transition: ease all 1.5s;
+}
+
+.stageSeven .heading h1::before {
+  color: #bebc21 !important;
+  content: "AUT Poster";
+}
+
+.stageSeven .description p::before {
+  display: block;
+  white-space: pre-wrap;
+  content: "For this assignment I was required to create a poster advertising Auckland University of Technology’s Diploma in Graphic Communication. \A \A I wanted to design something that really caught the eye, was simple & not too obvious. I feel I achieved this by only using two colours & having the finer details large enough to read but small enough to take a second look.";
+}
+
+.stageSeven .workDone h2::before {
+  display: block;
+  white-space: pre-wrap;
+  content: "Poster";
+}
+
+.stageExp .heading {
+  border-bottom: 2px solid #ffffff   !important;
+  -webkit-transition: ease all 1.5s;
+  transition: ease all 1.5s;
+}
+
+.stageExp .heading h1::before {
+  color: #ffffff  !important;
+  content: "Experience";
+}
+
+.stageExp .description p::before {
+  line-height: 1.5;
+  display: block;
+  white-space: pre-wrap;
+  content: "Yoobee Web & UX Development Lvl 6 / 2019 \A Graphic & Web Designer Gubba Products Ltd / 2006 - 2018 \A AUT Diploma in Graphic Communication Lvl 5 / 2008 - 2010 \A Production Fabricator Team Leader 2003 - 2006 \A Multimedia & Graphic Design Certificate 2002 - 2003";
+}
+
+.stageExp .workDone h2::before {
+  display: block;
+  white-space: pre-wrap;
+  content: "Poster";
+}
+
+.inapp-mobile {
+  width: 100%;
+  height: 100%;
+  font-size: 0.8em;
+}
+
+.tablet {
+  width: 22vw;
+  height: 30vw;
+}
+
+.wrap.container {
+  font-size: 0.8em;
+}
+
+.mj {
+  background-image: url("assets/mj-site.jpg");
+  height: 105em;
+}
+
+.mj-m {
+  background-image: url("assets/mj-m-site.jpg");
+  height: 170em;
+}
+
+.tens {
+  background-image: url("assets/10squares-site.jpg");
+  height: 350em;
+}
+
+.tens-m {
+  background-image: url("assets/10squares-site-mobile.jpg");
+  height: 235em;
+}
+
+.gubba {
+  background-image: url("assets/gubba-site.jpg");
+}
+
+.py {
+  background-image: url("assets/py-site.jpg");
+}
+
+.ambv {
+  background-image: url("assets/ambv-site.jpg");
+  height: 126em;
+}
+
+.ambv-m {
+  background-image: url("assets/ambv-m-site.jpg");
+  height: 169em;
+}
+
+.heli {
+  background-image: url("assets/helib-site.jpg");
+}
+
+.mglogo {
+  background-image: url("assets/mangawhai-logo-1.png");
+}
+
+.cc {
+  background-image: url("assets/the-cabin-crew-bcards.jpg");
+}
+
+.autposter {
+  background-image: url("assets/aut-poster.jpg");
+}
+
+.gcpackage {
+  background-image: url("assets/goodcoffee.jpg");
+}
+
+.renders {
+  background-image: url("assets/13renders.jpg");
 }
 
 .aboutMe {
@@ -1179,21 +1130,14 @@ text.skills1 p {
 }
 
 .heroblock.stageExp {
-  width: 100%;
-}
-
-.heroblock.stageExp h1 {
-  padding-left: 7vw;
+  width: 90%;
+  margin-left: 16.3vw;
 }
 
 .headerTransExp {
-  margin-left: 0vw !important;
   -webkit-transition: ease all 1s;
   transition: ease all 1s;
   background-color: #191919;
-  -webkit-box-flex: 1 !important;
-      -ms-flex: 1 0 51% !important;
-          flex: 1 0 51% !important;
 }
 
 .headerTransExp p {
@@ -1240,7 +1184,7 @@ text.skills1 p {
   position: absolute;
   border-bottom: 2px solid #1a1a1a;
   height: 1px;
-  top: 54vh;
+  top: 48.9vh;
   left: 0vw;
   max-width: 600vw;
 }
@@ -1315,17 +1259,11 @@ text.skills1 p {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin-right: 5vw;
-  margin-left: -5vw;
-  -webkit-box-flex: 1 !important;
-      -ms-flex: 1 0 35% !important;
-          flex: 1 0 35% !important;
+  padding-right: 7vw;
+  padding-left: 5vw;
 }
 
 .cTwoExp .eText {
-  -webkit-box-flex: 0 !important;
-      -ms-flex: 0 1 40% !important;
-          flex: 0 1 40% !important;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -1336,7 +1274,7 @@ text.skills1 p {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
-  margin-bottom: 10vh;
+  margin-bottom: 20vh;
 }
 
 .cTwoExp .eText text {
@@ -1361,7 +1299,98 @@ text.skills1 p {
   margin-left: 1.4em;
 }
 
-formpos {
+.contactinfo {
+  position: absolute;
+  margin-bottom: 17%;
+  font-family: roboto;
+  text-align: center;
+  font-size: 1.25vw;
+  font-weight: 300;
+  padding-left: .3em;
+  width: 100%;
+  pointer-events: none;
+  bottom: 0;
+}
+
+.cBackground {
+  background-image: url("assets/snowboarding-backdrop.jpg");
+  background-size: cover;
+  background-position-y: 155%;
+}
+
+.eSection {
+  height: 100vh;
+  width: 100vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.cSection {
+  height: 100vh;
+  width: 100vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.cRow1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 40%;
+          flex: 1 0 40%;
+  width: 100vw;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.cRow1 .eText {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.cRow1 .eText text {
+  padding-left: 1em;
+  z-index: 1;
+  background-color: white;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 70%;
+          flex: 0 0 70%;
+  padding-right: 0;
+  margin-right: 0vw;
+}
+
+.cRow1 .eText text p {
+  line-height: 1.4;
+}
+
+.cRow2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 50%;
+          flex: 1 0 50%;
+  width: 100vw;
+  background-color: #191919;
+}
+
+.formpos {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1375,18 +1404,14 @@ formpos {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding-right: 0vw;
-  padding-left: 10vw;
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
   background-color: #191919;
-  -webkit-clip-path: polygon(1% 0, 100% 0, 100% 100%, 25% 100%);
-          clip-path: polygon(1% 0, 100% 0, 100% 100%, 25% 100%);
   overflow: hidden;
 }
 
-formpos block {
+.formpos block {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1395,13 +1420,13 @@ formpos block {
           flex: 0 0 57%;
 }
 
-formpos text {
+.formpos text {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-flex: 0;
-      -ms-flex: 0 0 35%;
-          flex: 0 0 35%;
+      -ms-flex: 0 0 65%;
+          flex: 0 0 65%;
   padding-left: 3em;
   padding-right: 4vw;
   font-size: 0.8vw;
@@ -1414,19 +1439,19 @@ formpos text {
   margin-bottom: 4vw;
 }
 
-formpos text p {
+.formpos text p {
   font-size: 1em;
   padding-bottom: 0.5em;
   font-weight: 300;
 }
 
-formpos text h1 {
+.formpos text h1 {
   font-size: 1.75em;
   font-weight: 300;
   padding-bottom: 0.25em;
 }
 
-formpos text img {
+.formpos text img {
   width: 10em;
   padding: 2em;
 }
@@ -1509,37 +1534,6 @@ formpos text img {
 .myForm .submit:hover {
   color: #111;
   background-color: #dcdcdc;
-}
-
-.contactinfo {
-  position: absolute;
-  margin-bottom: 17%;
-  font-family: roboto;
-  text-align: center;
-  font-size: 1.25vw;
-  font-weight: 300;
-  padding-left: .3em;
-  width: 100%;
-  pointer-events: none;
-  bottom: 0;
-}
-
-.cBackground {
-  background-image: url("assets/snowboarding-backdrop.jpg");
-  background-size: cover;
-  background-position-y: 155%;
-}
-
-.eSection {
-  height: 100vh;
-  width: 100vw;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
 }
 
 @-webkit-keyframes fadeIn {
@@ -2525,9 +2519,6 @@ formpos text img {
   z-index: 999999;
   -webkit-transition: ease all .7s;
   transition: ease all .7s;
-  -webkit-clip-path: polygon(1% 0, 100% 0, 100% 100%, 20% 100%);
-          clip-path: polygon(1% 0, 100% 0, 100% 100%, 20% 100%);
-  padding-left: 55em;
   right: 0;
 }
 
@@ -2667,918 +2658,6 @@ formpos text img {
   100% {
     opacity: 0;
   }
-}
-
-@keyframes arrow-movement {
-  0% {
-    opacity: 0;
-    top: 50%;
-    left: 45%;
-  }
-  70% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
-}
-
-.workHeading {
-  -webkit-transition: .7s ease all;
-  transition: .7s ease all;
-}
-
-.expHeading {
-  -webkit-transition: .7s ease all;
-  transition: .7s ease all;
-}
-
-.skillHeading {
-  -webkit-transition: .7s ease all;
-  transition: .7s ease all;
-}
-
-form {
-  -webkit-transition: .7s ease all;
-  transition: .7s ease all;
-}
-
-.webWork {
-  -webkit-transition: .7s ease all;
-  transition: .7s ease all;
-}
-
-blurb {
-  -webkit-transition: .7s ease all;
-  transition: .7s ease all;
-}
-
-.hSlide {
-  -webkit-transform: translate(0, 1em);
-          transform: translate(0, 1em);
-  -webkit-transition: .7s ease all;
-  transition: .7s ease all;
-}
-
-.tFade {
-  opacity: 0;
-  -webkit-transition: .7s ease all;
-  transition: .7s ease all;
-}
-
-.scroll-lock {
-  pointer-events: none;
-}
-
-.Tilt {
-  cursor: pointer;
-}
-
-.moveLeft {
-  -webkit-transform: translate(-15vw, 0) scale(0.9);
-          transform: translate(-15vw, 0) scale(0.9);
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-@keyframes fadeOut {
-  from {
-    opacity: 1;
-  }
-  to {
-    opacity: 0;
-  }
-}
-
-@keyframes away {
-  from {
-    opacity: 1;
-    -webkit-transform: translate(0, 0);
-            transform: translate(0, 0);
-  }
-  to {
-    opacity: 0;
-    -webkit-transform: translate(0, 0);
-            transform: translate(0, 0);
-  }
-}
-
-@keyframes closeMainNav {
-  from {
-    opacity: 1;
-    -webkit-transform: translate(0, 0);
-            transform: translate(0, 0);
-    height: 100vh;
-    position: absolute;
-  }
-  to {
-    opacity: 0;
-    -webkit-transform: translate(0, 0);
-            transform: translate(0, 0);
-    height: 0;
-    position: initial;
-  }
-}
-
-@keyframes come {
-  from {
-    width: 40vw;
-    -webkit-transform: translate(-5em, -15em) scale(0.75);
-            transform: translate(-5em, -15em) scale(0.75);
-    -webkit-filter: blur(7px);
-            filter: blur(7px);
-    opacity: 0.5;
-  }
-  to {
-    opacity: 1;
-    width: 100vw;
-    -webkit-filter: blur(0px);
-            filter: blur(0px);
-  }
-}
-
-@keyframes base {
-  from {
-    width: 40vw;
-    -webkit-transform: translate(-5em, -15em) scale(0.75);
-            transform: translate(-5em, -15em) scale(0.75);
-    -webkit-filter: blur(7px);
-            filter: blur(7px);
-    opacity: 0.5;
-    visibility: hidden;
-  }
-  to {
-    opacity: 0;
-    width: 40vw;
-    -webkit-transform: translate(-5em, -15em) scale(0.75);
-            transform: translate(-5em, -15em) scale(0.75);
-    -webkit-filter: blur(7px);
-            filter: blur(7px);
-    opacity: 0;
-    visibility: hidden;
-  }
-}
-
-@keyframes slidein {
-  from {
-    opacity: 1;
-    width: 100vw;
-    -webkit-filter: blur(0px);
-            filter: blur(0px);
-  }
-  to {
-    width: 40vw;
-    -webkit-transform: translate(-5em, -15em) scale(0.75);
-            transform: translate(-5em, -15em) scale(0.75);
-    -webkit-filter: blur(7px);
-            filter: blur(7px);
-    opacity: 0.5;
-  }
-}
-
-@keyframes slideinFade {
-  from {
-    opacity: 1;
-    width: 100vw;
-    -webkit-filter: blur(0px);
-            filter: blur(0px);
-  }
-  to {
-    width: 40vw;
-    -webkit-transform: translate(-5em, -15em) scale(0.75);
-            transform: translate(-5em, -15em) scale(0.75);
-    -webkit-filter: blur(7px);
-            filter: blur(7px);
-    opacity: 0;
-  }
-}
-
-@keyframes slideright {
-  from {
-    -webkit-transform: translate(0, 0);
-            transform: translate(0, 0);
-    opacity: 1;
-  }
-  to {
-    -webkit-transform: translate(140vw, 0);
-            transform: translate(140vw, 0);
-    opacity: 1;
-  }
-}
-
-@keyframes slideBackLeft {
-  from {
-    -webkit-transform: translate(110vw, 0);
-            transform: translate(110vw, 0);
-    opacity: 1;
-  }
-  to {
-    -webkit-transform: translate(0vw, 0);
-            transform: translate(0vw, 0);
-    opacity: 1;
-  }
-}
-
-@keyframes slideleft {
-  from {
-    -webkit-transform: translate(0, 0);
-            transform: translate(0, 0);
-    opacity: 1;
-  }
-  to {
-    -webkit-transform: translate(-110vw, 0);
-            transform: translate(-110vw, 0);
-    opacity: 1;
-  }
-}
-
-@keyframes slideBackRight {
-  from {
-    -webkit-transform: translate(-110vw, 0);
-            transform: translate(-110vw, 0);
-    opacity: 1;
-  }
-  to {
-    -webkit-transform: translate(0vw, 0);
-            transform: translate(0vw, 0);
-    opacity: 1;
-  }
-}
-
-@keyframes slideout {
-  from {
-    -webkit-transform: translate(0, 0);
-            transform: translate(0, 0);
-    opacity: 1;
-  }
-  to {
-    -webkit-transform: translate(0, -110vh);
-            transform: translate(0, -110vh);
-    opacity: 1;
-  }
-}
-
-@keyframes slidebelow {
-  from {
-    -webkit-transform: translate(0, 0);
-            transform: translate(0, 0);
-    opacity: 1;
-  }
-  to {
-    -webkit-transform: translate(0, 110vh);
-            transform: translate(0, 110vh);
-    opacity: 1;
-  }
-}
-
-@keyframes slidedown {
-  from {
-    -webkit-transform: translate(0, 0vh);
-            transform: translate(0, 0vh);
-    opacity: 1;
-  }
-  to {
-    -webkit-transform: translate(0, 110vh);
-            transform: translate(0, 110vh);
-    opacity: 1;
-  }
-}
-
-@keyframes slidebackdown {
-  from {
-    -webkit-transform: translate(0, -110vh);
-            transform: translate(0, -110vh);
-    opacity: 1;
-  }
-  to {
-    -webkit-transform: translate(0, 0vh);
-            transform: translate(0, 0vh);
-    opacity: 1;
-  }
-}
-
-@keyframes slidebackup {
-  from {
-    -webkit-transform: translate(0, 110vh);
-            transform: translate(0, 110vh);
-    opacity: 1;
-  }
-  to {
-    -webkit-transform: translate(0, 0vh);
-            transform: translate(0, 0vh);
-    opacity: 1;
-  }
-}
-
-@keyframes slideinrow {
-  from {
-    opacity: 0;
-    -webkit-filter: blur(20px);
-            filter: blur(20px);
-    width: 100vw;
-    margin-left: -47vw;
-  }
-  to {
-    opacity: 1;
-    margin-left: -53vw;
-    width: 55vw;
-    -webkit-filter: blur(0px);
-            filter: blur(0px);
-  }
-}
-
-.twodelay {
-  opacity: 1;
-  -webkit-animation: delayedSlide ease-in 0s;
-          animation: delayedSlide ease-in 0s;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
-  -webkit-animation-duration: 3s;
-          animation-duration: 3s;
-  -webkit-animation-delay: 0s;
-          animation-delay: 0s;
-}
-
-.below {
-  width: 40vw;
-  -webkit-transform: translate(-5em, -15em) scale(0.75);
-          transform: translate(-5em, -15em) scale(0.75);
-  -webkit-filter: blur(7px);
-          filter: blur(7px);
-  opacity: 0.5;
-}
-
-.away {
-  opacity: 1;
-  /* make things invisible upon start */
-  -webkit-animation: away ease-in 1;
-          animation: away ease-in 1;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
-  -webkit-animation-duration: .7s;
-          animation-duration: .7s;
-}
-
-.closeNav {
-  opacity: 0;
-  /* make things invisible upon start */
-  -webkit-animation: closeMainNav ease-in 1;
-          animation: closeMainNav ease-in 1;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
-  -webkit-animation-duration: .7s;
-          animation-duration: .7s;
-}
-
-.base {
-  opacity: 0;
-  width: 40vw;
-  -webkit-transform: translate(-5em, -15em) scale(0.75);
-          transform: translate(-5em, -15em) scale(0.75);
-  -webkit-filter: blur(7px);
-          filter: blur(7px);
-  opacity: 0.5;
-  width: 40vw !important;
-  -webkit-animation: base ease-in 1;
-          animation: base ease-in 1;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
-  -webkit-animation-duration: .7s;
-          animation-duration: .7s;
-}
-
-.base-hero {
-  visibility: hidden;
-  opacity: 0;
-  width: 40vw;
-  -webkit-transform: translate(-5em, -15em) scale(0.75);
-          transform: translate(-5em, -15em) scale(0.75);
-  -webkit-filter: blur(7px);
-          filter: blur(7px);
-  opacity: 0.5;
-  width: 40vw !important;
-}
-
-.come {
-  opacity: 1;
-  /* make things invisible upon start */
-  -webkit-animation: come ease-in 1;
-          animation: come ease-in 1;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
-  -webkit-animation-duration: .7s;
-          animation-duration: .7s;
-}
-
-.gone {
-  visibility: hidden;
-}
-
-.none {
-  display: none !important;
-  height: 0;
-  -webkit-transition: scale(0);
-  transition: scale(0);
-  width: 0;
-  opacity: 0;
-}
-
-.row-base {
-  opacity: 1;
-  margin-left: -50vw;
-  width: 50vw;
-  -webkit-filter: blur(0px);
-          filter: blur(0px);
-  margin-top: 0;
-  z-index: -1;
-}
-
-.hero-base {
-  width: 40vw !important;
-  -webkit-transform: translate(-5em, -15em) scale(0.75);
-          transform: translate(-5em, -15em) scale(0.75);
-  -webkit-filter: blur(7px);
-          filter: blur(7px);
-  opacity: 0.5;
-}
-
-.headerTransHome {
-  -webkit-transition: ease all 1s;
-  transition: ease all 1s;
-}
-
-.headerTransHome h1 {
-  font-size: 5em;
-  line-height: 1em;
-  font-weight: 900;
-  margin-left: 0.2em;
-  margin-top: 0.12em;
-  margin-bottom: 0.1em;
-  color: #424242;
-  width: 4.8em;
-}
-
-.headerTransHome h2 {
-  font-size: 2.063em;
-  padding: 0.1em 0.3em 0.1em 0.4em;
-  background-color: #000000;
-  font-weight: 300;
-  font-style: normal;
-  color: white;
-  width: 7em;
-  margin-top: 0.25em;
-  margin-left: 6.25em;
-}
-
-.headerTransHome p {
-  font-weight: 100;
-  font-size: 2.375em;
-  color: rgba(0, 0, 0, 0.57);
-  width: 10em;
-  margin-left: 5.4em;
-}
-
-.headerTransHome .heading {
-  -webkit-transition: ease all 1s;
-  transition: ease all 1s;
-}
-
-.headerTransHome .heading h1 {
-  color: #424242 !important;
-  -webkit-transition: ease all 1s;
-  transition: ease all 1s;
-}
-
-.headerTransHome .heading svg {
-  -webkit-transition: ease all 1s;
-  transition: ease all 1s;
-  fill: black;
-  height: 13.9em !important;
-  width: 11.8em;
-}
-
-.headerTransWork {
-  margin-left: 0vw !important;
-  -webkit-transition: ease all 1s;
-  transition: ease all 1s;
-}
-
-.headerTransWork p {
-  color: #fafafa !important;
-  -webkit-transition: ease all 1s;
-  transition: ease all 1s;
-}
-
-.headerTransWork h2 {
-  color: #fafafa !important;
-  background-color: black !important;
-  -webkit-transition: ease all 1s;
-  transition: ease all 1s;
-}
-
-.headerTransWork .heading {
-  -webkit-transition: ease all 1s;
-  transition: ease all 1s;
-}
-
-.headerTransWork .heading h1 {
-  color: #fafafa !important;
-  -webkit-transition: ease all 1s;
-  transition: ease all 1s;
-}
-
-.headerTransWork .heading svg {
-  -webkit-transition: ease all 1s;
-  transition: ease all 1s;
-  fill: #c0d9f0;
-  height: 13.9em !important;
-  width: 11.8em;
-}
-
-.animPath .leftPath {
-  -webkit-transition: ease all .5s;
-  transition: ease all .5s;
-  -webkit-transform-origin: top left;
-          transform-origin: top left;
-}
-
-.animPath .rightPath {
-  -webkit-transition: ease all .5s;
-  transition: ease all .5s;
-  -webkit-transform-origin: top right;
-          transform-origin: top right;
-}
-
-.colBlack {
-  background-image: url("assets/groovepaper.png");
-  -webkit-box-flex: 1 !important;
-      -ms-flex: 1 0 38% !important;
-          flex: 1 0 38% !important;
-}
-
-.white-bg {
-  background-color: white;
-}
-
-.colWhite {
-  -webkit-transition: ease all .5s;
-  transition: ease all .5s;
-  background-color: rgba(255, 255, 255, 0);
-  -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 100%);
-          clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 100%);
-  z-index: -1;
-}
-
-.slide-in {
-  -webkit-animation: slidein ease-in 1;
-          animation: slidein ease-in 1;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
-  -webkit-animation-duration: .7s;
-          animation-duration: .7s;
-}
-
-.slide-out {
-  -webkit-animation: slideout ease-in 1;
-          animation: slideout ease-in 1;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
-  -webkit-animation-duration: .7s;
-          animation-duration: .7s;
-}
-
-.slide-below {
-  -webkit-animation: slidebelow ease-in 1;
-          animation: slidebelow ease-in 1;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
-  -webkit-animation-duration: .7s;
-          animation-duration: .7s;
-}
-
-.slide-right {
-  -webkit-animation: slideright ease-in 1;
-          animation: slideright ease-in 1;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
-  -webkit-animation-duration: .7s;
-          animation-duration: .7s;
-}
-
-.slide-back-left {
-  -webkit-animation: slideBackLeft ease-in 1;
-          animation: slideBackLeft ease-in 1;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
-  -webkit-animation-duration: 1s;
-          animation-duration: 1s;
-}
-
-.slide-up {
-  -webkit-animation: slideup ease-in 1;
-          animation: slideup ease-in 1;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
-  -webkit-animation-duration: .7s;
-          animation-duration: .7s;
-}
-
-.slide-back-down {
-  -webkit-animation: slidebackdown ease-in 1;
-          animation: slidebackdown ease-in 1;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
-  -webkit-animation-duration: .7s;
-          animation-duration: .7s;
-}
-
-.slide-back-up {
-  -webkit-animation: slidebackup ease-in 1;
-          animation: slidebackup ease-in 1;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
-  -webkit-animation-duration: .7s;
-          animation-duration: .7s;
-}
-
-.slide-down {
-  -webkit-animation: slidedown ease-in 1;
-          animation: slidedown ease-in 1;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
-  -webkit-animation-duration: .7s;
-          animation-duration: .7s;
-}
-
-.slide-left {
-  -webkit-animation: slideleft ease-in 1;
-          animation: slideleft ease-in 1;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
-  -webkit-animation-duration: .7s;
-          animation-duration: .7s;
-}
-
-.slide-back-right {
-  -webkit-animation: slideBackRight ease-in 1;
-          animation: slideBackRight ease-in 1;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
-  -webkit-animation-duration: .7s;
-          animation-duration: .7s;
-}
-
-.slide-in-fade {
-  -webkit-animation: slideinFade ease-in 1;
-          animation: slideinFade ease-in 1;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
-  -webkit-animation-duration: .7s;
-          animation-duration: .7s;
-}
-
-.fade-out {
-  opacity: 0;
-  /* make things invisible upon start */
-  -webkit-animation: fadeOut ease-in 1;
-          animation: fadeOut ease-in 1;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
-  -webkit-animation-duration: .5s;
-          animation-duration: .5s;
-}
-
-.fade-out-fast {
-  opacity: 0;
-  /* make things invisible upon start */
-  -webkit-animation: fadeOut ease-in 1;
-          animation: fadeOut ease-in 1;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
-  -webkit-animation-duration: .2s;
-          animation-duration: .2s;
-}
-
-.fade-in {
-  opacity: 0;
-  /* make things invisible upon start */
-  -webkit-animation: fadeIn ease-in 1;
-          animation: fadeIn ease-in 1;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
-  -webkit-animation-duration: .7s;
-          animation-duration: .7s;
-}
-
-.fade-in-fast {
-  opacity: 0;
-  /* make things invisible upon start */
-  -webkit-animation: fadeIn ease-in 1;
-          animation: fadeIn ease-in 1;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
-  -webkit-animation-duration: .3s;
-          animation-duration: .3s;
-}
-
-.fade-in.one {
-  -webkit-animation-delay: 1s;
-          animation-delay: 1s;
-}
-
-.fade-in.two {
-  -webkit-animation-delay: 3s;
-          animation-delay: 3s;
-}
-
-.fade-in.three {
-  -webkit-animation-delay: 4s;
-          animation-delay: 4s;
-}
-
-.fade-in.four {
-  -webkit-animation-delay: 5s;
-          animation-delay: 5s;
-}
-
-.fade-in.five {
-  -webkit-animation-delay: 6s;
-          animation-delay: 6s;
-}
-
-.whiteTrans {
-  pointer-events: none;
-  position: absolute;
-  width: 100vw;
-  height: 100vh;
-  -webkit-transition: ease all 1s;
-  transition: ease all 1s;
-  z-index: 9999999;
-  background-color: white;
-  opacity: 0;
-}
-
-.whiteTransForm {
-  -webkit-transition: ease all .07s;
-  transition: ease all .07s;
-  pointer-events: none;
-  position: absolute;
-  height: 100vh;
-  width: 100vw;
-  opacity: 1;
-  background-color: white;
-}
-
-.contactTrans {
-  pointer-events: none;
-  position: absolute;
-  width: 100vw;
-  height: 100vh;
-  right: 0;
-  -webkit-transition: ease-out all .7s;
-  transition: ease-out all .7s;
-  z-index: 9999999;
-  background-color: white;
-  opacity: 0;
-}
-
-.contactTransForm {
-  pointer-events: none;
-  right: 0;
-  position: absolute;
-  height: 100vh;
-  width: 100vw;
-  opacity: 1;
-  background-color: white;
-}
-
-.homeHeader {
-  height: 100vh;
-  width: 100vw;
-  position: absolute;
-  background-color: white;
-  z-index: 999999;
-  -webkit-transition: ease all .7s;
-  transition: ease all .7s;
-  -webkit-clip-path: polygon(1% 0, 100% 0, 100% 100%, 20% 100%);
-          clip-path: polygon(1% 0, 100% 0, 100% 100%, 20% 100%);
-  padding-left: 55em;
-  right: 0;
-}
-
-.cWhite {
-  background-color: #1a1a1a;
-  z-index: 1;
-  height: 100vh;
-  width: 100vw;
-  margin-left: 0vw;
-}
-
-@keyframes scroll {
-  0% {
-    opacity: 0;
-  }
-  10% {
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
-    opacity: 1;
-  }
-  100% {
-    -webkit-transform: translateY(15px);
-            transform: translateY(15px);
-    opacity: 0;
-  }
-}
-
-.scroll-downs {
-  position: absolute;
-  bottom: 14vh;
-  left: 27vw;
-  margin: auto;
-  width: 34px;
-  height: 55px;
-  -webkit-transition: 1s ease all;
-  transition: 1s ease all;
-}
-
-.mousey {
-  width: .2em;
-  padding: 10px 15px;
-  height: 2.2em;
-  border: 2px solid #fff;
-  border-radius: .9em;
-  opacity: 0.65;
-  -webkit-box-sizing: content-box;
-          box-sizing: content-box;
-}
-
-.scrollerAnim {
-  width: 3px;
-  height: 10px;
-  border-radius: 25%;
-  background-color: #fff;
-  -webkit-animation-name: scroll;
-          animation-name: scroll;
-  -webkit-animation-duration: .7s;
-          animation-duration: .7s;
-  -webkit-animation-timing-function: cubic-bezier(0.15, 0.41, 0.69, 0.94);
-          animation-timing-function: cubic-bezier(0.15, 0.41, 0.69, 0.94);
-  -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
-}
-
-.arrow {
-  opacity: 0;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  -webkit-transform-origin: 50% 50%;
-          transform-origin: 50% 50%;
-  -webkit-transform: translate3d(-50%, -50%, 0) rotate(-90deg) translate(-0.5em, 2.5em) scale(0.5);
-          transform: translate3d(-50%, -50%, 0) rotate(-90deg) translate(-0.5em, 2.5em) scale(0.5);
-}
-
-.arrow-first {
-  -webkit-animation: arrow-movement 0.7s ease-in-out infinite;
-          animation: arrow-movement 0.7s ease-in-out infinite;
-}
-
-.arrow-second {
-  -webkit-animation: arrow-movement 0.7s 0s ease-in-out infinite;
-          animation: arrow-movement 0.7s 0s ease-in-out infinite;
-}
-
-.arrow:before,
-.arrow:after {
-  background: #fff;
-  content: '';
-  display: block;
-  height: 3px;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 30px;
-}
-
-.arrow:before {
-  -webkit-transform: rotate(45deg) translateX(-23%);
-          transform: rotate(45deg) translateX(-23%);
-  -webkit-transform-origin: top left;
-          transform-origin: top left;
-}
-
-.arrow:after {
-  -webkit-transform: rotate(-45deg) translateX(23%);
-          transform: rotate(-45deg) translateX(23%);
-  -webkit-transform-origin: top right;
-          transform-origin: top right;
 }
 
 @keyframes arrow-movement {
@@ -4057,6 +3136,8 @@ g#contact-border {
           justify-content: space-between;
   height: 100vh;
   width: 100vw;
+  position: absolute;
+  pointer-events: none;
 }
 
 .WorkHero .col {
@@ -4240,9 +3321,258 @@ svg {
   height: 0;
 }
 
+/* Basic Styles */
+.mobNavContainer {
+  position: relative;
+  width: 100vw;
+  height: 100%;
+  overflow: hidden;
+}
+
+/* Toggle Functionality */
+#toggle {
+  display: none;
+}
+
+#toggle:checked ~ .toggle-container .button-toggle {
+  -webkit-box-shadow: 0 0 0 550px rgba(0, 0, 0, 0), inset 0 0 0 20px rgba(0, 0, 0, 0);
+          box-shadow: 0 0 0 550px rgba(0, 0, 0, 0), inset 0 0 0 20px rgba(0, 0, 0, 0);
+}
+
+#toggle:checked ~ .toggle-container .button-toggle:before {
+  -webkit-transform: translateY(-50%) rotate(45deg) scale(1);
+          transform: translateY(-50%) rotate(45deg) scale(1);
+}
+
+#toggle:checked ~ .toggle-container .button-toggle:after {
+  -webkit-transform: translateY(-50%) rotate(-45deg) scale(1);
+          transform: translateY(-50%) rotate(-45deg) scale(1);
+}
+
+#toggle:checked ~ .nav {
+  margin-bottom: 100px;
+  pointer-events: auto;
+  padding: 4vh 2em 2em 1.8em;
+}
+
+#toggle:checked ~ .nav .nav-item {
+  color: #EC7263;
+  letter-spacing: 0;
+  height: 40px;
+  line-height: 40px;
+  margin-top: 0;
+  opacity: 1;
+  -webkit-transform: scaleY(1);
+          transform: scaleY(1);
+  -webkit-transition: 0.5s, opacity 0.1s;
+  transition: 0.5s, opacity 0.1s;
+}
+
+#toggle:checked ~ .nav .nav-item:nth-child(1) {
+  -webkit-transition-delay: 0.15s;
+          transition-delay: 0.15s;
+}
+
+#toggle:checked ~ .nav .nav-item:nth-child(1):before {
+  -webkit-transition-delay: 0.15s;
+          transition-delay: 0.15s;
+}
+
+#toggle:checked ~ .nav .nav-item:nth-child(2) {
+  -webkit-transition-delay: 0.1s;
+          transition-delay: 0.1s;
+}
+
+#toggle:checked ~ .nav .nav-item:nth-child(2):before {
+  -webkit-transition-delay: 0.1s;
+          transition-delay: 0.1s;
+}
+
+#toggle:checked ~ .nav .nav-item:nth-child(3) {
+  -webkit-transition-delay: 0.05s;
+          transition-delay: 0.05s;
+}
+
+#toggle:checked ~ .nav .nav-item:nth-child(3):before {
+  -webkit-transition-delay: 0.05s;
+          transition-delay: 0.05s;
+}
+
+#toggle:checked ~ .nav .nav-item:nth-child(4) {
+  -webkit-transition-delay: 0s;
+          transition-delay: 0s;
+}
+
+#toggle:checked ~ .nav .nav-item:nth-child(4):before {
+  -webkit-transition-delay: 0s;
+          transition-delay: 0s;
+}
+
+#toggle:checked ~ .nav .nav-item:before {
+  opacity: 0;
+}
+
+#toggle:checked ~ .dummy-content {
+  padding-top: 30px;
+}
+
+#toggle:checked ~ .dummy-content:before {
+  background-color: rgba(0, 0, 0, 0);
+}
+
+/* Toggle Button */
+.button-toggle {
+  position: absolute;
+  display: inline-block;
+  width: 3em;
+  height: 2em;
+  margin: 20px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  border-radius: 100%;
+  -webkit-transition: 0.6s;
+  transition: 0.6s;
+}
+
+.button-toggle:hover {
+  -webkit-box-shadow: 0 0 0 8px rgba(0, 0, 0, 0), inset 0 0 0 20px rgba(0, 0, 0, 0);
+          box-shadow: 0 0 0 8px rgba(0, 0, 0, 0), inset 0 0 0 20px rgba(0, 0, 0, 0);
+}
+
+.button-toggle:before, .button-toggle:after {
+  position: absolute;
+  content: '';
+  top: 20%;
+  left: 10%;
+  width: 50%;
+  height: 1px;
+  background-color: #EC7263;
+  border-radius: 5px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.button-toggle:before {
+  -webkit-transform: translateY(-50%) rotate(45deg) scale(0);
+          transform: translateY(-50%) rotate(45deg) scale(0);
+}
+
+.button-toggle:after {
+  -webkit-transform: translateY(50%) rotate(-45deg) scale(0);
+          transform: translateY(50%) rotate(-45deg) scale(0);
+}
+
+/* Menu */
+.nav {
+  display: inline-block;
+  padding: 2vh 2em 1.8em 2em;
+  pointer-events: none;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.nav-item {
+  position: relative;
+  display: inline-block;
+  float: left;
+  clear: both;
+  color: transparent;
+  font-size: 14px;
+  letter-spacing: -5.2px;
+  height: 9px;
+  line-height: 1;
+  text-transform: uppercase;
+  white-space: nowrap;
+  -webkit-transform: scaleY(0.2);
+          transform: scaleY(0.2);
+  -webkit-transition: 0.5s, opacity 1s;
+  transition: 0.5s, opacity 1s;
+}
+
+.nav-item:nth-child(1) {
+  -webkit-transition-delay: 0s;
+          transition-delay: 0s;
+}
+
+.nav-item:nth-child(1):before {
+  -webkit-transition-delay: 0s;
+          transition-delay: 0s;
+}
+
+.nav-item:nth-child(2) {
+  -webkit-transition-delay: 0.05s;
+          transition-delay: 0.05s;
+}
+
+.nav-item:nth-child(2):before {
+  -webkit-transition-delay: 0.05s;
+          transition-delay: 0.05s;
+}
+
+.nav-item:nth-child(3) {
+  -webkit-transition-delay: 0.1s;
+          transition-delay: 0.1s;
+}
+
+.nav-item:nth-child(3):before {
+  -webkit-transition-delay: 0.1s;
+          transition-delay: 0.1s;
+}
+
+.nav-item:nth-child(4) {
+  -webkit-transition-delay: 0.15s;
+          transition-delay: 0.15s;
+}
+
+.nav-item:nth-child(4):before {
+  -webkit-transition-delay: 0.15s;
+          transition-delay: 0.15s;
+}
+
+.nav-item:nth-child(1) {
+  letter-spacing: -6.5px;
+}
+
+.nav-item:nth-child(2) {
+  letter-spacing: -4.5px;
+}
+
+.nav-item:nth-child(n + 4) {
+  letter-spacing: -4.7px;
+  opacity: 1;
+}
+
+.nav-item:before {
+  position: absolute;
+  content: '';
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #EC7263;
+  -webkit-transform: translateY(-50%) scaleY(5);
+          transform: translateY(-50%) scaleY(5);
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
 @media only screen and (max-width: 87.5em) {
+  .expLine {
+    display: none;
+  }
+  .stageExp .description p::before {
+    font-size: 2em;
+    width: 50vw;
+    padding: 0;
+    margin-left: -5vw;
+  }
   .stageExp .heading {
     height: 3.8em;
+  }
+  .stageExp {
+    margin-left: 23.5vw !important;
+    padding-right: 3.7vw;
   }
   .contactForm {
     margin-left: -90%;
@@ -4282,7 +3612,7 @@ svg {
     cursor: pointer;
   }
   .WorkHero .col .heroblock .description p {
-    font-size: 1.4em !important;
+    font-size: 2em !important;
     width: 90% !important;
     margin-left: 0em !important;
     padding-left: 1em;
@@ -4337,6 +3667,42 @@ svg {
 }
 
 @media only screen and (max-width: 60em) {
+  .nav {
+    display: inline-block;
+    padding: 2vh 2em 1.8em 1em;
+    pointer-events: none;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+  }
+  #toggle:checked ~ .nav {
+    margin-bottom: 100px;
+    pointer-events: auto;
+    padding: 1vh 1em 0em 10vw;
+    background-color: #191919;
+    width: 90vw;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  .button-toggle {
+    position: absolute;
+    display: inline-block;
+    width: 2em;
+    height: 2em;
+    margin: 20px;
+    margin-left: 5px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    border-radius: 100%;
+    -webkit-transition: 0.6s;
+    transition: 0.6s;
+  }
+  .button-toggle:before, .button-toggle:after {
+    width: 70%;
+  }
   svg#Layer_1 {
     margin-right: inherit;
     width: inherit;
@@ -4428,6 +3794,129 @@ svg {
 }
 
 @media only screen and (max-width: 30em) {
+  #toggle:checked ~ .nav .nav-item {
+    font-size: .7em;
+    color: white;
+  }
+  .nav-item:before {
+    background-color: white;
+    -webkit-transform: scaleX(0.9) scaleY(2) translateX(-0.5em);
+            transform: scaleX(0.9) scaleY(2) translateX(-0.5em);
+  }
+  .button-toggle:before, .button-toggle:after {
+    background-color: #ffffff;
+  }
+  .cSection {
+    height: 100vh;
+    width: 100vw;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .cRow1 {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+    -webkit-box-flex: 1;
+        -ms-flex: 1 0 30%;
+            flex: 1 0 30%;
+  }
+  .cRow1 text {
+    color: black;
+  }
+  .formpos {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    padding-right: 0;
+    height: 100%;
+    width: 100vw;
+    padding-left: 0;
+    -webkit-box-flex: 1;
+        -ms-flex: 1 0 100%;
+            flex: 1 0 100%;
+    background-color: #ffffff;
+    -webkit-clip-path: initial;
+            clip-path: initial;
+    /* overflow: hidden; */
+  }
+  .myForm {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 60%;
+    -webkit-transform: scale(1.8);
+            transform: scale(1.8);
+    font-size: 2em;
+    padding: 1em;
+    background-color: #191919;
+    border-radius: 0.2em;
+    -webkit-box-shadow: 0 0 0 #3333331e;
+            box-shadow: 0 0 0 #3333331e;
+  }
+  .myForm formgrp {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .myForm formgrp input {
+    padding: 0.8em;
+    border-bottom: thin none;
+    width: 11em;
+    font-size: 0.85em;
+    margin-bottom: 1em;
+    color: #cdcdcd;
+    background-color: #222;
+  }
+  .myForm input:focus {
+    outline-offset: -2px;
+    outline: -webkit-focus-ring-color auto 0;
+  }
+  .myForm .message {
+    height: 10vh;
+    vertical-align: top;
+    font-family: roboto;
+    padding: 0.85em;
+    font-size: 0.9em;
+    background-color: #222;
+    color: #cdcdcd;
+  }
+  .myForm .message:focus {
+    outline-offset: -2px;
+    outline: -webkit-focus-ring-color auto 0;
+  }
+  .myForm .submit {
+    font-size: 1.1em;
+    padding: 0.4em 0.3em 0.3em;
+    margin-top: 1em;
+    color: #888;
+    background-color: #222;
+  }
   .stageExp .heading {
     height: 3.8em;
   }
@@ -4597,66 +4086,6 @@ svg {
             clip-path: initial;
     overflow: hidden;
   }
-  .myForm {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    width: 100%;
-    -webkit-transform: scale(2);
-            transform: scale(2);
-    font-size: 2em;
-    padding: 1em;
-    background-color: #191919;
-    border-radius: 0.2em;
-    -webkit-box-shadow: 0 0 0 #3333331e;
-            box-shadow: 0 0 0 #3333331e;
-  }
-  .myForm formgrp {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    width: 100%;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-  }
-  .myForm formgrp input {
-    padding: 0.8em;
-    border-bottom: thin none;
-    width: 11em;
-    font-size: 0.85em;
-    margin-bottom: 1em;
-    color: #cdcdcd;
-    background-color: #222;
-  }
-  .myForm input:focus {
-    outline-offset: -2px;
-    outline: -webkit-focus-ring-color auto 0;
-  }
-  .myForm .message {
-    height: 10vh;
-    vertical-align: top;
-    font-family: roboto;
-    padding: 0.85em;
-    font-size: 0.9em;
-    background-color: #222;
-    color: #cdcdcd;
-  }
-  .myForm .message:focus {
-    outline-offset: -2px;
-    outline: -webkit-focus-ring-color auto 0;
-  }
-  .myForm .submit {
-    font-size: 1.1em;
-    padding: 0.4em 0.3em 0.3em;
-    margin-top: 1em;
-    color: #888;
-    background-color: #222;
-  }
   .navlist {
     margin-left: 0;
     padding-left: 0;
@@ -4754,9 +4183,9 @@ svg {
             flex: 1 0 100%;
     width: 100vw;
     height: 40%;
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: flex-start;
@@ -4973,8 +4402,8 @@ svg {
     display: -ms-flexbox;
     display: flex;
     -webkit-box-flex: 1;
-        -ms-flex: 1 0 20%;
-            flex: 1 0 20%;
+        -ms-flex: 1 0 10%;
+            flex: 1 0 10%;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -4983,12 +4412,14 @@ svg {
         -ms-flex-pack: end;
             justify-content: flex-end;
     margin-right: 0;
-    margin-left: 3vw;
+    margin-left: 0vw;
+    padding-right: 22vw;
+    padding-left: 22vw;
   }
   .cTwoExp .eText {
     -webkit-box-flex: 0 !important;
-        -ms-flex: 0 1 25% !important;
-            flex: 0 1 25% !important;
+        -ms-flex: 0 1 10% !important;
+            flex: 0 1 10% !important;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -4999,10 +4430,37 @@ svg {
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: flex-start;
-    margin-bottom: 12vh;
+    margin-bottom: 2vh;
   }
   .cTwoExp .eText text {
     color: #191919;
+  }
+  .headerTransExp {
+    width: 100vw;
+    margin-top: -20em;
+    position: absolute;
+  }
+  .stageExp {
+    padding-top: 0%;
+    width: 100%;
+    margin-left: 0vw;
+    padding-right: 0vw;
+    z-index: 999999;
+  }
+  .stageExp .heading h1::before {
+    color: black !important;
+    content: "Experience";
+    font-size: 2em;
+    height: 2em;
+    margin-top: -1em;
+    position: absolute;
+  }
+  .stageExp .description p::before {
+    color: #191919;
+    font-size: 3em;
+    width: 80vw !important;
+    margin-left: 0em !important;
+    margin-bottom: .5em;
   }
   formpos {
     display: -webkit-box;
@@ -5030,14 +4488,11 @@ svg {
             clip-path: initial;
     /* overflow: hidden; */
   }
-  .heroblock.stageExp {
-    margin-left: -12vw !important;
-  }
   .headerTransExp {
     margin-left: 0 !important;
     -webkit-transition: ease all 1s;
     transition: ease all 1s;
-    background-color: #191919;
+    background-color: #ffffff;
     -webkit-box-flex: 1 !important;
         -ms-flex: 1 0 62% !important;
             flex: 1 0 62% !important;
@@ -5135,7 +4590,7 @@ svg {
     padding-left: 0vw;
     right: 0;
   }
-  formpos {
+  .formpos {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -5151,7 +4606,7 @@ svg {
             justify-content: flex-start;
     padding-right: 0;
     height: 100vh;
-    width: 100vw;
+    width: 45vw;
     padding-left: 10vw;
     padding-top: 5vw;
     -webkit-box-flex: 1;
@@ -5225,6 +4680,12 @@ svg {
 }
 
 @media screen and (orientation: portrait) and (min-device-width: 30em) and (max-device-width: 87.5em) {
+  .stageExp .description p::before {
+    font-size: 1.6em;
+    width: 50vw;
+    padding: 0;
+    margin-left: -8vw;
+  }
   .scroll-downs {
     -webkit-transform: scale(0.8);
             transform: scale(0.8);
@@ -5399,9 +4860,9 @@ svg {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    width: 100%;
-    -webkit-transform: scale(2);
-            transform: scale(2);
+    width: 54%;
+    -webkit-transform: scale(1.5);
+            transform: scale(1.5);
     font-size: 2em;
     padding: 1em;
     background-color: #191919;
@@ -5738,7 +5199,32 @@ svg {
   .cTwoExp .eText text {
     color: #191919;
   }
-  formpos {
+  .cSection {
+    height: 100vh;
+    width: 100vw;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .cRow1 {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+    -webkit-box-flex: 1;
+        -ms-flex: 1 0 20%;
+            flex: 1 0 20%;
+  }
+  .cRow1 text {
+    color: black;
+  }
+  .formpos {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -5749,23 +5235,84 @@ svg {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
     padding-right: 0;
-    height: 100vh;
+    height: 100%;
     width: 100vw;
     padding-left: 0;
     -webkit-box-flex: 1;
         -ms-flex: 1 0 100%;
             flex: 1 0 100%;
-    background-color: #191919;
+    background-color: #ffffff;
     -webkit-clip-path: initial;
             clip-path: initial;
     /* overflow: hidden; */
   }
+  .myForm {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 55%;
+    -webkit-transform: scale(1.7);
+            transform: scale(1.7);
+    font-size: 2em;
+    padding: 1em;
+    background-color: #191919;
+    border-radius: 0.2em;
+    -webkit-box-shadow: 0 0 0 #3333331e;
+            box-shadow: 0 0 0 #3333331e;
+  }
+  .myForm formgrp {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .myForm formgrp input {
+    padding: 0.8em;
+    border-bottom: thin none;
+    width: 11em;
+    font-size: 0.85em;
+    margin-bottom: 1em;
+    color: #cdcdcd;
+    background-color: #222;
+  }
+  .myForm input:focus {
+    outline-offset: -2px;
+    outline: -webkit-focus-ring-color auto 0;
+  }
+  .myForm .message {
+    height: 10vh;
+    vertical-align: top;
+    font-family: roboto;
+    padding: 0.85em;
+    font-size: 0.9em;
+    background-color: #222;
+    color: #cdcdcd;
+  }
+  .myForm .message:focus {
+    outline-offset: -2px;
+    outline: -webkit-focus-ring-color auto 0;
+  }
+  .myForm .submit {
+    font-size: 1.1em;
+    padding: 0.4em 0.3em 0.3em;
+    margin-top: 1em;
+    color: #888;
+    background-color: #222;
+  }
   .heroblock.stageExp {
-    margin-left: -12vw !important;
+    margin-left: 20vw !important;
+    width: 80%;
   }
   .headerTransExp {
     margin-left: 0 !important;

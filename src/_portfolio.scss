@@ -130,8 +130,7 @@
 
 .navMenu {
     margin-left: 0;
-    padding-left: 7vw;
-    width: 93vw;
+    padding-left: 0;
     right: 0;
     display: flex;
     justify-content: flex-end;
@@ -141,81 +140,6 @@
 
     transition: 0.5s ease all;
 }
-
-
-.navlist {
-    margin-left: 0;
-    padding-left: 7vw;
-    width: 30em;
-    left: 0;
-    display: flex;
-    justify-content: flex-end;
-    flex-direction: row;
-    position: absolute;
-    z-index: 9999;
-    transition: 0.5s ease all;
-    padding-top: 0.5em;
-    transition: ease all 0.5s;
-    h2 {
-        padding: 1em 1em 0em 1em;
-        color: #949494;
-        width: 6em;
-        font-weight: 300;
-        font-size: 1em;
-        cursor: pointer;
-        transition: ease all 0.5s;
-        text-align: center;
-        border-bottom: #222;
-        transition: ease all 0.5s;
-    }
-    h2:nth-child(1):hover {
-
-        border-bottom:#949494 thin solid;
-        transition: ease all 0.5s;
-    }
-
-    h2:nth-child(2):hover {
-
-        border-bottom:#9a3156 thin solid;
-        transition: ease all 0.5s;
-    }
-    h2:nth-child(3):hover {
-  
-        border-bottom:#44678c thin solid;
-        transition: ease all 0.5s;
-    }
-    h2:nth-child(4):hover {
-     
-        border-bottom:#b38539 thin solid;
-        transition: ease all 0.5s;
-    }
-
-}
-
-.navlist.P {
-    margin-left: 0em;
-    width: initial;
-    justify-content: flex-start;
-    transition: ease all 0.5s;
-    width:10em;
-    > h2 {
-        background-color:#191919;
-        transition: ease all 0.5s;
-    }
-}
-
-
-
-
-.navlist {
-    .zB {
-        h2{
-        color:transparent !important;
-        }
-    }
-}
-
-
 
 blurb {
     display: flex;
@@ -402,6 +326,7 @@ itemheading {
     margin-left: 0vw;
     min-width: 15em;
     width: 40vw;
+    height:100%;
     margin-top: 2vw;
     overflow: hidden;
     transition: ease all 1s;
@@ -418,10 +343,11 @@ itemheading {
 }
 
 .item1 {
+
     transform:scale(.7);
     cursor: pointer;
     margin-right: 6vw;
-    margin-top: 2vw;
+    margin-top:1em;
 }
 
 // .webWork:hover {
@@ -433,7 +359,6 @@ itemheading {
 // }
 
 .webImage {
-
     height: 100%;
     width: 100%;
     opacity: 1;
@@ -453,81 +378,6 @@ itemheading {
 }
 
 
-.mj {
-    background-image: url("assets/mj-site.jpg");
-    height: 105em;
-}
-
-
-.mj-m {
-    background-image: url("assets/mj-m-site.jpg");
-    height: 170em;
-}
-
-
-
-.tens {
-    background-image: url("assets/10squares-site.jpg");
-    height: 350em;
-}
-
-.tens-m {
-    background-image: url("assets/10squares-site-mobile.jpg");
-    height: 235em;
-}
-
-.inapp-m {
-
-}
-
-.inapp-mobile {
-    width:100%;
-    height:100%;
-    font-size: 0.8em;
-}
-
-.tablet {
-    width: 22vw;
-    height: 30vw;
-}
-
-.wrap.container {
-
-    font-size: 0.8em;
-
-}
-
-.gubba {
-    background-image: url("assets/gubba-site.jpg");
-}
-
-.py {
-    background-image: url("assets/py-site.jpg");
-}
-
-.heli {
-    background-image: url("assets/helib-site.jpg");
-}
-
-.mglogo {
-    background-image: url("assets/mangawhai-logo-1.png");
-}
-
-.cc {
-    background-image: url("assets/the-cabin-crew-bcards.jpg");
-}
-
-.autposter {
-    background-image: url("assets/aut-poster.jpg");
-}
-
-.gcpackage {
-    background-image: url("assets/goodcoffee.jpg");
-}
-
-.renders {
-    background-image: url("assets/13renders.jpg");
-}
 
 text.skills {
     margin-left: 8vw;
