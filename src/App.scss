@@ -267,9 +267,9 @@ g#contact-border {
     height: 100vh;
 }
 
-.WorkHeaderSection {
-    height: 100vh;
-}
+// .WorkHeaderSection {
+//     height: 100vh;
+// }
 
 .pheaderSection {
     height: 100vh;
@@ -397,7 +397,7 @@ g#contact-border {
             justify-content: center;
             display: flex;
             flex-direction: column;
-            flex: 0 0 75%;
+            flex: 0 0 83%;
             justify-content: flex-start;
             margin-top: 5em;
             font-size: 1em;
@@ -540,12 +540,12 @@ svg {
     width:20em;
 }
 
-.pHeaderSection {
-    height: 0;
-    .pHeader {
-        height: 0;
-    }
-}
+// .pHeaderSection {
+//     height: 0;
+//     .pHeader {
+//         height: 0;
+//     }
+// }
 
 // @media only screen and (max-width: 100em) {
 

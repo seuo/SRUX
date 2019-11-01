@@ -8,8 +8,8 @@ $transition-delay: 0.05s;
 
 .mobNavContainer {
   position: relative;
-  width: 100vw;
-  height: 100%;
+  width: 10em;
+  height: 14em;
   overflow: hidden;
 }
 
@@ -301,6 +301,12 @@ $transition-delay: 0.05s;
 }
 
 @media only screen and (max-width: 60em) {
+    .mobNavContainer {
+        position: relative;
+        width: 100vw;
+        height: 5em;
+        overflow: hidden;
+      }
     .nav {
         display: inline-block;
         padding: 2vh 2em 1.8em 1em;
@@ -409,13 +415,20 @@ $transition-delay: 0.05s;
 
 @media only screen and (max-width: 30em) {
 
+.vScroller {
+    .section {
+        width: 100vw;
+    }
+}
+
+
     #toggle:checked ~ .nav .nav-item {
         font-size: .7em;
-        color: white;
+        color: #ffffff;
 
     }
     .nav-item:before {
-        background-color:white;
+        background-color:#6a6a6a;
         transform:scaleX(.9) scaleY(2) translateX(-.5em);
     }
 
@@ -738,7 +751,7 @@ $transition-delay: 0.05s;
 
     .section {
         height: 100vh;
-        width: 100%;
+        width: 100vw;
         display: flex;
         flex-direction: row;
         align-items: flex-end;
@@ -839,7 +852,8 @@ $transition-delay: 0.05s;
             line-height: 1.4;
         }
         .description {
-            font-size:1.1em;
+            font-size: .7em;
+            padding-right: 1em;
         }
     }
 
@@ -861,6 +875,7 @@ $transition-delay: 0.05s;
         clip-path: initial;
         position: absolute;
         font-size: 0.5em;
+
     }
 
     // .row1 {
@@ -1467,7 +1482,7 @@ $transition-delay: 0.05s;
 
     .section {
         height: 100vh;
-        width: 100%;
+        width: 100vw;
         display: flex;
         flex-direction: row;
         align-items: flex-end;
@@ -1537,6 +1552,7 @@ $transition-delay: 0.05s;
         clip-path: initial;
         position: absolute;
         font-size: 0.5em;
+        display:none;
     }
 
     // .row1 {

@@ -37,6 +37,8 @@ import cclogo3 from './assets/cc-logo3.jpg';
 import autlogo from './assets/aut.jpg';
 import gclogo from './assets/gc-logo.jpg'; 
 
+
+
 class Srux extends Component {
 
     constructor(props) {
@@ -55,8 +57,8 @@ class Srux extends Component {
                 'stageFour',
                 'stageFive',
                 'stageSix',
-                // 'stageSeven',
-                // 'stageEight'
+                'stageSeven',
+                'stageEight'
             ],
             stageExpNum: [
                 'ExpStageOne',
@@ -86,6 +88,7 @@ class Srux extends Component {
 
             mobTrans:'',
             navMob: '',
+            navChecked: 0,
         }
 
     }
@@ -94,9 +97,14 @@ class Srux extends Component {
         this.setState({})
     }
 
+
+    
+
     nextPage = () => {
+       
 
         this.setState({
+            navChecked:0,
             currentWorkIndex: 0,
             currentExpIndex: 0,
             homeHeader: 'homeHeader slide-out',
@@ -125,7 +133,7 @@ class Srux extends Component {
 
             setTimeout(() => {
                 this.setState({
-
+                    navChecked:0,
                     tAnim: 'tFade',
                     hAnim: 'hSlide',
                     stageState: 'stageF-out',
@@ -137,7 +145,7 @@ class Srux extends Component {
                     hScroller: 'above'
                 })
             }, 200)
-            this.setState({stageState: 'stageF-in'})
+            this.setState({stageState: 'stageF-in',})
             setTimeout(() => {
                 this.setState({stageState: 'stageF-in'})
             }, 200)
@@ -146,6 +154,7 @@ class Srux extends Component {
         this.setState({stageState: 'stageF-out'});
         setTimeout(() => {
             this.setState({
+                navChecked:0,
                 stageState: 'stageF-in',
                 currentExpIndex: 0,
                 currentWorkIndex: currentWorkIndex + 1
@@ -160,6 +169,7 @@ class Srux extends Component {
         if (currentWorkIndex == 0) {
 
             this.setState({
+                navChecked:0,
                 homeHeader: ' homeHeader slide-back-down',
                 stageState: 'stageZero',
                 pState:'slide-down',
@@ -173,7 +183,8 @@ class Srux extends Component {
 
         }
 
-        this.setState({stageState: 'stageF-out'});
+        this.setState({stageState: 'stageF-out',
+        navChecked:false,});
 
         setTimeout(() => {
             this.setState({
@@ -190,6 +201,7 @@ class Srux extends Component {
         if (currentExpIndex == 6) {
 
             this.setState({
+                navChecked:0,
                 currentWorkIndex: 0,
                 currentExpIndex: 0,
                 contactOut:'cWhite',
@@ -208,6 +220,7 @@ class Srux extends Component {
             }, 300)
             setTimeout(() => {
                 this.setState({
+                   
                     contactOut:'cWhite fade-out',
                     headerTransitionWork: 'headerTransWork ',
                     vScroller: '',
@@ -226,6 +239,7 @@ class Srux extends Component {
         }
 
         this.setState({
+            navChecked:0,
             stageState: 'stageF-in',
             currentExpIndex: currentExpIndex + 1
         });
@@ -237,7 +251,7 @@ class Srux extends Component {
         if (currentExpIndex == 0) {
 
             this.setState({
-
+                navChecked:0,
                 expColTrans: "",
                 expColTransHeader: "",
                 stageZero: 'stageZero',
@@ -256,7 +270,7 @@ class Srux extends Component {
         }
 
         this.setState({
-            // stageState:'stageF-out',
+            navChecked:0,
             currentExpIndex: currentExpIndex - 1,
             expColTrans: "exp-col-trans",
             expColTransHeader: "exp-col-trans-header"
@@ -268,6 +282,7 @@ class Srux extends Component {
         const {stageNum, currentWorkIndex} = this.state;
 
         this.setState({
+            navChecked:0,
             homeHeader: 'homeHeader fade-in',
             headerTransitionHome: 'headerTransHome fade-in',
             vScroller:'slide-below',
@@ -291,6 +306,7 @@ class Srux extends Component {
         e.preventDefault();
 
         this.setState({
+            navChecked:0,
             homeHeader: 'homeHeader slide-out',
             headerTransitionWork: 'headerTransWork fade-in',
             heroblock: 'base',
@@ -308,6 +324,7 @@ class Srux extends Component {
         e.preventDefault();
 
         this.setState({
+            navChecked:0,
             homeHeader: 'homeHeader slide-out',
  
             currentWorkIndex: 7,
@@ -335,7 +352,7 @@ class Srux extends Component {
         e.preventDefault();
         this.setState({
 
-
+            navChecked:0,
             tAnim: 'tFade',
             hAnim: 'hSlide',
             blackbar: '',
@@ -366,7 +383,7 @@ class Srux extends Component {
 
     navContact = (e) => {
         e.preventDefault();
-        this.setState({currentWorkIndex: 7, currentExpIndex: 6})
+        this.setState({currentWorkIndex: 7, currentExpIndex: 6,navChecked:0,})
         setTimeout(() => {
             this.setState({hScroller: 'above', homeHeader: 'homeHeader slide-right'})
         }, 700)
@@ -429,6 +446,13 @@ class Srux extends Component {
             vScrollerLock: true,
         })
     }
+      
+    handleNavChange = (e) => {
+        e.preventDefault();
+        this.setState({navChecked: !this.state.navChecked}); //look at the !NOT sign
+    }
+
+    
 
 
 
@@ -461,7 +485,8 @@ render (){
         eTextAnim,
         contactOut,
         vScrollerLock,
-        mobTrans
+        mobTrans,
+        navChecked
     } = this.state;
 
         let expLineStyle = {
@@ -596,10 +621,10 @@ render (){
                         
                         <div class="mobNavContainer">
 
-                            <input id="toggle" type="checkbox"/>
+                            <input id="toggle" type="checkbox" checked={navChecked}/>
 
                             
-                            <label class="toggle-container" for="toggle">
+                            <label class="toggle-container" onClick={this.handleNavChange} for="toggle">
                             
                             <span class="button button-toggle"></span>
                             </label>
@@ -667,7 +692,7 @@ render (){
                         transformOrigin:"top left",
                     }}
                 >
-                            <section className={"section "+pState}>
+                <section className={"section "+pState}>
                     <row className="row1">
                         <div className="item1">
                             <Tilt
@@ -1055,6 +1080,8 @@ render (){
                     timeout={1000}
                     upHandler={this.prevExp}
                     downHandler={this.nextExp}
+                    leftHandler={this.nextExp}
+                    rightHandler={this.prevExp}
                     className={"hScroller "+hScroller}
                     customStyle={{
                         // width: "100%",
@@ -1068,7 +1095,7 @@ render (){
                                         <div className="header pHeader">
                                             <div className="hero">
                                                 <div className={"col c1 exp-col-trans headerTransExp"}>
-                                                    <div onClick={this.navHome} className={"heroblock stageExp"}>
+                                                    <div className={"heroblock stageExp"}>
                                                         <div className={"heading "+stageState}>
                                                             <h1> 
                                                                 {/* content goes here from css */}

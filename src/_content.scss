@@ -157,7 +157,7 @@
         p::before {
             display: block;
             white-space: pre-wrap;
-            content:"I designed & developed this web application for my module 3 summative assignment at Yoobee Design School.\A \A We had 3 weeks to design & develop a working web app in React along with a fully functional API & Server.\A The projects development stages required researching, designing, & user testing for the prototype.\A UML diagrams for both App & Server structure were also required before starting the coding process. \A \A The App has a full CRUD process from a user being able to register, login, sell, purchase, review, edit account details & edit or delete their products.\A \A Design & prototyping was completed in Sketch.\A App was coded in VS Code using the React library."
+            content:"I designed & developed this web app for my module 3 assignment at Yoobee Design School.\A \A We had 3 weeks to design & develop a web app in React along with a fully functional API & Server.\A The projects development stages required researching, designing, & user testing.\A \A The App has a full CRUD process from the user being able to register, login, sell, purchase, review, edit account details & edit or delete their products.\A \A Design & prototyping was completed in Sketch.\A App was coded in VS Code using the React library."
         }
     
     }
@@ -167,7 +167,7 @@
         h2::before {
             display: block;
             white-space: pre-wrap;
-            content:"Design\A Server Setup \A App Development"
+            content:"Design / Server Setup / App Development"
         }
     }
 }
@@ -304,7 +304,7 @@
 }
 
 .stageExp {
-
+    padding-top:1.5em;
     .heading  {
         border-bottom:2px solid #ffffff   !important;
         transition:ease all 1.5s;
@@ -315,7 +315,9 @@
     }
 
     .description  {
+ 
         p::before {
+            padding-top:1.5em;
             line-height: 1.5;
             display: block;
             white-space: pre-wrap;
