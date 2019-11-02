@@ -200,6 +200,18 @@ $transition-delay: 0.05s;
 
 
 @media only screen and (max-width: 87.5em) {
+    .WorkHero .col .heroblock .description {
+        font-size:1.4em;
+        p {
+            margin-left: 0em;
+        }
+
+    }
+    .WorkHero .col .heroblock .workDone h2 {
+
+        margin-left:0em;
+
+}
 
     .expHero .headerTransExp {
         flex-direction: row;
@@ -435,6 +447,21 @@ $transition-delay: 0.05s;
 
 
 @media only screen and (max-width: 30em) {
+
+    .WorkHero .col .heroblock .description {
+        font-size:.7em;
+        p {
+            margin:0;
+            line-height:1.5;
+            margin-left: 0em;
+        }
+
+    }
+    .WorkHero .col .heroblock .workDone h2 {
+
+        margin-left:0em;
+
+}
 
     .WorkHeaderSection.pHeaderSection.stageZero {
         z-index: 1;
@@ -997,6 +1024,8 @@ $transition-delay: 0.05s;
         }
     }
 
+
+
     .eRow2 {
         display: flex;
         flex: 1 0 0;
@@ -1032,7 +1061,19 @@ $transition-delay: 0.05s;
 
 
 
+    .cRow1 {
 
+        .eText {
+            text {
+
+                font-size: 0.5em;
+                color: #333;
+                padding: 1.5em;
+                margin: 1em;
+
+            }
+        }
+    }
     
     .stageExp  {
         padding-top:0%;

@@ -130,8 +130,10 @@
 
             .description {
                 background-image:initial;
+                padding-top:.5em;
                 p {
                     font-weight: 100;
+                    line-height:1.4;
                     font-size: 1.1em;
                     color: rgba(0,0,0,0.57);
                     width: 26em;

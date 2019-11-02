@@ -210,10 +210,12 @@ p {
 
 .WorkHero .col .heroblock .description {
   background-image: initial;
+  padding-top: .5em;
 }
 
 .WorkHero .col .heroblock .description p {
   font-weight: 100;
+  line-height: 1.4;
   font-size: 1.1em;
   color: rgba(0, 0, 0, 0.57);
   width: 26em;
@@ -3689,6 +3691,15 @@ svg {
 }
 
 @media only screen and (max-width: 87.5em) {
+  .WorkHero .col .heroblock .description {
+    font-size: 1.4em;
+  }
+  .WorkHero .col .heroblock .description p {
+    margin-left: 0em;
+  }
+  .WorkHero .col .heroblock .workDone h2 {
+    margin-left: 0em;
+  }
   .expHero .headerTransExp {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
@@ -3916,6 +3927,17 @@ svg {
 }
 
 @media only screen and (max-width: 30em) {
+  .WorkHero .col .heroblock .description {
+    font-size: .7em;
+  }
+  .WorkHero .col .heroblock .description p {
+    margin: 0;
+    line-height: 1.5;
+    margin-left: 0em;
+  }
+  .WorkHero .col .heroblock .workDone h2 {
+    margin-left: 0em;
+  }
   .WorkHeaderSection.pHeaderSection.stageZero {
     z-index: 1;
     position: absolute;
@@ -4594,6 +4616,12 @@ svg {
     width: 70vw;
     bottom: 1vw;
     color: #dcdcdc;
+  }
+  .cRow1 .eText text {
+    font-size: 0.5em;
+    color: #333;
+    padding: 1.5em;
+    margin: 1em;
   }
   .stageExp {
     padding-top: 0%;
