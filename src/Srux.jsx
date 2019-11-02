@@ -2,12 +2,6 @@ import React, {Component} from 'react';
 import ReactScrollWheelHandler from "react-scroll-wheel-handler";
 import Tilt from 'react-tilt';
 import { Scrollbars } from 'react-custom-scrollbars';
-import {
-    BrowserView,
-    MobileView,
-    isBrowser,
-    isMobile
-  } from "react-device-detect";
 import { FaGithubSquare } from 'react-icons/fa';
 import { DiJqueryLogo } from "react-icons/di";
 import { AiOutlineSketch } from "react-icons/ai";
@@ -18,7 +12,7 @@ import Iframe from 'react-iframe'
 
 
 
-import logo from './assets/srux-logo.svg';
+// import logo from './assets/srux-logo.svg';
 import PortfolioImg from './assets/portfolio.png';
 import expImg from './assets/experience.png';
 import contactImg from './assets/contact.png';
@@ -31,10 +25,7 @@ import tenslogolines from './assets/10squares-logo-lines.png';
 import tenslogobw from './assets/10squares-logo-bw.png';
 import tenslogo from './assets/10squares-logo.png';
 
-import gubbalogo from './assets/gubba-logo.png';
-import pylogo from './assets/playtionery-logo.jpg';
 
-import mglogo1 from './assets/mangawhai-logo-1.png';
 import mglogo2 from './assets/mangawhai-logo-1-w.png';
 import mglogo3 from './assets/mangawhai-logo-2-w.png';
 
@@ -45,10 +36,16 @@ import cclogo1 from './assets/cc-logo.png';
 import cclogo2 from './assets/cc-logo.jpg';
 import cclogo3 from './assets/cc-logo3.jpg';
 
-import autlogo from './assets/aut.jpg';
-import gclogo from './assets/gc-logo.jpg'; 
+
 import xdLogo from './assets/adobe-xd-48.png'; 
 
+
+// import gubbalogo from './assets/gubba-logo.png';
+// import pylogo from './assets/playtionery-logo.jpg';
+
+// import mglogo1 from './assets/mangawhai-logo-1.png';
+// import autlogo from './assets/aut.jpg';
+// import gclogo from './assets/gc-logo.jpg'; 
 
 
 class Srux extends Component {
@@ -69,8 +66,8 @@ class Srux extends Component {
                 'stageFour',
                 'stageFive',
                 'stageSix',
-                'stageSeven',
-                'stageEight'
+                // 'stageSeven',
+                // 'stageEight'
             ],
             stageExpNum: [
                 'ExpStageOne',
@@ -101,12 +98,15 @@ class Srux extends Component {
             mobTrans:'',
             navMob: '',
             navChecked: 0,
+
+            imgAlt:'',
         }
 
     }
 
     componentDidMount = () => {
-        this.setState({})
+
+
     }
 
 
@@ -130,6 +130,10 @@ class Srux extends Component {
 
     };
 
+    oncontextmenu = function (e) {
+        e.preventDefault();
+    };
+
     prevPage = (e) => {
 
         // this.setState({currentWorkIndex: 7, currentExpIndex: 6})
@@ -138,29 +142,33 @@ class Srux extends Component {
         // }, 700)
     };
 
+    
+
     nextIndex = () => {
-        const {stageNum, currentWorkIndex} = this.state;
+        const {currentWorkIndex} = this.state;
 
-        if (currentWorkIndex == 5) {
-
+        if (currentWorkIndex === 5) {
+            
+        setTimeout(() => {
+            this.setState({   
+                stageState: 'stageF-out'});
+             }, 200)
             setTimeout(() => {
                 this.setState({
+                    stageState: 'stageF-in',
+                    vScroller: '',
+                    hScroller: 'above fade-in-fast',
                     navChecked:0,
-                    tAnim: 'tFade',
                     hAnim: 'hSlide',
-                    stageState: 'stageF-out',
                     expColTrans: "exp-col-trans",
                     expColTransHeader: "exp-col-trans-header",
                     currentExpIndex: 0,
                     headerTransitionWork: 'headerTransWork fade-out',
-                    vScroller: '',
-                    hScroller: 'above'
                 })
             }, 200)
-            this.setState({stageState: 'stageF-in',})
-            setTimeout(() => {
-                this.setState({stageState: 'stageF-in'})
-            }, 200)
+
+
+
         }
 
         this.setState({stageState: 'stageF-out'});
@@ -177,8 +185,8 @@ class Srux extends Component {
     };
 
     prevIndex = () => {
-        const {stageNum, currentWorkIndex} = this.state;
-        if (currentWorkIndex == 0) {
+        const {currentWorkIndex} = this.state;
+        if (currentWorkIndex === 0) {
 
             this.setState({
                 navChecked:0,
@@ -208,36 +216,44 @@ class Srux extends Component {
     };
 
     nextExp = () => {
-        const {stageExpNum, currentExpIndex} = this.state;
+        const {currentExpIndex} = this.state;
 
-        if (currentExpIndex == 6) {
-
-            this.setState({
-                navChecked:0,
-                currentWorkIndex: 0,
-                currentExpIndex: 0,
-                contactOut:'cWhite',
-                vScroller: 'slide-right',
-                headerTransitionWork: 'headerTransWork slide-right',
-                colTwoBg:'',
-            })
+        if (currentExpIndex === 6) {
             setTimeout(() => {
                 this.setState({
-                    headerTransitionWork: 'headerTransWork fade-in three',
-                    stageZero: 'stageZero',
-                    hScroller: '',
-                    vScroller: 'slide-back-left',
-                    colTwoBg:'colBlack',
+                    navChecked:0,
+                    currentExpIndex: 6,
                 })
-            }, 300)
-            setTimeout(() => {
-                this.setState({
+            }, 0)
+
+
+
+            // this.setState({
+            //     navChecked:0,
+            //     currentWorkIndex: 0,
+            //     currentExpIndex: 0,
+            //     contactOut:'cWhite',
+            //     vScroller: 'slide-right',
+            //     headerTransitionWork: 'headerTransWork slide-right',
+            //     colTwoBg:'',
+            // })
+            // setTimeout(() => {
+            //     this.setState({
+            //         headerTransitionWork: 'headerTransWork fade-in three',
+            //         stageZero: 'stageZero',
+            //         hScroller: '',
+            //         vScroller: 'slide-back-left',
+            //         colTwoBg:'colBlack',
+            //     })
+            // }, 300)
+            // setTimeout(() => {
+            //     this.setState({
                    
-                    contactOut:'cWhite fade-out',
-                    headerTransitionWork: 'headerTransWork ',
-                    vScroller: '',
-                })
-            }, 1500)
+            //         contactOut:'cWhite fade-out',
+            //         headerTransitionWork: 'headerTransWork ',
+            //         vScroller: '',
+            //     })
+            // }, 1500)
             // this.setState({
             //     homeHeader: 'homeHeader slide-back-left',
             //     headerTransitionWorkHome: 'headerTransHome fade-in',
@@ -259,8 +275,8 @@ class Srux extends Component {
     };
 
     prevExp = () => {
-        const {stageExpNum, currentExpIndex} = this.state;
-        if (currentExpIndex == 0) {
+        const {currentExpIndex} = this.state;
+        if (currentExpIndex === 0) {
 
             this.setState({
                 navChecked:0,
@@ -290,8 +306,8 @@ class Srux extends Component {
 
     };
 
-    navHome = () => {
-        const {stageNum, currentWorkIndex} = this.state;
+    navHome = (e) => {
+        e.preventDefault();
 
         this.setState({
             navChecked:0,
@@ -306,6 +322,7 @@ class Srux extends Component {
 
         setTimeout(() => {
             this.setState({
+            currentWorkIndex:0,
             whiteTransForm:'',
             stageZero: 'stageZero',
             vScroller:'',
@@ -365,7 +382,6 @@ class Srux extends Component {
         this.setState({
 
             navChecked:0,
-            tAnim: 'tFade',
             hAnim: 'hSlide',
             blackbar: '',
             currentWorkIndex: 7,
@@ -484,8 +500,6 @@ render (){
         vScroller,
         hScroller,
         stageState,
-        expColTrans,
-        expColTransHeader,
         stageZero,
         stageNum,
         pState,
@@ -493,7 +507,6 @@ render (){
         blackTransForm,
         currentExpIndex,
         hAnim, 
-        tAnim,
         eTextAnim,
         contactOut,
         vScrollerLock,
@@ -644,10 +657,10 @@ render (){
 
                                 
                                 <nav class="nav">
-                                    <a class="nav-item" href="#" onClick={this.navHome}>HOME NAV</a>
-                                    <a class="nav-item" href="#" onClick={this.navMyWork}>PORTFOLIO</a>
-                                    <a class="nav-item" href="#" onClick={this.navExpDirect}>EXPERIENCE</a>
-                                    <a class="nav-item" href="#" onClick={this.navContactDirect}>CONTACT</a>
+                                    <a class="nav-item" href="#home" onClick={this.navHome}>HOME NAV</a>
+                                    <a class="nav-item" href="#portfolio" onClick={this.navMyWork}>PORTFOLIO</a>
+                                    <a class="nav-item" href="#experience" onClick={this.navExpDirect}>EXPERIENCE</a>
+                                    <a class="nav-item" href="#contact" onClick={this.navContactDirect}>CONTACT</a>
                                 </nav>
 
                                 
@@ -729,7 +742,7 @@ render (){
                                         className="webWorkInner"
                                         autoHideTimeout={1000}
                                         autoHideDuration={200}>
-                                        <a href="//mitchellsjoinery.co.nz/" target="_blank">
+                                        <a href="//mitchellsjoinery.co.nz/" target="_blank" rel="noopener noreferrer">
                                             <div className="webImage mj"></div>
                                         </a>
                                     </Scrollbars>
@@ -756,7 +769,7 @@ render (){
                                         className="webWorkInner"
                                         autoHideTimeout={1000}
                                         autoHideDuration={200}>
-                                        <a href="//mitchellsjoinery.co.nz/" target="_blank">
+                                        <a href="//mitchellsjoinery.co.nz/" target="_blank" rel="noopener noreferrer">
                                             <div className="webImage mj-m"></div>
                                         </a>
                                     </Scrollbars>
@@ -779,13 +792,13 @@ render (){
                             
                                 <div className={"brand "}>
                                     <div className="logoContainer">
-                                        <img src={mjlogolines}/>
+                                        <img alt={this.imgAlt} src={mjlogolines}/>
                                     </div>
                                     <div className="logoContainer">
-                                        <img src={mjlogobw}/>  
+                                        <img alt={this.imgAlt} src={mjlogobw}/>  
                                     </div>
                                     <div className="logoContainer">
-                                        <img src={mjlogo}/>
+                                        <img alt={this.imgAlt} src={mjlogo}/>
                                     </div>
                                 </div>
                              
@@ -816,7 +829,7 @@ render (){
                                         className="webWorkInner"
                                         autoHideTimeout={1000}
                                         autoHideDuration={200}>
-                                        <a href="//10squares.co.nz" target="_blank">
+                                        <a href="//10squares.co.nz" target="_blank" rel="noopener noreferrer">
                                             <div className="webImage tens"></div>
                                         </a>
                                     </Scrollbars>
@@ -843,7 +856,7 @@ render (){
                                         className="webWorkInner"
                                         autoHideTimeout={1000}
                                         autoHideDuration={200}>
-                                        <a href="//mitchellsjoinery.co.nz/" target="_blank">
+                                        <a href="//mitchellsjoinery.co.nz/" target="_blank" rel="noopener noreferrer">
                                             <div className="webImage tens-m"></div>
                                         </a>
                                     </Scrollbars>
@@ -854,11 +867,11 @@ render (){
                     <row className="row2">
                     <div className={"brand "}>
                     <div className="logoContainer">
-                                    <img src={tenslogolines}/></div>
+                                    <img alt={this.imgAlt} src={tenslogolines}/></div>
                                     <div className="logoContainer">
-                                    <img src={tenslogobw}/></div>
+                                    <img alt={this.imgAlt} src={tenslogobw}/></div>
                                     <div className="logoContainer">
-                                    <img src={tenslogo}/></div>
+                                    <img alt={this.imgAlt} src={tenslogo}/></div>
  
                                     </div>
                     </row>
@@ -885,7 +898,7 @@ render (){
                                         className="webWorkInner"
                                         autoHideTimeout={1000}
                                         autoHideDuration={200}>
-                                            <a href="https://in-shop7.firebaseapp.com/" target="_blank">
+                                            <a href="https://in-shop7.firebaseapp.com/" target="_blank" rel="noopener noreferrer">
                                                 <div className="webImage inapp-m"><Iframe url="https://in-shop7.firebaseapp.com/"
                                                   
                                                             id="inapp-mobile"
@@ -917,7 +930,7 @@ render (){
                                         className="webWorkInner"
                                         autoHideTimeout={1000}
                                         autoHideDuration={200}>
-                                            <a href="https://inapp-84064.firebaseapp.com/" target="_blank">
+                                            <a href="https://inapp-84064.firebaseapp.com/" target="_blank" rel="noopener noreferrer">
                                                 <div className="webImage inapp-m"><Iframe url="https://inapp-84064.firebaseapp.com/"
                                                   
                                                             id="inapp-mobile"
@@ -955,7 +968,7 @@ render (){
                                         className="webWorkInner"
                                         autoHideTimeout={1000}
                                         autoHideDuration={200}>
-                                        <a href="//ambv.boatgrooming.co.nz/" target="_blank">
+                                        <a href="//ambv.boatgrooming.co.nz/" target="_blank" rel="noopener noreferrer">
                                             <div className="webImage ambv"></div>
                                         </a>
                                     </Scrollbars>
@@ -982,7 +995,7 @@ render (){
                                         className="webWorkInner"
                                         autoHideTimeout={1000}
                                         autoHideDuration={200}>
-                                        <a href="//ambv.boatgrooming.co.nz/" target="_blank">
+                                        <a href="//ambv.boatgrooming.co.nz/" target="_blank" rel="noopener noreferrer">
                                             <div className="webImage ambv-m"></div>
                                         </a>
                                     </Scrollbars>
@@ -1021,13 +1034,13 @@ render (){
                     <row className="row2">
                     <div className={"brand "}>
                                     <div className="logoContainer">
-                                        <img src={mglogo2}/>
+                                        <img alt={this.imgAlt} src={mglogo2}/>
                                     </div>
                                     <div className="logoContainer">
-                                        <img src={mglogo3}/>
+                                        <img alt={this.imgAlt} src={mglogo3}/>
                                     </div>
                                     <div className="logoContainer">
-                                        <img src={mglogo4}/>
+                                        <img alt={this.imgAlt} src={mglogo4}/>
                                     </div>
  
                                  </div>
@@ -1045,13 +1058,13 @@ render (){
                     <div className={"brand "}>
 
                     <div className="logoContainer">
-                                    <img src={cclogo1}/>
+                                    <img alt={this.imgAlt} src={cclogo1}/>
                                 </div>
                                 <div className="logoContainer">
-                                    <img src={cclogo2}/>
+                                    <img alt={this.imgAlt} src={cclogo2}/>
                                 </div>
                                 <div className="logoContainer">
-                                    <img src={cclogo3}/>
+                                    <img alt={this.imgAlt} src={cclogo3}/>
                                 </div>
                             </div>
                     </row>
@@ -1069,7 +1082,7 @@ render (){
                     
                                 <div className={"brand "}>
                     <div className="logoContainer">
-                                    <img src={autlogo}/>
+                                    <img alt={this.imgAlt} src={autlogo}/>
                                     </div>
                                     </div>
                     </row>
@@ -1160,24 +1173,24 @@ render (){
                                                     <div className="eText">
                                                     <div className="expIcons">
                                                             <p>
-                                                            <img src="https://img.icons8.com/color/48/000000/html-5.png"/>
-                                                            <img src="https://img.icons8.com/color/48/000000/css3.png"/>
-                                                            <img src="https://img.icons8.com/color/48/000000/javascript.png"/>
+                                                            <img alt={this.imgAlt} src="https://img.icons8.com/color/48/000000/html-5.png"/>
+                                                            <img alt={this.imgAlt} src="https://img.icons8.com/color/48/000000/css3.png"/>
+                                                            <img alt={this.imgAlt} src="https://img.icons8.com/color/48/000000/javascript.png"/>
                                                             <DiJqueryLogo className="svgIconWhite "/>
-                                                            <img src="https://img.icons8.com/nolan/48/000000/react-native.png"/>
+                                                            <img alt={this.imgAlt} src="https://img.icons8.com/nolan/48/000000/react-native.png"/>
                                                             </p>
                                                             <p>
-                                                            <img src="https://img.icons8.com/color/48/000000/wordpress.png"/>
-                                                            <img src="https://img.icons8.com/color/48/000000/woocommerce.png"/>
-                                                            <img src="https://img.icons8.com/color/48/000000/magento.png"/>
+                                                            <img alt={this.imgAlt} src="https://img.icons8.com/color/48/000000/wordpress.png"/>
+                                                            <img alt={this.imgAlt} src="https://img.icons8.com/color/48/000000/woocommerce.png"/>
+                                                            <img alt={this.imgAlt} src="https://img.icons8.com/color/48/000000/magento.png"/>
                                                             <FaGithubSquare className="svgIconWhite "/>
-                                                            <img src="https://img.icons8.com/color/48/000000/google-sketchup.png"/>
+                                                            <img alt={this.imgAlt} src="https://img.icons8.com/color/48/000000/google-sketchup.png"/>
                                                             </p>
                                                             <p>
-                                                            <img src={xdLogo}/>
-                                                            <img src="https://img.icons8.com/color/48/000000/adobe-illustrator.png"/>
-                                                            <img src="https://img.icons8.com/color/48/000000/adobe-photoshop.png"/>
-                                                            <img src="https://img.icons8.com/color/48/000000/adobe-indesign.png"/>
+                                                            <img alt={this.imgAlt} src={xdLogo}/>
+                                                            <img alt={this.imgAlt} src="https://img.icons8.com/color/48/000000/adobe-illustrator.png"/>
+                                                            <img alt={this.imgAlt} src="https://img.icons8.com/color/48/000000/adobe-photoshop.png"/>
+                                                            <img alt={this.imgAlt} src="https://img.icons8.com/color/48/000000/adobe-indesign.png"/>
                                                             <AiOutlineSketch className="svgIconGold"/>
                                                             </p>
                                                         
@@ -1235,17 +1248,13 @@ render (){
                         <div className={"eText "+eTextAnim}>
 
                             <text>
+
+                                
                                 <h1>Graphic & Web Designer</h1>
                                 <p>Gubba Products Ltd / 2006 - 2018</p>
-                                <p>My main role at Gubba Products Ltd involved designing content for print and
-                                    digital. I created advertising material for Gubba Products in magazines such as
-                                    New Zealand Gardener, Weekend Gardener, and Your Home & Garden. I was also
-                                    responsible for designing their yearly catalogue for their large home and garden
-                                    product range.</p>
-                                <p>I was later assigned the job of designing and building several web sites for
-                                    specific products that needed dedicated ecommerce stores which would help drive
-                                    revenue. Most notably their Gubba Garden Sheds website which has improved on
-                                    sales every year since and continues to improve.</p>
+                                <p>My main role at Gubba Products Ltd involved designing & developing several web sites for specific products that needed dedicated e-commerce stores which would help drive revenue. Most notably their Gubba Garden Sheds website which has improved on sales every year since and continues to improve.
+</p>
+                                <p>I was also assigned the job of designing content for print and digital. I created advertising material for Gubba Products in magazines such as New Zealand Gardener, Weekend Gardener, and Your Home & Garden. I was also responsible for designing their yearly catalogue for their large home and garden product range.</p>
                                 <p>Reference Manager - David Graves / Marketing Manager - Tim Graves<br/>Ph: 09 915 9250 / 021 771 119</p>
 
                             </text>
@@ -1327,13 +1336,7 @@ render (){
                         </div>
                     </row>
                     <row className="eRow2">
-                        <itemheading>
-                            <block>
-                                <h1 className={"skillHeading " + hAnim}></h1>
-                            </block>
-                            <text></text>
-                            <text className="skills1"></text>
-                        </itemheading>
+
                     </row>
 
                 </section>

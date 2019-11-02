@@ -39,6 +39,7 @@
     display: flex;
     align-items: flex-end;
     flex-direction: column;
+    
 }
 
 .pageScroller {
@@ -116,7 +117,7 @@
                     
                     font-size: 1.1em;
                     padding:.7em 1em;
-                    background-color: #000000;
+                    background-color: #111111;
                     font-weight: 300;
                     font-style: normal;
                     color: white;
@@ -336,9 +337,10 @@ itemheading {
 .webWorkTilt {
     width: 40vw;
     height: 27vw;
-    z-index: 9999;
+    z-index: 9;
 }
 .webWorkMobileTilt {
+    z-index: 9;
     position: absolute;
 }
 

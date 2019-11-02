@@ -20,7 +20,7 @@
     transition: 1.5s all cubic-bezier(0.23, 1, 0.32, 1);
     display:flex;
     flex-direction: row;
-
+    background-image: url("assets/groovepaper.png");
     .eSection {
         transform-origin: top left;
     }
@@ -281,7 +281,7 @@
                     
                     font-size: 1.1em;
                     padding:.7em 1em;
-                    background-color: #000000;
+                    background-color: #111111;
                     font-weight: 300;
                     font-style: normal;
                     color: white;
@@ -349,6 +349,7 @@
         text {
             padding-left: 1em;
             z-index: 1;
+            background-image: url("assets/groovepaper.png");
             background-color: white;
             flex: 0 0 40%;
             padding-right: 0;
@@ -445,6 +446,7 @@
         justify-content: center;
 
         text {
+            background-image: url("assets/groovepaper.png");
             padding-left: 1em;
             z-index: 1;
             background-color: white;
