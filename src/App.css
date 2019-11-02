@@ -168,7 +168,7 @@ a {
   background-image: inherit;
   height: 3em;
   overflow: hidden;
-  border-bottom: 2px solid #fafafa;
+  border-bottom: 1px solid #fafafa;
   margin-bottom: .7em !important;
 }
 
@@ -176,12 +176,13 @@ a {
   font-size: 3.5em;
   line-height: 1em;
   font-weight: 900;
-  margin-left: 0.2em;
+  margin-left: 0em;
   margin-top: 0.25em;
   margin-bottom: 0em;
   color: #424242;
   width: 10em;
   overflow: hidden;
+  text-align: center;
 }
 
 .WorkHero .col .heroblock .heading img {
@@ -200,10 +201,10 @@ a {
 .WorkHero .col .heroblock .workDone h2 {
   font-size: 1.1em;
   padding: .7em 1em;
-  background-color: #111111;
+  background-color: #ebebeb;
   font-weight: 300;
   font-style: normal;
-  color: white;
+  color: #111111;
   width: 9em;
   margin-top: 0.5em;
   margin-left: 5.2em;
@@ -225,7 +226,7 @@ a {
   width: 26em;
   margin-left: 5.4em;
   margin-bottom: .5em;
-  color: #cdcdcd;
+  color: #111111;
 }
 
 .WorkHero .col .ui {
@@ -243,7 +244,7 @@ a {
 
 .section {
   height: 100vh;
-  width: 54vw;
+  width: 60vw;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -254,6 +255,21 @@ a {
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
+  background-image: url("assets/groovepaper.png");
+}
+
+.slashBg {
+  height: 180vh;
+  left: 0px;
+  bottom: 0;
+  z-index: -1;
+  -webkit-clip-path: polygon(0 0, 100% 0, 0% 100%, 0 100%);
+          clip-path: polygon(0 0, 100% 0, 0% 100%, 0 100%);
+  width: 295px;
+  position: absolute;
+  background-color: white;
+  -webkit-transition: 1.5s all cubic-bezier(0.23, 1, 0.32, 1);
+  transition: 1.5s all cubic-bezier(0.23, 1, 0.32, 1);
 }
 
 .row1 {
@@ -736,7 +752,7 @@ text.skills1 p {
 }
 
 .stageOne .heading {
-  border-bottom: 2px solid #7bcee6 !important;
+  border-bottom: 1px solid #7bcee6 !important;
   -webkit-transition: ease all 1.5s;
   transition: ease all 1.5s;
 }
@@ -763,7 +779,7 @@ text.skills1 p {
 }
 
 .stageTwo .heading {
-  border-bottom: 2px solid #df713e !important;
+  border-bottom: 1px solid #df713e !important;
   -webkit-transition: ease all 1.5s;
   transition: ease all 1.5s;
 }
@@ -786,7 +802,7 @@ text.skills1 p {
 }
 
 .stageThree .heading {
-  border-bottom: 2px solid #a68b3c !important;
+  border-bottom: 1px solid #a68b3c !important;
   -webkit-transition: ease all 1.5s;
   transition: ease all 1.5s;
 }
@@ -813,7 +829,7 @@ text.skills1 p {
 }
 
 .stageFour .heading {
-  border-bottom: 2px solid #b2b4b9 !important;
+  border-bottom: 1px solid #b2b4b9 !important;
   -webkit-transition: ease all 1.5s;
   transition: ease all 1.5s;
 }
@@ -840,7 +856,7 @@ text.skills1 p {
 }
 
 .stageFive .heading {
-  border-bottom: 2px solid #e1c20f !important;
+  border-bottom: 1px solid #e1c20f !important;
   -webkit-transition: ease all 1.5s;
   transition: ease all 1.5s;
 }
@@ -867,7 +883,7 @@ text.skills1 p {
 }
 
 .stageSix .heading {
-  border-bottom: 2px solid #a32128 !important;
+  border-bottom: 1px solid #a32128 !important;
   -webkit-transition: ease all 1.5s;
   transition: ease all 1.5s;
 }
@@ -894,7 +910,7 @@ text.skills1 p {
 }
 
 .stageSeven .heading {
-  border-bottom: 2px solid #bebc21  !important;
+  border-bottom: 1px solid #bebc21  !important;
   -webkit-transition: ease all 1.5s;
   transition: ease all 1.5s;
 }
@@ -921,7 +937,7 @@ text.skills1 p {
 }
 
 .stageExp .heading {
-  border-bottom: 2px solid #ffffff   !important;
+  border-bottom: 1px solid #ffffff   !important;
   -webkit-transition: ease all 1.5s;
   transition: ease all 1.5s;
 }
@@ -2538,7 +2554,7 @@ text.skills1 p {
 }
 
 .colBlack {
-  background-image: url("assets/groovepaper.png");
+  background-color: white;
   -webkit-box-flex: 1 !important;
       -ms-flex: 1 0 38% !important;
           flex: 1 0 38% !important;
@@ -2674,6 +2690,7 @@ text.skills1 p {
           animation-fill-mode: forwards;
   -webkit-animation-duration: .5s;
           animation-duration: .5s;
+  pointer-events: none;
 }
 
 .fade-out-fast {
@@ -2685,6 +2702,7 @@ text.skills1 p {
           animation-fill-mode: forwards;
   -webkit-animation-duration: .2s;
           animation-duration: .2s;
+  pointer-events: none;
 }
 
 .fade-in {
@@ -2747,8 +2765,8 @@ text.skills1 p {
 }
 
 .whiteTransForm {
-  -webkit-transition: ease all .07s;
-  transition: ease all .07s;
+  -webkit-transition: ease all .7s;
+  transition: ease all .7s;
   pointer-events: none;
   position: absolute;
   height: 100vh;
@@ -3273,6 +3291,7 @@ g#contact-border {
           align-items: center;
   -webkit-transition: ease all 1s;
   transition: ease all 1s;
+  background-color: white;
 }
 
 .hero {
@@ -3492,7 +3511,7 @@ svg {
 }
 
 #toggle:checked ~ .nav .nav-item {
-  color: #949494;
+  color: #2bb0ce;
   letter-spacing: 0;
   height: 40px;
   line-height: 40px;
@@ -3583,7 +3602,7 @@ svg {
   left: 10%;
   width: 50%;
   height: 1px;
-  background-color: #949494;
+  background-color: #2bb0ce;
   border-radius: 5px;
   -webkit-transition: 0.5s;
   transition: 0.5s;
@@ -3686,7 +3705,7 @@ svg {
   left: 0;
   width: 100%;
   height: 2px;
-  background-color: #949494;
+  background-color: #2bb0ce;
   -webkit-transform: translateY(-50%) scaleY(5);
           transform: translateY(-50%) scaleY(5);
   -webkit-transition: 0.5s;

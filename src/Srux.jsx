@@ -84,7 +84,7 @@ class Srux extends Component {
 
             stageZero: 'stageZero',
             pState: 'fade-in',
-
+            rState: '',
             headerS: 'none',
 
             colTwoBg: 'colBlack',
@@ -119,20 +119,15 @@ class Srux extends Component {
             navChecked:0,
             currentWorkIndex: 0,
             currentExpIndex: 0,
-            homeHeader: 'homeHeader slide-out',
+            homeHeader: 'homeHeader fade-out',
             headerTransitionWork: 'headerTransWork ',
             stageZero: 'stageZero',
             hScroller: '',
             vScroller: '',
             pState:'slide-back-up',
 
-        })
-
-    };
-
-    oncontextmenu = function (e) {
-        e.preventDefault();
-    };
+        });
+    }
 
     prevPage = (e) => {
 
@@ -141,6 +136,7 @@ class Srux extends Component {
         //     this.setState({hScroller: 'above', homeHeader: 'homeHeader slide-right'})
         // }, 700)
     };
+    
 
     
 
@@ -190,20 +186,25 @@ class Srux extends Component {
 
             this.setState({
                 navChecked:0,
-                homeHeader: ' homeHeader slide-back-down',
-                stageState: 'stageZero',
-                pState:'slide-down',
-                stageZero: 'stageZero fade-out',
+                whiteTransForm:'whiteTransForm',
+
             })
             setTimeout(() => {
                 this.setState({
-                    pState:'fade-in',
+                    homeHeader: 'homeHeader fade-in',
+                    pState: 'fade-out-fast',
                 })
             }, 600)
+            setTimeout(() => {
+                this.setState({
+                    whiteTransForm:'',
+                })
+            }, 1200)
 
         }
 
-        this.setState({stageState: 'stageF-out',
+        this.setState({
+        stageState: 'stageF-out',
         navChecked:false,});
 
         setTimeout(() => {
@@ -383,7 +384,6 @@ class Srux extends Component {
 
             navChecked:0,
             hAnim: 'hSlide',
-            blackbar: '',
             currentWorkIndex: 7,
             currentExpIndex: 6,
             expColTrans: "exp-col-trans",
@@ -490,7 +490,6 @@ render (){
         nav,
         navMenu,
         contact,
-        blackbar,
         whiteTransForm,
         headerTransitionWork,
         logoPath,
@@ -503,10 +502,10 @@ render (){
         stageZero,
         stageNum,
         pState,
+        rState,
         currentWorkIndex,
         blackTransForm,
         currentExpIndex,
-        hAnim, 
         eTextAnim,
         contactOut,
         vScrollerLock,
@@ -721,7 +720,7 @@ render (){
                     }}
                 >
                 <section className={"section "+pState}>
-                    <row className="row1">
+                    <row className={"row1"}>
                         <div className="item1">
                             <Tilt
                                 className="webWorkTilt"
@@ -777,7 +776,7 @@ render (){
                             </Tilt>
                         </div>
                     </row>
-                    <row className="row2">
+                    <row className={"row2"}>
                         
                          
                                 {/* <h1 className={"workHeading " + hAnim}>Web Work</h1> */}
@@ -806,6 +805,7 @@ render (){
 
                        
                     </row>
+                    <div className={"slashBg "+rState} style={{ transform:"translate(0,"+currentWorkIndex+"00vh)"}}></div>            
                 </section>
                 <section className={"section"}>
                 <row className="row1">
@@ -1395,7 +1395,7 @@ render (){
                 
 
                 {/* </scroller> */}
-                <div className={"blackBar " + blackbar}></div>
+                {/* <div className={"blackBar " + blackbar}></div> */}
                 
 
             </container>
