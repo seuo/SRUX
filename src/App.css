@@ -103,6 +103,138 @@ p {
   overflow: hidden;
 }
 
+.WorkHero {
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
+  pointer-events: none;
+}
+
+.WorkHero .col {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 30%;
+          flex: 1 0 30%;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-transition: ease all 1s;
+  transition: ease all 1s;
+}
+
+.WorkHero .col .heroblock {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 83%;
+          flex: 0 0 83%;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  margin-top: 5em;
+  font-size: 1em;
+  cursor: pointer;
+  background-image: initial;
+}
+
+.WorkHero .col .heroblock .heading {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-image: inherit;
+  height: 3em;
+  overflow: hidden;
+  border-bottom: 2px solid #fafafa;
+  margin-bottom: .7em !important;
+}
+
+.WorkHero .col .heroblock .heading h1 {
+  font-size: 3.5em;
+  line-height: 1em;
+  font-weight: 900;
+  margin-left: 0.2em;
+  margin-top: 0.25em;
+  margin-bottom: 0em;
+  color: #424242;
+  width: 10em;
+  overflow: hidden;
+}
+
+.WorkHero .col .heroblock .heading img {
+  height: 13.6em;
+}
+
+.WorkHero .col .heroblock .heading svg {
+  height: 14em;
+  width: 11.8em;
+}
+
+.WorkHero .col .heroblock .workDone {
+  background-image: initial;
+}
+
+.WorkHero .col .heroblock .workDone h2 {
+  font-size: 1.1em;
+  padding: .7em 1em;
+  background-color: #000000;
+  font-weight: 300;
+  font-style: normal;
+  color: white;
+  width: 9em;
+  margin-top: 0.5em;
+  margin-left: 5.2em;
+  line-height: 1.4;
+  -webkit-clip-path: polygon(0 0, 9em 0, 100% 100%, 0% 100%);
+          clip-path: polygon(0 0, 9em 0, 100% 100%, 0% 100%);
+}
+
+.WorkHero .col .heroblock .description {
+  background-image: initial;
+}
+
+.WorkHero .col .heroblock .description p {
+  font-weight: 100;
+  font-size: 1.1em;
+  color: rgba(0, 0, 0, 0.57);
+  width: 26em;
+  margin-left: 5.4em;
+  margin-bottom: .5em;
+  color: #cdcdcd;
+}
+
+.WorkHero .col .ui {
+  height: 100vh;
+  overflow: visible;
+  position: fixed;
+  z-index: 999;
+}
+
+.WorkHero .col .ui svg {
+  height: 100vh;
+  margin-bottom: -.5em;
+  overflow: visible !important;
+}
+
 .section {
   height: 100vh;
   width: 54vw;
@@ -129,6 +261,9 @@ p {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .row2 {
@@ -229,7 +364,7 @@ p {
   transition: 0.5s ease all;
 }
 
-blurb {
+.eText {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -245,7 +380,7 @@ blurb {
           flex: 1;
 }
 
-blurb block {
+.eText block {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -254,7 +389,7 @@ blurb block {
           flex: 0 0 57%;
 }
 
-blurb text {
+.eText text {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -273,19 +408,19 @@ blurb text {
   margin-bottom: 4vw;
 }
 
-blurb text p {
+.eText text p {
   font-size: 1.15em;
   padding-bottom: 0.5em;
   font-weight: 300;
 }
 
-blurb text h1 {
+.eText text h1 {
   font-size: 2em;
   font-weight: 300;
   padding-bottom: 0.25em;
 }
 
-blurb text img {
+.eText text img {
   width: 10em;
   padding: 2em;
 }
@@ -589,48 +724,6 @@ text.skills1 p {
   transition: ease all .2s;
 }
 
-.stageZero {
-  background-image: initial;
-}
-
-.stageZero .heading {
-  height: 3em;
-  overflow: hidden;
-  border-bottom: 2px solid #fafafa !important;
-  margin-bottom: .7em !important;
-}
-
-.stageZero .heading h1 {
-  overflow: hidden;
-  font-size: 4em !important;
-  width: 10em !important;
-  margin-bottom: 0em !important;
-}
-
-.stageZero .heading h1#text {
-  margin-top: 5em;
-}
-
-.stageZero .heroblock div p {
-  font-weight: 100;
-  font-size: 1.1em !important;
-  width: 26em !important;
-  margin-left: 7em !important;
-  margin-bottom: .5em;
-  color: #cdcdcd !important;
-}
-
-.stageZero .heroblock div h2 {
-  font-size: 1.1em !important;
-  width: 9em !important;
-  line-height: 1.4;
-  margin-top: 0.5em !important;
-  margin-left: 6.9em !important;
-  padding: .7em 1em !important;
-  -webkit-clip-path: polygon(0 0, 9em 0, 100% 100%, 0% 100%);
-          clip-path: polygon(0 0, 9em 0, 100% 100%, 0% 100%);
-}
-
 .stageOne {
   background-image: url("assets/mj-bg.jpg");
 }
@@ -833,10 +926,10 @@ text.skills1 p {
 
 .stageExp .description p::before {
   padding-top: 1.5em;
-  line-height: 1.5;
+  line-height: 1.7;
   display: block;
   white-space: pre-wrap;
-  content: "Yoobee Web & UX Development Lvl 6 / 2019 \A Graphic & Web Designer Gubba Products Ltd / 2006 - 2018 \A AUT Diploma in Graphic Communication Lvl 5 / 2008 - 2010 \A Production Fabricator Team Leader 2003 - 2006 \A Multimedia & Graphic Design Certificate 2002 - 2003";
+  content: "▪ Yoobee Web & UX Development Lvl 6 / 2019 \A ▪ Graphic & Web Designer Gubba Products Ltd / 2006 - 2018 \A▪ AUT Diploma in Graphic Communication Lvl 5 / 2008 - 2010 \A▪ Production Fabricator Team Leader 2003 - 2006 \A▪ Multimedia & Graphic Design Certificate 2002 - 2003";
 }
 
 .stageExp .workDone h2::before {
@@ -1142,50 +1235,250 @@ text.skills1 p {
   transition: ease all 4s;
 }
 
-.heroblock.stageExp {
-  width: 90%;
-  margin-left: 16.3vw;
+.expHero {
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 100vh;
+  width: 100vw;
+  pointer-events: none;
 }
 
-.headerTransExp {
+.expHero .headerTransExp {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 46%;
+          flex: 1 0 46%;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
   -webkit-transition: ease all 1s;
   transition: ease all 1s;
   background-color: #191919;
+  margin-left: 0;
 }
 
-.headerTransExp p {
-  color: #fafafa !important;
+.expHero .cTwoExp {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 54%;
+          flex: 1 0 54%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-transition: ease all 1s;
   transition: ease all 1s;
 }
 
-.headerTransExp h2 {
-  color: #fafafa !important;
-  background-color: black !important;
-  -webkit-transition: ease all 1s;
-  transition: ease all 1s;
+.expHero .cTwoExp .eText {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 40%;
+          flex: 0 0 40%;
 }
 
-.headerTransExp .heading {
-  -webkit-transition: ease all 1s;
-  transition: ease all 1s;
+.expHero .cTwoExp .eText .expIcons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 30%;
+          flex: 0 0 30%;
+  margin-bottom: 1.5em;
+  margin-top: 1.5em;
+  padding-left: .5em;
+  padding-right: .5em;
+  margin-left: 5em;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
-.headerTransExp .heading h1 {
-  color: #45688c !important;
-  -webkit-transition: ease all 1s;
-  transition: ease all 1s;
+.expHero .cTwoExp .eText .expIcons p {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-.headerTransExp .heading svg {
-  -webkit-transition: ease all 1s;
-  transition: ease all 1s;
-  fill: #c0d9f0;
-  height: 13.9em !important;
+.expHero .cTwoExp .eText .expIcons p img {
+  padding: .5em;
+}
+
+.expHero .cTwoExp .eText .expIcons .svgIconWhite {
+  overflow: visible !important;
+  -webkit-box-shadow: 0 0 10000px transparent;
+          box-shadow: 0 0 10000px transparent;
+  z-index: 99;
+  fill: black;
+  font-size: 2.5em;
+  padding-bottom: .08em;
+  margin-left: .1em;
+  margin-right: .1em;
+}
+
+.expHero .cTwoExp .eText .expIcons .svgIconGold {
+  overflow: visible !important;
+  -webkit-box-shadow: 0 0 10000px transparent;
+          box-shadow: 0 0 10000px transparent;
+  z-index: 99;
+  fill: #e9b301;
+  font-size: 2.5em;
+  padding-bottom: .08em;
+  margin-left: .1em;
+  margin-right: .1em;
+}
+
+.expHero .cTwoExp .eText text {
+  margin-bottom: 1.5em;
+  margin-top: 1.5em;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 30%;
+          flex: 0 0 30%;
+  padding-left: .5em;
+  padding-right: .5em;
+  margin-left: 5em;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.expHero .cTwoExp .eText text h1 {
+  font-size: 1.5em;
+}
+
+.expHero .cTwoExp .eText text p {
+  font-size: 1em;
+}
+
+.expHero .heroblock.stageExp {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 83%;
+          flex: 0 0 83%;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  margin-top: 5em;
+  font-size: 1em;
+  cursor: pointer;
+  background-image: initial;
+}
+
+.expHero .heroblock.stageExp .heading {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-image: inherit;
+  height: 3em;
+  overflow: hidden;
+  border-bottom: 2px solid #fafafa;
+  margin-bottom: .7em !important;
+}
+
+.expHero .heroblock.stageExp .heading h1 {
+  font-size: 3.5em;
+  line-height: 1em;
+  font-weight: 900;
+  margin-left: 0.2em;
+  margin-top: 0.25em;
+  margin-bottom: 0em;
+  color: #424242;
+  width: 10em;
+  overflow: hidden;
+}
+
+.expHero .heroblock.stageExp .heading img {
+  height: 13.6em;
+}
+
+.expHero .heroblock.stageExp .heading svg {
+  height: 14em;
   width: 11.8em;
 }
 
-.expLine {
+.expHero .heroblock.stageExp .workDone {
+  background-image: initial;
+  margin-top: 15vh;
+}
+
+.expHero .heroblock.stageExp .workDone h2 {
+  font-size: 1.1em;
+  padding: .7em 1em;
+  background-color: #000000;
+  font-weight: 300;
+  font-style: normal;
+  color: white;
+  width: 9em;
+  margin-top: 0.5em;
+  margin-left: 5.2em;
+  line-height: 1.4;
+  -webkit-clip-path: polygon(0 0, 9em 0, 100% 100%, 0% 100%);
+          clip-path: polygon(0 0, 9em 0, 100% 100%, 0% 100%);
+}
+
+.expHero .heroblock.stageExp .description {
+  background-image: initial;
+}
+
+.expHero .heroblock.stageExp .description p {
+  font-weight: 100;
+  font-size: 1.1em;
+  color: rgba(0, 0, 0, 0.57);
+  margin-left: 5.4em;
+  margin-bottom: .5em;
+  color: #cdcdcd;
+}
+
+.expLine1 {
+  position: absolute;
+  border-bottom: 2px solid #cdcdcd;
+  height: 1px;
+  top: 48.9vh;
+  left: 0vw;
+  width: 46vw;
+  z-index: 0;
+}
+
+.expLine2 {
   -webkit-animation: expLineAnim ease-in 1;
           animation: expLineAnim ease-in 1;
   -webkit-animation-fill-mode: forwards;
@@ -1198,6 +1491,7 @@ text.skills1 p {
   border-bottom: 2px solid #1a1a1a;
   height: 1px;
   top: 48.9vh;
+  z-index: -1;
   left: 0vw;
   max-width: 600vw;
 }
@@ -1213,13 +1507,13 @@ text.skills1 p {
   height: 65%;
 }
 
-.eRow1 blurb {
+.eRow1 .eText {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
 }
 
-.eRow1 blurb text {
+.eRow1 .eText text {
   padding-left: 1em;
   z-index: 1;
   background-color: white;
@@ -1230,7 +1524,7 @@ text.skills1 p {
   margin-right: 10vw;
 }
 
-.eRow1 blurb text p {
+.eRow1 .eText text p {
   line-height: 1.4;
 }
 
@@ -1253,59 +1547,16 @@ text.skills1 p {
   font-weight: 300;
 }
 
-.eRow2 blurb {
+.eRow2 .eText {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
 }
 
-.eRow2 blurb text {
+.eRow2 .eText text {
   -webkit-box-flex: 0;
       -ms-flex: 0 0 50%;
           flex: 0 0 50%;
-}
-
-.cTwoExp {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  padding-right: 7vw;
-  padding-left: 5vw;
-}
-
-.cTwoExp .eText {
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-  margin-bottom: 20vh;
-}
-
-.cTwoExp .eText text {
-  margin-bottom: 1.5em;
-  margin-top: 1.5em;
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 30%;
-          flex: 0 0 30%;
-  padding-left: .5em;
-  padding-right: .5em;
-}
-
-.cTwoExp .eText text h1 {
-  font-size: 1.5em;
-}
-
-.cTwoExp .eText text p {
-  font-size: 1em;
 }
 
 .expHeading {
@@ -3135,127 +3386,6 @@ g#contact-border {
   overflow: visible !important;
 }
 
-.WorkHero {
-  overflow: hidden;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  height: 100vh;
-  width: 100vw;
-  position: absolute;
-  pointer-events: none;
-}
-
-.WorkHero .col {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex: 1;
-      -ms-flex: 1 0 30%;
-          flex: 1 0 30%;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-  -webkit-transition: ease all 1s;
-  transition: ease all 1s;
-}
-
-.WorkHero .col .heroblock {
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 83%;
-          flex: 0 0 83%;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  margin-top: 5em;
-  font-size: 1em;
-  cursor: pointer;
-}
-
-.WorkHero .col .heroblock .heading {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  background-image: inherit;
-}
-
-.WorkHero .col .heroblock .heading img {
-  height: 13.6em;
-}
-
-.WorkHero .col .heroblock .heading svg {
-  height: 14em;
-  width: 11.8em;
-}
-
-.WorkHero .col .heroblock .workDone {
-  background-image: initial;
-}
-
-.WorkHero .col .heroblock .description {
-  background-image: initial;
-}
-
-.WorkHero .col .heroblock h1 {
-  font-size: 5em;
-  line-height: 1em;
-  font-weight: 900;
-  margin-left: 0.2em;
-  margin-top: 0.12em;
-  margin-bottom: 0.1em;
-  color: #424242;
-  width: 4.8em;
-}
-
-.WorkHero .col .heroblock h2 {
-  font-size: 2.063em;
-  padding: 0.1em 0.3em 0.1em 0.4em;
-  background-color: #000000;
-  font-weight: 300;
-  font-style: normal;
-  color: white;
-  width: 7em;
-  margin-top: 0.25em;
-  margin-left: 6.25em;
-}
-
-.WorkHero .col .heroblock p {
-  font-weight: 100;
-  font-size: 2.375em;
-  color: rgba(0, 0, 0, 0.57);
-  width: 10em;
-  margin-left: 5.4em;
-}
-
-.WorkHero .col .ui {
-  height: 100vh;
-  overflow: visible;
-  position: fixed;
-  z-index: 999;
-}
-
-.WorkHero .col .ui svg {
-  height: 100vh;
-  margin-bottom: -.5em;
-  overflow: visible !important;
-}
-
 g#portfolio image {
   -webkit-clip-path: polygon(64.4% 0%, 99.6% 74.4%, 47% 99.2%, 1% 58%, 16% 0);
           clip-path: polygon(64.4% 0%, 99.6% 74.4%, 47% 99.2%, 1% 58%, 16% 0);
@@ -3357,7 +3487,7 @@ svg {
 }
 
 #toggle:checked ~ .nav .nav-item {
-  color: #EC7263;
+  color: #dd60b1;
   letter-spacing: 0;
   height: 40px;
   line-height: 40px;
@@ -3448,7 +3578,7 @@ svg {
   left: 10%;
   width: 50%;
   height: 1px;
-  background-color: #EC7263;
+  background-color: #dd60b1;
   border-radius: 5px;
   -webkit-transition: 0.5s;
   transition: 0.5s;
@@ -3551,7 +3681,7 @@ svg {
   left: 0;
   width: 100%;
   height: 2px;
-  background-color: #EC7263;
+  background-color: #dd60b1;
   -webkit-transform: translateY(-50%) scaleY(5);
           transform: translateY(-50%) scaleY(5);
   -webkit-transition: 0.5s;
@@ -3559,11 +3689,26 @@ svg {
 }
 
 @media only screen and (max-width: 87.5em) {
-  .expLine {
+  .expHero .headerTransExp {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .expHero .headerTransExp .expIcons {
+    display: none;
+  }
+  .expHero .cTwoExp .eText .expIcons {
+    display: none;
+  }
+  .expLine2 {
+    display: none;
+  }
+  .expLine1 {
     display: none;
   }
   .stageExp .description p::before {
-    font-size: 2em;
+    font-size: 1.5em;
     width: 50vw;
     padding: 0;
     margin-left: -5vw;
@@ -3572,8 +3717,7 @@ svg {
     height: 3.8em;
   }
   .stageExp {
-    margin-left: 23.5vw !important;
-    padding-right: 3.7vw;
+    width: 30vw;
   }
   .contactForm {
     margin-left: -90%;
@@ -3592,31 +3736,6 @@ svg {
             box-shadow: 1em 0 4em #3333331e;
     -webkit-transform: scale(0.8);
             transform: scale(0.8);
-  }
-  .WorkHero .col .heroblock {
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-flex: 1;
-        -ms-flex: 1 0 60%;
-            flex: 1 0 60%;
-    margin-top: 5em;
-    font-size: 1.1vw;
-    margin-left: 0vw;
-    cursor: pointer;
-  }
-  .WorkHero .col .heroblock .description p {
-    font-size: 2em !important;
-    width: 90% !important;
-    margin-left: 0em !important;
-    padding-left: 1em;
   }
   .hero .col {
     display: -webkit-box;
@@ -3736,9 +3855,6 @@ svg {
     margin-left: 3vw;
   }
   .cTwoExp .eText {
-    -webkit-box-flex: 0 !important;
-        -ms-flex: 0 1 25% !important;
-            flex: 0 1 25% !important;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -3749,7 +3865,6 @@ svg {
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: flex-start;
-    margin-bottom: 12vh;
   }
   .cTwoExp .eText text {
     color: #191919;
@@ -3801,8 +3916,135 @@ svg {
 }
 
 @media only screen and (max-width: 30em) {
+  .WorkHeaderSection.pHeaderSection.stageZero {
+    z-index: 1;
+    position: absolute;
+    width: 100vw;
+    height: 60vh;
+    pointer-events: none;
+    background-color: #191919;
+    background-image: initial;
+  }
   .vScroller .section {
     width: 100vw;
+  }
+  .WorkHero .col {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-flex: 1;
+        -ms-flex: 1 0 85%;
+            flex: 1 0 85%;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    -webkit-transition: ease all 1s;
+    transition: ease all 1s;
+    font-size: 0.4em;
+    padding: 0em 2em;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .WorkHero .col .heroblock {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    margin-top: 7vh;
+  }
+  .WorkHero .col .heroblock .description {
+    overflow-wrap: break-word;
+  }
+  .WorkHero .col .heroblock .description p {
+    width: 100%;
+    font-size: 2em;
+    padding: 1em .5em;
+    margin-left: 0em;
+  }
+  .WorkHero .col .workDone h2 {
+    margin-top: 0;
+    margin-left: 1em;
+    font-size: 1.3em;
+    width: 9em;
+    line-height: 1.4;
+  }
+  .expHero {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .expHero .headerTransExp {
+    margin-left: 2em;
+    margin-top: 10em;
+    -webkit-transition: ease all 1s;
+    transition: ease all 1s;
+    background-color: #ffffff;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 30%;
+            flex: 0 0 30%;
+    -webkit-clip-path: polygon(0 0, 64% 0, 100% 100%, 0% 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+  }
+  .expHero .headerTransExp .stageExp {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 68%;
+            flex: 0 0 68%;
+  }
+  .expHero .headerTransExp .stageExp .heading {
+    margin-left: 3em;
+    border-bottom: 2px solid #ffffff !important;
+    -webkit-transition: ease all 1.5s;
+    transition: ease all 1.5s;
+  }
+  .expHero .headerTransExp .stageExp .description p {
+    font-size: 2.1em;
+    margin-left: 3em;
+    font-weight: 400;
+  }
+  .expHero .headerTransExp .stageExp .workDone {
+    margin-top: 0;
+  }
+  .expHero .cTwoExp {
+    width: 100%;
+  }
+  .expHero .cTwoExp .expLine1 {
+    display: none;
+  }
+  .expHero .cTwoExp .expLine2 {
+    display: none;
+  }
+  .expHero .cTwoExp .eText {
+    width: 100vw;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 20%;
+            flex: 0 0 20%;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+  .expHero .cTwoExp .eText .expIcons {
+    display: none;
+  }
+  .expHero .cTwoExp .eText text {
+    margin-bottom: 0em;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 50%;
+            flex: 0 0 50%;
+  }
+  .expHero .cTwoExp .eText text h1 {
+    font-size: 4.5em;
+    font-weight: 700;
+  }
+  .expHero .cTwoExp .eText text p {
+    font-size: 4em;
   }
   #toggle:checked ~ .nav .nav-item {
     font-size: .7em;
@@ -3976,15 +4218,6 @@ svg {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-  }
-  .header .hero .col .heroblock h1 {
-    margin-left: 0;
-  }
-  .header .hero .col .heroblock p {
-    margin-left: 0;
-  }
-  .header .hero .col .heroblock h2 {
-    margin-left: 0;
   }
   g#contact {
     -webkit-transition: 2s;
@@ -4243,11 +4476,10 @@ svg {
     cursor: pointer;
     margin-left: 0;
     min-width: 15em;
-    width: 92vw;
+    width: 100vw;
     height: 60vw;
     margin-top: 0;
     overflow: hidden;
-    /* padding: .7vw; */
     background-color: #191919;
     -o-border-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABAAAAATiCAYAAAAkkZEKAAAe50lEQ…AgQAAAAACAAAEAAAAAAnZmjkcD8Nq993N0qnbX/gLgrZn5ARhaHXn2JriRAAAAAElFTkSuQmCC") 500 fill/4vw/0.05em space;
        border-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABAAAAATiCAYAAAAkkZEKAAAe50lEQ…AgQAAAAACAAAEAAAAAAnZmjkcD8Nq993N0qnbX/gLgrZn5ARhaHXn2JriRAAAAAElFTkSuQmCC") 500 fill/4vw/0.05em space;
@@ -4280,51 +4512,6 @@ svg {
     -webkit-box-flex: 1;
         -ms-flex: 1 1;
             flex: 1 1;
-  }
-  .WorkHero .col {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-flex: 1;
-        -ms-flex: 1 0 85%;
-            flex: 1 0 85%;
-    -webkit-box-pack: end;
-        -ms-flex-pack: end;
-            justify-content: flex-end;
-    -webkit-transition: ease all 1s;
-    transition: ease all 1s;
-    font-size: 0.5em;
-  }
-  .WorkHero .col .heroblock {
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-flex: 1;
-        -ms-flex: 1 0 60%;
-            flex: 1 0 60%;
-    margin-top: 10vh;
-    padding: 0 2em;
-    font-size: 1em;
-    cursor: pointer;
-    margin-left: 0;
-  }
-  .WorkHero .col .heroblock h2 {
-    margin-top: 0 !important;
-    margin-left: 1em !important;
-    font-size: 1.3em !important;
-    width: 9em !important;
-    line-height: 1.4;
-  }
-  .WorkHero .col .heroblock .description {
-    font-size: .7em;
-    padding-right: 1em;
   }
   .webWorkMobileTilt {
     position: absolute;
@@ -4408,49 +4595,6 @@ svg {
     bottom: 1vw;
     color: #dcdcdc;
   }
-  .cTwoExp {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-flex: 1;
-        -ms-flex: 1 0 10%;
-            flex: 1 0 10%;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: end;
-        -ms-flex-pack: end;
-            justify-content: flex-end;
-    margin-right: 0;
-    margin-left: 0vw;
-    padding-right: 22vw;
-    padding-left: 22vw;
-  }
-  .cTwoExp .eText {
-    -webkit-box-flex: 0 !important;
-        -ms-flex: 0 1 10% !important;
-            flex: 0 1 10% !important;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: end;
-        -ms-flex-pack: end;
-            justify-content: flex-end;
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
-    margin-bottom: 2vh;
-  }
-  .cTwoExp .eText text {
-    color: #191919;
-  }
-  .headerTransExp {
-    width: 100vw;
-    margin-top: -20em;
-    position: absolute;
-  }
   .stageExp {
     padding-top: 0%;
     width: 100%;
@@ -4468,9 +4612,9 @@ svg {
   }
   .stageExp .description p::before {
     color: #191919;
-    font-size: 3em;
-    width: 80vw !important;
-    margin-left: 0em !important;
+    font-size: 1.5em;
+    width: 100vw;
+    margin-left: 0em;
     margin-bottom: .5em;
   }
   formpos {
@@ -4497,27 +4641,9 @@ svg {
     background-color: #191919;
     -webkit-clip-path: initial;
             clip-path: initial;
-    /* overflow: hidden; */
-  }
-  .headerTransExp {
-    margin-left: 0 !important;
-    -webkit-transition: ease all 1s;
-    transition: ease all 1s;
-    background-color: #ffffff;
-    -webkit-box-flex: 1 !important;
-        -ms-flex: 1 0 62% !important;
-            flex: 1 0 62% !important;
-    -webkit-clip-path: polygon(0 0, 64% 0, 100% 100%, 0% 100%);
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
   }
   .eRow1 blurb text {
     position: relative;
-  }
-  itemheading block h1 {
-    font-size: 2em;
-    font-weight: 300;
-    margin-top: -0.93em;
-    margin-left: -6vw;
   }
   text.skills1 h1 {
     font-size: 0.8em;
@@ -5043,21 +5169,6 @@ svg {
     -webkit-transition: ease all 1s;
     transition: ease all 1s;
   }
-  blurb {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -webkit-box-align: end;
-        -ms-flex-align: end;
-            align-items: flex-end;
-    -webkit-box-flex: 1;
-        -ms-flex: 1 1;
-            flex: 1 1;
-  }
   .stageExp .heading {
     height: 3.8em;
   }
@@ -5158,23 +5269,6 @@ svg {
   .eRow2 {
     z-index: 99;
   }
-  blurb block {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-flex: 0;
-        -ms-flex: 0 0 50%;
-            flex: 0 0 50%;
-  }
-  blurb text {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 0 20%;
-            flex: 0 0 20%;
-    font-size: 0.5em;
-    width: 70vw;
-    bottom: 1vw;
-    color: #dcdcdc;
-  }
   .cTwoExp {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -5182,6 +5276,7 @@ svg {
     -webkit-box-flex: 1;
         -ms-flex: 1 0 20%;
             flex: 1 0 20%;
+    margin-top: 20vh;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -5357,32 +5452,6 @@ svg {
     font-weight: 100;
     margin-left: 7em;
     display: none;
-  }
-  itemheading text imgblock {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    height: 8vw;
-    width: 8vw;
-    z-index: 5;
-    padding: 1vw 1.5vw;
-    border: thin #222 solid;
-    position: absolute;
-  }
-  itemheading text imgblock img {
-    margin-top: 1em;
-    width: 3.5em;
-    padding: 0.5em;
   }
 }
 /*# sourceMappingURL=App.css.map */

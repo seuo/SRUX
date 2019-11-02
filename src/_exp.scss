@@ -147,45 +147,180 @@
 
 
 
-.heroblock.stageExp {
-    width: 90%;
-    margin-left: 16.3vw;
+
+.expHero {
+    overflow:hidden;
+    display: flex;
+    justify-content: space-between;
+    height: 100vh;
+    width: 100vw;
+    pointer-events: none;
+    .headerTransExp {
+        display: flex;
+        flex: 1 0 46%;
+        justify-content: flex-end;
+        transition: ease all 1s;
+        background-color: #191919;
+        margin-left: 0;
+    }
+    .cTwoExp {
+        display: flex;
+        flex: 1 0 54%;
+        justify-content: center;
+        transition: ease all 1s;
+        .eText {
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            display: flex;
+            flex: 0 0 40%;
+            .expIcons {
+                p {
+                    display:flex;
+                    align-items: center;
+                    img{
+                        padding: .5em;
+                    }
+                }
+                display:flex;
+                flex-direction: column;
+                flex: 0 0 30%;
+                margin-bottom: 1.5em;
+                margin-top: 1.5em;
+                padding-left: .5em;
+                padding-right: .5em;
+                margin-left:5em;
+                justify-content: center;
+                .svgIconWhite {
+                    overflow: visible !important;
+                    box-shadow: 0 0 10000px transparent;
+                    z-index: 99;
+                    fill:black;
+                   
+                    font-size:2.5em;
+                    padding-bottom:.08em;
+                    margin-left:.1em;
+                    margin-right:.1em;
+                }
+                .svgIconGold {
+                    overflow: visible !important;
+                    box-shadow: 0 0 10000px transparent;
+                    z-index: 99;
+                    fill:rgb(233, 179, 1);
+                    font-size:2.5em;
+                    padding-bottom:.08em;
+                    margin-left:.1em;
+                    margin-right:.1em;
+                }
+            }
+            text {
+                margin-bottom: 1.5em;
+                margin-top: 1.5em;
+                flex: 0 0 30%;
+                padding-left: .5em;
+                padding-right: .5em;
+                margin-left:5em;
+                justify-content: center;
+                h1 {
+                    font-size:1.5em;
+                }
+                p {
+                    font-size:1em;
+                }
+            }
+        }
+    }
+        .heroblock.stageExp {
+            justify-content: center;
+            display: flex;
+            flex-direction: column;
+            flex: 0 0 83%;
+            justify-content: flex-start;
+            margin-top: 5em;
+            font-size: 1em;
+            cursor: pointer;
+            background-image: initial;
+
+            .heading {
+                display: flex;
+                align-items: center;
+                background-image:inherit;
+
+                height: 3em;
+                overflow:hidden;
+                border-bottom:2px solid rgba(250, 250, 250, 1);
+                margin-bottom:.7em !important;
+
+                h1 {
+                    font-size:3.5em;
+                    line-height: 1em;
+                    font-weight: 900;
+                    margin-left: 0.2em;
+                    margin-top: 0.25em;
+                    margin-bottom:0em;
+                    color: #424242;
+                    width: 10em;
+                    overflow:hidden;
+
+                }
+
+                img {
+                    height: 13.6em;
+                }
+                svg {
+                    height: 14em;
+                    width: 11.8em;
+            }
+            }
+
+            .workDone {
+                background-image:initial;
+                margin-top:15vh;
+              
+                h2 {
+                    
+                    font-size: 1.1em;
+                    padding:.7em 1em;
+                    background-color: #000000;
+                    font-weight: 300;
+                    font-style: normal;
+                    color: white;
+                    width: 9em;
+                    margin-top: 0.5em;
+                    margin-left:5.2em;
+                    line-height: 1.4;
+                    clip-path: polygon(0 0, 9em 0, 100% 100%, 0% 100%);   
+                }
+            }
+
+            .description {
+                background-image:initial;
+                p {
+                    font-weight: 100;
+                    font-size: 1.1em;
+                    color: rgba(0,0,0,0.57);
+                    margin-left: 5.4em;
+                    margin-bottom:.5em;
+                    color:#cdcdcd;
+
+                }
+            }
+
+        }
+    
 }
 
-.headerTransExp {
-    transition:ease all 1s;
-    background-color: #191919;
-    // clip-path: polygon(0 0, 64% 0, 100% 100%, 0% 100%);
-    p {
-        color: rgba(250, 250, 250, 1) !important;
-        transition:ease all 1s;
-    }
-    h2 {
-        color: rgba(250, 250, 250, 1) !important;
-        background-color:black !important;
-        transition:ease all 1s;
-    }
-
-
-.heading {
-    transition:ease all 1s;
-    h1 {
-        color: #45688c !important;
-        transition:ease all 1s;
-    }
-
-    svg {
-        transition:ease all 1s;
-        fill:rgb(192, 217, 240);
-        height: 13.9em !important;
-        width: 11.8em;
-   }
-
+.expLine1 {
+    position: absolute;
+    border-bottom: 2px solid #cdcdcd;
+    height: 1px;
+    top: 48.9vh;
+    left: 0vw;
+    width: 46vw;
+    z-index:0;
 }
 
-}
-
-.expLine {
+.expLine2 {
     animation: expLineAnim ease-in 1;
     animation-fill-mode: forwards;
     animation-duration: 1s;
@@ -194,9 +329,12 @@
     border-bottom: 2px solid #1a1a1a;
     height: 1px;
     top: 48.9vh;
+    z-index:-1;
     left: 0vw;
     max-width: 600vw;
 }
+
+
 
 .eRow1 {
     display: flex;
@@ -205,7 +343,7 @@
     width: 100vw;
     height: 65%;
 
-    blurb {
+    .eText {
         justify-content: center;
 
         text {
@@ -237,7 +375,7 @@
         }
 
     }
-    blurb {
+    .eText {
         justify-content: center;
         text {
             flex: 0 0 50%;
@@ -245,33 +383,6 @@
     }
 }
 
-.cTwoExp {
-    display: flex;
-    justify-content: center;
-    padding-right:7vw;
-    padding-left:5vw;
-
-    .eText {
-
-        flex-direction: column;
-        justify-content: flex-end;
-        align-items: flex-start;
-        margin-bottom:20vh;
-        text {
-            margin-bottom: 1.5em;
-            margin-top: 1.5em;
-            flex: 0 0 30%;
-            padding-left: .5em;
-            padding-right: .5em;
-            h1 {
-                font-size:1.5em;
-            }
-            p {
-                font-size:1em;
-            }
-        }
-    }
-}
 
 
 .expHeading {

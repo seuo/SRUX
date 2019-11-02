@@ -2,6 +2,17 @@ import React, {Component} from 'react';
 import ReactScrollWheelHandler from "react-scroll-wheel-handler";
 import Tilt from 'react-tilt';
 import { Scrollbars } from 'react-custom-scrollbars';
+import {
+    BrowserView,
+    MobileView,
+    isBrowser,
+    isMobile
+  } from "react-device-detect";
+import { FaGithubSquare } from 'react-icons/fa';
+import { DiJqueryLogo } from "react-icons/di";
+import { AiOutlineSketch } from "react-icons/ai";
+
+
 import Iframe from 'react-iframe'
 
 
@@ -36,6 +47,7 @@ import cclogo3 from './assets/cc-logo3.jpg';
 
 import autlogo from './assets/aut.jpg';
 import gclogo from './assets/gc-logo.jpg'; 
+import xdLogo from './assets/adobe-xd-48.png'; 
 
 
 
@@ -489,9 +501,10 @@ render (){
         navChecked
     } = this.state;
 
-        let expLineStyle = {
+        let expLineStyle2 = {
             width:+currentExpIndex+"75vw"
         }
+
 
   
 
@@ -619,27 +632,27 @@ render (){
                         <div className={"blackTrans "+blackTransForm}></div>
                         <div className={"navMenu "+navMenu}>
                         
-                        <div class="mobNavContainer">
+                            <div class="mobNavContainer">
 
-                            <input id="toggle" type="checkbox" checked={navChecked}/>
+                                <input id="toggle" type="checkbox" checked={navChecked}/>
 
-                            
-                            <label class="toggle-container" onClick={this.handleNavChange} for="toggle">
-                            
-                            <span class="button button-toggle"></span>
-                            </label>
+                                
+                                <label class="toggle-container" onClick={this.handleNavChange} for="toggle">
+                                
+                                <span class="button button-toggle"></span>
+                                </label>
 
-                            
-                            <nav class="nav">
-                            <a class="nav-item" href="#" onClick={this.navHome}>HOME NAV</a>
-                            <a class="nav-item" href="#" onClick={this.navMyWork}>PORTFOLIO</a>
-                            <a class="nav-item" href="#" onClick={this.navExpDirect}>EXPERIENCE</a>
-                            <a class="nav-item" href="#" onClick={this.navContactDirect}>CONTACT</a>
-                            </nav>
+                                
+                                <nav class="nav">
+                                    <a class="nav-item" href="#" onClick={this.navHome}>HOME NAV</a>
+                                    <a class="nav-item" href="#" onClick={this.navMyWork}>PORTFOLIO</a>
+                                    <a class="nav-item" href="#" onClick={this.navExpDirect}>EXPERIENCE</a>
+                                    <a class="nav-item" href="#" onClick={this.navContactDirect}>CONTACT</a>
+                                </nav>
 
+                                
                             
-                        
-                        </div>
+                            </div>
                             
                         </div>
 
@@ -659,6 +672,8 @@ render (){
                                             {/* content goes here from css */}
                                         </h1>
                                     </div>
+
+                                    
                                     <div className={stageNum[currentWorkIndex]+" description "+stageState}>
                                         <p>
                                             {/* content goes here from css */}
@@ -688,7 +703,7 @@ render (){
                     customStyle={{
                         // width: "100%",
                         // height: "100vh",
-                        transform:"rotate(0deg) scale(1) translateY(-"+currentWorkIndex+"00vh)",
+                        transform:"rotate(0deg) scale(1) translate(0,-"+currentWorkIndex+"00vh)",
                         transformOrigin:"top left",
                     }}
                 >
@@ -980,11 +995,11 @@ render (){
                 </section>
                 {/* <section className={"section"}>
                     <row className="row1">
-                        <blurb className={"eText "+eTextAnim}>
+                        <div className={"eText "+eTextAnim}>
                             <div className={"webWork "}>
                                 <div className="webImage heli"></div>
                             </div>
-                        </blurb>
+                        </div>
                     </row>
                     <row className="row2">
                         <itemheading>
@@ -1093,8 +1108,8 @@ render (){
                 >
                     <div className={"headerSection pHeaderSection "+stageZero}>
                                         <div className="header pHeader">
-                                            <div className="hero">
-                                                <div className={"col c1 exp-col-trans headerTransExp"}>
+                                            <div className="expHero">
+                                                <div className={"col c1 headerTransExp"}>
                                                     <div className={"heroblock stageExp"}>
                                                         <div className={"heading "+stageState}>
                                                             <h1> 
@@ -1110,13 +1125,16 @@ render (){
 
                                                         </div>
                                                         <div className={" workDone "+stageState}>
-                                               
+            
                                                         </div>
                                                     </div>
+                                                    <div className="expLine1"></div>
                                                 </div>
                                                 <div className={"col c2 cTwoExp"}>
-                                                <div className="expLine" style={expLineStyle}></div>
-                                                <blurb className={"eText exp-col-trans"}>
+                                                
+                                                <div className="expLine2" style={expLineStyle2}></div>
+
+                                                <div className={"eText"}>
 
                                                     <text>
                                                         <h1>Technical Knowledge</h1>
@@ -1138,8 +1156,33 @@ render (){
                                                         <p>Github</p>
                                                         
                                                     </text>
-                                                    </blurb>
-                                                    <blurb className="eText exp-col-trans">
+                                                    </div>
+                                                    <div className="eText">
+                                                    <div className="expIcons">
+                                                            <p>
+                                                            <img src="https://img.icons8.com/color/48/000000/html-5.png"/>
+                                                            <img src="https://img.icons8.com/color/48/000000/css3.png"/>
+                                                            <img src="https://img.icons8.com/color/48/000000/javascript.png"/>
+                                                            <DiJqueryLogo className="svgIconWhite "/>
+                                                            <img src="https://img.icons8.com/nolan/48/000000/react-native.png"/>
+                                                            </p>
+                                                            <p>
+                                                            <img src="https://img.icons8.com/color/48/000000/wordpress.png"/>
+                                                            <img src="https://img.icons8.com/color/48/000000/woocommerce.png"/>
+                                                            <img src="https://img.icons8.com/color/48/000000/magento.png"/>
+                                                            <FaGithubSquare className="svgIconWhite "/>
+                                                            <img src="https://img.icons8.com/color/48/000000/google-sketchup.png"/>
+                                                            </p>
+                                                            <p>
+                                                            <img src={xdLogo}/>
+                                                            <img src="https://img.icons8.com/color/48/000000/adobe-illustrator.png"/>
+                                                            <img src="https://img.icons8.com/color/48/000000/adobe-photoshop.png"/>
+                                                            <img src="https://img.icons8.com/color/48/000000/adobe-indesign.png"/>
+                                                            <AiOutlineSketch className="svgIconGold"/>
+                                                            </p>
+                                                        
+                                                    </div>
+                       
                                                     <text>
                                                         <h1>Print & Design Tools</h1>
                                                         <p>Adobe Photoshop</p>
@@ -1149,7 +1192,7 @@ render (){
                                                         <p>Adobe Premiere</p>
                                                         
                                                     </text>
-                                                    </blurb>
+                                                    </div>
 
                                                     <div className="ui">
 
@@ -1163,7 +1206,7 @@ render (){
                 <section className={"eSection"}>
 
                     <row className="eRow1">
-                        <blurb className={"eText "+eTextAnim}>
+                        <div className={"eText "+eTextAnim}>
 
                             <text>
                                 <h1>Yoobee Web & UX Development</h1>
@@ -1180,7 +1223,7 @@ render (){
                                 <p>The course was split into 4 modules over the year.<br/>UX & Web Design / Javascript, Jquery / React / CMS Development</p>
 
                             </text>
-                        </blurb>
+                        </div>
                     </row>
                     <row className="eRow2">
                         
@@ -1189,7 +1232,7 @@ render (){
                 <section className={"eSection"}>
 
                     <row className="eRow1">
-                        <blurb className={"eText "+eTextAnim}>
+                        <div className={"eText "+eTextAnim}>
 
                             <text>
                                 <h1>Graphic & Web Designer</h1>
@@ -1206,7 +1249,7 @@ render (){
                                 <p>Reference Manager - David Graves / Marketing Manager - Tim Graves<br/>Ph: 09 915 9250 / 021 771 119</p>
 
                             </text>
-                        </blurb>
+                        </div>
                     </row>
                     <row className="eRow2">
                       
@@ -1215,7 +1258,7 @@ render (){
                 <section className={"eSection"}>
 
                     <row className="eRow1">
-                        <blurb className={"eText "+eTextAnim}>
+                        <div className={"eText "+eTextAnim}>
 
                             <text>
                                 <h1>AUT Diploma in Graphic Communication</h1>
@@ -1227,7 +1270,7 @@ render (){
                                 <p>Reference: David Sinfield</p>
 
                             </text>
-                        </blurb>
+                        </div>
 
                     </row>
                     <row className="eRow2">
@@ -1242,7 +1285,7 @@ render (){
                 <section className={"eSection"}>
 
                     <row className="eRow1">
-                        <blurb className={"eText "+eTextAnim}>
+                        <div className={"eText "+eTextAnim}>
 
                             <text>
                                 <h1>Production Fabricator</h1>
@@ -1255,7 +1298,7 @@ render (){
                                 <p>Reference Manager - Elaine Hodgeson</p>
 
                             </text>
-                        </blurb>
+                        </div>
                     </row>
                     <row className="eRow2">
                         <itemheading>
@@ -1269,7 +1312,7 @@ render (){
                 <section className={"eSection"}>
 
                     <row className="eRow1">
-                        <blurb className={"eText "+eTextAnim}>
+                        <div className={"eText "+eTextAnim}>
 
                             <text>
                                 <h1>Multimedia & Graphic Design Certificate</h1>
@@ -1281,7 +1324,7 @@ render (){
                                     Fireworks.</p>
 
                             </text>
-                        </blurb>
+                        </div>
                     </row>
                     <row className="eRow2">
                         <itemheading>
@@ -1298,7 +1341,7 @@ render (){
 
                     <row className="cRow1">
                         
-                             <blurb className={"eText "+eTextAnim}>
+                             <div className={"eText "+eTextAnim}>
 
                             <text>
                                     <h1>Sam Robertson</h1>
@@ -1307,7 +1350,7 @@ render (){
                                     <p>Get in touch if you have a job / project you need help with!</p>
 
                             </text>
-                            </blurb>
+                            </div>
                         
                     </row>
                     <row className="cRow2">

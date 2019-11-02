@@ -45,7 +45,7 @@ $transition-delay: 0.05s;
 
     // Restoring nav items from 'lines' in the menu icon
     .nav-item {
-      color: #EC7263;
+      color: #dd60b1;
       letter-spacing: 0;
       height: 40px;
       line-height: 40px;
@@ -112,7 +112,7 @@ $transition-delay: 0.05s;
     left: 10%;
     width: 50%;
     height: 1px;
-    background-color: #EC7263;
+    background-color: #dd60b1;
     border-radius: 5px;
     transition: $transition-duration;
   }
@@ -190,7 +190,7 @@ $transition-delay: 0.05s;
     left: 0;
     width: 100%;
     height: 2px;
-    background-color: #EC7263;
+    background-color: #dd60b1;
     transform: translateY(-50%) scaleY(5);
     transition: $transition-duration;
   }
@@ -201,7 +201,30 @@ $transition-delay: 0.05s;
 
 @media only screen and (max-width: 87.5em) {
 
-    .expLine {
+    .expHero .headerTransExp {
+        flex-direction: row;
+
+        .expIcons {
+            display: none;
+        }
+    }
+
+    .expHero .cTwoExp .eText .expIcons {
+        display: none;
+    }
+
+    .col.c2.cTwoExp {
+        // justify-content: space-around;
+        // align-items: flex-start;
+    }
+
+    .expLine2 {
+
+        display: none;
+
+    }
+
+    .expLine1 {
 
         display: none;
 
@@ -209,7 +232,7 @@ $transition-delay: 0.05s;
 
     .stageExp {
     .description p::before {
-        font-size: 2em;
+        font-size: 1.5em;
         width: 50vw;
         padding: 0;
         margin-left: -5vw;
@@ -221,8 +244,7 @@ $transition-delay: 0.05s;
     }
 
     .stageExp {
-        margin-left: 23.5vw !important;
-        padding-right: 3.7vw;
+        width:30vw;
     }
 
     .contactForm {
@@ -237,25 +259,25 @@ $transition-delay: 0.05s;
         transform: scale(.8);
     }
 
-    .WorkHero .col .heroblock {
-        justify-content: center;
-        display: flex;
-        flex-direction: column;
-        flex: 1 0 60%;
-
-        margin-top: 5em;
-        font-size: 1.1vw;
-        margin-left: 0vw;
-        cursor: pointer;
-        .description {
-            p {
-                font-size: 2em !important;
-                width: 90% !important;
-                margin-left: 0em !important;
-                padding-left: 1em;
-            }
-        }
-    }
+    // .WorkHero .col .heroblock {
+    //     justify-content: center;
+    //     display: flex;
+    //     flex-direction: column;
+    //     flex: 1 0 60%;
+    //     justify-content: center;
+    //     margin-top: 5em;
+    //     margin-left: 0vw;
+    //     padding-left: 2em;
+    //     padding-right:2em;
+    //     cursor: pointer;
+    //     .description {
+    //         p {
+    //             font-size: 1.75em;
+    //             margin-left: 0em;
+    //             margin-top: .5em;
+    //         }
+    //     }
+    // }
 
     .hero .col {
         display: flex;
@@ -358,11 +380,10 @@ $transition-delay: 0.05s;
         margin-right: 0;
         margin-left: 3vw;
         .eText {
-            flex: 0 1 25% !important;
             flex-direction: column;
             justify-content: flex-end;
             align-items: flex-start;
-            margin-bottom: 12vh;
+
             text {
                 color: #191919;
             }
@@ -415,11 +436,133 @@ $transition-delay: 0.05s;
 
 @media only screen and (max-width: 30em) {
 
-.vScroller {
-    .section {
+    .WorkHeaderSection.pHeaderSection.stageZero {
+        z-index: 1;
+        position: absolute;
         width: 100vw;
+        height: 60vh;
+        pointer-events: none;
+        background-color:#191919;
+        background-image:initial;
     }
-}
+    
+
+    .vScroller {
+        .section {
+            width: 100vw;
+        }
+    }
+
+    .WorkHero {
+        .col {
+            display: flex;
+            flex: 1 0 85%;
+            justify-content: flex-end;
+            transition: ease all 1s;
+            font-size: 0.4em;
+            padding: 0em 2em;
+            justify-content: center;
+            .heroblock {
+                justify-content: flex-start;
+                margin-top: 7vh;
+    
+                .description {
+                    overflow-wrap: break-word;
+                    
+                    p {
+                        width:100%;
+                        font-size: 2em;
+                        padding: 1em .5em;
+                        margin-left:0em;
+                    }
+    
+                }
+            }
+            .workDone {
+    
+                h2 {
+                    margin-top: 0;
+                    margin-left: 1em;
+                    font-size: 1.3em;
+                    width: 9em;
+                    line-height: 1.4;
+                }
+            }
+        }
+    }
+
+
+
+    .expHero {
+        flex-direction: column;
+        .headerTransExp {
+            margin-left: 2em;
+            margin-top: 10em;
+            transition: ease all 1s;
+            background-color: #ffffff;
+            flex: 0 0 30%;
+
+            -webkit-clip-path: polygon(0 0, 64% 0, 100% 100%, 0% 100%);
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+            .stageExp {
+                flex: 0 0 68%;
+                .heading {
+                    margin-left:3em;
+                    border-bottom: 2px solid #ffffff !important;
+                    transition: ease all 1.5s;
+                }
+                .description {
+                    
+                    p {
+                        font-size:2.1em;
+                        margin-left: 3em;
+                        font-weight: 400;
+                    }
+                }
+                .workDone {
+                    margin-top:0;
+                }
+            }
+        }
+        .cTwoExp {
+            width: 100%;
+            .expLine1 {
+                display:none;
+            }
+            .expLine2 {
+                display:none;
+            }
+            .eText {
+                width: 100vw;
+                flex:0 0 20%;
+                flex-direction: row;
+                align-items: flex-start;
+                justify-content: flex-start;
+                .expIcons {
+                    display:none;
+              
+                    .svgIconWhite {
+                    
+                    }
+                    .svgIconGold {
+                   
+                    }
+                }
+                text {
+                    margin-bottom:0em;
+                    flex: 0 0 50%;
+                    h1 {
+                        font-size:4.5em;
+                        font-weight:700;
+                    }
+                    p {
+                        font-size:4em;
+                    }
+                }
+            }
+        }
+    }
+
 
 
     #toggle:checked ~ .nav .nav-item {
@@ -557,18 +700,6 @@ $transition-delay: 0.05s;
         display: flex;
         align-items: flex-start;
         flex-direction: column;
-    }
-
-    .header .hero .col .heroblock h1 {
-        margin-left: 0;
-    }
-
-    .header .hero .col .heroblock p {
-        margin-left: 0;
-    }
-
-    .header .hero .col .heroblock h2 {
-        margin-left: 0;
     }
 
     g#contact {
@@ -796,11 +927,10 @@ $transition-delay: 0.05s;
         cursor: pointer;
         margin-left: 0;
         min-width: 15em;
-        width: 92vw;
+        width: 100vw;
         height: 60vw;
         margin-top: 0;
         overflow: hidden;
-        /* padding: .7vw; */
         background-color: #191919;
         border-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABAAAAATiCAYAAAAkkZEKAAAe50lEQ…AgQAAAAACAAAEAAAAAAnZmjkcD8Nq993N0qnbX/gLgrZn5ARhaHXn2JriRAAAAAElFTkSuQmCC") 500 fill/4vw/0.05em space;
         transition: ease all 1s;
@@ -826,36 +956,7 @@ $transition-delay: 0.05s;
         flex: 1 1;
     }
 
-    .WorkHero .col {
-        display: flex;
-        flex: 1 0 85%;
-        justify-content: flex-end;
-        transition: ease all 1s;
-        font-size: 0.5em;
-    }
 
-    .WorkHero .col .heroblock {
-        justify-content: flex-start;
-        display: flex;
-        flex-direction: column;
-        flex: 1 0 60%;
-        margin-top: 10vh;
-        padding: 0 2em;
-        font-size: 1em;
-        cursor: pointer;
-        margin-left:0;
-        h2 {
-            margin-top: 0 !important;
-            margin-left: 1em !important;
-            font-size: 1.3em !important;
-            width: 9em !important;
-            line-height: 1.4;
-        }
-        .description {
-            font-size: .7em;
-            padding-right: 1em;
-        }
-    }
 
     .webWorkMobileTilt {
         position: absolute;
@@ -877,27 +978,6 @@ $transition-delay: 0.05s;
         font-size: 0.5em;
 
     }
-
-    // .row1 {
-    //     display: flex;
-    //     flex: 1 0 65%;
-    //     width: 100vw;
-    //     height: 65%;
-    //     blurb {
-    //         text {
-    //                 font-size:.5em;
-    //         }
-    //     }
-    // }
-
-    // .row2 {
-    //     display: flex;
-    //     flex: 1 0 15%;
-    //     width: 100vw;
-    //     background-color: #191919;
-    //     height: 35%;
-
-    // }
 
     .eRow1 {
         display: flex;
@@ -951,31 +1031,8 @@ $transition-delay: 0.05s;
     }
 
 
-    .cTwoExp {
-        display: flex;
-        flex: 1 0 10%;
-        flex-direction: column;
-        justify-content: flex-end;
-        margin-right: 0;
-        margin-left: 0vw;
-        padding-right: 22vw;
-        padding-left: 22vw;
-        .eText {
-            flex: 0 1 10% !important;
-            flex-direction: column;
-            justify-content: flex-end;
-            align-items: flex-start;
-            margin-bottom: 2vh;
-            text {
-                color: #191919;
-            }
-        }
-    }
-    .headerTransExp {
-        width: 100vw;
-        margin-top: -20em;
-        position: absolute;
-    }
+
+
     
     .stageExp  {
         padding-top:0%;
@@ -996,9 +1053,9 @@ $transition-delay: 0.05s;
 
     .stageExp .description p::before {
         color:#191919;
-        font-size: 3em;
-        width: 80vw !important;
-        margin-left: 0em !important;
+        font-size: 1.5em;
+        width: 100vw;
+        margin-left: 0em;
         margin-bottom: .5em;
     }
 
@@ -1014,18 +1071,10 @@ $transition-delay: 0.05s;
         flex: 1 0 100%;
         background-color: #191919;
         clip-path: initial;
-        /* overflow: hidden; */
     }
 
 
-    .headerTransExp {
-        margin-left: 0 !important;
-        transition: ease all 1s;
-        background-color: #ffffff;
-        flex: 1 0 62% !important;
-        -webkit-clip-path: polygon(0 0, 64% 0, 100% 100%, 0% 100%);
-        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
-    }
+
 
     .eRow1 {
         blurb {
@@ -1035,12 +1084,6 @@ $transition-delay: 0.05s;
         }
     }
 
-    itemheading block h1 {
-        font-size: 2em;
-        font-weight: 300;
-        margin-top: -0.93em;
-        margin-left: -6vw;
-    }
     text.skills1 h1 {
         font-size: 0.8em;
         font-weight: 100;
@@ -1202,6 +1245,8 @@ $transition-delay: 0.05s;
         padding: 0;
         margin-left: -8vw;
     }
+
+
 
     .scroll-downs {
         transform: scale(.8);
@@ -1509,12 +1554,6 @@ $transition-delay: 0.05s;
         transition: ease all 1s;
     }
 
-    blurb {
-        display: flex;
-        flex-direction: row;
-        align-items: flex-end;
-        flex: 1 1;
-    }
 
     .stageExp .heading {
         height: 3.8em;
@@ -1555,26 +1594,6 @@ $transition-delay: 0.05s;
         display:none;
     }
 
-    // .row1 {
-    //     display: flex;
-    //     flex: 1 0 65%;
-    //     width: 100vw;
-    //     height: 65%;
-    //     blurb {
-    //         text {
-    //                 font-size:.5em;
-    //         }
-    //     }
-    // }
-
-    // .row2 {
-    //     display: flex;
-    //     flex: 1 0 15%;
-    //     width: 100vw;
-    //     background-color: #191919;
-    //     height: 35%;
-
-    // }
 
     .eRow1 {
         display: flex;
@@ -1612,24 +1631,12 @@ $transition-delay: 0.05s;
         z-index: 99;
     }
 
-    blurb {
-        block {
-            display: flex;
-            flex: 0 0 50%;
-        }
 
-        text {
-            flex: 0 0 20%;
-            font-size: 0.5em;
-            width: 70vw;
-            bottom: 1vw;
-            color: #dcdcdc;
-        }
-    }
 
     .cTwoExp {
         display: flex;
         flex: 1 0 20%;
+        margin-top:20vh;
         flex-direction: column;
         justify-content: flex-end;
         margin-right: 0;
@@ -1773,23 +1780,6 @@ $transition-delay: 0.05s;
         display: none;
     }
 
-    itemheading text imgblock {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        height: 8vw;
-        width: 8vw;
-        z-index: 5;
-        padding: 1vw 1.5vw;
-        border: thin #222 solid;
-        position: absolute;
 
-        img {
-            margin-top: 1em;
-            width: 3.5em;
-            padding: 0.5em;
-        }
-    }
 
 }
