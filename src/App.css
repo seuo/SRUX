@@ -173,16 +173,16 @@ a {
 }
 
 .WorkHero .col .heroblock .heading h1 {
-  font-size: 3.5em;
+  font-size: 3em;
   line-height: 1em;
   font-weight: 900;
   margin-left: 0em;
-  margin-top: 0.25em;
+  margin-top: 0.36em;
   margin-bottom: 0em;
   color: #424242;
-  width: 10em;
+  width: auto;
   overflow: hidden;
-  text-align: center;
+  text-align: left;
 }
 
 .WorkHero .col .heroblock .heading img {
@@ -199,18 +199,19 @@ a {
 }
 
 .WorkHero .col .heroblock .workDone h2 {
-  font-size: 1.1em;
-  padding: .7em 1em;
-  background-color: #ebebeb;
+  font-size: 1em;
   font-weight: 300;
   font-style: normal;
   color: #111111;
-  width: 9em;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
   margin-top: 0.5em;
-  margin-left: 5.2em;
-  line-height: 1.4;
-  -webkit-clip-path: polygon(0 0, 9em 0, 100% 100%, 0% 100%);
-          clip-path: polygon(0 0, 9em 0, 100% 100%, 0% 100%);
+  margin-bottom: 1em;
+  margin-left: 3em;
+  line-height: 1.2;
+  font-weight: 400;
+  border-bottom: thin solid #dcdcdc;
 }
 
 .WorkHero .col .heroblock .description {
@@ -219,14 +220,14 @@ a {
 }
 
 .WorkHero .col .heroblock .description p {
-  font-weight: 100;
+  font-weight: 300;
   line-height: 1.4;
-  font-size: 1.1em;
+  font-size: 1em;
   color: rgba(0, 0, 0, 0.57);
   width: 26em;
-  margin-left: 5.4em;
+  margin-left: 3em;
   margin-bottom: .5em;
-  color: #111111;
+  color: #333;
 }
 
 .WorkHero .col .ui {
@@ -752,7 +753,7 @@ text.skills1 p {
 }
 
 .stageOne .heading {
-  border-bottom: 1px solid #7bcee6 !important;
+  border-bottom: 1px solid #7bcfe679 !important;
   -webkit-transition: ease all 1.5s;
   transition: ease all 1.5s;
 }
@@ -771,7 +772,12 @@ text.skills1 p {
 .stageOne .workDone h2::before {
   display: block;
   white-space: pre-wrap;
-  content: "Research\A Logo Design\A Site Development";
+  content: "Logo Design / Site Development";
+}
+
+.stageOne .workDone::after {
+  margin-left: 2.5em;
+  content: url(https://img.icons8.com/color/48/000000/adobe-illustrator.png) url(assets/adobe-xd-48.png) url(https://img.icons8.com/color/48/000000/wordpress.png) url(https://img.icons8.com/color/48/000000/css3.png);
 }
 
 .stageTwo {
@@ -779,7 +785,7 @@ text.skills1 p {
 }
 
 .stageTwo .heading {
-  border-bottom: 1px solid #df713e !important;
+  border-bottom: 1px solid rgba(223, 113, 62, 0.493) !important;
   -webkit-transition: ease all 1.5s;
   transition: ease all 1.5s;
 }
@@ -798,11 +804,16 @@ text.skills1 p {
 .stageTwo .workDone h2::before {
   display: block;
   white-space: pre-wrap;
-  content: "Logo Design\A Rendering \A Site Development";
+  content: "Logo Design / Rendering / Site Development";
+}
+
+.stageTwo .workDone::after {
+  margin-left: 2.5em;
+  content: url(https://img.icons8.com/color/48/000000/adobe-illustrator.png) url(https://img.icons8.com/color/48/000000/google-sketchup.png) url(assets/adobe-xd-48.png) url(https://img.icons8.com/color/48/000000/wordpress.png) url(https://img.icons8.com/color/48/000000/css3.png);
 }
 
 .stageThree .heading {
-  border-bottom: 1px solid #a68b3c !important;
+  border-bottom: 1px solid #a68b3c7a !important;
   -webkit-transition: ease all 1.5s;
   transition: ease all 1.5s;
 }
@@ -815,7 +826,7 @@ text.skills1 p {
 .stageThree .description p::before {
   display: block;
   white-space: pre-wrap;
-  content: "I developed this web app for my module 3 assignment at Yoobee Design School.\A \A We were required to design & develop a web app in React along with a fully functional API & Server.\A The projects development stages involved researching, designing, & user testing.\A \A The app has a full CRUD process from the user being able to register, login, sell, purchase, review, edit account details & edit or delete their products.\A \A Design & prototyping was completed in Sketch.\A The app was coded using the React library.";
+  content: "I developed this web app for my module 3 assignment at Yoobee Design School. We were required to design & develop a web app in React along with a fully functional API & Server.\A \A The projects development stages involved researching, designing, & user testing. The app has a full CRUD process from the user being able to register, login, sell, purchase, review, edit account details & edit or delete their products.\A \A Design & prototyping was completed in Sketch.\A The app was coded using the React library.";
 }
 
 .stageThree .workDone h2::before {
@@ -824,12 +835,17 @@ text.skills1 p {
   content: "Design / Server Setup / App Development";
 }
 
+.stageThree .workDone::after {
+  margin-left: 2.5em;
+  content: url(https://img.icons8.com/color/48/000000/adobe-illustrator.png) url(https://img.icons8.com/windows/48/000000/sketch.png) url(https://img.icons8.com/color/48/000000/html-5.png) url(https://img.icons8.com/color/48/000000/css3.png) " " url(https://img.icons8.com/color/48/000000/npm.png) " " url(https://img.icons8.com/nolan/48/000000/react-native.png);
+}
+
 .stageFour {
   background-image: url("assets/ambv-site.jpg");
 }
 
 .stageFour .heading {
-  border-bottom: 1px solid #b2b4b9 !important;
+  border-bottom: 1px solid #b2b4b977 !important;
   -webkit-transition: ease all 1.5s;
   transition: ease all 1.5s;
 }
@@ -848,7 +864,12 @@ text.skills1 p {
 .stageFour .workDone h2::before {
   display: block;
   white-space: pre-wrap;
-  content: "Website";
+  content: "Site Development";
+}
+
+.stageFour .workDone::after {
+  margin-left: 2.5em;
+  content: url(assets/adobe-xd-48.png) url(https://img.icons8.com/color/48/000000/wordpress.png) url(https://img.icons8.com/color/48/000000/css3.png);
 }
 
 .stageFive {
@@ -856,7 +877,7 @@ text.skills1 p {
 }
 
 .stageFive .heading {
-  border-bottom: 1px solid #e1c20f !important;
+  border-bottom: 1px solid #e1c10f7e !important;
   -webkit-transition: ease all 1.5s;
   transition: ease all 1.5s;
 }
@@ -869,7 +890,7 @@ text.skills1 p {
 .stageFive .description p::before {
   display: block;
   white-space: pre-wrap;
-  content: "The Mangawhai Village Market needed a logo for their ever growing market. I discussed with them some design concepts & we came up with the idea to include a local bird, the Fairy Tern, which is a distinctive icon that locals will recognize.\A \A I really enjoyed working on this brand, something a bit different.";
+  content: "The Mangawhai Village Market needed a logo for their growing market. I discussed with them some design concepts & we came up with the idea to include a local bird, the Fairy Tern, which is a distinctive icon that locals will recognize.\A \A I really enjoyed working on this brand, something a bit different.";
 }
 
 .stageFive .workDone h2::before {
@@ -878,12 +899,17 @@ text.skills1 p {
   content: "Logo Design";
 }
 
+.stageFive .workDone::after {
+  margin-left: 2.5em;
+  content: url(https://img.icons8.com/color/48/000000/adobe-illustrator.png) url(https://img.icons8.com/color/48/000000/adobe-indesign.png);
+}
+
 .stageSix {
   background-image: url("assets/cc-bg.jpg");
 }
 
 .stageSix .heading {
-  border-bottom: 1px solid #a32128 !important;
+  border-bottom: 1px solid #a3212750 !important;
   -webkit-transition: ease all 1.5s;
   transition: ease all 1.5s;
 }
@@ -903,6 +929,11 @@ text.skills1 p {
   display: block;
   white-space: pre-wrap;
   content: "Logo Design";
+}
+
+.stageSix .workDone::after {
+  margin-left: 2.5em;
+  content: url(https://img.icons8.com/color/48/000000/adobe-illustrator.png) url(https://img.icons8.com/color/48/000000/adobe-indesign.png);
 }
 
 .stageSeven {
@@ -937,7 +968,7 @@ text.skills1 p {
 }
 
 .stageExp .heading {
-  border-bottom: 1px solid #ffffff   !important;
+  border-bottom: 1px solid #ffffff2c   !important;
   -webkit-transition: ease all 1.5s;
   transition: ease all 1.5s;
 }
@@ -1273,6 +1304,8 @@ text.skills1 p {
 }
 
 .expHero .headerTransExp {
+  -webkit-clip-path: polygon(0 0, 100% 0, 87% 100%, 0% 100%);
+          clip-path: polygon(0 0, 100% 0, 87% 100%, 0% 100%);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1336,7 +1369,7 @@ text.skills1 p {
   margin-top: 1.5em;
   padding-left: .5em;
   padding-right: .5em;
-  margin-left: 5em;
+  margin-left: 4em;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -1363,8 +1396,8 @@ text.skills1 p {
   fill: black;
   font-size: 2.5em;
   padding-bottom: .08em;
-  margin-left: .1em;
-  margin-right: .1em;
+  margin-left: 0.25em;
+  margin-right: .15em;
 }
 
 .expHero .cTwoExp .eText .expIcons .svgIconGold {
@@ -1439,11 +1472,11 @@ text.skills1 p {
 }
 
 .expHero .heroblock.stageExp .heading h1 {
-  font-size: 3.5em;
+  font-size: 3em;
   line-height: 1em;
   font-weight: 900;
   margin-left: 0.2em;
-  margin-top: 0.25em;
+  margin-top: 0.36em;
   margin-bottom: 0em;
   color: #424242;
   width: 10em;
@@ -1487,7 +1520,7 @@ text.skills1 p {
   font-weight: 100;
   font-size: 1.1em;
   color: rgba(0, 0, 0, 0.57);
-  margin-left: 5.4em;
+  margin-left: 3em;
   margin-bottom: .5em;
   color: #cdcdcd;
 }
@@ -1517,6 +1550,7 @@ text.skills1 p {
   top: 48.9vh;
   z-index: -1;
   left: 0vw;
+  margin-left: -10vw;
   max-width: 600vw;
 }
 
@@ -3972,6 +4006,9 @@ svg {
   .vScroller .section {
     width: 100vw;
   }
+  .WorkHero {
+    height: 60vh;
+  }
   .WorkHero .col {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -3994,7 +4031,7 @@ svg {
     -webkit-box-pack: start;
         -ms-flex-pack: start;
             justify-content: flex-start;
-    margin-top: 7vh;
+    margin-top: 15em;
   }
   .WorkHero .col .heroblock .description {
     overflow-wrap: break-word;
@@ -4020,10 +4057,10 @@ svg {
   }
   .expHero .headerTransExp {
     margin-left: 2em;
-    margin-top: 10em;
+    margin-top: 15em;
     -webkit-transition: ease all 1s;
     transition: ease all 1s;
-    background-color: #ffffff;
+    background-color: transparent;
     -webkit-box-flex: 0;
         -ms-flex: 0 0 30%;
             flex: 0 0 30%;
@@ -4042,9 +4079,9 @@ svg {
     transition: ease all 1.5s;
   }
   .expHero .headerTransExp .stageExp .description p {
-    font-size: 2.1em;
+    font-size: 2.2em;
     margin-left: 3em;
-    font-weight: 400;
+    font-weight: 300;
   }
   .expHero .headerTransExp .stageExp .workDone {
     margin-top: 0;

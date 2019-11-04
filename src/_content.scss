@@ -25,7 +25,7 @@
 .stageOne {
     background-image: url("assets/mj-bg.jpg");
         .heading  {
-            border-bottom:1px solid #7bcee6 !important;
+            border-bottom:1px solid #7bcfe679 !important;
             transition:ease all 1.5s;
             h1::before {
                 color: #7bcee6 !important;
@@ -39,6 +39,7 @@
                 white-space: pre-wrap;
                 content:"The team over at Mitchell's Joinery required a new brand design along with a website upgrade to a more modern and intuitive UX design. Mitchell's Joinery main focus was on the marine industry. \A \A The new logo and website required a more premium design along with a more logical catagory / navigation hirechy.";
             }
+
         
         }
         .workDone  {
@@ -46,9 +47,17 @@
             h2::before {
                 display: block;
                 white-space: pre-wrap;
-                content:"Research\A Logo Design\A Site Development"
-        }
+                content:"Logo Design / Site Development";
+            }
+
     }
+    .workDone::after {
+        
+        margin-left: 2.5em;
+        content: url(https://img.icons8.com/color/48/000000/adobe-illustrator.png) url(assets/adobe-xd-48.png) url(https://img.icons8.com/color/48/000000/wordpress.png) url(https://img.icons8.com/color/48/000000/css3.png);
+  
+    }
+
 }
 
 
@@ -56,7 +65,7 @@
 .stageTwo {
     background-image: url("assets/tensq-bg.jpg");
     .heading  {
-        border-bottom:1px solid rgb(223, 113, 62) !important;
+        border-bottom:1px solid rgba(223, 113, 62, 0.493) !important;
         transition:ease all 1.5s;
         h1::before {
             color: rgb(223, 113, 62) !important;
@@ -79,8 +88,15 @@
         h2::before {
             display: block;
             white-space: pre-wrap;
-            content:"Logo Design\A Rendering \A Site Development"
+            content:"Logo Design / Rendering / Site Development"
         }
+        
+    }
+    .workDone::after {
+        
+        margin-left: 2.5em;
+        content: url(https://img.icons8.com/color/48/000000/adobe-illustrator.png) url(https://img.icons8.com/color/48/000000/google-sketchup.png) url(assets/adobe-xd-48.png) url(https://img.icons8.com/color/48/000000/wordpress.png) url(https://img.icons8.com/color/48/000000/css3.png);
+  
     }
 
 }
@@ -88,7 +104,7 @@
 .stageThree {
     // background-image: url("assets/gubba-bg.jpg");
     .heading  {
-        border-bottom:1px solid #a68b3c !important;
+        border-bottom:1px solid #a68b3c7a !important;
         transition:ease all 1.5s;
         h1::before {
             color: #a68b3c !important;
@@ -101,7 +117,7 @@
         p::before {
             display: block;
             white-space: pre-wrap;
-            content:"I developed this web app for my module 3 assignment at Yoobee Design School.\A \A We were required to design & develop a web app in React along with a fully functional API & Server.\A The projects development stages involved researching, designing, & user testing.\A \A The app has a full CRUD process from the user being able to register, login, sell, purchase, review, edit account details & edit or delete their products.\A \A Design & prototyping was completed in Sketch.\A The app was coded using the React library."
+            content:"I developed this web app for my module 3 assignment at Yoobee Design School. We were required to design & develop a web app in React along with a fully functional API & Server.\A \A The projects development stages involved researching, designing, & user testing. The app has a full CRUD process from the user being able to register, login, sell, purchase, review, edit account details & edit or delete their products.\A \A Design & prototyping was completed in Sketch.\A The app was coded using the React library."
         }
     
     }
@@ -114,12 +130,19 @@
             content:"Design / Server Setup / App Development"
         }
     }
+    .workDone::after {
+       
+        margin-left: 2.5em;
+        content: url(https://img.icons8.com/color/48/000000/adobe-illustrator.png) url(https://img.icons8.com/windows/48/000000/sketch.png) url(https://img.icons8.com/color/48/000000/html-5.png)  url(https://img.icons8.com/color/48/000000/css3.png) " " url(https://img.icons8.com/color/48/000000/npm.png) " " url(https://img.icons8.com/nolan/48/000000/react-native.png)   ;
+  
+    }
+    
 }
 
 .stageFour {
     background-image: url("assets/ambv-site.jpg");
     .heading  {
-        border-bottom:1px solid #b2b4b9 !important;
+        border-bottom:1px solid #b2b4b977 !important;
         transition:ease all 1.5s;
         h1::before {
             color: #9f9fa1 !important;
@@ -141,8 +164,14 @@
         h2::before {
             display: block;
             white-space: pre-wrap;
-            content:"Website"
+            content:"Site Development"
         }
+    }
+    .workDone::after {
+        
+        margin-left: 2.5em;
+        content: url(assets/adobe-xd-48.png) url(https://img.icons8.com/color/48/000000/wordpress.png) url(https://img.icons8.com/color/48/000000/css3.png);
+  
     }
 
 
@@ -152,7 +181,7 @@
 .stageFive {
     background-image: url("assets/mangawhai-bg.jpg");
     .heading  {
-        border-bottom:1px solid #e1c20f !important;
+        border-bottom:1px solid #e1c10f7e !important;
         transition:ease all 1.5s;
         h1::before {
             color: #e1c20f !important;
@@ -165,7 +194,7 @@
         p::before {
             display: block;
             white-space: pre-wrap;
-            content:"The Mangawhai Village Market needed a logo for their ever growing market. I discussed with them some design concepts & we came up with the idea to include a local bird, the Fairy Tern, which is a distinctive icon that locals will recognize.\A \A I really enjoyed working on this brand, something a bit different.";
+            content:"The Mangawhai Village Market needed a logo for their growing market. I discussed with them some design concepts & we came up with the idea to include a local bird, the Fairy Tern, which is a distinctive icon that locals will recognize.\A \A I really enjoyed working on this brand, something a bit different.";
         }
     
     }
@@ -178,12 +207,18 @@
             content:"Logo Design"
         }
     }
+    .workDone::after {
+       
+        margin-left: 2.5em;
+        content: url(https://img.icons8.com/color/48/000000/adobe-illustrator.png) url(https://img.icons8.com/color/48/000000/adobe-indesign.png) ;
+  
+    }
 }
 
 .stageSix {
     background-image: url("assets/cc-bg.jpg");
     .heading  {
-        border-bottom:1px solid #a32128 !important;
+        border-bottom:1px solid #a3212750 !important;
         transition:ease all 1.5s;
         h1::before {
             color: #a32128 !important;
@@ -208,6 +243,12 @@
             white-space: pre-wrap;
             content:"Logo Design"
         }
+    }
+    .workDone::after {
+       
+        margin-left: 2.5em;
+        content: url(https://img.icons8.com/color/48/000000/adobe-illustrator.png) url(https://img.icons8.com/color/48/000000/adobe-indesign.png) ;
+  
     }
 }
 
@@ -250,7 +291,7 @@
 .stageExp {
     padding-top:1.5em;
     .heading  {
-        border-bottom:1px solid #ffffff   !important;
+        border-bottom:1px solid #ffffff2c   !important;
         transition:ease all 1.5s;
         h1::before {
             color: #ffffff  !important;

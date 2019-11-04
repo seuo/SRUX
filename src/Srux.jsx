@@ -113,20 +113,28 @@ class Srux extends Component {
     
 
     nextPage = () => {
-       
-
         this.setState({
-            navChecked:0,
-            currentWorkIndex: 0,
-            currentExpIndex: 0,
-            homeHeader: 'homeHeader fade-out',
-            headerTransitionWork: 'headerTransWork ',
-            stageZero: 'stageZero',
-            hScroller: '',
-            vScroller: '',
-            pState:'slide-back-up',
+            whiteTransForm:'whiteTransForm',
 
         });
+        setTimeout(() => {
+            this.setState({
+                navChecked:0,
+                currentWorkIndex: 0,
+                currentExpIndex: 0,
+                homeHeader: 'homeHeader fade-out',
+                headerTransitionWork: 'headerTransWork ',
+                stageZero: 'stageZero',
+                hScroller: '',
+                vScroller: '',
+                pState:'slide-back-up',
+            })
+        }, 300)
+        setTimeout(() => {
+            this.setState({
+                whiteTransForm:'',
+            })
+        }, 800)
     }
 
     prevPage = (e) => {
@@ -312,41 +320,52 @@ class Srux extends Component {
 
         this.setState({
             navChecked:0,
-            homeHeader: 'homeHeader fade-in',
-            headerTransitionHome: 'headerTransHome fade-in',
-            vScroller:'slide-below',
-            hScroller:'above slide-below',
-            stageZero: 'stageZero none',
-            stageState: 'stageF-in',
-            whiteTransForm:'whiteTransForm'
-        })
+            whiteTransForm:'whiteTransForm',
 
+        })
         setTimeout(() => {
             this.setState({
-            currentWorkIndex:0,
-            whiteTransForm:'',
-            stageZero: 'stageZero',
-            vScroller:'',
-            hScroller:'',
-        })
-        }, 700)
+                homeHeader: 'homeHeader fade-in',
+                pState: 'fade-out-fast',
+                navChecked:0,
+                currentWorkIndex: 0,
+                currentExpIndex: 0,
+            })
+        }, 600)
+        setTimeout(() => {
+            this.setState({
+                whiteTransForm:'',
+            })
+        }, 1200)
     };
+
+
 
     navMyWork = (e) => {
         e.preventDefault();
 
         this.setState({
-            navChecked:0,
-            homeHeader: 'homeHeader slide-out',
-            headerTransitionWork: 'headerTransWork fade-in',
-            heroblock: 'base',
-            colBlack: 'colBlack',
-            currentWorkIndex: 0,
-            currentExpIndex: 0,
-            hScroller: '',
-            vScroller: '',
-            stageZero: 'stageZero'
-        })
+            whiteTransForm:'whiteTransForm',
+
+        });
+        setTimeout(() => {
+            this.setState({
+                navChecked:0,
+                currentWorkIndex: 0,
+                currentExpIndex: 0,
+                homeHeader: 'homeHeader fade-out',
+                headerTransitionWork: 'headerTransWork ',
+                stageZero: 'stageZero',
+                hScroller: '',
+                vScroller: '',
+                pState:'slide-back-up',
+            })
+        }, 300)
+        setTimeout(() => {
+            this.setState({
+                whiteTransForm:'',
+            })
+        }, 800)
     }
 
     navExpDirect = (e) => {
@@ -364,7 +383,7 @@ class Srux extends Component {
             expColTransHeader: "exp-col-trans-header",
 
             headerTransitionWork: 'headerTransWork fade-out',
-
+            pState:'slide-back-up',
             stageZero:'stageZero',
             vScroller:'slide-left',
             hScroller:'above',
@@ -388,7 +407,7 @@ class Srux extends Component {
             currentExpIndex: 6,
             expColTrans: "exp-col-trans",
             expColTransHeader: "exp-col-trans-header",
-
+            pState:'slide-back-up',
             
             headerTransitionWork: 'headerTransWork fade-out',
 
@@ -556,6 +575,7 @@ render (){
                         </div>
                         <div className={home+" five"}>
                         <h2>Sam Robertson</h2>
+                        
                         </div>
                     </div>
                         </div>
@@ -1141,7 +1161,7 @@ render (){
             
                                                         </div>
                                                     </div>
-                                                    <div className="expLine1"></div>
+                                                    {/* <div className="expLine1"></div> */}
                                                 </div>
                                                 <div className={"col c2 cTwoExp"}>
                                                 

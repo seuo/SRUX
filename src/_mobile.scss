@@ -481,6 +481,9 @@ $transition-delay: 0.05s;
     }
 
     .WorkHero {
+
+            height: 60vh;
+
         .col {
             display: flex;
             flex: 1 0 85%;
@@ -491,7 +494,7 @@ $transition-delay: 0.05s;
             justify-content: center;
             .heroblock {
                 justify-content: flex-start;
-                margin-top: 7vh;
+                margin-top: 15em;
     
                 .description {
                     overflow-wrap: break-word;
@@ -524,9 +527,9 @@ $transition-delay: 0.05s;
         flex-direction: column;
         .headerTransExp {
             margin-left: 2em;
-            margin-top: 10em;
+            margin-top: 15em;
             transition: ease all 1s;
-            background-color: #ffffff;
+            background-color: transparent;
             flex: 0 0 30%;
 
             -webkit-clip-path: polygon(0 0, 64% 0, 100% 100%, 0% 100%);
@@ -541,9 +544,9 @@ $transition-delay: 0.05s;
                 .description {
                     
                     p {
-                        font-size:2.1em;
+                        font-size: 2.2em;
                         margin-left: 3em;
-                        font-weight: 400;
+                        font-weight: 300;
                     }
                 }
                 .workDone {

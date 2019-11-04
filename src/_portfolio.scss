@@ -90,16 +90,16 @@
                 margin-bottom:.7em !important;
 
                 h1 {
-                    font-size:3.5em;
+                    font-size:3em;
                     line-height: 1em;
                     font-weight: 900;
                     margin-left: 0em;
-                    margin-top: 0.25em;
+                    margin-top: 0.36em;
                     margin-bottom:0em;
                     color: #424242;
-                    width: 10em;
+                    width: auto;
                     overflow:hidden;
-                    text-align:center;
+                    text-align:left;
                 }
 
                 img {
@@ -115,17 +115,20 @@
                 background-image:initial;
                 h2 {
                     
-                    font-size: 1.1em;
-                    padding:.7em 1em;
-                    background-color: #ebebeb;
+                    font-size: 1em;
+                    // padding:.7em 1em;
+                    // background-color: #ebebeb;
                     font-weight: 300;
                     font-style: normal;
                     color: #111111;
-                    width: 9em;
+                    width: fit-content;
                     margin-top: 0.5em;
-                    margin-left:5.2em;
-                    line-height: 1.4;
-                    clip-path: polygon(0 0, 9em 0, 100% 100%, 0% 100%);   
+                    margin-bottom: 1em;
+                    margin-left: 3em;
+                    line-height: 1.2;
+                    font-weight:400;
+                    border-bottom:thin solid #dcdcdc;
+                    // clip-path: polygon(0 0, 9em 0, 100% 100%, 0% 100%);   
                 }
             }
 
@@ -133,14 +136,14 @@
                 background-image:initial;
                 padding-top:.5em;
                 p {
-                    font-weight: 100;
+                    font-weight: 300;
                     line-height:1.4;
-                    font-size: 1.1em;
+                    font-size: 1em;
                     color: rgba(0,0,0,0.57);
                     width: 26em;
-                    margin-left: 5.4em;
+                    margin-left: 3em;
                     margin-bottom:.5em;
-                    color: #111111;
+                    color: #333;
     
                 }
             }

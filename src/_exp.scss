@@ -143,6 +143,7 @@
     animation-fill-mode: forwards;
     animation-duration: 1s;
     transition:ease all 4s;
+
 }
 
 
@@ -156,6 +157,7 @@
     width: 100vw;
     pointer-events: none;
     .headerTransExp {
+        clip-path: polygon(0 0, 100% 0, 87% 100%, 0% 100%);
         display: flex;
         flex: 1 0 46%;
         justify-content: flex-end;
@@ -189,7 +191,7 @@
                 margin-top: 1.5em;
                 padding-left: .5em;
                 padding-right: .5em;
-                margin-left:5em;
+                margin-left:4em;
                 justify-content: center;
                 .svgIconWhite {
                     overflow: visible !important;
@@ -199,8 +201,9 @@
                    
                     font-size:2.5em;
                     padding-bottom:.08em;
-                    margin-left:.1em;
-                    margin-right:.1em;
+                    margin-left: 0.25em;
+                    margin-right: .15em;
+                
                 }
                 .svgIconGold {
                     overflow: visible !important;
@@ -252,11 +255,11 @@
                 margin-bottom:.7em !important;
 
                 h1 {
-                    font-size:3.5em;
+                    font-size:3em;
                     line-height: 1em;
                     font-weight: 900;
                     margin-left: 0.2em;
-                    margin-top: 0.25em;
+                    margin-top: 0.36em;
                     margin-bottom:0em;
                     color: #424242;
                     width: 10em;
@@ -299,7 +302,7 @@
                     font-weight: 100;
                     font-size: 1.1em;
                     color: rgba(0,0,0,0.57);
-                    margin-left: 5.4em;
+                    margin-left: 3em;
                     margin-bottom:.5em;
                     color:#cdcdcd;
 
@@ -331,6 +334,7 @@
     top: 48.9vh;
     z-index:-1;
     left: 0vw;
+    margin-left: -10vw;
     max-width: 600vw;
 }
 
