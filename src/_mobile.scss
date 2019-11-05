@@ -200,8 +200,12 @@ $transition-delay: 0.05s;
 
 
 @media only screen and (max-width: 87.5em) {
+
+.workDone::after {
+    margin-left: -.5em;
+}
     .WorkHero .col .heroblock .description {
-        font-size:1.4em;
+        font-size: 1em;
         p {
             margin-left: 0em;
         }
@@ -448,8 +452,14 @@ $transition-delay: 0.05s;
 
 @media only screen and (max-width: 30em) {
 
+    .WorkHero .col .heroblock .workDone {
+        background-image: initial;
+        font-size: 1.2em;
+        transform: translate(-5.8em,-2em)scale(0.7);
+    }
+
     .WorkHero .col .heroblock .description {
-        font-size:.7em;
+        font-size:.8em;
         p {
             margin:0;
             line-height:1.5;
@@ -458,9 +468,12 @@ $transition-delay: 0.05s;
 
     }
     .WorkHero .col .heroblock .workDone h2 {
+        font-size: 2em;
+        margin-left:.5em;
+}
 
-        margin-left:0em;
-
+.workDone::after {
+    margin-left: 0em;
 }
 
     .WorkHeaderSection.pHeaderSection.stageZero {
@@ -482,7 +495,7 @@ $transition-delay: 0.05s;
 
     .WorkHero {
 
-            height: 60vh;
+            height: 64vh;
 
         .col {
             display: flex;
@@ -1283,6 +1296,97 @@ $transition-delay: 0.05s;
 
 @media screen and (orientation:portrait) and (min-device-width: 30em) and (max-device-width: 87.5em) {
 
+    .webWorkMobile {
+        transform:scale(2.5);
+        margin-top: 0;
+    }
+
+    .vScroller {
+        .section {
+            width: 100vw;
+        }
+
+    }
+
+    .row1 {
+        display: flex;
+        flex: 1 0 98%;
+        justify-content: center;
+        width: 100vw;
+        height: 100%;
+        align-items: flex-end;
+    }
+
+
+    .item1 {
+        width: 100vw;
+        height: 100%;
+        transform: scale(0.5);
+        cursor: pointer;
+        margin-right: 6vw;
+        margin-top: 1em;
+    }
+
+
+.workDone::after {
+    margin-left: 0em;
+
+}
+.WorkHero .col .heroblock .workDone h2 {
+font-size:2em;
+}
+
+    .WorkHero {
+
+            height: 60vh;
+
+        .col {
+            display: flex;
+            flex: 1 0 85%;
+            justify-content: flex-end;
+            transition: ease all 1s;
+            font-size: 0.4em;
+            padding: 0em 2em;
+            justify-content: center;
+            .heroblock {
+                justify-content: flex-start;
+                margin-top: 15em;
+    
+                .description {
+                    overflow-wrap: break-word;
+                    
+                    p {
+                        width:100%;
+                        font-size: 1.5em;
+                        padding: 1em .5em;
+                        margin-left:0em;
+                    }
+    
+                }
+            }
+            .workDone {
+                margin-left: 1em;
+                h2 {
+                    margin-top: 0;
+                    margin-left: 1em;
+                    font-size: 1.3em;
+                    width: 9em;
+                    line-height: 1.4;
+                }
+            }
+        }
+    }
+    
+    .WorkHeaderSection.pHeaderSection.stageZero {
+        z-index: 1;
+        position: absolute;
+        width: 100vw;
+        height: 60vh;
+        pointer-events: none;
+        background-color:#191919;
+        background-image:initial;
+    }
+
     .stageExp .description p::before {
         font-size: 1.6em;
         width: 50vw;
@@ -1616,7 +1720,7 @@ $transition-delay: 0.05s;
         display: flex;
         flex-direction: column;
         flex: 1 0 60%;
-        margin-top: 13vh;
+        margin-top: 10vh;
         font-size: 1.5vw;
         cursor: pointer;
         margin-left: 0;

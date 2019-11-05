@@ -748,6 +748,14 @@ text.skills1 p {
   transition: ease all .2s;
 }
 
+.overflow {
+  overflow: visible !important;
+}
+
+.workDone::after {
+  margin-left: 2.5em;
+}
+
 .stageOne {
   background-image: url("assets/mj-bg.jpg");
 }
@@ -776,7 +784,6 @@ text.skills1 p {
 }
 
 .stageOne .workDone::after {
-  margin-left: 2.5em;
   content: url(https://img.icons8.com/color/48/000000/adobe-illustrator.png) url(assets/adobe-xd-48.png) url(https://img.icons8.com/color/48/000000/wordpress.png) url(https://img.icons8.com/color/48/000000/css3.png);
 }
 
@@ -808,7 +815,6 @@ text.skills1 p {
 }
 
 .stageTwo .workDone::after {
-  margin-left: 2.5em;
   content: url(https://img.icons8.com/color/48/000000/adobe-illustrator.png) url(https://img.icons8.com/color/48/000000/google-sketchup.png) url(assets/adobe-xd-48.png) url(https://img.icons8.com/color/48/000000/wordpress.png) url(https://img.icons8.com/color/48/000000/css3.png);
 }
 
@@ -836,7 +842,6 @@ text.skills1 p {
 }
 
 .stageThree .workDone::after {
-  margin-left: 2.5em;
   content: url(https://img.icons8.com/color/48/000000/adobe-illustrator.png) url(https://img.icons8.com/windows/48/000000/sketch.png) url(https://img.icons8.com/color/48/000000/html-5.png) url(https://img.icons8.com/color/48/000000/css3.png) " " url(https://img.icons8.com/color/48/000000/npm.png) " " url(https://img.icons8.com/nolan/48/000000/react-native.png);
 }
 
@@ -868,7 +873,6 @@ text.skills1 p {
 }
 
 .stageFour .workDone::after {
-  margin-left: 2.5em;
   content: url(assets/adobe-xd-48.png) url(https://img.icons8.com/color/48/000000/wordpress.png) url(https://img.icons8.com/color/48/000000/css3.png);
 }
 
@@ -900,7 +904,6 @@ text.skills1 p {
 }
 
 .stageFive .workDone::after {
-  margin-left: 2.5em;
   content: url(https://img.icons8.com/color/48/000000/adobe-illustrator.png) url(https://img.icons8.com/color/48/000000/adobe-indesign.png);
 }
 
@@ -932,7 +935,6 @@ text.skills1 p {
 }
 
 .stageSix .workDone::after {
-  margin-left: 2.5em;
   content: url(https://img.icons8.com/color/48/000000/adobe-illustrator.png) url(https://img.icons8.com/color/48/000000/adobe-indesign.png);
 }
 
@@ -3747,8 +3749,11 @@ svg {
 }
 
 @media only screen and (max-width: 87.5em) {
+  .workDone::after {
+    margin-left: -.5em;
+  }
   .WorkHero .col .heroblock .description {
-    font-size: 1.4em;
+    font-size: 1em;
   }
   .WorkHero .col .heroblock .description p {
     margin-left: 0em;
@@ -3983,8 +3988,14 @@ svg {
 }
 
 @media only screen and (max-width: 30em) {
+  .WorkHero .col .heroblock .workDone {
+    background-image: initial;
+    font-size: 1.2em;
+    -webkit-transform: translate(-5.8em, -2em) scale(0.7);
+            transform: translate(-5.8em, -2em) scale(0.7);
+  }
   .WorkHero .col .heroblock .description {
-    font-size: .7em;
+    font-size: .8em;
   }
   .WorkHero .col .heroblock .description p {
     margin: 0;
@@ -3992,6 +4003,10 @@ svg {
     margin-left: 0em;
   }
   .WorkHero .col .heroblock .workDone h2 {
+    font-size: 2em;
+    margin-left: .5em;
+  }
+  .workDone::after {
     margin-left: 0em;
   }
   .WorkHeaderSection.pHeaderSection.stageZero {
@@ -4007,7 +4022,7 @@ svg {
     width: 100vw;
   }
   .WorkHero {
-    height: 60vh;
+    height: 64vh;
   }
   .WorkHero .col {
     display: -webkit-box;
@@ -4904,6 +4919,100 @@ svg {
 }
 
 @media screen and (orientation: portrait) and (min-device-width: 30em) and (max-device-width: 87.5em) {
+  .webWorkMobile {
+    -webkit-transform: scale(2.5);
+            transform: scale(2.5);
+    margin-top: 0;
+  }
+  .vScroller .section {
+    width: 100vw;
+  }
+  .row1 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-flex: 1;
+        -ms-flex: 1 0 98%;
+            flex: 1 0 98%;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    width: 100vw;
+    height: 100%;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+  }
+  .item1 {
+    width: 100vw;
+    height: 100%;
+    -webkit-transform: scale(0.5);
+            transform: scale(0.5);
+    cursor: pointer;
+    margin-right: 6vw;
+    margin-top: 1em;
+  }
+  .workDone::after {
+    margin-left: 0em;
+  }
+  .WorkHero .col .heroblock .workDone h2 {
+    font-size: 2em;
+  }
+  .WorkHero {
+    height: 60vh;
+  }
+  .WorkHero .col {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-flex: 1;
+        -ms-flex: 1 0 85%;
+            flex: 1 0 85%;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    -webkit-transition: ease all 1s;
+    transition: ease all 1s;
+    font-size: 0.4em;
+    padding: 0em 2em;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .WorkHero .col .heroblock {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    margin-top: 15em;
+  }
+  .WorkHero .col .heroblock .description {
+    overflow-wrap: break-word;
+  }
+  .WorkHero .col .heroblock .description p {
+    width: 100%;
+    font-size: 1.5em;
+    padding: 1em .5em;
+    margin-left: 0em;
+  }
+  .WorkHero .col .workDone {
+    margin-left: 1em;
+  }
+  .WorkHero .col .workDone h2 {
+    margin-top: 0;
+    margin-left: 1em;
+    font-size: 1.3em;
+    width: 9em;
+    line-height: 1.4;
+  }
+  .WorkHeaderSection.pHeaderSection.stageZero {
+    z-index: 1;
+    position: absolute;
+    width: 100vw;
+    height: 60vh;
+    pointer-events: none;
+    background-color: #191919;
+    background-image: initial;
+  }
   .stageExp .description p::before {
     font-size: 1.6em;
     width: 50vw;
@@ -5287,7 +5396,7 @@ svg {
     -webkit-box-flex: 1;
         -ms-flex: 1 0 60%;
             flex: 1 0 60%;
-    margin-top: 13vh;
+    margin-top: 10vh;
     font-size: 1.5vw;
     cursor: pointer;
     margin-left: 0;

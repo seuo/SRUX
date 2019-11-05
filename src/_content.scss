@@ -22,6 +22,16 @@
     transition:ease all .2s
 }
 
+.overflow {
+    overflow: visible !important;
+}
+
+.workDone::after {
+        
+    margin-left: 2.5em;
+
+}
+
 .stageOne {
     background-image: url("assets/mj-bg.jpg");
         .heading  {
@@ -53,7 +63,6 @@
     }
     .workDone::after {
         
-        margin-left: 2.5em;
         content: url(https://img.icons8.com/color/48/000000/adobe-illustrator.png) url(assets/adobe-xd-48.png) url(https://img.icons8.com/color/48/000000/wordpress.png) url(https://img.icons8.com/color/48/000000/css3.png);
   
     }
@@ -71,6 +80,7 @@
             color: rgb(223, 113, 62) !important;
             content: "10 Squares Cabins";
         }
+        
     }
 
     .description  {
@@ -94,7 +104,6 @@
     }
     .workDone::after {
         
-        margin-left: 2.5em;
         content: url(https://img.icons8.com/color/48/000000/adobe-illustrator.png) url(https://img.icons8.com/color/48/000000/google-sketchup.png) url(assets/adobe-xd-48.png) url(https://img.icons8.com/color/48/000000/wordpress.png) url(https://img.icons8.com/color/48/000000/css3.png);
   
     }
@@ -131,8 +140,6 @@
         }
     }
     .workDone::after {
-       
-        margin-left: 2.5em;
         content: url(https://img.icons8.com/color/48/000000/adobe-illustrator.png) url(https://img.icons8.com/windows/48/000000/sketch.png) url(https://img.icons8.com/color/48/000000/html-5.png)  url(https://img.icons8.com/color/48/000000/css3.png) " " url(https://img.icons8.com/color/48/000000/npm.png) " " url(https://img.icons8.com/nolan/48/000000/react-native.png)   ;
   
     }
@@ -169,7 +176,6 @@
     }
     .workDone::after {
         
-        margin-left: 2.5em;
         content: url(assets/adobe-xd-48.png) url(https://img.icons8.com/color/48/000000/wordpress.png) url(https://img.icons8.com/color/48/000000/css3.png);
   
     }
@@ -208,8 +214,6 @@
         }
     }
     .workDone::after {
-       
-        margin-left: 2.5em;
         content: url(https://img.icons8.com/color/48/000000/adobe-illustrator.png) url(https://img.icons8.com/color/48/000000/adobe-indesign.png) ;
   
     }
@@ -245,8 +249,6 @@
         }
     }
     .workDone::after {
-       
-        margin-left: 2.5em;
         content: url(https://img.icons8.com/color/48/000000/adobe-illustrator.png) url(https://img.icons8.com/color/48/000000/adobe-indesign.png) ;
   
     }

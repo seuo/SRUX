@@ -171,8 +171,6 @@ class Srux extends Component {
                 })
             }, 200)
 
-
-
         }
 
         this.setState({stageState: 'stageF-out'});
