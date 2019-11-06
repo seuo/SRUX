@@ -191,7 +191,7 @@ a {
 
 .WorkHero .col .heroblock .heading svg {
   height: 14em;
-  width: 11.8em;
+  width: 11.91em;
 }
 
 .WorkHero .col .heroblock .workDone {
@@ -292,8 +292,8 @@ a {
 .row2 {
   width: 55vw;
   -webkit-box-flex: 1;
-      -ms-flex: 1 0 30%;
-          flex: 1 0 30%;
+      -ms-flex: 1 0 29%;
+          flex: 1 0 29%;
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
@@ -314,6 +314,9 @@ a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  width: 110%;
+  margin-left: -10%;
+  background-color: white;
 }
 
 .row2 .brand .logoLines {
@@ -1008,7 +1011,7 @@ text.skills1 p {
   display: -ms-flexbox;
   display: flex;
   justify-self: flex-end;
-  width: 100%;
+  width: 91%;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
@@ -1024,6 +1027,7 @@ text.skills1 p {
   bottom: 0;
   height: 30vh;
   z-index: 9;
+  padding-right: 10%;
 }
 
 .imageMason div {
@@ -1031,9 +1035,9 @@ text.skills1 p {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 32%;
-          flex: 0 0 32%;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 20%;
+          flex: 1 0 20%;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -1044,7 +1048,9 @@ text.skills1 p {
 
 .imageMason div:hover {
   z-index: 1;
-  padding: 0em 3em;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 50%;
+          flex: 1 0 50%;
 }
 
 .s1Col1 {
@@ -3516,7 +3522,7 @@ g#contact-border {
 
 .hero .col .heroblock .heading svg {
   height: 14em;
-  width: 11.8em;
+  width: 11.91em;
 }
 
 .hero .col .heroblock .workDone {
@@ -4114,6 +4120,9 @@ svg {
 }
 
 @media only screen and (max-width: 30em) {
+  .stageImages {
+    width: 100%;
+  }
   .imageMason {
     width: 100%;
     -webkit-box-flex: 1;
@@ -5070,6 +5079,9 @@ svg {
 }
 
 @media screen and (orientation: portrait) and (min-device-width: 30em) and (max-device-width: 87.5em) {
+  .stageImages {
+    width: 100%;
+  }
   .imageMason {
     width: 100%;
     -webkit-box-flex: 1;

@@ -453,6 +453,10 @@ $transition-delay: 0.05s;
 
 @media only screen and (max-width: 30em) {
 
+    .stageImages {
+        width:100%;
+    }
+
     .imageMason {
         width: 100%;
         flex: 1 0 35%;
@@ -1316,6 +1320,11 @@ $transition-delay: 0.05s;
 }
 
 @media screen and (orientation:portrait) and (min-device-width: 30em) and (max-device-width: 87.5em) {
+
+    .stageImages {
+        width:100%;
+    }
+
 
     .imageMason {
         width: 100%;

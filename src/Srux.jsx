@@ -431,7 +431,7 @@ class Srux extends Component {
             navChecked:0,
             hAnim: 'hSlide',
             currentWorkIndex: 7,
-            currentExpIndex: 6,
+            currentExpIndex: 5,
             expColTrans: "exp-col-trans",
             expColTransHeader: "exp-col-trans-header",
             pState:'slide-back-up',
@@ -457,7 +457,7 @@ class Srux extends Component {
 
     navContact = (e) => {
         e.preventDefault();
-        this.setState({currentWorkIndex: 7, currentExpIndex: 6,navChecked:0,})
+        this.setState({currentWorkIndex: 7, currentExpIndex: 5,navChecked:0,})
         setTimeout(() => {
             this.setState({hScroller: 'above', homeHeader: 'homeHeader slide-right'})
         }, 700)
@@ -845,7 +845,7 @@ render (){
                          
 
                             
-                                <div className={"brand "}>
+                                <div className= {"brand "+stageImages}>
                                     <div className="logoContainer">
                                         <img alt={this.imgAlt} src={mjlogolines}/>
                                     </div>
@@ -920,8 +920,9 @@ render (){
                             </Tilt>
                         </div>
                     </row>
-                    <row className="row2">
-                    <div className={"brand "}>
+                  
+                    <row className={"row2"}>
+                    <div className={"brand "+stageImages}>
                     <div className="logoContainer">
                                     <img alt={this.imgAlt} src={tenslogolines}/></div>
                                     <div className="logoContainer">
@@ -1060,7 +1061,7 @@ render (){
                         </div>
                     </row>
                     <row className="row2">
-                    <div className={"brand "}>
+                    <div className= {"brand "+stageImages}>
                                     <div className="logoContainer">
                                         <img alt={this.imgAlt} src={ambvC}/>
                                     </div>
@@ -1100,7 +1101,7 @@ render (){
                         
                     </row>
                     <row className="row2">
-                    <div className={"brand "}>
+                    <div className= {"brand "+stageImages}>
                                     <div className="logoContainer">
                                         <img alt={this.imgAlt} src={mglogo2}/>
                                     </div>
@@ -1123,7 +1124,7 @@ render (){
                         
                     </row>
                     <row className="row2">
-                    <div className={"brand "}>
+                    <div className= {"brand "+stageImages}>
 
                     <div className="logoContainer">
                                     <img alt={this.imgAlt} src={cclogo1}/>
@@ -1148,7 +1149,7 @@ render (){
                     </row>
                     <row className="row2">
                     
-                                <div className={"brand "}>
+                                <div className= {"brand "+stageImages}>
                     <div className="logoContainer">
                                     <img alt={this.imgAlt} src={autlogo}/>
                                     </div>
