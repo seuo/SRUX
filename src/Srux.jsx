@@ -1,6 +1,12 @@
 import React, {Component} from 'react';
 import ReactScrollWheelHandler from "react-scroll-wheel-handler";
 import Tilt from 'react-tilt';
+import Stage1 from './stage1';
+import Stage2 from './stage2';
+import Stage3 from './stage3';
+import Stage4 from './stage4';
+import Stage5 from './stage5';
+import Stage6 from './stage6';
 import { Scrollbars } from 'react-custom-scrollbars';
 import { FaGithubSquare } from 'react-icons/fa';
 import { DiJqueryLogo } from "react-icons/di";
@@ -18,23 +24,31 @@ import expImg from './assets/experience.png';
 import contactImg from './assets/contact.png';
 
 import mjlogo from './assets/mitchells-joinery-logo.png';
-import mjlogolines from './assets/mitchells-joinery-logo-lines.png';
+import mjlogolines from './assets/mjColours.png';
 import mjlogobw from './assets/mitchells-joinery-logo-bw.png';
 
-import tenslogolines from './assets/10squares-logo-lines.png';
+import tenslogolines from './assets/10sColours.png';
 import tenslogobw from './assets/10squares-logo-bw.png';
 import tenslogo from './assets/10squares-logo.png';
 
 
-import mglogo2 from './assets/mangawhai-logo-1-w.png';
+import ambvC from './assets/ambvColours.png';
+import ambvlogo from './assets/ambv-logo.png';
+import ambvlogo2 from './assets/ambv-logo-2.png';
+
+// import mglogo3 from './assets/mangawhai-logo-2-w.png';
+
+// import mglogo4 from './assets/mangawhai-logo-2.png';
+
+import mglogo2 from './assets/mmColours.png';
 import mglogo3 from './assets/mangawhai-logo-2-w.png';
 
 import mglogo4 from './assets/mangawhai-logo-2.png';
 
 
-import cclogo1 from './assets/cc-logo.png';
-import cclogo2 from './assets/cc-logo.jpg';
-import cclogo3 from './assets/cc-logo3.jpg';
+import cclogo1 from './assets/ccColours.png';
+import cclogo2 from './assets/cc-logo.png';
+import cclogo3 from './assets/cc-logo.jpg';
 
 
 import xdLogo from './assets/adobe-xd-48.png'; 
@@ -75,7 +89,7 @@ class Srux extends Component {
                 'ExpStageThree',
                 'ExpStageFour',
                 'ExpStageFive',
-                'ExpStageSix'
+                // 'ExpStageSix'
             ],
 
             vScroller: '',
@@ -100,6 +114,7 @@ class Srux extends Component {
             navChecked: 0,
 
             imgAlt:'',
+            stageImages:'',
         }
 
     }
@@ -173,7 +188,10 @@ class Srux extends Component {
 
         }
 
-        this.setState({stageState: 'stageF-out'});
+        this.setState({
+        stageState: 'stageF-out',
+        stageImages:'fade-out-fast'
+        });
         setTimeout(() => {
             this.setState({
                 navChecked:0,
@@ -183,6 +201,11 @@ class Srux extends Component {
                 
             })
         }, 200)
+        setTimeout(() => {
+            this.setState({
+                stageImages:'fade-in',
+            })
+        }, 600)
 
     };
 
@@ -211,7 +234,8 @@ class Srux extends Component {
 
         this.setState({
         stageState: 'stageF-out',
-        navChecked:false,});
+        navChecked:false,
+        stageImages:'fade-out-fast',});
 
         setTimeout(() => {
             this.setState({
@@ -219,17 +243,22 @@ class Srux extends Component {
                 currentWorkIndex: currentWorkIndex - 1
             })
         }, 200)
+        setTimeout(() => {
+            this.setState({
+                stageImages:'fade-in',
+            })
+        }, 600)
 
     };
 
     nextExp = () => {
         const {currentExpIndex} = this.state;
 
-        if (currentExpIndex === 6) {
+        if (currentExpIndex === 5) {
             setTimeout(() => {
                 this.setState({
                     navChecked:0,
-                    currentExpIndex: 6,
+                    currentExpIndex: 5,
                 })
             }, 0)
 
@@ -527,13 +556,13 @@ render (){
         contactOut,
         vScrollerLock,
         mobTrans,
-        navChecked
+        navChecked,
+        stageImages
     } = this.state;
 
         let expLineStyle2 = {
             width:+currentExpIndex+"75vw"
         }
-
 
   
 
@@ -690,7 +719,14 @@ render (){
 
 
                     <container className="pWrap">
-
+                    <div className={"stageImages "+stageImages}>
+                    {(this.state.currentWorkIndex == 0 ? <Stage1/> : null )}
+                    {(this.state.currentWorkIndex == 1 ? <Stage2/> : null )}
+                    {(this.state.currentWorkIndex == 2 ? <Stage3/> : null )}
+                    {(this.state.currentWorkIndex == 3 ? <Stage4/> : null )}
+                    {(this.state.currentWorkIndex == 4 ? <Stage5/> : null )}
+                    {(this.state.currentWorkIndex == 5 ? <Stage6/> : null )}
+                    </div>
 
                 <div className={"WorkHeaderSection pHeaderSection "+stageZero+" "+stageNum[currentWorkIndex]}>
                     <div className="WorkHeader pHeader">
@@ -715,7 +751,9 @@ render (){
                                             {/* content goes here from css */}
                                         </h2>
                                     </div>
+                                   
                                 </div>
+                                
                             </div>
                             <div className={"col c2 "+colTwoBg}>
                                 <div className="ui gone"></div>
@@ -1022,6 +1060,18 @@ render (){
                         </div>
                     </row>
                     <row className="row2">
+                    <div className={"brand "}>
+                                    <div className="logoContainer">
+                                        <img alt={this.imgAlt} src={ambvC}/>
+                                    </div>
+                                    <div className="logoContainer">
+                                        <img alt={this.imgAlt} src={ambvlogo}/>
+                                    </div>
+                                    <div className="logoContainer">
+                                        <img alt={this.imgAlt} src={ambvlogo2}/>
+                                    </div>
+ 
+                                 </div>
                     </row>
                 </section>
                 {/* <section className={"section"}>
@@ -1309,7 +1359,7 @@ render (){
                     </row>
                 </section>
 
-                <section className={"eSection"}>
+                {/* <section className={"eSection"}>
 
                     <row className="eRow1">
                         <div className={"eText "+eTextAnim}>
@@ -1335,7 +1385,7 @@ render (){
                         </itemheading>
                     </row>
 
-                </section>
+                </section> */}
                 <section className={"eSection"}>
 
                     <row className="eRow1">

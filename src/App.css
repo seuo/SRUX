@@ -147,8 +147,8 @@ a {
       -ms-flex-direction: column;
           flex-direction: column;
   -webkit-box-flex: 0;
-      -ms-flex: 0 0 83%;
-          flex: 0 0 83%;
+      -ms-flex: 0 0 87%;
+          flex: 0 0 87%;
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
@@ -278,9 +278,9 @@ a {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-flex: 1;
-      -ms-flex: 1 0 50%;
-          flex: 1 0 50%;
-  width: 54vw;
+      -ms-flex: 1 0 68%;
+          flex: 1 0 68%;
+  width: 55vw;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -290,10 +290,10 @@ a {
 }
 
 .row2 {
-  width: 54vw;
+  width: 55vw;
   -webkit-box-flex: 1;
-      -ms-flex: 1 0 25%;
-          flex: 1 0 25%;
+      -ms-flex: 1 0 30%;
+          flex: 1 0 30%;
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
@@ -325,8 +325,7 @@ a {
 }
 
 .row2 .brand .logoContainer {
-  width: 8vw;
-  height: 8vw;
+  width: 10vw;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -343,9 +342,7 @@ a {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-  -o-border-image: url("assets/border.png") 500 fill/7em/0em space;
-     border-image: url("assets/border.png") 500 fill/7em/0em space;
-  padding: 3em;
+  padding: 0em;
   display: block;
 }
 
@@ -642,8 +639,10 @@ itemheading text h1 {
   -webkit-transform: scale(0.7);
           transform: scale(0.7);
   cursor: pointer;
-  margin-right: 6vw;
-  margin-top: 1em;
+  /* margin-right: 6vw; */
+  /* margin-top: 1em; */
+  width: 87%;
+  height: 100%;
 }
 
 .webImage {
@@ -753,7 +752,7 @@ text.skills1 p {
 }
 
 .workDone::after {
-  margin-left: 2.5em;
+  margin-left: 2.7em;
 }
 
 .stageOne {
@@ -992,6 +991,132 @@ text.skills1 p {
   display: block;
   white-space: pre-wrap;
   content: "Poster";
+}
+
+.stageImages {
+  width: 50%;
+  position: absolute;
+  bottom: 0;
+  height: 30vh;
+  z-index: 9;
+  -webkit-transition: ease all .7s;
+  transition: ease all .7s;
+}
+
+.imageMason {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  justify-self: flex-end;
+  width: 100%;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 35%;
+          flex: 1 0 35%;
+  -webkit-clip-path: polygon(0 0, 82.5% 0, 78.7% 100%, 0 100%);
+          clip-path: polygon(0 0, 82.5% 0, 78.7% 100%, 0 100%);
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  position: absolute;
+  bottom: 0;
+  height: 30vh;
+  z-index: 9;
+}
+
+.imageMason div {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 32%;
+          flex: 0 0 32%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  -webkit-transition: ease all 1s;
+  transition: ease all 1s;
+  cursor: pointer;
+}
+
+.imageMason div:hover {
+  z-index: 1;
+  padding: 0em 3em;
+}
+
+.s1Col1 {
+  background-image: url("assets/institute-mj-1.jpg");
+}
+
+.s1Col2 {
+  background-image: url("assets/institute-mj-2.jpg");
+}
+
+.s1Col3 {
+  background-image: url("assets/institute-mj-3.jpg");
+}
+
+.s2Col1 {
+  background-image: url("assets/institute-10s.jpg");
+}
+
+.s2Col2 {
+  background-image: url("assets/institute-10s-2.jpg");
+}
+
+.s2Col3 {
+  background-image: url("assets/institute-10s-3.jpg");
+}
+
+.s3Col1 {
+  background-image: url("assets/institute-ins3.jpg");
+}
+
+.s3Col2 {
+  background-image: url("assets/institute-ins.jpg");
+}
+
+.s3Col3 {
+  background-image: url("assets/institute-ins2.jpg");
+}
+
+.s4Col1 {
+  background-image: url("assets/institute-ambv.jpg");
+}
+
+.s4Col2 {
+  background-image: url("assets/institute-ambv-3.jpg");
+}
+
+.s4Col3 {
+  background-image: url("assets/institute-ambv-2.jpg");
+}
+
+.s5Col1 {
+  background-image: url("assets/institute-mm.jpg");
+}
+
+.s5Col2 {
+  background-image: url("assets/institute-mm1.jpg");
+}
+
+.s5Col3 {
+  background-image: url("assets/institute-mm2.jpg");
+}
+
+.s6Col1 {
+  background-image: url("assets/institute-cc-2.jpg");
+}
+
+.s6Col2 {
+  background-image: url("assets/institute-cc-1.jpg");
+}
+
+.s6Col3 {
+  background-image: url("assets/institute-cc-3.jpg");
 }
 
 .inapp-mobile {
@@ -1306,14 +1431,14 @@ text.skills1 p {
 }
 
 .expHero .headerTransExp {
-  -webkit-clip-path: polygon(0 0, 100% 0, 87% 100%, 0% 100%);
-          clip-path: polygon(0 0, 100% 0, 87% 100%, 0% 100%);
+  -webkit-clip-path: polygon(0 0, 95% 0, 82% 100%, 0% 100%);
+          clip-path: polygon(0 0, 95% 0, 82% 100%, 0% 100%);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-flex: 1;
-      -ms-flex: 1 0 46%;
-          flex: 1 0 46%;
+      -ms-flex: 1 0 49%;
+          flex: 1 0 49%;
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
@@ -1371,7 +1496,6 @@ text.skills1 p {
   margin-top: 1.5em;
   padding-left: .5em;
   padding-right: .5em;
-  margin-left: 4em;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -1422,7 +1546,7 @@ text.skills1 p {
           flex: 0 0 30%;
   padding-left: .5em;
   padding-right: .5em;
-  margin-left: 5em;
+  margin-left: 1em;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -1469,7 +1593,7 @@ text.skills1 p {
   background-image: inherit;
   height: 3em;
   overflow: hidden;
-  border-bottom: 2px solid #fafafa;
+  border-bottom: 1px solid #fafafa;
   margin-bottom: .7em !important;
 }
 
@@ -1477,12 +1601,13 @@ text.skills1 p {
   font-size: 3em;
   line-height: 1em;
   font-weight: 900;
-  margin-left: 0.2em;
+  margin-left: 0em;
   margin-top: 0.36em;
   margin-bottom: 0em;
   color: #424242;
-  width: 10em;
+  width: auto;
   overflow: hidden;
+  text-align: left;
 }
 
 .expHero .heroblock.stageExp .heading img {
@@ -3049,8 +3174,8 @@ blurb {
 }
 
 .moveLeft {
-  -webkit-transform: translate(-15vw, 0) scale(0.9);
-          transform: translate(-15vw, 0) scale(0.9);
+  -webkit-transform: translate(-16.5vw, 0) scale(0.9);
+          transform: translate(-16.5vw, 0) scale(0.9);
 }
 
 .strollTracker {
@@ -3837,6 +3962,7 @@ svg {
         -ms-flex-pack: start;
             justify-content: flex-start;
     font-size: 0.9em;
+    margin-left: 10em;
     margin-top: 50%;
   }
   .header .hero .col .heroblock .heading {
@@ -3988,6 +4114,30 @@ svg {
 }
 
 @media only screen and (max-width: 30em) {
+  .imageMason {
+    width: 100%;
+    -webkit-box-flex: 1;
+        -ms-flex: 1 0 35%;
+            flex: 1 0 35%;
+    -webkit-clip-path: initial;
+            clip-path: initial;
+    height: 20vh;
+  }
+  .imageMason div {
+    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-flex: 1;
+        -ms-flex: 1 0 33%;
+            flex: 1 0 33%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    -webkit-transition: ease all 1s;
+    transition: ease all 1s;
+    cursor: pointer;
+  }
   .WorkHero .col .heroblock .workDone {
     background-image: initial;
     font-size: 1.2em;
@@ -4529,6 +4679,7 @@ svg {
         -ms-flex-align: start;
             align-items: flex-start;
     background-color: white;
+    display: none;
   }
   .row2 {
     background-color: white;
@@ -4536,14 +4687,14 @@ svg {
     -webkit-box-flex: 1;
         -ms-flex: 1 0 100%;
             flex: 1 0 100%;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    height: 40%;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    height: 36%;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    margin-top: 2vw;
+    margin-top: 0vw;
   }
   .row2 .brand {
     display: -webkit-box;
@@ -4554,13 +4705,13 @@ svg {
             justify-content: space-evenly;
     font-size: .5vw;
     height: 100%;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
   }
   .row2 .brand .logoContainer {
-    width: 20vw;
-    height: 20vw;
+    width: 16vw;
+    /* height: 20vw; */
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -4919,6 +5070,30 @@ svg {
 }
 
 @media screen and (orientation: portrait) and (min-device-width: 30em) and (max-device-width: 87.5em) {
+  .imageMason {
+    width: 100%;
+    -webkit-box-flex: 1;
+        -ms-flex: 1 0 35%;
+            flex: 1 0 35%;
+    -webkit-clip-path: initial;
+            clip-path: initial;
+    height: 15vh;
+  }
+  .imageMason div {
+    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-flex: 1;
+        -ms-flex: 1 0 33%;
+            flex: 1 0 33%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    -webkit-transition: ease all 1s;
+    transition: ease all 1s;
+    cursor: pointer;
+  }
   .webWorkMobile {
     -webkit-transform: scale(2.5);
             transform: scale(2.5);
@@ -4938,7 +5113,7 @@ svg {
         -ms-flex-pack: center;
             justify-content: center;
     width: 100vw;
-    height: 100%;
+    height: 58%;
     -webkit-box-align: end;
         -ms-flex-align: end;
             align-items: flex-end;
@@ -4959,7 +5134,7 @@ svg {
     font-size: 2em;
   }
   .WorkHero {
-    height: 60vh;
+    height: 55vh;
   }
   .WorkHero .col {
     display: -webkit-box;
@@ -5008,7 +5183,7 @@ svg {
     z-index: 1;
     position: absolute;
     width: 100vw;
-    height: 60vh;
+    height: 50vh;
     pointer-events: none;
     background-color: #191919;
     background-image: initial;
@@ -5348,7 +5523,7 @@ svg {
         -ms-flex: 1 0 99%;
             flex: 1 0 99%;
     width: 100vw;
-    height: 50%;
+    height: 58%;
   }
   .webWork {
     cursor: pointer;

@@ -157,9 +157,9 @@
     width: 100vw;
     pointer-events: none;
     .headerTransExp {
-        clip-path: polygon(0 0, 100% 0, 87% 100%, 0% 100%);
+        clip-path: polygon(0 0, 95% 0, 82% 100%, 0% 100%);
         display: flex;
-        flex: 1 0 46%;
+        flex: 1 0 49%;
         justify-content: flex-end;
         transition: ease all 1s;
         background-color: #191919;
@@ -191,7 +191,6 @@
                 margin-top: 1.5em;
                 padding-left: .5em;
                 padding-right: .5em;
-                margin-left:4em;
                 justify-content: center;
                 .svgIconWhite {
                     overflow: visible !important;
@@ -222,7 +221,7 @@
                 flex: 0 0 30%;
                 padding-left: .5em;
                 padding-right: .5em;
-                margin-left:5em;
+                margin-left:1em;
                 justify-content: center;
                 h1 {
                     font-size:1.5em;
@@ -247,24 +246,24 @@
             .heading {
                 display: flex;
                 align-items: center;
-                background-image:inherit;
-
+                background-image: inherit;
                 height: 3em;
-                overflow:hidden;
-                border-bottom:2px solid rgba(250, 250, 250, 1);
-                margin-bottom:.7em !important;
+                overflow: hidden;
+                border-bottom: 1px solid #fafafa;
+                margin-bottom: .7em !important;
+            
 
                 h1 {
-                    font-size:3em;
+                    font-size: 3em;
                     line-height: 1em;
                     font-weight: 900;
-                    margin-left: 0.2em;
+                    margin-left: 0em;
                     margin-top: 0.36em;
-                    margin-bottom:0em;
+                    margin-bottom: 0em;
                     color: #424242;
-                    width: 10em;
-                    overflow:hidden;
-
+                    width: auto;
+                    overflow: hidden;
+                    text-align: left;
                 }
 
                 img {

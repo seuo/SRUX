@@ -312,6 +312,7 @@ $transition-delay: 0.05s;
         margin-left: 1em;
         justify-content: flex-start;
         font-size: 0.9em;
+        margin-left: 10em;
         margin-top: 50%;
     }
 
@@ -451,6 +452,25 @@ $transition-delay: 0.05s;
 
 
 @media only screen and (max-width: 30em) {
+
+    .imageMason {
+        width: 100%;
+        flex: 1 0 35%;
+        clip-path: initial;
+        height: 20vh;
+    }
+    .imageMason div {
+        height: 100%;
+        display: flex;
+        flex:1 0 33%;
+        // background-color: #fbaf40;
+        // margin-right: .5em;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        transition:ease all 1s;
+        cursor: pointer;
+    }
 
     .WorkHero .col .heroblock .workDone {
         background-image: initial;
@@ -940,25 +960,26 @@ $transition-delay: 0.05s;
         justify-content: center;
         align-items: flex-start;
         background-color: white;
+        display:none;
     }
 
     .row2 {
         background-color: white;
         width: 100vw;
         flex: 1 0 100%;
-        justify-content: center;
-        height: 40%;
+        justify-content: flex-start;
+        height: 36%;
         align-items: center;
-        margin-top: 2vw;
+        margin-top: 0vw;
         .brand {
             display: flex;
             justify-content: space-evenly;
             font-size: .5vw;
             height: 100%;
-            align-items: center;
+            align-items: flex-start;
             .logoContainer {
-                width: 20vw;
-                height: 20vw;
+                width: 16vw;
+                /* height: 20vw; */
                 display: flex;
                 justify-content: center;
             }
@@ -1296,6 +1317,26 @@ $transition-delay: 0.05s;
 
 @media screen and (orientation:portrait) and (min-device-width: 30em) and (max-device-width: 87.5em) {
 
+    .imageMason {
+        width: 100%;
+        flex: 1 0 35%;
+        clip-path: initial;
+        height: 15vh;
+    }
+
+    .imageMason div {
+        height: 100%;
+        display: flex;
+        flex:1 0 33%;
+        // background-color: #fbaf40;
+        // margin-right: .5em;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        transition:ease all 1s;
+        cursor: pointer;
+    }
+
     .webWorkMobile {
         transform:scale(2.5);
         margin-top: 0;
@@ -1313,7 +1354,7 @@ $transition-delay: 0.05s;
         flex: 1 0 98%;
         justify-content: center;
         width: 100vw;
-        height: 100%;
+        height: 58%;
         align-items: flex-end;
     }
 
@@ -1338,7 +1379,7 @@ font-size:2em;
 
     .WorkHero {
 
-            height: 60vh;
+        height: 55vh;
 
         .col {
             display: flex;
@@ -1381,7 +1422,7 @@ font-size:2em;
         z-index: 1;
         position: absolute;
         width: 100vw;
-        height: 60vh;
+        height: 50vh;
         pointer-events: none;
         background-color:#191919;
         background-image:initial;
@@ -1685,7 +1726,7 @@ font-size:2em;
         display: flex;
         flex: 1 0 99%;
         width: 100vw;
-        height: 50%;
+        height: 58%;
     }
 
     .webWork {
