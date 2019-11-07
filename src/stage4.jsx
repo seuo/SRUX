@@ -14,7 +14,7 @@ class Stage4 extends Component {
             <>
             <container class="imageMason">
                 <div className="s4Col1"></div>
-                <div className="s4Col2"></div>
+                {/* <div className="s4Col2"></div> */}
                 <div className="s4Col3"></div>
                 {/* <div className="iCol4"></div>
                 <div className="iCol5"></div>

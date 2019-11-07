@@ -13,7 +13,7 @@ class Stage3 extends Component {
         return (
             <>
             <container class="imageMason">
-                <div className="s3Col1"></div>
+                {/* <div className="s3Col1"></div> */}
                 <div className="s3Col2"></div>
                 <div className="s3Col3"></div>
                 {/* <div className="iCol4"></div>

@@ -206,6 +206,7 @@ $transition-delay: 0.05s;
 }
     .WorkHero .col .heroblock .description {
         font-size: 1em;
+        
         p {
             margin-left: 0em;
         }
@@ -219,14 +220,13 @@ $transition-delay: 0.05s;
 
     .expHero .headerTransExp {
         flex-direction: row;
-
-        .expIcons {
-            display: none;
-        }
+        justify-content: center;
     }
 
     .expHero .cTwoExp .eText .expIcons {
-        display: none;
+        transform: scale(0.5);
+        transform-origin: left;
+        
     }
 
     .col.c2.cTwoExp {
@@ -246,12 +246,16 @@ $transition-delay: 0.05s;
 
     }
 
+
+    .expHero .heroblock.stageExp .description p {
+        margin-left: 0em;
+    }
     .stageExp {
+
     .description p::before {
         font-size: 1.5em;
         width: 50vw;
         padding: 0;
-        margin-left: -5vw;
     }
 }
 
@@ -606,7 +610,7 @@ $transition-delay: 0.05s;
                 align-items: flex-start;
                 justify-content: flex-start;
                 .expIcons {
-                    display:none;
+
               
                     .svgIconWhite {
                     
@@ -1948,6 +1952,7 @@ font-size:2em;
         flex: 1 0 62% !important;
         -webkit-clip-path: polygon(0 0, 64% 0, 100% 100%, 0% 100%);
         clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+
     }
 
     .eRow1 {

@@ -323,7 +323,7 @@
 }
 
 .stageImages {
-    width: 50%;
+    width: 42vw;
     position: absolute;
     bottom: 0;
     height: 30vh;
@@ -334,10 +334,10 @@
 .imageMason {
     display: flex;
     justify-self: flex-end;
-    width: 91%;
+    width: 100%;
     flex-direction: row;
     flex: 1 0 35%;
-    clip-path: polygon(0 0, 82.5% 0, 78.7% 100%, 0 100%);
+    clip-path: polygon(0 0, 41.6vw 0, 86% 100%, 0 100%);
     align-self: flex-end;
     position: absolute;
     bottom: 0;
