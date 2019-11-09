@@ -4,6 +4,10 @@
     border: none;
 }
 
+li {
+    list-style-type: none;
+}
+
 html {
     scroll-behavior: smooth !important;
 }
@@ -48,6 +52,7 @@ a {
 
 
 @import "_portfolio.scss";
+@import "_nav.scss";
 @import "_content.scss";
 @import "_exp.scss";
 @import "_animation.scss";
@@ -285,13 +290,14 @@ g#contact-border {
 }
 
 .c1 {
+
     transform:translate(0,0);
     margin-left: 7vw;
     font-size: 0.85vw;
     flex-direction: column;
     align-items: center;
     transition:ease all 1s;
-    background-color:white;
+
 }
 
 .hero {
@@ -387,7 +393,8 @@ g#contact-border {
 
 
 g#portfolio image {
-    clip-path: polygon(64.4% 0%, 99.6% 74.4%, 47% 99.2%, 1% 58%, 16% 0);
+    clip-path: polygon(64.4% 0%, 99.6% 74.4%, 47% 99.2%, 1% 58%, 18% 0);
+    // clip-path: polygon(64.4% 0%, 99.6% 74.4%, 47% 99.2%, 1% 58%, 16% 0);
     //transform: translate(-50%,0%);
 }
 

@@ -108,8 +108,8 @@
         opacity:1;
     }
     to {
-        transform: translate(140vw, 0);
-        opacity:1;
+        transform: translate(20vw, 0);
+        opacity:0;
     }
 }
 
@@ -117,8 +117,8 @@
 
 @keyframes slideBackLeft {
     from {
-        transform: translate(110vw, 0);
-        opacity:1;
+        transform: translate(10vw, 0);
+        opacity:0;
 
     }
     to {
@@ -134,7 +134,7 @@
         opacity:1;
     }
     to {
-        transform: translate(-110vw, 0);
+        transform: translate(-46.5vw, 0);
         opacity:1;
     }
 }
@@ -246,7 +246,7 @@
     /* make things invisible upon start */
     animation: away ease-in 1;
     animation-fill-mode: forwards;
-    animation-duration: .7s;
+    animation-duration: 1.5s;
 }
 
 .closeNav {
@@ -254,7 +254,7 @@
     /* make things invisible upon start */
     animation: closeMainNav ease-in 1;
     animation-fill-mode: forwards;
-    animation-duration: .7s;
+    animation-duration: 1.5s;
 }
 
 .base {
@@ -267,7 +267,7 @@
 
     animation: base ease-in 1;
     animation-fill-mode: forwards;
-    animation-duration: .7s;
+    animation-duration: 1.5s;
 }
 
 .base-hero {
@@ -285,7 +285,7 @@
     /* make things invisible upon start */
     animation: come ease-in 1;
     animation-fill-mode: forwards;
-    animation-duration: .7s;
+    animation-duration: 1.5s;
 }
 
 .gone {
@@ -375,8 +375,10 @@
 .headerTransWork {
     margin-left: 0vw !important;
     transition:ease all 1s;
-    p {
-        transition:ease all 1s;
+    clip-path: polygon(0 0, 100% 0, 83% 100%, 0% 100%);
+    // background-color:#1a1a1a;
+    background-image: linear-gradient(to left top, #111111, #141414, #161616, #181818, #1a1a1a);    p {
+    transition:ease all 1s;
     }
     h2 {
 
@@ -389,7 +391,7 @@
         transition:ease all 1s;
         h1 {
 
-            transition:ease all 1s;
+            transition:ease all 2.2s;
         }
 
         svg {
@@ -444,19 +446,19 @@
 .slide-in {
     animation: slidein ease-in 1;
     animation-fill-mode: forwards;
-    animation-duration: .7s;
+    animation-duration: .9s;
 }
 
 .slide-out {
     animation: slideout ease-in 1;
     animation-fill-mode: forwards;
-    animation-duration: .7s;
+    animation-duration: .9s;
 }
 
 .slide-below {
     animation: slidebelow ease-in 1;
     animation-fill-mode: forwards;
-    animation-duration: .7s;
+    animation-duration: .9s;
 }
 
 
@@ -471,50 +473,50 @@
 .slide-back-left {
     animation: slideBackLeft ease-in 1;
     animation-fill-mode: forwards;
-    animation-duration: 1s;
+    animation-duration: .7s;
 }
 
 .slide-up {
     animation: slideup ease-in 1;
     animation-fill-mode: forwards;
-    animation-duration: .7s;
+    animation-duration: 1.5s;
 }
 
 .slide-back-down {
     animation: slidebackdown ease-in 1;
     animation-fill-mode: forwards;
-    animation-duration: .7s;
+    animation-duration: .9s;
 }
 
 .slide-back-up {
     animation: slidebackup ease-in 1;
     animation-fill-mode: forwards;
-    animation-duration: .7s;
+    animation-duration: .9s;
 }
 
 .slide-down {
     animation: slidedown ease-in 1;
     animation-fill-mode: forwards;
-    animation-duration: .7s;
+    animation-duration: .9s;
 }
 
 .slide-left {
     animation: slideleft ease-in 1;
     animation-fill-mode: forwards;
-    animation-duration: .7s;
+    animation-duration: .9s;
 }
 
 .slide-back-right {
     animation: slideBackRight ease-in 1;
     animation-fill-mode: forwards;
-    animation-duration: .7s;
+    animation-duration: .9s;
 }
 
 
 .slide-in-fade {
     animation: slideinFade ease-in 1;
     animation-fill-mode: forwards;
-    animation-duration: .7s;
+    animation-duration: 1s;
 }
 
 
@@ -544,7 +546,7 @@
     /* make things invisible upon start */
     animation: fadeIn ease-in 1;
     animation-fill-mode: forwards;
-    animation-duration: .7s;
+    animation-duration: 1s;
 }
 
 .fade-in-fast {
@@ -573,6 +575,36 @@
     animation-delay: 6s;
 }
 
+
+.gridlines {
+    display:flex;
+    pointer-events: none;
+    position: absolute;
+    width:100vw;
+    height:100vh;
+    transition: ease all 1s;
+    z-index:0;
+    .linecol1 {
+        display: flex;
+        flex: 0 0 9.4%;
+        height: 100vh;
+        align-self: flex-end;
+        border-right: solid thin #e0e0e0;
+    }
+    // .linecol2 {
+    //     display: flex;
+    //     flex: 0 0 28.8%;
+    //     height: 100vh;
+    //     align-self: flex-end;
+    //     border-right: solid thin #e0e0e0;
+    // }
+
+    // .linecol {
+    //     display:flex;
+    //     flex: 1 0 20%;
+    //     border-right: solid thin #e0e0e0;
+    // }
+}
 
 .whiteTrans {
     pointer-events: none;
@@ -627,7 +659,7 @@
     position:absolute;
     background-color:white;
     z-index:999999;
-    transition:ease all .7s;
+    transition:ease all 1.5s;
     right:0;
 }
 
@@ -671,13 +703,13 @@
     border-radius: 25%;
     background-color: #fff;
     animation-name: scroll;
-    animation-duration: .7s;
+    animation-duration: 1.5s;
     animation-timing-function: cubic-bezier(.15,.41,.69,.94);
     animation-iteration-count: infinite;
   }
 
 
-$ani-speed: .7s;
+$ani-speed: 1.5s;
 $ani-delay: 0s;
 
 
@@ -736,38 +768,38 @@ $ani-delay: 0s;
 
 
 .workHeading {
-    transition:.7s ease all;
+    transition:1.5s ease all;
 }
 
 .expHeading {
-    transition:.7s ease all;
+    transition:1.5s ease all;
 }
 
 .skillHeading {
-    transition:.7s ease all;
+    transition:1.5s ease all;
 }
 
 form {
-    transition:.7s ease all;
+    transition:1.5s ease all;
 }
 
 .webWork {
 
-    transition:.7s ease all;
+    transition:1.5s ease all;
 }
 
 blurb {
-    transition:.7s ease all;
+    transition:1.5s ease all;
 }
 
 .hSlide {
     transform:translate(0,1em);
-    transition:.7s ease all;
+    transition:1.5s ease all;
 }
 
 .tFade {
     opacity:0;
-    transition:.7s ease all;
+    transition:1.5s ease all;
 }
 
 
@@ -780,6 +812,6 @@ blurb {
     cursor: pointer;
 }
 .moveLeft {
-    transform: translate(-16.5vw,0) scale(.9);
+    transform: translate(-16.5vw,0) scale(.8);
 
 }

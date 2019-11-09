@@ -1,19 +1,15 @@
 import React, {Component} from 'react';
 import ReactScrollWheelHandler from "react-scroll-wheel-handler";
+
+import Iframe from 'react-iframe';
 import Tilt from 'react-tilt';
-import Stage1 from './stage1';
-import Stage2 from './stage2';
-import Stage3 from './stage3';
-import Stage4 from './stage4';
-import Stage5 from './stage5';
-import Stage6 from './stage6';
 import { Scrollbars } from 'react-custom-scrollbars';
+
 import { FaGithubSquare } from 'react-icons/fa';
 import { DiJqueryLogo } from "react-icons/di";
 import { AiOutlineSketch } from "react-icons/ai";
 
 
-import Iframe from 'react-iframe'
 
 
 
@@ -70,6 +66,7 @@ class Srux extends Component {
             contact: 'none',
 
             currentPage: 0,
+            currentPageIndex:0,
             currentWorkIndex: 0,
             currentExpIndex: 0,
 
@@ -91,12 +88,15 @@ class Srux extends Component {
                 'ExpStageFive',
                 // 'ExpStageSix'
             ],
+            sectionState:'',
 
+            pScroller:'',
             vScroller: '',
             vScrollerLock:false,
             hScroller: '',
 
             stageZero: 'stageZero',
+
             pState: 'fade-in',
             rState: '',
             headerS: 'none',
@@ -115,6 +115,8 @@ class Srux extends Component {
 
             imgAlt:'',
             stageImages:'',
+
+            viewWorkToggle:false,
         }
 
     }
@@ -190,7 +192,8 @@ class Srux extends Component {
 
         this.setState({
         stageState: 'stageF-out',
-        stageImages:'fade-out-fast'
+        vScroller:'slide-right',
+        stageImages:'fade-out'
         });
         setTimeout(() => {
             this.setState({
@@ -200,10 +203,11 @@ class Srux extends Component {
                 currentWorkIndex: currentWorkIndex + 1
                 
             })
-        }, 200)
+        }, 500)
         setTimeout(() => {
             this.setState({
-                stageImages:'fade-in',
+                vScroller:'slide-back-left',
+                stageImages:'fade-in'
             })
         }, 600)
 
@@ -216,7 +220,7 @@ class Srux extends Component {
             this.setState({
                 navChecked:0,
                 whiteTransForm:'whiteTransForm',
-
+                
             })
             setTimeout(() => {
                 this.setState({
@@ -228,24 +232,26 @@ class Srux extends Component {
                 this.setState({
                     whiteTransForm:'',
                 })
-            }, 1200)
+            }, 1400)
 
         }
 
         this.setState({
+        vScroller:'slide-right',
         stageState: 'stageF-out',
         navChecked:false,
-        stageImages:'fade-out-fast',});
+        stageImages:'fade-out',});
 
         setTimeout(() => {
             this.setState({
                 stageState: 'stageF-in',
                 currentWorkIndex: currentWorkIndex - 1
             })
-        }, 200)
+        }, 500)
         setTimeout(() => {
             this.setState({
                 stageImages:'fade-in',
+                vScroller:'slide-back-left',
             })
         }, 600)
 
@@ -526,6 +532,18 @@ class Srux extends Component {
         this.setState({navChecked: !this.state.navChecked}); //look at the !NOT sign
     }
 
+
+
+
+
+    handleViewWork = (e) => {
+
+        e.preventDefault();
+        let workToggle = this.state.viewWorkToggle;
+        this.setState({viewWorkToggle:!workToggle
+         }); 
+}
+
     
 
 
@@ -542,6 +560,7 @@ render (){
         headerTransitionWorkHome,
         homeHeader,
         colTwoBg,
+        pScroller,
         vScroller,
         hScroller,
         stageState,
@@ -549,6 +568,7 @@ render (){
         stageNum,
         pState,
         rState,
+        currentPageIndex,
         currentWorkIndex,
         blackTransForm,
         currentExpIndex,
@@ -557,7 +577,8 @@ render (){
         vScrollerLock,
         mobTrans,
         navChecked,
-        stageImages
+        stageImages,
+        sectionState
     } = this.state;
 
         let expLineStyle2 = {
@@ -607,8 +628,14 @@ render (){
                     </div>
                         </div>
                             <div className="col c2">
+                            {/* <div className="navCols">
+                                        <div className="navC1"></div>
+                                        <div className="navC2"></div>
+                                        <div className="navC3"></div>
+                                    </div> */}
                                 <div className={"ui " + nav}>
                                     <div className={"contactinfo "+contact}><p>samrob.nz@gmail.com</p></div>
+
                                     <svg id="Layer_1" data-name="Layer 1" viewBox="0 0 731.4 803">
                                     <g>
                                         <g id ="contactContainer"  onClick={this.navContact}>                                     
@@ -683,50 +710,45 @@ render (){
                 </div>
             </div>
         </div>
+       
         </ReactScrollWheelHandler>
         
                         <>
-
+                        <div className={"gridlines"}>
+   
+                        </div>
                         <div className={"whiteTrans "+whiteTransForm}></div>
                         <div className={"blackTrans "+blackTransForm}></div>
                         <div className={"navMenu "+navMenu}>
-                        
                             <div class="mobNavContainer">
-
                                 <input id="toggle" type="checkbox" checked={navChecked}/>
-
-                                
                                 <label class="toggle-container" onClick={this.handleNavChange} for="toggle">
                                 
                                 <span class="button button-toggle"></span>
                                 </label>
-
-                                
                                 <nav class="nav">
                                     <a class="nav-item" href="#home" onClick={this.navHome}>HOME NAV</a>
                                     <a class="nav-item" href="#portfolio" onClick={this.navMyWork}>PORTFOLIO</a>
                                     <a class="nav-item" href="#experience" onClick={this.navExpDirect}>EXPERIENCE</a>
                                     <a class="nav-item" href="#contact" onClick={this.navContactDirect}>CONTACT</a>
                                 </nav>
-
-                                
-                            
                             </div>
-                            
+
+
                         </div>
 
                         </>
 
 
                     <container className="pWrap">
-                    <div className={"stageImages "+stageImages}>
+                    {/* <div className={"stageImages "+stageImages}>
                     {(this.state.currentWorkIndex == 0 ? <Stage1/> : null )}
                     {(this.state.currentWorkIndex == 1 ? <Stage2/> : null )}
                     {(this.state.currentWorkIndex == 2 ? <Stage3/> : null )}
                     {(this.state.currentWorkIndex == 3 ? <Stage4/> : null )}
                     {(this.state.currentWorkIndex == 4 ? <Stage5/> : null )}
                     {(this.state.currentWorkIndex == 5 ? <Stage6/> : null )}
-                    </div>
+                    </div> */}
 
                 <div className={"WorkHeaderSection pHeaderSection "+stageZero+" "+stageNum[currentWorkIndex]}>
                     <div className="WorkHeader pHeader">
@@ -758,6 +780,12 @@ render (){
                             <div className={"col c2 "+colTwoBg}>
                                 <div className="ui gone"></div>
                             </div>
+                                <div className="workLine">
+                                        <div className={stageNum[currentWorkIndex]+" stageDisplay "}>
+                                            <h3></h3>
+                                        </div>
+
+                                </div>
                         </div>
                     </div>
                 </div>
@@ -769,312 +797,380 @@ render (){
                     className={"vScroller "+vScroller}
                     pauseListeners={vScrollerLock}
                     customStyle={{
-                        // width: "100%",
-                        // height: "100vh",
-                        transform:"rotate(0deg) scale(1) translate(0,-"+currentWorkIndex+"00vh)",
-                        transformOrigin:"top left",
+                        width: "100%",
+                        height: "100vh",
+
+
                     }}
                 >
-                <section className={"section "+pState}>
-                    <row className={"row1"}>
-                        <div className="item1">
-                            <Tilt
-                                className="webWorkTilt"
-                                options={{
-                                                perspective:2000,
-                                                max:25,
-                                                reverse:true,
-                                                scale: 1.25,
-                                                axis:'x',
-                                                speed:4000,
-                                                easing:"cubic-bezier(.03,.98,.52,.99)",
-                                            }}>
-                                <div
-                                    className={"webWork "}
-                                    onMouseEnter={this.handleVerticalLock}
-                                    onMouseLeave={this.handleVerticalActive}>
-                                    <Scrollbars
-                                        className="webWorkInner"
-                                        autoHideTimeout={1000}
-                                        autoHideDuration={200}>
-                                        <a href="//mitchellsjoinery.co.nz/" target="_blank" rel="noopener noreferrer">
-                                            <div className="webImage mj"></div>
-                                        </a>
-                                    </Scrollbars>
-                                </div>
 
-                            </Tilt>
-                            <Tilt
-                                className="webWorkMobileTilt"
-                                options={{
-                                                perspective:2000,
-                                                max:25,
-
-                                                scale: 1.25,
-                                                axis:'x',
-                                                speed:4000,
-                                                easing:"cubic-bezier(.03,.98,.52,.99)",
-                                            }}>
-
-                                <div
-                                    className={"webWorkMobile Tilt-inner "+mobTrans}
-                                    onMouseEnter={this.handleMobVerticalLock}
-                                    onMouseLeave={this.handleMobVerticalActive}>
-                                    <Scrollbars
-                                        className="webWorkInner"
-                                        autoHideTimeout={1000}
-                                        autoHideDuration={200}>
-                                        <a href="//mitchellsjoinery.co.nz/" target="_blank" rel="noopener noreferrer">
-                                            <div className="webImage mj-m"></div>
-                                        </a>
-                                    </Scrollbars>
-                                </div>
-                            </Tilt>
+<div className={"sectionState "+stageImages}>
+                        {(this.state.currentWorkIndex == 0 ?                         
+    <section className={"section"}>
+            <row className={"row1"}>
+                <div className={"item1 "+stageImages}>
+                    <Tilt
+                        className="webWorkTilt"
+                        options={{
+                                        perspective:2000,
+                                        max:25,
+                                        reverse:true,
+                                        scale: 1.1,
+                                        axis:'x',
+                                        speed:4000,
+                                        easing:"cubic-bezier(.03,.98,.52,.99)",
+                                    }}>
+                        <div
+                            className={"webWork "}
+                            onMouseEnter={this.handleVerticalLock}
+                            onMouseLeave={this.handleVerticalActive}>
+                            <Scrollbars
+                                className="webWorkInner"
+                                autoHideTimeout={1000}
+                                autoHideDuration={200}>
+                                <a href="//mitchellsjoinery.co.nz/" target="_blank" rel="noopener noreferrer">
+                                    <div className="webImage mj"></div>
+                                </a>
+                            </Scrollbars>
                         </div>
-                    </row>
-                    <row className={"row2"}>
+
+                    </Tilt>
+                    <Tilt
+                        className="webWorkMobileTilt"
+                        options={{
+                                        perspective:2000,
+                                        max:25,
+                                        scale: 1.1,
+                                        axis:'x',
+                                        speed:4000,
+                                        easing:"cubic-bezier(.03,.98,.52,.99)",
+                                    }}>
+
+                        <div
+                            className={"webWorkMobile Tilt-inner "+mobTrans}
+                            onMouseEnter={this.handleMobVerticalLock}
+                            onMouseLeave={this.handleMobVerticalActive}>
+                            <Scrollbars
+                                className="webWorkInner"
+                                autoHideTimeout={1000}
+                                autoHideDuration={200}>
+                                <a href="//mitchellsjoinery.co.nz/" target="_blank" rel="noopener noreferrer">
+                                    <div className="webImage mj-m"></div>
+                                </a>
+                            </Scrollbars>
+                        </div>
+                    </Tilt>
+                    
+                </div>
+
+            </row>
+            <row className={"row2"}>
+                
+                 
+                        {/* <h1 className={"workHeading " + hAnim}>Web Work</h1> */}
+                        {/* <div class={"scroll-downs "}>
+                            <div class="mousey">
+                                <div class="scrollerAnim"></div>
+                            </div>
+                            <div class="arrow arrow-first"></div>
+                        </div> */}
+                 
+
+                    
+                        <div className= {"brand "+stageImages}>
+                            {/* <div className="logoContainer">
+                                <img alt={this.imgAlt} src={mjlogolines}/>
+                            </div>
+                            <div className="logoContainer">
+                                <img alt={this.imgAlt} src={mjlogobw}/>  
+                            </div>
+                            <div className="logoContainer">
+                                <img alt={this.imgAlt} src={mjlogo}/>
+                            </div> */}
+                        </div>
+                     
+                    
+
+               
+            </row>
+          
+        </section> 
+        : null )}
+                        {(this.state.currentWorkIndex == 1 ?         
+    <section className={"section"}>
+            <row className="row1">
+                    <div className={"item1 "+stageImages}>
+                        <Tilt
+                            className="webWorkTilt"
+                            options={{
+                                            perspective:2000,
+                                            max:25,
+                                            reverse:true,
+                                            scale: 1.1,
+                                            axis:'x',
+                                            speed:4000,
+                                            easing:"cubic-bezier(.03,.98,.52,.99)",
+                                        }}>
+                            <div
+                                className={"webWork "}
+                                onMouseEnter={this.handleVerticalLock}
+                                onMouseLeave={this.handleVerticalActive}>
+                                <Scrollbars
+                                    className="webWorkInner"
+                                    autoHideTimeout={1000}
+                                    autoHideDuration={200}>
+                                    <a href="//10squares.co.nz" target="_blank" rel="noopener noreferrer">
+                                        <div className="webImage tens"></div>
+                                    </a>
+                                </Scrollbars>
+                            </div>
+
+                        </Tilt>
+                        <Tilt
+                            className="webWorkMobileTilt"
+                            options={{
+                                            perspective:2000,
+                                            max:25,
+
+                                            scale: 1.1,
+                                            axis:'x',
+                                            speed:4000,
+                                            easing:"cubic-bezier(.03,.98,.52,.99)",
+                                        }}>
+
+                            <div
+                                className={"webWorkMobile Tilt-inner "+mobTrans}
+                                onMouseEnter={this.handleMobVerticalLock}
+                                onMouseLeave={this.handleMobVerticalActive}>
+                                <Scrollbars
+                                    className="webWorkInner"
+                                    autoHideTimeout={1000}
+                                    autoHideDuration={200}>
+                                    <a href="//mitchellsjoinery.co.nz/" target="_blank" rel="noopener noreferrer">
+                                        <div className="webImage tens-m"></div>
+                                    </a>
+                                </Scrollbars>
+                            </div>
+                        </Tilt>
                         
-                         
-                                {/* <h1 className={"workHeading " + hAnim}>Web Work</h1> */}
-                                {/* <div class={"scroll-downs "}>
-                                    <div class="mousey">
-                                        <div class="scrollerAnim"></div>
-                                    </div>
-                                    <div class="arrow arrow-first"></div>
-                                </div> */}
-                         
+                    </div>
+                </row>
+              
+                <row className={"row2"}>
+                <div className={"brand "+stageImages}>
+                <div className="logoContainer">
+                                <img alt={this.imgAlt} src={tenslogolines}/></div>
+                                <div className="logoContainer">
+                                <img alt={this.imgAlt} src={tenslogobw}/></div>
+                                <div className="logoContainer">
+                                <img alt={this.imgAlt} src={tenslogo}/></div>
 
-                            
-                                <div className= {"brand "+stageImages}>
-                                    <div className="logoContainer">
-                                        <img alt={this.imgAlt} src={mjlogolines}/>
-                                    </div>
-                                    <div className="logoContainer">
-                                        <img alt={this.imgAlt} src={mjlogobw}/>  
-                                    </div>
-                                    <div className="logoContainer">
-                                        <img alt={this.imgAlt} src={mjlogo}/>
-                                    </div>
                                 </div>
+                </row>
+            </section> 
+            : null )}
+                        {(this.state.currentWorkIndex == 2 ? 
+    <section className={"section"}>
+                          <row className="row1">
+                              <div className={"item1 "+stageImages}>
+                                  <Tilt
+                                      className="webWorkTilt"
+                                      options={{
+                                                      perspective:2000,
+                                                      max:25,
+                                                      reverse:true,
+                                                      scale: 1.1,
+                                                      axis:'x',
+                                                      speed:4000,
+                                                      easing:"cubic-bezier(.03,.98,.52,.99)",
+                                                  }}>
+                                      <div
+                                          className={"webWork tablet"}
+                                          onMouseEnter={this.handleVerticalLock}
+                                          onMouseLeave={this.handleVerticalActive}>
+                                          <Scrollbars
+                                              className="webWorkInner"
+                                              autoHideTimeout={1000}
+                                              autoHideDuration={200}>
+                                                  <a href="https://in-shop7.firebaseapp.com/" target="_blank" rel="noopener noreferrer">
+                                                      <div className="webImage inapp-m"><Iframe url="https://in-shop7.firebaseapp.com/"
+                                                        
+                                                                  id="inapp-mobile"
+                                                                  className="inapp-mobile"
+                                                                  display="initial"
+                                                                  position="relative"/></div>
+                                                  </a>
+                                          </Scrollbars>
+                                      </div>
+              
+                                  </Tilt>
+                                  <Tilt
+                                      className="webWorkMobileTilt"
+                                      options={{
+                                                      perspective:2000,
+                                                      max:25,
+              
+                                                      scale: 1.1,
+                                                      axis:'x',
+                                                      speed:4000,
+                                                      easing:"cubic-bezier(.03,.98,.52,.99)",
+                                                  }}>
+              
+                                      <div
+                                          className={"webWorkMobile Tilt-inner "+mobTrans}
+                                          onMouseEnter={this.handleMobVerticalLock}
+                                          onMouseLeave={this.handleMobVerticalActive}>
+                                          <Scrollbars
+                                              className="webWorkInner"
+                                              autoHideTimeout={1000}
+                                              autoHideDuration={200}>
+                                                  <a href="https://inapp-84064.firebaseapp.com/" target="_blank" rel="noopener noreferrer">
+                                                      <div className="webImage inapp-m"><Iframe url="https://inapp-84064.firebaseapp.com/"
+                                                        
+                                                                  id="inapp-mobile"
+                                                                  className="inapp-mobile"
+                                                                  display="initial"
+                                                                  position="relative"/></div>
+                                                  </a>
+                                          </Scrollbars>
+                                      </div>
+                                  </Tilt>
+                              </div>
+                          </row>
+                          <row className="row2">
+                          </row>
+                      </section>
+                        : null )}
+                        {(this.state.currentWorkIndex == 3 ?  
+    <section className={"section"}>
+            <row className="row1">
+                    <div className={"item1 "+stageImages}>
+                        <Tilt
+                            className="webWorkTilt"
+                            options={{
+                                            perspective:2000,
+                                            max:25,
+                                            reverse:true,
+                                            scale: 1.1,
+                                            axis:'x',
+                                            speed:4000,
+                                            easing:"cubic-bezier(.03,.98,.52,.99)",
+                                        }}>
+                            <div
+                                className={"webWork "}
+                                onMouseEnter={this.handleVerticalLock}
+                                onMouseLeave={this.handleVerticalActive}>
+                                <Scrollbars
+                                    className="webWorkInner"
+                                    autoHideTimeout={1000}
+                                    autoHideDuration={200}>
+                                    <a href="//ambv.boatgrooming.co.nz/" target="_blank" rel="noopener noreferrer">
+                                        <div className="webImage ambv"></div>
+                                    </a>
+                                </Scrollbars>
+                            </div>
+
+                        </Tilt>
+                        <Tilt
+                            className="webWorkMobileTilt"
+                            options={{
+                                            perspective:2000,
+                                            max:25,
+
+                                            scale: 1.1,
+                                            axis:'x',
+                                            speed:4000,
+                                            easing:"cubic-bezier(.03,.98,.52,.99)",
+                                        }}>
+
+                            <div
+                                className={"webWorkMobile Tilt-inner "+mobTrans}
+                                onMouseEnter={this.handleMobVerticalLock}
+                                onMouseLeave={this.handleMobVerticalActive}>
+                                <Scrollbars
+                                    className="webWorkInner"
+                                    autoHideTimeout={1000}
+                                    autoHideDuration={200}>
+                                    <a href="//ambv.boatgrooming.co.nz/" target="_blank" rel="noopener noreferrer">
+                                        <div className="webImage ambv-m"></div>
+                                    </a>
+                                </Scrollbars>
+                            </div>
+                        </Tilt>
+                    </div>
+                </row>
+                <row className="row2">
+                <div className= {"brand "+stageImages}>
+                                <div className="logoContainer">
+                                    <img alt={this.imgAlt} src={ambvC}/>
+                                </div>
+                                <div className="logoContainer">
+                                    <img alt={this.imgAlt} src={ambvlogo}/>
+                                </div>
+                                <div className="logoContainer">
+                                    <img alt={this.imgAlt} src={ambvlogo2}/>
+                                </div>
+
+                             </div>
+                </row>
+            </section>
+             : null )}
+                        {(this.state.currentWorkIndex == 4 ?     
+    <section className={"section"}>
+
+<row className="row1">
+   
+        <div className={"printWork"}>
+            <div className="printImage mglogo"></div>
+        </div>
+    
+</row>
+<row className="row2">
+<div className= {"brand "+stageImages}>
+                <div className="logoContainer">
+                    <img alt={this.imgAlt} src={mglogo2}/>
+                </div>
+                <div className="logoContainer">
+                    <img alt={this.imgAlt} src={mglogo3}/>
+                </div>
+                <div className="logoContainer">
+                    <img alt={this.imgAlt} src={mglogo4}/>
+                </div>
+
+             </div>
+</row>
+</section>
+            : null )}
+                        {(this.state.currentWorkIndex == 5 ? 
+    <section className={"section"}>
+                         <row className="row1">
                              
-                            
-
-                       
-                    </row>
-                    <div className={"slashBg "+rState} style={{ transform:"translate(0,"+currentWorkIndex+"00vh)"}}></div>            
-                </section>
-                <section className={"section"}>
-                <row className="row1">
-                        <div className="item1">
-                            <Tilt
-                                className="webWorkTilt"
-                                options={{
-                                                perspective:2000,
-                                                max:25,
-                                                reverse:true,
-                                                scale: 1.25,
-                                                axis:'x',
-                                                speed:4000,
-                                                easing:"cubic-bezier(.03,.98,.52,.99)",
-                                            }}>
-                                <div
-                                    className={"webWork "}
-                                    onMouseEnter={this.handleVerticalLock}
-                                    onMouseLeave={this.handleVerticalActive}>
-                                    <Scrollbars
-                                        className="webWorkInner"
-                                        autoHideTimeout={1000}
-                                        autoHideDuration={200}>
-                                        <a href="//10squares.co.nz" target="_blank" rel="noopener noreferrer">
-                                            <div className="webImage tens"></div>
-                                        </a>
-                                    </Scrollbars>
-                                </div>
-
-                            </Tilt>
-                            <Tilt
-                                className="webWorkMobileTilt"
-                                options={{
-                                                perspective:2000,
-                                                max:25,
-
-                                                scale: 1.25,
-                                                axis:'x',
-                                                speed:4000,
-                                                easing:"cubic-bezier(.03,.98,.52,.99)",
-                                            }}>
-
-                                <div
-                                    className={"webWorkMobile Tilt-inner "+mobTrans}
-                                    onMouseEnter={this.handleMobVerticalLock}
-                                    onMouseLeave={this.handleMobVerticalActive}>
-                                    <Scrollbars
-                                        className="webWorkInner"
-                                        autoHideTimeout={1000}
-                                        autoHideDuration={200}>
-                                        <a href="//mitchellsjoinery.co.nz/" target="_blank" rel="noopener noreferrer">
-                                            <div className="webImage tens-m"></div>
-                                        </a>
-                                    </Scrollbars>
-                                </div>
-                            </Tilt>
-                        </div>
-                    </row>
-                  
-                    <row className={"row2"}>
-                    <div className={"brand "+stageImages}>
-                    <div className="logoContainer">
-                                    <img alt={this.imgAlt} src={tenslogolines}/></div>
-                                    <div className="logoContainer">
-                                    <img alt={this.imgAlt} src={tenslogobw}/></div>
-                                    <div className="logoContainer">
-                                    <img alt={this.imgAlt} src={tenslogo}/></div>
- 
-                                    </div>
-                    </row>
-                </section>
-                <section className={"section"}>
-                    <row className="row1">
-                        <div className="item1">
-                            <Tilt
-                                className="webWorkTilt"
-                                options={{
-                                                perspective:2000,
-                                                max:25,
-                                                reverse:true,
-                                                scale: 1.25,
-                                                axis:'x',
-                                                speed:4000,
-                                                easing:"cubic-bezier(.03,.98,.52,.99)",
-                                            }}>
-                                <div
-                                    className={"webWork tablet"}
-                                    onMouseEnter={this.handleVerticalLock}
-                                    onMouseLeave={this.handleVerticalActive}>
-                                    <Scrollbars
-                                        className="webWorkInner"
-                                        autoHideTimeout={1000}
-                                        autoHideDuration={200}>
-                                            <a href="https://in-shop7.firebaseapp.com/" target="_blank" rel="noopener noreferrer">
-                                                <div className="webImage inapp-m"><Iframe url="https://in-shop7.firebaseapp.com/"
-                                                  
-                                                            id="inapp-mobile"
-                                                            className="inapp-mobile"
-                                                            display="initial"
-                                                            position="relative"/></div>
-                                            </a>
-                                    </Scrollbars>
-                                </div>
-
-                            </Tilt>
-                            <Tilt
-                                className="webWorkMobileTilt"
-                                options={{
-                                                perspective:2000,
-                                                max:25,
-
-                                                scale: 1.25,
-                                                axis:'x',
-                                                speed:4000,
-                                                easing:"cubic-bezier(.03,.98,.52,.99)",
-                                            }}>
-
-                                <div
-                                    className={"webWorkMobile Tilt-inner "+mobTrans}
-                                    onMouseEnter={this.handleMobVerticalLock}
-                                    onMouseLeave={this.handleMobVerticalActive}>
-                                    <Scrollbars
-                                        className="webWorkInner"
-                                        autoHideTimeout={1000}
-                                        autoHideDuration={200}>
-                                            <a href="https://inapp-84064.firebaseapp.com/" target="_blank" rel="noopener noreferrer">
-                                                <div className="webImage inapp-m"><Iframe url="https://inapp-84064.firebaseapp.com/"
-                                                  
-                                                            id="inapp-mobile"
-                                                            className="inapp-mobile"
-                                                            display="initial"
-                                                            position="relative"/></div>
-                                            </a>
-                                    </Scrollbars>
-                                </div>
-                            </Tilt>
-                        </div>
-                    </row>
-                    <row className="row2">
-                    </row>
-                </section>
-                <section className={"section"}>
-                <row className="row1">
-                        <div className="item1">
-                            <Tilt
-                                className="webWorkTilt"
-                                options={{
-                                                perspective:2000,
-                                                max:25,
-                                                reverse:true,
-                                                scale: 1.25,
-                                                axis:'x',
-                                                speed:4000,
-                                                easing:"cubic-bezier(.03,.98,.52,.99)",
-                                            }}>
-                                <div
-                                    className={"webWork "}
-                                    onMouseEnter={this.handleVerticalLock}
-                                    onMouseLeave={this.handleVerticalActive}>
-                                    <Scrollbars
-                                        className="webWorkInner"
-                                        autoHideTimeout={1000}
-                                        autoHideDuration={200}>
-                                        <a href="//ambv.boatgrooming.co.nz/" target="_blank" rel="noopener noreferrer">
-                                            <div className="webImage ambv"></div>
-                                        </a>
-                                    </Scrollbars>
-                                </div>
-
-                            </Tilt>
-                            <Tilt
-                                className="webWorkMobileTilt"
-                                options={{
-                                                perspective:2000,
-                                                max:25,
-
-                                                scale: 1.25,
-                                                axis:'x',
-                                                speed:4000,
-                                                easing:"cubic-bezier(.03,.98,.52,.99)",
-                                            }}>
-
-                                <div
-                                    className={"webWorkMobile Tilt-inner "+mobTrans}
-                                    onMouseEnter={this.handleMobVerticalLock}
-                                    onMouseLeave={this.handleMobVerticalActive}>
-                                    <Scrollbars
-                                        className="webWorkInner"
-                                        autoHideTimeout={1000}
-                                        autoHideDuration={200}>
-                                        <a href="//ambv.boatgrooming.co.nz/" target="_blank" rel="noopener noreferrer">
-                                            <div className="webImage ambv-m"></div>
-                                        </a>
-                                    </Scrollbars>
-                                </div>
-                            </Tilt>
-                        </div>
-                    </row>
-                    <row className="row2">
-                    <div className= {"brand "+stageImages}>
-                                    <div className="logoContainer">
-                                        <img alt={this.imgAlt} src={ambvC}/>
-                                    </div>
-                                    <div className="logoContainer">
-                                        <img alt={this.imgAlt} src={ambvlogo}/>
-                                    </div>
-                                    <div className="logoContainer">
-                                        <img alt={this.imgAlt} src={ambvlogo2}/>
-                                    </div>
- 
+                                 <div className={"printWork"}>
+                                     <div className="printImage cc"></div>
                                  </div>
-                    </row>
-                </section>
+                             
+                         </row>
+                         <row className="row2">
+                         <div className= {"brand "+stageImages}>
+             
+                         <div className="logoContainer">
+                                         <img alt={this.imgAlt} src={cclogo1}/>
+                                     </div>
+                                     <div className="logoContainer">
+                                         <img alt={this.imgAlt} src={cclogo2}/>
+                                     </div>
+                                     <div className="logoContainer">
+                                         <img alt={this.imgAlt} src={cclogo3}/>
+                                     </div>
+                                 </div>
+                         </row>
+                     </section>
+                        : null )}
+                    </div>
+
+            
+              
+               
                 {/* <section className={"section"}>
                     <row className="row1">
                         <div className={"eText "+eTextAnim}>
@@ -1091,53 +1187,7 @@ render (){
                         </itemheading>
                     </row>
                 </section> */}
-                <section className={"section"}>
-
-                    <row className="row1">
-                       
-                            <div className={"printWork"}>
-                                <div className="printImage mglogo"></div>
-                            </div>
-                        
-                    </row>
-                    <row className="row2">
-                    <div className= {"brand "+stageImages}>
-                                    <div className="logoContainer">
-                                        <img alt={this.imgAlt} src={mglogo2}/>
-                                    </div>
-                                    <div className="logoContainer">
-                                        <img alt={this.imgAlt} src={mglogo3}/>
-                                    </div>
-                                    <div className="logoContainer">
-                                        <img alt={this.imgAlt} src={mglogo4}/>
-                                    </div>
- 
-                                 </div>
-                    </row>
-                </section>
-                <section className={"section"}>
-                    <row className="row1">
-                        
-                            <div className={"printWork"}>
-                                <div className="printImage cc"></div>
-                            </div>
-                        
-                    </row>
-                    <row className="row2">
-                    <div className= {"brand "+stageImages}>
-
-                    <div className="logoContainer">
-                                    <img alt={this.imgAlt} src={cclogo1}/>
-                                </div>
-                                <div className="logoContainer">
-                                    <img alt={this.imgAlt} src={cclogo2}/>
-                                </div>
-                                <div className="logoContainer">
-                                    <img alt={this.imgAlt} src={cclogo3}/>
-                                </div>
-                            </div>
-                    </row>
-                </section>
+             
                 {/* <section className={"section"}>
 
                     <row className="row1">
@@ -1156,23 +1206,14 @@ render (){
                                     </div>
                     </row>
                 </section> */}
-                <section className={"section"}>
-
-                    <row className="row1">
-
-                    </row>
-                    <row className="row2">
-                        <itemheading>
-                            <block></block>
-                            <text>
-                               
-                            </text>
-                       
-                        </itemheading>
-                    </row>
-                </section>
-
+          
                 </ReactScrollWheelHandler>
+                <div className="workLine">
+                            <div onClick={this.handleViewWork} className={stageNum[currentWorkIndex]+" viewWork"}>
+                                    <div className="viewWorkGradient"><h3>VIEW CASE</h3></div>
+                                 <h3>VIEW CASE</h3>
+                             </div>
+                     </div>
                 <ReactScrollWheelHandler
                     timeout={1000}
                     upHandler={this.prevExp}

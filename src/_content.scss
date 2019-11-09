@@ -33,7 +33,7 @@
 }
 
 .stageOne {
-    background-image: url("assets/mj-bg.jpg");
+    // background-image: url("assets/mj-bg.jpg");
         .heading  {
             border-bottom:1px solid #7bcfe679 !important;
             transition:ease all 1.5s;
@@ -72,7 +72,7 @@
 
 
 .stageTwo {
-    background-image: url("assets/tensq-bg.jpg");
+    // background-image: url("assets/tensq-bg.jpg");
     .heading  {
         border-bottom:1px solid rgba(223, 113, 62, 0.493) !important;
         transition:ease all 1.5s;
@@ -140,14 +140,14 @@
         }
     }
     .workDone::after {
-        content: url(https://img.icons8.com/color/48/000000/adobe-illustrator.png) url(https://img.icons8.com/windows/48/000000/sketch.png) url(https://img.icons8.com/color/48/000000/html-5.png)  url(https://img.icons8.com/color/48/000000/css3.png) " " url(https://img.icons8.com/color/48/000000/npm.png) " " url(https://img.icons8.com/nolan/48/000000/react-native.png)   ;
+        content: url(https://img.icons8.com/color/48/000000/adobe-illustrator.png) url(https://img.icons8.com/windows/48/000000/sketch.png) url(https://img.icons8.com/color/48/000000/html-5.png)  url(https://img.icons8.com/color/48/000000/css3.png) " " url(assets/node-js-48.png) " " url(https://img.icons8.com/nolan/48/000000/react-native.png)   ;
   
     }
     
 }
 
 .stageFour {
-    background-image: url("assets/ambv-site.jpg");
+    // background-image: url("assets/ambv-site.jpg");
     .heading  {
         border-bottom:1px solid #b2b4b977 !important;
         transition:ease all 1.5s;
@@ -185,7 +185,7 @@
 
 
 .stageFive {
-    background-image: url("assets/mangawhai-bg.jpg");
+    // background-image: url("assets/mangawhai-bg.jpg");
     .heading  {
         border-bottom:1px solid #e1c10f7e !important;
         transition:ease all 1.5s;
@@ -220,7 +220,7 @@
 }
 
 .stageSix {
-    background-image: url("assets/cc-bg.jpg");
+    // background-image: url("assets/cc-bg.jpg");
     .heading  {
         border-bottom:1px solid #a3212750 !important;
         transition:ease all 1.5s;
@@ -322,13 +322,172 @@
     }
 }
 
+
+.viewWork {
+    position:absolute;
+    top:90vh;
+    width:12em;
+    margin-left:0em;
+    display:flex;
+    flex-direction: row;
+    transform:rotate(-10deg) skewX(-10deg);
+    background-image: linear-gradient(to right, #111111, #131313, #151515, #161616, #181818, #191919, #1a1a1a, #1b1b1b, #1b1b1b, #1c1c1c, #1c1c1c, #1d1d1d);
+    border-radius: 0 .3em .3em  0;
+    transition:ease all 2s;
+    z-index:9999999;
+    box-shadow:.1em .2em .2em .3em #11111118;
+    .viewWorkGradient {
+        transition:ease all 2s;
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        opacity:0;
+        border-radius: 0 .3em .3em  0;
+        margin-bottom:1px;
+    }
+    h3 {
+        padding:1em;
+        font-size:1.5em;
+        font-weight:500;
+        color:#ffffff;
+        border-bottom:solid thin #c4c4c4;
+    }
+}
+.viewWorkGradient:hover {
+    position: absolute;
+    width: 100%;
+    opacity:1;
+    background-image: linear-gradient(to right, #111111, #291f32, #4c284e, #782b61, #a9276a, #c41e66, #dd155e, #f31352, #f81144, #fc1734, #fe2121, #fe2e00);
+}
+.viewWork:hover {
+    cursor: pointer;
+}
+
+.stageDisplay {
+    position:absolute;
+    top:1vh;
+    width:5em;
+    margin-left:-.5em;
+    display:flex;
+    flex-direction: row;
+    transform:rotate(-10deg);
+
+    h3 {
+        padding-left:.5em;
+        padding-right:.5em;
+        font-size:1.4em;
+        padding-bottom:.3em;
+        font-weight:500;
+        color:#fff;
+        // border-bottom:solid thin #c4c4c4;
+    }
+}
+
+.stageOne .stageDisplay {
+    h3::before {
+        color:#7bcee6;
+        content:"1";
+    }
+    h3::after {
+        content:" / 6";
+    }
+}
+
+.stageTwo .stageDisplay {
+    h3::before {
+        color: rgb(223, 113, 62);
+        content:"2";
+    }
+    h3::after {
+        content:" / 6";
+    }
+}
+
+.stageThree .stageDisplay {
+    h3::before {
+        color: #a68b3c;
+        content:"3";
+    }
+    h3::after {
+        content:" / 6";
+    }
+}
+
+.stageFour .stageDisplay {
+    h3::before {
+        color: #9f9fa1;
+        content:"4";
+    }
+    h3::after {
+        content:" / 6";
+    }
+}
+
+.stageFive .stageDisplay {
+    h3::before {
+        color: #e1c20f;
+        content:"5";
+    }
+    h3::after {
+        content:" / 6";
+    }
+}
+
+.stageSix .stageDisplay {
+    h3::before {
+        color: #a32128;
+        content:"6";
+    }
+    h3::after {
+        content:" / 6";
+    }
+}
+
+
+.stageOne .viewWorkGradient:hover {
+    transition:ease all 3s;
+    background-image: linear-gradient(to right, #111111, #25272f, #34404f, #3d5c6f, #427a8e, #488b9e, #4e9caf, #55aebe, #5eb6c8, #68bed2, #71c6dc, #7bcee6);
+}
+
+.stageTwo .viewWorkGradient:hover {
+    transition:ease all 3s;
+    background-image: linear-gradient(to right, #111111, #221c24, #3a2532, #542e3a, #6e383a, #7f403a, #8f4a38, #9c5534, #ac5c37, #bd6339, #ce6a3c, #df713e);
+
+}
+
+.stageThree .viewWorkGradient:hover {
+    transition:ease all 3s;
+    background-image: linear-gradient(to right, #111111, #231b23, #3b232d, #532c2d, #653a27, #6f4626, #755425, #786325, #836d2b, #8f7730, #9a8136, #a68b3c);
+}
+
+.stageFour .viewWorkGradient {
+    transition:ease all 3s;
+    background-image: linear-gradient(to right, #111111, #1c1d21, #242a32, #2a3743, #2d4653, #35525e, #3d5e6a, #466a75, #57767f, #68828a, #788e94, #899a9f);
+}
+
+.stageFive .viewWorkGradient {
+    transition:ease all 3s;
+    background-image: linear-gradient(to right, #111111, #231b23, #3d222c, #552b2a, #653a21, #734a1e, #7d5d1a, #817117, #988517, #b09916, #c8ad14, #e1c20f);
+}
+
+.stageSix .viewWorkGradient {
+    transition:ease all 3s;
+    background-image: linear-gradient(to right, #111111, #19161c, #241824, #311a29, #3f1b2b, #4c1c2d, #591d2d, #661e2b, #761e2c, #851f2c, #94202b, #a32128);
+
+}
+
+
+
 .stageImages {
-    width: 42vw;
+    display:none;
+    width:46.2vw;
     position: absolute;
     bottom: 0;
-    height: 30vh;
+    height: 20vh;
     z-index: 9;
     transition: ease all .7s;
+    clip-path: polygon(0 0, 100% 0, 96% 100%, 0% 100%);
+
 }
 
 .imageMason {
@@ -336,14 +495,14 @@
     justify-self: flex-end;
     width: 100%;
     flex-direction: row;
-    flex: 1 0 35%;
-    clip-path: polygon(0 0, 41.6vw 0, 86% 100%, 0 100%);
+    flex: 1 0 33%;
     align-self: flex-end;
     position: absolute;
     bottom: 0;
-    height: 30vh;
+    height: 20vh;
     z-index: 9;
     padding-right:10%;
+
 }
 
 
@@ -364,7 +523,7 @@
     // box-shadow:0em .2em 2em .1em rgba(0, 0, 0, 0.253);
     // transform:scale(1.05)
     // padding:0em 3em;
-    flex:1 0 50%;
+    flex:1 0 30%;
 
 }
 
