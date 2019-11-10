@@ -50,9 +50,11 @@
         .row1 {
             width: 100%;
             display: flex;
-            flex: 1 0 70%;
+            flex: 1 0 60%;
             justify-content: center;
+            box-shadow: inset 0em -4em 4em -4em #000000ba;
             align-items: center;
+
             .item1 {
                 transition: ease all 1.5s;
                 transform: scale(0.8);
@@ -64,7 +66,10 @@
                 flex-direction: column;
                 height: 80%;
                 justify-content: flex-start;
-
+                .webWork:hover {
+                    box-shadow:1em .3em 2em .4em rgba(0, 0, 0, 0.15);
+                    transform:translateX(8.5vw);
+                }
             }
         }
         .row2 {
@@ -80,25 +85,48 @@
             }
         }
         .row {
-            margin-top:5em;
+            margin-top:10em;
             width:100%;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
             .infoContainer {
-
+                display: flex;
+                flex-direction: column;
                 width: 39.5%;
+                
+
                 h1 {
-                    font-size:5em;
+                    font-size: 6em;
+                    width: 3.2em;
+                    line-height: 1;
+                    margin-bottom: .6em;
+                    padding-left: 5.35em;
                 }
                 p {
-                    padding-left: 25.7%;
-                    padding-right: 25.7%;
-                    padding-top: 2em;
+                    padding-left: 9.55em;
+                    padding-right: 0em;
+                    padding-bottom: 2em;
                     font-size:1.3em;
+                    line-height: 1.4;
                     font-weight: 300;
                 }
+                .infoBlock {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    .infoCol {
+                        flex-direction: column;
+                        .logoContainer {
+                        img {
+                            width: 16em;
+                            padding: 2em;
+                        }
+                    }
+                }
+                }
+
             }
         }
     }

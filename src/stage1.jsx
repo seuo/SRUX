@@ -86,21 +86,9 @@ class Stage1 extends Component {
             </div>
                     <row className={"row1"}>
                         <div className="item1">
-                            <Tilt
-                                className="webWorkTilt"
-                                options={{
-                                                perspective:2000,
-                                                max:25,
-                                                reverse:true,
-                                                scale: 1.25,
-                                                axis:'x',
-                                                speed:4000,
-                                                easing:"cubic-bezier(.03,.98,.52,.99)",
-                                            }}>
+                            <div className="webWorkTilt">
                                 <div
-                                    className={"webWork "}
-                                    onMouseEnter={this.handleVerticalLock}
-                                    onMouseLeave={this.handleVerticalActive}>
+                                    className={"webWork "}>
                                     <Scrollbars
                                         className="webWorkInner"
                                         autoHideTimeout={1000}
@@ -111,23 +99,12 @@ class Stage1 extends Component {
                                     </Scrollbars>
                                 </div>
 
-                            </Tilt>
-                            <Tilt
-                                className="webWorkMobileTilt"
-                                options={{
-                                                perspective:2000,
-                                                max:25,
-
-                                                scale: 1.25,
-                                                axis:'x',
-                                                speed:4000,
-                                                easing:"cubic-bezier(.03,.98,.52,.99)",
-                                            }}>
+                            </div>
+                            <div
+                                className="webWorkMobileTilt">
 
                                 <div
-                                    className={"webWorkMobile Tilt-inner "+mobTrans}
-                                    onMouseEnter={this.handleMobVerticalLock}
-                                    onMouseLeave={this.handleMobVerticalActive}>
+                                    className={"webWorkMobile Tilt-inner "+mobTrans}>
                                     <Scrollbars
                                         className="webWorkInner"
                                         autoHideTimeout={1000}
@@ -137,7 +114,7 @@ class Stage1 extends Component {
                                         </a>
                                     </Scrollbars>
                                 </div>
-                            </Tilt>
+                            </div>
                         </div>
                         {/* <Parallax className="stageBanner" y={[-20, 20]}>
                             <Image src={mjlogobg} />
@@ -167,20 +144,32 @@ class Stage1 extends Component {
    
                     <row className="row">
                         <div className="infoContainer">
-                            <h1>Logo Design</h1>
+                        <h1>Logo Design</h1>
+                            <div className="infoBlock">
+                    
+                            <div className="infoCol">
+                            <div className="logoContainer">
+                                    <img alt={this.imgAlt} src={mjlogolines}/>
+                                </div>
+           
+                            </div>
+                            <div className="infoCol">
                             <p>
-                            For the logo design, I wanted to develop a modern clean brand that represented the industry well & was recognizable.
-                            The client wanted the logo to contain a shade of blue & the initials M J. </p>
-                            <p> I went about sketching up some concepts & tieing the intials in until I had narrowed down to a specific design & then created & made alterations in Illustrator. 
-                            I researched colour palletes from around the marine industry, got feed back from the client & exprimented with different colours until 
-                            we were both happy. 
-                            </p>
+                                    For the logo design, I wanted to develop a modern clean brand that represented the industry well & was recognizable.
+                                    The client wanted the logo to contain a shade of blue & the initials M J. </p>
+                                    <p> I went about sketching up some concepts & tieing the intials in until I had narrowed down to a specific design & then created & made alterations in Illustrator. 
+                                    I researched colour palletes from around the marine industry, got feed back from the client & exprimented with different colours until 
+                                    we were both happy. 
+                                    </p>
+                            </div>
+                        </div>
+       
                         </div>
 
                     </row>
                     <row className={"row2"}>
                             
-                            <div className= {"brand "+stageImages}>
+                            {/* <div className= {"brand "+stageImages}>
                             <div className="logoContainer">
                                     <img alt={this.imgAlt} src={mjlogobw}/>  
                                 </div>
@@ -191,10 +180,12 @@ class Stage1 extends Component {
                                 <div className="logoContainer">
                                     <img alt={this.imgAlt} src={mjlogo}/>
                                 </div>
-                            </div>
+                            </div> */}
                          
                         
                 </row>   
+                    <row className="row">
+                    </row>
                     <row className="row">
                     </row>  
 
