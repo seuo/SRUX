@@ -34,12 +34,84 @@
     z-index: 999;
     background-color: #191919;
 }
+.workSection {
+    overflow-x:hidden;
+}
+
+.viewWorkSection {
+    width: 100vw;
+    height: 100vh;
+    .section {
+        height: 100vh;
+        width: 100vw;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        .row1 {
+            width: 100%;
+            display: flex;
+            flex: 1 0 70%;
+            justify-content: center;
+            align-items: center;
+            .item1 {
+                transition: ease all 1.5s;
+                transform: scale(0.8);
+                cursor: pointer;
+                margin-right: .6em;
+                margin-top: 2em;
+                width: auto;
+                display: flex;
+                flex-direction: column;
+                height: 80%;
+                justify-content: flex-start;
+
+            }
+        }
+        .row2 {
+            display:flex;
+            width: 100%;
+            flex: 1 0 30%;
+            justify-content: center;
+            align-items: center;
+            .brand {
+                width: 41%;
+                justify-content: space-between;
+                margin-left:2%;
+            }
+        }
+        .row {
+            margin-top:5em;
+            width:100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            .infoContainer {
+
+                width: 39.5%;
+                h1 {
+                    font-size:5em;
+                }
+                p {
+                    padding-left: 25.7%;
+                    padding-right: 25.7%;
+                    padding-top: 2em;
+                    font-size:1.3em;
+                    font-weight: 300;
+                }
+            }
+        }
+    }
+}
 
 .vScroller {
     transition: 1.5s all cubic-bezier(0.23, 1, 0.32, 1);
     display: flex;
     align-items: flex-end;
     flex-direction: column;
+    .sectionState {
+        // transition: all .7s cubic-bezier(0.75, 0.25, 0.25, 0.75);
+    }
     
 }
 
@@ -189,7 +261,7 @@
 }
 
 .row1 {
-
+    position: relative;
     width: 100%;
     display: flex;
     flex: 1 0 90%;
@@ -211,8 +283,6 @@
         align-items: center;
         width: 100%;
         margin-left: 0%;
-
-        background-color: white;
         .logoLines {
             padding:3em;
             background-color: #191919;

@@ -106,6 +106,7 @@
     from {
         transform: translate(0, 0);
         opacity:1;
+        
     }
     to {
         transform: translate(20vw, 0);
@@ -141,7 +142,7 @@
 
 @keyframes slideBackRight {
     from {
-        transform: translate(-110vw, 0);
+        transform: translate(-46.5vw, 0);
         opacity:1;
     }
     to {
@@ -466,14 +467,17 @@
 .slide-right {
     animation: slideright ease-in 1;
     animation-fill-mode: forwards;
-    animation-duration: .7s;
+    animation-duration: .8s;
+    animation-timing-function:cubic-bezier(0.455, 0.030, 0.515, 0.955);
+
 }
 
 
 .slide-back-left {
     animation: slideBackLeft ease-in 1;
     animation-fill-mode: forwards;
-    animation-duration: .7s;
+    animation-duration: .8s;
+    animation-timing-function:cubic-bezier(0.455, 0.030, 0.515, 0.955);
 }
 
 .slide-up {
@@ -547,6 +551,7 @@
     animation: fadeIn ease-in 1;
     animation-fill-mode: forwards;
     animation-duration: 1s;
+    pointer-events: initial;
 }
 
 .fade-in-fast {
@@ -557,6 +562,17 @@
     animation-duration: .3s;
 }
 
+.WorkHero {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    background-color:transparent;
+}
+
+.clip-close {
+    clip-path: polygon(0 0, 0 100%, 0 100%, 0% 100%);
+    border-radius: 0 50% 0 50%;
+    transition: 1s;
+    transition-timing-function: cubic-bezier(0.455, 0.030, 0.515, 0.955);
+}
 
 
 .fade-in.one {
@@ -575,35 +591,24 @@
     animation-delay: 6s;
 }
 
-
-.gridlines {
-    display:flex;
-    pointer-events: none;
-    position: absolute;
-    width:100vw;
-    height:100vh;
-    transition: ease all 1s;
-    z-index:0;
-    .linecol1 {
+.background-holder {
+    width: 100%;
+    .gridlines {
+        background-color:rgb(250, 250, 250);
+        overflow-x: hidden;
         display: flex;
-        flex: 0 0 9.4%;
+        pointer-events: none;
+        position: absolute;
+        width: 100vw;
         height: 100vh;
-        align-self: flex-end;
-        border-right: solid thin #e0e0e0;
+        transition: ease all 1s;
+        z-index: -1;
+        .gridcol {
+            display: flex;
+            flex: 0 0 10.07%;
+            border-right: solid thin #eeeeee;
+        }
     }
-    // .linecol2 {
-    //     display: flex;
-    //     flex: 0 0 28.8%;
-    //     height: 100vh;
-    //     align-self: flex-end;
-    //     border-right: solid thin #e0e0e0;
-    // }
-
-    // .linecol {
-    //     display:flex;
-    //     flex: 1 0 20%;
-    //     border-right: solid thin #e0e0e0;
-    // }
 }
 
 .whiteTrans {
