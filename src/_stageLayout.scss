@@ -32,24 +32,67 @@
 
 }
 
-.imageMason {
+.tophero {
+    position:relative;
+}
+
+.imageBanner {
+    position: relative;
     display: flex;
     justify-self: flex-end;
     width: 100%;
     flex-direction: row;
-    flex: 1 0 33%;
+    // transform: skew(-10deg, 0deg);
+    flex: 1 0 99%;
     align-self: flex-end;
-    position: absolute;
-    bottom: 0;
-    height: 61vh;
+    overflow:hidden;
+    height: 54vh;
     z-index: 0;
-
+    box-shadow: inset 0em -4em 4em -4em #000000ba;
 }
-// .s1Col4 {
-//     flex:0 0 50%;  
+
+.imageBanner div {
+    
+    height: 70%;
+    display: flex;
+    flex:1 0 33%;
+    // background-color: #fbaf40;
+    // margin-right: .5em;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    // transition:ease all 1s;
+    cursor: pointer;
+    margin-top: -2em;
+}
+
+// .imageBanner div:hover {
+//     z-index:1;
+//     // box-shadow:0em .2em 2em .1em rgba(0, 0, 0, 0.253);
+//     // transform:scale(1.05)
+//     // padding:0em 3em;
+//     flex:1 0 30%;
+
 // }
 
-.imageMason div {
+.banner {
+    margin-top: -10% !important;
+    overflow: hidden;
+}
+
+
+.imageBannerRow {
+    width: 100%;
+    flex-direction: row;
+    align-self: flex-end;
+    overflow: hidden;
+    height: 26em;
+    z-index: 0;
+    box-shadow: inset 0em -4em 4em -4em #000000ba;
+}
+
+
+.imageBannerRow div {
     height: 100%;
     display: flex;
     flex:1 0 50%;
@@ -58,17 +101,11 @@
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    transition:ease all 1s;
+    // transition:ease all 1s;
     cursor: pointer;
+    margin-top: -2em;
 }
-.imageMason div:hover {
-    z-index:1;
-    // box-shadow:0em .2em 2em .1em rgba(0, 0, 0, 0.253);
-    // transform:scale(1.05)
-    // padding:0em 3em;
-    flex:1 0 30%;
 
-}
 
 .viewWorkSection {
     width: 100vw;
@@ -84,7 +121,7 @@
             display: flex;
             flex: 1 0 60%;
             justify-content: center;
-            box-shadow: inset 0em -4em 4em -4em #000000ba;
+
             align-items: center;
 
             .item1 {
@@ -141,6 +178,10 @@
                     line-height: 1;
                     margin-bottom: .6em;
                     margin-left: -.05em;
+                }
+                .rightSide {
+                    align-self: flex-end;
+                    margin-right: 2.09em;
                 }
                 p {
                     padding-right: 0em;

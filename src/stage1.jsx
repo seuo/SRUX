@@ -2,13 +2,17 @@ import React, {Component} from 'react';
 
 import Tilt from 'react-tilt';
 import { Scrollbars } from 'react-custom-scrollbars';
-import { ParallaxProvider,ParallaxBanner,Parallax,Image } from 'react-scroll-parallax';
+import {Parallax, ParallaxLayer} from 'react-spring/renderprops-addons'
+
 
 import mjprogress from './assets/mj-progress.png';
 import mjlogobg from './assets/mj-bg.jpg';
+import mjbanner1 from './assets/mj-banner1.jpg';
 import mjlogo from './assets/mitchells-joinery-logo.png';
-import mjlogolines from './assets/mjColourSwatches.png';
+import mjlogolines from './assets/mjColours.png';
 import mjlogobw from './assets/mitchells-joinery-logo-bw.png';
+
+import mjwebmocks from './assets/mj-website-mocks.png';
 class Stage1 extends Component {
 
     constructor(props) {
@@ -63,83 +67,38 @@ class Stage1 extends Component {
 
         const gridStyles = this.state.gridstyles;
         console.log(gridStyles);
+
         
         return (
-<ParallaxProvider>
-            
-<section className={"section"}>
-             <div className="background-holder">
+<>
+        <div className="background-holder">
                 <div className={"gridlines"}>
 
                 {this.state.gridStyles.map(item => (
-                    <div key={item} className={"gcol gridcol"+item} style={{left: 10 *item + 'vw'}} ></div>
+                    <div key={item} className={"gcol gridcol"+item} style={{left: 10 *item + '%'}} ></div>
                 ))}
 
                 </div>
             </div>
+        <Parallax pages={3} scrolling={true} vertical ref={ref => (this.parallax = ref)} className={"section"}>
+
+
+
+                   
+                    <container class="imageBanner">
+                <ParallaxLayer className="topHero" style={{position:'relative'}} offset={0} speed={0.1}>
+                    <div className={"s1Col2 "+expandImg2}></div>
+                    {/* <div className={"s1Col3 "+expandImg3}></div> */}
+                    <div className={"s1Col1 "+expandImg1}></div>
+                </ParallaxLayer>
+                    </container>
+
                     <row className={"row1"}>
-                        <div className="item1">
-                            <div className="webWorkTilt">
-                                <div
-                                    className={"webWork "}>
-                                    <Scrollbars
-                                        className="webWorkInner"
-                                        autoHideTimeout={1000}
-                                        autoHideDuration={200}>
-                                        <a href="//mitchellsjoinery.co.nz/" target="_blank" rel="noopener noreferrer">
-                                            <div className="webImage mj"></div>
-                                        </a>
-                                    </Scrollbars>
-                                </div>
+                    
 
-                            </div>
-                            <div
-                                className="webWorkMobileTilt">
+                      
 
-                                <div
-                                    className={"webWorkMobile Tilt-inner "+mobTrans}>
-                                    <Scrollbars
-                                        className="webWorkInner"
-                                        autoHideTimeout={1000}
-                                        autoHideDuration={200}>
-                                        <a href="//mitchellsjoinery.co.nz/" target="_blank" rel="noopener noreferrer">
-                                            <div className="webImage mj-m"></div>
-                                        </a>
-                                    </Scrollbars>
-                                </div>
-                            </div>
-                        </div>
-                        {/* <Parallax className="stageBanner" y={[-20, 20]}>
-                            <Image src={mjlogobg} />
-                        </Parallax> */}
-                        <ParallaxBanner
-                                    className="stageOne stageBanner"
-                                    y={[-20, 20]}
-                                        layers={[
-                                            {
-                                                image: mjlogobg,
-                                                amount: 0.1,
-                                            },
-
-                                        ]}
-                                        style={{
-                                            position: 'absolute',
-                                            height: '60vh',
-                                            marginTop: '0',
-                                        }}
-                                    >
-
-                        </ParallaxBanner>
-                        <container class="imageMason">
-                            <div className={"s1Col2 "+expandImg2}></div>
-                            <div className={"s1Col1 "+expandImg1}></div>
-                            {/* <div className={"s1Col4 "+expandImg3}></div> */}
-                            
-                
-                {/* <div className="iCol4"></div>
-                <div className="iCol5"></div>
-                <div className="iCol6"></div> */}
-            </container>
+                        {/* <div className={"s1Col4 "+expandImg3}></div> */}
                         {/* <div className="stageOne stageBanner">
 
                         </div> */}
@@ -153,8 +112,10 @@ class Stage1 extends Component {
                             <p>
                                     For the logo design, I wanted to develop a modern clean brand that represented the industry well & was recognizable.
                                     The client wanted the logo to contain colours that closely matched their existing brand, they also wanted the company initials M J to be included in the logo. </p>
-                                    <div className="logoContainer">
+                                <div className="logoContainer">
+                               
                                     <img alt={this.imgAlt} src={mjlogolines}/>
+                               
                                 </div>
                             </div>
                             <div className="infoCol">
@@ -182,12 +143,111 @@ class Stage1 extends Component {
                         
                 </row>   
                     <row className="row">
-                        <div className="banner"></div>
+                    <container class="imageBannerRow" style={{position:'absolute',marginTop:'25em'}}>
+                <ParallaxLayer className="banner" style={{position:'relative'}} offset={0} speed={0.05}>
+                    <div className={"bannerImg"} style={{backgroundImage:'url('+mjbanner1+')'}}></div>
+                    
+                </ParallaxLayer>
+                    </container>
                     </row>
-                    <row className="row">
-                    </row>  
+                    <row className={"row1"}>
+                    
 
-                </section>
+                   
+                    <div className="item1">
+                        <div className="webWorkTilt">
+                        <ParallaxLayer className="topHero" offset={0} speed={0.05}>
+                            <div
+                                className={"webWork "}>
+                                <Scrollbars
+                                    className="webWorkInner"
+                                    autoHideTimeout={1000}
+                                    autoHideDuration={200}>
+                                    <a href="//mitchellsjoinery.co.nz/" target="_blank" rel="noopener noreferrer">
+                                        <div className="webImage mj"></div>
+                                    </a>
+                                </Scrollbars>
+                            </div>
+                            </ParallaxLayer>
+                        </div>
+                        
+                        <div
+                            className="webWorkMobileTilt">
+                    <ParallaxLayer className="topHero" offset={0} speed={0.03}>
+                            <div
+                                className={"webWorkMobile Tilt-inner "+mobTrans}>
+                                <Scrollbars
+                                    className="webWorkInner"
+                                    autoHideTimeout={1000}
+                                    autoHideDuration={200}>
+                                    <a href="//mitchellsjoinery.co.nz/" target="_blank" rel="noopener noreferrer">
+                                        <div className="webImage mj-m"></div>
+                                    </a>
+                                </Scrollbars>
+                            </div></ParallaxLayer>
+                        </div>
+                    </div>
+
+                  
+
+                    {/* <div className={"s1Col4 "+expandImg3}></div> */}
+                    {/* <div className="stageOne stageBanner">
+
+                    </div> */}
+                </row>
+
+                <row className="row">
+                    <div className="infoContainer">
+                        <h1 className="rightSide">Web Design</h1>
+                        <div className="infoBlock">
+
+                            <div className="infoCol">
+                                <div className="infoImg1">    
+                                    <img alt={this.imgAlt} style={{width:'25em'}} src={mjwebmocks}/>
+                                </div>
+                                <p> I wanted to incorperate the shapes and angles of the boating industry into the design & layout.
+                                    The site design consists of of subtle angles & trim in the company colours that break up the sections
+                                    & create a clean, clear & easily read layout. 
+                                </p>
+                                <div className= {"brand "+stageImages}>
+                                    <img alt={this.imgAlt} src={mjlogobw}/>  
+                                    <img alt={this.imgAlt} src={mjlogo}/>
+                                </div>
+                            </div>
+                            <div className="infoCol">
+                            <p> The initial mocks were created in Adobe XD, Photography & images edited using Adobe Photoshop.
+                                I did the markup & styling before incorperating them into the Wordpress CMS. 
+                                This made it easy for the client to edit & add additional content.
+                                </p>
+                                <div className="logoContainer">
+                            
+                                    <img alt={this.imgAlt} src={mjlogolines}/>
+                            
+                                </div>
+                            </div>
+                    </div>
+
+                    </div>
+
+                </row>
+                <row className={"row2"}>
+                        
+
+                     
+                    
+            </row>   
+                <row className="row">
+                <container class="imageBannerRow" style={{position:'relative'}}>
+            <ParallaxLayer className="banner" style={{position:'relative'}} offset={0} speed={0.05}>
+                <div className={"bannerImg"} style={{backgroundImage:'url('+mjbanner1+')'}}></div>
+                
+            </ParallaxLayer>
+                </container>
+                </row>
+                <row className="row">
+                </row>  
+
+                    </Parallax>
         {/* <div className="stageImages">
             <container class="imageMason">
                 <div className={"s1Col1 "+expandImg1}></div>
@@ -195,7 +255,7 @@ class Stage1 extends Component {
                 <div className={"s1Col3 "+expandImg3}></div>
             </container>
         </div> */}
- </ParallaxProvider>
+</>
         )
 
         

@@ -2484,7 +2484,12 @@ text.skills1 p {
           clip-path: polygon(0 0, 100% 0, 96% 100%, 0% 100%);
 }
 
-.imageMason {
+.tophero {
+  position: relative;
+}
+
+.imageBanner {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2495,17 +2500,53 @@ text.skills1 p {
       -ms-flex-direction: row;
           flex-direction: row;
   -webkit-box-flex: 1;
-      -ms-flex: 1 0 33%;
-          flex: 1 0 33%;
+      -ms-flex: 1 0 99%;
+          flex: 1 0 99%;
   -ms-flex-item-align: end;
       align-self: flex-end;
-  position: absolute;
-  bottom: 0;
-  height: 61vh;
+  overflow: hidden;
+  height: 54vh;
   z-index: 0;
+  -webkit-box-shadow: inset 0em -4em 4em -4em #000000ba;
+          box-shadow: inset 0em -4em 4em -4em #000000ba;
 }
 
-.imageMason div {
+.imageBanner div {
+  height: 70%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 33%;
+          flex: 1 0 33%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+  margin-top: -2em;
+}
+
+.banner {
+  margin-top: -10% !important;
+  overflow: hidden;
+}
+
+.imageBannerRow {
+  width: 100%;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  overflow: hidden;
+  height: 26em;
+  z-index: 0;
+  -webkit-box-shadow: inset 0em -4em 4em -4em #000000ba;
+          box-shadow: inset 0em -4em 4em -4em #000000ba;
+}
+
+.imageBannerRow div {
   height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2516,16 +2557,8 @@ text.skills1 p {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  -webkit-transition: ease all 1s;
-  transition: ease all 1s;
   cursor: pointer;
-}
-
-.imageMason div:hover {
-  z-index: 1;
-  -webkit-box-flex: 1;
-      -ms-flex: 1 0 30%;
-          flex: 1 0 30%;
+  margin-top: -2em;
 }
 
 .viewWorkSection {
@@ -2559,8 +2592,6 @@ text.skills1 p {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-shadow: inset 0em -4em 4em -4em #000000ba;
-          box-shadow: inset 0em -4em 4em -4em #000000ba;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -2660,6 +2691,12 @@ text.skills1 p {
   line-height: 1;
   margin-bottom: .6em;
   margin-left: -.05em;
+}
+
+.viewWorkSection .section .row .infoContainer .rightSide {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  margin-right: 2.09em;
 }
 
 .viewWorkSection .section .row .infoContainer p {
