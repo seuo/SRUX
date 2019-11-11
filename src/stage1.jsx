@@ -5,7 +5,7 @@ import { Scrollbars } from 'react-custom-scrollbars';
 import {Parallax, ParallaxLayer} from 'react-spring/renderprops-addons'
 
 
-import mjprogress from './assets/mj-progress.png';
+import mjprogress from './assets/mj-bcards.png';
 import mjlogobg from './assets/mj-bg.jpg';
 import mjbanner1 from './assets/mj-banner1.jpg';
 import mjlogo from './assets/mitchells-joinery-logo.png';
@@ -13,6 +13,7 @@ import mjlogolines from './assets/mjColours.png';
 import mjlogobw from './assets/mitchells-joinery-logo-bw.png';
 
 import mjwebmocks from './assets/mj-website-mocks.png';
+import mjpage from './assets/mj-page.png';
 class Stage1 extends Component {
 
     constructor(props) {
@@ -80,9 +81,9 @@ class Stage1 extends Component {
 
                 </div>
             </div>
-        <Parallax pages={3} scrolling={true} vertical ref={ref => (this.parallax = ref)} className={"section"}>
+        <Parallax className='section' pages={3.5} scrolling={true} vertical ref={ref => (this.parallax = ref)} >
 
-
+                    <container className="caseSection">
 
                    
                     <container class="imageBanner">
@@ -106,7 +107,7 @@ class Stage1 extends Component {
    
                     <row className="row">
                         <div className="infoContainer">
-                        <h1>Logo Design</h1>
+                        <h1 style={{color:'#2bb0ce'}}>Logo Design</h1>
                             <div className="infoBlock">
                             <div className="infoCol">
                             <p>
@@ -122,13 +123,10 @@ class Stage1 extends Component {
                                 <div className="infoImg1">    
                                     <img alt={this.imgAlt} src={mjprogress}/>
                                 </div>
-                                <p> I went about sketching up some concepts & tieing the intials in until I had narrowed it down to a specific design.<br/>I then made further alterations in Illustrator, got feed back from the client & exprimented with different colours until 
-                                    we were both happy. 
-                                </p>
-                                <div className= {"brand "+stageImages}>
-                                    <img alt={this.imgAlt} src={mjlogobw}/>  
-                                    <img alt={this.imgAlt} src={mjlogo}/>
-                            </div>
+                                <p> The process included sketching up rough concepts & coming up with a variety of alternative ideas then making alterations & continued refinement
+                                    until I had narrowed it down to a specific design.</p><p>I then made further alterations in Illustrator, got feed back from the client & exprimented with different colours until 
+                                    we were both happy with the final design.
+                                </p>                              
                             </div>
 
                         </div>
@@ -209,26 +207,20 @@ class Stage1 extends Component {
                                     The site design consists of of subtle angles & trim in the company colours that break up the sections
                                     & create a clean, clear & easily read layout. 
                                 </p>
-                                <div className= {"brand "+stageImages}>
-                                    <img alt={this.imgAlt} src={mjlogobw}/>  
-                                    <img alt={this.imgAlt} src={mjlogo}/>
-                                </div>
+
                             </div>
                             <div className="infoCol">
                             <p> The initial mocks were created in Adobe XD, Photography & images edited using Adobe Photoshop.
                                 I did the markup & styling before incorperating them into the Wordpress CMS. 
                                 This made it easy for the client to edit & add additional content.
                                 </p>
-                                <div className="logoContainer">
-                            
-                                    <img alt={this.imgAlt} src={mjlogolines}/>
-                            
-                                </div>
+                                
+
                             </div>
                     </div>
 
                     </div>
-
+                    <img style={{marginTop:'5em',width:'70em',marginLeft:'-5em'}} alt={this.imgAlt} src={mjpage}/>
                 </row>
                 <row className={"row2"}>
                         
@@ -236,17 +228,8 @@ class Stage1 extends Component {
                      
                     
             </row>   
-                <row className="row">
-                <container class="imageBannerRow" style={{position:'relative'}}>
-            <ParallaxLayer className="banner" style={{position:'relative'}} offset={0} speed={0.05}>
-                <div className={"bannerImg"} style={{backgroundImage:'url('+mjbanner1+')'}}></div>
-                
-            </ParallaxLayer>
-                </container>
-                </row>
-                <row className="row">
-                </row>  
 
+                    </container>
                     </Parallax>
         {/* <div className="stageImages">
             <container class="imageMason">

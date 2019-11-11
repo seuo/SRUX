@@ -2469,6 +2469,10 @@ text.skills1 p {
   border-right: solid thin #eeeeee;
 }
 
+.caseSection {
+  font-size: 0.625vw;
+}
+
 .stageImages {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2505,14 +2509,14 @@ text.skills1 p {
   -ms-flex-item-align: end;
       align-self: flex-end;
   overflow: hidden;
-  height: 54vh;
+  height: 50vh;
   z-index: 0;
   -webkit-box-shadow: inset 0em -4em 4em -4em #000000ba;
           box-shadow: inset 0em -4em 4em -4em #000000ba;
 }
 
 .imageBanner div {
-  height: 70%;
+  height: 60%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2683,14 +2687,15 @@ text.skills1 p {
       -ms-flex-direction: column;
           flex-direction: column;
   width: 64em;
+  margin-left: 1em;
 }
 
 .viewWorkSection .section .row .infoContainer h1 {
   font-size: 6em;
   width: 3.2em;
   line-height: 1;
-  margin-bottom: .6em;
-  margin-left: -.05em;
+  margin-bottom: .3em;
+  margin-left: -.6em;
 }
 
 .viewWorkSection .section .row .infoContainer .rightSide {
@@ -2701,10 +2706,11 @@ text.skills1 p {
 
 .viewWorkSection .section .row .infoContainer p {
   padding-right: 0em;
-  width: 22em;
-  font-size: 1.3em;
+  width: 18em;
+  font-size: 1.5em;
   line-height: 1.4;
   font-weight: 300;
+  padding-top: 1em;
 }
 
 .viewWorkSection .section .row .infoContainer .infoBlock {
@@ -2743,7 +2749,8 @@ text.skills1 p {
 }
 
 .viewWorkSection .section .row .infoContainer .infoBlock .infoCol .brand img {
-  margin-top: 1em;
+  margin-top: 2em;
+  width: 16em;
 }
 
 .viewWorkSection .section .row .infoContainer .infoBlock .infoCol .infoImg1 {
@@ -2751,15 +2758,17 @@ text.skills1 p {
 }
 
 .viewWorkSection .section .row .infoContainer .infoBlock .infoCol .infoImg1 img {
-  width: 34.5em;
+  width: 47.5em;
   margin-top: -15em;
   padding-left: 0em;
   padding-bottom: 5em;
+  margin-left: -7em;
 }
 
 .viewWorkSection .section .row .infoContainer .infoBlock .infoCol .logoContainer img {
-  width: 27em;
+  width: 25em;
   padding-top: 5em;
+  margin-left: 0em;
 }
 
 @-webkit-keyframes fadeIn {

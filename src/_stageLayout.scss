@@ -19,6 +19,9 @@
 }
 
 
+.caseSection {
+    font-size: 0.625vw;
+}
 
 .stageImages {
     display:flex;
@@ -46,14 +49,14 @@
     flex: 1 0 99%;
     align-self: flex-end;
     overflow:hidden;
-    height: 54vh;
+    height: 50vh;
     z-index: 0;
     box-shadow: inset 0em -4em 4em -4em #000000ba;
 }
 
 .imageBanner div {
     
-    height: 70%;
+    height: 60%;
     display: flex;
     flex:1 0 33%;
     // background-color: #fbaf40;
@@ -170,14 +173,15 @@
                 display: flex;
                 flex-direction: column;
                 width: 64em;
-                
+                margin-left:1em;
 
                 h1 {
                     font-size: 6em;
                     width: 3.2em;
                     line-height: 1;
-                    margin-bottom: .6em;
-                    margin-left: -.05em;
+                    margin-bottom: .3em;
+                    margin-left: -.6em;
+                
                 }
                 .rightSide {
                     align-self: flex-end;
@@ -185,10 +189,11 @@
                 }
                 p {
                     padding-right: 0em;
-                    width:22em;
-                    font-size:1.3em;
+                    width:18em;
+                    font-size:1.5em;
                     line-height: 1.4;
                     font-weight: 300;
+                    padding-top:1em;
                 }
                 .infoBlock {
                     display: flex;
@@ -200,17 +205,18 @@
                             width: 32em;
                             justify-content: center;
                             img {
-                                margin-top: 1em;
+                                margin-top: 2em;
+                                width: 16em;
                             }
                         }
                         .infoImg1 {
                             width: 32em;
                             img {
-                                width: 34.5em;
-                                margin-top:-15em;
-                                padding-left:0em;
+                                width: 47.5em;
+                                margin-top: -15em;
+                                padding-left: 0em;
                                 padding-bottom: 5em;
-
+                                margin-left: -7em;
                             }
                         }
                         flex-direction: column;
@@ -218,11 +224,12 @@
                         flex: 0 0 50%;
                         .logoContainer {
                         img {
-                            width: 27em;
+                            width: 25em;
                             padding-top:5em;
+                            margin-left: 0em;
+                            }
                         }
                     }
-                }
                 }
             }
         }
