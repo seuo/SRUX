@@ -591,26 +591,6 @@
     animation-delay: 6s;
 }
 
-.background-holder {
-    width: 100%;
-    .gridlines {
-        background-color:rgb(250, 250, 250);
-        overflow-x: hidden;
-        display: flex;
-        pointer-events: none;
-        position: absolute;
-        width: 100vw;
-        height: 100vh;
-        transition: ease all 1s;
-        z-index: -1;
-        .gridcol {
-            display: flex;
-            flex: 0 0 10.07%;
-            border-right: solid thin #eeeeee;
-        }
-    }
-}
-
 .whiteTrans {
     pointer-events: none;
     position: absolute;

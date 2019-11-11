@@ -4,10 +4,10 @@ import Tilt from 'react-tilt';
 import { Scrollbars } from 'react-custom-scrollbars';
 import { ParallaxProvider,ParallaxBanner,Parallax,Image } from 'react-scroll-parallax';
 
-
+import mjprogress from './assets/mj-progress.png';
 import mjlogobg from './assets/mj-bg.jpg';
 import mjlogo from './assets/mitchells-joinery-logo.png';
-import mjlogolines from './assets/mjColours.png';
+import mjlogolines from './assets/mjColourSwatches.png';
 import mjlogobw from './assets/mitchells-joinery-logo-bw.png';
 class Stage1 extends Component {
 
@@ -19,6 +19,7 @@ class Stage1 extends Component {
             expandImg3:'',
             mobTrans:'',
             stageImages:'',
+            gridStyles:[1,2,3,4,5,6,7,8,9,10],
         }
     }
 
@@ -50,6 +51,7 @@ class Stage1 extends Component {
 
 
 
+
     render (){
         let {expandImg1,
             expandImg2,
@@ -59,28 +61,19 @@ class Stage1 extends Component {
             stageNum,
             currentWorkIndex} = this.state;
 
-
-
+        const gridStyles = this.state.gridstyles;
+        console.log(gridStyles);
+        
         return (
 <ParallaxProvider>
             
-             <section className={"section"}>
+<section className={"section"}>
              <div className="background-holder">
                 <div className={"gridlines"}>
-                    <div className="gridcol"></div>
-                    <div className="gridcol"></div>
-                    <div className="gridcol"></div>
-                    <div className="gridcol"></div>
-                    <div className="gridcol"></div>
-                    <div className="gridcol"></div>
-                    <div className="gridcol"></div>
-                    <div className="gridcol"></div>
-                    <div className="gridcol"></div>
-                    <div className="gridcol"></div>
-                    <div className="gridcol"></div>
-                    <div className="gridcol"></div>
-                    <div className="gridcol"></div>
-                    <div className="gridcol"></div>
+
+                {this.state.gridStyles.map(item => (
+                    <div key={item} className={"gcol gridcol"+item} style={{left: 10 *item + 'vw'}} ></div>
+                ))}
 
                 </div>
             </div>
@@ -135,8 +128,18 @@ class Stage1 extends Component {
                                             marginTop: '0',
                                         }}
                                     >
-                                        
+
                         </ParallaxBanner>
+                        <container class="imageMason">
+                            <div className={"s1Col2 "+expandImg2}></div>
+                            <div className={"s1Col1 "+expandImg1}></div>
+                            {/* <div className={"s1Col4 "+expandImg3}></div> */}
+                            
+                
+                {/* <div className="iCol4"></div>
+                <div className="iCol5"></div>
+                <div className="iCol6"></div> */}
+            </container>
                         {/* <div className="stageOne stageBanner">
 
                         </div> */}
@@ -146,45 +149,40 @@ class Stage1 extends Component {
                         <div className="infoContainer">
                         <h1>Logo Design</h1>
                             <div className="infoBlock">
-                    
-                            <div className="infoCol">
-                            <div className="logoContainer">
-                                    <img alt={this.imgAlt} src={mjlogolines}/>
-                                </div>
-           
-                            </div>
                             <div className="infoCol">
                             <p>
                                     For the logo design, I wanted to develop a modern clean brand that represented the industry well & was recognizable.
-                                    The client wanted the logo to contain a shade of blue & the initials M J. </p>
-                                    <p> I went about sketching up some concepts & tieing the intials in until I had narrowed down to a specific design & then created & made alterations in Illustrator. 
-                                    I researched colour palletes from around the marine industry, got feed back from the client & exprimented with different colours until 
-                                    we were both happy. 
-                                    </p>
+                                    The client wanted the logo to contain colours that closely matched their existing brand, they also wanted the company initials M J to be included in the logo. </p>
+                                    <div className="logoContainer">
+                                    <img alt={this.imgAlt} src={mjlogolines}/>
+                                </div>
                             </div>
+                            <div className="infoCol">
+                                <div className="infoImg1">    
+                                    <img alt={this.imgAlt} src={mjprogress}/>
+                                </div>
+                                <p> I went about sketching up some concepts & tieing the intials in until I had narrowed it down to a specific design.<br/>I then made further alterations in Illustrator, got feed back from the client & exprimented with different colours until 
+                                    we were both happy. 
+                                </p>
+                                <div className= {"brand "+stageImages}>
+                                    <img alt={this.imgAlt} src={mjlogobw}/>  
+                                    <img alt={this.imgAlt} src={mjlogo}/>
+                            </div>
+                            </div>
+
                         </div>
-       
+
                         </div>
 
                     </row>
                     <row className={"row2"}>
                             
-                            {/* <div className= {"brand "+stageImages}>
-                            <div className="logoContainer">
-                                    <img alt={this.imgAlt} src={mjlogobw}/>  
-                                </div>
-                                <div className="logoContainer">
-                                    <img alt={this.imgAlt} src={mjlogolines}/>
-                                </div>
 
-                                <div className="logoContainer">
-                                    <img alt={this.imgAlt} src={mjlogo}/>
-                                </div>
-                            </div> */}
                          
                         
                 </row>   
                     <row className="row">
+                        <div className="banner"></div>
                     </row>
                     <row className="row">
                     </row>  

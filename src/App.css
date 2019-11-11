@@ -83,167 +83,6 @@ a {
   overflow-x: hidden;
 }
 
-.viewWorkSection {
-  width: 100vw;
-  height: 100vh;
-}
-
-.viewWorkSection .section {
-  height: 100vh;
-  width: 100vw;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
-}
-
-.viewWorkSection .section .row1 {
-  width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex: 1;
-      -ms-flex: 1 0 60%;
-          flex: 1 0 60%;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-shadow: inset 0em -4em 4em -4em #000000ba;
-          box-shadow: inset 0em -4em 4em -4em #000000ba;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.viewWorkSection .section .row1 .item1 {
-  -webkit-transition: ease all 1.5s;
-  transition: ease all 1.5s;
-  -webkit-transform: scale(0.8);
-          transform: scale(0.8);
-  cursor: pointer;
-  margin-right: .6em;
-  margin-top: 2em;
-  width: auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  height: 80%;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-}
-
-.viewWorkSection .section .row1 .item1 .webWork:hover {
-  -webkit-box-shadow: 1em 0.3em 2em 0.4em rgba(0, 0, 0, 0.15);
-          box-shadow: 1em 0.3em 2em 0.4em rgba(0, 0, 0, 0.15);
-  -webkit-transform: translateX(8.5vw);
-          transform: translateX(8.5vw);
-}
-
-.viewWorkSection .section .row2 {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  width: 100%;
-  -webkit-box-flex: 1;
-      -ms-flex: 1 0 30%;
-          flex: 1 0 30%;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.viewWorkSection .section .row2 .brand {
-  width: 41%;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  margin-left: 2%;
-}
-
-.viewWorkSection .section .row {
-  margin-top: 10em;
-  width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.viewWorkSection .section .row .infoContainer {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  width: 39.5%;
-}
-
-.viewWorkSection .section .row .infoContainer h1 {
-  font-size: 6em;
-  width: 3.2em;
-  line-height: 1;
-  margin-bottom: .6em;
-  padding-left: 5.35em;
-}
-
-.viewWorkSection .section .row .infoContainer p {
-  padding-left: 9.55em;
-  padding-right: 0em;
-  padding-bottom: 2em;
-  font-size: 1.3em;
-  line-height: 1.4;
-  font-weight: 300;
-}
-
-.viewWorkSection .section .row .infoContainer .infoBlock {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.viewWorkSection .section .row .infoContainer .infoBlock .infoCol {
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-
-.viewWorkSection .section .row .infoContainer .infoBlock .infoCol .logoContainer img {
-  width: 16em;
-  padding: 2em;
-}
-
 .vScroller {
   -webkit-transition: 1.5s all cubic-bezier(0.23, 1, 0.32, 1);
   transition: 1.5s all cubic-bezier(0.23, 1, 0.32, 1);
@@ -1665,66 +1504,6 @@ text.skills1 p {
   background-image: linear-gradient(to right, #111111, #19161c, #241824, #311a29, #3f1b2b, #4c1c2d, #591d2d, #661e2b, #761e2c, #851f2c, #94202b, #a32128);
 }
 
-.stageImages {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  width: 46.2vw;
-  position: absolute;
-  bottom: 0;
-  height: 20vh;
-  z-index: 9;
-  -webkit-transition: ease all .7s;
-  transition: ease all .7s;
-  -webkit-clip-path: polygon(0 0, 100% 0, 96% 100%, 0% 100%);
-          clip-path: polygon(0 0, 100% 0, 96% 100%, 0% 100%);
-}
-
-.imageMason {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  justify-self: flex-end;
-  width: 100%;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-flex: 1;
-      -ms-flex: 1 0 33%;
-          flex: 1 0 33%;
-  -ms-flex-item-align: end;
-      align-self: flex-end;
-  position: absolute;
-  bottom: 0;
-  height: 20vh;
-  z-index: 9;
-  padding-right: 10%;
-}
-
-.imageMason div {
-  height: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex: 1;
-      -ms-flex: 1 0 20%;
-          flex: 1 0 20%;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  -webkit-transition: ease all 1s;
-  transition: ease all 1s;
-  cursor: pointer;
-}
-
-.imageMason div:hover {
-  z-index: 1;
-  -webkit-box-flex: 1;
-      -ms-flex: 1 0 30%;
-          flex: 1 0 30%;
-}
-
 .s1Col1 {
   background-image: url("assets/institute-mj-1.jpg");
 }
@@ -2663,6 +2442,287 @@ text.skills1 p {
 .myForm .submit:hover {
   color: #111;
   background-color: #dcdcdc;
+}
+
+.background-holder {
+  width: 100%;
+}
+
+.background-holder .gridlines {
+  background-color: #fafafa;
+  overflow-x: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  pointer-events: none;
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  -webkit-transition: ease all 1s;
+  transition: ease all 1s;
+  z-index: -1;
+}
+
+.background-holder .gridlines .gcol {
+  height: 100vh;
+  position: absolute;
+  border-right: solid thin #eeeeee;
+}
+
+.stageImages {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 46.2vw;
+  position: absolute;
+  bottom: 0;
+  height: 20vh;
+  z-index: 9;
+  -webkit-transition: ease all .7s;
+  transition: ease all .7s;
+  -webkit-clip-path: polygon(0 0, 100% 0, 96% 100%, 0% 100%);
+          clip-path: polygon(0 0, 100% 0, 96% 100%, 0% 100%);
+}
+
+.imageMason {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  justify-self: flex-end;
+  width: 100%;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 33%;
+          flex: 1 0 33%;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  position: absolute;
+  bottom: 0;
+  height: 61vh;
+  z-index: 0;
+}
+
+.imageMason div {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 50%;
+          flex: 1 0 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  -webkit-transition: ease all 1s;
+  transition: ease all 1s;
+  cursor: pointer;
+}
+
+.imageMason div:hover {
+  z-index: 1;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 30%;
+          flex: 1 0 30%;
+}
+
+.viewWorkSection {
+  width: 100vw;
+  height: 100vh;
+}
+
+.viewWorkSection .section {
+  height: 100vh;
+  width: 100vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.viewWorkSection .section .row1 {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 60%;
+          flex: 1 0 60%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-shadow: inset 0em -4em 4em -4em #000000ba;
+          box-shadow: inset 0em -4em 4em -4em #000000ba;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.viewWorkSection .section .row1 .item1 {
+  z-index: 9;
+  -webkit-transition: ease all 1.5s;
+  transition: ease all 1.5s;
+  -webkit-transform: scale(0.8);
+          transform: scale(0.8);
+  cursor: pointer;
+  margin-right: .6em;
+  margin-top: 2em;
+  width: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 80%;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.viewWorkSection .section .row1 .item1 .webWork {
+  margin-left: -1em;
+}
+
+.viewWorkSection .section .row1 .item1 .webWork:hover {
+  -webkit-box-shadow: 1em 0.3em 2em 0.4em rgba(0, 0, 0, 0.15);
+          box-shadow: 1em 0.3em 2em 0.4em rgba(0, 0, 0, 0.15);
+  -webkit-transform: translateX(8.5vw);
+          transform: translateX(8.5vw);
+}
+
+.viewWorkSection .section .row2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 30%;
+          flex: 1 0 30%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.viewWorkSection .section .row2 .brand {
+  width: 41%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-left: 2%;
+}
+
+.viewWorkSection .section .row {
+  z-index: 1;
+  margin-top: 10em;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.viewWorkSection .section .row .infoContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 64em;
+}
+
+.viewWorkSection .section .row .infoContainer h1 {
+  font-size: 6em;
+  width: 3.2em;
+  line-height: 1;
+  margin-bottom: .6em;
+  margin-left: -.05em;
+}
+
+.viewWorkSection .section .row .infoContainer p {
+  padding-right: 0em;
+  width: 22em;
+  font-size: 1.3em;
+  line-height: 1.4;
+  font-weight: 300;
+}
+
+.viewWorkSection .section .row .infoContainer .infoBlock {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.viewWorkSection .section .row .infoContainer .infoBlock .infoCol {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 50%;
+          flex: 0 0 50%;
+}
+
+.viewWorkSection .section .row .infoContainer .infoBlock .infoCol .brand {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 32em;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.viewWorkSection .section .row .infoContainer .infoBlock .infoCol .brand img {
+  margin-top: 1em;
+}
+
+.viewWorkSection .section .row .infoContainer .infoBlock .infoCol .infoImg1 {
+  width: 32em;
+}
+
+.viewWorkSection .section .row .infoContainer .infoBlock .infoCol .infoImg1 img {
+  width: 34.5em;
+  margin-top: -15em;
+  padding-left: 0em;
+  padding-bottom: 5em;
+}
+
+.viewWorkSection .section .row .infoContainer .infoBlock .infoCol .logoContainer img {
+  width: 27em;
+  padding-top: 5em;
 }
 
 @-webkit-keyframes fadeIn {
@@ -3614,35 +3674,6 @@ text.skills1 p {
 .fade-in.five {
   -webkit-animation-delay: 6s;
           animation-delay: 6s;
-}
-
-.background-holder {
-  width: 100%;
-}
-
-.background-holder .gridlines {
-  background-color: #fafafa;
-  overflow-x: hidden;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  pointer-events: none;
-  position: absolute;
-  width: 100vw;
-  height: 100vh;
-  -webkit-transition: ease all 1s;
-  transition: ease all 1s;
-  z-index: -1;
-}
-
-.background-holder .gridlines .gridcol {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 10.07%;
-          flex: 0 0 10.07%;
-  border-right: solid thin #eeeeee;
 }
 
 .whiteTrans {

@@ -1,0 +1,189 @@
+.background-holder {
+    width: 100%;
+    .gridlines {
+        background-color:rgb(250, 250, 250);
+        overflow-x: hidden;
+        display: flex;
+        pointer-events: none;
+        position: absolute;
+        width: 100vw;
+        height: 100vh;
+        transition: ease all 1s;
+        z-index: -1;
+        .gcol {
+            height:100vh;
+            position:absolute;
+            border-right: solid thin #eeeeee;
+        }
+    }
+}
+
+
+
+.stageImages {
+    display:flex;
+    width:46.2vw;
+    position: absolute;
+    bottom: 0;
+    height: 20vh;
+    z-index: 9;
+    transition: ease all .7s;
+    clip-path: polygon(0 0, 100% 0, 96% 100%, 0% 100%);
+
+}
+
+.imageMason {
+    display: flex;
+    justify-self: flex-end;
+    width: 100%;
+    flex-direction: row;
+    flex: 1 0 33%;
+    align-self: flex-end;
+    position: absolute;
+    bottom: 0;
+    height: 61vh;
+    z-index: 0;
+
+}
+// .s1Col4 {
+//     flex:0 0 50%;  
+// }
+
+.imageMason div {
+    height: 100%;
+    display: flex;
+    flex:1 0 50%;
+    // background-color: #fbaf40;
+    // margin-right: .5em;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition:ease all 1s;
+    cursor: pointer;
+}
+.imageMason div:hover {
+    z-index:1;
+    // box-shadow:0em .2em 2em .1em rgba(0, 0, 0, 0.253);
+    // transform:scale(1.05)
+    // padding:0em 3em;
+    flex:1 0 30%;
+
+}
+
+.viewWorkSection {
+    width: 100vw;
+    height: 100vh;
+    .section {
+        height: 100vh;
+        width: 100vw;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        .row1 {
+            width: 100%;
+            display: flex;
+            flex: 1 0 60%;
+            justify-content: center;
+            box-shadow: inset 0em -4em 4em -4em #000000ba;
+            align-items: center;
+
+            .item1 {
+                z-index: 9;
+                transition: ease all 1.5s;
+                transform: scale(0.8);
+                cursor: pointer;
+                margin-right: .6em;
+                margin-top: 2em;
+                width: auto;
+                display: flex;
+                flex-direction: column;
+                height: 80%;
+                justify-content: flex-start;
+                .webWork {
+                    margin-left: -1em;
+                }
+                .webWork:hover {
+                    box-shadow:1em .3em 2em .4em rgba(0, 0, 0, 0.15);
+                    transform:translateX(8.5vw);
+                }
+            }
+        }
+        .row2 {
+            display:flex;
+            width: 100%;
+            flex: 1 0 30%;
+            justify-content: center;
+            align-items: center;
+            .brand {
+                width: 41%;
+                justify-content: space-between;
+                margin-left:2%;
+            }
+        }
+        .row {
+            z-index:1;
+            margin-top:10em;
+            width:100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            .infoContainer {
+                display: flex;
+                flex-direction: column;
+                width: 64em;
+                
+
+                h1 {
+                    font-size: 6em;
+                    width: 3.2em;
+                    line-height: 1;
+                    margin-bottom: .6em;
+                    margin-left: -.05em;
+                }
+                p {
+                    padding-right: 0em;
+                    width:22em;
+                    font-size:1.3em;
+                    line-height: 1.4;
+                    font-weight: 300;
+                }
+                .infoBlock {
+                    display: flex;
+                    justify-content: center;
+                    align-items: flex-start;
+                    .infoCol {
+                        .brand {
+                            display: flex;
+                            width: 32em;
+                            justify-content: center;
+                            img {
+                                margin-top: 1em;
+                            }
+                        }
+                        .infoImg1 {
+                            width: 32em;
+                            img {
+                                width: 34.5em;
+                                margin-top:-15em;
+                                padding-left:0em;
+                                padding-bottom: 5em;
+
+                            }
+                        }
+                        flex-direction: column;
+                        display: flex;
+                        flex: 0 0 50%;
+                        .logoContainer {
+                        img {
+                            width: 27em;
+                            padding-top:5em;
+                        }
+                    }
+                }
+                }
+            }
+        }
+    }
+}
