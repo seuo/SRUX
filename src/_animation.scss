@@ -223,6 +223,30 @@
 
     }
 }
+@keyframes fadeoutleft {
+    from {
+        transform: translate(0, 0) rotate(10deg);
+        opacity:1;
+    }
+    to {
+        transform: translate(-9vw, 0) rotate(10deg);
+        opacity:0;
+    }
+}
+
+@keyframes slideleftcorner {
+    from {
+
+        left: 49vw;
+        opacity:1;
+    }
+    to {
+
+        left: 2em;
+        opacity:0;
+    }
+}
+
 
 
 
@@ -375,10 +399,8 @@
 
 .headerTransWork {
     margin-left: 0vw !important;
-    transition:ease all 1s;
-    clip-path: polygon(0 0, 100% 0, 83% 100%, 0% 100%);
-    // background-color:#1a1a1a;
-    background-image: linear-gradient(to left top, #111111, #141414, #161616, #181818, #1a1a1a);    p {
+    transition:ease all 1s; 
+    p {
     transition:ease all 1s;
     }
     h2 {
@@ -523,8 +545,18 @@
     animation-duration: 1s;
 }
 
+.slide-left-corner {
+    animation: slideleftcorner ease-in 1;
+    animation-fill-mode: forwards;
+    animation-duration: 1s;
+}
 
 
+.fade-left {
+    animation: fadeoutleft ease-in 1;
+    animation-fill-mode: forwards;
+    animation-duration: .4s;
+}
 
 
 .fade-out {

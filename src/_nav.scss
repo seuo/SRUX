@@ -1,3 +1,37 @@
+
+.navMenu {
+  width: 0em;
+  height:97vh;
+  margin-left: 0;
+  padding-left: 0;
+  left: 0;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  position: absolute;
+  z-index: 9999;
+  transition: 0.5s ease all;
+      .progressNav {
+          margin-top:2.5em;
+      ul {
+              
+              h3 {
+                  font-size:1em;
+                  margin:.5em 0em;
+                  font-weight: 300;
+                  line-height: 1;
+              }
+              li {
+                  margin-left:.7em;
+                  line-height: 2;
+                  font-size:.9em;
+              }
+          }
+  }
+
+}
+
+
 .navCols {
     display: flex;
     width: 100%;
@@ -77,7 +111,8 @@ $transition-delay: 0.05s;
 
     // Restoring nav items from 'lines' in the menu icon
     .nav-item {
-      color:#2bb0ce;
+      
+      color:#ce1644;
       letter-spacing: 0;
       height: 40px;
       line-height: 40px;
@@ -144,7 +179,7 @@ $transition-delay: 0.05s;
     left: 10%;
     width: 50%;
     height: 1px;
-    background-color: #2bb0ce;
+    background-color: #ce1644;
     border-radius: 5px;
     transition: $transition-duration;
   }
@@ -222,7 +257,7 @@ $transition-delay: 0.05s;
     left: 0;
     width: 100%;
     height: 2px;
-    background-color: #2bb0ce;
+    background-color: #ce1644;
     transform: translateY(-50%) scaleY(5);
     transition: $transition-duration;
   }
@@ -230,12 +265,68 @@ $transition-delay: 0.05s;
 
 
 .workLine {
-    height: 100vh;
+    height: 97vh;
     position: absolute;
     // border-right: thin solid #eaeaea;
-    
-    top: 0em;
     // box-shadow: 1em 0em 1em 1em #11111112;
     left: 49vw;
     transform:rotate(10deg)
+}
+
+.workLineCorner {
+  height: 97vh;
+  position: absolute;
+  // border-right: thin solid #eaeaea;
+  top: 0em;
+  // box-shadow: 1em 0em 1em 1em #11111112;
+  left: 2em;
+  transform:rotate(10deg)
+}
+
+.viewWork {
+    position: absolute;
+    bottom: .70em;
+    width: 12em;
+    display: flex;
+    flex-direction: row;
+    transform: rotate(-10deg) skewX(-10deg);
+    background-image: linear-gradient(to right, #111111, #131313, #151515, #161616, #181818, #191919, #1a1a1a, #1b1b1b, #1b1b1b, #1c1c1c, #1c1c1c, #1d1d1d);
+    border-radius: .3em;
+    transition: ease all 2s;
+    z-index: 9999999;
+    box-shadow: 0.1em 0.2em 0.2em 0.3em #11111118;
+    text-align: center;
+    justify-content: center;
+    img {
+        padding: .8em;
+        padding-left:4em;
+    }
+    .viewWorkGradient {
+
+        transition:ease all 2s;
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        opacity:0;
+        border-radius: 0 .3em .3em  0;
+        margin-bottom:1px;
+    }
+    h3 {
+
+        padding:1em;
+        font-size:1.5em;
+        font-weight:500;
+        color:#ffffff;
+        border-bottom:solid thin #c4c4c4;
+    }
+}
+.viewWorkGradient:hover {
+
+    position: absolute;
+    width: 100%;
+    opacity:1;
+    background-image: linear-gradient(to right, #111111, #291f32, #4c284e, #782b61, #a9276a, #c41e66, #dd155e, #f31352, #f81144, #fc1734, #fe2121, #fe2e00);
+}
+.viewWork:hover {
+    cursor: pointer;
 }

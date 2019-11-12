@@ -13,10 +13,14 @@ html {
 }
 
 @import url(//db.onlinewebfonts.com/c/480e3d39ed40d6543721946a2d36ccff?family=RZ);
+@import url('https://fonts.googleapis.com/css?family=Literata:400,400i,500,500i,600,600i,700,700i&display=swap');
 
 $font-stack: 'Roboto', sans-serif;
 $font-stack-alt: 'Roboto', sans-serif;
+
+$font-stack-serif:'Literata', serif;
 $primary-color: rgba(66, 66, 66, 1);
+
 
 h1,
 h2,
@@ -29,6 +33,7 @@ h5 {
 
 p {
     font-family: $font-stack-alt;
+    color: #444;
 }
 
 a {

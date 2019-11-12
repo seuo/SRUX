@@ -1,7 +1,7 @@
 .background-holder {
     width: 100%;
     .gridlines {
-        background-color:rgb(250, 250, 250);
+        background-color:rgb(241, 241, 241);
         overflow-x: hidden;
         display: flex;
         pointer-events: none;
@@ -13,14 +13,20 @@
         .gcol {
             height:100vh;
             position:absolute;
-            border-right: solid thin #eeeeee;
+            border-right: solid thin #e2e2e2;
         }
     }
 }
 
 
-.caseSection {
-    font-size: 0.625vw;
+// .caseSection {
+//     font-size: 0.625vw;
+// }
+
+.bannerRow {
+
+    padding-bottom: 0em;
+    padding-top:0em;
 }
 
 .stageImages {
@@ -49,16 +55,15 @@
     flex: 1 0 99%;
     align-self: flex-end;
     overflow:hidden;
-    height: 50vh;
+    height: 43vh;
     z-index: 0;
-    box-shadow: inset 0em -4em 4em -4em #000000ba;
+    // box-shadow:  0em -2em 4em -2em #0000003b;
 }
 
 .imageBanner div {
-    
-    height: 60%;
     display: flex;
-    flex:1 0 33%;
+    flex:1 0 25%;
+    box-shadow: inset 2em -4em 5em -4em #000000ba;
     // background-color: #fbaf40;
     // margin-right: .5em;
     background-size: cover;
@@ -67,16 +72,17 @@
     // transition:ease all 1s;
     cursor: pointer;
     margin-top: -2em;
+    transition: ease all .5s;
 }
 
-// .imageBanner div:hover {
-//     z-index:1;
-//     // box-shadow:0em .2em 2em .1em rgba(0, 0, 0, 0.253);
-//     // transform:scale(1.05)
-//     // padding:0em 3em;
-//     flex:1 0 30%;
+.imageBanner div:hover {
+    z-index:1;
+    // box-shadow:0em .2em 2em .1em rgba(0, 0, 0, 0.253);
+    // transform:scale(1.05)
+    // padding:0em 3em;
+    // flex:1 0 33%;
 
-// }
+}
 
 .banner {
     margin-top: -10% !important;
@@ -89,7 +95,7 @@
     flex-direction: row;
     align-self: flex-end;
     overflow: hidden;
-    height: 26em;
+    height: 15vw;
     z-index: 0;
     box-shadow: inset 0em -4em 4em -4em #000000ba;
 }
@@ -119,21 +125,22 @@
         display: flex;
         flex-direction: column;
         align-items: flex-end;
-        .row1 {
-            width: 100%;
+
+        .row {
+            z-index:1;
+            margin-top:5em;
+            width:100%;
             display: flex;
-            flex: 1 0 60%;
+            flex-direction: column;
             justify-content: center;
-
             align-items: center;
-
             .item1 {
                 z-index: 9;
                 transition: ease all 1.5s;
                 transform: scale(0.8);
                 cursor: pointer;
                 margin-right: .6em;
-                margin-top: 2em;
+                margin-top: -5em;
                 width: auto;
                 display: flex;
                 flex-direction: column;
@@ -147,34 +154,14 @@
                     transform:translateX(8.5vw);
                 }
             }
-        }
-        .row2 {
-            display:flex;
-            width: 100%;
-            flex: 1 0 30%;
-            justify-content: center;
-            align-items: center;
-            .brand {
-                width: 41%;
-                justify-content: space-between;
-                margin-left:2%;
-            }
-        }
-        .row {
-            z-index:1;
-            margin-top:10em;
-            width:100%;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
 
             .infoContainer {
                 display: flex;
                 flex-direction: column;
                 width: 64em;
-                margin-left:1em;
-
+                margin-left: 1em;
+                margin-top: 1em;
+                margin-bottom: 5em;
                 h1 {
                     font-size: 6em;
                     width: 3.2em;
@@ -191,7 +178,7 @@
                     padding-right: 0em;
                     width:18em;
                     font-size:1.5em;
-                    line-height: 1.4;
+                    line-height: 1.5;
                     font-weight: 300;
                     padding-top:1em;
                 }
@@ -212,11 +199,7 @@
                         .infoImg1 {
                             width: 32em;
                             img {
-                                width: 47.5em;
-                                margin-top: -15em;
-                                padding-left: 0em;
-                                padding-bottom: 5em;
-                                margin-left: -7em;
+
                             }
                         }
                         flex-direction: column;
@@ -234,4 +217,10 @@
             }
         }
     }
+}
+
+//misc
+.parallaxFlex {
+    display: flex;
+    justify-content: center;
 }

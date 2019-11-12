@@ -352,9 +352,11 @@ class Srux extends Component {
         e.preventDefault();
 
         this.setState({
+
             navChecked:0,
             whiteTransForm:'whiteTransForm',
             pageScroller:'',
+
         })
         setTimeout(() => {
             this.setState({
@@ -364,12 +366,18 @@ class Srux extends Component {
                 currentWorkIndex: 0,
                 currentExpIndex: 0,
             })
-        }, 600)
+        }, 300)
         setTimeout(() => {
             this.setState({
                 whiteTransForm:'',
             })
         }, 1200)
+        setTimeout(() => {
+            this.setState({
+                viewWorkToggle:false,
+
+            })
+        }, 1500)
     };
 
 
@@ -378,11 +386,13 @@ class Srux extends Component {
         e.preventDefault();
 
         this.setState({
+
             whiteTransForm:'whiteTransForm',
             pageScroller:'fade-out',
         });
         setTimeout(() => {
             this.setState({
+
                 navChecked:0,
                 currentWorkIndex: 0,
                 currentExpIndex: 0,
@@ -392,6 +402,7 @@ class Srux extends Component {
                 hScroller: '',
                 vScroller: '',
                 pState:'slide-back-up',
+                viewWorkToggle:false,
             })
         }, 300)
         setTimeout(() => {
@@ -406,6 +417,7 @@ class Srux extends Component {
         e.preventDefault();
 
         this.setState({
+
             pageScroller:'fade-out',
             navChecked:0,
             homeHeader: 'homeHeader slide-out',
@@ -421,9 +433,11 @@ class Srux extends Component {
             stageZero:'stageZero',
             vScroller:'slide-left',
             hScroller:'above',
+            viewWorkToggle:false,
         })
         setTimeout(() => {
             this.setState({
+
                 headerTransitionWork: 'headerTransWork',
                 vScroller:'',
             })
@@ -434,6 +448,7 @@ class Srux extends Component {
     navContactDirect = (e) => {
         e.preventDefault();
         this.setState({
+
             pageScroller:'fade-out',
             navChecked:0,
             hAnim: 'hSlide',
@@ -453,6 +468,7 @@ class Srux extends Component {
         })
         setTimeout(() => {
             this.setState({
+                viewWorkToggle:false,
                 stageZero:'stageZero',
                 headerTransitionWork: 'headerTransWork',
                 vScroller:'',
@@ -464,7 +480,8 @@ class Srux extends Component {
 
     navContact = (e) => {
         e.preventDefault();
-        this.setState({currentWorkIndex: 7, currentExpIndex: 5,navChecked:0,})
+
+        this.setState({viewWorkToggle:false,currentWorkIndex: 7, currentExpIndex: 5,navChecked:0,})
         setTimeout(() => {
             this.setState({hScroller: 'above', homeHeader: 'homeHeader slide-right',pageScroller:'fade-out',})
         }, 700)
@@ -480,8 +497,6 @@ class Srux extends Component {
         e.preventDefault();
         this.setState({contact: 'none'})
     }
-
-
 
 
     handleVerticalLock = (e) => {
@@ -541,16 +556,62 @@ class Srux extends Component {
 
         e.preventDefault();
         let workToggle = this.state.viewWorkToggle;
-        this.setState({viewWorkToggle:!workToggle,
-            
-         }); 
-         setTimeout(() => {
-            this.setState({viewWorkSection:'fade-in',})
-        }, 700)
 
+         setTimeout(() => {
+            this.setState({
+                vScroller:'slide-right',
+                stageImages:'fade-out',
+                stageZero:'slide-left',
+                headerTransitionWork:'fade-out',
+                workLine:'slide-left-corner',
+            })
+        }, 300)
+        setTimeout(() => {
+            this.setState({
+                viewWorkToggle:!workToggle})
+        }, 1400)
+         setTimeout(() => {
+            this.setState({
+            viewWorkSection:'fade-in',
+            vScroller:'',
+            stageImages:'',
+            stageZero:'',
+            headerTransitionWork:'',
+            workLine:'',
+            })
+        }, 1400)
 }
 
     
+navBack = (e) => {
+    e.preventDefault();
+
+    this.setState({
+
+        whiteTransForm:'whiteTransForm',
+        pageScroller:'fade-out',
+    });
+    setTimeout(() => {
+        this.setState({
+
+            navChecked:0,
+            currentExpIndex: 0,
+            homeHeader: 'homeHeader fade-out',
+            headerTransitionWork: 'headerTransWork ',
+            stageZero: 'stageZero',
+            hScroller: '',
+            vScroller: '',
+            pState:'slide-back-up',
+            viewWorkToggle:false,
+        })
+    }, 300)
+    setTimeout(() => {
+        this.setState({
+            whiteTransForm:'',
+        })
+    }, 800)
+}
+
 
 
 
@@ -586,7 +647,8 @@ render (){
         stageImages,
         sectionState,
         viewWorkSection,
-        pageScroller
+        pageScroller,
+        workLine
     } = this.state;
 
         let expLineStyle2 = {
@@ -739,7 +801,18 @@ render (){
                                     <a class="nav-item" href="#contact" onClick={this.navContactDirect}>CONTACT</a>
                                 </nav>
                             </div>
-
+                            <div className={"workLine "+workLine+(this.state.viewWorkToggle ? ' workLineCorner' : ' workLine')}>
+                            {(this.state.viewWorkToggle ?   
+                            <div onClick={this.navBack} className={stageNum[currentWorkIndex]+" viewWork"}>
+                                    <div className="viewWorkGradient"><img src="https://img.icons8.com/color/48/000000/back.png"/></div>
+                                    <img src="https://img.icons8.com/color/48/000000/back.png"/>
+                             </div> :   
+                            
+                            <div onClick={this.handleViewWork} className={stageNum[currentWorkIndex]+" viewWork"}>
+                                    <div className="viewWorkGradient"><h3>VIEW WORK</h3></div>
+                                 <h3>VIEW WORK</h3>
+                             </div>)}
+                </div>
 
                         </div>
 
@@ -1222,19 +1295,7 @@ render (){
                 </section> */}
           
                 </ReactScrollWheelHandler>
-                <div className={"workLine "+(this.state.viewWorkToggle ? 'indent' : 'workLine')}>
-                            {(this.state.viewWorkToggle ?   
-                            <div className={stageNum[currentWorkIndex]+" viewWork"}>
-                                    <div className="viewWorkGradient"><h3>SCROLL</h3></div>
-                                 <h3>SCROLL</h3>
-                             </div> :   
-                            
-                            <div onClick={this.handleViewWork} className={stageNum[currentWorkIndex]+" viewWork"}>
-                                    <div className="viewWorkGradient"><h3>VIEW CASE</h3></div>
-                                 <h3>VIEW CASE</h3>
-                             </div>)}
-                          
-                     </div>
+ 
                 <ReactScrollWheelHandler
                     timeout={1000}
                     upHandler={this.prevExp}

@@ -72,6 +72,10 @@
     width: 100vw;
     position: absolute;
     pointer-events: none;
+    .c1 {
+        clip-path: polygon(0 0, 100% 0, 83% 100%, 0% 100%);
+        background-image: linear-gradient(to left top, #111111, #141414, #161616, #181818, #1a1a1a);   
+    }
     .col {
         display: flex;
         // align-items: stretch;
@@ -274,35 +278,7 @@ a.nav-item.plink {
     color: #111111 !important;
 }
 
-.navMenu {
-    margin-left: 0;
-    padding-left: 0;
-    left: 0;
-    display: flex;
-    justify-content: flex-end;
-    flex-direction: column;
-    position: absolute;
-    z-index: 9999;
-    transition: 0.5s ease all;
-        .progressNav {
-            margin-top:2.5em;
-        ul {
-                
-                h3 {
-                    font-size:1em;
-                    margin:.5em 0em;
-                    font-weight: 300;
-                    line-height: 1;
-                }
-                li {
-                    margin-left:.7em;
-                    line-height: 2;
-                    font-size:.9em;
-                }
-            }
-    }
 
-}
 
 .eText {
     display: flex;
