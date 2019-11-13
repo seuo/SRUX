@@ -6,7 +6,8 @@ import {Parallax, ParallaxLayer} from 'react-spring/renderprops-addons'
 
 import tenslogolines from './assets/10sColours.png';
 import tenslogobw from './assets/10squares-logo-bw.png';
-import tenslogo from './assets/10squares-logo.png';
+
+import tenslogo from './assets/10s-letter.png';
 import tensColours from './assets/10sColours.png';
 import tensbanner1 from './assets/10s-banner1.jpg';
 import tenswebmocks from './assets/10s-website-mocks.png';
@@ -107,7 +108,7 @@ class Stage2 extends Component {
 
     <Parallax
         className='section'
-        pages={5}
+        pages={1}
         scrolling={true}
         vertical="vertical"
         ref={ref => (this.parallax = ref)}>
@@ -128,11 +129,49 @@ class Stage2 extends Component {
                     <div className="infoBlock">
                         <div className="infoCol">
                             <p>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis
-                                consectetur leo, eu vestibulum tellus imperdiet quis. Suspendisse ullamcorper
-                                arcu sed sagittis feugiat. Vestibulum faucibus cursus mi a varius. Phasellus
-                                fringilla, ante ut placerat imperdiet.
+                               10 Squares Cabins build & or supply modern studio kitsets that fit within the councils 10m2 requirements.  
+                               The team at 10 squares wanted a logo that represented their kitset shed / studios to be modular & diy. 
+                               </p><p> I was able to achieve this with subtle gridlines & 10 panels 
+                               in a variety of the company colours to show different sections of the build.
+
                             </p>
+                        </div>
+                        <div className="infoCol">
+
+                            <ParallaxLayer
+                                style={{
+                                    position: 'relative',
+                                    height: '40em',
+                                    marginTop: '-13em',
+                                    marginLeft: '-9em'
+                                }}
+                                offset={0}
+                                speed={0.05}>
+
+                                <div style={{
+                                            pointerEvents:'none',
+                                        }}  className="infoImg1">
+                                    <img
+                                        style={{
+                                            paddingLeft: '0em',
+                                            paddingTop: '0em',
+                                            marginTop: '-5em',
+                                            marginLeft: '-12em',
+                                            pointerEvents:'none',
+                                        }}
+                                        alt={this.imgAlt}
+                                        src={tenslogo}/>
+                                </div>
+                            </ParallaxLayer>
+                           
+                        </div>
+
+                    </div>
+
+                </div>
+                <div className="infoContainer">
+                    <div className="infoBlock">
+                        <div className="infoCol">
                             <div className="logoContainer">
 
                                 <img
@@ -141,40 +180,15 @@ class Stage2 extends Component {
                                     }}
                                     alt={this.imgAlt}
                                     src={tensColours}/>
-
                             </div>
                         </div>
                         <div className="infoCol">
+                            <p> <br/>
+                                I went with an isometric shape to convey the height & roofline of the designs. </p> <p> 
+                                The pallete is range of bright orange & yellow colours which really help the logo & imagery to standout.
+                                </p> <p>  I chose more of charcoal colour to be used as an overlay of text & or black on white version.
+                                </p>
 
-                            <ParallaxLayer
-                                style={{
-                                    position: 'relative',
-                                    height: '35em',
-                                    marginTop: '-13em',
-                                    marginLeft: '-9em'
-                                }}
-                                offset={0}
-                                speed={0.05}>
-
-                                <div className="infoImg1">
-                                    <img
-                                        style={{
-                                            width: '30em',
-                                            paddingLeft: '10em',
-                                            paddingTop: '3em'
-                                        }}
-                                        alt={this.imgAlt}
-                                        src={tenslogo}/>
-                                </div>
-                            </ParallaxLayer>
-                            <p>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis
-                                consectetur leo.</p>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis
-                                consectetur leo, eu vestibulum tellus imperdiet quis. Suspendisse ullamcorper
-                                arcu sed sagittis feugiat. Vestibulum faucibus cursus mi a varius. Phasellus
-                                fringilla, ante ut placerat imperdiet.
-                            </p>
                         </div>
 
                     </div>
@@ -244,22 +258,31 @@ class Stage2 extends Component {
                                         src={tensRender}/>
                                 </div>
                             </ParallaxLayer>
-                            <p>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis
-                                consectetur leo, eu vestibulum tellus imperdiet quis. Suspendisse ullamcorper
-                                arcu sed sagittis feugiat. Vestibulum faucibus cursus mi a varius. Phasellus
-                                fringilla, ante ut placerat imperdiet.
-                            </p>
 
                         </div>
                         <div className="infoCol">
+                        <p>
+                               Because kitset studios was a fairly new concept, the client needed a way to convey exactly what their studios were all about.
+                               </p> 
+                               <p>After discussing with them different options of conveying the build quality & process. We decided the best solution was through renders.
+                                </p>
 
+
+                        </div>
+                    </div>
+                </div>
+                <div className="infoContainer">
+                    <div className="infoBlock">
+                        <div className="infoCol">
                             <p>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis
-                                consectetur leo, eu vestibulum tellus imperdiet quis. Suspendisse ullamcorper
-                                arcu sed sagittis feugiat. Vestibulum faucibus cursus mi a varius. Phasellus
-                                fringilla, ante ut placerat imperdiet.
+                            Creating these renders allowed me to easily show what a kitset consists of as well as the build process from foundations all the way to the finishing touches in a simple step by step process.
                             </p>
+                            <p>
+                            The client also required instructions to be drafted in Google Sketchup & presented in an easily read instruction manual.
+                            </p>
+                        </div>
+                        <div className="infoCol">
+                         
                             <ParallaxLayer
                                 style={{
                                     position: 'relative',
@@ -302,8 +325,8 @@ class Stage2 extends Component {
                     class="imageBannerRow"
                     style={{
                         position: 'absolute',
-                        marginTop: '17vw',
-                        marginBottom: '17vw'
+                        marginTop: '16vw',
+                        marginBottom: '16vw'
                     }}>
                     <ParallaxLayer
                         className="banner"
@@ -393,21 +416,31 @@ class Stage2 extends Component {
                                         src={tenswebmocks}/>
                                 </div>
                             </ParallaxLayer>
+                        </div>
+                        <div className="infoCol">
                             <p>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis
-                                consectetur leo, eu vestibulum tellus imperdiet quis. Suspendisse ullamcorper
-                                arcu sed sagittis feugiat. Vestibulum faucibus cursus mi a varius. Phasellus
-                                fringilla, ante ut placerat imperdiet.
+                                The website structure is a simple one page layout, with information about 10 Squares Cabins & their product at the top,
+                                with a categories 'Cabin Range' section of each size & type immediately below for the user to browse. </p>
+                                <p>I then created a 'Functionality' slideshow to follow displaying the versatily of the buildings with them being used in different lifestyles.
+                            </p>
+
+                        </div>
+                    </div>
+
+                </div>
+                <div className="infoContainer">
+                    <div className="infoBlock">
+
+                        <div className="infoCol">
+  
+                            <p>
+                                  I included a 4 step 'Build Process' section to help with customer confidence and understanding.
+                                  Each section is animated to grab attention & display the different processes & materials that go into the building.
                             </p>
 
                         </div>
                         <div className="infoCol">
-                            <p>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis
-                                consectetur leo, eu vestibulum tellus imperdiet quis. Suspendisse ullamcorper
-                                arcu sed sagittis feugiat. Vestibulum faucibus cursus mi a varius. Phasellus
-                                fringilla, ante ut placerat imperdiet.
-                            </p>
+
                             <ParallaxLayer
                                 style={{
                                     position: 'relative',
@@ -432,14 +465,14 @@ class Stage2 extends Component {
                     </div>
 
                 </div>
-                <img
+                <a href="https://mitchellsjoinery.co.nz/" target="_blank"><img
                     style={{
-                        marginTop: '5em',
+                        marginTop: '15em',
                         width: '75em',
                         marginLeft: '0em'
                     }}
                     alt={this.imgAlt}
-                    src={tenspage}/>
+                    src={tenspage}/></a>
             </row>
             <row className="row">
                 <a href="https://mitchellsjoinery.co.nz/" target="_blank">

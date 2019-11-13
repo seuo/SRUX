@@ -112,7 +112,7 @@ $transition-delay: 0.05s;
     // Restoring nav items from 'lines' in the menu icon
     .nav-item {
       
-      color:#ce1644;
+      color:#7c7c7c;
       letter-spacing: 0;
       height: 40px;
       line-height: 40px;
@@ -179,9 +179,10 @@ $transition-delay: 0.05s;
     left: 10%;
     width: 50%;
     height: 1px;
-    background-color: #ce1644;
+    background-color: #7c7c7c;
     border-radius: 5px;
     transition: $transition-duration;
+
   }
 
   &:before {
@@ -220,6 +221,7 @@ $transition-delay: 0.05s;
   transform: scaleY(0.2);
 
   transition: $transition-duration, opacity 1s;
+ 
 
   //Set delays for the nav items in close transition
   @for $i from 1 through $items {
@@ -257,7 +259,7 @@ $transition-delay: 0.05s;
     left: 0;
     width: 100%;
     height: 2px;
-    background-color: #ce1644;
+    background-color: #7c7c7c;
     transform: translateY(-50%) scaleY(5);
     transition: $transition-duration;
   }
@@ -283,6 +285,16 @@ $transition-delay: 0.05s;
   transform:rotate(10deg)
 }
 
+.workLine.workLineCorner .viewWork {
+  background-image: linear-gradient(to right, #f1f1f1, #ffffff);
+  box-sizing: inherit;
+}
+
+.workLine.workLineCorner .viewWorkGradient {
+  background-image: linear-gradient(to right, #a0a0a0, #414141);
+  
+}
+
 .viewWork {
     position: absolute;
     bottom: .70em;
@@ -294,7 +306,6 @@ $transition-delay: 0.05s;
     border-radius: .3em;
     transition: ease all 2s;
     z-index: 9999999;
-    box-shadow: 0.1em 0.2em 0.2em 0.3em #11111118;
     text-align: center;
     justify-content: center;
     img {

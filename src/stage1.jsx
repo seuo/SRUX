@@ -92,7 +92,7 @@ class Stage1 extends Component {
 
     <Parallax
         className='section'
-        pages={3.5}
+        pages={1}
         scrolling={true}
         vertical="vertical"
         ref={ref => (this.parallax = ref)}>
@@ -116,19 +116,10 @@ class Stage1 extends Component {
                         <div className="infoCol">
                             <p>
                                 For the logo design, I wanted to develop a modern clean brand that was easily recognizable. 
-                                The client needed the logo to contain colours that closely matched their existing brand. 
+                                </p><p>The client needed the logo to contain colours that closely matched their existing brand. 
                                 They also requested the company initials M J to be included in the logo.
                             </p>
-                            <div className="logoContainer">
 
-                                <img
-                                    style={{
-                                        width: '21em'
-                                    }}
-                                    alt={this.imgAlt}
-                                    src={mjlogolines}/>
-
-                            </div>
                         </div>
                         <div className="infoCol">
 
@@ -152,10 +143,34 @@ class Stage1 extends Component {
                                         src={mjprogress}/>
                                 </div>
                             </ParallaxLayer>
-                            <p>
-                                The process included sketching up rough concepts & coming up with a variety of
+
+                        </div>
+
+                    </div>
+
+                </div>
+                <div className="infoContainer">
+  
+                    <div className="infoBlock">
+                        <div className="infoCol">
+
+                            <div className="logoContainer">
+
+                                <img
+                                    style={{
+                                        width: '21em'
+                                    }}
+                                    alt={this.imgAlt}
+                                    src={mjlogolines}/>
+
+                            </div>
+                        </div>
+                        <div className="infoCol">
+                        <p></p>
+                            <p><br/>
+                                The process included sketching up concepts & coming up with a variety of
                                 ideas to present to the client.</p>
-                               <p>I created the logo in illustrator, got feed back from the client
+                               <p>I created the logo using illustrator, got feed back from the client
                                 & exprimented with different colours until we were both happy with the final
                                 design.
                             </p>
@@ -260,12 +275,6 @@ class Stage1 extends Component {
                                         src={mjwebmocks}/>
                                 </div>
                             </ParallaxLayer>
-                            <p>
-                                I wanted to incorporate the shapes and angles of the yachts into the
-                                design & layout. The site design consists of of subtle angles & trim in the
-                                company colours that break up the sections & create a clean, clear & easily read
-                                layout.
-                            </p>
 
                         </div>
                         <div className="infoCol">
@@ -279,6 +288,27 @@ class Stage1 extends Component {
                     </div>
 
                 </div>
+                <div className="infoContainer">
+                    <div className="infoBlock">
+
+                        <div className="infoCol">
+ 
+                            <p>
+                                I wanted to incorporate the shapes and angles of the yachts into the
+                                design & layout. The site design consists of of subtle angles & trim in the
+                                company colours that break up the sections & create a clean, clear & easily read
+                                layout.
+                            </p>
+
+                        </div>
+                        <div className="infoCol">
+
+
+                        </div>
+                    </div>
+
+                </div>
+                <a href="https://mitchellsjoinery.co.nz/" target="_blank">
                 <img
                     style={{
                         marginTop: '5em',
@@ -287,6 +317,7 @@ class Stage1 extends Component {
                     }}
                     alt={this.imgAlt}
                     src={mjpage}/>
+                    </a>
             </row>
             <row className="row">
                 <a href="https://mitchellsjoinery.co.nz/" target="_blank">

@@ -341,27 +341,27 @@
 
 .stageDisplay {
     position:absolute;
-    top:1vh;
-    width:5em;
-    margin-left:-.5em;
+    top: 3vh;
+    width: 9em;
+    margin-left: -3vw;
     display:flex;
     flex-direction: row;
     transform:rotate(-10deg);
-
+    border-bottom: thin solid white;
     h3 {
         padding-left:.5em;
         padding-right:.5em;
         font-size:1.4em;
         padding-bottom:.3em;
-        font-weight:500;
-        color:#fff;
+        font-weight:300;
+        color:#aaaaaa;
         // border-bottom:solid thin #c4c4c4;
     }
 }
 
 .stageOne .stageDisplay {
     h3::before {
-        color:#7bcee6;
+        color:#aaaaaa;
         content:"1";
     }
     h3::after {
@@ -371,7 +371,7 @@
 
 .stageTwo .stageDisplay {
     h3::before {
-        color: rgb(223, 113, 62);
+        color: #aaaaaa;
         content:"2";
     }
     h3::after {
@@ -381,7 +381,7 @@
 
 .stageThree .stageDisplay {
     h3::before {
-        color: #a68b3c;
+        color: #aaaaaa;
         content:"3";
     }
     h3::after {
@@ -391,7 +391,7 @@
 
 .stageFour .stageDisplay {
     h3::before {
-        color: #9f9fa1;
+        color: #aaaaaa;
         content:"4";
     }
     h3::after {
@@ -401,7 +401,7 @@
 
 .stageFive .stageDisplay {
     h3::before {
-        color: #e1c20f;
+        color: #aaaaaa;
         content:"5";
     }
     h3::after {
@@ -411,7 +411,7 @@
 
 .stageSix .stageDisplay {
     h3::before {
-        color: #a32128;
+        color: #aaaaaa;
         content:"6";
     }
     h3::after {
@@ -619,7 +619,7 @@
 }
 
 .cc {
-    background-image: url("assets/the-cabin-crew-bcards.jpg");
+    background-image: url("assets/cc-logo-bcard.png");
 }
 
 .autposter {

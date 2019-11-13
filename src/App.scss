@@ -37,7 +37,18 @@ p {
 }
 
 a {
+
+    color:#111;
     cursor: pointer;
+    h1 {
+        font-family: $font-stack-serif;
+        padding:2em;
+        transition:ease all 1s;
+    }
+    h1:hover {
+        color:rgb(190, 102, 19);
+    }
+
 }
 
 .scroller {

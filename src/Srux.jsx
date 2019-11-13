@@ -115,6 +115,7 @@ class Srux extends Component {
 
             viewWorkToggle:false,
             viewWorkSection:'',
+
         }
 
     }
@@ -173,10 +174,10 @@ class Srux extends Component {
         setTimeout(() => {
             this.setState({   
                 stageState: 'stageF-out'});
-             }, 200)
+             }, 600)
             setTimeout(() => {
                 this.setState({
-                    stageState: 'stageF-in',
+                    stageState: 'stageF-out',
                     vScroller: '',
                     hScroller: 'above fade-in-fast',
                     navChecked:0,
@@ -186,7 +187,7 @@ class Srux extends Component {
                     currentExpIndex: 0,
                     headerTransitionWork: 'headerTransWork fade-out',
                 })
-            }, 200)
+            }, 600)
 
         }
 
@@ -325,9 +326,7 @@ class Srux extends Component {
                 expColTrans: "",
                 expColTransHeader: "",
                 stageZero: 'stageZero',
-
-                headerTransitionWork: 'headerTransWork fade-in',
-
+                headerTransitionWork: 'headerTransWork',
                 currentWorkIndex: 5,
                 currentExpIndex: 0,
                 stageExpNum: -1,
@@ -422,7 +421,7 @@ class Srux extends Component {
             navChecked:0,
             homeHeader: 'homeHeader slide-out',
  
-            currentWorkIndex: 7,
+            currentWorkIndex: 6,
             currentExpIndex: 0,
         
             expColTrans: "exp-col-trans",
@@ -431,7 +430,7 @@ class Srux extends Component {
             headerTransitionWork: 'headerTransWork fade-out',
             pState:'slide-back-up',
             stageZero:'stageZero',
-            vScroller:'slide-left',
+            vScroller:'',
             hScroller:'above',
             viewWorkToggle:false,
         })
@@ -452,7 +451,7 @@ class Srux extends Component {
             pageScroller:'fade-out',
             navChecked:0,
             hAnim: 'hSlide',
-            currentWorkIndex: 7,
+            currentWorkIndex: 6,
             currentExpIndex: 5,
             expColTrans: "exp-col-trans",
             expColTransHeader: "exp-col-trans-header",
@@ -481,7 +480,7 @@ class Srux extends Component {
     navContact = (e) => {
         e.preventDefault();
 
-        this.setState({viewWorkToggle:false,currentWorkIndex: 7, currentExpIndex: 5,navChecked:0,})
+        this.setState({viewWorkToggle:false,currentWorkIndex: 6, currentExpIndex: 5,navChecked:0,})
         setTimeout(() => {
             this.setState({hScroller: 'above', homeHeader: 'homeHeader slide-right',pageScroller:'fade-out',})
         }, 700)
@@ -556,30 +555,28 @@ class Srux extends Component {
 
         e.preventDefault();
         let workToggle = this.state.viewWorkToggle;
+        this.setState({
+            vScroller:'slide-right',
+            stageImages:'fade-out',
+            stageZero:'fade-out',
+            headerTransitionWork:'headerTransWork fade-out',
+            workLine:'fade-out',
 
-         setTimeout(() => {
-            this.setState({
-                vScroller:'slide-right',
-                stageImages:'fade-out',
-                stageZero:'slide-left',
-                headerTransitionWork:'fade-out',
-                workLine:'slide-left-corner',
-            })
-        }, 300)
+        })
         setTimeout(() => {
             this.setState({
+                viewWorkSection:'fade-in',
                 viewWorkToggle:!workToggle})
-        }, 1400)
+        }, 600)
          setTimeout(() => {
             this.setState({
-            viewWorkSection:'fade-in',
             vScroller:'',
             stageImages:'',
             stageZero:'',
             headerTransitionWork:'',
             workLine:'',
             })
-        }, 1400)
+        }, 1200)
 }
 
     
@@ -587,29 +584,28 @@ navBack = (e) => {
     e.preventDefault();
 
     this.setState({
-
+        viewWorkSection:'fade-out',
         whiteTransForm:'whiteTransForm',
         pageScroller:'fade-out',
     });
     setTimeout(() => {
         this.setState({
-
             navChecked:0,
             currentExpIndex: 0,
             homeHeader: 'homeHeader fade-out',
             headerTransitionWork: 'headerTransWork ',
             stageZero: 'stageZero',
             hScroller: '',
-            vScroller: '',
             pState:'slide-back-up',
             viewWorkToggle:false,
         })
-    }, 300)
+    }, 600)
     setTimeout(() => {
         this.setState({
+            vScroller:'slide-back-left',
             whiteTransForm:'',
         })
-    }, 800)
+    }, 1200)
 }
 
 
@@ -655,8 +651,10 @@ render (){
             width:+currentExpIndex+"75vw"
         }
 
-        
+        let cWi = this.state.currentWorkIndex;
+        let cEi = this.state.currentExpIndex;
 
+        // let activeCases = 
 
 
     return (
@@ -801,18 +799,19 @@ render (){
                                     <a class="nav-item" href="#contact" onClick={this.navContactDirect}>CONTACT</a>
                                 </nav>
                             </div>
+                            {((cWi == 2) || (cWi == 3) || (cWi == 4) || (cWi == 5) || (cWi == 6) ? null : 
                             <div className={"workLine "+workLine+(this.state.viewWorkToggle ? ' workLineCorner' : ' workLine')}>
                             {(this.state.viewWorkToggle ?   
                             <div onClick={this.navBack} className={stageNum[currentWorkIndex]+" viewWork"}>
-                                    <div className="viewWorkGradient"><img src="https://img.icons8.com/color/48/000000/back.png"/></div>
-                                    <img src="https://img.icons8.com/color/48/000000/back.png"/>
+                                    <div className="viewWorkGradient"><img src="https://img.icons8.com/ios/50/000000/back--v1.png"/></div>
+                                    <img src="https://img.icons8.com/ios/50/000000/back--v1.png"/>
                              </div> :   
                             
                             <div onClick={this.handleViewWork} className={stageNum[currentWorkIndex]+" viewWork"}>
                                     <div className="viewWorkGradient"><h3>VIEW WORK</h3></div>
                                  <h3>VIEW WORK</h3>
                              </div>)}
-                </div>
+                </div> )}
 
                         </div>
 
@@ -820,12 +819,12 @@ render (){
 
                     <div className={"workSection fade-out "+viewWorkSection}>
                     {(this.state.viewWorkToggle ? <div className={"viewWorkSection"}>
-                    {(this.state.currentWorkIndex == 0 ? <Stage1 data={this.state}/> : null )}
-                    {(this.state.currentWorkIndex == 1 ? <Stage2 data={this.state}/> : null )}
-                    {(this.state.currentWorkIndex == 2 ? <Stage3 data={this.state}/> : null )}
-                    {(this.state.currentWorkIndex == 3 ? <Stage4 data={this.state}/> : null )}
-                    {(this.state.currentWorkIndex == 4 ? <Stage5 data={this.state}/> : null )}
-                    {(this.state.currentWorkIndex == 5 ? <Stage6 data={this.state}/> : null )}
+                    {(cWi == 0 ? <Stage1 data={this.state}/> : null )}
+                    {(cWi == 1 ? <Stage2 data={this.state}/> : null )}
+                    {(cWi == 2 ? <Stage3 data={this.state}/> : null )}
+                    {(cWi == 3 ? <Stage4 data={this.state}/> : null )}
+                    {(cWi == 4 ? <Stage5 data={this.state}/> : null )}
+                    {(cWi == 5 ? <Stage6 data={this.state}/> : null )}
                     </div> : null )}
                     </div>
             {(this.state.viewWorkToggle ? null : <container className="pWrap">
@@ -863,6 +862,7 @@ render (){
                                 
                             </div>
                             <div className={"col c2 "+colTwoBg}>
+
                                 <div className="ui gone"></div>
                             </div>
                                 <div className="workLine">
@@ -888,7 +888,7 @@ render (){
 
                     }}
                 >
-                    
+
 
 <div className={"sectionState "+stageImages}>
                         {(this.state.currentWorkIndex == 0 ?                         
@@ -969,10 +969,10 @@ render (){
                             </div>
                             <div className="logoContainer">
                                 <img alt={this.imgAlt} src={mjlogobw}/>  
-                            </div>
+                            </div> */}
                             <div className="logoContainer">
                                 <img alt={this.imgAlt} src={mjlogo}/>
-                            </div> */}
+                            </div>
                         </div>
                      
                     
@@ -1045,10 +1045,10 @@ render (){
                 <row className={"row2"}>
                 <div className={"brand "+stageImages}>
                 <div className="logoContainer">
-                                <img alt={this.imgAlt} src={tenslogolines}/></div>
+                                {/* <img alt={this.imgAlt} src={tenslogolines}/></div>
                                 <div className="logoContainer">
                                 <img alt={this.imgAlt} src={tenslogobw}/></div>
-                                <div className="logoContainer">
+                                <div className="logoContainer"> */}
                                 <img alt={this.imgAlt} src={tenslogo}/></div>
 
                                 </div>
@@ -1187,15 +1187,15 @@ render (){
                 </row>
                 <row className="row2">
                 <div className= {"brand "+stageImages}>
-                                <div className="logoContainer">
+                                {/* <div className="logoContainer">
                                     <img alt={this.imgAlt} src={ambvC}/>
-                                </div>
+                                </div> */}
                                 <div className="logoContainer">
                                     <img alt={this.imgAlt} src={ambvlogo}/>
                                 </div>
-                                <div className="logoContainer">
+                                {/* <div className="logoContainer">
                                     <img alt={this.imgAlt} src={ambvlogo2}/>
-                                </div>
+                                </div> */}
 
                              </div>
                 </row>
@@ -1213,9 +1213,9 @@ render (){
 </row>
 <row className="row2">
 <div className= {"brand "+stageImages}>
-                <div className="logoContainer">
+                {/* <div className="logoContainer">
                     <img alt={this.imgAlt} src={mglogo2}/>
-                </div>
+                </div> */}
                 <div className="logoContainer">
                     <img alt={this.imgAlt} src={mglogo3}/>
                 </div>
@@ -1239,9 +1239,9 @@ render (){
                          <row className="row2">
                          <div className= {"brand "+stageImages}>
              
-                         <div className="logoContainer">
+                         {/* <div className="logoContainer">
                                          <img alt={this.imgAlt} src={cclogo1}/>
-                                     </div>
+                                     </div> */}
                                      <div className="logoContainer">
                                          <img alt={this.imgAlt} src={cclogo2}/>
                                      </div>

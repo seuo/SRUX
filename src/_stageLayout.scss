@@ -125,7 +125,6 @@
         display: flex;
         flex-direction: column;
         align-items: flex-end;
-
         .row {
             z-index:1;
             margin-top:5em;
@@ -158,10 +157,9 @@
             .infoContainer {
                 display: flex;
                 flex-direction: column;
-                width: 64em;
+                width: 63em;
                 margin-left: 1em;
                 margin-top: 1em;
-                margin-bottom: 5em;
                 h1 {
                     font-size: 6em;
                     width: 3.2em;

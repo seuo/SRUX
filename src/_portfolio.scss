@@ -72,6 +72,9 @@
     width: 100vw;
     position: absolute;
     pointer-events: none;
+    background-color: #f1f1f1;
+    // background-image: url("assets/workbg.png");
+    // background-repeat:vertical;
     .c1 {
         clip-path: polygon(0 0, 100% 0, 83% 100%, 0% 100%);
         background-image: linear-gradient(to left top, #111111, #141414, #161616, #181818, #1a1a1a);   

@@ -4,9 +4,16 @@
 
 
 @media only screen and (max-width: 87.5em) {
+    .viewWork {
+        font-size: .1em;
+    }
 
     .caseSection {
         font-size:1vw;
+    }
+
+    .imageBanner {
+        height: 25vh;
     }
 
 .workDone::after {
@@ -272,6 +279,10 @@
         font-size: 1.3vw;
     }
 
+    .workLine {
+        display:none;
+    }
+
     .bannerRow {
 
         padding-bottom: 20em;
@@ -305,6 +316,9 @@
         background-position: center;
         transition:ease all 1s;
         cursor: pointer;
+    }
+    .WorkHero .c1 {
+        clip-path: none;
     }
 
     .WorkHero .col .heroblock .workDone {
@@ -363,7 +377,7 @@
             .heroblock {
                 justify-content: flex-start;
                 margin-top: 15em;
-    
+                width: auto;
                 .description {
                     overflow-wrap: break-word;
                     
@@ -791,11 +805,15 @@
         display: flex;
         flex: 1 0 100%;
         width: 100vw;
-        height: 40%;
-        justify-content: center;
+        height: 38%;
+        justify-content: flex-start;
         align-items: flex-start;
         background-color: white;
-        display:none;
+        display:flex;
+        .printWork {
+            padding: 1em;
+            width: 100%;
+        }
     }
 
     .row2 {
@@ -803,17 +821,18 @@
         width: 100vw;
         flex: 1 0 100%;
         justify-content: flex-start;
-        height: 36%;
+        height: 38%;
         align-items: center;
         margin-top: 0vw;
+        display:flex;
         .brand {
             display: flex;
-            justify-content: space-evenly;
+            justify-content: center;
             font-size: .5vw;
             height: 100%;
-            align-items: flex-start;
+            align-items: center;
             .logoContainer {
-                width: 16vw;
+                width: 60vw;
                 /* height: 20vw; */
                 display: flex;
                 justify-content: center;
@@ -1032,7 +1051,10 @@
 
 }
 
+
 @media screen and (orientation:landscape) and (min-device-width: 25em) and (max-device-width: 60em) {
+
+
     .webWork {
         cursor: pointer;
         margin-left: 0vw;
@@ -1157,6 +1179,10 @@
     }
 
 
+    .workLine {
+        display:none;
+    }
+
     .imageMason {
         width: 100%;
         flex: 1 0 35%;
@@ -1218,7 +1244,7 @@ font-size:2em;
 }
 
     .WorkHero {
-
+        margin-top: 3em;
         height: 55vh;
 
         .col {
@@ -1232,7 +1258,7 @@ font-size:2em;
             .heroblock {
                 justify-content: flex-start;
                 margin-top: 15em;
-    
+                width: auto;
                 .description {
                     overflow-wrap: break-word;
                     
@@ -1586,6 +1612,10 @@ font-size:2em;
 
     .stageExp .heading {
         height: 3.8em;
+    }
+
+    .WorkHero .c1 {
+        clip-path: none;
     }
 
     .WorkHero .col {
