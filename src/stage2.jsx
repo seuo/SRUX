@@ -448,7 +448,6 @@ class Stage2 extends Component {
                                     position: 'relative',
                                     height: '17em',
                                     marginTop: '0em',
-                                    marginLeft: '3em'
                                 }}
                                 offset={0}
                                 speed={0.03}>

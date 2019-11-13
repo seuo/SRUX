@@ -2750,7 +2750,6 @@ text.skills1 p {
 }
 
 .viewWorkSection .section .row .infoContainer .infoBlock .infoCol {
-  margin-left: .25em;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
