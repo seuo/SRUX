@@ -1073,12 +1073,18 @@ text.skills1 p {
 }
 
 .workLineCorner {
-  height: 95vh;
+  height: 3em;
   position: absolute;
-  top: 0em;
-  left: 2em;
+  top: 91vh;
+  font-size: 1em;
+  left: -4em;
+  font-size: .5em;
   -webkit-transform: rotate(10deg);
           transform: rotate(10deg);
+}
+
+.workLineCorner img {
+  width: 4em;
 }
 
 .workLine.workLineCorner .viewWork {
@@ -2516,6 +2522,10 @@ text.skills1 p {
   border-right: solid thin #e2e2e2;
 }
 
+.caseSection {
+  font-size: .63vw;
+}
+
 .bannerRow {
   padding-bottom: 0em;
   padding-top: 0em;
@@ -2709,7 +2719,6 @@ text.skills1 p {
   font-size: 6em;
   width: 3.2em;
   line-height: 1;
-  margin-bottom: .3em;
   margin-left: -.6em;
 }
 
@@ -2722,7 +2731,7 @@ text.skills1 p {
 .viewWorkSection .section .row .infoContainer p {
   padding-right: 0em;
   width: 18em;
-  font-size: 1.5em;
+  font-size: 1.3em;
   line-height: 1.5;
   font-weight: 300;
   padding-top: 1em;
@@ -2741,6 +2750,7 @@ text.skills1 p {
 }
 
 .viewWorkSection .section .row .infoContainer .infoBlock .infoCol {
+  margin-left: .25em;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -2770,12 +2780,6 @@ text.skills1 p {
 
 .viewWorkSection .section .row .infoContainer .infoBlock .infoCol .infoImg1 {
   width: 32em;
-}
-
-.viewWorkSection .section .row .infoContainer .infoBlock .infoCol .logoContainer img {
-  width: 25em;
-  padding-top: 5em;
-  margin-left: 0em;
 }
 
 .parallaxFlex {

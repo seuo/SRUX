@@ -98,7 +98,7 @@ class Stage2 extends Component {
                             key={item}
                             className={"gcol gridcol" + item}
                             style={{
-                                left: 10 * item + '%'
+                                left: 10 * item + 'vw'
                             }}></div>
                     ))
             }
@@ -129,8 +129,8 @@ class Stage2 extends Component {
                     <div className="infoBlock">
                         <div className="infoCol">
                             <p>
-                               10 Squares Cabins build & or supply modern studio kitsets that fit within the councils 10m2 requirements.  
-                               The team at 10 squares wanted a logo that represented their kitset shed / studios to be modular & diy. 
+                               10 Squares Cabins build & or supply modern studio kitsets that fit within the councils 10m2 requirements. </p><p> 
+                               The team at 10 squares wanted a logo that represented their modular kitset shed / studios. 
                                </p><p> I was able to achieve this with subtle gridlines & 10 panels 
                                in a variety of the company colours to show different sections of the build.
 
@@ -155,9 +155,10 @@ class Stage2 extends Component {
                                         style={{
                                             paddingLeft: '0em',
                                             paddingTop: '0em',
-                                            marginTop: '-5em',
-                                            marginLeft: '-12em',
+                                            marginTop: '-3vw',
+                                            marginLeft: '-10vw',
                                             pointerEvents:'none',
+                                            width:'45vw',
                                         }}
                                         alt={this.imgAlt}
                                         src={tenslogo}/>
@@ -308,9 +309,9 @@ class Stage2 extends Component {
                                     alt={this.imgAlt}
                                     style={{
                                         position: 'absolute',
-                                        width: '70em',
-                                        marginLeft: '-83em',
-                                        marginTop: '-9em'
+                                        width:'52vw',
+                                        marginLeft: '-60vw',
+                                        marginTop: '-13vw'
                                     }}
                                     src={tensRenderbg}/>
                             </div>
@@ -419,9 +420,9 @@ class Stage2 extends Component {
                         </div>
                         <div className="infoCol">
                             <p>
-                                The website structure is a simple one page layout, with information about 10 Squares Cabins & their product at the top,
-                                with a categories 'Cabin Range' section of each size & type immediately below for the user to browse. </p>
-                                <p>I then created a 'Functionality' slideshow to follow displaying the versatily of the buildings with them being used in different lifestyles.
+                                The website structure is a simple one page layout, The top section includes information about the company & their product,
+                                with a categories 'Cabin Range' section of each size & type immediately below. </p>
+                                <p>A 'Functionality' slideshow to follows displaying the versatily of the buildings with them being used in different lifestyles.
                             </p>
 
                         </div>
@@ -434,7 +435,8 @@ class Stage2 extends Component {
                         <div className="infoCol">
   
                             <p>
-                                  I included a 4 step 'Build Process' section to help with customer confidence and understanding.
+                                  I included a 4 step 'Build Process' section to help with customer confidence and understanding.</p><p>
+                                  Foundations & Flooring, Framing, Cladding & Joinery & Finishing Touches.</p><p>
                                   Each section is animated to grab attention & display the different processes & materials that go into the building.
                             </p>
 

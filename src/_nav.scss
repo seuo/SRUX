@@ -276,13 +276,16 @@ $transition-delay: 0.05s;
 }
 
 .workLineCorner {
-  height: 95vh;
+  height: 3em;
   position: absolute;
-  // border-right: thin solid #eaeaea;
-  top: 0em;
-  // box-shadow: 1em 0em 1em 1em #11111112;
-  left: 2em;
-  transform:rotate(10deg)
+  top: 91vh;
+  font-size: 1em;
+  left: -4em;
+  font-size: .5em;
+  transform: rotate(10deg);
+  img {
+    width:4em;
+  }
 }
 
 .workLine.workLineCorner .viewWork {

@@ -18,6 +18,9 @@
     }
 }
 
+.caseSection {
+    font-size: .63vw;
+}
 
 // .caseSection {
 //     font-size: 0.625vw;
@@ -165,7 +168,6 @@
                     font-size: 6em;
                     width: 3.2em;
                     line-height: 1;
-                    margin-bottom: .3em;
                     margin-left: -.6em;
                 
                 }
@@ -176,7 +178,7 @@
                 p {
                     padding-right: 0em;
                     width:18em;
-                    font-size:1.5em;
+                    font-size: 1.3em;
                     line-height: 1.5;
                     font-weight: 300;
                     padding-top:1em;
@@ -186,6 +188,7 @@
                     justify-content: center;
                     align-items: flex-start;
                     .infoCol {
+                        margin-left: .25em;
                         .brand {
                             display: flex;
                             width: 32em;
@@ -206,9 +209,6 @@
                         flex: 0 0 50%;
                         .logoContainer {
                         img {
-                            width: 25em;
-                            padding-top:5em;
-                            margin-left: 0em;
                             }
                         }
                     }
