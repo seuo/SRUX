@@ -465,7 +465,7 @@ class Stage2 extends Component {
                     </div>
 
                 </div>
-                <a href="https://mitchellsjoinery.co.nz/" target="_blank"><img
+                <a href="http://10squares.co.nz/" target="_blank"><img
                     style={{
                         marginTop: '15em',
                         width: '75em',
@@ -475,7 +475,7 @@ class Stage2 extends Component {
                     src={tenspage}/></a>
             </row>
             <row className="row">
-                <a href="https://mitchellsjoinery.co.nz/" target="_blank">
+                <a href="http://10squares.co.nz/" target="_blank">
                     <h1>Visit the Website</h1>
                 </a>
             </row>

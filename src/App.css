@@ -2636,6 +2636,7 @@ text.skills1 p {
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
+  overflow: hidden !important;
 }
 
 .viewWorkSection .section .row {

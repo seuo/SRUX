@@ -125,6 +125,7 @@
         display: flex;
         flex-direction: column;
         align-items: flex-end;
+        overflow: hidden !important;
         .row {
             z-index:1;
             margin-top:5em;
