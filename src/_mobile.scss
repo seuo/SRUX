@@ -1,37 +1,34 @@
-
-
-
-
-
 @media only screen and (max-width: 87.5em) {
     .viewWork {
-        font-size: .1em;
+        font-size: .7em;
     }
 
     .caseSection {
-        font-size:1vw;
+        font-size: 1vw;
     }
 
     .imageBanner {
         height: 25vh;
     }
 
-.workDone::after {
-    margin-left: -.5em;
-}
+    .workDone::after {
+        margin-left: -.5em;
+    }
+
     .WorkHero .col .heroblock .description {
         font-size: 1em;
-        
+
         p {
             margin-left: 0em;
         }
 
     }
+
     .WorkHero .col .heroblock .workDone h2 {
 
-        margin-left:0em;
+        margin-left: 0em;
 
-}
+    }
 
     .expHero .headerTransExp {
         flex-direction: row;
@@ -41,7 +38,7 @@
     .expHero .cTwoExp .eText .expIcons {
         transform: scale(0.5);
         transform-origin: left;
-        
+
     }
 
     .col.c2.cTwoExp {
@@ -65,21 +62,22 @@
     .expHero .heroblock.stageExp .description p {
         margin-left: 0em;
     }
+
     .stageExp {
 
-    .description p::before {
-        font-size: 1.5em;
-        width: 50vw;
-        padding: 0;
+        .description p::before {
+            font-size: 1.5em;
+            width: 50vw;
+            padding: 0;
+        }
     }
-}
 
     .stageExp .heading {
         height: 3.8em;
     }
 
     .stageExp {
-        width:30vw;
+        width: 30vw;
     }
 
     .contactForm {
@@ -93,26 +91,6 @@
         box-shadow: 1em 0 4em #3333331e;
         transform: scale(.8);
     }
-
-    // .WorkHero .col .heroblock {
-    //     justify-content: center;
-    //     display: flex;
-    //     flex-direction: column;
-    //     flex: 1 0 60%;
-    //     justify-content: center;
-    //     margin-top: 5em;
-    //     margin-left: 0vw;
-    //     padding-left: 2em;
-    //     padding-right:2em;
-    //     cursor: pointer;
-    //     .description {
-    //         p {
-    //             font-size: 1.75em;
-    //             margin-left: 0em;
-    //             margin-top: .5em;
-    //         }
-    //     }
-    // }
 
     .hero .col {
         display: flex;
@@ -164,22 +142,25 @@
         width: 100vw;
         height: 5em;
         overflow: hidden;
-      }
+    }
+
     .nav {
         display: inline-block;
         padding: 2vh 2em 1.8em 1em;
         pointer-events: none;
         transition: 0.5s;
     }
-    #toggle:checked ~ .nav {
+
+    #toggle:checked~.nav {
         margin-bottom: 100px;
         pointer-events: auto;
         padding: 1vh 1em 0em 10vw;
-        background-color:#191919;
+        background-color: #191919;
         width: 90vw;
         display: flex;
         justify-content: space-around;
     }
+
     .button-toggle {
         position: absolute;
         display: inline-block;
@@ -194,9 +175,10 @@
         transition: 0.6s;
     }
 
-    .button-toggle:before, .button-toggle:after {
+    .button-toggle:before,
+    .button-toggle:after {
         width: 70%;
-        
+
     }
 
     svg#Layer_1 {
@@ -204,6 +186,7 @@
         width: inherit;
         padding-left: 50vw;
     }
+
     .itemheading text imgblock {
         margin-top: -36vh;
     }
@@ -215,6 +198,7 @@
         justify-content: flex-end;
         margin-right: 0;
         margin-left: 3vw;
+
         .eText {
             flex-direction: column;
             justify-content: flex-end;
@@ -232,6 +216,7 @@
         width: 100vw;
         height: 100%;
         align-items: center;
+
         .eText {
             text {
                 flex: 0 0 73%;
@@ -249,8 +234,10 @@
         flex: 1 0 0;
         width: 100vw;
         height: 0;
+
         itemheading {
             z-index: 6666;
+
             text {
                 font-size: 0.5em;
             }
@@ -271,16 +258,17 @@
 
 
 @media only screen and (max-width: 30em) {
-    
+
     .expHero .cTwoExp .eText .expIcons {
-        display:none;
+        display: none;
     }
+
     .caseSection {
         font-size: 1.3vw;
     }
 
     .workLine {
-        display:none;
+        display: none;
     }
 
     .bannerRow {
@@ -288,15 +276,16 @@
         padding-bottom: 20em;
         padding-top: 10em;
     }
+
     .viewWorkSection .section .row {
         .item1 {
-        margin-top: -65em;
-        width: 100vw;
+            margin-top: -65em;
+            width: 100vw;
         }
     }
 
     .stageImages {
-        width:100%;
+        width: 100%;
     }
 
     .imageMason {
@@ -305,18 +294,20 @@
         clip-path: initial;
         height: 20vh;
     }
+
     .imageMason div {
         height: 100%;
         display: flex;
-        flex:1 0 33%;
+        flex: 1 0 33%;
         // background-color: #fbaf40;
         // margin-right: .5em;
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center;
-        transition:ease all 1s;
+        transition: ease all 1s;
         cursor: pointer;
     }
+
     .WorkHero .c1 {
         clip-path: none;
     }
@@ -324,26 +315,28 @@
     .WorkHero .col .heroblock .workDone {
         background-image: initial;
         font-size: 1.2em;
-        transform: translate(-5.8em,-2em)scale(0.7);
+        transform: translate(-5.8em, -2em)scale(0.7);
     }
 
     .WorkHero .col .heroblock .description {
-        font-size:.8em;
+        font-size: .8em;
+
         p {
-            margin:0;
-            line-height:1.5;
+            margin: 0;
+            line-height: 1.5;
             margin-left: 0em;
         }
 
     }
+
     .WorkHero .col .heroblock .workDone h2 {
         font-size: 2em;
-        margin-left:.5em;
-}
+        margin-left: .5em;
+    }
 
-.workDone::after {
-    margin-left: 0em;
-}
+    .workDone::after {
+        margin-left: 0em;
+    }
 
     .WorkHeaderSection.pHeaderSection.stageZero {
         z-index: 1;
@@ -351,10 +344,10 @@
         width: 100vw;
         height: 60vh;
         pointer-events: none;
-        background-color:#191919;
-        background-image:initial;
+        background-color: #191919;
+        background-image: initial;
     }
-    
+
 
     .vScroller {
         .section {
@@ -364,7 +357,7 @@
 
     .WorkHero {
 
-            height: 64vh;
+        height: 64vh;
 
         .col {
             display: flex;
@@ -374,24 +367,27 @@
             font-size: 0.4em;
             padding: 0em 2em;
             justify-content: center;
+
             .heroblock {
                 justify-content: flex-start;
                 margin-top: 15em;
                 width: auto;
+
                 .description {
                     overflow-wrap: break-word;
-                    
+
                     p {
-                        width:100%;
+                        width: 100%;
                         font-size: 2em;
                         padding: 1em .5em;
-                        margin-left:0em;
+                        margin-left: 0em;
                     }
-    
+
                 }
             }
+
             .workDone {
-    
+
                 h2 {
                     margin-top: 0;
                     margin-left: 1em;
@@ -407,6 +403,7 @@
 
     .expHero {
         flex-direction: column;
+
         .headerTransExp {
             margin-left: 2em;
             margin-top: 15em;
@@ -416,59 +413,68 @@
 
             -webkit-clip-path: polygon(0 0, 64% 0, 100% 100%, 0% 100%);
             clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+
             .stageExp {
                 flex: 0 0 68%;
+
                 .heading {
-                    margin-left:3em;
+                    margin-left: 3em;
                     border-bottom: 2px solid #ffffff !important;
                     transition: ease all 1.5s;
                 }
+
                 .description {
-                    
+
                     p {
                         font-size: 2.2em;
                         margin-left: 1em;
                         font-weight: 300;
                     }
                 }
+
                 .workDone {
-                    margin-top:0;
+                    margin-top: 0;
                 }
             }
         }
+
         .cTwoExp {
             width: 100%;
+
             .expLine1 {
-                display:none;
+                display: none;
             }
+
             .expLine2 {
-                display:none;
+                display: none;
             }
+
             .eText {
                 width: 100vw;
-                flex:0 0 20%;
+                flex: 0 0 20%;
                 flex-direction: row;
                 align-items: flex-start;
                 justify-content: flex-start;
+
                 .expIcons {
 
-              
-                    .svgIconWhite {
-                    
-                    }
-                    .svgIconGold {
-                   
-                    }
+
+                    .svgIconWhite {}
+
+                    .svgIconGold {}
                 }
+
                 text {
-                    margin-bottom:0em;
+                    margin-bottom: 0em;
                     flex: 0 0 50%;
+
                     h1 {
-                        font-size:4.5em;
-                        font-weight:700;
+                        font-size: 4.5em;
+                        font-weight: 700;
                     }
+
                     p {
-                        font-size:4em;
+                        font-size: 4em;
                     }
                 }
             }
@@ -477,17 +483,19 @@
 
 
 
-    #toggle:checked ~ .nav .nav-item {
+    #toggle:checked~.nav .nav-item {
         font-size: .7em;
         color: #ffffff;
 
     }
+
     .nav-item:before {
-        background-color:#6a6a6a;
-        transform:scaleX(.9) scaleY(2) translateX(-.5em);
+        background-color: #6a6a6a;
+        transform: scaleX(.9) scaleY(2) translateX(-.5em);
     }
 
-    .button-toggle:before, .button-toggle:after {
+    .button-toggle:before,
+    .button-toggle:after {
         background-color: #ffffff;
     }
 
@@ -502,8 +510,9 @@
         justify-content: center;
         align-items: flex-end;
         flex: 1 0 30%;
+
         text {
-            color:black;
+            color: black;
         }
     }
 
@@ -533,10 +542,12 @@
         background-color: #191919;
         border-radius: 0.2em;
         box-shadow: 0 0 0 #3333331e;
+
         formgrp {
             display: flex;
             width: 100%;
             justify-content: space-between;
+
             input {
                 padding: 0.8em;
                 border-bottom: thin none;
@@ -552,6 +563,7 @@
             outline-offset: -2px;
             outline: -webkit-focus-ring-color auto 0;
         }
+
         .message {
             height: 10vh;
             vertical-align: top;
@@ -562,10 +574,12 @@
             color: #cdcdcd;
 
         }
+
         .message:focus {
             outline-offset: -2px;
             outline: -webkit-focus-ring-color auto 0;
         }
+
         .submit {
             font-size: 1.1em;
             padding: 0.4em 0.3em 0.3em;
@@ -672,7 +686,7 @@
         clip-path: polygon(0 0, 80% 0, 77% 100%, 0% 100%);
     }
 
-    g#portfolio > g > polygon {
+    g#portfolio>g>polygon {
         transition: 2s;
         transform: translate(55%, 55%) scale(.7) rotate(137.7deg);
     }
@@ -714,7 +728,7 @@
         overflow: hidden;
     }
 
-    
+
 
     .navlist {
         margin-left: 0;
@@ -730,6 +744,7 @@
         padding-top: 0.5em;
         background-color: #191919;
         padding-bottom: 0.5em;
+
         h2 {
             padding: 0.5em 1em;
             color: #bdbdbd;
@@ -749,6 +764,7 @@
         width: initial;
         justify-content: flex-start;
     }
+
     .navlist {
         .zB {
             h2 {
@@ -773,7 +789,7 @@
     }
 
     .colBlack {
-        display:none;
+        display: none;
     }
 
 
@@ -798,7 +814,7 @@
         display: flex;
         flex-direction: row;
         align-items: flex-end;
-        overflow-x:scroll;
+        overflow-x: scroll;
     }
 
     .row1 {
@@ -809,7 +825,8 @@
         justify-content: flex-start;
         align-items: flex-start;
         background-color: white;
-        display:flex;
+        display: flex;
+
         .printWork {
             padding: 1em;
             width: 100%;
@@ -824,13 +841,15 @@
         height: 38%;
         align-items: center;
         margin-top: 0vw;
-        display:flex;
+        display: flex;
+
         .brand {
             display: flex;
             justify-content: center;
             font-size: .5vw;
             height: 100%;
             align-items: center;
+
             .logoContainer {
                 width: 60vw;
                 /* height: 20vw; */
@@ -862,8 +881,8 @@
     }
 
     .webWorkTilt {
-       width: 100%;
-       height: 100%;
+        width: 100%;
+        height: 100%;
         z-index: 9999;
     }
 
@@ -903,6 +922,7 @@
         width: 100vw;
         height: 100%;
         align-items: center;
+
         .eText {
             text {
                 flex: 0 0 73%;
@@ -922,8 +942,10 @@
         flex: 1 0 0;
         width: 100vw;
         height: 0;
+
         itemheading {
             z-index: 6666;
+
             text {
                 font-size: 0.5em;
             }
@@ -965,26 +987,26 @@
             }
         }
     }
-    
-    .stageExp  {
-        padding-top:0%;
-        width:100%;
-        margin-left:0vw;
-         padding-right: 0vw;
-         z-index: 999999;
+
+    .stageExp {
+        padding-top: 0%;
+        width: 100%;
+        margin-left: 0vw;
+        padding-right: 0vw;
+        z-index: 999999;
     }
 
     .stageExp .heading h1::before {
         color: black !important;
         content: "Experience";
-        font-size:2em;
-        height:2em;
-        margin-top:-1em;
+        font-size: 2em;
+        height: 2em;
+        margin-top: -1em;
         position: absolute;
     }
 
     .stageExp .description p::before {
-        color:#191919;
+        color: #191919;
         font-size: 1.5em;
         width: 100vw;
         margin-left: 0em;
@@ -1081,6 +1103,7 @@
 
         flex: 1 0 35%;
     }
+
     .row2 {
 
         flex: 1 0 35%;
@@ -1107,8 +1130,8 @@
         padding-right: 0;
         height: 100vh;
         width: 45vw;
-        padding-left:10vw;
-        padding-top:5vw;
+        padding-left: 10vw;
+        padding-top: 5vw;
         flex: 1 0 100%;
         background-color: #191919;
         clip-path: initial;
@@ -1116,7 +1139,7 @@
     }
 
     .myForm {
-      
+
         display: flex;
         flex-direction: column;
         width: 100%;
@@ -1126,10 +1149,12 @@
         background-color: #191919;
         border-radius: 0.2em;
         box-shadow: 0 0 0 #3333331e;
+
         formgrp {
             display: flex;
             width: 100%;
             justify-content: space-between;
+
             input {
                 padding: 0.8em;
                 border-bottom: thin none;
@@ -1145,6 +1170,7 @@
             outline-offset: -2px;
             outline: -webkit-focus-ring-color auto 0;
         }
+
         .message {
             height: 10vh;
             vertical-align: top;
@@ -1155,10 +1181,12 @@
             color: #cdcdcd;
 
         }
+
         .message:focus {
             outline-offset: -2px;
             outline: -webkit-focus-ring-color auto 0;
         }
+
         .submit {
             font-size: 1.1em;
             padding: 0.4em 0.3em 0.3em;
@@ -1175,12 +1203,12 @@
 @media screen and (orientation:portrait) and (min-device-width: 30em) and (max-device-width: 87.5em) {
 
     .stageImages {
-        width:100%;
+        width: 100%;
     }
 
 
     .workLine {
-        display:none;
+        display: none;
     }
 
     .imageMason {
@@ -1193,13 +1221,13 @@
     .imageMason div {
         height: 100%;
         display: flex;
-        flex:1 0 33%;
+        flex: 1 0 33%;
         // background-color: #fbaf40;
         // margin-right: .5em;
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center;
-        transition:ease all 1s;
+        transition: ease all 1s;
         cursor: pointer;
     }
 
@@ -1235,13 +1263,14 @@
     }
 
 
-.workDone::after {
-    margin-left: 0em;
+    .workDone::after {
+        margin-left: 0em;
 
-}
-.WorkHero .col .heroblock .workDone h2 {
-font-size:2em;
-}
+    }
+
+    .WorkHero .col .heroblock .workDone h2 {
+        font-size: 2em;
+    }
 
     .WorkHero {
         margin-top: 3em;
@@ -1255,24 +1284,28 @@ font-size:2em;
             font-size: 0.4em;
             padding: 0em 2em;
             justify-content: center;
+
             .heroblock {
                 justify-content: flex-start;
                 margin-top: 15em;
                 width: auto;
+
                 .description {
                     overflow-wrap: break-word;
-                    
+
                     p {
-                        width:100%;
+                        width: 100%;
                         font-size: 1.5em;
                         padding: 1em .5em;
-                        margin-left:0em;
+                        margin-left: 0em;
                     }
-    
+
                 }
             }
+
             .workDone {
                 margin-left: 1em;
+
                 h2 {
                     margin-top: 0;
                     margin-left: 1em;
@@ -1283,15 +1316,15 @@ font-size:2em;
             }
         }
     }
-    
+
     .WorkHeaderSection.pHeaderSection.stageZero {
         z-index: 1;
         position: absolute;
         width: 100vw;
         height: 50vh;
         pointer-events: none;
-        background-color:#191919;
-        background-image:initial;
+        background-color: #191919;
+        background-image: initial;
     }
 
     .stageExp .description p::before {
@@ -1407,7 +1440,7 @@ font-size:2em;
         clip-path: polygon(0 0, 80% 0, 77% 100%, 0% 100%);
     }
 
-    g#portfolio > g > polygon {
+    g#portfolio>g>polygon {
         transition: 2s;
         transform: translate(55%, 55%) scale(.7) rotate(137.7deg);
     }
@@ -1459,10 +1492,12 @@ font-size:2em;
         background-color: #191919;
         border-radius: 0.2em;
         box-shadow: 0 0 0 #3333331e;
+
         formgrp {
             display: flex;
             width: 100%;
             justify-content: space-between;
+
             input {
                 padding: 0.8em;
                 border-bottom: thin none;
@@ -1478,6 +1513,7 @@ font-size:2em;
             outline-offset: -2px;
             outline: -webkit-focus-ring-color auto 0;
         }
+
         .message {
             height: 10vh;
             vertical-align: top;
@@ -1488,10 +1524,12 @@ font-size:2em;
             color: #cdcdcd;
 
         }
+
         .message:focus {
             outline-offset: -2px;
             outline: -webkit-focus-ring-color auto 0;
         }
+
         .submit {
             font-size: 1.1em;
             padding: 0.4em 0.3em 0.3em;
@@ -1516,6 +1554,7 @@ font-size:2em;
         padding-top: 0.5em;
         background-color: #191919;
         padding-bottom: 0.5em;
+
         h2 {
             padding: 0.5em 1em;
             color: #bdbdbd;
@@ -1535,6 +1574,7 @@ font-size:2em;
         width: initial;
         justify-content: flex-start;
     }
+
     .navlist {
         .zB {
             h2 {
@@ -1650,7 +1690,7 @@ font-size:2em;
         clip-path: initial;
         position: absolute;
         font-size: 0.5em;
-        display:none;
+        display: none;
     }
 
 
@@ -1660,6 +1700,7 @@ font-size:2em;
         width: 100vw;
         height: 100%;
         align-items: center;
+
         .eText {
             text {
                 flex: 0 0 73%;
@@ -1677,8 +1718,10 @@ font-size:2em;
         flex: 1 0 0;
         width: 100vw;
         height: 0;
+
         itemheading {
             z-index: 6666;
+
             text {
                 font-size: 0.5em;
             }
@@ -1695,17 +1738,19 @@ font-size:2em;
     .cTwoExp {
         display: flex;
         flex: 1 0 20%;
-        margin-top:20vh;
+        margin-top: 20vh;
         flex-direction: column;
         justify-content: flex-end;
         margin-right: 0;
         margin-left: 3vw;
+
         .eText {
             flex: 0 1 25% !important;
             flex-direction: column;
             justify-content: flex-end;
             align-items: flex-start;
             margin-bottom: 12vh;
+
             text {
                 color: #191919;
             }
@@ -1723,8 +1768,9 @@ font-size:2em;
         justify-content: center;
         align-items: flex-end;
         flex: 1 0 20%;
+
         text {
-            color:black;
+            color: black;
         }
     }
 
@@ -1754,10 +1800,12 @@ font-size:2em;
         background-color: #191919;
         border-radius: 0.2em;
         box-shadow: 0 0 0 #3333331e;
+
         formgrp {
             display: flex;
             width: 100%;
             justify-content: space-between;
+
             input {
                 padding: 0.8em;
                 border-bottom: thin none;
@@ -1773,6 +1821,7 @@ font-size:2em;
             outline-offset: -2px;
             outline: -webkit-focus-ring-color auto 0;
         }
+
         .message {
             height: 10vh;
             vertical-align: top;
@@ -1783,10 +1832,12 @@ font-size:2em;
             color: #cdcdcd;
 
         }
+
         .message:focus {
             outline-offset: -2px;
             outline: -webkit-focus-ring-color auto 0;
         }
+
         .submit {
             font-size: 1.1em;
             padding: 0.4em 0.3em 0.3em;
@@ -1799,7 +1850,7 @@ font-size:2em;
 
     .heroblock.stageExp {
         margin-left: 20vw !important;
-        width:80%;
+        width: 80%;
     }
 
     .headerTransExp {
@@ -1826,6 +1877,7 @@ font-size:2em;
         margin-top: -0.93em;
         margin-left: -6vw;
     }
+
     text.skills1 h1 {
         font-size: 0.8em;
         font-weight: 100;

@@ -343,15 +343,14 @@
     position:absolute;
     top: 3vh;
     width: 9em;
-    margin-left: -3vw;
+    margin-left: -2vw;
     display:flex;
     flex-direction: row;
-    transform:rotate(-10deg);
     border-bottom: thin solid white;
     h3 {
         padding-left:.5em;
         padding-right:.5em;
-        font-size:1.4em;
+        font-size:1.4vw;
         padding-bottom:.3em;
         font-weight:300;
         color:#aaaaaa;
@@ -420,37 +419,7 @@
 }
 
 
-.stageOne .viewWorkGradient:hover {
-    transition:ease all 3s;
-    background-image: linear-gradient(to right, #111111, #25272f, #34404f, #3d5c6f, #427a8e, #488b9e, #4e9caf, #55aebe, #5eb6c8, #68bed2, #71c6dc, #7bcee6);
-}
 
-.stageTwo .viewWorkGradient:hover {
-    transition:ease all 3s;
-    background-image: linear-gradient(to right, #111111, #221c24, #3a2532, #542e3a, #6e383a, #7f403a, #8f4a38, #9c5534, #ac5c37, #bd6339, #ce6a3c, #df713e);
-
-}
-
-.stageThree .viewWorkGradient:hover {
-    transition:ease all 3s;
-    background-image: linear-gradient(to right, #111111, #231b23, #3b232d, #532c2d, #653a27, #6f4626, #755425, #786325, #836d2b, #8f7730, #9a8136, #a68b3c);
-}
-
-.stageFour .viewWorkGradient {
-    transition:ease all 3s;
-    background-image: linear-gradient(to right, #111111, #1c1d21, #242a32, #2a3743, #2d4653, #35525e, #3d5e6a, #466a75, #57767f, #68828a, #788e94, #899a9f);
-}
-
-.stageFive .viewWorkGradient {
-    transition:ease all 3s;
-    background-image: linear-gradient(to right, #111111, #231b23, #3d222c, #552b2a, #653a21, #734a1e, #7d5d1a, #817117, #988517, #b09916, #c8ad14, #e1c20f);
-}
-
-.stageSix .viewWorkGradient {
-    transition:ease all 3s;
-    background-image: linear-gradient(to right, #111111, #19161c, #241824, #311a29, #3f1b2b, #4c1c2d, #591d2d, #661e2b, #761e2c, #851f2c, #94202b, #a32128);
-
-}
 
 
 

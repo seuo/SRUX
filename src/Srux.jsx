@@ -86,9 +86,9 @@ class Srux extends Component {
             stageExpNum: [
                 'ExpStageOne',
                 'ExpStageTwo',
-                'ExpStageThree',
-                'ExpStageFour',
-                'ExpStageFive',
+                // 'ExpStageThree',
+                // 'ExpStageFour',
+                // 'ExpStageFive',
                 // 'ExpStageSix'
             ],
             sectionState:'',
@@ -261,11 +261,11 @@ class Srux extends Component {
     nextExp = () => {
         const {currentExpIndex} = this.state;
 
-        if (currentExpIndex === 5) {
+        if (currentExpIndex === 1) {
             setTimeout(() => {
                 this.setState({
                     navChecked:0,
-                    currentExpIndex: 5,
+                    currentExpIndex: 1,
                 })
             }, 0)
 
@@ -379,16 +379,38 @@ class Srux extends Component {
         }, 1500)
     };
 
-
-
     navMyWork = (e) => {
         e.preventDefault();
 
         this.setState({
-
             whiteTransForm:'whiteTransForm',
-            pageScroller:'fade-out',
+
         });
+        setTimeout(() => {
+            this.setState({
+                navChecked:0,
+                currentWorkIndex: 0,
+                currentExpIndex: 0,
+                homeHeader: 'homeHeader fade-out',
+                headerTransitionWork: 'headerTransWork ',
+                stageZero: 'stageZero',
+                hScroller: '',
+                vScroller: '',
+                pState:'slide-back-up',
+            })
+        }, 300)
+        setTimeout(() => {
+            this.setState({
+                whiteTransForm:'',
+                pageScroller:'fade-out',
+            })
+        }, 800)
+    }
+
+
+    navMyWorkDirect = (e) => {
+        e.preventDefault();
+
         setTimeout(() => {
             this.setState({
 
@@ -403,7 +425,7 @@ class Srux extends Component {
                 pState:'slide-back-up',
                 viewWorkToggle:false,
             })
-        }, 300)
+        }, 100)
         setTimeout(() => {
             this.setState({
                 whiteTransForm:'',
@@ -452,7 +474,7 @@ class Srux extends Component {
             navChecked:0,
             hAnim: 'hSlide',
             currentWorkIndex: 6,
-            currentExpIndex: 5,
+            currentExpIndex: 1,
             expColTrans: "exp-col-trans",
             expColTransHeader: "exp-col-trans-header",
             pState:'slide-back-up',
@@ -480,7 +502,7 @@ class Srux extends Component {
     navContact = (e) => {
         e.preventDefault();
 
-        this.setState({viewWorkToggle:false,currentWorkIndex: 6, currentExpIndex: 5,navChecked:0,})
+        this.setState({viewWorkToggle:false,currentWorkIndex: 6, currentExpIndex: 1,navChecked:0,})
         setTimeout(() => {
             this.setState({hScroller: 'above', homeHeader: 'homeHeader slide-right',pageScroller:'fade-out',})
         }, 700)
@@ -794,7 +816,7 @@ render (){
                                 </label>
                                 <nav class="nav">
                                     <a class="nav-item" href="#home" onClick={this.navHome}>HOME NAV</a>
-                                    <a class="nav-item" href="#portfolio" onClick={this.navMyWork}>PORTFOLIO</a>
+                                    <a class="nav-item" href="#portfolio" onClick={this.navMyWorkDirect}>PORTFOLIO</a>
                                     <a class="nav-item" href="#experience" onClick={this.navExpDirect}>EXPERIENCE</a>
                                     <a class="nav-item" href="#contact" onClick={this.navContactDirect}>CONTACT</a>
                                 </nav>
@@ -808,7 +830,7 @@ render (){
                              </div> :   
                             
                             <div onClick={this.handleViewWork} className={stageNum[currentWorkIndex]+" viewWork"}>
-                                    <div className="viewWorkGradient"><h3>VIEW WORK</h3></div>
+                                    {/* <div className="viewWorkGradient"><h3>VIEW WORK</h3></div> */}
                                  <h3>VIEW WORK</h3>
                              </div>)}
                 </div> )}
@@ -1408,7 +1430,7 @@ render (){
                                     </div>
 
    
-                <section className={"eSection"}>
+                {/* <section className={"eSection"}>
 
                     <row className="eRow1">
                         <div className={"eText "+eTextAnim}>
@@ -1481,7 +1503,7 @@ render (){
                             <text className="skills"></text>
                         </itemheading>
                     </row>
-                </section>
+                </section> */}
 
                 {/* <section className={"eSection"}>
 
@@ -1510,7 +1532,7 @@ render (){
                     </row>
 
                 </section> */}
-                <section className={"eSection"}>
+                {/* <section className={"eSection"}>
 
                     <row className="eRow1">
                         <div className={"eText "+eTextAnim}>
@@ -1531,7 +1553,7 @@ render (){
 
                     </row>
 
-                </section>
+                </section> */}
                 <section className={"cSection fade-in"}>
 
                     <row className="cRow1">

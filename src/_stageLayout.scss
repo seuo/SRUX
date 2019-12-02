@@ -138,6 +138,7 @@
             justify-content: center;
             align-items: center;
             .item1 {
+                pointer-events: none;
                 z-index: 9;
                 transition: ease all 1.5s;
                 transform: scale(0.8);

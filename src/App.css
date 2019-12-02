@@ -859,7 +859,7 @@ text.skills1 p {
 #toggle:checked ~ .nav {
   margin-bottom: 100px;
   pointer-events: auto;
-  padding: 4vh 2em 2em 1.8em;
+  padding: 3em 2em 2em 1.8em;
 }
 
 #toggle:checked ~ .nav .nav-item {
@@ -1067,9 +1067,7 @@ text.skills1 p {
 .workLine {
   height: 95vh;
   position: absolute;
-  left: 49vw;
-  -webkit-transform: rotate(10deg);
-          transform: rotate(10deg);
+  left: 52vw;
 }
 
 .workLineCorner {
@@ -1077,32 +1075,19 @@ text.skills1 p {
   position: absolute;
   top: 91vh;
   font-size: 1em;
-  left: -4em;
+  left: 7em;
   font-size: .5em;
-  -webkit-transform: rotate(10deg);
-          transform: rotate(10deg);
 }
 
 .workLineCorner img {
   width: 4em;
 }
 
-.workLine.workLineCorner .viewWork {
-  background-image: -webkit-gradient(linear, left top, right top, from(#f1f1f1), to(#ffffff));
-  background-image: linear-gradient(to right, #f1f1f1, #ffffff);
-  -webkit-box-sizing: inherit;
-          box-sizing: inherit;
-}
-
-.workLine.workLineCorner .viewWorkGradient {
-  background-image: -webkit-gradient(linear, left top, right top, from(#a0a0a0), to(#414141));
-  background-image: linear-gradient(to right, #a0a0a0, #414141);
-}
-
 .viewWork {
   position: absolute;
   bottom: .70em;
   width: 12em;
+  margin-left: -5vw;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1110,10 +1095,6 @@ text.skills1 p {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  -webkit-transform: rotate(-10deg) skewX(-10deg);
-          transform: rotate(-10deg) skewX(-10deg);
-  background-image: -webkit-gradient(linear, left top, right top, from(#111111), color-stop(#131313), color-stop(#151515), color-stop(#161616), color-stop(#181818), color-stop(#191919), color-stop(#1a1a1a), color-stop(#1b1b1b), color-stop(#1b1b1b), color-stop(#1c1c1c), color-stop(#1c1c1c), to(#1d1d1d));
-  background-image: linear-gradient(to right, #111111, #131313, #151515, #161616, #181818, #191919, #1a1a1a, #1b1b1b, #1b1b1b, #1c1c1c, #1c1c1c, #1d1d1d);
   border-radius: .3em;
   -webkit-transition: ease all 2s;
   transition: ease all 2s;
@@ -1141,10 +1122,10 @@ text.skills1 p {
 }
 
 .viewWork h3 {
-  padding: 1em;
+  padding: .1em;
   font-size: 1.5em;
   font-weight: 500;
-  color: #ffffff;
+  color: #111;
   border-bottom: solid thin #c4c4c4;
 }
 
@@ -1152,8 +1133,7 @@ text.skills1 p {
   position: absolute;
   width: 100%;
   opacity: 1;
-  background-image: -webkit-gradient(linear, left top, right top, from(#111111), color-stop(#291f32), color-stop(#4c284e), color-stop(#782b61), color-stop(#a9276a), color-stop(#c41e66), color-stop(#dd155e), color-stop(#f31352), color-stop(#f81144), color-stop(#fc1734), color-stop(#fe2121), to(#fe2e00));
-  background-image: linear-gradient(to right, #111111, #291f32, #4c284e, #782b61, #a9276a, #c41e66, #dd155e, #f31352, #f81144, #fc1734, #fe2121, #fe2e00);
+  background-color: #cdcdcd;
 }
 
 .viewWork:hover {
@@ -1439,7 +1419,7 @@ text.skills1 p {
   position: absolute;
   top: 3vh;
   width: 9em;
-  margin-left: -3vw;
+  margin-left: -2vw;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1447,15 +1427,13 @@ text.skills1 p {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  -webkit-transform: rotate(-10deg);
-          transform: rotate(-10deg);
   border-bottom: thin solid white;
 }
 
 .stageDisplay h3 {
   padding-left: .5em;
   padding-right: .5em;
-  font-size: 1.4em;
+  font-size: 1.4vw;
   padding-bottom: .3em;
   font-weight: 300;
   color: #aaaaaa;
@@ -1513,48 +1491,6 @@ text.skills1 p {
 
 .stageSix .stageDisplay h3::after {
   content: " / 6";
-}
-
-.stageOne .viewWorkGradient:hover {
-  -webkit-transition: ease all 3s;
-  transition: ease all 3s;
-  background-image: -webkit-gradient(linear, left top, right top, from(#111111), color-stop(#25272f), color-stop(#34404f), color-stop(#3d5c6f), color-stop(#427a8e), color-stop(#488b9e), color-stop(#4e9caf), color-stop(#55aebe), color-stop(#5eb6c8), color-stop(#68bed2), color-stop(#71c6dc), to(#7bcee6));
-  background-image: linear-gradient(to right, #111111, #25272f, #34404f, #3d5c6f, #427a8e, #488b9e, #4e9caf, #55aebe, #5eb6c8, #68bed2, #71c6dc, #7bcee6);
-}
-
-.stageTwo .viewWorkGradient:hover {
-  -webkit-transition: ease all 3s;
-  transition: ease all 3s;
-  background-image: -webkit-gradient(linear, left top, right top, from(#111111), color-stop(#221c24), color-stop(#3a2532), color-stop(#542e3a), color-stop(#6e383a), color-stop(#7f403a), color-stop(#8f4a38), color-stop(#9c5534), color-stop(#ac5c37), color-stop(#bd6339), color-stop(#ce6a3c), to(#df713e));
-  background-image: linear-gradient(to right, #111111, #221c24, #3a2532, #542e3a, #6e383a, #7f403a, #8f4a38, #9c5534, #ac5c37, #bd6339, #ce6a3c, #df713e);
-}
-
-.stageThree .viewWorkGradient:hover {
-  -webkit-transition: ease all 3s;
-  transition: ease all 3s;
-  background-image: -webkit-gradient(linear, left top, right top, from(#111111), color-stop(#231b23), color-stop(#3b232d), color-stop(#532c2d), color-stop(#653a27), color-stop(#6f4626), color-stop(#755425), color-stop(#786325), color-stop(#836d2b), color-stop(#8f7730), color-stop(#9a8136), to(#a68b3c));
-  background-image: linear-gradient(to right, #111111, #231b23, #3b232d, #532c2d, #653a27, #6f4626, #755425, #786325, #836d2b, #8f7730, #9a8136, #a68b3c);
-}
-
-.stageFour .viewWorkGradient {
-  -webkit-transition: ease all 3s;
-  transition: ease all 3s;
-  background-image: -webkit-gradient(linear, left top, right top, from(#111111), color-stop(#1c1d21), color-stop(#242a32), color-stop(#2a3743), color-stop(#2d4653), color-stop(#35525e), color-stop(#3d5e6a), color-stop(#466a75), color-stop(#57767f), color-stop(#68828a), color-stop(#788e94), to(#899a9f));
-  background-image: linear-gradient(to right, #111111, #1c1d21, #242a32, #2a3743, #2d4653, #35525e, #3d5e6a, #466a75, #57767f, #68828a, #788e94, #899a9f);
-}
-
-.stageFive .viewWorkGradient {
-  -webkit-transition: ease all 3s;
-  transition: ease all 3s;
-  background-image: -webkit-gradient(linear, left top, right top, from(#111111), color-stop(#231b23), color-stop(#3d222c), color-stop(#552b2a), color-stop(#653a21), color-stop(#734a1e), color-stop(#7d5d1a), color-stop(#817117), color-stop(#988517), color-stop(#b09916), color-stop(#c8ad14), to(#e1c20f));
-  background-image: linear-gradient(to right, #111111, #231b23, #3d222c, #552b2a, #653a21, #734a1e, #7d5d1a, #817117, #988517, #b09916, #c8ad14, #e1c20f);
-}
-
-.stageSix .viewWorkGradient {
-  -webkit-transition: ease all 3s;
-  transition: ease all 3s;
-  background-image: -webkit-gradient(linear, left top, right top, from(#111111), color-stop(#19161c), color-stop(#241824), color-stop(#311a29), color-stop(#3f1b2b), color-stop(#4c1c2d), color-stop(#591d2d), color-stop(#661e2b), color-stop(#761e2c), color-stop(#851f2c), color-stop(#94202b), to(#a32128));
-  background-image: linear-gradient(to right, #111111, #19161c, #241824, #311a29, #3f1b2b, #4c1c2d, #591d2d, #661e2b, #761e2c, #851f2c, #94202b, #a32128);
 }
 
 .s1Col1 {
@@ -2344,9 +2280,11 @@ text.skills1 p {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-clip-path: polygon(17% 0, 100% 0, 100% 100%, 0% 100%);
+          clip-path: polygon(17% 0, 100% 0, 100% 100%, 0% 100%);
   -webkit-box-flex: 1;
-      -ms-flex: 1 0 50%;
-          flex: 1 0 50%;
+      -ms-flex: 1 0 55%;
+          flex: 1 0 55%;
   width: 100vw;
   background-color: #191919;
 }
@@ -2388,8 +2326,8 @@ text.skills1 p {
   -webkit-box-flex: 0;
       -ms-flex: 0 0 65%;
           flex: 0 0 65%;
-  padding-left: 3em;
-  padding-right: 4vw;
+  padding-left: 5em;
+  padding-right: 0em;
   font-size: 0.8vw;
   color: #191919;
   font-weight: 200;
@@ -2669,6 +2607,7 @@ text.skills1 p {
 }
 
 .viewWorkSection .section .row .item1 {
+  pointer-events: none;
   z-index: 9;
   -webkit-transition: ease all 1.5s;
   transition: ease all 1.5s;
@@ -4527,7 +4466,7 @@ svg {
 
 @media only screen and (max-width: 87.5em) {
   .viewWork {
-    font-size: .1em;
+    font-size: .7em;
   }
   .caseSection {
     font-size: 1vw;
@@ -4690,7 +4629,8 @@ svg {
     -webkit-transition: 0.6s;
     transition: 0.6s;
   }
-  .button-toggle:before, .button-toggle:after {
+  .button-toggle:before,
+  .button-toggle:after {
     width: 70%;
   }
   svg#Layer_1 {
@@ -4989,7 +4929,8 @@ svg {
     -webkit-transform: scaleX(0.9) scaleY(2) translateX(-0.5em);
             transform: scaleX(0.9) scaleY(2) translateX(-0.5em);
   }
-  .button-toggle:before, .button-toggle:after {
+  .button-toggle:before,
+  .button-toggle:after {
     background-color: #ffffff;
   }
   .cSection {
