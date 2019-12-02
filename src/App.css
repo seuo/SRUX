@@ -1160,8 +1160,8 @@ text.skills1 p {
 
 .stageF-out {
   opacity: 0;
-  -webkit-transition: ease all .2s;
-  transition: ease all .2s;
+  -webkit-transition: ease all .6s;
+  transition: ease all .6s;
 }
 
 .stageF-out h1 {
@@ -1173,8 +1173,8 @@ text.skills1 p {
 
 .stageF-in {
   opacity: 1;
-  -webkit-transition: ease all .2s;
-  transition: ease all .2s;
+  -webkit-transition: ease all 2s;
+  transition: ease all 2s;
 }
 
 .overflow {
